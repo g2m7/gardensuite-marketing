@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+/* ─── GardenSuite Brand Tokens (from design-tokens.json) ─── */
+
+@theme {
+	/* Green scale */
+	--color-brand-50: #F1F6EB;
+	--color-brand-100: #E1EED6;
+	--color-brand-200: #C8DDB8;
+	--color-brand-300: #9DB88F;
+	--color-brand-400: #7BA86A;
+	--color-brand-500: #5F8F4D;
+	--color-brand-600: #3D7D2C;
+	--color-brand-700: #2B6321;
+	--color-brand-800: #1A4A15;
+	--color-brand-900: #0F2E0C;
+
+	/* Neutrals */
+	--color-charcoal: #111827;
+	--color-ink: #1F2937;
+	--color-surface: #F6F8F3;
+	--color-border: #DDE3D5;
+
+	/* Semantic */
+	--color-canvas: #FFFFFF;
+	--color-text-primary: #111827;
+	--color-text-secondary: #4B5563;
+	--color-text-inverse: #FFFFFF;
+
+	/* Radius */
+	--radius-sm: 6px;
+	--radius-md: 10px;
+	--radius-lg: 14px;
+	--radius-xl: 20px;
+
+	/* Font */
+	--font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* ─── Base ─── */
+
+@layer base {
+	body {
+		font-family: var(--font-sans);
+		font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+		color: var(--color-charcoal);
+		background: linear-gradient(180deg, #ffffff 0%, var(--color-surface) 100%);
+		background-attachment: fixed;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		font-weight: 700;
+		letter-spacing: -0.02em;
+	}
+
+	html { scroll-behavior: smooth; }
+}
+
+/* ─── Shadows (from brand pack) ─── */
+
+@utility shadow-soft {
+	box-shadow: 0 12px 30px rgba(74, 157, 53, 0.15);
+}
+
+@utility shadow-card {
+	box-shadow: 0 8px 24px rgba(17, 24, 39, 0.08);
+}

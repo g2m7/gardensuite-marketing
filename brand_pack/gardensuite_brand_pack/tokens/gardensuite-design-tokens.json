@@ -1,0 +1,85 @@
+{
+  "brand": {
+    "name": "GardenSuite",
+    "tagline": "Plantation ERP",
+    "positioning": "Practical ERP software for plantation operations, from attendance and payroll to factory, stores, accounts, and MIS."
+  },
+  "color": {
+    "brand.green.50": "#F1F6EB",
+    "brand.green.100": "#E1EED6",
+    "brand.green.200": "#C8DDB8",
+    "brand.green.300": "#9DB88F",
+    "brand.green.400": "#7BA86A",
+    "brand.green.500": "#5F8F4D",
+    "brand.green.600": "#3D7D2C",
+    "brand.green.700": "#2B6321",
+    "brand.green.800": "#1A4A15",
+    "brand.green.900": "#0F2E0C",
+    "brand.neutral.charcoal": "#111827",
+    "brand.neutral.ink": "#1F2937",
+    "brand.neutral.surface": "#F6F8F3",
+    "brand.neutral.border": "#DDE3D5",
+    "brand.white": "#FFFFFF",
+    "brand.accent.success": "#4A9D35"
+  },
+  "semantic": {
+    "bg.canvas": "#FFFFFF",
+    "bg.subtle": "#F6F8F3",
+    "bg.accent": "#F1F6EB",
+    "text.primary": "#111827",
+    "text.secondary": "#4B5563",
+    "text.inverse": "#FFFFFF",
+    "border.default": "#D5DEC9",
+    "border.accent": "#C8DDB8",
+    "action.primary.bg": "#3D7D2C",
+    "action.primary.text": "#FFFFFF",
+    "action.primary.hover": "#2B6321",
+    "action.secondary.bg": "#FFFFFF",
+    "action.secondary.text": "#2B6321",
+    "action.secondary.border": "#E1EED6"
+  },
+  "typography": {
+    "font.family.sans": "'Inter', system-ui, -apple-system, sans-serif",
+    "font.family.serif": "'Source Serif 4', Georgia, serif",
+    "font.source": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap",
+    "font.feature_settings": "'cv02', 'cv03', 'cv04', 'cv11'",
+    "weight.regular": 400,
+    "weight.medium": 500,
+    "weight.semibold": 600,
+    "weight.bold": 700,
+    "size.xs": "12px",
+    "size.sm": "14px",
+    "size.md": "16px",
+    "size.lg": "18px",
+    "size.xl": "24px",
+    "size.2xl": "36px",
+    "size.3xl": "52px",
+    "line_height.tight": 1.25,
+    "line_height.normal": 1.5,
+    "line_height.relaxed": 1.625
+  },
+  "radius": {
+    "sm": "6px",
+    "md": "10px",
+    "lg": "14px",
+    "xl": "20px"
+  },
+  "spacing": {
+    "xs": "4px",
+    "sm": "8px",
+    "md": "12px",
+    "lg": "16px",
+    "xl": "24px",
+    "2xl": "32px",
+    "3xl": "48px",
+    "4xl": "64px"
+  },
+  "logo": {
+    "minimum_size_nav": "24px",
+    "minimum_size_print_mm": "18mm",
+    "clearspace_rule": "Use clearspace equal to 0.5x the icon stem square on all sides.",
+    "small_size_rule": "Use the flat one-color mark at 24px and below.",
+    "favicon_note": "Use PNG favicons (from gardensuite-icon-source.png). SVG favicon is too detailed at 16px.",
+    "dark_mode_note": "Use gardensuite-icon-white.svg on dark backgrounds. Dynamic favicon switching via prefers-color-scheme."
+  }
+}
