@@ -11,26 +11,60 @@
         </div>
       </div>
     </div>
-    <div class="hidden md:flex items-center gap-8">
-      <div class="inline-block text-[#6B7280] font-['Inter',system-ui,sans-serif] font-medium text-sm/4.5 cursor-pointer hover:text-black transition-colors">
+    <nav class="hidden md:flex relative z-50 items-center gap-1">
+      <!-- Mega Menu Dropdown -->
+      <div class="group relative">
+        <button class="inline-flex items-center justify-center rounded-md px-4 py-2 text-[14px] font-['Inter',system-ui,sans-serif] font-medium transition-colors hover:bg-gray-100/50 hover:text-black text-[#6B7280] focus:bg-gray-100/50 focus:text-black focus:outline-none">
+          Products
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-1 opacity-60 transition-transform duration-250 ease-in-out group-hover:rotate-180" aria-hidden="true"><path d="M3 4.5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        
+        <div class="pointer-events-none absolute left-1/2 top-full mt-1 w-[450px] -translate-x-1/2 opacity-0 invisible translate-y-1 scale-95 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-hover:scale-100 group-hover:pointer-events-auto transition-all duration-200 ease-out origin-top border border-[#0000000F] shadow-[0_10px_30px_rgba(0,0,0,0.08)] bg-white rounded-xl p-3 z-50 flex gap-3">
+          <div class="w-1/3 rounded-lg overflow-hidden bg-gradient-to-b from-[#F0FDF4] to-[#DCFCE7] p-4 flex flex-col justify-between group/card relative">
+            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#1A5C2E" class="w-8 h-8 mb-2 z-10 transition-transform group-hover/card:scale-110">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+            </svg>
+            <div class="z-10 mt-4">
+              <span class="block font-['Plus_Jakarta_Sans',system-ui,sans-serif] font-bold text-[#1A5C2E] text-base leading-tight">GardenSuite<br/>V3</span>
+              <span class="block text-xs text-[#1A5C2E] mt-1.5 opacity-80 leading-relaxed font-['Inter',system-ui,sans-serif]">The complete ecosystem for modern tea gardens.</span>
+            </div>
+          </div>
+          <div class="w-2/3 grid grid-cols-1 gap-1">
+            <a href="/products/attendance" class="block p-3 rounded-lg hover:bg-[#FAFAF7] transition-colors group/item focus:bg-[#FAFAF7] focus:outline-none">
+              <div class="text-[13px] font-bold text-[#111111] font-['Plus_Jakarta_Sans',system-ui,sans-serif] group-hover/item:text-[#1A5C2E] transition-colors">Face Attendance</div>
+              <div class="text-xs text-[#777777] mt-1 line-clamp-2 leading-relaxed font-['Inter',system-ui,sans-serif]">Offline biometric recognition. No proxy punching.</div>
+            </a>
+            <a href="/products/attendance" class="block p-3 rounded-lg hover:bg-[#FAFAF7] transition-colors group/item focus:bg-[#FAFAF7] focus:outline-none">
+              <div class="text-[13px] font-bold text-[#111111] font-['Plus_Jakarta_Sans',system-ui,sans-serif] group-hover/item:text-[#1A5C2E] transition-colors">Smart Weighing</div>
+              <div class="text-xs text-[#777777] mt-1 line-clamp-2 leading-relaxed font-['Inter',system-ui,sans-serif]">Auto-linked bluetooth green leaf weighing scales.</div>
+            </a>
+            <a href="#features" class="block p-3 rounded-lg hover:bg-[#FAFAF7] transition-colors group/item focus:bg-[#FAFAF7] focus:outline-none">
+              <div class="text-[13px] font-bold text-[#111111] font-['Plus_Jakarta_Sans',system-ui,sans-serif] group-hover/item:text-[#1A5C2E] transition-colors">Payroll & MIS</div>
+              <div class="text-xs text-[#777777] mt-1 line-clamp-2 leading-relaxed font-['Inter',system-ui,sans-serif]">Automated accounting and instant cloud reports.</div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <a href="#features" class="inline-flex items-center justify-center rounded-md px-4 py-2 text-[14px] font-['Inter',system-ui,sans-serif] font-medium transition-colors hover:bg-gray-100/50 hover:text-black text-[#6B7280] focus:bg-gray-100/50 focus:text-black focus:outline-none">
         Features
-      </div>
-      <div class="inline-block text-[#6B7280] font-['Inter',system-ui,sans-serif] font-medium text-sm/4.5 cursor-pointer hover:text-black transition-colors">
+      </a>
+      <a href="#clients" class="inline-flex items-center justify-center rounded-md px-4 py-2 text-[14px] font-['Inter',system-ui,sans-serif] font-medium transition-colors hover:bg-gray-100/50 hover:text-black text-[#6B7280] focus:bg-gray-100/50 focus:text-black focus:outline-none">
         Clients
-      </div>
-      <div class="inline-block text-[#6B7280] font-['Inter',system-ui,sans-serif] font-medium text-sm/4.5 cursor-pointer hover:text-black transition-colors">
+      </a>
+      <a href="#about" class="inline-flex items-center justify-center rounded-md px-4 py-2 text-[14px] font-['Inter',system-ui,sans-serif] font-medium transition-colors hover:bg-gray-100/50 hover:text-black text-[#6B7280] focus:bg-gray-100/50 focus:text-black focus:outline-none">
         About
-      </div>
-    </div>
+      </a>
+    </nav>
     <div class="flex items-center gap-2">
-      <div class="hidden md:inline-block text-[#6B7280] font-['Inter',system-ui,sans-serif] font-medium text-sm/4.5 mr-4 cursor-pointer hover:text-black transition-colors">
+      <a href="#contact" class="hidden md:inline-block text-[#6B7280] font-['Inter',system-ui,sans-serif] font-medium text-sm/4.5 mr-4 cursor-pointer hover:text-black transition-colors">
         Contact
-      </div>
-      <div class="flex items-center rounded-[100px] py-2.5 px-5 bg-[#0A0A0A] cursor-pointer hover:scale-[1.02] transition-transform">
+      </a>
+      <a href="#contact" class="flex items-center rounded-[100px] py-2.5 px-5 bg-[#0A0A0A] cursor-pointer hover:scale-[1.02] transition-transform">
         <div class="inline-block text-white font-['Inter',system-ui,sans-serif] font-semibold text-[13px]/4">
           Book a Demo
         </div>
-      </div>
+      </a>
     </div>
   </div>
   <div class="flex flex-col items-center w-full grow shrink basis-[0%] pt-18 pb-10 gap-7 px-4 md:px-20">
@@ -52,19 +86,19 @@
       Trusted by 20+ estates across Darjeeling, Dooars, Terai, and Assam.
     </div>
     <div class="flex items-center pt-1 gap-3">
-      <div class="flex items-center rounded-[100px] py-3.5 px-8 gap-2 bg-[#0A0A0A] cursor-pointer hover:bg-[#1f1f1f] transition-all hover:scale-[1.02]">
+      <a href="#contact" class="flex items-center rounded-[100px] py-3.5 px-8 gap-2 bg-[#0A0A0A] cursor-pointer hover:bg-[#1f1f1f] transition-all hover:scale-[1.02]">
         <div class="inline-block text-white font-['Inter',system-ui,sans-serif] font-semibold text-[15px]/4.5">
           Book a Demo
         </div>
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="shrink-0">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="shrink-0" aria-hidden="true">
           <path d="M5 2.5l4.5 4.5L5 11.5" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
-      </div>
-      <div class="flex items-center rounded-[100px] py-3.5 px-8 [border-width:1.5px] border-solid border-[#D1D5DB] cursor-pointer hover:bg-gray-50 transition-colors">
+      </a>
+      <a href="#features" class="flex items-center rounded-[100px] py-3.5 px-8 [border-width:1.5px] border-solid border-[#D1D5DB] cursor-pointer hover:bg-gray-50 transition-colors">
         <div class="inline-block text-[#374151] font-['Inter',system-ui,sans-serif] font-semibold text-[15px]/4.5">
           See Features
         </div>
-      </div>
+      </a>
     </div>
     <div class="flex items-center justify-center pt-3 gap-6 opacity-80">
       <div class="flex items-center gap-1">
@@ -175,7 +209,7 @@
   </div>
 
   <!-- Features -->
-  <div class="flex flex-col items-center w-full py-25 px-4 md:px-8 lg:px-30 gap-14 bg-[#FAFAF7]">
+  <div id="features" class="flex flex-col items-center w-full py-25 px-4 md:px-8 lg:px-30 gap-14 bg-[#FAFAF7] scroll-mt-20">
     <div class="flex flex-col w-full max-w-7xl gap-6">
       <div class="flex flex-col md:flex-row w-full gap-6">
         <div class="flex flex-col grow shrink basis-[0%] rounded-[14px] gap-4 bg-white border border-solid border-[#F0F0F0] p-7 shadow-sm transition-shadow hover:shadow-md">
@@ -191,9 +225,9 @@
           <div class="text-[14px] leading-[1.5] inline-block text-[#777777] font-['Inter',system-ui,sans-serif]">
             Biometric face recognition that works offline. No proxy punching ever.
           </div>
-          <div class="inline-block text-[#1A5C2E] font-['Inter',system-ui,sans-serif] font-semibold text-[13px]/4 cursor-pointer hover:underline mt-auto pt-2">
+          <a href="/products/attendance" class="inline-block text-[#1A5C2E] font-['Inter',system-ui,sans-serif] font-semibold text-[13px]/4 cursor-pointer hover:underline mt-auto pt-2">
             See how it works &rarr;
-          </div>
+          </a>
         </div>
         <div class="flex flex-col grow shrink basis-[0%] rounded-[14px] gap-4 bg-white border border-solid border-[#F0F0F0] p-7 shadow-sm transition-shadow hover:shadow-md">
           <div class="flex items-center justify-center rounded-[10px] bg-[#F0FDF4] shrink-0 size-11">
@@ -208,9 +242,9 @@
           <div class="text-[14px] leading-[1.5] inline-block text-[#777777] font-['Inter',system-ui,sans-serif]">
             Bluetooth weighing scale auto-links green leaf weight to verified workers.
           </div>
-          <div class="inline-block text-[#1A5C2E] font-['Inter',system-ui,sans-serif] font-semibold text-[13px]/4 cursor-pointer hover:underline mt-auto pt-2">
+          <a href="/products/attendance" class="inline-block text-[#1A5C2E] font-['Inter',system-ui,sans-serif] font-semibold text-[13px]/4 cursor-pointer hover:underline mt-auto pt-2">
             See how it works &rarr;
-          </div>
+          </a>
         </div>
         <div class="flex flex-col grow shrink basis-[0%] rounded-[14px] gap-4 bg-white border border-solid border-[#F0F0F0] p-7 shadow-sm transition-shadow hover:shadow-md">
           <div class="flex items-center justify-center rounded-[10px] bg-[#F0FDF4] shrink-0 size-11">
@@ -274,7 +308,7 @@
   </div>
 
   <!-- Why GardenSuite -->
-  <div class="flex flex-col items-center w-full bg-white">
+  <div id="about" class="flex flex-col items-center w-full bg-white scroll-mt-20">
     <div class="flex flex-col md:flex-row w-full max-w-6xl items-start py-25 px-4 md:px-8 gap-10 md:gap-20">
       <div class="flex flex-col grow shrink basis-[0%] max-w-[500px] gap-4">
         <div class="tracking-widest uppercase inline-block text-[#1A5C2E] font-['Inter',system-ui,sans-serif] font-semibold text-[13px]/4">
@@ -339,7 +373,7 @@
   </div>
 
   <!-- Trusted Across Regions -->
-  <div class="flex flex-col items-center w-full py-25 px-4 md:px-8 lg:px-30 gap-10 bg-[#FAFAF7]">
+  <div id="clients" class="flex flex-col items-center w-full py-25 px-4 md:px-8 lg:px-30 gap-10 bg-[#FAFAF7] scroll-mt-20">
     <div class="flex flex-col items-center gap-3">
       <div class="tracking-widest uppercase inline-block text-[#1A5C2E] font-['Inter',system-ui,sans-serif] font-semibold text-[13px]/4">
         Trusted Across Regions
@@ -476,7 +510,7 @@
   </div>
 
   <!-- CTA -->
-  <div class="flex flex-col items-center w-full py-25 px-4 md:px-30 gap-6 bg-[#0A0A0A]">
+  <div id="contact" class="flex flex-col items-center w-full py-25 px-4 md:px-30 gap-6 bg-[#0A0A0A] scroll-mt-20">
     <img src="/gardensuite-icon-white.svg" alt="GardenSuite Logo" class="h-12 w-auto mb-2 opacity-90" />
     <div class="text-[32px] md:text-[40px] text-center tracking-[-0.02em] leading-[1.15] text-white font-['Plus_Jakarta_Sans',system-ui,sans-serif] font-extrabold pb-2">
       Ready to modernize your tea garden?
@@ -485,16 +519,16 @@
       Book a free demo and see how GardenSuite can replace paperwork with a single tap. Free setup, free training - no risk.
     </div>
     <div class="flex pt-4 gap-4">
-      <div class="flex items-center justify-center rounded-[100px] py-3.5 px-8 bg-[#1B5E3B] cursor-pointer hover:bg-[#144723] transition-colors">
+      <a href="#contact" class="flex items-center justify-center rounded-[100px] py-3.5 px-8 bg-[#1B5E3B] cursor-pointer hover:bg-[#144723] transition-colors">
         <div class="inline-block text-white font-['Inter',system-ui,sans-serif] font-semibold text-sm">
           Book a Demo
         </div>
-      </div>
-      <div class="flex items-center justify-center rounded-[100px] py-3.5 px-8 border border-solid border-[#333333] cursor-pointer hover:bg-[#1A1A1A] transition-colors">
+      </a>
+      <a href="mailto:contact@gardensuite.in" class="flex items-center justify-center rounded-[100px] py-3.5 px-8 border border-solid border-[#333333] cursor-pointer hover:bg-[#1A1A1A] transition-colors">
         <div class="inline-block text-white font-['Inter',system-ui,sans-serif] font-semibold text-sm">
           Contact Us
         </div>
-      </div>
+      </a>
     </div>
   </div>
 </div>

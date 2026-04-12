@@ -19,9 +19,9 @@
       <nav class="flex flex-wrap justify-center items-center gap-8 md:gap-14 text-[#0A0A0A] font-['Plus_Jakarta_Sans',system-ui,sans-serif] font-semibold text-[15px] tracking-tight mb-8">
         <a href="/" class="hover:text-[#3D7D2C] transition-colors">Home</a>
         <a href="#features" class="hover:text-[#3D7D2C] transition-colors">Features</a>
-        <a href="#security" class="hover:text-[#3D7D2C] transition-colors">Security</a>
-        <a href="#support" class="hover:text-[#3D7D2C] transition-colors">Support</a>
+        <a href="#clients" class="hover:text-[#3D7D2C] transition-colors">Clients</a>
         <a href="#about" class="hover:text-[#3D7D2C] transition-colors">About</a>
+        <a href="#contact" class="hover:text-[#3D7D2C] transition-colors">Contact</a>
       </nav>
 
       <!-- 3. Social Row -->
@@ -53,9 +53,9 @@
     <!-- 5. Utility & Status Bar -->
     <div class="relative w-full px-6 md:px-14 flex flex-col md:flex-row justify-between items-center gap-4 z-10 pointer-events-none mt-32 mb-8">
       <div class="inline-block text-[#A3A3A3] font-['Inter',system-ui,sans-serif] text-[13px] pointer-events-auto">
-        © {new Date().getFullYear()} Sarbaa
+        © {new Date().getFullYear()} Sarbani Associates
       </div>
-      <a href="#" class="flex items-center gap-2.5 pointer-events-auto group py-2 px-3 rounded-[100px] hover:bg-[#00000005] transition-colors">
+      <a href="#status" class="flex items-center gap-2.5 pointer-events-auto group py-2 px-3 rounded-[100px] hover:bg-[#00000005] transition-colors">
         <div class="w-1.5 h-1.5 rounded-full bg-[#10B981] shadow-[0_0_8px_rgba(16,185,129,0.5)]"></div>
         <div class="inline-block text-[#777777] font-['Inter',system-ui,sans-serif] text-[13px] font-medium group-hover:text-[#0A0A0A] transition-colors">
           All services are online
@@ -69,8 +69,8 @@
       <div class="absolute left-[35%] top-1/2 -translate-y-1/2 w-[35vw] h-[35vw] bg-[#3D7D2C]/[0.05] blur-[120px] rounded-full z-0"></div>
       
       <!-- Solid Typography -->
-      <div class="relative z-10 font-['Plus_Jakarta_Sans',system-ui,sans-serif] font-extrabold text-[28vw] tracking-[-0.06em] leading-[0.70] text-[#EBEBE8] whitespace-nowrap translate-y-[28%] pr-8">
-        Sarbaa
+      <div class="relative z-10 font-['Plus_Jakarta_Sans',system-ui,sans-serif] font-extrabold text-[20vw] tracking-[-0.06em] leading-[0.70] text-[#EBEBE8] whitespace-nowrap translate-y-[35%] pr-8">
+        Sarbani
       </div>
     </div>
   </footer>
