@@ -215,7 +215,7 @@
     </div>
     <div class="flex items-center gap-2">
       <a href="#contact" class="hidden md:inline-block text-[#71717A] font-['Inter'] font-medium text-sm mr-4 hover:text-[#0A0A0A] transition-colors">Contact</a>
-      <a href="#contact" class="flex items-center rounded-full py-2.5 px-5 bg-[#0A0A0A] hover:bg-[#1A1A1A] active:scale-[0.97] transition-all duration-150">
+      <a href="#contact" class="flex items-center rounded-full py-2.5 px-5 bg-[#1B5E3B] hover:bg-[#144723] active:scale-[0.97] transition-all duration-150 shadow-[0_2px_8px_rgba(27,94,59,0.25)]">
         <span class="text-white font-['Inter'] font-semibold text-[13px] leading-4">Book a Demo</span>
       </a>
     </div>
@@ -225,47 +225,40 @@
   <!-- ═══════════════════════════════════════════════════════════ -->
   <!-- HERO                                                       -->
   <!-- ═══════════════════════════════════════════════════════════ -->
-  <section class="w-full bg-[#FAFAF7]" aria-label="Hero">
-    <div class="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20 flex flex-col items-center pt-20 md:pt-28 pb-14 gap-7">
-      <div class="hero-badge flex items-center rounded-full pr-3.5 pl-2.5 gap-2 bg-[#F0FDF4] border border-[#DCFCE7] py-1.5">
+  <section class="w-full relative overflow-hidden" aria-label="Hero">
+    <!-- Atmospheric background: subtle green-tinted gradient + radial glow -->
+    <div class="absolute inset-0 bg-gradient-to-b from-[#F0FDF4] via-[#FAFAF7] to-[#F5F5F0] pointer-events-none"></div>
+    <div class="absolute top-[-20%] left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-[#1B5E3B]/[0.04] rounded-full blur-[100px] pointer-events-none"></div>
+    <div class="absolute bottom-0 left-1/4 w-[400px] h-[300px] bg-[#22C55E]/[0.03] rounded-full blur-[80px] pointer-events-none"></div>
+
+    <div class="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20 flex flex-col items-center pt-12 md:pt-16 pb-0 gap-5 relative z-10">
+      <div class="hero-badge flex items-center rounded-full pr-3.5 pl-2.5 gap-2 bg-[#F0FDF4]/80 backdrop-blur-sm border border-[#DCFCE7] py-1.5">
         <span class="rounded-full py-0.5 px-2 bg-[#1B5E3B] text-white font-['Inter'] font-bold text-[11px] leading-[14px]">NEW</span>
         <span class="text-[#15803D] font-['Inter'] font-medium text-[13px] leading-4">Version 3 is here</span>
       </div>
 
-      <h1 class="hero-h1 text-[44px] md:text-[72px] lg:text-[80px] text-center leading-[1.02] tracking-[-0.04em] text-[#0A0A0A] font-['Plus_Jakarta_Sans'] font-extrabold max-w-4xl" style="text-wrap: balance">
-        Tea garden management,<br class="hidden md:block" /> reimagined.
+      <h1 class="hero-h1 text-[40px] md:text-[64px] lg:text-[72px] text-center leading-[1.02] tracking-[-0.04em] text-[#0A0A0A] font-['Plus_Jakarta_Sans'] font-extrabold max-w-4xl" style="text-wrap: balance">
+        Tea garden management, reimagined.
       </h1>
 
-      <p class="hero-sub text-[17px] md:text-[18px] text-center leading-[1.6] max-w-[540px] text-[#71717A] font-['Inter']">
-        Face attendance. Smart weighing. Automated payroll.<br/> One platform for your entire estate.
+      <p class="hero-sub text-[16px] md:text-[17px] text-center leading-[1.6] max-w-[500px] text-[#52525B] font-['Inter']">
+        Face attendance. Smart weighing. Automated payroll. One platform for your entire estate.
       </p>
 
-      <div class="hero-cta flex items-center pt-2 gap-3">
-        <a href="#contact" class="flex items-center rounded-full py-3.5 px-8 gap-2 bg-[#0A0A0A] hover:bg-[#1A1A1A] active:scale-[0.97] transition-all duration-150">
-          <span class="text-white font-['Inter'] font-semibold text-[15px] leading-[18px]">Book a Demo</span>
+      <div class="hero-cta flex items-center pt-1 gap-3">
+        <a href="#contact" class="flex items-center rounded-full py-3 px-7 gap-2 bg-[#1B5E3B] hover:bg-[#144723] active:scale-[0.97] transition-all duration-150 shadow-[0_4px_14px_rgba(27,94,59,0.3)]">
+          <span class="text-white font-['Inter'] font-semibold text-[14px] leading-[18px]">Book a Demo</span>
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="shrink-0" aria-hidden="true"><path d="M5 2.5l4.5 4.5L5 11.5" stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg>
         </a>
-        <a href="#features" class="flex items-center rounded-full py-3.5 px-8 border-[1.5px] border-[#D1D5DB] hover:border-[#A1A1AA] hover:bg-[#00000005] active:scale-[0.97] transition-all duration-150">
-          <span class="text-[#374151] font-['Inter'] font-semibold text-[15px] leading-[18px]">See Features</span>
+        <a href="#features" class="flex items-center rounded-full py-3 px-7 bg-white/70 backdrop-blur-sm border border-[#D1D5DB] hover:bg-white hover:border-[#A1A1AA] active:scale-[0.97] transition-all duration-150">
+          <span class="text-[#374151] font-['Inter'] font-semibold text-[14px] leading-[18px]">See Features</span>
         </a>
       </div>
 
-      <div class="hero-trust flex items-center pt-3 gap-5 text-[#A1A1AA] font-['Inter'] font-medium text-[13px]">
-        <span class="flex items-center gap-1.5"><svg class="shrink-0" width="8" height="8" aria-hidden="true"><circle cx="4" cy="4" r="3" fill="#22C55E"/></svg>Offline-first</span>
-        <span class="hidden md:block w-1 h-1 rounded-full bg-[#D4D4D8]"></span>
-        <span class="flex items-center gap-1.5"><svg class="shrink-0" width="8" height="8" aria-hidden="true"><circle cx="4" cy="4" r="3" fill="#22C55E"/></svg>Cloud sync</span>
-        <span class="hidden md:block w-1 h-1 rounded-full bg-[#D4D4D8]"></span>
-        <span class="flex items-center gap-1.5"><svg class="shrink-0" width="8" height="8" aria-hidden="true"><circle cx="4" cy="4" r="3" fill="#22C55E"/></svg>Free setup</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- Hero visual -->
-  <section class="w-full bg-[#FAFAF7]">
-    <div class="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20 pb-28">
-      <div class="hero-img relative w-full rounded-2xl overflow-clip border border-[#0000000A] shadow-[0_20px_80px_rgba(0,0,0,0.06)] bg-white max-h-[500px] md:max-h-[650px]">
-        <img src="/hero-sign-in.png" alt="GardenSuite Dashboard" class="w-full h-auto object-cover object-top" width="1400" height="900" loading="eager" />
-        <div class="absolute bottom-0 left-0 w-full h-48 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none"></div>
+      <!-- Product mockup - visible at first glance, tighter to hero text -->
+      <div class="hero-img relative w-full mt-8 md:mt-10 rounded-t-2xl overflow-clip border border-[#0000000A] border-b-0 shadow-[0_-4px_60px_rgba(0,0,0,0.08)] bg-white max-h-[420px] md:max-h-[560px]">
+        <img src="/hero-sign-in.png" alt="GardenSuite Dashboard" class="w-full h-auto object-cover object-top" width="1400" height="900" loading="eager" fetchpriority="high" />
+        <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#F5F5F0] via-[#F5F5F0]/70 to-transparent pointer-events-none"></div>
       </div>
     </div>
   </section>
@@ -344,8 +337,10 @@
   <!-- ═══════════════════════════════════════════════════════════ -->
   <!-- FEATURES                                                    -->
   <!-- ═══════════════════════════════════════════════════════════ -->
-  <section id="features" class="w-full bg-[#FAFAF7] scroll-mt-20" aria-labelledby="feat-heading">
-    <div class="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20 py-28 md:py-36">
+  <section id="features" class="w-full bg-[#FAFAF7] scroll-mt-20 relative overflow-hidden" aria-labelledby="feat-heading">
+    <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-[#1B5E3B]/[0.03] rounded-full blur-[100px] pointer-events-none"></div>
+    <div class="absolute bottom-20 left-0 w-[400px] h-[400px] bg-[#22C55E]/[0.025] rounded-full blur-[80px] pointer-events-none"></div>
+    <div class="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20 py-28 md:py-36 relative z-10">
       <div class="flex flex-col items-center mb-16 md:mb-20">
         <span class="gsap-reveal tracking-[0.1em] uppercase text-[#A1A1AA] font-['Inter'] font-semibold text-[12px] mb-4">Six Modules</span>
         <h2 id="feat-heading" class="gsap-reveal text-[36px] md:text-[52px] text-center tracking-[-0.03em] leading-[1.08] text-[#0A0A0A] font-['Plus_Jakarta_Sans'] font-extrabold" style="text-wrap: balance">
@@ -355,13 +350,14 @@
 
       <!-- Bento: Hero card + 2 stacked -->
       <div class="flex flex-col md:flex-row gap-5 mb-5">
-        <div class="feat-card md:w-[50%] shrink-0 flex flex-col rounded-2xl p-8 md:p-10 bg-white border border-[#F0F0F0] shadow-[0_1px_3px_rgba(0,0,0,0.04)] transition-all duration-300 hover:shadow-[0_12px_40px_rgba(0,0,0,0.08)] hover:-translate-y-0.5">
-          <div class="flex items-center justify-center rounded-xl bg-gradient-to-br from-[#F0FDF4] to-[#DCFCE7] size-12 mb-5">
-            <svg width="22" height="22" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="7" r="4" stroke="#1A5C2E" stroke-width="1.5"/><path d="M3 18c0-3.87 3.13-7 7-7s7 3.13 7 7" stroke="#1A5C2E" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <div class="feat-card md:w-[50%] shrink-0 flex flex-col rounded-2xl p-8 md:p-10 bg-gradient-to-br from-[#1B5E3B] to-[#0F3622] border border-[#2D7A4F]/30 shadow-[0_4px_20px_rgba(27,94,59,0.2)] transition-all duration-300 hover:shadow-[0_16px_50px_rgba(27,94,59,0.3)] hover:-translate-y-0.5 relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-[200px] h-[200px] bg-[#22C55E]/10 rounded-full blur-[60px] pointer-events-none"></div>
+          <div class="flex items-center justify-center rounded-xl bg-white/15 backdrop-blur-sm size-12 mb-5 relative z-10">
+            <svg width="22" height="22" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="7" r="4" stroke="#FFFFFF" stroke-width="1.5"/><path d="M3 18c0-3.87 3.13-7 7-7s7 3.13 7 7" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/></svg>
           </div>
-          <h3 class="text-[#0A0A0A] font-['Plus_Jakarta_Sans'] font-bold text-[20px] leading-tight mb-3">Face Attendance</h3>
-          <p class="text-[15px] leading-[1.6] text-[#71717A] font-['Inter'] mb-6">Biometric face recognition. Works completely offline. Verified identity in under 2 seconds.</p>
-          <a href="/products/attendance" class="mt-auto inline-flex items-center gap-1.5 text-[#1A5C2E] font-['Inter'] font-semibold text-[14px] hover:gap-2.5 transition-all duration-200">
+          <h3 class="text-white font-['Plus_Jakarta_Sans'] font-bold text-[20px] leading-tight mb-3 relative z-10">Face Attendance</h3>
+          <p class="text-[15px] leading-[1.6] text-white/70 font-['Inter'] mb-6 relative z-10">Biometric face recognition. Works completely offline. Verified identity in under 2 seconds.</p>
+          <a href="/products/attendance" class="mt-auto inline-flex items-center gap-1.5 text-[#86EFAC] font-['Inter'] font-semibold text-[14px] hover:gap-2.5 transition-all duration-200 relative z-10">
             See how it works <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M5 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
         </div>
