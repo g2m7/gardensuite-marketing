@@ -96,7 +96,7 @@
 		<!-- Decorative vertical line - desktop only -->
 		<div class="hidden lg:block absolute left-[120px] top-0 w-px h-full bg-[#D4E0D0]" aria-hidden="true"></div>
 
-		<div class="flex flex-col lg:flex-row items-center w-full max-w-[1320px] mx-auto px-6 md:px-14 lg:px-0 py-20 md:py-28 lg:py-0 lg:min-h-[700px] gap-12 lg:gap-0">
+		<div class="flex flex-col lg:flex-row items-center w-full max-w-[1400px] mx-auto px-6 md:px-14 lg:px-0 py-20 md:py-28 lg:py-0 lg:min-h-[700px] gap-12 lg:gap-0">
 			<!-- Text Content -->
 			<div class="flex flex-col lg:pl-40 lg:w-[540px] gap-7 animate-on-scroll lg:py-24">
 				<!-- Step indicator -->
@@ -178,7 +178,7 @@
 		<!-- Decorative vertical line - right side -->
 		<div class="hidden lg:block absolute right-[120px] top-0 w-px h-full bg-[#E8EDE6]" aria-hidden="true"></div>
 
-		<div class="flex flex-col-reverse lg:flex-row items-center w-full max-w-[1320px] mx-auto px-6 md:px-14 lg:px-0 py-20 md:py-28 lg:py-0 lg:min-h-[700px] gap-12 lg:gap-0">
+		<div class="flex flex-col-reverse lg:flex-row items-center w-full max-w-[1400px] mx-auto px-6 md:px-14 lg:px-0 py-20 md:py-28 lg:py-0 lg:min-h-[700px] gap-12 lg:gap-0">
 			<!-- Phone Mockup - Confirmed State -->
 			<div class="flex flex-1 items-center justify-center relative lg:py-16">
 				<div class="animate-on-scroll" style="transition-delay: 100ms;">
@@ -261,7 +261,7 @@
 	<section class="relative w-full bg-[#F3F6F1] overflow-hidden">
 		<div class="hidden lg:block absolute left-[120px] top-0 w-px h-full bg-[#D4E0D0]" aria-hidden="true"></div>
 
-		<div class="flex flex-col lg:flex-row items-center w-full max-w-[1320px] mx-auto px-6 md:px-14 lg:px-0 py-20 md:py-28 lg:py-0 lg:min-h-[750px] gap-12 lg:gap-0">
+		<div class="flex flex-col lg:flex-row items-center w-full max-w-[1400px] mx-auto px-6 md:px-14 lg:px-0 py-20 md:py-28 lg:py-0 lg:min-h-[750px] gap-12 lg:gap-0">
 			<!-- Text Content -->
 			<div class="flex flex-col lg:pl-40 lg:w-[540px] gap-7 animate-on-scroll lg:py-24">
 				<div class="flex items-center gap-4">
@@ -344,7 +344,7 @@
 	<!-- STORY 04: The Sync (Full-Width, Dark) -->
 	<!-- ==================================== -->
 	<section class="relative w-full bg-[#1A2E16] overflow-hidden py-20 md:py-28">
-		<div class="flex flex-col items-center w-full max-w-[1200px] mx-auto px-6 md:px-14 gap-14">
+		<div class="flex flex-col items-center w-full max-w-[1400px] mx-auto px-6 md:px-14 gap-14">
 			<!-- Header -->
 			<div class="flex flex-col items-center gap-5 animate-on-scroll">
 				<div class="flex items-center gap-4">
