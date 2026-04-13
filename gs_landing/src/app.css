@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
-/* ─── GardenSuite Brand Tokens (from design-tokens.json) ─── */
+/* ─── GardenSuite Design Tokens ─── */
 
 @theme {
-	/* Green scale */
+	/* Green scale (brand) */
 	--color-brand-50: #F1F6EB;
 	--color-brand-100: #E1EED6;
 	--color-brand-200: #C8DDB8;
@@ -15,62 +15,39 @@
 	--color-brand-800: #1A4A15;
 	--color-brand-900: #0F2E0C;
 
-	/* Neutrals */
-	--color-charcoal: #111827;
-	--color-ink: #1F2937;
-	--color-surface: #F6F8F3;
-	--color-border: #DDE3D5;
+	/* Neutrals (consolidated to zinc scale) */
+	--color-charcoal: #0A0A0A;
+	--color-ink: #18181B;
+	--color-muted: #71717A;
+	--color-subtle: #A1A1AA;
+	--color-surface: #FAFAF7;
+	--color-border: #E4E4E7;
+	--color-border-soft: #F0F0F0;
 
 	/* Semantic */
 	--color-canvas: #FFFFFF;
-	--color-text-primary: #111827;
-	--color-text-secondary: #4B5563;
+	--color-text-primary: #0A0A0A;
+	--color-text-secondary: #71717A;
 	--color-text-inverse: #FFFFFF;
+
+	/* Accent */
+	--color-green-deep: #1B5E3B;
+	--color-green-dark: #1A5C2E;
 
 	/* Radius */
 	--radius-sm: 6px;
 	--radius-md: 10px;
 	--radius-lg: 14px;
 	--radius-xl: 20px;
+	--radius-full: 100px;
 
-	/* Font */
+	/* Fonts */
 	--font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-}
+	--font-display: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
 
-/* ─── Base ─── */
-
-@layer base {
-	body {
-		font-family: var(--font-sans);
-		font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
-		color: var(--color-charcoal);
-		background: linear-gradient(180deg, #ffffff 0%, var(--color-surface) 100%);
-		background-attachment: fixed;
-		-webkit-font-smoothing: antialiased;
-		-moz-osx-font-smoothing: grayscale;
-	}
-
-	h1, h2, h3, h4, h5, h6 {
-		font-weight: 700;
-		letter-spacing: -0.02em;
-	}
-
-	html { scroll-behavior: smooth; }
-}
-
-/* ─── Shadows (from brand pack) ─── */
-
-@utility shadow-soft {
-	box-shadow: 0 12px 30px rgba(74, 157, 53, 0.15);
-}
-
-@utility shadow-card {
-	box-shadow: 0 8px 24px rgba(17, 24, 39, 0.08);
-}
-
-@theme {
-	--animate-marquee: marquee 30s linear infinite;
-	--animate-marquee-reverse: marquee-reverse 30s linear infinite;
+	/* Marquee */
+	--animate-marquee: marquee 40s linear infinite;
+	--animate-marquee-reverse: marquee-reverse 40s linear infinite;
 
 	@keyframes marquee {
 		0% { transform: translateX(0); }
@@ -83,3 +60,45 @@
 	}
 }
 
+/* ─── Base ─── */
+
+@layer base {
+	html {
+		scroll-behavior: smooth;
+	}
+
+	body {
+		font-family: var(--font-sans);
+		font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+		color: var(--color-charcoal);
+		background: var(--color-surface);
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		font-family: var(--font-display);
+		font-weight: 700;
+		letter-spacing: -0.03em;
+		text-wrap: balance;
+	}
+
+	::selection {
+		background: var(--color-brand-200);
+		color: var(--color-brand-900);
+	}
+}
+
+/* ─── Shadows ─── */
+
+@utility shadow-soft {
+	box-shadow: 0 12px 30px rgba(74, 157, 53, 0.15);
+}
+
+@utility shadow-card {
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+}
+
+@utility shadow-card-hover {
+	box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.04);
+}

@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* - GardenSuite Brand Tokens */
+/* ─── Layout Design Tokens (inherits from app.css) ─── */
 
 @theme {
 	/* Green scale */
@@ -15,31 +15,41 @@
 	--color-brand-800: #1A4A15;
 	--color-brand-900: #0F2E0C;
 
-	/* Neutrals */
-	--color-charcoal: #111827;
-	--color-ink: #1F2937;
-	--color-surface: #F6F8F3;
-	--color-border: #DDE3D5;
+	/* Neutrals (consolidated) */
+	--color-charcoal: #0A0A0A;
+	--color-ink: #18181B;
+	--color-muted: #71717A;
+	--color-subtle: #A1A1AA;
+	--color-surface: #FAFAF7;
+	--color-border: #E4E4E7;
+	--color-border-soft: #F0F0F0;
 
 	/* Semantic */
 	--color-canvas: #FFFFFF;
-	--color-text-primary: #111827;
-	--color-text-secondary: #4B5563;
+	--color-text-primary: #0A0A0A;
+	--color-text-secondary: #71717A;
 	--color-text-inverse: #FFFFFF;
+
+	--color-green-deep: #1B5E3B;
+	--color-green-dark: #1A5C2E;
 
 	/* Radius */
 	--radius-sm: 6px;
 	--radius-md: 10px;
 	--radius-lg: 14px;
 	--radius-xl: 20px;
+	--radius-full: 100px;
 
-	/* Font */
+	/* Fonts */
 	--font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+	--font-display: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
 }
 
-/* - Base */
+/* ─── Base ─── */
 
 @layer base {
+	html { scroll-behavior: smooth; }
+
 	body {
 		font-family: var(--font-sans);
 		font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
@@ -50,11 +60,11 @@
 	}
 
 	h1, h2, h3, h4, h5, h6 {
+		font-family: var(--font-display);
 		font-weight: 700;
 		letter-spacing: -0.03em;
+		text-wrap: balance;
 	}
-
-	html { scroll-behavior: smooth; }
 
 	::selection {
 		background: var(--color-brand-200);
@@ -62,14 +72,18 @@
 	}
 }
 
-/* - Utilities */
+/* ─── Utilities ─── */
 
 @utility shadow-soft {
 	box-shadow: 0 12px 30px rgba(74, 157, 53, 0.15);
 }
 
 @utility shadow-card {
-	box-shadow: 0 8px 24px rgba(17, 24, 39, 0.08);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+}
+
+@utility shadow-card-hover {
+	box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.04);
 }
 
 @utility text-gradient {
@@ -86,20 +100,30 @@
 	background-clip: text;
 }
 
-/* Scroll animations */
-.animate-on-scroll {
+/* ─── Scroll Reveal Animations ─── */
+
+.reveal {
 	opacity: 0;
-	transform: translateY(24px);
-	transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+	transform: translateY(28px);
+	transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+	            transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.animate-on-scroll.is-visible {
+.reveal.is-visible {
 	opacity: 1;
 	transform: translateY(0);
 }
 
+/* Stagger children */
+.reveal-stagger > .reveal:nth-child(1) { transition-delay: 0ms; }
+.reveal-stagger > .reveal:nth-child(2) { transition-delay: 80ms; }
+.reveal-stagger > .reveal:nth-child(3) { transition-delay: 160ms; }
+.reveal-stagger > .reveal:nth-child(4) { transition-delay: 240ms; }
+.reveal-stagger > .reveal:nth-child(5) { transition-delay: 320ms; }
+.reveal-stagger > .reveal:nth-child(6) { transition-delay: 400ms; }
+
 @media (prefers-reduced-motion: reduce) {
-	.animate-on-scroll {
+	.reveal {
 		opacity: 1;
 		transform: none;
 		transition: none;
