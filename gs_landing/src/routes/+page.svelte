@@ -13,28 +13,73 @@
     const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (prefersReduced) { ready = true; return; }
 
-    // ── Hero entrance ──
-    const heroTl = gsap.timeline({ defaults: { ease: 'power3.out' }});
-    heroTl
-      .from('.hero-badge', { opacity: 0, y: 20, duration: 0.6, delay: 0.1 })
-      .from('.hero-h1', { opacity: 0, y: 40, duration: 0.8 }, '-=0.3')
-      .from('.hero-sub', { opacity: 0, y: 24, duration: 0.6 }, '-=0.4')
-      .from('.hero-cta', { opacity: 0, y: 20, duration: 0.5 }, '-=0.3')
-      .from('.hero-trust', { opacity: 0, duration: 0.5 }, '-=0.2');
+    // ── Hero parallax cutout ──
+    const heroSection = document.querySelector('.hero-parallax');
+    if (heroSection) {
+      // Text entrance
+      const heroTl = gsap.timeline({ defaults: { ease: 'power3.out' }});
+      heroTl
+        .from('.hero-badge', { opacity: 0, y: 20, duration: 0.6, delay: 0.2 })
+        .from('.hero-h1', { opacity: 0, y: 50, duration: 0.9 }, '-=0.3')
+        .from('.hero-sub', { opacity: 0, y: 30, duration: 0.7 }, '-=0.5')
+        .from('.hero-cta', { opacity: 0, y: 24, duration: 0.6 }, '-=0.4');
 
-    // ── Hero image parallax ──
-    gsap.from('.hero-img', {
-      y: 60,
-      opacity: 0,
-      duration: 1,
-      ease: 'power2.out',
-      scrollTrigger: { trigger: '.hero-img', start: 'top 90%' }
-    });
-    gsap.to('.hero-img', {
-      y: -30,
-      ease: 'none',
-      scrollTrigger: { trigger: '.hero-img', start: 'top bottom', end: 'bottom top', scrub: true }
-    });
+      // Mockup entrance: scale up from behind the hills
+      gsap.from('.hero-mockup', {
+        scale: 0.85,
+        opacity: 0,
+        duration: 1.2,
+        delay: 0.4,
+        ease: 'power2.out',
+      });
+
+      // Hills entrance: fade in from below
+      gsap.from('.hero-hills', {
+        y: 80,
+        opacity: 0,
+        duration: 1.4,
+        delay: 0.3,
+        ease: 'power3.out',
+      });
+
+      // ── Scroll-driven parallax ──
+      // Hero text fades out + moves up on scroll
+      gsap.to('.hero-text-content', {
+        y: -120,
+        opacity: 0,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: '.hero-parallax',
+          start: 'top top',
+          end: '40% top',
+          scrub: true,
+        }
+      });
+
+      // Mockup: rises up faster (the reveal effect)
+      gsap.to('.hero-mockup', {
+        y: -400,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: '.hero-parallax',
+          start: 'top top',
+          end: 'bottom top',
+          scrub: true,
+        }
+      });
+
+      // Hills: move up slower (foreground depth)
+      gsap.to('.hero-hills', {
+        y: -60,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: '.hero-parallax',
+          start: 'top top',
+          end: 'bottom top',
+          scrub: true,
+        }
+      });
+    }
 
     // ── Problem/Solution pinned section ──
     // Pin the left "question" while right panels scroll
@@ -178,17 +223,17 @@
 
   <!-- ═══ Nav ═══ -->
   <nav
-    class="sticky top-0 z-50 flex items-center justify-between w-full py-4 px-6 md:px-14 transition-all duration-300 {scrolled ? 'bg-white/80 backdrop-blur-xl border-b border-[#0000000A] shadow-[0_1px_3px_rgba(0,0,0,0.04)]' : ''}"
+    class="fixed top-0 left-0 right-0 z-[60] flex items-center justify-between w-full py-4 px-6 md:px-14 transition-all duration-300 {scrolled ? 'bg-white/80 backdrop-blur-xl border-b border-[#0000000A] shadow-[0_1px_3px_rgba(0,0,0,0.04)]' : ''}"
     aria-label="Main navigation"
   >
     <a href="/" class="flex items-center gap-1.5" aria-label="GardenSuite Home">
       <img src="/favicon.png" alt="" class="h-7 w-auto shrink-0" aria-hidden="true" />
-      <span class="tracking-[-0.01em] text-[#0A0A0A] font-['Plus_Jakarta_Sans',system-ui,sans-serif] font-bold text-[17px] leading-[22px]">GardenSuite</span>
-      <span class="ml-0.5 rounded-sm py-0.5 px-2 bg-[#F0FDF4] text-[#1B5E3B] font-['Inter'] font-bold text-[10px] leading-3 tracking-[0.04em]">V3</span>
+      <span class="tracking-[-0.01em] font-['Plus_Jakarta_Sans',system-ui,sans-serif] font-bold text-[17px] leading-[22px] transition-colors duration-300 {scrolled ? 'text-[#0A0A0A]' : 'text-white'}">GardenSuite</span>
+      <span class="ml-0.5 rounded-sm py-0.5 px-2 font-['Inter'] font-bold text-[10px] leading-3 tracking-[0.04em] transition-colors duration-300 {scrolled ? 'bg-[#F0FDF4] text-[#1B5E3B]' : 'bg-white/15 text-white/90'}">V3</span>
     </a>
     <div class="hidden md:flex items-center gap-1">
       <div class="group relative">
-        <button class="inline-flex items-center justify-center rounded-md px-4 py-2 text-[14px] font-['Inter'] font-medium transition-colors duration-150 hover:bg-[#0000000A] hover:text-[#0A0A0A] text-[#71717A] focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 focus:outline-none" aria-label="Products menu">
+        <button class="inline-flex items-center justify-center rounded-md px-4 py-2 text-[14px] font-['Inter'] font-medium transition-colors duration-150 hover:bg-[#0000000A] hover:text-[#0A0A0A] focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 focus:outline-none {scrolled ? 'text-[#71717A]' : 'text-white/70 hover:text-white hover:bg-white/10'}" aria-label="Products menu">
           Products
           <svg width="12" height="12" viewBox="0 0 12 12" fill="none" class="ml-1 opacity-60 transition-transform duration-200 group-hover:rotate-180" aria-hidden="true"><path d="M3 4.5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
@@ -209,12 +254,12 @@
           </div>
         </div>
       </div>
-      <a href="#features" class="inline-flex items-center justify-center rounded-md px-4 py-2 text-[14px] font-['Inter'] font-medium transition-colors duration-150 hover:bg-[#0000000A] hover:text-[#0A0A0A] text-[#71717A]">Features</a>
-      <a href="#clients" class="inline-flex items-center justify-center rounded-md px-4 py-2 text-[14px] font-['Inter'] font-medium transition-colors duration-150 hover:bg-[#0000000A] hover:text-[#0A0A0A] text-[#71717A]">Clients</a>
-      <a href="#about" class="inline-flex items-center justify-center rounded-md px-4 py-2 text-[14px] font-['Inter'] font-medium transition-colors duration-150 hover:bg-[#0000000A] hover:text-[#0A0A0A] text-[#71717A]">About</a>
+      <a href="#features" class="inline-flex items-center justify-center rounded-md px-4 py-2 text-[14px] font-['Inter'] font-medium transition-colors duration-150 {scrolled ? 'text-[#71717A] hover:bg-[#0000000A] hover:text-[#0A0A0A]' : 'text-white/70 hover:text-white hover:bg-white/10'}">Features</a>
+      <a href="#clients" class="inline-flex items-center justify-center rounded-md px-4 py-2 text-[14px] font-['Inter'] font-medium transition-colors duration-150 {scrolled ? 'text-[#71717A] hover:bg-[#0000000A] hover:text-[#0A0A0A]' : 'text-white/70 hover:text-white hover:bg-white/10'}">Clients</a>
+      <a href="#about" class="inline-flex items-center justify-center rounded-md px-4 py-2 text-[14px] font-['Inter'] font-medium transition-colors duration-150 {scrolled ? 'text-[#71717A] hover:bg-[#0000000A] hover:text-[#0A0A0A]' : 'text-white/70 hover:text-white hover:bg-white/10'}">About</a>
     </div>
     <div class="flex items-center gap-2">
-      <a href="#contact" class="hidden md:inline-block text-[#71717A] font-['Inter'] font-medium text-sm mr-4 hover:text-[#0A0A0A] transition-colors">Contact</a>
+      <a href="#contact" class="hidden md:inline-block font-['Inter'] font-medium text-sm mr-4 transition-colors {scrolled ? 'text-[#71717A] hover:text-[#0A0A0A]' : 'text-white/70 hover:text-white'}">Contact</a>
       <a href="#contact" class="flex items-center rounded-full py-2.5 px-5 bg-[#1B5E3B] hover:bg-[#144723] active:scale-[0.97] transition-all duration-150 shadow-[0_2px_8px_rgba(27,94,59,0.25)]">
         <span class="text-white font-['Inter'] font-semibold text-[13px] leading-4">Book a Demo</span>
       </a>
@@ -223,44 +268,87 @@
 
 
   <!-- ═══════════════════════════════════════════════════════════ -->
-  <!-- HERO                                                       -->
+  <!-- HERO - Parallax Cutout                                      -->
   <!-- ═══════════════════════════════════════════════════════════ -->
-  <section class="w-full relative overflow-hidden" aria-label="Hero">
-    <!-- Atmospheric background: subtle green-tinted gradient + radial glow -->
-    <div class="absolute inset-0 bg-gradient-to-b from-[#F0FDF4] via-[#FAFAF7] to-[#F5F5F0] pointer-events-none"></div>
-    <div class="absolute top-[-20%] left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-[#1B5E3B]/[0.04] rounded-full blur-[100px] pointer-events-none"></div>
-    <div class="absolute bottom-0 left-1/4 w-[400px] h-[300px] bg-[#22C55E]/[0.03] rounded-full blur-[80px] pointer-events-none"></div>
+  <section class="hero-parallax w-full relative h-[100svh] min-h-[700px] overflow-hidden" aria-label="Hero">
 
-    <div class="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20 flex flex-col items-center pt-12 md:pt-16 pb-0 gap-5 relative z-10">
-      <div class="hero-badge flex items-center rounded-full pr-3.5 pl-2.5 gap-2 bg-[#F0FDF4]/80 backdrop-blur-sm border border-[#DCFCE7] py-1.5">
-        <span class="rounded-full py-0.5 px-2 bg-[#1B5E3B] text-white font-['Inter'] font-bold text-[11px] leading-[14px]">NEW</span>
-        <span class="text-[#15803D] font-['Inter'] font-medium text-[13px] leading-4">Version 3 is here</span>
+    <!-- LAYER 0: Dark atmospheric sky -->
+    <div class="absolute inset-0 z-0 pointer-events-none">
+      <div class="absolute inset-0 bg-gradient-to-b from-[#0C1F12] via-[#142A1B] to-[#1B3A24]"></div>
+      <!-- Subtle radial glow in center-top -->
+      <div class="absolute top-[10%] left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-[#22C55E]/[0.06] rounded-full blur-[120px]"></div>
+      <!-- Atmospheric haze at horizon -->
+      <div class="absolute bottom-[30%] left-0 right-0 h-[300px] bg-gradient-to-t from-[#1B5E3B]/[0.08] to-transparent"></div>
+    </div>
+
+    <!-- LAYER 1: Product mockup (middle z, scrolls up faster) -->
+    <!-- Positioned low so it starts mostly behind the hills and reveals on scroll -->
+    <div class="hero-mockup absolute z-10 left-1/2 -translate-x-1/2 bottom-[-35%] md:bottom-[-30%] w-[85%] max-w-[900px]">
+      <div class="relative rounded-2xl overflow-hidden border border-white/[0.08] shadow-[0_20px_80px_rgba(0,0,0,0.5)] bg-[#1a1a1a]">
+        <!-- Browser chrome bar -->
+        <div class="flex items-center gap-2 px-4 py-2.5 bg-[#1a1a1a] border-b border-white/[0.06]">
+          <div class="flex gap-1.5">
+            <div class="w-2.5 h-2.5 rounded-full bg-[#FF5F57]"></div>
+            <div class="w-2.5 h-2.5 rounded-full bg-[#FEBC2E]"></div>
+            <div class="w-2.5 h-2.5 rounded-full bg-[#28C840]"></div>
+          </div>
+          <div class="flex-1 flex justify-center">
+            <div class="flex items-center gap-1.5 rounded-md bg-white/[0.06] px-3 py-1 min-w-[240px]">
+              <svg width="10" height="10" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6 2v8" stroke="white" stroke-opacity="0.3" stroke-width="1.2" stroke-linecap="round"/></svg>
+              <span class="text-white/30 font-['Inter'] text-[11px]">gardensuite.in/dashboard</span>
+            </div>
+          </div>
+        </div>
+        <img src="/hero-sign-in.png" alt="GardenSuite Dashboard" class="w-full h-auto object-cover object-top" width="1400" height="900" loading="eager" fetchpriority="high" />
+      </div>
+    </div>
+
+    <!-- LAYER 2: Tea garden hills cutout (foreground, highest z) -->
+    <div class="hero-hills absolute z-20 bottom-0 left-0 right-0 w-full pointer-events-none" style="height: 65%;">
+      <img
+        src="/hero-hills.png"
+        alt=""
+        aria-hidden="true"
+        class="w-full h-full object-cover object-center"
+        style="-webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.1) 8%, rgba(0,0,0,0.5) 18%, rgba(0,0,0,0.85) 28%, black 38%, black 100%); mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.1) 8%, rgba(0,0,0,0.5) 18%, rgba(0,0,0,0.85) 28%, black 38%, black 100%);"
+      />
+      <!-- Bottom gradient blending into next section -->
+      <div class="absolute bottom-0 left-0 right-0 h-[160px] bg-gradient-to-t from-[#FAFAF7] via-[#FAFAF7]/90 to-transparent"></div>
+    </div>
+
+    <!-- LAYER 3: Hero text content (highest z, above everything) -->
+    <div class="hero-text-content absolute z-30 inset-x-0 top-0 flex flex-col items-center pt-20 md:pt-24 lg:pt-28 px-6">
+      <div class="hero-badge flex items-center rounded-full pr-3.5 pl-2.5 gap-2 bg-white/[0.08] backdrop-blur-md border border-white/[0.12] py-1.5">
+        <span class="rounded-full py-0.5 px-2 bg-[#22C55E] text-white font-['Inter'] font-bold text-[11px] leading-[14px]">NEW</span>
+        <span class="text-white/80 font-['Inter'] font-medium text-[13px] leading-4">Version 3 is here</span>
       </div>
 
-      <h1 class="hero-h1 text-[40px] md:text-[64px] lg:text-[72px] text-center leading-[1.02] tracking-[-0.04em] text-[#0A0A0A] font-['Plus_Jakarta_Sans'] font-extrabold max-w-4xl" style="text-wrap: balance">
+      <h1 class="hero-h1 mt-6 text-[40px] md:text-[64px] lg:text-[76px] text-center leading-[1.02] tracking-[-0.04em] text-white font-['Plus_Jakarta_Sans'] font-extrabold max-w-4xl" style="text-wrap: balance; text-shadow: 0 2px 40px rgba(0,0,0,0.3);">
         Tea garden management, reimagined.
       </h1>
 
-      <p class="hero-sub text-[16px] md:text-[17px] text-center leading-[1.6] max-w-[500px] text-[#52525B] font-['Inter']">
+      <p class="hero-sub mt-5 text-[16px] md:text-[18px] text-center leading-[1.6] max-w-[520px] text-white/60 font-['Inter']">
         Face attendance. Smart weighing. Automated payroll. One platform for your entire estate.
       </p>
 
-      <div class="hero-cta flex items-center pt-1 gap-3">
-        <a href="#contact" class="flex items-center rounded-full py-3 px-7 gap-2 bg-[#1B5E3B] hover:bg-[#144723] active:scale-[0.97] transition-all duration-150 shadow-[0_4px_14px_rgba(27,94,59,0.3)]">
-          <span class="text-white font-['Inter'] font-semibold text-[14px] leading-[18px]">Book a Demo</span>
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="shrink-0" aria-hidden="true"><path d="M5 2.5l4.5 4.5L5 11.5" stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg>
+      <div class="hero-cta flex items-center mt-8 gap-3">
+        <a href="#contact" class="flex items-center rounded-full py-3.5 px-8 gap-2 bg-white hover:bg-[#F0FDF4] active:scale-[0.97] transition-all duration-150 shadow-[0_4px_20px_rgba(0,0,0,0.2)]">
+          <span class="text-[#0A0A0A] font-['Inter'] font-semibold text-[14px] leading-[18px]">Book a Demo</span>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="shrink-0" aria-hidden="true"><path d="M5 2.5l4.5 4.5L5 11.5" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg>
         </a>
-        <a href="#features" class="flex items-center rounded-full py-3 px-7 bg-white/70 backdrop-blur-sm border border-[#D1D5DB] hover:bg-white hover:border-[#A1A1AA] active:scale-[0.97] transition-all duration-150">
-          <span class="text-[#374151] font-['Inter'] font-semibold text-[14px] leading-[18px]">See Features</span>
+        <a href="#features" class="flex items-center rounded-full py-3.5 px-8 bg-white/[0.08] backdrop-blur-sm border border-white/[0.15] hover:bg-white/[0.15] hover:border-white/[0.25] active:scale-[0.97] transition-all duration-150">
+          <span class="text-white font-['Inter'] font-semibold text-[14px] leading-[18px]">See Features</span>
         </a>
-      </div>
-
-      <!-- Product mockup - visible at first glance, tighter to hero text -->
-      <div class="hero-img relative w-full mt-8 md:mt-10 rounded-t-2xl overflow-clip border border-[#0000000A] border-b-0 shadow-[0_-4px_60px_rgba(0,0,0,0.08)] bg-white max-h-[420px] md:max-h-[560px]">
-        <img src="/hero-sign-in.png" alt="GardenSuite Dashboard" class="w-full h-auto object-cover object-top" width="1400" height="900" loading="eager" fetchpriority="high" />
-        <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#F5F5F0] via-[#F5F5F0]/70 to-transparent pointer-events-none"></div>
       </div>
     </div>
+
+    <!-- Scroll indicator - visible above hills -->
+    <div class="absolute z-30 bottom-[38%] md:bottom-[40%] left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-40">
+      <div class="w-5 h-8 rounded-full border-2 border-white/30 flex justify-center pt-1.5">
+        <div class="w-1 h-2 rounded-full bg-white/50 animate-bounce"></div>
+      </div>
+    </div>
+
   </section>
 
 
