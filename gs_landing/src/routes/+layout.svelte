@@ -1,5 +1,6 @@
 <script lang="ts">
 	import './layout.css';
+	import { LinkedinLogo, XLogo, ToggleLeft } from "phosphor-svelte";
 	let { children } = $props();
 </script>
 
@@ -27,10 +28,10 @@
       <!-- 3. Social Row -->
       <div class="flex items-center justify-center gap-8 mb-8">
         <a href="#" aria-label="LinkedIn" class="text-[#A3A3A3] hover:text-[#0A0A0A] transition-colors">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          <LinkedinLogo size={20} weight="fill" aria-hidden="true" />
         </a>
         <a href="#" aria-label="X (Twitter)" class="text-[#A3A3A3] hover:text-[#0A0A0A] transition-colors">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          <XLogo size={20} weight="fill" aria-hidden="true" />
         </a>
       </div>
       
@@ -41,10 +42,7 @@
         <a href="/cookies" class="hover:text-[#0A0A0A] transition-colors hidden sm:block">Cookie Policy</a>
         <a href="/notice" class="hover:text-[#0A0A0A] transition-colors hidden md:block">Notice at Collection</a>
         <a href="/choices" class="flex items-center gap-2 hover:text-[#0A0A0A] transition-colors">
-          <svg width="25" height="13" viewBox="0 0 25 13" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-[#0ea5e9]">
-            <rect width="25" height="13" rx="6.5" fill="currentColor" fill-opacity="0.15"/>
-            <circle cx="6.5" cy="6.5" r="4.5" fill="currentColor"/>
-          </svg>
+          <ToggleLeft size={25} weight="fill" class="text-[#0ea5e9]" aria-hidden="true" />
           Your Privacy Choices
         </a>
       </nav>

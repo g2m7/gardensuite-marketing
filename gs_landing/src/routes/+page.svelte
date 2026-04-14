@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte';
+  import { CaretDown, CaretRight, Plus, Lightning, Clock, X, FileText, ArrowRight, User, Lock, Table, Factory, SquaresFour, Cloud } from "phosphor-svelte";
 
   // ─── GSAP + ScrollTrigger ───
   let ready = $state(false);
@@ -235,11 +236,11 @@
       <div class="group relative">
         <button class="inline-flex items-center justify-center rounded-md px-4 py-2 text-[14px] font-['Inter'] font-medium transition-colors duration-150 hover:bg-[#0000000A] hover:text-[#0A0A0A] focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 focus:outline-none {scrolled ? 'text-[#71717A]' : 'text-white/70 hover:text-white hover:bg-white/10'}" aria-label="Products menu">
           Products
-          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" class="ml-1 opacity-60 transition-transform duration-200 group-hover:rotate-180" aria-hidden="true"><path d="M3 4.5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <CaretDown size={12} weight="bold" class="ml-1 opacity-60 transition-transform duration-200 group-hover:rotate-180" aria-hidden="true" />
         </button>
         <div class="pointer-events-none absolute left-1/2 top-full mt-1 w-[620px] -translate-x-1/2 opacity-0 invisible translate-y-1 scale-[0.97] group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-hover:scale-100 group-hover:pointer-events-auto transition-all duration-200 ease-out origin-top border border-[#0000000F] shadow-[0_10px_30px_rgba(0,0,0,0.08)] bg-white rounded-xl p-3 z-50 flex gap-3">
           <div class="w-1/3 rounded-lg bg-gradient-to-b from-[#F0FDF4] to-[#DCFCE7] p-4 flex flex-col justify-between">
-            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#1A5C2E" class="w-8 h-8 mb-2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" /></svg>
+            <Lightning size={32} weight="bold" color="#1A5C2E" class="mb-2" aria-hidden="true" />
             <div class="mt-4">
               <span class="block font-['Plus_Jakarta_Sans'] font-bold text-[#1A5C2E] text-base leading-tight">GardenSuite<br/>V3</span>
               <span class="block text-xs text-[#1A5C2E]/80 mt-1.5 leading-relaxed font-['Inter']">Complete ecosystem for modern tea gardens.</span>
@@ -294,7 +295,7 @@
           </div>
           <div class="flex-1 flex justify-center">
             <div class="flex items-center gap-1.5 rounded-md bg-white/[0.06] px-3 py-1 min-w-[240px]">
-              <svg width="10" height="10" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6 2v8" stroke="white" stroke-opacity="0.3" stroke-width="1.2" stroke-linecap="round"/></svg>
+              <Plus size={10} weight="bold" color="white" class="opacity-30" aria-hidden="true" />
               <span class="text-white/30 font-['Inter'] text-[11px]">gardensuite.in/dashboard</span>
             </div>
           </div>
@@ -334,7 +335,7 @@
       <div class="hero-cta flex items-center mt-8 gap-3">
         <a href="#contact" class="flex items-center rounded-full py-3.5 px-8 gap-2 bg-white hover:bg-[#F0FDF4] active:scale-[0.97] transition-all duration-150 shadow-[0_4px_20px_rgba(0,0,0,0.2)]">
           <span class="text-[#0A0A0A] font-['Inter'] font-semibold text-[14px] leading-[18px]">Book a Demo</span>
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="shrink-0" aria-hidden="true"><path d="M5 2.5l4.5 4.5L5 11.5" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg>
+          <CaretRight size={14} weight="bold" color="#0A0A0A" class="shrink-0" aria-hidden="true" />
         </a>
         <a href="#features" class="flex items-center rounded-full py-3.5 px-8 bg-white/[0.08] backdrop-blur-sm border border-white/[0.15] hover:bg-white/[0.15] hover:border-white/[0.25] active:scale-[0.97] transition-all duration-150">
           <span class="text-white font-['Inter'] font-semibold text-[14px] leading-[18px]">See Features</span>
@@ -375,7 +376,7 @@
           <div class="ps-card flex flex-col rounded-2xl p-8 bg-[#FAFAF7] border border-[#F0F0F0]">
             <div class="flex items-center gap-3 mb-4">
               <div class="flex items-center justify-center rounded-xl bg-[#FEF2F2] size-11">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 4v6l4 2" stroke="#DC2626" stroke-width="1.5" stroke-linecap="round"/><circle cx="10" cy="10" r="8" stroke="#DC2626" stroke-width="1.5"/></svg>
+                <Clock size={20} weight="bold" color="#DC2626" aria-hidden="true" />
               </div>
               <h3 class="text-[#0A0A0A] font-['Plus_Jakarta_Sans'] font-bold text-[20px] leading-tight">Hours lost daily</h3>
             </div>
@@ -385,7 +386,7 @@
           <div class="ps-card flex flex-col rounded-2xl p-8 bg-[#FAFAF7] border border-[#F0F0F0]">
             <div class="flex items-center gap-3 mb-4">
               <div class="flex items-center justify-center rounded-xl bg-[#FEF2F2] size-11">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6 14l8-8M14 14L6 6" stroke="#DC2626" stroke-width="1.5" stroke-linecap="round"/></svg>
+                <X size={20} weight="bold" color="#DC2626" aria-hidden="true" />
               </div>
               <h3 class="text-[#0A0A0A] font-['Plus_Jakarta_Sans'] font-bold text-[20px] leading-tight">Proxy attendance</h3>
             </div>
@@ -395,7 +396,7 @@
           <div class="ps-card flex flex-col rounded-2xl p-8 bg-[#FAFAF7] border border-[#F0F0F0]">
             <div class="flex items-center gap-3 mb-4">
               <div class="flex items-center justify-center rounded-xl bg-[#FEF2F2] size-11">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="3" y="3" width="14" height="14" rx="2" stroke="#DC2626" stroke-width="1.5"/><path d="M7 7h6M7 10h4" stroke="#DC2626" stroke-width="1.5" stroke-linecap="round"/></svg>
+                <FileText size={20} weight="bold" color="#DC2626" aria-hidden="true" />
               </div>
               <h3 class="text-[#0A0A0A] font-['Plus_Jakarta_Sans'] font-bold text-[20px] leading-tight">Scattered records</h3>
             </div>
@@ -413,7 +414,7 @@
             </p>
             <a href="#features" class="mt-6 inline-flex items-center gap-2 text-[#22C55E] font-['Inter'] font-semibold text-[14px] hover:gap-3 transition-all duration-200">
               See all modules
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M5 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <ArrowRight size={14} weight="bold" aria-hidden="true" />
             </a>
           </div>
         </div>
@@ -441,25 +442,25 @@
         <div class="feat-card md:w-[50%] shrink-0 flex flex-col rounded-2xl p-8 md:p-10 bg-gradient-to-br from-[#1B5E3B] to-[#0F3622] border border-[#2D7A4F]/30 shadow-[0_4px_20px_rgba(27,94,59,0.2)] transition-all duration-300 hover:shadow-[0_16px_50px_rgba(27,94,59,0.3)] hover:-translate-y-0.5 relative overflow-hidden">
           <div class="absolute top-0 right-0 w-[200px] h-[200px] bg-[#22C55E]/10 rounded-full blur-[60px] pointer-events-none"></div>
           <div class="flex items-center justify-center rounded-xl bg-white/15 backdrop-blur-sm size-12 mb-5 relative z-10">
-            <svg width="22" height="22" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="7" r="4" stroke="#FFFFFF" stroke-width="1.5"/><path d="M3 18c0-3.87 3.13-7 7-7s7 3.13 7 7" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <User size={22} weight="bold" color="#FFFFFF" aria-hidden="true" />
           </div>
           <h3 class="text-white font-['Plus_Jakarta_Sans'] font-bold text-[20px] leading-tight mb-3 relative z-10">Face Attendance</h3>
           <p class="text-[15px] leading-[1.6] text-white/70 font-['Inter'] mb-6 relative z-10">Biometric face recognition. Works completely offline. Verified identity in under 2 seconds.</p>
           <a href="/products/attendance" class="mt-auto inline-flex items-center gap-1.5 text-[#86EFAC] font-['Inter'] font-semibold text-[14px] hover:gap-2.5 transition-all duration-200 relative z-10">
-            See how it works <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M5 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            See how it works <ArrowRight size={14} weight="bold" aria-hidden="true" />
           </a>
         </div>
         <div class="flex flex-col gap-5 grow">
           <div class="feat-card flex flex-col rounded-2xl p-7 bg-white border border-[#F0F0F0] shadow-[0_1px_3px_rgba(0,0,0,0.04)] transition-all duration-300 hover:shadow-[0_12px_40px_rgba(0,0,0,0.08)] hover:-translate-y-0.5 grow">
             <div class="flex items-center justify-center rounded-xl bg-gradient-to-br from-[#F0FDF4] to-[#DCFCE7] size-11 mb-4">
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="3" y="6" width="14" height="10" rx="2" stroke="#1A5C2E" stroke-width="1.5"/><path d="M7 6V4a3 3 0 016 0v2" stroke="#1A5C2E" stroke-width="1.5"/></svg>
+              <Lock size={20} weight="bold" color="#1A5C2E" aria-hidden="true" />
             </div>
             <h3 class="text-[#0A0A0A] font-['Plus_Jakarta_Sans'] font-bold text-[17px] mb-2">Smart Weighing</h3>
             <p class="text-[15px] leading-[1.6] text-[#71717A] font-['Inter']">Bluetooth scale auto-links leaf weight to verified workers.</p>
           </div>
           <div class="feat-card flex flex-col rounded-2xl p-7 bg-white border border-[#F0F0F0] shadow-[0_1px_3px_rgba(0,0,0,0.04)] transition-all duration-300 hover:shadow-[0_12px_40px_rgba(0,0,0,0.08)] hover:-translate-y-0.5 grow">
             <div class="flex items-center justify-center rounded-xl bg-gradient-to-br from-[#F0FDF4] to-[#DCFCE7] size-11 mb-4">
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="3" y="3" width="14" height="14" rx="2" stroke="#1A5C2E" stroke-width="1.5"/><path d="M3 8h14M7 8v9" stroke="#1A5C2E" stroke-width="1.5"/></svg>
+              <Table size={20} weight="bold" color="#1A5C2E" aria-hidden="true" />
             </div>
             <h3 class="text-[#0A0A0A] font-['Plus_Jakarta_Sans'] font-bold text-[17px] mb-2">Automated Payroll</h3>
             <p class="text-[15px] leading-[1.6] text-[#71717A] font-['Inter']">Wages, deductions, PF, ESI, bonus - all auto-calculated.</p>
@@ -471,21 +472,21 @@
       <div class="flex flex-col md:flex-row gap-5">
         <div class="feat-card flex flex-col grow basis-0 rounded-2xl p-7 bg-white border border-[#F0F0F0] shadow-[0_1px_3px_rgba(0,0,0,0.04)] transition-all duration-300 hover:shadow-[0_12px_40px_rgba(0,0,0,0.08)] hover:-translate-y-0.5">
           <div class="flex items-center justify-center rounded-xl bg-gradient-to-br from-[#F0FDF4] to-[#DCFCE7] size-11 mb-4">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 16V8l6-4 6 4v8" stroke="#1A5C2E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 16v-4h4v4" stroke="#1A5C2E" stroke-width="1.5"/></svg>
+            <Factory size={20} weight="bold" color="#1A5C2E" aria-hidden="true" />
           </div>
           <h3 class="text-[#0A0A0A] font-['Plus_Jakarta_Sans'] font-bold text-[17px] mb-2">Factory Accounts</h3>
           <p class="text-[15px] leading-[1.6] text-[#71717A] font-['Inter']">Production tracking and manufacturing cost analysis.</p>
         </div>
         <div class="feat-card flex flex-col grow basis-0 rounded-2xl p-7 bg-white border border-[#F0F0F0] shadow-[0_1px_3px_rgba(0,0,0,0.04)] transition-all duration-300 hover:shadow-[0_12px_40px_rgba(0,0,0,0.08)] hover:-translate-y-0.5">
           <div class="flex items-center justify-center rounded-xl bg-gradient-to-br from-[#F0FDF4] to-[#DCFCE7] size-11 mb-4">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="3" y="3" width="14" height="14" rx="2" stroke="#1A5C2E" stroke-width="1.5"/><path d="M3 10h14M10 3v14" stroke="#1A5C2E" stroke-width="1.5"/></svg>
+            <SquaresFour size={20} weight="bold" color="#1A5C2E" aria-hidden="true" />
           </div>
           <h3 class="text-[#0A0A0A] font-['Plus_Jakarta_Sans'] font-bold text-[17px] mb-2">Store Management</h3>
           <p class="text-[15px] leading-[1.6] text-[#71717A] font-['Inter']">Inventory, purchase orders, and issue tracking.</p>
         </div>
         <div class="feat-card flex flex-col grow basis-0 rounded-2xl p-7 bg-white border border-[#F0F0F0] shadow-[0_1px_3px_rgba(0,0,0,0.04)] transition-all duration-300 hover:shadow-[0_12px_40px_rgba(0,0,0,0.08)] hover:-translate-y-0.5">
           <div class="flex items-center justify-center rounded-xl bg-gradient-to-br from-[#F0FDF4] to-[#DCFCE7] size-11 mb-4">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6 17a4 4 0 010-8 6 6 0 0112 1 3.5 3.5 0 01-1.5 6.5H6z" stroke="#1A5C2E" stroke-width="1.5"/></svg>
+            <Cloud size={20} weight="bold" color="#1A5C2E" aria-hidden="true" />
           </div>
           <h3 class="text-[#0A0A0A] font-['Plus_Jakarta_Sans'] font-bold text-[17px] mb-2">MIS Dashboard</h3>
           <p class="text-[15px] leading-[1.6] text-[#71717A] font-['Inter']">Daily cloud updates on any device.</p>
@@ -603,7 +604,7 @@
               aria-expanded={openFaq === i}
             >
               <h3 class="text-[#0A0A0A] font-['Plus_Jakarta_Sans'] font-bold text-[16px] md:text-[17px] leading-[22px] group-hover:text-[#1A5C2E] transition-colors duration-150">{faq.q}</h3>
-              <svg width="18" height="18" viewBox="0 0 20 20" fill="none" class="shrink-0 text-[#A1A1AA] transition-transform duration-300 {openFaq === i ? 'rotate-45' : ''}" aria-hidden="true"><path d="M10 4v12M4 10h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              <Plus size={18} weight="bold" class="shrink-0 text-[#A1A1AA] transition-transform duration-300 {openFaq === i ? 'rotate-45' : ''}" aria-hidden="true" />
             </button>
             <div class="overflow-hidden transition-all duration-300 ease-out" style="max-height: {openFaq === i ? '160px' : '0px'}; opacity: {openFaq === i ? '1' : '0'}">
               <p class="text-[15px] leading-[1.6] text-[#71717A] font-['Inter'] pb-5">{faq.a}</p>

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { UserFocus, Check, CaretDown, DeviceMobile, Scales, Desktop, Cloud } from "phosphor-svelte";
 
 	let scrollY = $state(0);
 	let sections: HTMLElement[] = $state([]);
@@ -148,7 +149,7 @@
 							<!-- Scanning circle -->
 							<div class="w-[120px] h-[120px] md:w-[140px] md:h-[140px] rounded-full border-[3px] border-[#5CA84A] flex items-center justify-center animate-pulse-slow">
 								<div class="w-[100px] h-[100px] md:w-[120px] md:h-[120px] rounded-full border-2 border-dashed border-[#5CA84A]/40 flex items-center justify-center">
-									<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="rgba(92,168,74,0.7)" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg>
+									<UserFocus size={44} weight="bold" color="rgba(92,168,74,0.7)" aria-hidden="true" />
 								</div>
 							</div>
 							<span class="text-[14px] text-white/50 font-['Inter',system-ui,sans-serif]">Scanning face&#8230;</span>
@@ -191,7 +192,7 @@
 						<div class="flex flex-1 flex-col items-center justify-center bg-[#243D1E] rounded-[24px] mx-0 my-1 gap-6">
 							<!-- Check circle -->
 							<div class="w-20 h-20 rounded-full bg-[#3D7D2C] flex items-center justify-center shadow-[0_0_40px_rgba(61,125,44,0.4)]">
-								<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="2.5" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>
+								<Check size={36} weight="bold" color="#FFFFFF" aria-hidden="true" />
 							</div>
 							<div class="flex flex-col items-center gap-1.5">
 								<span class="text-[18px] font-semibold text-white font-['Inter',system-ui,sans-serif]">Ramesh Kumar</span>
@@ -314,7 +315,7 @@
 						<!-- Arrow -->
 						<div class="flex flex-col items-center gap-0 mt-4">
 							<div class="w-px h-7 bg-[#D4E0D0]"></div>
-							<svg width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="#D4E0D0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+							<CaretDown size={10} weight="bold" color="#D4E0D0" aria-hidden="true" />
 						</div>
 					</div>
 				</div>
@@ -322,7 +323,7 @@
 				<!-- Receipt Card - offset below right -->
 				<div class="hidden md:flex absolute bottom-16 right-8 lg:right-16 items-center gap-3 py-3.5 px-5 bg-white rounded-xl shadow-[0_12px_40px_rgba(0,0,0,0.08)] border border-[#E8EDE6] animate-on-scroll" style="transition-delay: 400ms;">
 					<div class="w-9 h-9 rounded-full bg-[#EDF5EB] flex items-center justify-center shrink-0">
-						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3D7D2C" stroke-width="2" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>
+						<Check size={16} weight="bold" color="#3D7D2C" aria-hidden="true" />
 					</div>
 					<div class="flex flex-col gap-0.5">
 						<span class="text-[14px] font-semibold text-[#1A2E16] font-['Inter',system-ui,sans-serif]">Ramesh Kumar</span>
@@ -367,7 +368,7 @@
 				<!-- Step 1: Face App -->
 				<div class="flex flex-col items-center gap-4 w-[180px]">
 					<div class="w-[72px] h-[72px] rounded-[20px] bg-[#5CA84A]/15 border border-[#5CA84A]/30 flex items-center justify-center">
-						<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#5CA84A" stroke-width="1.5" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><circle cx="12" cy="18" r="1"/></svg>
+						<DeviceMobile size={28} weight="bold" color="#5CA84A" aria-hidden="true" />
 					</div>
 					<span class="text-[15px] font-semibold text-white font-['Inter',system-ui,sans-serif]">Face App</span>
 					<span class="text-[12px] text-white/40 font-['Inter',system-ui,sans-serif]">Attendance</span>
@@ -382,7 +383,7 @@
 				<!-- Step 2: Smart Scale -->
 				<div class="flex flex-col items-center gap-4 w-[180px]">
 					<div class="w-[72px] h-[72px] rounded-[20px] bg-[#5CA84A]/15 border border-[#5CA84A]/30 flex items-center justify-center">
-						<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#5CA84A" stroke-width="1.5" aria-hidden="true"><path d="M6 2h12l2 8H4L6 2z"/><path d="M4 10v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V10"/><line x1="12" y1="14" x2="12" y2="18"/></svg>
+						<Scales size={28} weight="bold" color="#5CA84A" aria-hidden="true" />
 					</div>
 					<span class="text-[15px] font-semibold text-white font-['Inter',system-ui,sans-serif]">Smart Scale</span>
 					<span class="text-[12px] text-white/40 font-['Inter',system-ui,sans-serif]">Weighing</span>
@@ -397,7 +398,7 @@
 				<!-- Step 3: Desktop ERP -->
 				<div class="flex flex-col items-center gap-4 w-[180px]">
 					<div class="w-[72px] h-[72px] rounded-[20px] bg-[#5CA84A]/15 border border-[#5CA84A]/30 flex items-center justify-center">
-						<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#5CA84A" stroke-width="1.5" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+						<Desktop size={28} weight="bold" color="#5CA84A" aria-hidden="true" />
 					</div>
 					<span class="text-[15px] font-semibold text-white font-['Inter',system-ui,sans-serif]">Desktop ERP</span>
 					<span class="text-[12px] text-white/40 font-['Inter',system-ui,sans-serif]">Processing</span>
@@ -412,7 +413,7 @@
 				<!-- Step 4: Cloud MIS -->
 				<div class="flex flex-col items-center gap-4 w-[180px]">
 					<div class="w-[72px] h-[72px] rounded-[20px] bg-[#5CA84A]/25 border border-[#5CA84A]/50 flex items-center justify-center">
-						<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#5CA84A" stroke-width="1.5" aria-hidden="true"><path d="M18 10a6 6 0 0 0-12 0 4 4 0 0 0 0 8h12a4 4 0 0 0 0-8z"/></svg>
+						<Cloud size={28} weight="bold" color="#5CA84A" aria-hidden="true" />
 					</div>
 					<span class="text-[15px] font-semibold text-white font-['Inter',system-ui,sans-serif]">Cloud MIS</span>
 					<span class="text-[12px] text-white/40 font-['Inter',system-ui,sans-serif]">Dashboard</span>
