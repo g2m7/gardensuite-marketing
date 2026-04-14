@@ -3,489 +3,1070 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GardenSuite Digital Brochure</title>
+  <title>GardenSuite - Digital Brochure 2026</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=SF+Pro+Display:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     @page { size: A4 portrait; margin: 0; }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --green-deep: #234B1D;
-      --green-forest: #385E30;
-      --green-mid: #5F7D48;
-      --green-sage: #97B07C;
-      --green-light: #A8BC8E;
-      --charcoal: #111827;
-      --ink: #1F2937;
-      --surface: #F6F8F3;
-      --border: #DDE3D5;
-      --white: #FFFFFF;
+      --black: #000000;
+      --near-black: #0a0a0a;
+      --charcoal: #1d1d1f;
+      --gray-900: #141414;
+      --gray-700: #424245;
+      --gray-500: #6e6e73;
+      --gray-400: #86868b;
+      --gray-300: #a1a1a6;
+      --gray-200: #d2d2d7;
+      --gray-100: #f5f5f7;
+      --white: #fbfbfd;
+      --pure-white: #ffffff;
+
+      --green-deep: #1a3a15;
+      --green-primary: #234b1d;
+      --green-accent: #2d6a4f;
+      --green-bright: #40916c;
+      --green-light: #74c69d;
+      --green-wash: #f0f7f0;
+
+      --font-main: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
     }
 
-    html { -webkit-font-smoothing: antialiased; }
+    html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
     body {
-      font-family: "Inter", system-ui, -apple-system, sans-serif;
-      background: #d5dad2;
+      font-family: var(--font-main);
+      background: #e8e8ed;
       color: var(--charcoal);
       font-size: 9pt;
       line-height: 1.5;
-      padding-top: 38px;
+      padding-top: 42px;
     }
 
+    /* ── Toolbar ───────────────────────────────────────── */
     .toolbar {
       position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 20;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
-      padding: 8px;
-      background: #141414;
-      color: #bcbcbc;
+      gap: 12px;
+      padding: 10px 16px;
+      background: rgba(0,0,0,0.92);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      color: var(--gray-300);
       font-size: 12px;
+      font-weight: 500;
+      letter-spacing: -0.01em;
     }
 
     .toolbar button {
-      background: var(--green-deep);
-      color: var(--white);
+      background: var(--pure-white);
+      color: var(--black);
       border: 0;
-      border-radius: 6px;
-      padding: 5px 12px;
-      font-weight: 700;
+      border-radius: 980px;
+      padding: 6px 18px;
+      font-size: 12px;
+      font-weight: 600;
       cursor: pointer;
+      letter-spacing: -0.01em;
+      transition: transform 0.2s, opacity 0.2s;
     }
 
+    .toolbar button:hover { opacity: 0.85; transform: scale(1.02); }
+    .toolbar button:active { transform: scale(0.98); }
+
+    /* ── Page Shell ────────────────────────────────────── */
     .page {
       width: 210mm;
       height: 297mm;
-      margin: 8mm auto;
-      background: var(--white);
+      margin: 6mm auto;
+      background: var(--pure-white);
       overflow: hidden;
       position: relative;
-      box-shadow: 0 2px 16px rgba(0, 0, 0, 0.22);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 8px 40px rgba(0,0,0,0.16);
+      border-radius: 2px;
       page-break-after: always;
       page-break-inside: avoid;
     }
 
+    .page--dark {
+      background: var(--near-black);
+      color: var(--pure-white);
+    }
+
+    /* ── Shared Layout ─────────────────────────────────── */
     .content {
       height: 100%;
-      padding: 11mm 12mm 9mm;
       display: flex;
       flex-direction: column;
-      gap: 5mm;
     }
 
     .header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      border-bottom: 0.3mm solid var(--border);
-      padding-bottom: 3mm;
+      padding: 7mm 10mm 6mm;
     }
 
     .brand {
       display: flex;
       align-items: center;
-      gap: 3mm;
-      color: var(--green-deep);
+      gap: 2.5mm;
+      font-weight: 700;
+      font-size: 9.5pt;
+      letter-spacing: -0.025em;
+      color: var(--charcoal);
+    }
+
+    .brand--light { color: var(--pure-white); }
+    .brand img { height: 5.5mm; width: auto; }
+
+    .page-num {
+      font-size: 7pt;
+      font-weight: 500;
+      color: var(--gray-400);
+      letter-spacing: 0.03em;
+    }
+
+    .page-num--light { color: rgba(255,255,255,0.4); }
+
+    .footer {
+      margin-top: auto;
+      padding: 4mm 10mm 6mm;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 6.4pt;
+      color: var(--gray-400);
+      letter-spacing: 0.01em;
+    }
+
+    .footer--light { color: rgba(255,255,255,0.32); }
+
+
+    /* ══════════════════════════════════════════════════════
+       PAGE 1 - THE HOOK (Dark cinematic cover)
+       ══════════════════════════════════════════════════════ */
+
+    .cover {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      position: relative;
+    }
+
+    .cover-image {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+
+    .cover-image img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .cover-image::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.15) 0%,
+        rgba(0,0,0,0.05) 30%,
+        rgba(0,0,0,0.40) 65%,
+        rgba(0,0,0,0.88) 100%
+      );
+    }
+
+    .cover-text {
+      position: relative;
+      z-index: 2;
+      padding: 0 11mm 14mm;
+    }
+
+    .cover-eyebrow {
+      display: inline-block;
+      font-size: 7pt;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--green-light);
+      margin-bottom: 4mm;
+    }
+
+    .cover-title {
+      font-size: 38pt;
       font-weight: 800;
-      font-size: 10pt;
+      line-height: 0.96;
+      letter-spacing: -0.04em;
+      color: var(--pure-white);
+      max-width: 170mm;
+      margin-bottom: 5mm;
+    }
+
+    .cover-sub {
+      font-size: 11pt;
+      font-weight: 400;
+      line-height: 1.5;
+      color: rgba(255,255,255,0.75);
+      max-width: 145mm;
       letter-spacing: -0.01em;
     }
 
-    .brand img { height: 6mm; width: auto; }
+    .cover-stats {
+      display: flex;
+      gap: 8mm;
+      margin-top: 8mm;
+      padding-top: 5mm;
+      border-top: 0.3mm solid rgba(255,255,255,0.12);
+    }
 
-    .label {
-      color: #6b7280;
-      font-size: 7pt;
+    .cover-stat strong {
+      display: block;
+      font-size: 22pt;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      color: var(--pure-white);
+    }
+
+    .cover-stat span {
+      font-size: 6.5pt;
+      font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      font-weight: 700;
+      color: rgba(255,255,255,0.45);
+      margin-top: 1mm;
+      display: block;
     }
 
-    .pill {
-      display: inline-block;
-      padding: 1.2mm 3.2mm;
-      border-radius: 20px;
-      border: 0.3mm solid #d4e3ca;
-      background: #edf4e8;
-      color: var(--green-forest);
-      font-size: 7pt;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.07em;
-    }
 
-    h1, h2, h3, h4 { letter-spacing: -0.02em; }
+    /* ══════════════════════════════════════════════════════
+       PAGE 2 - THE PROBLEM (Light, editorial)
+       ══════════════════════════════════════════════════════ */
 
-    .hero-title {
-      font-size: 31pt;
-      font-weight: 800;
-      line-height: 1.04;
-      color: var(--green-deep);
-      max-width: 160mm;
-    }
-
-    .lead {
-      font-size: 10.2pt;
-      color: var(--ink);
-      max-width: 148mm;
-      line-height: 1.56;
-    }
-
-    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; }
-    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3mm; }
-    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3mm; }
-
-    .card {
-      background: var(--surface);
-      border: 0.3mm solid var(--border);
-      border-radius: 3mm;
-      padding: 4mm;
-    }
-
-    .card h3 {
-      color: var(--green-deep);
-      font-size: 9.5pt;
-      font-weight: 800;
-      margin-bottom: 1.6mm;
-    }
-
-    .card p,
-    .card li {
-      color: var(--ink);
-      font-size: 7.3pt;
-      line-height: 1.5;
-    }
-
-    .card ul {
-      list-style: none;
+    .problem-body {
+      flex: 1;
+      padding: 0 10mm;
       display: flex;
       flex-direction: column;
-      gap: 1.2mm;
+      gap: 5mm;
     }
 
-    .card li {
-      position: relative;
-      padding-left: 3mm;
+    .section-eyebrow {
+      font-size: 6.8pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--green-accent);
     }
 
-    .card li::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 1.7mm;
-      width: 1.2mm;
-      height: 1.2mm;
+    .section-title {
+      font-size: 27pt;
+      font-weight: 800;
+      line-height: 1.0;
+      letter-spacing: -0.035em;
+      color: var(--charcoal);
+      max-width: 165mm;
+    }
+
+    .section-title--light { color: var(--pure-white); }
+
+    .section-lead {
+      font-size: 10pt;
+      font-weight: 400;
+      line-height: 1.55;
+      color: var(--gray-500);
+      max-width: 150mm;
+      letter-spacing: -0.005em;
+    }
+
+    .section-lead--light { color: rgba(255,255,255,0.6); }
+
+    .pain-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3mm;
+      margin-top: 2mm;
+    }
+
+    .pain-card {
+      background: var(--gray-100);
+      border-radius: 3.5mm;
+      padding: 5mm;
+      display: flex;
+      flex-direction: column;
+      gap: 2mm;
+    }
+
+    .pain-icon {
+      width: 8mm;
+      height: 8mm;
+      border-radius: 2mm;
+      background: rgba(220, 38, 38, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14pt;
+      line-height: 1;
+    }
+
+    .pain-card h3 {
+      font-size: 9pt;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--charcoal);
+    }
+
+    .pain-card p {
+      font-size: 7.2pt;
+      line-height: 1.48;
+      color: var(--gray-500);
+    }
+
+    .solution-strip {
+      background: var(--green-deep);
+      border-radius: 4mm;
+      padding: 6mm 7mm;
+      display: flex;
+      align-items: center;
+      gap: 6mm;
+      margin-top: auto;
+    }
+
+    .solution-strip-text {
+      flex: 1;
+    }
+
+    .solution-strip h3 {
+      font-size: 13pt;
+      font-weight: 800;
+      color: var(--pure-white);
+      letter-spacing: -0.02em;
+      margin-bottom: 1.5mm;
+    }
+
+    .solution-strip p {
+      font-size: 7.5pt;
+      line-height: 1.5;
+      color: rgba(255,255,255,0.65);
+    }
+
+    .solution-arrow {
+      width: 10mm;
+      height: 10mm;
       border-radius: 50%;
-      background: var(--green-mid);
+      background: rgba(255,255,255,0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14pt;
+      color: var(--pure-white);
+      flex-shrink: 0;
     }
 
-    .visual {
-      border: 0.3mm solid var(--border);
-      border-radius: 3mm;
+
+    /* ══════════════════════════════════════════════════════
+       PAGE 3 - BREAKTHROUGH #1: Face Attendance (Dark)
+       ══════════════════════════════════════════════════════ */
+
+    .breakthrough-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 0 10mm;
+    }
+
+    .bt-hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5mm;
+      align-items: center;
+      margin-bottom: 5mm;
+    }
+
+    .bt-hero-image {
+      border-radius: 4mm;
       overflow: hidden;
-      background: #ecf1e8;
+      aspect-ratio: 1;
     }
 
-    .visual img { display: block; width: 100%; height: auto; }
+    .bt-hero-image img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-    .stat {
-      background: var(--surface);
-      border: 0.3mm solid var(--border);
+    .bt-hero-text {
+      display: flex;
+      flex-direction: column;
+      gap: 3mm;
+    }
+
+    .bt-number {
+      font-size: 52pt;
+      font-weight: 900;
+      letter-spacing: -0.05em;
+      line-height: 0.85;
+      background: linear-gradient(135deg, var(--green-light), var(--green-bright));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .bt-title {
+      font-size: 24pt;
+      font-weight: 800;
+      line-height: 1.0;
+      letter-spacing: -0.03em;
+    }
+
+    .bt-desc {
+      font-size: 8.5pt;
+      line-height: 1.55;
+      color: rgba(255,255,255,0.6);
+    }
+
+    .bt-features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3mm;
+      margin-top: auto;
+    }
+
+    .bt-feature {
+      background: rgba(255,255,255,0.04);
+      border: 0.3mm solid rgba(255,255,255,0.08);
+      border-radius: 3mm;
+      padding: 4.5mm;
+    }
+
+    .bt-feature-icon {
+      font-size: 16pt;
+      margin-bottom: 2mm;
+      line-height: 1;
+    }
+
+    .bt-feature h4 {
+      font-size: 8.2pt;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin-bottom: 1.2mm;
+    }
+
+    .bt-feature p {
+      font-size: 6.8pt;
+      line-height: 1.45;
+      color: rgba(255,255,255,0.5);
+    }
+
+    /* Breakthrough #2 row */
+    .bt2-hero {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 5mm;
+      align-items: center;
+      margin-bottom: 5mm;
+    }
+
+    .bt2-image-wrap {
+      border-radius: 4mm;
+      overflow: hidden;
+      background: linear-gradient(145deg, #0d1f0a, #1a3a15);
+      padding: 4mm;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .bt2-image-wrap img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 2mm;
+    }
+
+
+    /* ══════════════════════════════════════════════════════
+       PAGE 4 - THE PLATFORM (Light)
+       ══════════════════════════════════════════════════════ */
+
+    .platform-body {
+      flex: 1;
+      padding: 0 10mm;
+      display: flex;
+      flex-direction: column;
+      gap: 4mm;
+    }
+
+    .dashboard-showcase {
+      border-radius: 4mm;
+      overflow: hidden;
+      border: 0.3mm solid var(--gray-200);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 4px 24px rgba(0,0,0,0.06);
+    }
+
+    .dashboard-showcase img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .module-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5mm;
+    }
+
+    .module-card {
+      background: var(--gray-100);
       border-radius: 3mm;
       padding: 4mm;
+      transition: background 0.2s;
     }
 
-    .stat strong {
-      display: block;
-      color: var(--green-deep);
-      font-size: 15pt;
-      font-weight: 800;
-      line-height: 1.04;
+    .module-icon {
+      font-size: 14pt;
+      margin-bottom: 1.5mm;
+      line-height: 1;
     }
 
-    .stat span {
-      color: #5f646f;
-      font-size: 6.8pt;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
+    .module-card h4 {
+      font-size: 8pt;
       font-weight: 700;
-    }
-
-    .step {
-      background: #fbfcfa;
-      border: 0.3mm solid var(--border);
-      border-radius: 3mm;
-      padding: 3.3mm;
-    }
-
-    .step .num {
-      display: inline-block;
-      margin-bottom: 1.2mm;
-      color: var(--green-forest);
-      font-size: 7pt;
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
-      font-weight: 700;
-    }
-
-    .step h4 {
-      font-size: 8.4pt;
+      letter-spacing: -0.015em;
+      color: var(--charcoal);
       margin-bottom: 1mm;
     }
 
-    .step p {
-      font-size: 7pt;
-      color: #4f5663;
-      line-height: 1.45;
+    .module-card p {
+      font-size: 6.6pt;
+      line-height: 1.42;
+      color: var(--gray-500);
     }
 
-    .regions {
+    .arch-strip {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr auto 1fr;
+      gap: 0;
+      align-items: center;
+      background: var(--gray-100);
+      border-radius: 3.5mm;
+      padding: 4mm 5mm;
+      margin-top: auto;
+    }
+
+    .arch-node {
+      text-align: center;
+    }
+
+    .arch-node strong {
+      display: block;
+      font-size: 8.5pt;
+      font-weight: 800;
+      color: var(--charcoal);
+      letter-spacing: -0.02em;
+    }
+
+    .arch-node span {
+      font-size: 6.5pt;
+      color: var(--gray-400);
+    }
+
+    .arch-arrow {
+      font-size: 12pt;
+      color: var(--green-bright);
+      text-align: center;
+      padding: 0 2mm;
+    }
+
+
+    /* ══════════════════════════════════════════════════════
+       PAGE 5 - TRUST & PROOF (Light)
+       ══════════════════════════════════════════════════════ */
+
+    .trust-body {
+      flex: 1;
+      padding: 0 10mm;
+      display: flex;
+      flex-direction: column;
+      gap: 4mm;
+    }
+
+    .trust-number-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2.5mm;
+    }
+
+    .trust-stat {
+      text-align: center;
+      background: var(--gray-100);
+      border-radius: 3mm;
+      padding: 5mm 3mm;
+    }
+
+    .trust-stat strong {
+      display: block;
+      font-size: 20pt;
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      line-height: 1;
+      color: var(--green-primary);
+    }
+
+    .trust-stat span {
+      font-size: 6.5pt;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--gray-400);
+      margin-top: 1mm;
+      display: block;
+    }
+
+    .region-pills {
       display: flex;
       flex-wrap: wrap;
       gap: 1.5mm;
     }
 
-    .region {
-      border: 0.3mm solid #d5e1cc;
-      background: #f2f7ee;
-      border-radius: 12px;
-      padding: 1.1mm 2.8mm;
-      font-size: 6.6pt;
-      color: var(--green-forest);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
+    .region-pill {
+      background: var(--green-wash);
+      border: 0.3mm solid rgba(45,106,79,0.15);
+      border-radius: 980px;
+      padding: 1.5mm 3.5mm;
+      font-size: 6.8pt;
+      font-weight: 600;
+      color: var(--green-accent);
+      letter-spacing: 0.02em;
+    }
+
+    .client-block {
+      background: var(--gray-100);
+      border-radius: 3.5mm;
+      padding: 5mm;
+    }
+
+    .client-block h3 {
+      font-size: 9pt;
       font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--charcoal);
+      margin-bottom: 2.5mm;
     }
 
-    .timeline {
+    .client-list {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2.4mm;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5mm 3mm;
     }
 
-    .time {
-      background: #fcfdfa;
-      border: 0.3mm solid var(--border);
-      border-radius: 2.5mm;
-      padding: 3mm;
-    }
-
-    .time strong {
-      display: block;
-      color: var(--green-deep);
-      font-size: 7.9pt;
-      margin-bottom: 0.9mm;
-      font-weight: 800;
-    }
-
-    .time span {
-      font-size: 7pt;
-      color: var(--ink);
+    .client-name {
+      font-size: 6.8pt;
+      font-weight: 500;
+      color: var(--gray-500);
       line-height: 1.4;
     }
 
-    .faq { display: grid; grid-template-columns: 1fr 1fr; gap: 2.4mm; }
+    .timeline-row {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 2mm;
+    }
 
-    .faq .card h3 {
-      color: var(--charcoal);
-      font-size: 8.1pt;
+    .timeline-item {
+      text-align: center;
+      position: relative;
+    }
+
+    .timeline-year {
+      display: block;
+      font-size: 11pt;
+      font-weight: 800;
+      color: var(--green-primary);
+      letter-spacing: -0.03em;
       margin-bottom: 1mm;
     }
 
-    .cta {
-      background: linear-gradient(145deg, #1e3f19 0%, #355b2d 100%);
-      border: 0.3mm solid rgba(255, 255, 255, 0.16);
-      border-radius: 4mm;
-      color: var(--white);
-      padding: 7mm;
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 6mm;
-      align-items: center;
-    }
-
-    .cta h2 {
-      font-size: 19pt;
-      line-height: 1.1;
-      margin-bottom: 1.8mm;
-    }
-
-    .cta p {
-      font-size: 8pt;
-      color: rgba(255, 255, 255, 0.88);
-      line-height: 1.52;
-    }
-
-    .contact { display: flex; flex-direction: column; gap: 2mm; }
-
-    .contact .line {
-      border: 0.3mm solid rgba(255, 255, 255, 0.2);
-      background: rgba(255, 255, 255, 0.08);
-      border-radius: 2.5mm;
-      padding: 2.4mm 3mm;
-      font-size: 8pt;
-    }
-
-    .contact strong {
+    .timeline-dot {
       display: block;
-      color: #d5e7c8;
-      font-size: 6.8pt;
-      text-transform: uppercase;
-      letter-spacing: 0.07em;
-      margin-bottom: 0.6mm;
+      width: 2mm;
+      height: 2mm;
+      border-radius: 50%;
+      background: var(--green-bright);
+      margin: 0 auto 1.5mm;
     }
 
-    .footer {
-      margin-top: auto;
-      border-top: 0.3mm solid var(--border);
-      padding-top: 2.2mm;
+    .timeline-label {
+      font-size: 6.2pt;
+      line-height: 1.35;
+      color: var(--gray-500);
+    }
+
+
+    /* ══════════════════════════════════════════════════════
+       PAGE 6 - CTA (Dark, cinematic close)
+       ══════════════════════════════════════════════════════ */
+
+    .cta-body {
+      flex: 1;
       display: flex;
-      justify-content: space-between;
-      font-size: 6.6pt;
-      color: #6b7280;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 14mm;
+      gap: 6mm;
     }
 
+    .cta-logo {
+      width: 14mm;
+      height: auto;
+      opacity: 0.9;
+      margin-bottom: 2mm;
+    }
+
+    .cta-headline {
+      font-size: 34pt;
+      font-weight: 800;
+      line-height: 0.98;
+      letter-spacing: -0.04em;
+      color: var(--pure-white);
+      max-width: 160mm;
+    }
+
+    .cta-sub {
+      font-size: 10pt;
+      line-height: 1.55;
+      color: rgba(255,255,255,0.55);
+      max-width: 140mm;
+      letter-spacing: -0.005em;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: var(--pure-white);
+      color: var(--black);
+      padding: 3mm 8mm;
+      border-radius: 980px;
+      font-size: 10pt;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2.5mm;
+      width: 100%;
+      max-width: 155mm;
+      margin-top: 4mm;
+    }
+
+    .contact-card {
+      background: rgba(255,255,255,0.04);
+      border: 0.3mm solid rgba(255,255,255,0.08);
+      border-radius: 3mm;
+      padding: 4mm 5mm;
+      text-align: left;
+    }
+
+    .contact-card label {
+      display: block;
+      font-size: 6.2pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: rgba(255,255,255,0.3);
+      margin-bottom: 1mm;
+    }
+
+    .contact-card span {
+      font-size: 9pt;
+      font-weight: 500;
+      color: var(--pure-white);
+      letter-spacing: -0.01em;
+    }
+
+    .cta-divider {
+      width: 20mm;
+      height: 0.3mm;
+      background: rgba(255,255,255,0.1);
+    }
+
+    .cta-company {
+      font-size: 7.5pt;
+      font-weight: 500;
+      color: rgba(255,255,255,0.25);
+      letter-spacing: 0.06em;
+    }
+
+
+    /* ── Print ─────────────────────────────────────────── */
     @media print {
       body { background: #fff; padding-top: 0; }
       .toolbar { display: none !important; }
-      .page { margin: 0; box-shadow: none; }
+      .page { margin: 0; box-shadow: none; border-radius: 0; }
     }
   </style>
 </head>
 <body>
+
+  <!-- Toolbar -->
   <div class="toolbar" data-html2canvas-ignore="true">
-    <span>Digital brochure export</span>
-    <button type="button" data-pdf-btn onclick="generateBrochurePdf()">Generate PDF</button>
+    <span>GardenSuite Digital Brochure</span>
+    <button type="button" aria-label="Generate PDF" data-pdf-btn onclick="generateBrochurePdf()">Export PDF</button>
   </div>
 
-  <section class="page">
-    <div class="content" style="background: linear-gradient(164deg, #f7faf4 0%, #edf5e8 100%);">
+
+  <!-- ═══════════════════════════════════════════════════
+       PAGE 1 - THE HOOK
+       ═══════════════════════════════════════════════════ -->
+  <section class="page page--dark">
+    <div class="content">
       <div class="header">
-        <div class="brand"><img src="favicon.png" alt="GardenSuite" />GardenSuite</div>
-        <div class="label">By Sarbani Associates</div>
+        <div class="brand brand--light"><img src="icon-white.svg" alt="GardenSuite" />GardenSuite</div>
+        <div class="page-num page-num--light">By Sarbani Associates</div>
       </div>
 
-      <span class="pill">Digital brochure 2026</span>
-      <h1 class="hero-title">Complete ERP software for tea gardens</h1>
-      <p class="lead">Run attendance, weighing, payroll, factory, stores, and accounts in one connected platform made for practical tea estate operations.</p>
-
-      <div class="grid-2">
-        <div class="visual"><img src="dashboard.png" alt="GardenSuite dashboard" /></div>
-        <div class="card">
-          <h3>What makes GardenSuite different</h3>
-          <ul>
-            <li>Face recognition attendance for stronger workforce control</li>
-            <li>Smart wireless scale linked to verified worker records</li>
-            <li>Offline-first operations with cloud MIS visibility</li>
-            <li>Consistent workflow across field and office teams</li>
-            <li>Simple UI for daily use in real garden conditions</li>
-          </ul>
+      <div class="cover">
+        <div class="cover-image">
+          <img src="hero-tea-garden.png" alt="Aerial view of tea garden at sunrise" width="794" height="1000" />
+        </div>
+        <div class="cover-text">
+          <span class="cover-eyebrow">Tea Garden Management, Reinvented</span>
+          <h1 class="cover-title">The complete ERP for tea estates.</h1>
+          <p class="cover-sub">Face attendance. Smart weighing. Payroll. Factory. Accounts. Cloud MIS. All in one connected system built for real garden conditions.</p>
+          <div class="cover-stats">
+            <div class="cover-stat"><strong>20+</strong><span>Tea Estates</span></div>
+            <div class="cover-stat"><strong>25+</strong><span>Years</span></div>
+            <div class="cover-stat"><strong>7</strong><span>Regions</span></div>
+            <div class="cover-stat"><strong>V3</strong><span>Latest</span></div>
+          </div>
         </div>
       </div>
 
-      <div class="grid-4">
-        <div class="stat"><strong>20+</strong><span>Tea Estates</span></div>
-        <div class="stat"><strong>25+</strong><span>Years Journey</span></div>
-        <div class="stat"><strong>7</strong><span>Regions</span></div>
-        <div class="stat"><strong>V3</strong><span>Current Version</span></div>
-      </div>
-
-      <div class="footer">
+      <div class="footer footer--light">
         <span>gardensuite.in</span>
-        <span>Sarbani Associates - Bagdogra, Siliguri</span>
+        <span>&copy; 2026 Sarbani Associates</span>
       </div>
     </div>
   </section>
 
+
+  <!-- ═══════════════════════════════════════════════════
+       PAGE 2 - THE PROBLEM
+       ═══════════════════════════════════════════════════ -->
   <section class="page">
     <div class="content">
       <div class="header">
         <div class="brand"><img src="favicon.png" alt="GardenSuite" />GardenSuite</div>
-        <div class="label">Page 2 of 5</div>
+        <div class="page-num">02 / 06</div>
       </div>
 
-      <span class="pill">Challenge to flow</span>
-      <h2 style="font-size: 21pt; color: var(--green-deep);">Tea garden operations are complex</h2>
+      <div class="problem-body">
+        <span class="section-eyebrow">The Challenge</span>
+        <h2 class="section-title">Tea gardens lose money to invisible problems.</h2>
+        <p class="section-lead">Every day, estates face attendance fraud, weight mismatches, delayed reports, and disconnected records across departments. These problems compound silently.</p>
 
-      <div class="grid-2">
-        <div class="card">
-          <h3>Common challenges</h3>
-          <ul>
-            <li>Proxy attendance and manual entry issues</li>
-            <li>Weight mismatch and delayed field updates</li>
-            <li>Slow kamjari flow and payroll pressure</li>
-            <li>Disconnected records across departments</li>
-            <li>Late daily reports for management decisions</li>
-          </ul>
+        <div class="pain-grid">
+          <div class="pain-card">
+            <div class="pain-icon">👤</div>
+            <h3>Proxy Attendance</h3>
+            <p>Workers punch in for others. Manual registers have no verification. Payroll inflates with ghost entries no one catches until audit.</p>
+          </div>
+          <div class="pain-card">
+            <div class="pain-icon">⚖️</div>
+            <h3>Weight Mismatches</h3>
+            <p>Field weighing disconnected from worker records. Manual entry creates errors, disputes, and delayed kamjari processing.</p>
+          </div>
+          <div class="pain-card">
+            <div class="pain-icon">📊</div>
+            <h3>Late Daily Reports</h3>
+            <p>Management waits until evening or next day for basic production numbers. Decisions happen on stale, incomplete data.</p>
+          </div>
+          <div class="pain-card">
+            <div class="pain-icon">🔗</div>
+            <h3>Disconnected Systems</h3>
+            <p>Attendance in one register, weighing in another, payroll in a third. No single view of operations. Reconciliation takes hours.</p>
+          </div>
         </div>
-        <div class="card">
-          <h3>GardenSuite workflow</h3>
-          <p>GardenSuite brings attendance, weighing, payroll, and reporting into one clear process. Teams work with cleaner data, faster daily updates, and better visibility for supervisors and management.</p>
+
+        <div class="solution-strip">
+          <div class="solution-strip-text">
+            <h3>GardenSuite solves all four.</h3>
+            <p>One connected platform replaces fragmented tools with a clear flow from field attendance to management dashboard.</p>
+          </div>
+          <div class="solution-arrow">→</div>
         </div>
-      </div>
-
-      <div class="grid-4">
-        <div class="step"><span class="num">001</span><h4>Face Attendance</h4><p>Verify worker identity at entry.</p></div>
-        <div class="step"><span class="num">002</span><h4>Smart Weighing</h4><p>Capture linked plucking weight data.</p></div>
-        <div class="step"><span class="num">003</span><h4>Payroll Flow</h4><p>Support kamjari to payroll workflow.</p></div>
-        <div class="step"><span class="num">004</span><h4>MIS Dashboard</h4><p>Track daily updates from anywhere.</p></div>
-      </div>
-
-      <div class="grid-3">
-        <div class="visual"><img src="face-attendance.png" alt="Face attendance app" /></div>
-        <div class="visual"><img src="smart-weighing.png" alt="Smart wireless weighing" /></div>
-        <div class="visual"><img src="cloud-dashboard.png" alt="Cloud dashboard" /></div>
       </div>
 
       <div class="footer">
-        <span>One brand, one connected flow</span>
+        <span>Problem → Solution</span>
         <span>GardenSuite by Sarbani Associates</span>
       </div>
     </div>
   </section>
 
+
+  <!-- ═══════════════════════════════════════════════════
+       PAGE 3 - BREAKTHROUGH: Face + Scale (Dark)
+       ═══════════════════════════════════════════════════ -->
+  <section class="page page--dark">
+    <div class="content">
+      <div class="header">
+        <div class="brand brand--light"><img src="icon-white.svg" alt="GardenSuite" />GardenSuite</div>
+        <div class="page-num page-num--light">03 / 06</div>
+      </div>
+
+      <div class="breakthrough-body">
+        <span class="section-eyebrow" style="color: var(--green-light);">Two Breakthroughs</span>
+        <h2 class="section-title section-title--light">Technology that changes everything.</h2>
+
+        <div class="bt-hero">
+          <div class="bt-hero-image">
+            <img src="hero-face-recognition.png" alt="Face recognition attendance" width="400" height="400" />
+          </div>
+          <div class="bt-hero-text">
+            <div class="bt-number">01</div>
+            <h3 class="bt-title">Face Recognition Attendance</h3>
+            <p class="bt-desc">Every worker verified by face. No proxy punching, no buddy punching. Works offline at the garden gate. Identity linked to every record that follows.</p>
+          </div>
+        </div>
+
+        <div class="bt2-hero">
+          <div class="bt-hero-text">
+            <div class="bt-number">02</div>
+            <h3 class="bt-title">Smart Wireless Scale</h3>
+            <p class="bt-desc">Plucking weight captured wirelessly and linked to the verified worker in one step. No manual entry. No disputes. Weight data flows directly into kamjari and payroll.</p>
+          </div>
+          <div class="bt2-image-wrap">
+            <img src="hero-smart-scale.png" alt="Smart wireless weighing scale" width="400" height="400" />
+          </div>
+        </div>
+
+        <div class="bt-features">
+          <div class="bt-feature">
+            <div class="bt-feature-icon">📱</div>
+            <h4>Works Offline</h4>
+            <p>Full operation at the garden without internet. Syncs when connected.</p>
+          </div>
+          <div class="bt-feature">
+            <div class="bt-feature-icon">🔒</div>
+            <h4>Tamper-proof</h4>
+            <p>Biometric verification eliminates manual entry fraud at source.</p>
+          </div>
+          <div class="bt-feature">
+            <div class="bt-feature-icon">⚡</div>
+            <h4>Instant Flow</h4>
+            <p>Face → weight → kamjari → payroll. One verified, connected chain.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer footer--light">
+        <span>Core differentiators</span>
+        <span>No competitor offers both</span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════
+       PAGE 4 - THE PLATFORM (Light)
+       ═══════════════════════════════════════════════════ -->
   <section class="page">
     <div class="content">
       <div class="header">
         <div class="brand"><img src="favicon.png" alt="GardenSuite" />GardenSuite</div>
-        <div class="label">Page 3 of 5</div>
+        <div class="page-num">04 / 06</div>
       </div>
 
-      <span class="pill">Modules</span>
-      <h2 style="font-size: 21pt; color: var(--green-deep);">Modules built for tea estates</h2>
+      <div class="platform-body">
+        <span class="section-eyebrow">The Platform</span>
+        <h2 class="section-title">One system for every department.</h2>
+        <p class="section-lead">Every module shares the same data, the same design, and the same logic. Your team learns once and works everywhere.</p>
 
-      <div class="grid-3" style="grid-template-columns: 1fr 1fr;">
-        <div class="card"><h3>Tea Garden ERP</h3><p>Flagship core platform for day-to-day estate operation flow.</p></div>
-        <div class="card"><h3>Payroll Management</h3><p>Attendance-linked wage and payroll support.</p></div>
-        <div class="card"><h3>Kamjari and Attendance</h3><p>Workforce records with practical daily handling.</p></div>
-        <div class="card"><h3>Factory Production</h3><p>Factory process and account visibility support.</p></div>
-        <div class="card"><h3>Accounts and Finance</h3><p>Estate-level finance and reporting continuity.</p></div>
-        <div class="card"><h3>Stores and Inventory</h3><p>Stock movement tracking and control workflow.</p></div>
-      </div>
-
-      <div class="grid-2">
-        <div class="card">
-          <h3>Extended capability</h3>
-          <ul>
-            <li>Bought Leaf Management</li>
-            <li>MIS Web Dashboard</li>
-            <li>Mobile App Support</li>
-            <li>Offline plus cloud sync architecture</li>
-          </ul>
+        <div class="dashboard-showcase">
+          <img src="dashboard.png" alt="GardenSuite MIS Dashboard" width="1500" height="900" />
         </div>
-        <div class="visual"><img src="mis-dashboard.png" alt="MIS dashboard screen" /></div>
-      </div>
 
-      <div class="card">
-        <h3>Single-brand consistency</h3>
-        <p>All modules follow one GardenSuite design and logic pattern. Teams can move across modules with less confusion and faster onboarding.</p>
+        <div class="module-grid">
+          <div class="module-card">
+            <div class="module-icon">🏭</div>
+            <h4>Tea Garden ERP</h4>
+            <p>Flagship core platform for daily estate operations.</p>
+          </div>
+          <div class="module-card">
+            <div class="module-icon">💰</div>
+            <h4>Payroll</h4>
+            <p>Attendance-linked wages, kamjari, and salary processing.</p>
+          </div>
+          <div class="module-card">
+            <div class="module-icon">📋</div>
+            <h4>Kamjari &amp; Attendance</h4>
+            <p>Workforce records with practical daily handling.</p>
+          </div>
+          <div class="module-card">
+            <div class="module-icon">🏗️</div>
+            <h4>Factory Production</h4>
+            <p>Factory process tracking and account visibility.</p>
+          </div>
+          <div class="module-card">
+            <div class="module-icon">📒</div>
+            <h4>Accounts &amp; Finance</h4>
+            <p>Estate-level finance and reporting continuity.</p>
+          </div>
+          <div class="module-card">
+            <div class="module-icon">📦</div>
+            <h4>Stores &amp; Inventory</h4>
+            <p>Stock movement tracking and control workflow.</p>
+          </div>
+          <div class="module-card">
+            <div class="module-icon">🍃</div>
+            <h4>Bought Leaf</h4>
+            <p>External leaf purchase and quality management.</p>
+          </div>
+          <div class="module-card">
+            <div class="module-icon">🌐</div>
+            <h4>MIS Dashboard</h4>
+            <p>Cloud-based daily reporting on any device.</p>
+          </div>
+          <div class="module-card">
+            <div class="module-icon">📲</div>
+            <h4>Mobile App</h4>
+            <p>Field operations from your smartphone.</p>
+          </div>
+        </div>
+
+        <div class="arch-strip">
+          <div class="arch-node">
+            <strong>Garden</strong>
+            <span>Offline ERP</span>
+          </div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-node">
+            <strong>Cloud Sync</strong>
+            <span>Auto upload</span>
+          </div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-node">
+            <strong>MIS Dashboard</strong>
+            <span>View anywhere</span>
+          </div>
+        </div>
       </div>
 
       <div class="footer">
@@ -495,100 +1076,179 @@
     </div>
   </section>
 
+
+  <!-- ═══════════════════════════════════════════════════
+       PAGE 5 - TRUST & PROOF (Light)
+       ═══════════════════════════════════════════════════ -->
   <section class="page">
     <div class="content">
       <div class="header">
         <div class="brand"><img src="favicon.png" alt="GardenSuite" />GardenSuite</div>
-        <div class="label">Page 4 of 5</div>
+        <div class="page-num">05 / 06</div>
       </div>
 
-      <span class="pill">Trust and reach</span>
-      <h2 style="font-size: 20pt; color: var(--green-deep);">Trusted by tea estates across India</h2>
+      <div class="trust-body">
+        <span class="section-eyebrow">Trust &amp; Track Record</span>
+        <h2 class="section-title">25 years in tea. 20+ estates trust us.</h2>
 
-      <div class="regions">
-        <span class="region">Darjeeling</span>
-        <span class="region">Dooars</span>
-        <span class="region">Assam</span>
-        <span class="region">Terai</span>
-        <span class="region">Coochbehar</span>
-        <span class="region">Uttar Dinajpur</span>
-        <span class="region">Jalpaiguri</span>
-      </div>
+        <div class="trust-number-row">
+          <div class="trust-stat"><strong>25+</strong><span>Years in Business</span></div>
+          <div class="trust-stat"><strong>20+</strong><span>Tea Estates</span></div>
+          <div class="trust-stat"><strong>7</strong><span>Regions Covered</span></div>
+          <div class="trust-stat"><strong>V3</strong><span>Current Release</span></div>
+        </div>
 
-      <div class="card">
-        <h3>Selected clients</h3>
-        <p>Simulbarie T.E., Longview T.E., Rheabari T.E., Mogulkata T.E., Rahimpur T.E., Debpara T.E., Kurti T.E., Looksan T.E., Subhasini T.E., Choibari T.E., Chapar T.E., Doolahat T.E., Atal T.E., Thanjhora T.E., Naxalbari T.E., Pahargoomiah T.E., Kamalpur T.E., Tinbigha T.E., Chandan T.E., Himalayan Agro Plantation.</p>
-      </div>
+        <h3 style="font-size: 9pt; font-weight: 700; color: var(--charcoal); letter-spacing: -0.02em;">Active regions</h3>
+        <div class="region-pills">
+          <span class="region-pill">Darjeeling</span>
+          <span class="region-pill">Dooars</span>
+          <span class="region-pill">Assam</span>
+          <span class="region-pill">Terai</span>
+          <span class="region-pill">Coochbehar</span>
+          <span class="region-pill">Uttar Dinajpur</span>
+          <span class="region-pill">Jalpaiguri</span>
+        </div>
 
-      <h3 style="font-size: 12pt; color: var(--green-deep);">Company timeline</h3>
-      <div class="timeline">
-        <div class="time"><strong>1998</strong><span>Infoworld founded</span></div>
-        <div class="time"><strong>2000</strong><span>Garden Suite software developed for tea gardens</span></div>
-        <div class="time"><strong>2003</strong><span>Version 1.1 launched</span></div>
-        <div class="time"><strong>2018</strong><span>Sarbani Associates formed, Version 2 with biometric attendance</span></div>
-        <div class="time"><strong>2022</strong><span>Face attendance app launched</span></div>
-        <div class="time"><strong>2026</strong><span>Version 3 with advanced face app and online dashboard</span></div>
-      </div>
+        <div class="client-block">
+          <h3>Trusted by leading tea estates</h3>
+          <div class="client-list">
+            <span class="client-name">Simulbarie T.E.</span>
+            <span class="client-name">Longview T.E.</span>
+            <span class="client-name">Rheabari T.E.</span>
+            <span class="client-name">Mogulkata T.E.</span>
+            <span class="client-name">Rahimpur T.E.</span>
+            <span class="client-name">Debpara T.E.</span>
+            <span class="client-name">Kurti T.E.</span>
+            <span class="client-name">Looksan T.E.</span>
+            <span class="client-name">Subhasini T.E.</span>
+            <span class="client-name">Choibari T.E.</span>
+            <span class="client-name">Chapar T.E.</span>
+            <span class="client-name">Doolahat T.E.</span>
+            <span class="client-name">Atal T.E.</span>
+            <span class="client-name">Thanjhora T.E.</span>
+            <span class="client-name">Naxalbari T.E.</span>
+            <span class="client-name">Pahargoomiah T.E.</span>
+            <span class="client-name">Kamalpur T.E.</span>
+            <span class="client-name">Tinbigha T.E.</span>
+            <span class="client-name">Chandan T.E.</span>
+            <span class="client-name">Himalayan Agro</span>
+          </div>
+        </div>
 
-      <h3 style="font-size: 12pt; color: var(--green-deep);">Quick FAQ</h3>
-      <div class="faq">
-        <div class="card"><h3>Does it work offline?</h3><p>Yes. Garden-level operations can run offline with cloud management visibility.</p></div>
-        <div class="card"><h3>Can it reduce attendance fraud?</h3><p>Yes. Face attendance helps reduce proxy punching.</p></div>
-        <div class="card"><h3>Can we use it for payroll and kamjari?</h3><p>Yes. GardenSuite supports attendance to payroll workflow.</p></div>
-        <div class="card"><h3>Do you support implementation?</h3><p>Yes. Sarbani Associates provides onboarding and support.</p></div>
+        <h3 style="font-size: 9pt; font-weight: 700; color: var(--charcoal); letter-spacing: -0.02em;">Our journey</h3>
+        <div class="timeline-row">
+          <div class="timeline-item">
+            <span class="timeline-year">1998</span>
+            <span class="timeline-dot"></span>
+            <span class="timeline-label">Infoworld founded</span>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-year">2000</span>
+            <span class="timeline-dot"></span>
+            <span class="timeline-label">GardenSuite software developed</span>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-year">2003</span>
+            <span class="timeline-dot"></span>
+            <span class="timeline-label">Version 1.1 launched</span>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-year">2018</span>
+            <span class="timeline-dot"></span>
+            <span class="timeline-label">Sarbani Associates, V2 biometric</span>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-year">2022</span>
+            <span class="timeline-dot"></span>
+            <span class="timeline-label">Face attendance app</span>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-year">2026</span>
+            <span class="timeline-dot"></span>
+            <span class="timeline-label">V3 with cloud dashboard</span>
+          </div>
+        </div>
+
+        <!-- Quick FAQ -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2.5mm; margin-top: auto;">
+          <div style="background: var(--gray-100); border-radius: 3mm; padding: 4mm;">
+            <h4 style="font-size: 7.8pt; font-weight: 700; color: var(--charcoal); margin-bottom: 1mm;">Does it work offline?</h4>
+            <p style="font-size: 6.8pt; color: var(--gray-500); line-height: 1.45;">Yes. Garden-level operations run fully offline. Cloud MIS syncs when connected.</p>
+          </div>
+          <div style="background: var(--gray-100); border-radius: 3mm; padding: 4mm;">
+            <h4 style="font-size: 7.8pt; font-weight: 700; color: var(--charcoal); margin-bottom: 1mm;">Can it stop attendance fraud?</h4>
+            <p style="font-size: 6.8pt; color: var(--gray-500); line-height: 1.45;">Yes. Face recognition replaces manual registers. No proxy or buddy punching.</p>
+          </div>
+          <div style="background: var(--gray-100); border-radius: 3mm; padding: 4mm;">
+            <h4 style="font-size: 7.8pt; font-weight: 700; color: var(--charcoal); margin-bottom: 1mm;">Handles payroll and kamjari?</h4>
+            <p style="font-size: 6.8pt; color: var(--gray-500); line-height: 1.45;">Yes. Attendance flows directly into kamjari, wages, and payroll processing.</p>
+          </div>
+          <div style="background: var(--gray-100); border-radius: 3mm; padding: 4mm;">
+            <h4 style="font-size: 7.8pt; font-weight: 700; color: var(--charcoal); margin-bottom: 1mm;">Setup and support included?</h4>
+            <p style="font-size: 6.8pt; color: var(--gray-500); line-height: 1.45;">Yes. Sarbani Associates provides full onboarding, training, and ongoing support.</p>
+          </div>
+        </div>
       </div>
 
       <div class="footer">
         <span>Since 1998</span>
-        <span>Sarbani Associates - tea industry focus</span>
+        <span>Built and maintained by Sarbani Associates</span>
       </div>
     </div>
   </section>
 
-  <section class="page">
-    <div class="content" style="background: linear-gradient(160deg, #193c16 0%, #2f5628 65%, #3b6533 100%); color: #fff;">
-      <div class="header" style="border-color: rgba(255, 255, 255, 0.16);">
-        <div class="brand" style="color: #fff;"><img src="icon-white.svg" alt="GardenSuite" />GardenSuite</div>
-        <div class="label" style="color: #cde0c0;">Page 5 of 5</div>
+
+  <!-- ═══════════════════════════════════════════════════
+       PAGE 6 - CTA (Dark cinematic close)
+       ═══════════════════════════════════════════════════ -->
+  <section class="page page--dark">
+    <div class="content">
+      <div class="header">
+        <div class="brand brand--light"><img src="icon-white.svg" alt="GardenSuite" />GardenSuite</div>
+        <div class="page-num page-num--light">06 / 06</div>
       </div>
 
-      <span class="pill" style="background: rgba(255, 255, 255, 0.12); border-color: rgba(255, 255, 255, 0.24); color: #e0eed6;">Final CTA</span>
+      <div class="cta-body">
+        <img class="cta-logo" src="icon-white.svg" alt="GardenSuite logo" width="56" height="56" />
+        <h2 class="cta-headline">See it working on your estate.</h2>
+        <p class="cta-sub">Book a live demo. We will walk you through face attendance, smart weighing, payroll flow, and the cloud MIS dashboard in one practical session.</p>
 
-      <div class="cta">
-        <div>
-          <h2>Ready to modernize your tea garden operations?</h2>
-          <p>Book a live demo and review attendance, weighing, payroll, factory flow, and MIS reporting in one practical session.</p>
+        <div class="cta-button">Book Your Demo</div>
+
+        <div class="cta-divider"></div>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <label>Call / WhatsApp</label>
+            <span>+91 97341 01330</span>
+          </div>
+          <div class="contact-card">
+            <label>Email</label>
+            <span>sarbaniassociates@gmail.com</span>
+          </div>
+          <div class="contact-card">
+            <label>Website</label>
+            <span>gardensuite.in</span>
+          </div>
+          <div class="contact-card">
+            <label>Office</label>
+            <span>Bagdogra, Siliguri</span>
+          </div>
         </div>
-        <div class="contact">
-          <div class="line"><strong>Call / WhatsApp</strong>+91 97341 01330</div>
-          <div class="line"><strong>Email</strong>sarbaniassociates@gmail.com</div>
-          <div class="line"><strong>Website</strong>gardensuite.in</div>
-          <div class="line"><strong>Office</strong>Bagdogra, Siliguri</div>
-        </div>
+
+        <div class="cta-divider"></div>
+        <div class="cta-company">Built and maintained by Sarbani Associates</div>
       </div>
 
-      <div class="grid-2">
-        <div class="card" style="background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.18);">
-          <h3 style="color: #fff;">What to cover in your demo</h3>
-          <ul>
-            <li style="color: rgba(255,255,255,0.92);">Face attendance workflow</li>
-            <li style="color: rgba(255,255,255,0.92);">Smart wireless weighing</li>
-            <li style="color: rgba(255,255,255,0.92);">Kamjari and payroll flow</li>
-            <li style="color: rgba(255,255,255,0.92);">MIS dashboard and reports</li>
-          </ul>
-        </div>
-        <div class="visual" style="border-color: rgba(255,255,255,0.22); background: rgba(255,255,255,0.08);">
-          <img src="logo-full.png" alt="GardenSuite logo" />
-        </div>
-      </div>
-
-      <div class="footer" style="border-color: rgba(255, 255, 255, 0.2); color: rgba(255, 255, 255, 0.82);">
-        <span>GardenSuite by Sarbani Associates</span>
-        <span>Copyright 2026 Sarbani Associates</span>
+      <div class="footer footer--light">
+        <span>gardensuite.in</span>
+        <span>&copy; 2026 Sarbani Associates, Bagdogra, Siliguri</span>
       </div>
     </div>
   </section>
 
+
+  <!-- PDF Export Script -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
   <script>
     async function generateBrochurePdf() {
@@ -596,13 +1256,13 @@
       const pages = Array.from(document.querySelectorAll(".page"));
 
       if (!pages.length || typeof window.html2pdf !== "function") {
-        alert("PDF generator did not load. Please check your internet connection and retry.");
+        alert("PDF generator did not load. Check your internet connection and retry.");
         return;
       }
 
       const prevLabel = button.textContent;
       button.disabled = true;
-      button.textContent = "Generating...";
+      button.textContent = "Generating\u2026";
 
       const exportRoot = document.createElement("div");
       exportRoot.style.position = "fixed";
@@ -615,6 +1275,7 @@
         const clone = page.cloneNode(true);
         clone.style.margin = "0";
         clone.style.boxShadow = "none";
+        clone.style.borderRadius = "0";
         clone.style.pageBreakAfter = index === pages.length - 1 ? "auto" : "always";
         exportRoot.appendChild(clone);
       });
@@ -628,7 +1289,7 @@
 
         await window.html2pdf()
           .set({
-            filename: "GardenSuite-Digital-Brochure-2026.pdf",
+            filename: "GardenSuite-Brochure-2026.pdf",
             margin: [0, 0, 0, 0],
             pagebreak: { mode: ["css", "legacy"] },
             image: { type: "jpeg", quality: 0.98 },
