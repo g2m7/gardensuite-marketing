@@ -34,10 +34,22 @@
         ease: 'power2.out',
       });
 
-      // ── Scroll-driven parallax ──
-      // Mockup rises slightly slower than page scroll (depth effect)
+      // ── Scroll-driven parallax (3D sandwich depth) ──
+      // Dashboard rises FAST — emerges upward from behind the foreground hills
       gsap.to('.hero-mockup', {
-        y: -80,
+        y: -200,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: '.hero-parallax',
+          start: 'top top',
+          end: 'bottom top',
+          scrub: true,
+        }
+      });
+
+      // Foreground hills + clouds rise SLOWLY — stays closer to viewer, mockup escapes behind it
+      gsap.to('.hero-fg-group', {
+        y: -90,
         ease: 'none',
         scrollTrigger: {
           trigger: '.hero-parallax',
@@ -237,14 +249,14 @@
   <!-- ═══════════════════════════════════════════════════════════ -->
   <!-- HERO - Clean editorial (keytail-style)                      -->
   <!-- ═══════════════════════════════════════════════════════════ -->
-  <section class="hero-parallax w-full relative overflow-hidden bg-[#FAFAF7]" aria-label="Hero">
+  <section class="hero-parallax w-full relative overflow-hidden" aria-label="Hero">
 
-    <!-- Subtle ambient glow behind mockup -->
-    <div class="absolute top-[40%] left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-[#1B5E3B]/[0.06] rounded-full blur-[120px] pointer-events-none"></div>
+    <!-- Sky extension: covers the ENTIRE hero section from the very top (behind nav) -->
+    <img src="/hero-sky.png" alt="" class="absolute inset-0 w-full h-full object-cover object-top brightness-[1.4] saturate-[0.6] opacity-80 z-0 pointer-events-none" />
 
     <!-- Text content -->
-    <div class="hero-text-content relative z-10 flex flex-col items-center pt-28 md:pt-32 lg:pt-36 px-6">
-      <div class="hero-badge flex items-center rounded-full pr-3.5 pl-2.5 gap-2 bg-[#F0FDF4] border border-[#DCFCE7] py-1.5">
+    <div class="hero-text-content relative z-20 flex flex-col items-center pt-28 md:pt-32 lg:pt-36 px-6 relative">
+      <div class="hero-badge flex items-center rounded-full pr-3.5 pl-2.5 gap-2 bg-[#F0FDF4] border border-[#DCFCE7] py-1.5 shadow-[0_2px_10px_rgba(27,94,59,0.05)]">
         <span class="rounded-full py-0.5 px-2 bg-[#1B5E3B] text-white font-['Inter'] font-bold text-[11px] leading-[14px]">NEW</span>
         <span class="text-[#1B5E3B] font-['Inter'] font-medium text-[13px] leading-4">Version 3 is here</span>
       </div>
@@ -268,25 +280,50 @@
       </div>
     </div>
 
-    <!-- Product mockup with CSS mask fade -->
-    <div class="hero-mockup relative z-10 mx-auto mt-14 md:mt-20 w-[90%] max-w-[1100px]" style="-webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 98%); mask-image: linear-gradient(to bottom, black 40%, transparent 98%);">
-      <div class="relative rounded-xl md:rounded-2xl overflow-hidden border border-[#E4E4E7] shadow-[0_20px_80px_rgba(0,0,0,0.12)] bg-[#1a1a1a]">
-        <!-- Browser chrome bar -->
-        <div class="flex items-center gap-2 px-4 py-2.5 bg-[#1a1a1a] border-b border-white/[0.06]">
-          <div class="flex gap-1.5">
-            <div class="w-2.5 h-2.5 rounded-full bg-[#FF5F57]"></div>
-            <div class="w-2.5 h-2.5 rounded-full bg-[#FEBC2E]"></div>
-            <div class="w-2.5 h-2.5 rounded-full bg-[#28C840]"></div>
-          </div>
-          <div class="flex-1 flex justify-center">
-            <div class="flex items-center gap-1.5 rounded-md bg-white/[0.06] px-3 py-1 min-w-[240px]">
-              <svg width="10" height="10" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6 2v8" stroke="white" stroke-opacity="0.3" stroke-width="1.2" stroke-linecap="round"/></svg>
-              <span class="text-white/30 font-['Inter'] text-[11px]">gardensuite.in/dashboard</span>
+    <!-- Visuals container: Keytail-style 3D parallax sandwich -->
+    <div class="hero-visuals relative w-full h-[540px] md:h-[720px] lg:h-[840px] overflow-visible mt-6 md:mt-10">
+
+
+      <!-- Layer 1: Background landscape (bg.png) -->
+      <!-- Top-masked so bg.png's own sky fades away, letting the sky extension show through above -->
+      <img src="/bg.png" alt="" class="absolute inset-0 w-full h-full object-cover object-top z-[1] pointer-events-none" style="mask-image: linear-gradient(to bottom, transparent 0%, black 40%); -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 40%);" />
+
+      <!-- Subtle ambient glow behind the dashboard for contrast/readability -->
+      <div class="absolute top-[30%] left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-white/50 rounded-full blur-[120px] pointer-events-none z-[1]"></div>
+
+      <!-- Layer 2: Product dashboard mockup -->
+      <!-- Absolutely positioned so it floats in the middle of the composition -->
+      <div class="hero-mockup absolute z-10 left-1/2 -translate-x-1/2 top-[2%] md:top-[0%] w-[90%] max-w-[1100px]">
+        <div class="relative rounded-xl md:rounded-2xl overflow-hidden border border-white/40 shadow-[0_30px_100px_rgba(0,0,0,0.18)] bg-[#1a1a1a]">
+          <!-- Browser chrome bar -->
+          <div class="flex items-center gap-2 px-4 py-2.5 bg-[#1a1a1a] border-b border-white/[0.06]">
+            <div class="flex gap-1.5">
+              <div class="w-2.5 h-2.5 rounded-full bg-[#FF5F57]"></div>
+              <div class="w-2.5 h-2.5 rounded-full bg-[#FEBC2E]"></div>
+              <div class="w-2.5 h-2.5 rounded-full bg-[#28C840]"></div>
+            </div>
+            <div class="flex-1 flex justify-center">
+              <div class="flex items-center gap-1.5 rounded-md bg-white/[0.06] px-3 py-1 min-w-[240px]">
+                <svg width="10" height="10" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6 2v8" stroke="white" stroke-opacity="0.3" stroke-width="1.2" stroke-linecap="round"/></svg>
+                <span class="text-white/30 font-['Inter'] text-[11px]">gardensuite.in/dashboard</span>
+              </div>
             </div>
           </div>
+          <img src="/mis-dashboard.png" alt="GardenSuite MIS Dashboard" class="w-full h-auto object-cover object-top" width="1400" height="900" loading="eager" fetchpriority="high" />
         </div>
-        <img src="/hero-sign-in.png" alt="GardenSuite Dashboard" class="w-full h-auto object-cover object-top" width="1400" height="900" loading="eager" fetchpriority="high" />
       </div>
+
+      <!-- Layer 3 + 4: Foreground group (hills + fade) -->
+      <!-- This entire group moves together on scroll for the parallax depth effect -->
+      <div class="hero-fg-group absolute inset-x-0 bottom-0 z-20 pointer-events-none" style="height: 55%; min-height: 280px;">
+        <!-- fg.png: transparent top, hills at bottom -->
+        <img src="/fg.png" alt="" class="absolute inset-0 w-full h-full object-cover object-bottom" />
+
+        <!-- Keytail-style fade: pure CSS gradient that dissolves the landscape into whitespace -->
+        <!-- Tall enough to create a soft, natural transition — no generated image needed -->
+        <div class="absolute inset-x-0 bottom-0 translate-y-[70%] h-[300px] md:h-[400px] bg-gradient-to-b from-transparent via-white/70 to-white pointer-events-none"></div>
+      </div>
+
     </div>
 
   </section>
