@@ -1,0 +1,16 @@
+{
+  "name": "brochure",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "export-pdf": "node export-pdf.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "playwright": "^1.59.1"
+  }
+}
