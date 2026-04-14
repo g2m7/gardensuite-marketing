@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GardenSuite Digital Brochure</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    @page { size: A4 portrait; margin: 0; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green-deep: #234B1D;
+      --green-forest: #385E30;
+      --green-mid: #5F7D48;
+      --green-sage: #97B07C;
+      --green-light: #A8BC8E;
+      --charcoal: #111827;
+      --ink: #1F2937;
+      --surface: #F6F8F3;
+      --border: #DDE3D5;
+      --white: #FFFFFF;
+    }
+
+    html { -webkit-font-smoothing: antialiased; }
+    body {
+      font-family: "Inter", system-ui, -apple-system, sans-serif;
+      background: #d5dad2;
+      color: var(--charcoal);
+      font-size: 9pt;
+      line-height: 1.5;
+      padding-top: 38px;
+    }
+
+    .toolbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 8px;
+      background: #141414;
+      color: #bcbcbc;
+      font-size: 12px;
+    }
+
+    .toolbar button {
+      background: var(--green-deep);
+      color: var(--white);
+      border: 0;
+      border-radius: 6px;
+      padding: 5px 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .page {
+      width: 210mm;
+      height: 297mm;
+      margin: 8mm auto;
+      background: var(--white);
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 2px 16px rgba(0, 0, 0, 0.22);
+      page-break-after: always;
+      page-break-inside: avoid;
+    }
+
+    .content {
+      height: 100%;
+      padding: 11mm 12mm 9mm;
+      display: flex;
+      flex-direction: column;
+      gap: 5mm;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 0.3mm solid var(--border);
+      padding-bottom: 3mm;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 3mm;
+      color: var(--green-deep);
+      font-weight: 800;
+      font-size: 10pt;
+      letter-spacing: -0.01em;
+    }
+
+    .brand img { height: 6mm; width: auto; }
+
+    .label {
+      color: #6b7280;
+      font-size: 7pt;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 700;
+    }
+
+    .pill {
+      display: inline-block;
+      padding: 1.2mm 3.2mm;
+      border-radius: 20px;
+      border: 0.3mm solid #d4e3ca;
+      background: #edf4e8;
+      color: var(--green-forest);
+      font-size: 7pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+    }
+
+    h1, h2, h3, h4 { letter-spacing: -0.02em; }
+
+    .hero-title {
+      font-size: 31pt;
+      font-weight: 800;
+      line-height: 1.04;
+      color: var(--green-deep);
+      max-width: 160mm;
+    }
+
+    .lead {
+      font-size: 10.2pt;
+      color: var(--ink);
+      max-width: 148mm;
+      line-height: 1.56;
+    }
+
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3mm; }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3mm; }
+
+    .card {
+      background: var(--surface);
+      border: 0.3mm solid var(--border);
+      border-radius: 3mm;
+      padding: 4mm;
+    }
+
+    .card h3 {
+      color: var(--green-deep);
+      font-size: 9.5pt;
+      font-weight: 800;
+      margin-bottom: 1.6mm;
+    }
+
+    .card p,
+    .card li {
+      color: var(--ink);
+      font-size: 7.3pt;
+      line-height: 1.5;
+    }
+
+    .card ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2mm;
+    }
+
+    .card li {
+      position: relative;
+      padding-left: 3mm;
+    }
+
+    .card li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 1.7mm;
+      width: 1.2mm;
+      height: 1.2mm;
+      border-radius: 50%;
+      background: var(--green-mid);
+    }
+
+    .visual {
+      border: 0.3mm solid var(--border);
+      border-radius: 3mm;
+      overflow: hidden;
+      background: #ecf1e8;
+    }
+
+    .visual img { display: block; width: 100%; height: auto; }
+
+    .stat {
+      background: var(--surface);
+      border: 0.3mm solid var(--border);
+      border-radius: 3mm;
+      padding: 4mm;
+    }
+
+    .stat strong {
+      display: block;
+      color: var(--green-deep);
+      font-size: 15pt;
+      font-weight: 800;
+      line-height: 1.04;
+    }
+
+    .stat span {
+      color: #5f646f;
+      font-size: 6.8pt;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 700;
+    }
+
+    .step {
+      background: #fbfcfa;
+      border: 0.3mm solid var(--border);
+      border-radius: 3mm;
+      padding: 3.3mm;
+    }
+
+    .step .num {
+      display: inline-block;
+      margin-bottom: 1.2mm;
+      color: var(--green-forest);
+      font-size: 7pt;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .step h4 {
+      font-size: 8.4pt;
+      margin-bottom: 1mm;
+    }
+
+    .step p {
+      font-size: 7pt;
+      color: #4f5663;
+      line-height: 1.45;
+    }
+
+    .regions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5mm;
+    }
+
+    .region {
+      border: 0.3mm solid #d5e1cc;
+      background: #f2f7ee;
+      border-radius: 12px;
+      padding: 1.1mm 2.8mm;
+      font-size: 6.6pt;
+      color: var(--green-forest);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 700;
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.4mm;
+    }
+
+    .time {
+      background: #fcfdfa;
+      border: 0.3mm solid var(--border);
+      border-radius: 2.5mm;
+      padding: 3mm;
+    }
+
+    .time strong {
+      display: block;
+      color: var(--green-deep);
+      font-size: 7.9pt;
+      margin-bottom: 0.9mm;
+      font-weight: 800;
+    }
+
+    .time span {
+      font-size: 7pt;
+      color: var(--ink);
+      line-height: 1.4;
+    }
+
+    .faq { display: grid; grid-template-columns: 1fr 1fr; gap: 2.4mm; }
+
+    .faq .card h3 {
+      color: var(--charcoal);
+      font-size: 8.1pt;
+      margin-bottom: 1mm;
+    }
+
+    .cta {
+      background: linear-gradient(145deg, #1e3f19 0%, #355b2d 100%);
+      border: 0.3mm solid rgba(255, 255, 255, 0.16);
+      border-radius: 4mm;
+      color: var(--white);
+      padding: 7mm;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 6mm;
+      align-items: center;
+    }
+
+    .cta h2 {
+      font-size: 19pt;
+      line-height: 1.1;
+      margin-bottom: 1.8mm;
+    }
+
+    .cta p {
+      font-size: 8pt;
+      color: rgba(255, 255, 255, 0.88);
+      line-height: 1.52;
+    }
+
+    .contact { display: flex; flex-direction: column; gap: 2mm; }
+
+    .contact .line {
+      border: 0.3mm solid rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 2.5mm;
+      padding: 2.4mm 3mm;
+      font-size: 8pt;
+    }
+
+    .contact strong {
+      display: block;
+      color: #d5e7c8;
+      font-size: 6.8pt;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      margin-bottom: 0.6mm;
+    }
+
+    .footer {
+      margin-top: auto;
+      border-top: 0.3mm solid var(--border);
+      padding-top: 2.2mm;
+      display: flex;
+      justify-content: space-between;
+      font-size: 6.6pt;
+      color: #6b7280;
+    }
+
+    @media print {
+      body { background: #fff; padding-top: 0; }
+      .toolbar { display: none !important; }
+      .page { margin: 0; box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar" data-html2canvas-ignore="true">
+    <span>Digital brochure export</span>
+    <button type="button" data-pdf-btn onclick="generateBrochurePdf()">Generate PDF</button>
+  </div>
+
+  <section class="page">
+    <div class="content" style="background: linear-gradient(164deg, #f7faf4 0%, #edf5e8 100%);">
+      <div class="header">
+        <div class="brand"><img src="favicon.png" alt="GardenSuite" />GardenSuite</div>
+        <div class="label">By Sarbani Associates</div>
+      </div>
+
+      <span class="pill">Digital brochure 2026</span>
+      <h1 class="hero-title">Complete ERP software for tea gardens</h1>
+      <p class="lead">Run attendance, weighing, payroll, factory, stores, and accounts in one connected platform made for practical tea estate operations.</p>
+
+      <div class="grid-2">
+        <div class="visual"><img src="dashboard.png" alt="GardenSuite dashboard" /></div>
+        <div class="card">
+          <h3>What makes GardenSuite different</h3>
+          <ul>
+            <li>Face recognition attendance for stronger workforce control</li>
+            <li>Smart wireless scale linked to verified worker records</li>
+            <li>Offline-first operations with cloud MIS visibility</li>
+            <li>Consistent workflow across field and office teams</li>
+            <li>Simple UI for daily use in real garden conditions</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="grid-4">
+        <div class="stat"><strong>20+</strong><span>Tea Estates</span></div>
+        <div class="stat"><strong>25+</strong><span>Years Journey</span></div>
+        <div class="stat"><strong>7</strong><span>Regions</span></div>
+        <div class="stat"><strong>V3</strong><span>Current Version</span></div>
+      </div>
+
+      <div class="footer">
+        <span>gardensuite.in</span>
+        <span>Sarbani Associates - Bagdogra, Siliguri</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="content">
+      <div class="header">
+        <div class="brand"><img src="favicon.png" alt="GardenSuite" />GardenSuite</div>
+        <div class="label">Page 2 of 5</div>
+      </div>
+
+      <span class="pill">Challenge to flow</span>
+      <h2 style="font-size: 21pt; color: var(--green-deep);">Tea garden operations are complex</h2>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>Common challenges</h3>
+          <ul>
+            <li>Proxy attendance and manual entry issues</li>
+            <li>Weight mismatch and delayed field updates</li>
+            <li>Slow kamjari flow and payroll pressure</li>
+            <li>Disconnected records across departments</li>
+            <li>Late daily reports for management decisions</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>GardenSuite workflow</h3>
+          <p>GardenSuite brings attendance, weighing, payroll, and reporting into one clear process. Teams work with cleaner data, faster daily updates, and better visibility for supervisors and management.</p>
+        </div>
+      </div>
+
+      <div class="grid-4">
+        <div class="step"><span class="num">001</span><h4>Face Attendance</h4><p>Verify worker identity at entry.</p></div>
+        <div class="step"><span class="num">002</span><h4>Smart Weighing</h4><p>Capture linked plucking weight data.</p></div>
+        <div class="step"><span class="num">003</span><h4>Payroll Flow</h4><p>Support kamjari to payroll workflow.</p></div>
+        <div class="step"><span class="num">004</span><h4>MIS Dashboard</h4><p>Track daily updates from anywhere.</p></div>
+      </div>
+
+      <div class="grid-3">
+        <div class="visual"><img src="face-attendance.png" alt="Face attendance app" /></div>
+        <div class="visual"><img src="smart-weighing.png" alt="Smart wireless weighing" /></div>
+        <div class="visual"><img src="cloud-dashboard.png" alt="Cloud dashboard" /></div>
+      </div>
+
+      <div class="footer">
+        <span>One brand, one connected flow</span>
+        <span>GardenSuite by Sarbani Associates</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="content">
+      <div class="header">
+        <div class="brand"><img src="favicon.png" alt="GardenSuite" />GardenSuite</div>
+        <div class="label">Page 3 of 5</div>
+      </div>
+
+      <span class="pill">Modules</span>
+      <h2 style="font-size: 21pt; color: var(--green-deep);">Modules built for tea estates</h2>
+
+      <div class="grid-3" style="grid-template-columns: 1fr 1fr;">
+        <div class="card"><h3>Tea Garden ERP</h3><p>Flagship core platform for day-to-day estate operation flow.</p></div>
+        <div class="card"><h3>Payroll Management</h3><p>Attendance-linked wage and payroll support.</p></div>
+        <div class="card"><h3>Kamjari and Attendance</h3><p>Workforce records with practical daily handling.</p></div>
+        <div class="card"><h3>Factory Production</h3><p>Factory process and account visibility support.</p></div>
+        <div class="card"><h3>Accounts and Finance</h3><p>Estate-level finance and reporting continuity.</p></div>
+        <div class="card"><h3>Stores and Inventory</h3><p>Stock movement tracking and control workflow.</p></div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>Extended capability</h3>
+          <ul>
+            <li>Bought Leaf Management</li>
+            <li>MIS Web Dashboard</li>
+            <li>Mobile App Support</li>
+            <li>Offline plus cloud sync architecture</li>
+          </ul>
+        </div>
+        <div class="visual"><img src="mis-dashboard.png" alt="MIS dashboard screen" /></div>
+      </div>
+
+      <div class="card">
+        <h3>Single-brand consistency</h3>
+        <p>All modules follow one GardenSuite design and logic pattern. Teams can move across modules with less confusion and faster onboarding.</p>
+      </div>
+
+      <div class="footer">
+        <span>Integrated suite</span>
+        <span>Sarbani Associates</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="content">
+      <div class="header">
+        <div class="brand"><img src="favicon.png" alt="GardenSuite" />GardenSuite</div>
+        <div class="label">Page 4 of 5</div>
+      </div>
+
+      <span class="pill">Trust and reach</span>
+      <h2 style="font-size: 20pt; color: var(--green-deep);">Trusted by tea estates across India</h2>
+
+      <div class="regions">
+        <span class="region">Darjeeling</span>
+        <span class="region">Dooars</span>
+        <span class="region">Assam</span>
+        <span class="region">Terai</span>
+        <span class="region">Coochbehar</span>
+        <span class="region">Uttar Dinajpur</span>
+        <span class="region">Jalpaiguri</span>
+      </div>
+
+      <div class="card">
+        <h3>Selected clients</h3>
+        <p>Simulbarie T.E., Longview T.E., Rheabari T.E., Mogulkata T.E., Rahimpur T.E., Debpara T.E., Kurti T.E., Looksan T.E., Subhasini T.E., Choibari T.E., Chapar T.E., Doolahat T.E., Atal T.E., Thanjhora T.E., Naxalbari T.E., Pahargoomiah T.E., Kamalpur T.E., Tinbigha T.E., Chandan T.E., Himalayan Agro Plantation.</p>
+      </div>
+
+      <h3 style="font-size: 12pt; color: var(--green-deep);">Company timeline</h3>
+      <div class="timeline">
+        <div class="time"><strong>1998</strong><span>Infoworld founded</span></div>
+        <div class="time"><strong>2000</strong><span>Garden Suite software developed for tea gardens</span></div>
+        <div class="time"><strong>2003</strong><span>Version 1.1 launched</span></div>
+        <div class="time"><strong>2018</strong><span>Sarbani Associates formed, Version 2 with biometric attendance</span></div>
+        <div class="time"><strong>2022</strong><span>Face attendance app launched</span></div>
+        <div class="time"><strong>2026</strong><span>Version 3 with advanced face app and online dashboard</span></div>
+      </div>
+
+      <h3 style="font-size: 12pt; color: var(--green-deep);">Quick FAQ</h3>
+      <div class="faq">
+        <div class="card"><h3>Does it work offline?</h3><p>Yes. Garden-level operations can run offline with cloud management visibility.</p></div>
+        <div class="card"><h3>Can it reduce attendance fraud?</h3><p>Yes. Face attendance helps reduce proxy punching.</p></div>
+        <div class="card"><h3>Can we use it for payroll and kamjari?</h3><p>Yes. GardenSuite supports attendance to payroll workflow.</p></div>
+        <div class="card"><h3>Do you support implementation?</h3><p>Yes. Sarbani Associates provides onboarding and support.</p></div>
+      </div>
+
+      <div class="footer">
+        <span>Since 1998</span>
+        <span>Sarbani Associates - tea industry focus</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="content" style="background: linear-gradient(160deg, #193c16 0%, #2f5628 65%, #3b6533 100%); color: #fff;">
+      <div class="header" style="border-color: rgba(255, 255, 255, 0.16);">
+        <div class="brand" style="color: #fff;"><img src="icon-white.svg" alt="GardenSuite" />GardenSuite</div>
+        <div class="label" style="color: #cde0c0;">Page 5 of 5</div>
+      </div>
+
+      <span class="pill" style="background: rgba(255, 255, 255, 0.12); border-color: rgba(255, 255, 255, 0.24); color: #e0eed6;">Final CTA</span>
+
+      <div class="cta">
+        <div>
+          <h2>Ready to modernize your tea garden operations?</h2>
+          <p>Book a live demo and review attendance, weighing, payroll, factory flow, and MIS reporting in one practical session.</p>
+        </div>
+        <div class="contact">
+          <div class="line"><strong>Call / WhatsApp</strong>+91 97341 01330</div>
+          <div class="line"><strong>Email</strong>sarbaniassociates@gmail.com</div>
+          <div class="line"><strong>Website</strong>gardensuite.in</div>
+          <div class="line"><strong>Office</strong>Bagdogra, Siliguri</div>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card" style="background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.18);">
+          <h3 style="color: #fff;">What to cover in your demo</h3>
+          <ul>
+            <li style="color: rgba(255,255,255,0.92);">Face attendance workflow</li>
+            <li style="color: rgba(255,255,255,0.92);">Smart wireless weighing</li>
+            <li style="color: rgba(255,255,255,0.92);">Kamjari and payroll flow</li>
+            <li style="color: rgba(255,255,255,0.92);">MIS dashboard and reports</li>
+          </ul>
+        </div>
+        <div class="visual" style="border-color: rgba(255,255,255,0.22); background: rgba(255,255,255,0.08);">
+          <img src="logo-full.png" alt="GardenSuite logo" />
+        </div>
+      </div>
+
+      <div class="footer" style="border-color: rgba(255, 255, 255, 0.2); color: rgba(255, 255, 255, 0.82);">
+        <span>GardenSuite by Sarbani Associates</span>
+        <span>Copyright 2026 Sarbani Associates</span>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script>
+    async function generateBrochurePdf() {
+      const button = document.querySelector("[data-pdf-btn]");
+      const pages = Array.from(document.querySelectorAll(".page"));
+
+      if (!pages.length || typeof window.html2pdf !== "function") {
+        alert("PDF generator did not load. Please check your internet connection and retry.");
+        return;
+      }
+
+      const prevLabel = button.textContent;
+      button.disabled = true;
+      button.textContent = "Generating...";
+
+      const exportRoot = document.createElement("div");
+      exportRoot.style.position = "fixed";
+      exportRoot.style.left = "-100000px";
+      exportRoot.style.top = "0";
+      exportRoot.style.width = "210mm";
+      exportRoot.style.background = "#ffffff";
+
+      pages.forEach((page, index) => {
+        const clone = page.cloneNode(true);
+        clone.style.margin = "0";
+        clone.style.boxShadow = "none";
+        clone.style.pageBreakAfter = index === pages.length - 1 ? "auto" : "always";
+        exportRoot.appendChild(clone);
+      });
+
+      document.body.appendChild(exportRoot);
+
+      try {
+        if (document.fonts && document.fonts.ready) {
+          await document.fonts.ready;
+        }
+
+        await window.html2pdf()
+          .set({
+            filename: "GardenSuite-Digital-Brochure-2026.pdf",
+            margin: [0, 0, 0, 0],
+            pagebreak: { mode: ["css", "legacy"] },
+            image: { type: "jpeg", quality: 0.98 },
+            html2canvas: {
+              scale: 2,
+              useCORS: true,
+              allowTaint: true,
+              backgroundColor: "#ffffff",
+              logging: false
+            },
+            jsPDF: { unit: "mm", format: "a4", orientation: "portrait" }
+          })
+          .from(exportRoot)
+          .save();
+      } finally {
+        exportRoot.remove();
+        button.disabled = false;
+        button.textContent = prevLabel;
+      }
+    }
+  </script>
+</body>
+</html>
