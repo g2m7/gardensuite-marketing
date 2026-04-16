@@ -35,9 +35,9 @@
       });
 
       // ── Scroll-driven parallax (3D sandwich depth) ──
-      // Dashboard rises FAST — emerges upward from behind the foreground hills
+      // Dashboard rises from behind the foreground hills
       gsap.to('.hero-mockup', {
-        y: -200,
+        y: -140,
         ease: 'none',
         scrollTrigger: {
           trigger: '.hero-parallax',
@@ -313,16 +313,15 @@
         </div>
       </div>
 
-      <!-- Layer 3 + 4: Foreground group (hills + fade) -->
-      <!-- This entire group moves together on scroll for the parallax depth effect -->
+      <!-- Layer 3: Foreground hills -->
+      <!-- Moves with parallax; fg.png is bottom-masked so the hills dissolve naturally -->
       <div class="hero-fg-group absolute inset-x-0 bottom-0 z-20 pointer-events-none" style="height: 55%; min-height: 280px;">
-        <!-- fg.png: transparent top, hills at bottom -->
-        <img src="/fg.png" alt="" class="absolute inset-0 w-full h-full object-cover object-bottom" />
-
-        <!-- Keytail-style fade: pure CSS gradient that dissolves the landscape into whitespace -->
-        <!-- Tall enough to create a soft, natural transition — no generated image needed -->
-        <div class="absolute inset-x-0 bottom-0 translate-y-[70%] h-[300px] md:h-[400px] bg-gradient-to-b from-transparent via-white/70 to-white pointer-events-none"></div>
+        <img src="/fg.png" alt="" class="absolute inset-0 w-full h-full object-cover object-bottom" style="mask-image: linear-gradient(to bottom, black 75%, transparent 97%); -webkit-mask-image: linear-gradient(to bottom, black 75%, transparent 97%);" />
       </div>
+
+      <!-- Static bottom fade: tall gradient that stays fixed at the bottom of hero-visuals -->
+      <!-- Creates the Keytail-style dissolve from landscape into white page background -->
+      <div class="absolute inset-x-0 bottom-0 z-[25] pointer-events-none h-[100px] md:h-[160px] bg-gradient-to-b from-transparent via-white/90 to-white"></div>
 
     </div>
 
