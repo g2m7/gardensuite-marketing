@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte';
+  import GsLogoAnimation from '$lib/components/GsLogoAnimation.svelte';
 
   // ─── GSAP + ScrollTrigger ───
   let ready = $state(false);
@@ -35,9 +36,21 @@
       });
 
       // ── Scroll-driven parallax (3D sandwich depth) ──
+      // Text moves up at the same speed as the mockup
+      gsap.to('.hero-text-content', {
+        y: -98,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: '.hero-parallax',
+          start: 'top top',
+          end: 'bottom top',
+          scrub: true,
+        }
+      });
+
       // Dashboard rises from behind the foreground hills
       gsap.to('.hero-mockup', {
-        y: -140,
+        y: -98,
         ease: 'none',
         scrollTrigger: {
           trigger: '.hero-parallax',
@@ -50,6 +63,18 @@
       // Foreground hills + clouds rise SLOWLY — stays closer to viewer, mockup escapes behind it
       gsap.to('.hero-fg-group', {
         y: -90,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: '.hero-parallax',
+          start: 'top top',
+          end: 'bottom top',
+          scrub: true,
+        }
+      });
+
+      // Background layer moves DOWN slowly to deepen parallax effect
+      gsap.to('.hero-bg-landscape', {
+        y: 60,
         ease: 'none',
         scrollTrigger: {
           trigger: '.hero-parallax',
@@ -164,12 +189,61 @@
   });
 
   // ─── Sticky Nav ───
-  let scrolled = $state(false);
+  let navProgress = $state(0);
+  let navScrollEndRatio = 0.3; // Tweak this variable: 0.3 = 30% of hero height
+  let targetNavWidth = $state(0);
+  let startNavWidth = $state(1400);
+
   $effect(() => {
-    const handler = () => { scrolled = window.scrollY > 20; };
+    const measureWidth = () => {
+      // Find the main content container to dynamically match the nav width accurately
+      const container = document.querySelector('.ps-section > div') as HTMLElement;
+      if (container) {
+        const style = window.getComputedStyle(container);
+        const pl = parseFloat(style.paddingLeft);
+        const pr = parseFloat(style.paddingRight);
+        targetNavWidth = container.clientWidth - pl - pr;
+      } else {
+        targetNavWidth = Math.min(window.innerWidth - 48, 1240);
+      }
+      startNavWidth = Math.min(window.innerWidth, 1400);
+    };
+
+    const handler = () => {
+      const hero = document.querySelector('.hero-parallax') as HTMLElement;
+      const hHeight = hero ? hero.offsetHeight : 500;
+      const endScroll = hHeight * navScrollEndRatio;
+      
+      let p = window.scrollY / endScroll;
+      if (p < 0) p = 0;
+      if (p > 1) p = 1;
+      navProgress = p;
+    };
+
     window.addEventListener('scroll', handler, { passive: true });
-    return () => window.removeEventListener('scroll', handler);
+    window.addEventListener('resize', measureWidth, { passive: true });
+    
+    measureWidth();
+    handler(); // Run once on init
+    
+    return () => {
+      window.removeEventListener('scroll', handler);
+      window.removeEventListener('resize', measureWidth);
+    };
   });
+
+  let currentNavWidth = $derived(startNavWidth - (startNavWidth - targetNavWidth) * navProgress);
+
+  let navStyles = $derived(`
+    background-color: rgba(255, 255, 255, ${navProgress * 0.85});
+    backdrop-filter: blur(${navProgress * 24}px);
+    -webkit-backdrop-filter: blur(${navProgress * 24}px);
+    width: ${currentNavWidth}px;
+    top: ${navProgress * 16}px;
+    border-radius: ${navProgress * 20}px;
+    box-shadow: 0 ${navProgress * 8}px ${navProgress * 30}px rgba(0, 0, 0, ${navProgress * 0.08});
+    border-color: rgba(0, 0, 0, ${navProgress * 0.08});
+  `);
 
   // ─── FAQ Accordion ───
   let openFaq = $state<number | null>(null);
@@ -202,19 +276,19 @@
 
   <!-- ═══ Nav ═══ -->
   <nav
-    class="fixed top-0 left-0 right-0 z-[60] flex items-center justify-between w-full py-4 px-6 md:px-14 transition-all duration-300 {scrolled ? 'bg-white/80 backdrop-blur-xl border-b border-[#0000000A] shadow-[0_1px_3px_rgba(0,0,0,0.04)]' : ''}"
+    class="fixed z-[60] flex items-center justify-between left-1/2 -translate-x-1/2 py-4 px-6 md:px-10 border border-solid"
+    style={navStyles}
     aria-label="Main navigation"
   >
-    <a href="/" class="flex items-center gap-1.5" aria-label="GardenSuite Home">
-      <img src="/favicon.png" alt="" class="h-7 w-auto shrink-0" aria-hidden="true" />
-      <span class="tracking-[-0.01em] font-['Plus_Jakarta_Sans',system-ui,sans-serif] font-bold text-[17px] leading-[22px] text-[#0A0A0A]">GardenSuite</span>
-      <span class="ml-0.5 rounded-sm py-0.5 px-2 font-['Inter'] font-bold text-[10px] leading-3 tracking-[0.04em] bg-[#F0FDF4] text-[#1B5E3B]">V3</span>
+    <a href="/" class="flex items-center gap-2" aria-label="GardenSuite Home">
+      <GsLogoAnimation class="h-7 w-auto shrink-0" />
+      <span class="tracking-[-0.01em] font-['Plus_Jakarta_Sans',system-ui,sans-serif] font-bold text-[18px] leading-[22px] text-[#0A0A0A]">GardenSuite</span>
     </a>
     <div class="hidden md:flex items-center gap-1">
       <div class="group relative">
-        <button class="inline-flex items-center justify-center rounded-md px-4 py-2 text-[14px] font-['Inter'] font-medium transition-colors duration-150 text-[#71717A] hover:bg-[#0000000A] hover:text-[#0A0A0A] focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 focus:outline-none" aria-label="Products menu">
+        <button class="inline-flex items-center justify-center rounded-md px-4 py-2 text-[15px] font-['Inter'] font-semibold transition-colors duration-150 text-[#18181B] hover:bg-[#0000000A] hover:text-[#0A0A0A] focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 focus:outline-none" aria-label="Products menu">
           Products
-          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" class="ml-1 opacity-60 transition-transform duration-200 group-hover:rotate-180" aria-hidden="true"><path d="M3 4.5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" class="ml-1.5 opacity-60 transition-transform duration-200 group-hover:rotate-180" aria-hidden="true"><path d="M3 4.5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
         <div class="pointer-events-none absolute left-1/2 top-full mt-1 w-[620px] -translate-x-1/2 opacity-0 invisible translate-y-1 scale-[0.97] group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-hover:scale-100 group-hover:pointer-events-auto transition-all duration-200 ease-out origin-top border border-[#0000000F] shadow-[0_10px_30px_rgba(0,0,0,0.08)] bg-white rounded-xl p-3 z-50 flex gap-3">
           <div class="w-1/3 rounded-lg bg-gradient-to-b from-[#F0FDF4] to-[#DCFCE7] p-4 flex flex-col justify-between">
@@ -233,12 +307,12 @@
           </div>
         </div>
       </div>
-      <a href="#features" class="inline-flex items-center justify-center rounded-md px-4 py-2 text-[14px] font-['Inter'] font-medium transition-colors duration-150 text-[#71717A] hover:bg-[#0000000A] hover:text-[#0A0A0A]">Features</a>
-      <a href="#clients" class="inline-flex items-center justify-center rounded-md px-4 py-2 text-[14px] font-['Inter'] font-medium transition-colors duration-150 text-[#71717A] hover:bg-[#0000000A] hover:text-[#0A0A0A]">Clients</a>
-      <a href="#about" class="inline-flex items-center justify-center rounded-md px-4 py-2 text-[14px] font-['Inter'] font-medium transition-colors duration-150 text-[#71717A] hover:bg-[#0000000A] hover:text-[#0A0A0A]">About</a>
+      <a href="#features" class="inline-flex items-center justify-center rounded-md px-4 py-2 text-[15px] font-['Inter'] font-semibold transition-colors duration-150 text-[#18181B] hover:bg-[#0000000A] hover:text-[#0A0A0A]">Features</a>
+      <a href="#clients" class="inline-flex items-center justify-center rounded-md px-4 py-2 text-[15px] font-['Inter'] font-semibold transition-colors duration-150 text-[#18181B] hover:bg-[#0000000A] hover:text-[#0A0A0A]">Clients</a>
+      <a href="#about" class="inline-flex items-center justify-center rounded-md px-4 py-2 text-[15px] font-['Inter'] font-semibold transition-colors duration-150 text-[#18181B] hover:bg-[#0000000A] hover:text-[#0A0A0A]">About</a>
     </div>
     <div class="flex items-center gap-2">
-      <a href="#contact" class="hidden md:inline-block font-['Inter'] font-medium text-sm mr-4 text-[#71717A] hover:text-[#0A0A0A] transition-colors">Contact</a>
+      <a href="#contact" class="hidden md:inline-block font-['Inter'] font-semibold text-[15px] mr-4 text-[#18181B] hover:text-[#0A0A0A] transition-colors">Contact</a>
       <a href="#contact" class="flex items-center rounded-full py-2.5 px-5 bg-[#1B5E3B] hover:bg-[#144723] active:scale-[0.97] transition-all duration-150 shadow-[0_2px_8px_rgba(27,94,59,0.25)]">
         <span class="text-white font-['Inter'] font-semibold text-[13px] leading-4">Book a Demo</span>
       </a>
@@ -286,7 +360,7 @@
 
       <!-- Layer 1: Background landscape (bg.png) -->
       <!-- Top-masked so bg.png's own sky fades away, letting the sky extension show through above -->
-      <img src="/bg.png" alt="" class="absolute inset-0 w-full h-full object-cover object-top z-[1] pointer-events-none" style="mask-image: linear-gradient(to bottom, transparent 0%, black 40%); -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 40%);" />
+      <img src="/bg.png" alt="" class="hero-bg-landscape absolute inset-0 w-full h-full object-cover object-top z-[1] pointer-events-none" style="mask-image: linear-gradient(to bottom, transparent 0%, black 40%); -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 40%);" />
 
       <!-- Subtle ambient glow behind the dashboard for contrast/readability -->
       <div class="absolute top-[30%] left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-white/50 rounded-full blur-[120px] pointer-events-none z-[1]"></div>
