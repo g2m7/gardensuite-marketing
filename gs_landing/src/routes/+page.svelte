@@ -26,7 +26,7 @@
         .from('.hero-cta', { opacity: 0, y: 24, duration: 0.6 }, '-=0.4');
 
       // Mockup entrance: slide up with subtle scale
-      gsap.from('.hero-mockup', {
+      gsap.from('.hero-mockup-inner', {
         y: 60,
         scale: 0.97,
         opacity: 0,
@@ -50,7 +50,7 @@
 
       // Dashboard rises from behind the foreground hills
       gsap.to('.hero-mockup', {
-        y: -98,
+        y: -150,
         ease: 'none',
         scrollTrigger: {
           trigger: '.hero-parallax',
@@ -367,8 +367,8 @@
 
       <!-- Layer 2: Product dashboard mockup -->
       <!-- Absolutely positioned so it floats in the middle of the composition -->
-      <div class="hero-mockup absolute z-10 left-1/2 -translate-x-1/2 top-[2%] md:top-[0%] w-[90%] max-w-[1100px]">
-        <div class="relative rounded-xl md:rounded-2xl overflow-hidden border border-white/40 shadow-[0_30px_100px_rgba(0,0,0,0.18)] bg-[#1a1a1a]">
+      <div class="hero-mockup absolute z-10 left-1/2 -translate-x-1/2 top-[8%] md:top-[6%] w-[90%] max-w-[1100px]">
+        <div class="hero-mockup-inner relative rounded-xl md:rounded-2xl overflow-hidden border border-white/40 shadow-[0_30px_100px_rgba(0,0,0,0.18)] bg-[#1a1a1a]">
           <!-- Browser chrome bar -->
           <div class="flex items-center gap-2 px-4 py-2.5 bg-[#1a1a1a] border-b border-white/[0.06]">
             <div class="flex gap-1.5">
