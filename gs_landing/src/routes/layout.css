@@ -27,7 +27,7 @@
 	/* Semantic */
 	--color-canvas: #FFFFFF;
 	--color-text-primary: #0A0A0A;
-	--color-text-secondary: #71717A;
+	--color-text-secondary: #52525B;
 	--color-text-inverse: #FFFFFF;
 
 	--color-green-deep: #1B5E3B;
@@ -112,6 +112,106 @@
 	background-clip: text;
 }
 
+/* ─── Dot Grid Background Pattern (PayloadCMS / Index.app style) ─── */
+
+.dot-grid {
+	background-image: radial-gradient(circle, #D4D4D8 0.7px, transparent 0.7px);
+	background-size: 28px 28px;
+}
+
+.dot-grid-light {
+	background-image: radial-gradient(circle, #E4E4E7 0.6px, transparent 0.6px);
+	background-size: 32px 32px;
+}
+
+/* ─── Grain / Noise Texture Overlay (folk.app style) ─── */
+
+.grain-overlay::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	z-index: 1;
+	pointer-events: none;
+	opacity: 0.08;
+	background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.5'/%3E%3C/svg%3E");
+	background-repeat: repeat;
+	background-size: 256px 256px;
+	mix-blend-mode: multiply;
+}
+
+/* ─── Device Mockup Frames ─── */
+
+.device-frame-phone {
+	background: #1a1a1a;
+	border-radius: 28px;
+	padding: 8px;
+	box-shadow: 0 25px 80px rgba(0, 0, 0, 0.2), 0 8px 24px rgba(0, 0, 0, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.device-frame-phone-inner {
+	border-radius: 20px;
+	overflow: hidden;
+	background: #000;
+}
+
+.device-frame-tablet {
+	background: #1a1a1a;
+	border-radius: 20px;
+	padding: 10px;
+	box-shadow: 0 30px 80px rgba(0, 0, 0, 0.18), 0 8px 24px rgba(0, 0, 0, 0.08);
+	border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.device-frame-tablet-inner {
+	border-radius: 12px;
+	overflow: hidden;
+	background: #000;
+}
+
+/* ─── Image Placeholder (waiting for real screenshots) ─── */
+
+.img-placeholder {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(135deg, #F0FDF4 0%, #DCFCE7 60%, #C8DDB8 100%);
+	color: #1A5C2E;
+	font-family: var(--font-sans);
+	font-size: 13px;
+	font-weight: 600;
+}
+
+/* ─── Float / Hover Animations ─── */
+
+@keyframes float-slow {
+	0%, 100% { transform: translateY(0); }
+	50% { transform: translateY(-12px); }
+}
+
+@keyframes float-delayed {
+	0%, 100% { transform: translateY(0) rotate(-1deg); }
+	50% { transform: translateY(-8px) rotate(1deg); }
+}
+
+@keyframes pulse-glow {
+	0%, 100% { opacity: 0.4; transform: scale(1); }
+	50% { opacity: 0.7; transform: scale(1.05); }
+}
+
+.animate-float-slow {
+	animation: float-slow 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+	animation: float-delayed 7s ease-in-out infinite;
+	animation-delay: 1.5s;
+}
+
+.animate-pulse-glow {
+	animation: pulse-glow 4s ease-in-out infinite;
+}
+
 /* ─── Scroll Reveal Animations ─── */
 
 .reveal {
@@ -139,5 +239,10 @@
 		opacity: 1;
 		transform: none;
 		transition: none;
+	}
+	.animate-float-slow,
+	.animate-float-delayed,
+	.animate-pulse-glow {
+		animation: none;
 	}
 }
