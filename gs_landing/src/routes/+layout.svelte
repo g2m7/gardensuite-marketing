@@ -16,7 +16,7 @@
       </a>
       
       <!-- 2. Primary Navigation -->
-      <nav class="flex flex-wrap justify-center items-center gap-8 md:gap-14 text-[#0A0A0A] font-['Plus_Jakarta_Sans',system-ui,sans-serif] font-semibold text-[15px] tracking-tight mb-8">
+      <nav class="flex flex-wrap justify-center items-center gap-8 md:gap-14 text-[#0A0A0A] font-['Plus_Jakarta_Sans',system-ui,sans-serif] font-semibold text-[14px] tracking-tight mb-8">
         <a href="/" class="hover:text-[#3D7D2C] transition-colors">Home</a>
         <a href="#features" class="hover:text-[#3D7D2C] transition-colors">Features</a>
         <a href="#clients" class="hover:text-[#3D7D2C] transition-colors">Clients</a>
@@ -35,7 +35,7 @@
       </div>
       
       <!-- 4. Legal Navigation -->
-      <nav class="flex flex-wrap justify-center items-center gap-6 md:gap-8 text-[#A3A3A3] font-['Inter',system-ui,sans-serif] text-[13px] font-medium">
+      <nav class="flex flex-wrap justify-center items-center gap-6 md:gap-8 text-[#A3A3A3] font-['Inter',system-ui,sans-serif] text-[12px] font-medium">
         <a href="/privacy" class="hover:text-[#0A0A0A] transition-colors">Privacy Policy</a>
         <a href="/terms" class="hover:text-[#0A0A0A] transition-colors">Terms of Service</a>
         <a href="/cookies" class="hover:text-[#0A0A0A] transition-colors hidden sm:block">Cookie Policy</a>

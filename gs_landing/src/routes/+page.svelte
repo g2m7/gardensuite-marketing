@@ -161,7 +161,7 @@
         const pr = parseFloat(style.paddingRight);
         targetNavWidth = container.clientWidth - pl - pr;
       } else {
-        targetNavWidth = Math.min(window.innerWidth - 48, 1240);
+        targetNavWidth = Math.min(window.innerWidth - 48, 1100);
       }
       startNavWidth = Math.min(window.innerWidth, 1400);
       startNavPadding = window.innerWidth >= 768 ? 40 : 24;
@@ -366,38 +366,42 @@
   <!-- ═══════════════════════════════════════════════════════════ -->
   <!-- THE PROBLEM (Obvious.ai / Keytail style)                  -->
   <!-- ═══════════════════════════════════════════════════════════ -->
-  <section class="w-full bg-white relative pt-24 pb-24 md:pt-32 md:pb-32 overflow-hidden" aria-labelledby="problem-heading">
-    <div class="max-w-[1240px] mx-auto px-6 md:px-12 flex flex-col items-center text-center">
-      <span class="gsap-reveal tracking-[0.08em] uppercase text-[#A1A1AA] font-['Inter'] font-semibold text-[13px] mb-6">The Old Way</span>
-      <h2 id="problem-heading" class="gsap-reveal text-[40px] md:text-[56px] tracking-[-0.04em] leading-[1.05] text-[#0A0A0A] font-['Plus_Jakarta_Sans'] font-extrabold max-w-[800px]" style="text-wrap: balance">
+  <section class="w-full bg-white relative pt-32 pb-32 md:pt-44 md:pb-44 overflow-hidden" aria-labelledby="problem-heading">
+    <!-- Background depth glows -->
+    <div class="absolute top-1/4 -left-[200px] w-[500px] h-[500px] bg-[#A1A1AA]/[0.03] rounded-full blur-[150px] pointer-events-none"></div>
+    <div class="absolute bottom-1/3 -right-[150px] w-[400px] h-[400px] bg-[#1B5E3B]/[0.02] rounded-full blur-[120px] pointer-events-none"></div>
+
+    <div class="max-w-[1100px] mx-auto px-6 md:px-12 flex flex-col items-center text-center relative z-10">
+      <span class="gsap-reveal tracking-[0.08em] uppercase text-[#A1A1AA] font-['Inter'] font-semibold text-[12px] mb-6">The Old Way</span>
+      <h2 id="problem-heading" class="gsap-reveal text-[36px] md:text-[44px] lg:text-[48px] tracking-[-0.04em] leading-[1.08] text-[#0A0A0A] font-['Plus_Jakarta_Sans'] font-extrabold max-w-[680px]" style="text-wrap: balance">
         Paper registers.<br class="hidden md:inline" /> Guesswork. Hours wasted.
       </h2>
-      <p class="gsap-reveal mt-6 text-[18px] md:text-[20px] leading-[1.6] text-[#71717A] font-['Inter'] max-w-[600px]">
+      <p class="gsap-reveal mt-8 text-[15px] md:text-[16px] leading-[1.7] text-[#71717A] font-['Inter'] max-w-[520px]">
         Most tea gardens still rely on manual muster rolls, paper chits, and disconnected spreadsheets. It costs you money every single day.
       </p>
 
-      <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
+      <div class="mt-20 md:mt-24 grid grid-cols-1 md:grid-cols-3 gap-5 w-full">
         <!-- Minimal problem cards -->
-        <div class="gsap-reveal flex flex-col items-center text-center p-8 rounded-3xl bg-[#FAFAF7] border border-[#F0F0F0]">
+        <div class="gsap-reveal flex flex-col items-center text-center p-8 rounded-3xl bg-gradient-to-br from-white to-[#FAFAF7] border border-[#F0F0F0] shadow-[0_2px_12px_rgba(0,0,0,0.02)]">
           <div class="flex items-center justify-center rounded-2xl bg-white shadow-[0_4px_16px_rgba(0,0,0,0.04)] size-14 mb-6">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 8v4l3 3" stroke="#A1A1AA" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="12" r="9" stroke="#A1A1AA" stroke-width="1.5"/></svg>
           </div>
-          <h3 class="text-[#0A0A0A] font-['Plus_Jakarta_Sans'] font-bold text-[20px] mb-3">Hours lost daily</h3>
-          <p class="text-[15px] leading-[1.6] text-[#71717A] font-['Inter']">Manual attendance, weighing, and payroll calculations consume entire working days.</p>
+          <h3 class="text-[#0A0A0A] font-['Plus_Jakarta_Sans'] font-bold text-[18px] mb-3">Hours lost daily</h3>
+          <p class="text-[14px] leading-[1.65] text-[#71717A] font-['Inter']">Manual attendance, weighing, and payroll calculations consume entire working days.</p>
         </div>
-        <div class="gsap-reveal flex flex-col items-center text-center p-8 rounded-3xl bg-[#FAFAF7] border border-[#F0F0F0]">
+        <div class="gsap-reveal flex flex-col items-center text-center p-8 rounded-3xl bg-gradient-to-br from-white to-[#FAFAF7] border border-[#F0F0F0] shadow-[0_2px_12px_rgba(0,0,0,0.02)]">
           <div class="flex items-center justify-center rounded-2xl bg-white shadow-[0_4px_16px_rgba(0,0,0,0.04)] size-14 mb-6">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="#A1A1AA" stroke-width="1.5" stroke-linecap="round"/><circle cx="8.5" cy="7" r="4" stroke="#A1A1AA" stroke-width="1.5"/><path d="M20 8v6M23 11h-6" stroke="#A1A1AA" stroke-width="1.5" stroke-linecap="round"/></svg>
           </div>
-          <h3 class="text-[#0A0A0A] font-['Plus_Jakarta_Sans'] font-bold text-[20px] mb-3">Proxy attendance</h3>
-          <p class="text-[15px] leading-[1.6] text-[#71717A] font-['Inter']">No way to verify who showed up. Buddy punching silently drains your margins.</p>
+          <h3 class="text-[#0A0A0A] font-['Plus_Jakarta_Sans'] font-bold text-[18px] mb-3">Proxy attendance</h3>
+          <p class="text-[14px] leading-[1.65] text-[#71717A] font-['Inter']">No way to verify who showed up. Buddy punching silently drains your margins.</p>
         </div>
-        <div class="gsap-reveal flex flex-col items-center text-center p-8 rounded-3xl bg-[#FAFAF7] border border-[#F0F0F0]">
+        <div class="gsap-reveal flex flex-col items-center text-center p-8 rounded-3xl bg-gradient-to-br from-white to-[#FAFAF7] border border-[#F0F0F0] shadow-[0_2px_12px_rgba(0,0,0,0.02)]">
           <div class="flex items-center justify-center rounded-2xl bg-white shadow-[0_4px_16px_rgba(0,0,0,0.04)] size-14 mb-6">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3" stroke="#A1A1AA" stroke-width="1.5"/><path d="M4 10h16M10 10v10" stroke="#A1A1AA" stroke-width="1.5"/></svg>
           </div>
-          <h3 class="text-[#0A0A0A] font-['Plus_Jakarta_Sans'] font-bold text-[20px] mb-3">Scattered records</h3>
-          <p class="text-[15px] leading-[1.6] text-[#71717A] font-['Inter']">Attendance in one register, weights in another, payroll in Excel. Nothing connects.</p>
+          <h3 class="text-[#0A0A0A] font-['Plus_Jakarta_Sans'] font-bold text-[18px] mb-3">Scattered records</h3>
+          <p class="text-[14px] leading-[1.65] text-[#71717A] font-['Inter']">Attendance in one register, weights in another, payroll in Excel. Nothing connects.</p>
         </div>
       </div>
     </div>
@@ -406,66 +410,67 @@
   <!-- ═══════════════════════════════════════════════════════════ -->
   <!-- FEATURES BENTO (Obvious.ai style)                           -->
   <!-- ═══════════════════════════════════════════════════════════ -->
-  <section id="features" class="w-full bg-[#FAFAF7] relative py-24 md:py-32 overflow-hidden scroll-mt-20" aria-labelledby="feat-heading">
+  <section id="features" class="w-full bg-[#FAFAF7] relative py-32 md:py-44 overflow-hidden scroll-mt-20" aria-labelledby="feat-heading">
     <!-- Subtle glow backgrounds -->
     <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-radial from-[#1B5E3B]/[0.05] to-transparent rounded-full pointer-events-none"></div>
+    <div class="absolute bottom-1/4 -right-[100px] w-[500px] h-[500px] bg-[#C8DDB8]/[0.06] rounded-full blur-[120px] pointer-events-none"></div>
 
-    <div class="max-w-[1240px] mx-auto px-6 md:px-12 relative z-10">
-      <div class="flex flex-col items-center text-center mb-16 md:mb-24">
-        <span class="gsap-reveal tracking-[0.08em] uppercase text-[#1B5E3B] font-['Inter'] font-semibold text-[13px] mb-6">The Solution</span>
-        <h2 id="feat-heading" class="gsap-reveal text-[40px] md:text-[56px] tracking-[-0.04em] leading-[1.05] text-[#0A0A0A] font-['Plus_Jakarta_Sans'] font-extrabold max-w-[800px]" style="text-wrap: balance">
+    <div class="max-w-[1100px] mx-auto px-6 md:px-12 relative z-10">
+      <div class="flex flex-col items-center text-center mb-20 md:mb-28">
+        <span class="gsap-reveal tracking-[0.08em] uppercase text-[#1B5E3B] font-['Inter'] font-semibold text-[12px] mb-6">The Solution</span>
+        <h2 id="feat-heading" class="gsap-reveal text-[36px] md:text-[44px] lg:text-[48px] tracking-[-0.04em] leading-[1.08] text-[#0A0A0A] font-['Plus_Jakarta_Sans'] font-extrabold max-w-[680px]" style="text-wrap: balance">
           One platform replaces it all.
         </h2>
-        <p class="gsap-reveal mt-6 text-[18px] md:text-[20px] leading-[1.6] text-[#71717A] font-['Inter'] max-w-[600px]">
+        <p class="gsap-reveal mt-8 text-[15px] md:text-[16px] leading-[1.7] text-[#71717A] font-['Inter'] max-w-[520px]">
           Six tightly integrated modules. Built specifically for the unique workflows of the tea industry.
         </p>
       </div>
 
       <!-- Bento Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-6 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-6 gap-5">
         
         <!-- Large Card: Face Attendance -->
-        <div class="feat-card col-span-1 md:col-span-4 rounded-[32px] p-10 md:p-12 bg-white border border-[#F0F0F0] shadow-[0_8px_30px_rgba(0,0,0,0.02)] transition duration-300 hover:shadow-[0_20px_50px_rgba(0,0,0,0.06)] hover:-translate-y-1 relative overflow-hidden group">
+        <div class="feat-card col-span-1 md:col-span-4 rounded-[32px] p-10 md:p-12 bg-gradient-to-br from-white to-[#FAFAF7] border border-[#F0F0F0] shadow-[0_8px_30px_rgba(0,0,0,0.02)] transition duration-300 hover:shadow-[0_20px_50px_rgba(0,0,0,0.06)] hover:-translate-y-1 relative overflow-hidden group">
           <div class="absolute -right-20 -top-20 w-[400px] h-[400px] bg-[#1B5E3B]/[0.04] rounded-full blur-[80px] pointer-events-none transition duration-500 group-hover:bg-[#1B5E3B]/[0.08]"></div>
           
-          <div class="flex flex-col h-full z-10 relative max-w-[440px]">
+          <div class="flex flex-col h-full z-10 relative max-w-[420px]">
             <div class="flex items-center justify-center rounded-2xl bg-[#FAFAF7] border border-[#F0F0F0] size-14 mb-8">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="#1A5C2E" stroke-width="1.5"/><path d="M12 11a2 2 0 100-4 2 2 0 000 4zM16 17v-1a4 4 0 00-8 0v1" stroke="#1A5C2E" stroke-width="1.5" stroke-linecap="round"/></svg>
             </div>
-            <h3 class="text-[#0A0A0A] font-['Plus_Jakarta_Sans'] font-extrabold text-[28px] md:text-[32px] leading-tight mb-4 tracking-[-0.02em]">Face Attendance</h3>
-            <p class="text-[16px] leading-[1.6] text-[#71717A] font-['Inter'] mb-8">Biometric face recognition that works completely offline. Verified identity in under 2 seconds, eliminating buddy punching instantly.</p>
-            <a href="/products/attendance" class="mt-auto inline-flex items-center gap-2 text-[#0A0A0A] font-['Inter'] font-semibold text-[15px] hover:gap-3 hover:text-[#1A5C2E] transition duration-200 focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 focus:outline-none rounded-md px-1 py-0.5 -ml-1">
+            <h3 class="text-[#0A0A0A] font-['Plus_Jakarta_Sans'] font-extrabold text-[24px] md:text-[28px] leading-tight mb-4 tracking-[-0.02em]">Face Attendance</h3>
+            <p class="text-[15px] leading-[1.65] text-[#71717A] font-['Inter'] mb-8">Biometric face recognition that works completely offline. Verified identity in under 2 seconds, eliminating buddy punching instantly.</p>
+            <a href="/products/attendance" class="mt-auto inline-flex items-center gap-2 text-[#0A0A0A] font-['Inter'] font-semibold text-[14px] hover:gap-3 hover:text-[#1A5C2E] transition duration-200 focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 focus:outline-none rounded-md px-1 py-0.5 -ml-1">
               See how it works <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M5 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
           </div>
         </div>
 
         <!-- Medium Card: Smart Weighing -->
-        <div class="feat-card col-span-1 md:col-span-2 rounded-[32px] p-10 bg-white border border-[#F0F0F0] shadow-[0_8px_30px_rgba(0,0,0,0.02)] transition duration-300 hover:shadow-[0_20px_50px_rgba(0,0,0,0.06)] hover:-translate-y-1 relative overflow-hidden group">
+        <div class="feat-card col-span-1 md:col-span-2 rounded-[32px] p-10 bg-gradient-to-br from-white to-[#FAFAF7] border border-[#F0F0F0] shadow-[0_8px_30px_rgba(0,0,0,0.02)] transition duration-300 hover:shadow-[0_20px_50px_rgba(0,0,0,0.06)] hover:-translate-y-1 relative overflow-hidden group">
           <div class="flex flex-col h-full z-10 relative">
             <div class="flex items-center justify-center rounded-2xl bg-[#FAFAF7] border border-[#F0F0F0] size-14 mb-8">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="6" width="16" height="12" rx="3" stroke="#1A5C2E" stroke-width="1.5"/><path d="M12 6L12 3" stroke="#1A5C2E" stroke-width="1.5" stroke-linecap="round"/></svg>
             </div>
-            <h3 class="text-[#0A0A0A] font-['Plus_Jakarta_Sans'] font-extrabold text-[24px] leading-tight mb-4 tracking-[-0.02em]">Smart Weighing</h3>
-            <p class="text-[16px] leading-[1.6] text-[#71717A] font-['Inter']">Bluetooth scale automatically links the exact leaf weight to the verified worker.</p>
+            <h3 class="text-[#0A0A0A] font-['Plus_Jakarta_Sans'] font-extrabold text-[22px] leading-tight mb-4 tracking-[-0.02em]">Smart Weighing</h3>
+            <p class="text-[15px] leading-[1.65] text-[#71717A] font-['Inter']">Bluetooth scale automatically links the exact leaf weight to the verified worker.</p>
           </div>
         </div>
 
         <!-- The other 4 cards as squares -->
-        <div class="feat-card col-span-1 md:col-span-3 rounded-[32px] p-10 bg-white border border-[#F0F0F0] shadow-[0_8px_30px_rgba(0,0,0,0.02)] transition duration-300 hover:shadow-[0_20px_50px_rgba(0,0,0,0.06)] hover:-translate-y-1">
+        <div class="feat-card col-span-1 md:col-span-3 rounded-[32px] p-10 bg-gradient-to-br from-white to-[#FAFAF7] border border-[#F0F0F0] shadow-[0_8px_30px_rgba(0,0,0,0.02)] transition duration-300 hover:shadow-[0_20px_50px_rgba(0,0,0,0.06)] hover:-translate-y-1">
           <div class="flex items-center justify-center rounded-2xl bg-[#FAFAF7] border border-[#F0F0F0] size-14 mb-6">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3" stroke="#1A5C2E" stroke-width="1.5"/><path d="M4 10h16M8 10v10" stroke="#1A5C2E" stroke-width="1.5"/></svg>
           </div>
-          <h3 class="text-[#0A0A0A] font-['Plus_Jakarta_Sans'] font-bold text-[22px] mb-3 tracking-[-0.01em]">Automated Payroll</h3>
-          <p class="text-[15px] leading-[1.6] text-[#71717A] font-['Inter']">Wages, deductions, PF, ESI, bonus - all instantly calculated with zero errors.</p>
+          <h3 class="text-[#0A0A0A] font-['Plus_Jakarta_Sans'] font-bold text-[20px] mb-3 tracking-[-0.01em]">Automated Payroll</h3>
+          <p class="text-[14px] leading-[1.65] text-[#71717A] font-['Inter']">Wages, deductions, PF, ESI, bonus - all instantly calculated with zero errors.</p>
         </div>
 
-        <div class="feat-card col-span-1 md:col-span-3 rounded-[32px] p-10 bg-white border border-[#F0F0F0] shadow-[0_8px_30px_rgba(0,0,0,0.02)] transition duration-300 hover:shadow-[0_20px_50px_rgba(0,0,0,0.06)] hover:-translate-y-1">
+        <div class="feat-card col-span-1 md:col-span-3 rounded-[32px] p-10 bg-gradient-to-br from-white to-[#FAFAF7] border border-[#F0F0F0] shadow-[0_8px_30px_rgba(0,0,0,0.02)] transition duration-300 hover:shadow-[0_20px_50px_rgba(0,0,0,0.06)] hover:-translate-y-1">
           <div class="flex items-center justify-center rounded-2xl bg-[#FAFAF7] border border-[#F0F0F0] size-14 mb-6">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19V9l7-5 7 5v10" stroke="#1A5C2E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 19v-5h6v5" stroke="#1A5C2E" stroke-width="1.5"/></svg>
           </div>
-          <h3 class="text-[#0A0A0A] font-['Plus_Jakarta_Sans'] font-bold text-[22px] mb-3 tracking-[-0.01em]">Factory Accounts</h3>
-          <p class="text-[15px] leading-[1.6] text-[#71717A] font-['Inter']">Deep production tracking and manufacturing cost analysis, end-to-end.</p>
+          <h3 class="text-[#0A0A0A] font-['Plus_Jakarta_Sans'] font-bold text-[20px] mb-3 tracking-[-0.01em]">Factory Accounts</h3>
+          <p class="text-[14px] leading-[1.65] text-[#71717A] font-['Inter']">Deep production tracking and manufacturing cost analysis, end-to-end.</p>
         </div>
 
       </div>
@@ -475,43 +480,47 @@
   <!-- ═══════════════════════════════════════════════════════════ -->
   <!-- WHY GARDENSUITE (Obvious style simple section)              -->
   <!-- ═══════════════════════════════════════════════════════════ -->
-  <section id="about" class="w-full bg-white scroll-mt-20 py-24 md:py-32" aria-labelledby="why-heading">
-    <div class="max-w-[1240px] mx-auto px-6 md:px-12 flex flex-col md:flex-row items-start gap-16 md:gap-24">
+  <section id="about" class="w-full bg-white scroll-mt-20 py-32 md:py-44 relative overflow-hidden" aria-labelledby="why-heading">
+    <!-- Background depth -->
+    <div class="absolute top-1/3 -right-[200px] w-[500px] h-[500px] bg-[#1B5E3B]/[0.02] rounded-full blur-[140px] pointer-events-none"></div>
+    <div class="absolute bottom-1/4 -left-[150px] w-[400px] h-[400px] bg-[#C8DDB8]/[0.04] rounded-full blur-[120px] pointer-events-none"></div>
+
+    <div class="max-w-[1100px] mx-auto px-6 md:px-12 flex flex-col md:flex-row items-start gap-16 md:gap-24 relative z-10">
       <div class="md:w-[45%] shrink-0 md:sticky md:top-32">
-        <span class="gsap-reveal tracking-[0.08em] uppercase text-[#A1A1AA] font-['Inter'] font-semibold text-[13px] inline-block mb-6">Why GardenSuite</span>
-        <h2 id="why-heading" class="gsap-reveal text-[40px] md:text-[52px] tracking-[-0.04em] leading-[1.05] text-[#0A0A0A] font-['Plus_Jakarta_Sans'] font-extrabold" style="text-wrap: balance">
+        <span class="gsap-reveal tracking-[0.08em] uppercase text-[#A1A1AA] font-['Inter'] font-semibold text-[12px] inline-block mb-6">Why GardenSuite</span>
+        <h2 id="why-heading" class="gsap-reveal text-[36px] md:text-[44px] lg:text-[48px] tracking-[-0.04em] leading-[1.08] text-[#0A0A0A] font-['Plus_Jakarta_Sans'] font-extrabold" style="text-wrap: balance">
           Built for tea gardens.<br/> Not adapted from something else.
         </h2>
-        <p class="gsap-reveal mt-6 text-[18px] leading-[1.6] text-[#71717A] font-['Inter']">
+        <p class="gsap-reveal mt-8 text-[15px] md:text-[16px] leading-[1.7] text-[#71717A] font-['Inter']">
           We understand hazira calculations, section-wise attendance, and factory costing because we've been doing this for over 25 years.
         </p>
       </div>
-      <div class="flex flex-col md:w-[55%] gap-8">
-        <div class="gsap-reveal flex gap-6 p-8 rounded-[24px] bg-[#FAFAF7] border border-[#F0F0F0]">
+      <div class="flex flex-col md:w-[55%] gap-6">
+        <div class="gsap-reveal flex gap-6 p-8 rounded-[24px] bg-gradient-to-br from-[#FAFAF7] to-[#F5F5F0] border border-[#F0F0F0] shadow-[0_2px_12px_rgba(0,0,0,0.02)]">
           <div class="flex items-center justify-center rounded-2xl bg-white shadow-[0_4px_16px_rgba(0,0,0,0.04)] size-12 shrink-0">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 3a7 7 0 100 14 7 7 0 000-14zM10 7v3l2 2" stroke="#0A0A0A" stroke-width="1.5" stroke-linecap="round"/></svg>
           </div>
           <div>
-            <h3 class="text-[#0A0A0A] font-['Plus_Jakarta_Sans'] font-bold text-[18px] mb-2">Offline first</h3>
-            <p class="text-[15px] leading-[1.65] text-[#71717A] font-['Inter']">Full ERP works perfectly without internet. Syncs automatically in the background when connected.</p>
+            <h3 class="text-[#0A0A0A] font-['Plus_Jakarta_Sans'] font-bold text-[17px] mb-2">Offline first</h3>
+            <p class="text-[14px] leading-[1.7] text-[#71717A] font-['Inter']">Full ERP works perfectly without internet. Syncs automatically in the background when connected.</p>
           </div>
         </div>
-        <div class="gsap-reveal flex gap-6 p-8 rounded-[24px] bg-[#FAFAF7] border border-[#F0F0F0]">
+        <div class="gsap-reveal flex gap-6 p-8 rounded-[24px] bg-gradient-to-br from-[#FAFAF7] to-[#F5F5F0] border border-[#F0F0F0] shadow-[0_2px_12px_rgba(0,0,0,0.02)]">
           <div class="flex items-center justify-center rounded-2xl bg-white shadow-[0_4px_16px_rgba(0,0,0,0.04)] size-12 shrink-0">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 14V6c0-1.1.9-2 2-2h8a2 2 0 012 2v8" stroke="#0A0A0A" stroke-width="1.5"/><path d="M2 14h16M10 14v4" stroke="#0A0A0A" stroke-width="1.5" stroke-linecap="round"/></svg>
           </div>
           <div>
-            <h3 class="text-[#0A0A0A] font-['Plus_Jakarta_Sans'] font-bold text-[18px] mb-2">Cloud dashboard</h3>
-            <p class="text-[15px] leading-[1.65] text-[#71717A] font-['Inter']">Daily MIS updates viewable from any device. Owners stay perfectly informed remotely.</p>
+            <h3 class="text-[#0A0A0A] font-['Plus_Jakarta_Sans'] font-bold text-[17px] mb-2">Cloud dashboard</h3>
+            <p class="text-[14px] leading-[1.7] text-[#71717A] font-['Inter']">Daily MIS updates viewable from any device. Owners stay perfectly informed remotely.</p>
           </div>
         </div>
-        <div class="gsap-reveal flex gap-6 p-8 rounded-[24px] bg-[#FAFAF7] border border-[#F0F0F0]">
+        <div class="gsap-reveal flex gap-6 p-8 rounded-[24px] bg-gradient-to-br from-[#FAFAF7] to-[#F5F5F0] border border-[#F0F0F0] shadow-[0_2px_12px_rgba(0,0,0,0.02)]">
           <div class="flex items-center justify-center rounded-2xl bg-white shadow-[0_4px_16px_rgba(0,0,0,0.04)] size-12 shrink-0">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 13l3-3m0 0l-3-3m3 3H7" stroke="#0A0A0A" stroke-width="1.5" stroke-linecap="round"/><circle cx="10" cy="10" r="8" stroke="#0A0A0A" stroke-width="1.5"/></svg>
           </div>
           <div>
-            <h3 class="text-[#0A0A0A] font-['Plus_Jakarta_Sans'] font-bold text-[18px] mb-2">Free setup &amp; training</h3>
-            <p class="text-[15px] leading-[1.65] text-[#71717A] font-['Inter']">Our team visits the garden, configures everything, and trains your staff on site. Zero implementation fees.</p>
+            <h3 class="text-[#0A0A0A] font-['Plus_Jakarta_Sans'] font-bold text-[17px] mb-2">Free setup &amp; training</h3>
+            <p class="text-[14px] leading-[1.7] text-[#71717A] font-['Inter']">Our team visits the garden, configures everything, and trains your staff on site. Zero implementation fees.</p>
           </div>
         </div>
       </div>
@@ -521,25 +530,25 @@
   <!-- ═══════════════════════════════════════════════════════════ -->
   <!-- TRUSTED (Count + Marquee)                                   -->
   <!-- ═══════════════════════════════════════════════════════════ -->
-  <section id="clients" class="w-full bg-[#FAFAF7] relative py-24 md:py-32 overflow-hidden border-t border-[#F0F0F0]/50 border-b border-[#F0F0F0]/50 scroll-mt-20" aria-labelledby="trust-heading">
-    <div class="max-w-[1240px] mx-auto px-6 md:px-12 flex flex-col items-center gap-12">
+  <section id="clients" class="w-full bg-[#FAFAF7] relative py-32 md:py-44 overflow-hidden border-t border-[#F0F0F0]/50 border-b border-[#F0F0F0]/50 scroll-mt-20" aria-labelledby="trust-heading">
+    <div class="max-w-[1100px] mx-auto px-6 md:px-12 flex flex-col items-center gap-12">
       <div class="flex flex-col items-center gap-4">
-        <span class="count-up text-[64px] md:text-[88px] font-['Plus_Jakarta_Sans'] font-extrabold text-[#0A0A0A] tracking-[-0.04em] leading-none" style="font-variant-numeric: tabular-nums">0+</span>
-        <h2 id="trust-heading" class="text-[17px] md:text-[19px] text-center text-[#71717A] font-['Inter'] font-medium">
+        <span class="count-up text-[56px] md:text-[72px] font-['Plus_Jakarta_Sans'] font-extrabold text-[#0A0A0A] tracking-[-0.04em] leading-none" style="font-variant-numeric: tabular-nums">0+</span>
+        <h2 id="trust-heading" class="text-[15px] md:text-[16px] text-center text-[#71717A] font-['Inter'] font-medium">
           tea estates power their operations with GardenSuite
         </h2>
       </div>
 
       <!-- Marquee -->
-      <div class="relative w-full flex flex-col gap-4 mt-4">
+      <div class="relative w-full flex flex-col gap-4 mt-6">
         <div class="absolute inset-y-0 left-0 w-24 md:w-48 bg-gradient-to-r from-[#FAFAF7] to-transparent z-10 pointer-events-none"></div>
         <div class="absolute inset-y-0 right-0 w-24 md:w-48 bg-gradient-to-l from-[#FAFAF7] to-transparent z-10 pointer-events-none"></div>
         <div class="flex w-fit animate-marquee motion-reduce:animate-none hover:[animation-play-state:paused] gap-4">
           {#each Array(2) as _, i}
             <div class="flex gap-4 min-w-max" aria-hidden={i === 1}>
               {#each regions as region}
-                <div class="flex items-center rounded-[14px] py-3 px-6 bg-white border border-[#E4E4E7]/60 shadow-[0_2px_8px_rgba(0,0,0,0.02)] transition duration-200 hover:scale-[1.03] cursor-default">
-                  <span class="text-[#3F3F46] font-['Inter'] text-[15px] font-semibold">{region}</span>
+                <div class="flex items-center rounded-[14px] py-2.5 px-5 bg-white border border-[#E4E4E7]/60 shadow-[0_2px_8px_rgba(0,0,0,0.02)] transition duration-200 hover:scale-[1.03] cursor-default">
+                  <span class="text-[#3F3F46] font-['Inter'] text-[14px] font-semibold">{region}</span>
                 </div>
               {/each}
             </div>
@@ -549,7 +558,7 @@
           {#each Array(2) as _, i}
             <div class="flex gap-4 min-w-max" aria-hidden={i === 1}>
               {#each estates as estate}
-                <div class="flex items-center rounded-xl py-3 px-6 bg-white/70 border border-[#F0F0F0] text-[#71717A] font-['Inter'] text-[14px] font-medium hover:text-[#18181B] hover:border-[#D4D4D8] transition duration-200 cursor-default shadow-[0_2px_8px_rgba(0,0,0,0.01)]">{estate}</div>
+                <div class="flex items-center rounded-xl py-2.5 px-5 bg-white/70 border border-[#F0F0F0] text-[#71717A] font-['Inter'] text-[13px] font-medium hover:text-[#18181B] hover:border-[#D4D4D8] transition duration-200 cursor-default shadow-[0_2px_8px_rgba(0,0,0,0.01)]">{estate}</div>
               {/each}
             </div>
           {/each}
@@ -561,9 +570,12 @@
   <!-- ═══════════════════════════════════════════════════════════ -->
   <!-- FAQ                                                         -->
   <!-- ═══════════════════════════════════════════════════════════ -->
-  <section class="w-full bg-white py-24 md:py-32" aria-labelledby="faq-heading">
-    <div class="max-w-[800px] mx-auto px-6 md:px-12 flex flex-col items-center gap-14">
-      <h2 id="faq-heading" class="gsap-reveal text-[40px] md:text-[48px] text-center tracking-[-0.04em] leading-[1.05] text-[#0A0A0A] font-['Plus_Jakarta_Sans'] font-extrabold" style="text-wrap: balance">
+  <section class="w-full bg-white py-32 md:py-44 relative overflow-hidden" aria-labelledby="faq-heading">
+    <!-- Background depth -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#1B5E3B]/[0.02] rounded-full blur-[140px] pointer-events-none"></div>
+
+    <div class="max-w-[680px] mx-auto px-6 md:px-12 flex flex-col items-center gap-16 relative z-10">
+      <h2 id="faq-heading" class="gsap-reveal text-[36px] md:text-[44px] text-center tracking-[-0.04em] leading-[1.08] text-[#0A0A0A] font-['Plus_Jakarta_Sans'] font-extrabold" style="text-wrap: balance">
         Common questions
       </h2>
 
@@ -575,11 +587,11 @@
               onclick={() => toggleFaq(i)}
               aria-expanded={openFaq === i}
             >
-              <h3 class="text-[#0A0A0A] font-['Inter'] font-semibold text-[17px] md:text-[18px] leading-[1.4] transition-colors duration-150 group-hover:text-[#1A5C2E]">{faq.q}</h3>
+              <h3 class="text-[#0A0A0A] font-['Inter'] font-semibold text-[16px] md:text-[17px] leading-[1.4] transition-colors duration-150 group-hover:text-[#1A5C2E]">{faq.q}</h3>
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" class="shrink-0 text-[#A1A1AA] transition-transform duration-300 {openFaq === i ? 'rotate-45' : ''}" aria-hidden="true"><path d="M10 4v12M4 10h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
             </button>
             <div class="overflow-hidden transition-all duration-300 ease-out" style="max-height: {openFaq === i ? '160px' : '0px'}; opacity: {openFaq === i ? '1' : '0'}">
-              <p class="text-[16px] leading-[1.6] text-[#71717A] font-['Inter'] pb-6">{faq.a}</p>
+              <p class="text-[15px] leading-[1.7] text-[#71717A] font-['Inter'] pb-6">{faq.a}</p>
             </div>
           </div>
         {/each}
@@ -590,25 +602,25 @@
   <!-- ═══════════════════════════════════════════════════════════ -->
   <!-- CTA (Obvious.ai style glassy light container instead of black) -->
   <!-- ═══════════════════════════════════════════════════════════ -->
-  <section id="contact" class="w-full bg-[#FAFAF7] relative py-24 md:py-32 px-6 md:px-12 overflow-hidden scroll-mt-20" aria-labelledby="cta-heading">
-    <div class="max-w-[1240px] mx-auto rounded-[40px] bg-white border border-[#E4E4E7]/60 shadow-[0_20px_80px_rgba(0,0,0,0.04)] relative overflow-hidden">
+  <section id="contact" class="w-full bg-[#FAFAF7] relative py-32 md:py-44 px-6 md:px-12 overflow-hidden scroll-mt-20" aria-labelledby="cta-heading">
+    <div class="max-w-[1100px] mx-auto rounded-[40px] bg-gradient-to-br from-white to-[#FAFAF7] border border-[#E4E4E7]/60 shadow-[0_20px_80px_rgba(0,0,0,0.04)] relative overflow-hidden">
       <!-- Glows inside container -->
       <div class="absolute inset-0 pointer-events-none"><div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#1B5E3B]/[0.06] rounded-full blur-[100px]"></div></div>
       
-      <div class="cta-content flex flex-col items-center text-center py-24 md:py-32 px-6 relative z-10">
-        <GsLogoAnimation class="h-10 w-auto mb-8 bg-white border border-[#F0F0F0] rounded-2xl p-2 shadow-[0_4px_20px_rgba(0,0,0,0.03)]" />
-        <h2 id="cta-heading" class="text-[40px] md:text-[56px] tracking-[-0.04em] leading-[1.05] text-[#0A0A0A] font-['Plus_Jakarta_Sans'] font-extrabold" style="text-wrap: balance">
+      <div class="cta-content flex flex-col items-center text-center py-28 md:py-36 px-6 relative z-10">
+        <GsLogoAnimation class="h-10 w-auto mb-10 bg-white border border-[#F0F0F0] rounded-2xl p-2 shadow-[0_4px_20px_rgba(0,0,0,0.03)]" />
+        <h2 id="cta-heading" class="text-[36px] md:text-[44px] lg:text-[48px] tracking-[-0.04em] leading-[1.08] text-[#0A0A0A] font-['Plus_Jakarta_Sans'] font-extrabold max-w-[680px]" style="text-wrap: balance">
           Ready to modernize<br class="hidden md:inline" /> your tea garden?
         </h2>
-        <p class="text-[18px] text-center leading-[1.6] mt-6 max-w-[500px] text-[#71717A] font-['Inter']">
+        <p class="text-[15px] md:text-[16px] text-center leading-[1.7] mt-8 max-w-[480px] text-[#71717A] font-['Inter']">
           Free demo. Free setup. Free training. Experience the GardenSuite difference with no risk.
         </p>
-        <div class="flex flex-col sm:flex-row justify-center mt-10 gap-4 w-full sm:w-auto">
-          <a href="#contact" class="flex items-center justify-center rounded-full py-4 px-10 bg-[#1A5C2E] hover:bg-[#144723] active:scale-[0.97] transition duration-150 shadow-[0_4px_20px_rgba(26,92,46,0.3)] focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 focus:outline-none">
-            <span class="text-white font-['Inter'] font-semibold text-[16px] leading-none">Book a Demo</span>
+        <div class="flex flex-col sm:flex-row justify-center mt-12 gap-4 w-full sm:w-auto">
+          <a href="#contact" class="flex items-center justify-center rounded-full py-3.5 px-9 bg-[#1A5C2E] hover:bg-[#144723] active:scale-[0.97] transition duration-150 shadow-[0_4px_20px_rgba(26,92,46,0.3)] focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 focus:outline-none">
+            <span class="text-white font-['Inter'] font-semibold text-[15px] leading-none">Book a Demo</span>
           </a>
-          <a href="mailto:contact@gardensuite.in" class="flex items-center justify-center rounded-full py-4 px-10 border border-[#E4E4E7] bg-white hover:bg-[#FAFAF7] hover:border-[#D4D4D8] active:scale-[0.97] transition duration-150 shadow-[0_2px_8px_rgba(0,0,0,0.02)] focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 focus:outline-none">
-            <span class="text-[#0A0A0A] font-['Inter'] font-semibold text-[16px] leading-none">Contact Us</span>
+          <a href="mailto:contact@gardensuite.in" class="flex items-center justify-center rounded-full py-3.5 px-9 border border-[#E4E4E7] bg-white hover:bg-[#FAFAF7] hover:border-[#D4D4D8] active:scale-[0.97] transition duration-150 shadow-[0_2px_8px_rgba(0,0,0,0.02)] focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 focus:outline-none">
+            <span class="text-[#0A0A0A] font-['Inter'] font-semibold text-[15px] leading-none">Contact Us</span>
           </a>
         </div>
       </div>
