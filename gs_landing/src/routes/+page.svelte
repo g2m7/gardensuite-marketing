@@ -100,23 +100,6 @@
       });
     }
 
-    // ── Trust count-up ──
-    const countEl = document.querySelector('.count-up') as HTMLElement;
-    if (countEl) {
-      ScrollTrigger.create({
-        trigger: countEl,
-        start: 'top 80%',
-        onEnter: () => {
-          let n = 0;
-          const timer = setInterval(() => {
-            n += 1;
-            if (n >= 20) { n = 20; clearInterval(timer); }
-            countEl.textContent = n + '+';
-          }, 50);
-        },
-        once: true,
-      });
-    }
 
     // ── Generic reveals ──
     gsap.utils.toArray<HTMLElement>('.gsap-reveal').forEach((el) => {
@@ -206,6 +189,8 @@
     border-color: rgba(0, 0, 0, ${navProgress * 0.08});
   `);
 
+
+
   // ─── FAQ Accordion ───
   let openFaq = $state<number | null>(null);
   function toggleFaq(i: number) { openFaq = openFaq === i ? null : i; }
@@ -218,19 +203,12 @@
     { q: 'What does it cost?', a: 'Depends on modules and estate size. Setup and training are always free. Contact us for a quote.' },
   ];
 
-  const estates = [
-    'Simulbarie T.E.', 'Longview T.E.', 'Rheabari T.E.', 'Mogulkata T.E.',
-    'Atal T.E.', 'Naxalbari T.E.', 'Choibari T.E.', 'Chapar T.E.',
-    'Tinbigha T.E.', 'Chandan T.E.', 'Pahargoomiah T.E.', 'Kamalpur T.E.',
-    'Rahimpur T.E.', 'Debpara T.E.', 'Kurti T.E.', 'Looksan T.E.',
-    'Subhasini T.E.', 'Doolahat T.E.', 'Thanjhora T.E.', 'Himalayan Agro',
-  ];
-  const regions = ['Darjeeling', 'Dooars', 'Terai', 'Assam', 'Coochbehar', 'Jalpaiguri', 'Uttar Dinajpur'];
+
 </script>
 
 <svelte:head>
   <title>GardenSuite - Complete Tea Garden Management</title>
-  <meta name="description" content="Face recognition attendance, automated payroll, and full ERP for tea gardens. Trusted by 20+ estates." />
+  <meta name="description" content="Face recognition attendance, automated payroll, and full ERP for tea gardens." />
 </svelte:head>
 
 <div class="flex overflow-clip w-full min-h-screen flex-col bg-[#FAFAF7] antialiased">
@@ -269,7 +247,6 @@
         </div>
       </div>
       <a href="#features" class="inline-flex h-10 items-center justify-center rounded-full px-4 text-[14px] font-['Inter'] font-semibold transition-colors duration-150 text-[#18181B] hover:bg-[#0000000A] hover:text-[#0A0A0A]">Features</a>
-      <a href="#clients" class="inline-flex h-10 items-center justify-center rounded-full px-4 text-[14px] font-['Inter'] font-semibold transition-colors duration-150 text-[#18181B] hover:bg-[#0000000A] hover:text-[#0A0A0A]">Clients</a>
       <a href="#about" class="inline-flex h-10 items-center justify-center rounded-full px-4 text-[14px] font-['Inter'] font-semibold transition-colors duration-150 text-[#18181B] hover:bg-[#0000000A] hover:text-[#0A0A0A]">About</a>
     </div>
     <div class="flex items-center gap-2">
@@ -380,6 +357,51 @@
         Most tea gardens still rely on manual muster rolls, paper chits, and disconnected spreadsheets. It costs you money every single day.
       </p>
 
+      <!-- Old Way Illustration -->
+      <div class="gsap-reveal mt-20 md:mt-24 w-full flex justify-center relative h-[250px] md:h-[300px]">
+        <div class="relative w-full max-w-[600px] h-full flex items-center justify-center -ml-12 md:-ml-0" style="perspective: 1000px;">
+          <!-- Card 1: Messy Ledger -->
+          <div class="absolute z-0 w-[240px] md:w-[280px] h-[160px] md:h-[200px] bg-[#FAFAF7] border border-[#E4E4E7] shadow-[0_8px_30px_rgba(0,0,0,0.06)] rounded flex flex-col p-4 opacity-80" style="transform: rotate(-12deg) translate(-20px, 10px);">
+            <div class="w-full h-1 bg-[#D4D4D8] mb-2 rounded-full opacity-60"></div>
+            <div class="w-3/4 h-1 bg-[#D4D4D8] mb-4 rounded-full opacity-60"></div>
+            {#each Array(5) as _}
+              <div class="w-full flex gap-2 mb-2">
+                <div class="w-1/4 h-3 border-b border-[#E4E4E7]"></div>
+                <div class="w-1/4 h-3 border-b border-[#E4E4E7]"></div>
+                <div class="w-1/4 h-3 border-b border-[#E4E4E7]"></div>
+                <div class="w-1/4 h-3 border-b border-[#E4E4E7] text-[6px] text-[#A1A1AA] flex items-end">SIGN</div>
+              </div>
+            {/each}
+          </div>
+          <!-- Card 2: Manual Record -->
+          <div class="absolute z-10 w-[260px] md:w-[300px] h-[180px] md:h-[220px] bg-white border border-[#E4E4E7] shadow-[0_12px_40px_rgba(0,0,0,0.08)] flex flex-col p-5 opacity-90" style="transform: rotate(6deg) translate(20px, -10px);">
+             <!-- scribbles -->
+             <div class="w-1/2 h-1 bg-[#A1A1AA]/30 rounded mb-6"></div>
+             {#each Array(6) as _}
+              <div class="flex gap-2 mb-3 w-full">
+                <div class="h-1 bg-[#F0F0F0] rounded w-full"></div>
+                <div class="h-1 bg-[#D4D4D8] rounded w-[30%]"></div>
+              </div>
+             {/each}
+          </div>
+          <!-- Card 3: Cluttered Spreadsheet -->
+          <div class="absolute z-20 w-[240px] md:w-[280px] h-[150px] md:h-[180px] bg-white border border-[#D4D4D8] shadow-[0_20px_50px_rgba(0,0,0,0.12)] rounded-sm flex flex-col" style="transform: rotate(-3deg) translate(25px, 25px);">
+            <div class="flex-1 w-full flex flex-col gap-px bg-[#E4E4E7] p-px border-b border-[#D4D4D8]">
+               {#each Array(5) as _}
+                 <div class="flex gap-px w-full h-[18%]">
+                    <div class="w-[30%] h-full bg-white flex items-center px-1"><div class="w-1/2 h-1 bg-[#D4D4D8] rounded"></div></div>
+                    <div class="flex-1 h-full bg-white flex items-center px-1"><div class="w-full h-1 bg-[#F0F0F0] rounded"></div></div>
+                    <div class="w-[20%] h-full bg-white flex items-center px-1"><div class="w-2/3 h-1 bg-red-200 rounded"></div></div>
+                 </div>
+               {/each}
+            </div>
+            <div class="h-8 w-full bg-[#FAFAF7] flex items-center justify-end px-3">
+              <div class="text-[9px] text-[#A1A1AA] font-bold tracking-widest uppercase">Error #REF!</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="mt-20 md:mt-24 grid grid-cols-1 md:grid-cols-3 gap-5 w-full">
         <!-- Minimal problem cards -->
         <div class="gsap-reveal flex flex-col items-center text-center p-8 rounded-3xl bg-gradient-to-br from-white to-[#FAFAF7] border border-[#F0F0F0] shadow-[0_2px_12px_rgba(0,0,0,0.02)]">
@@ -433,15 +455,33 @@
         <div class="feat-card col-span-1 md:col-span-4 rounded-[32px] p-10 md:p-12 bg-gradient-to-br from-white to-[#FAFAF7] border border-[#F0F0F0] shadow-[0_8px_30px_rgba(0,0,0,0.02)] transition duration-300 hover:shadow-[0_20px_50px_rgba(0,0,0,0.06)] hover:-translate-y-1 relative overflow-hidden group">
           <div class="absolute -right-20 -top-20 w-[400px] h-[400px] bg-[#1B5E3B]/[0.04] rounded-full blur-[80px] pointer-events-none transition duration-500 group-hover:bg-[#1B5E3B]/[0.08]"></div>
           
-          <div class="flex flex-col h-full z-10 relative max-w-[420px]">
-            <div class="flex items-center justify-center rounded-2xl bg-[#FAFAF7] border border-[#F0F0F0] size-14 mb-8">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="#1A5C2E" stroke-width="1.5"/><path d="M12 11a2 2 0 100-4 2 2 0 000 4zM16 17v-1a4 4 0 00-8 0v1" stroke="#1A5C2E" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <div class="flex flex-col md:flex-row h-full z-10 relative items-center gap-10">
+            <div class="flex flex-col h-full max-w-[380px]">
+              <div class="flex items-center justify-center rounded-2xl bg-[#FAFAF7] border border-[#F0F0F0] size-14 mb-8">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="#1A5C2E" stroke-width="1.5"/><path d="M12 11a2 2 0 100-4 2 2 0 000 4zM16 17v-1a4 4 0 00-8 0v1" stroke="#1A5C2E" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </div>
+              <h3 class="text-[#0A0A0A] font-['Plus_Jakarta_Sans'] font-extrabold text-[24px] md:text-[28px] leading-tight mb-4 tracking-[-0.02em]">Face Attendance</h3>
+              <p class="text-[15px] leading-[1.65] text-[#71717A] font-['Inter'] mb-8">Biometric face recognition that works completely offline. Verified identity in under 2 seconds, eliminating buddy punching instantly.</p>
+              <a href="/products/attendance" class="mt-auto w-fit inline-flex items-center gap-2 text-[#0A0A0A] font-['Inter'] font-semibold text-[14px] hover:gap-3 hover:text-[#1A5C2E] transition duration-200 focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 focus:outline-none rounded-md px-1 py-0.5 -ml-1">
+                See how it works <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M5 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
             </div>
-            <h3 class="text-[#0A0A0A] font-['Plus_Jakarta_Sans'] font-extrabold text-[24px] md:text-[28px] leading-tight mb-4 tracking-[-0.02em]">Face Attendance</h3>
-            <p class="text-[15px] leading-[1.65] text-[#71717A] font-['Inter'] mb-8">Biometric face recognition that works completely offline. Verified identity in under 2 seconds, eliminating buddy punching instantly.</p>
-            <a href="/products/attendance" class="mt-auto inline-flex items-center gap-2 text-[#0A0A0A] font-['Inter'] font-semibold text-[14px] hover:gap-3 hover:text-[#1A5C2E] transition duration-200 focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 focus:outline-none rounded-md px-1 py-0.5 -ml-1">
-              See how it works <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M5 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
+            
+            <!-- Code Illustration: Face Scanner -->
+            <div class="hidden md:flex flex-1 justify-end pr-4" style="perspective: 1000px;">
+              <div class="relative w-full max-w-[220px] aspect-[3/4] flex items-center justify-center pt-8">
+                <!-- Scanning card -->
+                <div class="relative z-10 w-full h-full rounded-2xl bg-white/70 backdrop-blur-md border border-white shadow-[0_20px_50px_rgba(26,92,46,0.06)] flex flex-col items-center justify-center overflow-hidden transform group-hover:scale-105 group-hover:-rotate-y-3 transition-transform duration-700 ease-out">
+                  <svg width="60" height="60" viewBox="0 0 24 24" fill="none" class="text-[#1B5E3B] opacity-50 mb-4"><path d="M9 3H5a2 2 0 0 0-2 2v4m18-4a2 2 0 0 0-2-2h-4m4 18a2 2 0 0 0 2-2v-4M3 15v4a2 2 0 0 0 2 2h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.5"/><path d="M8 21v-2a4 4 0 0 1 8 0v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                  <div class="flex flex-col gap-2 w-[60%] opacity-30 mt-2">
+                    <div class="h-1.5 w-full bg-[#1B5E3B] rounded-full"></div>
+                    <div class="h-1.5 w-2/3 bg-[#1B5E3B] rounded-full mx-auto"></div>
+                  </div>
+                  <!-- Scanner line -->
+                  <div class="absolute top-0 left-0 w-full h-[60px] bg-gradient-to-b from-transparent to-[#1B5E3B]/10 border-b border-[#1B5E3B]/60" style="animation: scan 2.5s ease-in-out infinite;"></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -453,24 +493,160 @@
             </div>
             <h3 class="text-[#0A0A0A] font-['Plus_Jakarta_Sans'] font-extrabold text-[22px] leading-tight mb-4 tracking-[-0.02em]">Smart Weighing</h3>
             <p class="text-[15px] leading-[1.65] text-[#71717A] font-['Inter']">Bluetooth scale automatically links the exact leaf weight to the verified worker.</p>
+            
+            <!-- Code Illustration: Smart Scale -->
+            <div class="relative mt-8 pt-6 flex flex-col items-center w-full" style="perspective: 1000px;">
+              <!-- Syncing Mobile Hover -->
+              <div class="relative z-20 w-28 pb-3 pt-4 rounded-lg bg-white border border-[#F0F0F0] shadow-[0_12px_24px_rgba(26,92,46,0.06)] flex flex-col items-center gap-1 mb-6" style="animation: float-slow 4s ease-in-out infinite;">
+                <div class="text-[20px] font-extrabold text-[#0A0A0A] font-['Plus_Jakarta_Sans'] tracking-tight">24.5<span class="text-[12px] text-[#A1A1AA] ml-0.5">kg</span></div>
+                <div class="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-[#F0FDF4] border border-[#DCFCE7]">
+                  <div class="w-1.5 h-1.5 rounded-full bg-[#1B5E3B] animate-pulse"></div>
+                  <span class="text-[9px] font-bold text-[#1B5E3B] uppercase tracking-wider">Synced</span>
+                </div>
+              </div>
+              <!-- Connection Waves -->
+              <div class="absolute z-10 bottom-16 left-1/2 -translate-x-1/2 flex justify-center w-8 h-8 opacity-40 text-[#1B5E3B]">
+                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="animate-pulse"><path d="M12 20v.01M8.5 16.5a5 5 0 017 0M5 13a10 10 0 0114 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              </div>
+              <!-- Scale Base Platform -->
+              <div class="relative z-0 w-48 h-16 bg-gradient-to-b from-[#FAFAF7] to-[#F5F5F0] border border-[#E4E4E7] border-b-[6px] border-b-[#E4E4E7] rounded-3xl shadow-sm flex items-center justify-center transform transition-transform duration-500 group-hover:scale-[1.02]" style="transform: rotateX(60deg);">
+                <div class="absolute inset-1.5 border border-[#E4E4E7]/60 rounded-2xl bg-white/40"></div>
+                <div class="w-12 h-2 rounded-full bg-[#1B5E3B]/10"></div>
+              </div>
+            </div>
           </div>
         </div>
 
         <!-- The other 4 cards as squares -->
-        <div class="feat-card col-span-1 md:col-span-3 rounded-[32px] p-10 bg-gradient-to-br from-white to-[#FAFAF7] border border-[#F0F0F0] shadow-[0_8px_30px_rgba(0,0,0,0.02)] transition duration-300 hover:shadow-[0_20px_50px_rgba(0,0,0,0.06)] hover:-translate-y-1">
-          <div class="flex items-center justify-center rounded-2xl bg-[#FAFAF7] border border-[#F0F0F0] size-14 mb-6">
+        <div class="feat-card col-span-1 md:col-span-3 rounded-[32px] p-10 bg-gradient-to-br from-white to-[#FAFAF7] border border-[#F0F0F0] shadow-[0_8px_30px_rgba(0,0,0,0.02)] transition duration-300 hover:shadow-[0_20px_50px_rgba(0,0,0,0.06)] hover:-translate-y-1 relative overflow-hidden group flex flex-col">
+          <div class="flex items-center justify-center rounded-2xl bg-[#FAFAF7] border border-[#F0F0F0] size-14 mb-6 relative z-10">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3" stroke="#1A5C2E" stroke-width="1.5"/><path d="M4 10h16M8 10v10" stroke="#1A5C2E" stroke-width="1.5"/></svg>
           </div>
-          <h3 class="text-[#0A0A0A] font-['Plus_Jakarta_Sans'] font-bold text-[20px] mb-3 tracking-[-0.01em]">Automated Payroll</h3>
-          <p class="text-[14px] leading-[1.65] text-[#71717A] font-['Inter']">Wages, deductions, PF, ESI, bonus - all instantly calculated with zero errors.</p>
+          <h3 class="text-[#0A0A0A] font-['Plus_Jakarta_Sans'] font-bold text-[20px] mb-3 tracking-[-0.01em] relative z-10">Automated Payroll</h3>
+          <p class="text-[14px] leading-[1.65] text-[#71717A] font-['Inter'] relative z-10">Wages, deductions, PF, ESI, bonus - all instantly calculated with zero errors.</p>
+          
+          <!-- Code Illustration: Payroll Matrix -->
+          <div class="mt-auto pt-10 flex flex-col w-full h-[120px] opacity-80" style="perspective: 500px;">
+            <div class="flex-1 flex items-end justify-center gap-1.5 w-full relative z-10">
+              <div class="w-1/6 bg-[#1A5C2E]/5 rounded-t-lg border-t border-l border-r border-[#1A5C2E]/10" style="height: 30%"></div>
+              <div class="w-1/6 bg-[#1A5C2E]/10 rounded-t-lg border-t border-l border-r border-[#1A5C2E]/20" style="height: 45%"></div>
+              <div class="w-1/6 bg-[#1A5C2E]/20 rounded-t-lg border-t border-l border-r border-[#1A5C2E]/30 origin-bottom" style="height: 60%; transform: rotateX(10deg);"></div>
+              <div class="w-1/6 bg-gradient-to-t from-[#1B5E3B]/30 to-[#1B5E3B]/70 rounded-t-lg border-t border-l border-r border-[#1B5E3B]/80 relative flex justify-center -top-2 origin-bottom transition-transform duration-500 group-hover:scale-y-110 shadow-[0_-4px_12px_rgba(27,94,59,0.1)]" style="height: 90%; transform: rotateX(10deg);">
+                <div class="absolute -top-7 bg-white px-2 py-0.5 rounded-md border border-[#F0F0F0] shadow-sm text-[10px] font-bold text-[#1A5C2E] tracking-tight whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300">Ready</div>
+              </div>
+              <div class="w-1/6 bg-gradient-to-t from-[#1A5C2E] to-[rgba(26,92,46,0.85)] rounded-t-lg shadow-[0_0_20px_rgba(26,92,46,0.25)] origin-bottom" style="height: 110%; transform: rotateX(10deg) translateZ(5px);"></div>
+            </div>
+            <!-- X-Axis to ground the bars -->
+            <div class="w-full h-px bg-gradient-to-r from-[#E4E4E7]/0 via-[#E4E4E7] to-[#E4E4E7]/0 mt-0 flex items-center justify-center gap-6">
+              <div class="w-1 h-1 rounded-full bg-[#D4D4D8]"></div>
+              <div class="w-1 h-1 rounded-full bg-[#D4D4D8]"></div>
+              <div class="w-1 h-1 rounded-full bg-[#D4D4D8]"></div>
+              <div class="w-1 h-1 rounded-full bg-[#D4D4D8]"></div>
+            </div>
+          </div>
         </div>
 
         <div class="feat-card col-span-1 md:col-span-3 rounded-[32px] p-10 bg-gradient-to-br from-white to-[#FAFAF7] border border-[#F0F0F0] shadow-[0_8px_30px_rgba(0,0,0,0.02)] transition duration-300 hover:shadow-[0_20px_50px_rgba(0,0,0,0.06)] hover:-translate-y-1">
-          <div class="flex items-center justify-center rounded-2xl bg-[#FAFAF7] border border-[#F0F0F0] size-14 mb-6">
+          <div class="flex items-center justify-center rounded-2xl bg-[#FAFAF7] border border-[#F0F0F0] size-14 mb-6 relative z-10">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19V9l7-5 7 5v10" stroke="#1A5C2E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 19v-5h6v5" stroke="#1A5C2E" stroke-width="1.5"/></svg>
           </div>
-          <h3 class="text-[#0A0A0A] font-['Plus_Jakarta_Sans'] font-bold text-[20px] mb-3 tracking-[-0.01em]">Factory Accounts</h3>
-          <p class="text-[14px] leading-[1.65] text-[#71717A] font-['Inter']">Deep production tracking and manufacturing cost analysis, end-to-end.</p>
+          <h3 class="text-[#0A0A0A] font-['Plus_Jakarta_Sans'] font-bold text-[20px] mb-3 tracking-[-0.01em] relative z-10">Factory Accounts</h3>
+          <p class="text-[14px] leading-[1.65] text-[#71717A] font-['Inter'] relative z-10">Deep production tracking and manufacturing cost analysis, end-to-end.</p>
+          
+          <!-- Code Illustration: Supply Chain Nodes -->
+          <div class="mt-auto pt-10 flex flex-col w-full h-[120px] relative justify-center border-t border-[#F0F0F0] overflow-hidden -mx-10 px-10">
+            <div class="absolute top-1/2 left-10 right-10 h-1 bg-[#E4E4E7] -translate-y-1/2 rounded-full overflow-hidden">
+               <div class="h-full w-1/3 bg-[#1B5E3B]/40 rounded-full animate-pulse" style="animation: dash 3s linear infinite;"></div>
+            </div>
+            
+            <div class="flex items-center justify-between h-full relative z-10">
+              <div class="flex flex-col items-center gap-2 transform transition-transform duration-300 group-hover:-translate-y-1">
+                <div class="w-10 h-10 rounded-full bg-white border-2 border-[#E4E4E7] shadow-[0_4px_12px_rgba(0,0,0,0.04)] flex items-center justify-center">
+                   <div class="w-3 h-3 bg-[#A1A1AA] rounded-sm"></div>
+                </div>
+                <span class="text-[10px] text-[#A1A1AA] font-bold uppercase tracking-widest bg-white/80 rounded px-1">RAW</span>
+              </div>
+              
+              <div class="flex flex-col items-center gap-2 transform transition-transform duration-300 group-hover:-translate-y-1 delay-100">
+                <div class="w-12 h-12 rounded-full bg-white border-2 border-[#1B5E3B] shadow-[0_4px_12px_rgba(26,92,46,0.12)] flex items-center justify-center relative">
+                   <div class="absolute inset-[-4px] rounded-full border border-[#1B5E3B]/30 animate-ping" style="animation-duration: 3s;"></div>
+                   <div class="w-4 h-4 bg-[#1B5E3B] rounded-sm"></div>
+                </div>
+                <span class="text-[10px] text-[#1B5E3B] font-bold uppercase tracking-widest bg-white/80 rounded px-1">WIP</span>
+              </div>
+
+              <div class="flex flex-col items-center gap-2 transform transition-transform duration-300 group-hover:-translate-y-1 delay-200">
+                <div class="w-10 h-10 rounded-full bg-white border-2 border-[#E4E4E7] shadow-[0_4px_12px_rgba(0,0,0,0.04)] flex items-center justify-center">
+                   <div class="w-3 h-3 rounded-full bg-[#A1A1AA]"></div>
+                </div>
+                <span class="text-[10px] text-[#A1A1AA] font-bold uppercase tracking-widest bg-white/80 rounded px-1">PKG</span>
+              </div>
+            </div>
+          </div>
+          
+          <style>
+            @keyframes dash {
+              to { stroke-dashoffset: -200; }
+            }
+            @keyframes float-slow {
+              0%, 100% { transform: translateY(0); }
+              50% { transform: translateY(-4px); }
+            }
+            @keyframes scan {
+              0% { transform: translateY(-80px); }
+              50% { transform: translateY(220px); }
+              100% { transform: translateY(-80px); }
+            }
+          </style>
+        </div>
+
+      </div>
+
+      <!-- Advanced Dashboard (spanning all 6 cols) -->
+      <div class="feat-card col-span-1 md:col-span-6 rounded-[32px] p-10 bg-gradient-to-br from-[#1A5C2E] to-[#124220] border border-[#1A5C2E]/50 shadow-[0_12px_40px_rgba(26,92,46,0.15)] transition duration-300 hover:shadow-[0_20px_50px_rgba(26,92,46,0.25)] relative overflow-hidden group flex flex-col md:flex-row items-center md:items-stretch gap-10 min-h-[360px]">
+        
+        <!-- Text Content -->
+        <div class="flex-1 relative z-10 flex flex-col justify-center max-w-md w-full">
+          <div class="flex items-center justify-center rounded-2xl bg-white/10 border border-white/20 size-14 mb-6 relative z-10">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="text-white" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/></svg>
+          </div>
+          <h3 class="text-white font-['Plus_Jakarta_Sans'] font-bold text-[28px] mb-4 tracking-[-0.01em] relative z-10">Advanced MIS Dashboard</h3>
+          <p class="text-[15px] leading-[1.65] text-[#A1A1AA] font-['Inter'] relative z-10">Get a bird's-eye view of your entire operation, directly from your cloud portal. Daily pluck tracking, crop comparisons, and operational intelligence.</p>
+        </div>
+
+        <!-- Code Illustration: Dashboard Mockup -->
+        <div class="flex-1 w-full relative h-[300px] md:h-auto overflow-hidden rounded-xl bg-[#09090B] border border-white/10 flex flex-col shadow-[0_20px_60px_rgba(0,0,0,0.5)] transform translate-y-6 md:translate-y-0 md:translate-x-6 group-hover:-translate-y-2 group-hover:-translate-x-2 transition-transform duration-700 ease-out">
+          <!-- Window Header -->
+          <div class="w-full h-8 bg-white/5 border-b border-white/10 flex items-center px-4 gap-2">
+            <div class="w-2.5 h-2.5 rounded-full bg-[#3F3F46]"></div>
+            <div class="w-2.5 h-2.5 rounded-full bg-[#3F3F46]"></div>
+            <div class="w-2.5 h-2.5 rounded-full bg-[#3F3F46]"></div>
+          </div>
+          
+          <div class="p-6 h-full flex flex-col gap-4">
+            <!-- Top stats row -->
+            <div class="flex gap-4">
+               <div class="h-16 flex-1 bg-white/5 rounded-lg border border-white/10 p-3 flex flex-col gap-2">
+                 <div class="h-2 w-1/2 bg-white/20 rounded"></div>
+                 <div class="h-4 w-3/4 bg-white/60 rounded"></div>
+               </div>
+               <div class="h-16 flex-1 bg-[#1B5E3B]/20 rounded-lg border border-[#1B5E3B]/30 p-3 flex flex-col gap-2">
+                 <div class="h-2 w-1/2 bg-[#1B5E3B] rounded"></div>
+                 <div class="h-4 w-5/6 bg-[#4ADE80] rounded"></div>
+               </div>
+               <div class="h-16 flex-1 bg-white/5 rounded-lg border border-white/10 p-3 flex flex-col gap-2">
+                 <div class="h-2 w-1/2 bg-white/20 rounded"></div>
+                 <div class="h-4 w-2/3 bg-white/60 rounded"></div>
+               </div>
+            </div>
+
+            <!-- Big chart area -->
+            <div class="flex-1 w-full bg-white/5 rounded-lg border border-white/10 flex items-end p-4 gap-2">
+               {#each [30, 45, 60, 40, 80, 50, 90, 70, 65, 85, 45, 100] as height, i}
+                 <div class="flex-1 bg-gradient-to-t from-[#1B5E3B]/40 to-[#4ADE80]/40 rounded-t-sm" style="height: {height}%; {i % 3 === 0 ? 'opacity: 1;' : 'opacity: 0.5;'}"></div>
+               {/each}
+            </div>
+          </div>
         </div>
 
       </div>
@@ -527,45 +703,7 @@
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════════════════════════ -->
-  <!-- TRUSTED (Count + Marquee)                                   -->
-  <!-- ═══════════════════════════════════════════════════════════ -->
-  <section id="clients" class="w-full bg-[#FAFAF7] relative py-32 md:py-44 overflow-hidden border-t border-[#F0F0F0]/50 border-b border-[#F0F0F0]/50 scroll-mt-20" aria-labelledby="trust-heading">
-    <div class="max-w-[1100px] mx-auto px-6 md:px-12 flex flex-col items-center gap-12">
-      <div class="flex flex-col items-center gap-4">
-        <span class="count-up text-[56px] md:text-[72px] font-['Plus_Jakarta_Sans'] font-extrabold text-[#0A0A0A] tracking-[-0.04em] leading-none" style="font-variant-numeric: tabular-nums">0+</span>
-        <h2 id="trust-heading" class="text-[15px] md:text-[16px] text-center text-[#71717A] font-['Inter'] font-medium">
-          tea estates power their operations with GardenSuite
-        </h2>
-      </div>
 
-      <!-- Marquee -->
-      <div class="relative w-full flex flex-col gap-4 mt-6">
-        <div class="absolute inset-y-0 left-0 w-24 md:w-48 bg-gradient-to-r from-[#FAFAF7] to-transparent z-10 pointer-events-none"></div>
-        <div class="absolute inset-y-0 right-0 w-24 md:w-48 bg-gradient-to-l from-[#FAFAF7] to-transparent z-10 pointer-events-none"></div>
-        <div class="flex w-fit animate-marquee motion-reduce:animate-none hover:[animation-play-state:paused] gap-4">
-          {#each Array(2) as _, i}
-            <div class="flex gap-4 min-w-max" aria-hidden={i === 1}>
-              {#each regions as region}
-                <div class="flex items-center rounded-[14px] py-2.5 px-5 bg-white border border-[#E4E4E7]/60 shadow-[0_2px_8px_rgba(0,0,0,0.02)] transition duration-200 hover:scale-[1.03] cursor-default">
-                  <span class="text-[#3F3F46] font-['Inter'] text-[14px] font-semibold">{region}</span>
-                </div>
-              {/each}
-            </div>
-          {/each}
-        </div>
-        <div class="flex w-fit animate-marquee-reverse motion-reduce:animate-none hover:[animation-play-state:paused] gap-4 pt-2">
-          {#each Array(2) as _, i}
-            <div class="flex gap-4 min-w-max" aria-hidden={i === 1}>
-              {#each estates as estate}
-                <div class="flex items-center rounded-xl py-2.5 px-5 bg-white/70 border border-[#F0F0F0] text-[#71717A] font-['Inter'] text-[13px] font-medium hover:text-[#18181B] hover:border-[#D4D4D8] transition duration-200 cursor-default shadow-[0_2px_8px_rgba(0,0,0,0.01)]">{estate}</div>
-              {/each}
-            </div>
-          {/each}
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- ═══════════════════════════════════════════════════════════ -->
   <!-- FAQ                                                         -->
