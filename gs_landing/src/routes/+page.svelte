@@ -193,6 +193,7 @@
   let navScrollEndRatio = 0.3; // Tweak this variable: 0.3 = 30% of hero height
   let targetNavWidth = $state(0);
   let startNavWidth = $state(1400);
+  let startNavPadding = $state(40);
 
   $effect(() => {
     const measureWidth = () => {
@@ -207,6 +208,7 @@
         targetNavWidth = Math.min(window.innerWidth - 48, 1240);
       }
       startNavWidth = Math.min(window.innerWidth, 1400);
+      startNavPadding = window.innerWidth >= 768 ? 40 : 24;
     };
 
     const handler = () => {
@@ -233,6 +235,7 @@
   });
 
   let currentNavWidth = $derived(startNavWidth - (startNavWidth - targetNavWidth) * navProgress);
+  let currentNavPadding = $derived(startNavPadding - (startNavPadding - 16) * navProgress);
 
   let navStyles = $derived(`
     background-color: rgba(255, 255, 255, ${navProgress * 0.85});
@@ -240,7 +243,9 @@
     -webkit-backdrop-filter: blur(${navProgress * 24}px);
     width: ${currentNavWidth}px;
     top: ${navProgress * 16}px;
-    border-radius: ${navProgress * 20}px;
+    border-radius: ${navProgress * 36}px;
+    padding-left: ${currentNavPadding}px;
+    padding-right: ${currentNavPadding}px;
     box-shadow: 0 ${navProgress * 8}px ${navProgress * 30}px rgba(0, 0, 0, ${navProgress * 0.08});
     border-color: rgba(0, 0, 0, ${navProgress * 0.08});
   `);
@@ -276,7 +281,7 @@
 
   <!-- ═══ Nav ═══ -->
   <nav
-    class="fixed z-[60] flex items-center justify-between left-1/2 -translate-x-1/2 py-4 px-6 md:px-10 border border-solid"
+    class="fixed z-[60] flex items-center justify-between left-1/2 -translate-x-1/2 py-4 border border-solid"
     style={navStyles}
     aria-label="Main navigation"
   >
@@ -286,7 +291,7 @@
     </a>
     <div class="hidden md:flex items-center gap-1">
       <div class="group relative">
-        <button class="inline-flex items-center justify-center rounded-md px-4 py-2 text-[15px] font-['Inter'] font-semibold transition-colors duration-150 text-[#18181B] hover:bg-[#0000000A] hover:text-[#0A0A0A] focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 focus:outline-none" aria-label="Products menu">
+        <button class="inline-flex h-10 items-center justify-center rounded-full px-4 text-[14px] font-['Inter'] font-semibold transition-colors duration-150 text-[#18181B] hover:bg-[#0000000A] hover:text-[#0A0A0A] focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 focus:outline-none" aria-label="Products menu">
           Products
           <svg width="12" height="12" viewBox="0 0 12 12" fill="none" class="ml-1.5 opacity-60 transition-transform duration-200 group-hover:rotate-180" aria-hidden="true"><path d="M3 4.5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
@@ -307,14 +312,14 @@
           </div>
         </div>
       </div>
-      <a href="#features" class="inline-flex items-center justify-center rounded-md px-4 py-2 text-[15px] font-['Inter'] font-semibold transition-colors duration-150 text-[#18181B] hover:bg-[#0000000A] hover:text-[#0A0A0A]">Features</a>
-      <a href="#clients" class="inline-flex items-center justify-center rounded-md px-4 py-2 text-[15px] font-['Inter'] font-semibold transition-colors duration-150 text-[#18181B] hover:bg-[#0000000A] hover:text-[#0A0A0A]">Clients</a>
-      <a href="#about" class="inline-flex items-center justify-center rounded-md px-4 py-2 text-[15px] font-['Inter'] font-semibold transition-colors duration-150 text-[#18181B] hover:bg-[#0000000A] hover:text-[#0A0A0A]">About</a>
+      <a href="#features" class="inline-flex h-10 items-center justify-center rounded-full px-4 text-[14px] font-['Inter'] font-semibold transition-colors duration-150 text-[#18181B] hover:bg-[#0000000A] hover:text-[#0A0A0A]">Features</a>
+      <a href="#clients" class="inline-flex h-10 items-center justify-center rounded-full px-4 text-[14px] font-['Inter'] font-semibold transition-colors duration-150 text-[#18181B] hover:bg-[#0000000A] hover:text-[#0A0A0A]">Clients</a>
+      <a href="#about" class="inline-flex h-10 items-center justify-center rounded-full px-4 text-[14px] font-['Inter'] font-semibold transition-colors duration-150 text-[#18181B] hover:bg-[#0000000A] hover:text-[#0A0A0A]">About</a>
     </div>
     <div class="flex items-center gap-2">
-      <a href="#contact" class="hidden md:inline-block font-['Inter'] font-semibold text-[15px] mr-4 text-[#18181B] hover:text-[#0A0A0A] transition-colors">Contact</a>
-      <a href="#contact" class="flex items-center rounded-full py-2.5 px-5 bg-[#1B5E3B] hover:bg-[#144723] active:scale-[0.97] transition-all duration-150 shadow-[0_2px_8px_rgba(27,94,59,0.25)]">
-        <span class="text-white font-['Inter'] font-semibold text-[13px] leading-4">Book a Demo</span>
+      <a href="#contact" class="hidden md:inline-flex h-10 items-center text-[14px] font-['Inter'] font-semibold mr-4 text-[#18181B] hover:text-[#0A0A0A] transition-colors">Contact</a>
+      <a href="#contact" class="flex h-10 items-center justify-center rounded-full px-6 bg-[#1B5E3B] hover:bg-[#144723] active:scale-[0.97] transition-all duration-150 shadow-[0_2px_8px_rgba(27,94,59,0.25)]">
+        <span class="text-white font-['Inter'] font-semibold text-[14px] leading-none">Book a Demo</span>
       </a>
     </div>
   </nav>
