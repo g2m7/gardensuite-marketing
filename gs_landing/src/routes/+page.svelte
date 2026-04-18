@@ -8,11 +8,26 @@
   onMount(async () => {
     const { gsap } = await import('gsap');
     const { ScrollTrigger } = await import('gsap/ScrollTrigger');
+    const { default: Lenis } = await import('lenis');
     gsap.registerPlugin(ScrollTrigger);
 
     // Respect reduced motion
     const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (prefersReduced) { ready = true; return; }
+
+    // ── Lenis smooth scroll (keytail-style lerped interpolation) ──
+    const lenis = new Lenis({
+      lerp: 0.1,
+      wheelMultiplier: 1,
+      touchMultiplier: 2,
+    });
+
+    // Sync Lenis with GSAP — single shared RAF frame, zero jitter
+    lenis.on('scroll', ScrollTrigger.update);
+    gsap.ticker.add((time) => {
+      lenis.raf(time * 1000);
+    });
+    gsap.ticker.lagSmoothing(0);
 
     // ── Hero entrance ──
     const heroSection = document.querySelector('.hero-parallax');
@@ -272,7 +287,7 @@
   <section class="hero-parallax w-full relative overflow-hidden" aria-label="Hero">
 
     <!-- Sky extension: covers the ENTIRE hero section from the very top (behind nav) -->
-    <img src="/hero-sky.png" alt="" class="absolute inset-0 w-full h-full object-cover object-top brightness-[1.4] saturate-[0.6] opacity-80 z-0 pointer-events-none" width="1920" height="1080" />
+    <img src="/hero-sky.png" alt="" class="hero-sky-ext absolute inset-0 w-full h-full object-cover object-top brightness-[1.4] saturate-[0.6] opacity-80 z-0 pointer-events-none" width="1920" height="1080" />
 
     <!-- Text content -->
     <div class="hero-text-content relative z-20 flex flex-col items-center pt-28 md:pt-32 lg:pt-36 px-6 relative">
