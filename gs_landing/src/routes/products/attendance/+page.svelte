@@ -34,7 +34,7 @@
 >
 
 	<!-- Hero: Product Intro -->
-	<section class="flex flex-col items-center w-full pt-20 md:pt-28 pb-16 md:pb-24 px-4 md:px-20 gap-6">
+	<section class="flex flex-col items-center w-full pt-20 md:pt-28 pb-16 md:pb-24 px-6 md:px-12 gap-6">
 		<div class="flex items-center gap-2">
 			<div class="w-1.5 h-1.5 rounded-full bg-[#3D7D2C]"></div>
 			<div class="tracking-widest uppercase text-[#6B7280] font-['Inter',system-ui,sans-serif] font-semibold text-[12px]/4">
@@ -54,11 +54,11 @@
 	<!-- ============================================ -->
 	<section class="relative w-full bg-[#F3F6F1] overflow-hidden">
 		<!-- Decorative vertical line - desktop only -->
-		<div class="hidden lg:block absolute left-[120px] top-0 w-px h-full bg-[#D4E0D0]" aria-hidden="true"></div>
+		<div class="hidden lg:block absolute left-[80px] top-0 w-px h-full bg-[#D4E0D0]" aria-hidden="true"></div>
 
-		<div class="flex flex-col lg:flex-row items-center w-full max-w-[1400px] mx-auto px-6 md:px-14 lg:px-0 py-20 md:py-28 lg:py-0 lg:min-h-[700px] gap-12 lg:gap-0">
+		<div class="flex flex-col lg:flex-row items-center w-full max-w-[1100px] mx-auto px-6 md:px-12 lg:px-0 py-20 md:py-28 lg:py-0 lg:min-h-[700px] gap-12 lg:gap-0">
 			<!-- Text Content -->
-			<div class="flex flex-col lg:pl-40 lg:w-[540px] gap-7 animate-on-scroll lg:py-24">
+			<div class="flex flex-col lg:pl-28 lg:w-[480px] gap-7 animate-on-scroll lg:py-24">
 				<!-- Step indicator -->
 				<div class="flex items-center gap-4">
 					<div class="w-10 h-10 rounded-full border-2 border-[#3D7D2C] flex items-center justify-center shrink-0">
@@ -136,9 +136,9 @@
 	<!-- ============================================== -->
 	<section class="relative w-full bg-white overflow-hidden">
 		<!-- Decorative vertical line - right side -->
-		<div class="hidden lg:block absolute right-[120px] top-0 w-px h-full bg-[#E8EDE6]" aria-hidden="true"></div>
+		<div class="hidden lg:block absolute right-[80px] top-0 w-px h-full bg-[#E8EDE6]" aria-hidden="true"></div>
 
-		<div class="flex flex-col-reverse lg:flex-row items-center w-full max-w-[1400px] mx-auto px-6 md:px-14 lg:px-0 py-20 md:py-28 lg:py-0 lg:min-h-[700px] gap-12 lg:gap-0">
+		<div class="flex flex-col-reverse lg:flex-row items-center w-full max-w-[1100px] mx-auto px-6 md:px-12 lg:px-0 py-20 md:py-28 lg:py-0 lg:min-h-[700px] gap-12 lg:gap-0">
 			<!-- Phone Mockup - Confirmed State -->
 			<div class="flex flex-1 items-center justify-center relative lg:py-16">
 				<div class="animate-on-scroll" style="transition-delay: 100ms;">
@@ -180,7 +180,7 @@
 			</div>
 
 			<!-- Text Content -->
-			<div class="flex flex-col lg:pr-40 lg:w-[560px] gap-7 animate-on-scroll lg:py-24">
+			<div class="flex flex-col lg:pr-28 lg:w-[480px] gap-7 animate-on-scroll lg:py-24">
 				<div class="flex items-center gap-4">
 					<div class="w-10 h-10 rounded-full border-2 border-[#0369A1] flex items-center justify-center shrink-0">
 						<span class="font-['Inter',system-ui,sans-serif] text-sm font-semibold text-[#0369A1] font-variant-numeric-tabular-nums">02</span>
@@ -219,11 +219,11 @@
 	<!-- STORY 03: The Weigh-In (Text Left, Scale Right) -->
 	<!-- =============================================== -->
 	<section class="relative w-full bg-[#F3F6F1] overflow-hidden">
-		<div class="hidden lg:block absolute left-[120px] top-0 w-px h-full bg-[#D4E0D0]" aria-hidden="true"></div>
+		<div class="hidden lg:block absolute left-[80px] top-0 w-px h-full bg-[#D4E0D0]" aria-hidden="true"></div>
 
-		<div class="flex flex-col lg:flex-row items-center w-full max-w-[1400px] mx-auto px-6 md:px-14 lg:px-0 py-20 md:py-28 lg:py-0 lg:min-h-[750px] gap-12 lg:gap-0">
+		<div class="flex flex-col lg:flex-row items-center w-full max-w-[1100px] mx-auto px-6 md:px-12 lg:px-0 py-20 md:py-28 lg:py-0 lg:min-h-[750px] gap-12 lg:gap-0">
 			<!-- Text Content -->
-			<div class="flex flex-col lg:pl-40 lg:w-[540px] gap-7 animate-on-scroll lg:py-24">
+			<div class="flex flex-col lg:pl-28 lg:w-[480px] gap-7 animate-on-scroll lg:py-24">
 				<div class="flex items-center gap-4">
 					<div class="w-10 h-10 rounded-full border-2 border-[#D97706] flex items-center justify-center shrink-0">
 						<span class="font-['Inter',system-ui,sans-serif] text-sm font-semibold text-[#D97706] font-variant-numeric-tabular-nums">03</span>
@@ -304,7 +304,7 @@
 	<!-- STORY 04: The Sync (Full-Width, Dark) -->
 	<!-- ==================================== -->
 	<section class="relative w-full bg-[#1A2E16] overflow-hidden py-20 md:py-28">
-		<div class="flex flex-col items-center w-full max-w-[1400px] mx-auto px-6 md:px-14 gap-14">
+		<div class="flex flex-col items-center w-full max-w-[1100px] mx-auto px-6 md:px-12 gap-14">
 			<!-- Header -->
 			<div class="flex flex-col items-center gap-5 animate-on-scroll">
 				<div class="flex items-center gap-4">

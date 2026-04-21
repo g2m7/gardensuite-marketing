@@ -31,7 +31,7 @@
 
 <div class="[font-synthesis:none] flex overflow-clip w-full min-h-0 flex-col bg-[#FAFAF7] antialiased text-xs/4">
 	<!-- Hero: Product Intro -->
-	<section class="flex flex-col items-center w-full pt-20 md:pt-28 pb-16 md:pb-24 px-4 md:px-20 gap-6">
+	<section class="flex flex-col items-center w-full pt-20 md:pt-28 pb-16 md:pb-24 px-6 md:px-12 gap-6">
 		<div class="flex items-center gap-2">
 			<div class="w-1.5 h-1.5 rounded-full bg-[#3D7D2C]"></div>
 			<div class="tracking-widest uppercase text-[#6B7280] font-['Inter',system-ui,sans-serif] font-semibold text-[12px]/4">
@@ -47,7 +47,7 @@
 	</section>
 
 	<section class="relative w-full bg-[#1A2E16] overflow-hidden py-20 md:py-28">
-		<div class="flex flex-col items-center w-full max-w-[1400px] mx-auto px-6 md:px-14 gap-14">
+		<div class="flex flex-col items-center w-full max-w-[1100px] mx-auto px-6 md:px-12 gap-14">
 			<div class="flex flex-col items-center gap-5 animate-on-scroll">
 				<h2 class="text-[32px] md:text-[48px] text-center leading-[1.1] tracking-[-0.03em] text-white font-['Plus_Jakarta_Sans',system-ui,sans-serif] font-extrabold">
 					Never lose track of a single asset.

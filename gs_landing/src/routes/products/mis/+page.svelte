@@ -31,7 +31,7 @@
 
 <div class="[font-synthesis:none] flex overflow-clip w-full min-h-0 flex-col bg-[#FAFAF7] antialiased text-xs/4">
 	<!-- Hero: Product Intro -->
-	<section class="flex flex-col items-center w-full pt-20 md:pt-28 pb-16 md:pb-24 px-4 md:px-20 gap-6">
+	<section class="flex flex-col items-center w-full pt-20 md:pt-28 pb-16 md:pb-24 px-6 md:px-12 gap-6">
 		<div class="flex items-center gap-2">
 			<div class="w-1.5 h-1.5 rounded-full bg-[#3D7D2C]"></div>
 			<div class="tracking-widest uppercase text-[#6B7280] font-['Inter',system-ui,sans-serif] font-semibold text-[12px]/4">
@@ -47,7 +47,7 @@
 	</section>
 
 	<section class="relative w-full bg-[#F3F6F1] overflow-hidden">
-		<div class="flex flex-col items-center w-full max-w-[1400px] mx-auto px-6 md:px-14 pb-20 pt-10">
+		<div class="flex flex-col items-center w-full max-w-[1100px] mx-auto px-6 md:px-12 pb-20 pt-10">
 			<!-- Dashboard Mockup Image -->
 			<div class="relative flex flex-col w-full grow shrink basis-[0%] rounded-[20px] overflow-clip border border-solid border-[#0000000F] shadow-[0_20px_80px_rgba(0,0,0,0.07)] bg-white max-h-[500px] md:max-h-[650px] mx-auto animate-on-scroll">
 				<img src="/hero-sign-in.png" alt="GardenSuite MIS Dashboard" class="w-full h-auto object-cover object-top" width="1920" height="1080" />
