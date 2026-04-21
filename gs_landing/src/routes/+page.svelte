@@ -5,6 +5,8 @@
 	// ─── GSAP + ScrollTrigger ───
 	let ready = $state(false);
 
+
+
 	onMount(async () => {
 		const { gsap } = await import('gsap');
 		const { ScrollTrigger } = await import('gsap/ScrollTrigger');
@@ -129,67 +131,7 @@
 		ready = true;
 	});
 
-	// ─── Sticky Nav ───
-	let navProgress = $state(0);
-	let navScrollEndRatio = 0.3; // Tweak this variable: 0.3 = 30% of hero height
-	let targetNavWidth = $state(0);
-	let startNavWidth = $state(1400);
-	let startNavPadding = $state(40);
 
-	$effect(() => {
-		const measureWidth = () => {
-			// Find the main content container to dynamically match the nav width accurately
-			const container = document.querySelector('.ps-section > div') as HTMLElement;
-			if (container) {
-				const style = window.getComputedStyle(container);
-				const pl = parseFloat(style.paddingLeft);
-				const pr = parseFloat(style.paddingRight);
-				targetNavWidth = container.clientWidth - pl - pr;
-			} else {
-				targetNavWidth = Math.min(window.innerWidth - 48, 1100);
-			}
-			startNavWidth = Math.min(window.innerWidth, 1400);
-			startNavPadding = window.innerWidth >= 768 ? 40 : 24;
-		};
-
-		const handler = () => {
-			const hero = document.querySelector('.hero-parallax') as HTMLElement;
-			const hHeight = hero ? hero.offsetHeight : 500;
-			const endScroll = hHeight * navScrollEndRatio;
-
-			let p = window.scrollY / endScroll;
-			if (p < 0) p = 0;
-			if (p > 1) p = 1;
-			navProgress = p;
-		};
-
-		window.addEventListener('scroll', handler, { passive: true });
-		window.addEventListener('resize', measureWidth, { passive: true });
-
-		measureWidth();
-		handler(); // Run once on init
-
-		return () => {
-			window.removeEventListener('scroll', handler);
-			window.removeEventListener('resize', measureWidth);
-		};
-	});
-
-	let currentNavWidth = $derived(startNavWidth - (startNavWidth - targetNavWidth) * navProgress);
-	let currentNavPadding = $derived(startNavPadding - (startNavPadding - 16) * navProgress);
-
-	let navStyles = $derived(`
-    background-color: rgba(255, 255, 255, ${navProgress * 0.85});
-    backdrop-filter: blur(${navProgress * 24}px);
-    -webkit-backdrop-filter: blur(${navProgress * 24}px);
-    width: ${currentNavWidth}px;
-    top: ${navProgress * 16}px;
-    border-radius: ${navProgress * 36}px;
-    padding-left: ${currentNavPadding}px;
-    padding-right: ${currentNavPadding}px;
-    box-shadow: 0 ${navProgress * 8}px ${navProgress * 30}px rgba(0, 0, 0, ${navProgress * 0.08});
-    border-color: rgba(0, 0, 0, ${navProgress * 0.08});
-  `);
 
 	// ─── FAQ Accordion ───
 	let openFaq = $state<number | null>(null);
@@ -231,166 +173,10 @@
 </svelte:head>
 
 <div class="flex min-h-screen w-full flex-col overflow-clip bg-[#FAFAF7] antialiased">
-	<!-- ═══ Nav ═══ -->
-	<nav
-		class="fixed left-1/2 z-[60] flex -translate-x-1/2 items-center justify-between border border-solid py-4"
-		style={navStyles}
-		aria-label="Main navigation"
-	>
-		<a href="/" class="flex items-center gap-2" aria-label="GardenSuite Home">
-			<GsLogoAnimation class="h-7 w-auto shrink-0" />
-			<span
-				class="font-['Plus_Jakarta_Sans',system-ui,sans-serif] text-[18px] leading-[22px] font-bold tracking-[-0.01em] text-[#0A0A0A]"
-				>GardenSuite</span
-			>
-		</a>
-		<div class="hidden items-center gap-1 md:flex">
-			<div class="group relative">
-				<button
-					class="inline-flex h-10 items-center justify-center rounded-full px-4 font-['Inter'] text-[14px] font-semibold text-[#18181B] transition-colors duration-150 hover:bg-[#0000000A] hover:text-[#0A0A0A] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30"
-					aria-label="Products menu"
-				>
-					Products
-					<svg
-						width="12"
-						height="12"
-						viewBox="0 0 12 12"
-						fill="none"
-						class="ml-1.5 opacity-60 transition-transform duration-200 group-hover:rotate-180"
-						aria-hidden="true"
-						><path
-							d="M3 4.5l3 3 3-3"
-							stroke="currentColor"
-							stroke-width="1.5"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-						/></svg
-					>
-				</button>
-				<div
-					class="pointer-events-none invisible absolute top-full left-1/2 z-50 mt-1 flex w-[620px] origin-top -translate-x-1/2 translate-y-1 scale-[0.97] gap-3 rounded-xl border border-[#0000000F] bg-white p-3 opacity-0 shadow-[0_10px_30px_rgba(0,0,0,0.08)] transition-all duration-200 ease-out group-hover:pointer-events-auto group-hover:visible group-hover:translate-y-0 group-hover:scale-100 group-hover:opacity-100"
-				>
-					<div
-						class="flex w-1/3 flex-col justify-between rounded-lg bg-gradient-to-b from-[#F0FDF4] to-[#DCFCE7] p-4"
-					>
-						<svg
-							fill="none"
-							viewBox="0 0 24 24"
-							stroke-width="1.5"
-							stroke="#1A5C2E"
-							class="mb-2 h-8 w-8"
-							aria-hidden="true"
-							><path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"
-							/></svg
-						>
-						<div class="mt-4">
-							<span
-								class="block font-['Plus_Jakarta_Sans'] text-base leading-tight font-bold text-[#1A5C2E]"
-								>GardenSuite<br />V3</span
-							>
-							<span class="mt-1.5 block font-['Inter'] text-xs leading-relaxed text-[#1A5C2E]/80"
-								>One simple system for tea gardens.</span
-							>
-						</div>
-					</div>
-					<div class="grid w-2/3 grid-cols-2 gap-1">
-						<a
-							href="/products/attendance"
-							class="group/item col-span-2 block rounded-lg p-3 transition-colors hover:bg-[#FAFAF7]"
-							><div
-								class="font-['Plus_Jakarta_Sans'] text-[13px] font-bold text-[#18181B] transition-colors group-hover/item:text-[#1A5C2E]"
-							>
-								Face Attendance &amp; Smart Weighing
-							</div>
-							<div class="mt-1 font-['Inter'] text-xs leading-relaxed text-[#71717A]">
-								Stop buddy punching and stolen weights.
-							</div></a
-						>
-						<a
-							href="/products/payroll"
-							class="group/item block rounded-lg p-3 transition-colors hover:bg-[#FAFAF7]"
-							><div
-								class="font-['Plus_Jakarta_Sans'] text-[13px] font-bold text-[#18181B] transition-colors group-hover/item:text-[#1A5C2E]"
-							>
-								Automated Payroll
-							</div>
-							<div class="mt-1 font-['Inter'] text-xs leading-relaxed text-[#71717A]">
-								Hazira, PF, bonus, and wages auto-ready.
-							</div></a
-						>
-						<a
-							href="/products/factory"
-							class="group/item block rounded-lg p-3 transition-colors hover:bg-[#FAFAF7]"
-							><div
-								class="font-['Plus_Jakarta_Sans'] text-[13px] font-bold text-[#18181B] transition-colors group-hover/item:text-[#1A5C2E]"
-							>
-								Factory Accounts
-							</div>
-							<div class="mt-1 font-['Inter'] text-xs leading-relaxed text-[#71717A]">
-								Track output and exact factory cost.
-							</div></a
-						>
-						<a
-							href="/products/stores"
-							class="group/item block rounded-lg p-3 transition-colors hover:bg-[#FAFAF7]"
-							><div
-								class="font-['Plus_Jakarta_Sans'] text-[13px] font-bold text-[#18181B] transition-colors group-hover/item:text-[#1A5C2E]"
-							>
-								Store Management
-							</div>
-							<div class="mt-1 font-['Inter'] text-xs leading-relaxed text-[#71717A]">
-								Know stock without chasing registers.
-							</div></a
-						>
-						<a
-							href="/products/mis"
-							class="group/item block rounded-lg p-3 transition-colors hover:bg-[#FAFAF7]"
-							><div
-								class="font-['Plus_Jakarta_Sans'] text-[13px] font-bold text-[#18181B] transition-colors group-hover/item:text-[#1A5C2E]"
-							>
-								Daily Report
-							</div>
-							<div class="mt-1 font-['Inter'] text-xs leading-relaxed text-[#71717A]">
-								See daily numbers on any device.
-							</div></a
-						>
-					</div>
-				</div>
-			</div>
-			<a
-				href="#features"
-				class="inline-flex h-10 items-center justify-center rounded-full px-4 font-['Inter'] text-[14px] font-semibold text-[#18181B] transition-colors duration-150 hover:bg-[#0000000A] hover:text-[#0A0A0A]"
-				>Features</a
-			>
-			<a
-				href="#about"
-				class="inline-flex h-10 items-center justify-center rounded-full px-4 font-['Inter'] text-[14px] font-semibold text-[#18181B] transition-colors duration-150 hover:bg-[#0000000A] hover:text-[#0A0A0A]"
-				>About</a
-			>
-		</div>
-		<div class="flex items-center gap-2">
-			<a
-				href="#contact"
-				class="mr-4 hidden h-10 items-center rounded-md px-2 font-['Inter'] text-[14px] font-semibold text-[#18181B] transition-colors hover:text-[#0A0A0A] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 md:inline-flex"
-				>Contact</a
-			>
-			<a
-				href={demoHref}
-				class="flex h-10 items-center justify-center rounded-full bg-[#1B5E3B] px-6 shadow-[0_2px_8px_rgba(27,94,59,0.25)] transition hover:bg-[#144723] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 active:scale-[0.97]"
-			>
-				<span class="font-['Inter'] text-[14px] leading-none font-semibold text-white"
-					>Book Free Demo</span
-				>
-			</a>
-		</div>
-	</nav>
-
 	<!-- ═══════════════════════════════════════════════════════════ -->
 	<!-- HERO - Clean editorial (keytail-style)                      -->
 	<!-- ═══════════════════════════════════════════════════════════ -->
+	<main id="main-content">
 	<section class="hero-parallax relative w-full overflow-hidden" aria-label="Hero">
 		<!-- Sky extension: covers the ENTIRE hero section from the very top (behind nav) -->
 		<img
@@ -418,23 +204,22 @@
 			</div>
 
 			<h1
-				class="hero-h1 mt-7 max-w-4xl text-center font-['Plus_Jakarta_Sans'] text-[40px] leading-[1.02] font-extrabold tracking-[-0.04em] text-[#0A0A0A] md:text-[64px] lg:text-[76px]"
+				class="hero-h1 mt-7 max-w-4xl text-center font-['Plus_Jakarta_Sans'] text-[36px] leading-[1.05] font-extrabold tracking-[-0.04em] text-[#0A0A0A] md:text-[60px] lg:text-[72px]"
 				style="text-wrap: balance;"
 			>
-				Run your tea garden.<br class="hidden md:inline" /> Stop the paper chaos.
+				Every worker verified.<br class="hidden md:inline" /> Every leaf weighed.<br class="hidden lg:inline" /> Every number ready.
 			</h1>
 
 			<p
-				class="hero-sub mt-5 max-w-[520px] text-center font-['Inter'] text-[16px] leading-[1.6] text-[#71717A] md:text-[18px]"
+				class="hero-sub mt-5 max-w-[540px] text-center font-['Inter'] text-[16px] leading-[1.6] text-[#71717A] md:text-[18px]"
 			>
-				Attendance, leaf weights, payroll, factory, and daily reports in one simple system. Works
-				even when the internet fails.
+				Face recognition attendance, wireless smart scale, offline ERP, and cloud MIS dashboard - one system for the entire tea garden.
 			</p>
 
-			<div class="hero-cta mt-8 flex items-center gap-3">
+			<div class="hero-cta mt-8 flex w-full flex-col items-center gap-3 sm:w-auto sm:flex-row">
 				<a
 					href={demoHref}
-					class="flex items-center gap-2 rounded-full bg-[#1B5E3B] px-8 py-3.5 shadow-[0_4px_20px_rgba(27,94,59,0.25)] transition duration-150 hover:bg-[#144723] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 active:scale-[0.97]"
+					class="flex w-full items-center justify-center gap-2 rounded-full bg-[#1B5E3B] px-8 py-3.5 shadow-[0_4px_20px_rgba(27,94,59,0.25)] transition duration-150 hover:bg-[#144723] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 active:scale-[0.97] sm:w-auto"
 				>
 					<span class="font-['Inter'] text-[14px] leading-[18px] font-semibold text-white"
 						>Book Free Demo</span
@@ -457,7 +242,7 @@
 				</a>
 				<a
 					href="#features"
-					class="flex items-center rounded-full border border-[#E4E4E7] bg-white px-8 py-3.5 shadow-[0_1px_3px_rgba(0,0,0,0.04)] transition duration-150 hover:border-[#D4D4D8] hover:bg-[#FAFAF7] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 active:scale-[0.97]"
+					class="flex w-full items-center justify-center rounded-full border border-[#E4E4E7] bg-white px-8 py-3.5 shadow-[0_1px_3px_rgba(0,0,0,0.04)] transition duration-150 hover:border-[#D4D4D8] hover:bg-[#FAFAF7] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 active:scale-[0.97] sm:w-auto"
 				>
 					<span class="font-['Inter'] text-[14px] leading-[18px] font-semibold text-[#0A0A0A]"
 						>See How It Works</span
@@ -468,17 +253,17 @@
 			<div class="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-center">
 				<span
 					class="font-['Inter'] text-[12px] font-semibold tracking-[0.04em] text-[#1B5E3B]"
-					>20+ tea estates</span
+					>20+ tea estates across 7 regions</span
 				>
 				<span class="hidden h-1 w-1 rounded-full bg-[#C8DDB8] md:block"></span>
 				<span
 					class="font-['Inter'] text-[12px] font-semibold tracking-[0.04em] text-[#1B5E3B]"
-					>Stops buddy punching</span
+					>Face scan stops buddy punching</span
 				>
 				<span class="hidden h-1 w-1 rounded-full bg-[#C8DDB8] md:block"></span>
 				<span
 					class="font-['Inter'] text-[12px] font-semibold tracking-[0.04em] text-[#1B5E3B]"
-					>Setup by Sarbani Associates</span
+					>Works offline</span
 				>
 			</div>
 		</div>
@@ -500,7 +285,7 @@
 
 			<!-- Subtle ambient glow behind the dashboard for contrast/readability -->
 			<div
-				class="pointer-events-none absolute top-[30%] left-1/2 z-[1] h-[500px] w-[800px] -translate-x-1/2 rounded-full bg-white/50 blur-[120px]"
+				class="pointer-events-none absolute top-[30%] left-1/2 z-[1] h-[400px] w-[600px] -translate-x-1/2 rounded-full bg-white/40 blur-[100px]"
 			></div>
 
 			<!-- Layer 2: Product dashboard mockup -->
@@ -554,8 +339,8 @@
 			<!-- Layer 3: Foreground hills -->
 			<!-- Moves with parallax; fg.png is bottom-masked so the hills dissolve naturally -->
 			<div
-				class="hero-fg-group pointer-events-none absolute inset-x-0 bottom-0 z-20"
-				style="height: 55%; min-height: 280px;"
+				class="hero-fg-group pointer-events-none absolute inset-x-0 bottom-0 z-20 opacity-60"
+				style="height: 40%; min-height: 200px;"
 			>
 				<img
 					src="/fg.png"
@@ -766,7 +551,47 @@
 	</section>
 
 	<!-- ═══════════════════════════════════════════════════════════ -->
-	<!-- FEATURES BENTO (Obvious.ai style)                           -->
+	<!-- PROOF BAND - Named Tea Estates                              -->
+	<!-- ═══════════════════════════════════════════════════════════ -->
+	<section class="relative w-full overflow-hidden bg-[#0F2E0C] py-20 md:py-28" aria-labelledby="proof-heading">
+		<!-- Ambient glow -->
+		<div class="pointer-events-none absolute top-1/2 left-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#1B5E3B]/20 blur-[150px]"></div>
+
+		<div class="relative z-10 mx-auto max-w-[1100px] px-6 md:px-12">
+			<div class="mb-14 flex flex-col items-center text-center md:mb-16">
+				<span class="gsap-reveal mb-5 font-['Inter'] text-[12px] font-semibold tracking-[0.08em] text-[#4ADE80]/60 uppercase">Real Gardens, Real Results</span>
+				<h2 id="proof-heading" class="gsap-reveal max-w-[600px] font-['Plus_Jakarta_Sans'] text-[32px] leading-[1.08] font-extrabold tracking-[-0.04em] text-white md:text-[40px]" style="text-wrap: balance">
+					Trusted by 20+ tea estates across 7 regions.
+				</h2>
+			</div>
+
+			<div class="gsap-reveal grid grid-cols-2 gap-x-8 gap-y-6 md:grid-cols-4 lg:grid-cols-7">
+				{#each [
+					{ region: 'Darjeeling', estates: ['Simulbarie T.E.', 'Longview T.E.'] },
+					{ region: 'Dooars', estates: ['Rheabari T.E.', 'Mogulkata T.E.', 'Rahimpur T.E.'] },
+					{ region: 'Terai', estates: ['Atal T.E.', 'Naxalbari T.E.'] },
+					{ region: 'Assam', estates: ['Choibari T.E.', 'Chapar T.E.'] },
+					{ region: 'Coochbehar', estates: ['Tinbigha T.E.'] },
+					{ region: 'Uttar Dinajpur', estates: ['Chandan T.E.'] },
+					{ region: 'Jalpaiguri', estates: ['Himalayan Agro'] }
+				] as group}
+					<div class="flex flex-col gap-2">
+						<span class="font-['Inter'] text-[11px] font-bold tracking-[0.06em] text-[#4ADE80]/50 uppercase">{group.region}</span>
+						{#each group.estates as estate}
+							<span class="font-['Inter'] text-[13px] leading-[1.5] font-medium text-white/70">{estate}</span>
+						{/each}
+					</div>
+				{/each}
+			</div>
+
+			<div class="gsap-reveal mt-12 flex justify-center">
+				<span class="font-['Inter'] text-[13px] font-medium text-white/40">and more across Eastern India</span>
+			</div>
+		</div>
+	</section>
+
+	<!-- ═══════════════════════════════════════════════════════════ -->
+	<!-- FEATURES BENTO                                              -->
 	<!-- ═══════════════════════════════════════════════════════════ -->
 	<section
 		id="features"
@@ -1510,4 +1335,5 @@
 			</div>
 		</div>
 	</section>
+	</main>
 </div>
