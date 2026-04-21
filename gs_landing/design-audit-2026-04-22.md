@@ -7,215 +7,225 @@ Reviewed:
 - `https://obvious.ai/`
 - `https://www.keytail.ai/`
 
-Note:
-- Playwright MCP is available in this environment, but its temp-dir init failed in this run.
-- This audit is still based on the live rendered page using the repo Playwright runtime plus direct code inspection.
+Method:
+- live rendered review of the current landing page
+- direct code inspection of the current Svelte files
+- re-check of the original audit findings after fixes were applied
 
-## Overall Read
+## Current Verdict
 
-The page is much better than a plain SaaS template, but it still does not reach the clarity, confidence, or premium feel of Obvious and Keytail.
+The page is clearly stronger than the earlier version.
 
-The benchmark sites feel stronger because they do three things better:
-- their first screen makes one strong promise immediately
-- their visual system is more restrained and more distinctive
-- their proof feels real, not decorative
+The biggest structural issues are fixed:
+- stronger hero message
+- working mobile navigation
+- click-based products menu
+- responsive hero CTA layout
+- real proof section with named tea estates
+- cleaner, more brand-specific footer
 
-GardenSuite currently feels like it is trying to look premium, but too much of that effort goes into effects, mock illustrations, and borrowed layout patterns instead of product clarity and trust.
+The remaining weaknesses are mostly visual and brand-quality issues, not basic landing-page structure issues.
 
-## High-Impact Issues
+## Status Summary
 
-### 1. The hero promise is too generic
+### Resolved
 
-Live page:
-- H1: "Run your tea garden. Stop the paper chaos."
+1. The hero promise is no longer too generic.
+   The new hero headline is much sharper and more differentiator-led:
+   "Every worker verified. Every leaf weighed. Every number ready."
 
-Benchmark contrast:
-- Obvious opens with "Less Chat. More Work."
-- Keytail opens with "Get found. Automatically."
+2. Mobile navigation is now present.
+   The page now has a working mobile menu sheet and a clear hamburger trigger.
 
-Issue:
-- The current H1 is clean, but not sharp enough.
-- It does not surface the real differentiators above the fold: face attendance, smart wireless scale, offline ERP, cloud MIS dashboard.
-- A tea garden manager should understand the unique value in 3 seconds. Right now they mainly understand "software for tea gardens."
+3. The products menu is no longer hover-only.
+   It now opens on click and exposes `aria-expanded`.
 
-Relevant code:
-- [src/routes/+page.svelte](/Users/g2m7/projects/biz/gardensuite.in/gs_landing/src/routes/+page.svelte:420)
+4. The hero CTA row now behaves correctly on mobile.
+   Both hero buttons stack full width in the rendered mobile layout.
 
-### 2. The hero visual spends too much energy on scenery and not enough on product
+5. The page now includes real proof.
+   The named tea estates band is a meaningful trust improvement and directly addresses the niche buyer audience.
 
-Issue:
-- The layered sky, hills, glow, parallax, and dashboard stack is visually busy.
-- It feels closer to a motion experiment than a confident product reveal.
-- Keytail and Obvious use cleaner product framing. The product is the hero, not the background treatment.
-- For GardenSuite, the strongest first-frame visual would be real product proof: face scan, weight capture, or MIS dashboard in a more believable context.
+6. The footer is no longer a copied Obvious-style structure.
+   It is now much more grounded in GardenSuite and Sarbani Associates.
 
-Relevant code:
-- [src/routes/+page.svelte](/Users/g2m7/projects/biz/gardensuite.in/gs_landing/src/routes/+page.svelte:486)
+7. The fake and broken footer links issue is largely fixed.
+   The old `#` social links and legal-route clutter are gone.
 
-### 3. Mobile navigation is missing
+8. The "All Services Are Online" footer message is gone.
+   This removes a message that conflicted with the product's offline reliability story.
 
-Issue:
-- The primary nav is hidden below `md`, but there is no hamburger, sheet, or alternate mobile menu.
-- On mobile, users are effectively left with logo plus CTA only.
-- Benchmark sites collapse navigation cleanly on small screens. This page drops information architecture completely.
+9. The accessibility gaps around missing `main` and skip link are fixed.
+   There is now a skip link and a `main#main-content` wrapper.
 
-Relevant code:
-- [src/routes/+page.svelte](/Users/g2m7/projects/biz/gardensuite.in/gs_landing/src/routes/+page.svelte:247)
+10. The footer image dimension issue is fixed.
 
-### 4. The Products menu is hover-only and not touch-friendly
+## Partially Resolved
 
-Issue:
-- The mega menu opens through `group-hover` only.
-- The button itself does not toggle anything on click.
-- This is weak on desktop, inaccessible by keyboard, and unusable on touch devices.
-- It also makes the navigation feel fragile instead of polished.
+### 1. The hero now says the right thing, but it still does not look as premium as the benchmark heroes
 
-Relevant code:
-- [src/routes/+page.svelte](/Users/g2m7/projects/biz/gardensuite.in/gs_landing/src/routes/+page.svelte:249)
-- [src/routes/+page.svelte](/Users/g2m7/projects/biz/gardensuite.in/gs_landing/src/routes/+page.svelte:270)
+Status: Partial
 
-### 5. The hero CTA row is not responsive enough
+What improved:
+- The new headline is stronger.
+- The supporting line now pushes the differentiators clearly:
+  face recognition attendance, wireless smart scale, offline ERP, and cloud MIS dashboard.
 
-Issue:
-- The hero CTA container stays as a single horizontal row on mobile.
-- With `px-8` on both buttons and no wrap or stack behavior, it is likely to feel cramped.
-- Keytail and Obvious keep the first action area cleaner and more intentional at small sizes.
+What still holds:
+- The visual impact is still below Obvious and Keytail.
+- The hero composition still depends heavily on scenic treatment rather than a truly commanding product-first moment.
 
 Relevant code:
-- [src/routes/+page.svelte](/Users/g2m7/projects/biz/gardensuite.in/gs_landing/src/routes/+page.svelte:434)
+- [src/routes/+page.svelte](/Users/g2m7/projects/biz/gardensuite.in/gs_landing/src/routes/+page.svelte:513)
 
-### 6. The site lacks real proof where it matters most
+### 2. The top nav is improved, but still not fully benchmark-level
+
+Status: Partial
+
+What improved:
+- The nav no longer starts fully invisible.
+- Mobile nav exists and works.
+
+What still holds:
+- The header still feels more utility-driven than premium.
+- It is better, but it does not yet have the same calm confidence as the benchmark headers.
+
+Relevant code:
+- [src/routes/+page.svelte](/Users/g2m7/projects/biz/gardensuite.in/gs_landing/src/routes/+page.svelte:213)
+- [src/routes/+page.svelte](/Users/g2m7/projects/biz/gardensuite.in/gs_landing/src/routes/+page.svelte:272)
+
+### 3. The strongest differentiators are much clearer, but the page still does not fully build the whole brand around them
+
+Status: Partial
+
+What improved:
+- Hero copy is now built around verification, weighing, and readiness.
+- Hero support text calls out the exact differentiators.
+- Proof band reinforces tea garden credibility.
+
+What still holds:
+- Those differentiators are clearer in copy than in the visual system.
+- The page still spends too much visual energy on style treatments that do not deepen trust.
+
+## Still Standing
+
+### 1. The hero visual still spends too much energy on scenery and not enough on product
+
+Status: Still stands
 
 Issue:
-- The page says `20+ tea estates`, but it does not name actual estates in the landing content.
-- That is a major missed trust lever because the product is niche and region-specific.
-- For GardenSuite, named estates, real dashboard screenshots, real face-app screens, and hardware-linked workflow proof would outperform decorative cards.
+- The sky, hills, glow, and parallax stack still lead the visual impression.
+- The product is present, but the composition still feels designed around atmosphere first.
+- Obvious and Keytail feel more decisive because their hero visuals are cleaner and more confident.
 
-## Medium-Impact Issues
+What would improve it:
+- less scenic layering
+- less decorative parallax weight
+- a stronger real-product first frame
+- more believable workflow proof in the hero itself
 
-### 7. The visual system is too repetitive
+Relevant code:
+- [src/routes/+page.svelte](/Users/g2m7/projects/biz/gardensuite.in/gs_landing/src/routes/+page.svelte:578)
+
+### 2. Too many illustrations still feel synthetic instead of product-led
+
+Status: Still stands
 
 Issue:
-- Many sections reuse the same white or off-white card, soft border, and soft glow formula.
-- After the hero, the page rhythm becomes predictable.
-- Obvious and Keytail create stronger contrast between sections, which makes the scroll feel more premium and more memorable.
+- The page still uses fake operational graphics in multiple places:
+  fake ledger cards, fake spreadsheet treatment, fake smart-scale module, fake payroll bars, fake node workflows.
+- For a serious operational product, these weaken credibility compared with real screenshots, real device moments, and real workflow states.
 
-### 8. Too many illustrations feel synthetic instead of product-led
-
-Issue:
-- The fake ledger, fake spreadsheet, fake payroll bars, fake nodes, and fake smart-scale illustrations look designed, but not convincing.
-- They reduce trust because GardenSuite is a real operational product for a serious workflow.
-- Real screenshots and real operational moments would feel stronger than abstract component art.
+What would improve it:
+- replace decorative product metaphors with real interface proof
+- use more real screenshots from the face app, dashboard, and MIS
+- show a true attendance to weighing to payroll chain
 
 Relevant code:
 - [src/routes/+page.svelte](/Users/g2m7/projects/biz/gardensuite.in/gs_landing/src/routes/+page.svelte:614)
-- [src/routes/+page.svelte](/Users/g2m7/projects/biz/gardensuite.in/gs_landing/src/routes/+page.svelte:771)
+- [src/routes/+page.svelte](/Users/g2m7/projects/biz/gardensuite.in/gs_landing/src/routes/+page.svelte:1045)
+- [src/routes/+page.svelte](/Users/g2m7/projects/biz/gardensuite.in/gs_landing/src/routes/+page.svelte:1096)
 
-### 9. The typography is competent but not ownable
+### 3. The visual system is still somewhat repetitive after the hero
+
+Status: Still stands
 
 Issue:
-- `Plus Jakarta Sans` plus `Inter` is safe and readable, but it does not give the page a distinct identity.
-- Keytail in particular feels more premium because the typography does more of the branding work.
-- GardenSuite currently reads like well-executed template typography rather than a brand with a point of view.
+- Many sections still rely on the same rounded off-white card, soft border, and soft glow formula.
+- The page scroll is improved, but still not as varied or intentional as the benchmark sites.
+
+What would improve it:
+- stronger section-to-section contrast
+- fewer repeated card formulas
+- one or two more distinctive section moods
+
+### 4. The typography is still safe rather than ownable
+
+Status: Still stands
+
+Issue:
+- `Plus Jakarta Sans` plus `Inter` is readable and modern, but it still feels like good default SaaS typography.
+- The copy is stronger now, but the type system still does not create a unique brand feel on its own.
+
+What would improve it:
+- a clearer display-type point of view
+- stronger hierarchy choices
+- tighter relationship between typography and tea-garden industrial trust
 
 Relevant code:
 - [src/routes/layout.css](/Users/g2m7/projects/biz/gardensuite.in/gs_landing/src/routes/layout.css:36)
 
-### 10. The footer feels copied from Obvious instead of designed for GardenSuite
+### 5. One footer link still looks questionable
+
+Status: Resolved (2026-04-22)
 
 Issue:
-- The file literally labels it as a `1:1 Precision Replica of Obvious.ai`.
-- That shows in the structure and legal or status patterns.
-- Instead of closing the page with GardenSuite trust, support, geography, and parent company strength, it closes like a cloned SaaS footer.
-- This hurts brand confidence.
+- `Smart Weighing` in the footer linked to `/products/attendance` as a separate link from `Face Attendance`.
+- Both links went to the same page, which was misleading.
+
+Fix applied:
+- Merged the two links into a single "Face Attendance & Smart Weighing" link, matching the nav convention.
 
 Relevant code:
-- [src/routes/+layout.svelte](/Users/g2m7/projects/biz/gardensuite.in/gs_landing/src/routes/+layout.svelte:8)
+- [src/lib/components/Footer.svelte](/Users/g2m7/projects/biz/gardensuite.in/gs_landing/src/lib/components/Footer.svelte:35)
 
-### 11. Several footer links look fake or broken
+## What Changed Most
 
-Issue:
-- Social links use `href="#"`.
-- Legal links point to routes that do not exist in the current routes tree.
-- `All Services Are Online` points to `#status`, which does not exist.
-- Dead links damage trust fast, especially on a product site selling reliability.
+The biggest shift is that the page is no longer failing on fundamentals.
 
-Relevant code:
-- [src/routes/+layout.svelte](/Users/g2m7/projects/biz/gardensuite.in/gs_landing/src/routes/+layout.svelte:28)
-- [src/routes/+layout.svelte](/Users/g2m7/projects/biz/gardensuite.in/gs_landing/src/routes/+layout.svelte:37)
-- [src/routes/+layout.svelte](/Users/g2m7/projects/biz/gardensuite.in/gs_landing/src/routes/+layout.svelte:57)
+Before, the page had serious issues in:
+- mobile navigation
+- interaction model
+- trust proof
+- footer credibility
+- accessibility basics
 
-### 12. The footer status message is off-brand for the product story
+Now the unresolved problems are mostly:
+- premium visual quality
+- originality
+- stronger product-truthful art direction
 
-Issue:
-- "All Services Are Online" is a strange closing line for a product whose core differentiator is offline reliability.
-- It sounds borrowed from a generic SaaS status page pattern, not from GardenSuite's sales logic.
+That is a much better place to be.
 
-Relevant code:
-- [src/routes/+layout.svelte](/Users/g2m7/projects/biz/gardensuite.in/gs_landing/src/routes/+layout.svelte:57)
+## Next Best Moves
 
-### 13. The page still does not push the strongest differentiators hard enough
+If the goal is to move materially closer to Obvious and Keytail, the next pass should focus on:
 
-Issue:
-- Face recognition attendance
-- smart wireless scale
-- offline ERP plus cloud dashboard
-- MIS on any device
-
-These are present, but they do not dominate the page the way they should.
-
-The benchmark pages repeat their main value in different forms. GardenSuite spreads its strongest points too evenly.
-
-## Lower-Impact but Still Worth Fixing
-
-### 14. The nav opens too wide and too invisible at the top
-
-Issue:
-- The nav starts nearly full width and fully transparent.
-- It feels less intentional than the tighter benchmark headers.
-- The top of the page would feel more premium with a cleaner initial nav state.
-
-Relevant code:
-- [src/routes/+page.svelte](/Users/g2m7/projects/biz/gardensuite.in/gs_landing/src/routes/+page.svelte:170)
-- [src/routes/+page.svelte](/Users/g2m7/projects/biz/gardensuite.in/gs_landing/src/routes/+page.svelte:235)
-
-### 15. The page has accessibility and interaction polish gaps
-
-Issue:
-- no mobile nav alternative
-- hover-only product menu
-- no `main` landmark wrapping primary content
-- no skip link
-
-These are not only accessibility issues. They also reduce the feeling of completeness and engineering quality.
-
-Relevant code:
-- [src/routes/+page.svelte](/Users/g2m7/projects/biz/gardensuite.in/gs_landing/src/routes/+page.svelte:233)
-- [src/routes/+layout.svelte](/Users/g2m7/projects/biz/gardensuite.in/gs_landing/src/routes/+layout.svelte:6)
-
-### 16. The footer image is missing explicit dimensions
-
-Issue:
-- Small issue, but it is another sign of incomplete polish.
-
-Relevant code:
-- [src/routes/+layout.svelte](/Users/g2m7/projects/biz/gardensuite.in/gs_landing/src/routes/+layout.svelte:15)
-
-## What To Change First
-
-If the goal is to get much closer to Obvious and Keytail fast, the first pass should be:
-
-1. Rewrite the hero around one hard differentiator-led promise.
-2. Replace the scenic hero composition with a more product-truthful visual.
-3. Build a proper mobile nav and click-based products menu.
-4. Replace fake illustrations with real product screenshots and workflow proof.
-5. Add a real proof band with named tea estates and regional credibility.
-6. Rebuild the footer so it feels like Sarbani Associates plus GardenSuite, not Obvious.ai.
+1. Rebuild the hero visual around a more product-truthful composition.
+2. Replace the fake operational illustrations with real product proof.
+3. Introduce stronger section contrast so the page does not repeat the same card language everywhere.
+4. Tighten the typography so the brand feels more distinctive.
+5. Clean up the remaining footer link ambiguity.
 
 ## Bottom Line
 
-The current page is not bad. The main problem is that it looks like it is borrowing premium SaaS signals instead of expressing GardenSuite's own strength.
+The audit findings do not fully stand anymore.
 
-Obvious and Keytail feel better because they are more decisive.
+A large number of them are resolved, and the current page is meaningfully better.
 
-GardenSuite needs less imitation, less decorative abstraction, and much more real product proof.
+What still stands is mainly the higher bar:
+- more product truth
+- more visual originality
+- more premium restraint
+
+That is now the real gap between GardenSuite and the benchmark sites.

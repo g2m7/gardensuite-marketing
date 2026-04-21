@@ -35,12 +35,7 @@
 					<a
 						href="/products/attendance"
 						class="font-['Inter'] text-[13px] font-medium text-[#52525B] transition-colors hover:text-[#1A5C2E]"
-						>Face Attendance</a
-					>
-					<a
-						href="/products/attendance"
-						class="font-['Inter'] text-[13px] font-medium text-[#52525B] transition-colors hover:text-[#1A5C2E]"
-						>Smart Weighing</a
+						>Face Attendance &amp; Smart Weighing</a
 					>
 					<a
 						href="/products/payroll"
