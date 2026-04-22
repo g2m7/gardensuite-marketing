@@ -53,10 +53,10 @@
 	});
 
 	let navStyles = $derived(`
-		background-color: rgba(255, 255, 255, ${scrollAnimated ? 0.15 + navProgress * 0.85 : 0.8});
-		backdrop-filter: blur(${navProgress * 24 + 12}px);
-		-webkit-backdrop-filter: blur(${navProgress * 24 + 12}px);
-		border-bottom: 1px solid rgba(0, 0, 0, ${navProgress * 0.05 + 0.02});
+		background-color: rgba(255, 255, 255, ${scrollAnimated ? navProgress : 0.8});
+		backdrop-filter: blur(${scrollAnimated ? navProgress * 24 : 12}px);
+		-webkit-backdrop-filter: blur(${scrollAnimated ? navProgress * 24 : 12}px);
+		border-bottom: 1px solid rgba(0, 0, 0, ${scrollAnimated ? navProgress * 0.05 : 0.05});
 		box-shadow: 0 ${navProgress * 8}px ${navProgress * 30}px rgba(0, 0, 0, ${navProgress * 0.04});
 	`);
 </script>

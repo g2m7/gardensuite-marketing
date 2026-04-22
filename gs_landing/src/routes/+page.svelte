@@ -191,37 +191,27 @@
 		<div
 			class="hero-text-content relative z-20 flex flex-col items-center px-6 pt-28 md:pt-32 lg:pt-36"
 		>
-			<div
-				class="hero-badge flex items-center gap-2 rounded-full border border-[#DCFCE7] bg-[#F0FDF4] py-1.5 pr-3.5 pl-2.5 shadow-[0_2px_10px_rgba(27,94,59,0.05)]"
-			>
-				<span
-					class="rounded-full bg-[#1B5E3B] px-2 py-0.5 font-['Inter'] text-[11px] leading-[14px] font-bold text-white"
-					>TRUSTED</span
-				>
-				<span class="font-['Inter'] text-[13px] leading-4 font-medium text-[#1B5E3B]"
-					>By tea gardens and Sarbani Associates</span
-				>
-			</div>
+
 
 			<h1
-				class="hero-h1 mt-7 max-w-4xl text-center font-['Plus_Jakarta_Sans'] text-[36px] leading-[1.05] font-extrabold tracking-[-0.04em] text-[#0A0A0A] md:text-[60px] lg:text-[72px]"
-				style="text-wrap: balance;"
+				class="hero-h1 mx-auto max-w-5xl text-center font-['Plus_Jakarta_Sans'] text-[3rem] font-medium leading-[0.95] tracking-tighter text-[#0A0A0A] sm:text-[3.5rem] md:text-[4.5rem] lg:text-[5.5rem]"
 			>
-				Every worker verified.<br class="hidden md:inline" /> Every leaf weighed.<br class="hidden lg:inline" /> Every number ready.
+				Run your tea garden.<br />Not your paperwork.
 			</h1>
 
 			<p
-				class="hero-sub mt-5 max-w-[540px] text-center font-['Inter'] text-[16px] leading-[1.6] text-[#71717A] md:text-[18px]"
+				class="hero-sub mx-auto mt-8 max-w-xl text-center font-['Inter'] text-xl leading-tight tracking-[-0.01em] text-[#71717A] sm:text-2xl"
+				style="text-wrap: balance;"
 			>
-				Face recognition attendance, wireless smart scale, offline ERP, and cloud MIS dashboard - one system for the entire tea garden.
+				The complete offline software for face attendance, smart weighing, and automated payroll.
 			</p>
 
-			<div class="hero-cta mt-8 flex w-full flex-col items-center gap-3 sm:w-auto sm:flex-row">
+			<div class="hero-cta mt-8 flex w-full flex-col items-center justify-center gap-3 sm:w-auto sm:flex-row">
 				<a
 					href={demoHref}
-					class="flex w-full items-center justify-center gap-2 rounded-full bg-[#1B5E3B] px-8 py-3.5 shadow-[0_4px_20px_rgba(27,94,59,0.25)] transition duration-150 hover:bg-[#144723] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 active:scale-[0.97] sm:w-auto"
+					class="flex w-full items-center justify-center gap-2 rounded-full bg-[#1B5E3B] px-6 py-4 shadow-[0_4px_20px_rgba(27,94,59,0.25)] transition duration-150 hover:bg-[#144723] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 active:scale-[0.97] sm:w-auto"
 				>
-					<span class="font-['Inter'] text-[14px] leading-[18px] font-semibold text-white"
+					<span class="font-['Inter'] text-sm font-medium text-white"
 						>Book Free Demo</span
 					>
 					<svg
@@ -242,30 +232,15 @@
 				</a>
 				<a
 					href="#features"
-					class="flex w-full items-center justify-center rounded-full border border-[#E4E4E7] bg-white px-8 py-3.5 shadow-[0_1px_3px_rgba(0,0,0,0.04)] transition duration-150 hover:border-[#D4D4D8] hover:bg-[#FAFAF7] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 active:scale-[0.97] sm:w-auto"
+					class="flex w-full items-center justify-center rounded-full border border-[#E4E4E7] bg-white px-6 py-4 shadow-[0_1px_3px_rgba(0,0,0,0.04)] transition duration-150 hover:border-[#D4D4D8] hover:bg-[#FAFAF7] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 active:scale-[0.97] sm:w-auto"
 				>
-					<span class="font-['Inter'] text-[14px] leading-[18px] font-semibold text-[#0A0A0A]"
+					<span class="font-['Inter'] text-sm font-medium text-[#0A0A0A]"
 						>See How It Works</span
 					>
 				</a>
 			</div>
 
-			<div class="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-center">
-				<span
-					class="font-['Inter'] text-[12px] font-semibold tracking-[0.04em] text-[#1B5E3B]"
-					>20+ tea estates across 7 regions</span
-				>
-				<span class="hidden h-1 w-1 rounded-full bg-[#C8DDB8] md:block"></span>
-				<span
-					class="font-['Inter'] text-[12px] font-semibold tracking-[0.04em] text-[#1B5E3B]"
-					>Face scan stops buddy punching</span
-				>
-				<span class="hidden h-1 w-1 rounded-full bg-[#C8DDB8] md:block"></span>
-				<span
-					class="font-['Inter'] text-[12px] font-semibold tracking-[0.04em] text-[#1B5E3B]"
-					>Works offline</span
-				>
-			</div>
+
 		</div>
 
 		<!-- Visuals container: Keytail-style 3D parallax sandwich -->
