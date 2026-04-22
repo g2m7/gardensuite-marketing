@@ -34,71 +34,31 @@
 		}
 	}
 
-	// Scroll-driven nav animation (homepage only)
 	let navProgress = $state(0);
-	let navScrollEndRatio = 0.3;
-	let targetNavWidth = $state(0);
-	let startNavWidth = $state(1200);
-	let startNavPadding = $state(40);
 
 	$effect(() => {
-		if (!scrollAnimated) return;
-
-		const measureWidth = () => {
-			const container = document.querySelector('.ps-section > div') as HTMLElement;
-			if (container) {
-				const style = window.getComputedStyle(container);
-				const pl = parseFloat(style.paddingLeft);
-				const pr = parseFloat(style.paddingRight);
-				targetNavWidth = container.clientWidth - pl - pr;
-			} else {
-				targetNavWidth = Math.min(window.innerWidth - 48, 1100);
-			}
-			startNavWidth = Math.min(window.innerWidth, 1400);
-			startNavPadding = window.innerWidth >= 768 ? 40 : 24;
-		};
-
 		const handler = () => {
-			const hero = document.querySelector('.hero-parallax') as HTMLElement;
-			const hHeight = hero ? hero.offsetHeight : 500;
-			const endScroll = hHeight * navScrollEndRatio;
-
-			let p = window.scrollY / endScroll;
+			let p = window.scrollY / 100;
 			if (p < 0) p = 0;
 			if (p > 1) p = 1;
 			navProgress = p;
 		};
 
 		window.addEventListener('scroll', handler, { passive: true });
-		window.addEventListener('resize', measureWidth, { passive: true });
-
-		measureWidth();
 		handler();
 
 		return () => {
 			window.removeEventListener('scroll', handler);
-			window.removeEventListener('resize', measureWidth);
 		};
 	});
 
-	let currentNavWidth = $derived(startNavWidth - (startNavWidth - targetNavWidth) * navProgress);
-	let currentNavPadding = $derived(startNavPadding - (startNavPadding - 16) * navProgress);
-
-	let navStyles = $derived(scrollAnimated
-		? `
-			background-color: rgba(255, 255, 255, ${0.15 + navProgress * 0.7});
-			backdrop-filter: blur(${navProgress * 24}px);
-			-webkit-backdrop-filter: blur(${navProgress * 24}px);
-			width: ${currentNavWidth}px;
-			top: ${navProgress * 16}px;
-			border-radius: ${navProgress * 36}px;
-			padding-left: ${currentNavPadding}px;
-			padding-right: ${currentNavPadding}px;
-			box-shadow: 0 ${navProgress * 8}px ${navProgress * 30}px rgba(0, 0, 0, ${navProgress * 0.08});
-			border-color: rgba(0, 0, 0, ${navProgress * 0.08});
-		`
-		: ''
-	);
+	let navStyles = $derived(`
+		background-color: rgba(255, 255, 255, ${scrollAnimated ? 0.15 + navProgress * 0.85 : 0.8});
+		backdrop-filter: blur(${navProgress * 24 + 12}px);
+		-webkit-backdrop-filter: blur(${navProgress * 24 + 12}px);
+		border-bottom: 1px solid rgba(0, 0, 0, ${navProgress * 0.05 + 0.02});
+		box-shadow: 0 ${navProgress * 8}px ${navProgress * 30}px rgba(0, 0, 0, ${navProgress * 0.04});
+	`);
 </script>
 
 <!-- svelte-ignore a11y_click_events_have_key_events -->
@@ -113,47 +73,23 @@
 	</a>
 
 	<!-- Desktop Nav -->
-	{#if scrollAnimated}
-		<!-- Homepage: animated pill nav -->
-		<nav
-			class="fixed left-1/2 z-[60] flex -translate-x-1/2 items-center justify-between border border-solid py-4"
-			style={navStyles}
-			aria-label="Main navigation"
-		>
-			{#snippet navContent()}
-				<a href="/" class="flex items-center gap-2" aria-label="GardenSuite Home">
-					<GsLogoAnimation class="h-7 w-auto shrink-0" />
-					<span
-						class="font-['Plus_Jakarta_Sans',system-ui,sans-serif] text-[18px] leading-[22px] font-bold tracking-[-0.01em] text-[#0A0A0A]"
-					>
-						GardenSuite
-					</span>
-				</a>
-			{/snippet}
-			{@render navContent()}
-			{@render desktopLinks()}
-			{@render desktopCta()}
-			{@render mobileHamburger()}
-		</nav>
-	{:else}
-		<!-- Subpages: simple sticky nav -->
-		<nav
-			class="sticky top-0 z-50 flex w-full items-center justify-between border-b border-[#0000000A] bg-[#FAFAF7]/80 px-6 py-4 backdrop-blur-xl md:px-14"
-			aria-label="Main navigation"
-		>
-			<a href="/" class="flex items-center gap-2" aria-label="GardenSuite Home">
-				<GsLogoAnimation class="h-7 w-auto shrink-0" />
-				<span
-					class="font-['Plus_Jakarta_Sans',system-ui,sans-serif] text-[18px] leading-[22px] font-bold tracking-[-0.01em] text-[#0A0A0A]"
-				>
-					GardenSuite
-				</span>
-			</a>
-			{@render desktopLinks()}
-			{@render desktopCta()}
-			{@render mobileHamburger()}
-		</nav>
-	{/if}
+	<nav
+		class="{scrollAnimated ? 'fixed' : 'sticky'} top-0 z-[60] flex w-full items-center justify-between px-6 py-4 transition-colors md:px-14"
+		style={navStyles}
+		aria-label="Main navigation"
+	>
+		<a href="/" class="flex items-center gap-2" aria-label="GardenSuite Home">
+			<GsLogoAnimation class="h-7 w-auto shrink-0" />
+			<span
+				class="font-['Plus_Jakarta_Sans',system-ui,sans-serif] text-[18px] leading-[22px] font-bold tracking-[-0.01em] text-[#0A0A0A]"
+			>
+				GardenSuite
+			</span>
+		</a>
+		{@render desktopLinks()}
+		{@render desktopCta()}
+		{@render mobileHamburger()}
+	</nav>
 
 	<!-- Mobile Nav Sheet -->
 	{#if mobileNavOpen}
