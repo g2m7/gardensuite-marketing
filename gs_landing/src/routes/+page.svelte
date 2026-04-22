@@ -105,28 +105,9 @@
 			});
 		}
 
-		// ── Generic reveals ──
-		gsap.utils.toArray<HTMLElement>('.gsap-reveal').forEach((el) => {
-			gsap.from(el, {
-				opacity: 0,
-				y: 40,
-				duration: 0.7,
-				ease: 'power2.out',
-				scrollTrigger: { trigger: el, start: 'top 85%' }
-			});
-		});
 
-		// ── Feature cards stagger ──
-		gsap.utils.toArray<HTMLElement>('.feat-card').forEach((card, i) => {
-			gsap.from(card, {
-				opacity: 0,
-				y: 50,
-				duration: 0.7,
-				delay: i * 0.08,
-				ease: 'power2.out',
-				scrollTrigger: { trigger: card, start: 'top 85%' }
-			});
-		});
+
+
 
 		ready = true;
 	});
@@ -353,18 +334,18 @@
 			class="relative z-10 mx-auto flex max-w-[1100px] flex-col items-center px-6 text-center md:px-12"
 		>
 			<span
-				class="gsap-reveal mb-6 text-[12px] font-semibold tracking-[0.08em] text-[#A1A1AA] uppercase"
+				class="mb-6 text-[12px] font-semibold tracking-[0.08em] text-[#A1A1AA] uppercase"
 				>The Old Way</span
 			>
 			<h2
 				id="problem-heading"
-				class="gsap-reveal max-w-[680px] text-[36px] leading-[1.08] font-extrabold tracking-[-0.04em] text-[#0A0A0A] md:text-[44px] lg:text-[48px]"
+				class="max-w-[680px] text-[36px] leading-[1.08] font-extrabold tracking-[-0.04em] text-[#0A0A0A] md:text-[44px] lg:text-[48px]"
 				style="text-wrap: balance"
 			>
 				When problems hit,<br class="hidden md:inline" /> paper makes them worse.
 			</h2>
 			<p
-				class="gsap-reveal mt-8 max-w-[520px] text-[15px] leading-[1.7] text-[#71717A] md:text-[16px]"
+				class="mt-8 max-w-[520px] text-[15px] leading-[1.7] text-[#71717A] md:text-[16px]"
 			>
 				Labour trouble, bad weather, and factory stoppages already slow the day. Paper registers and
 				broken Excel sheets slow it even more.
@@ -372,7 +353,7 @@
 
 			<!-- Old Way Illustration -->
 			<div
-				class="gsap-reveal relative mt-20 flex h-[250px] w-full justify-center md:mt-24 md:h-[300px]"
+				class="relative mt-20 flex h-[250px] w-full justify-center md:mt-24 md:h-[300px]"
 			>
 				<div
 					class="relative -ml-12 flex h-full w-full max-w-[600px] items-center justify-center md:-ml-0"
@@ -446,7 +427,7 @@
 			<div class="mt-20 grid w-full grid-cols-1 gap-5 md:mt-24 md:grid-cols-3">
 				<!-- Minimal problem cards -->
 				<div
-					class="gsap-reveal flex flex-col items-center rounded-3xl border border-[#F0F0F0] bg-gradient-to-br from-white to-[#FAFAF7] p-8 text-center shadow-[0_2px_12px_rgba(0,0,0,0.02)]"
+					class="flex flex-col items-center rounded-3xl border border-[#F0F0F0] bg-gradient-to-br from-white to-[#FAFAF7] p-8 text-center shadow-[0_2px_12px_rgba(0,0,0,0.02)]"
 				>
 					<div
 						class="mb-6 flex size-14 items-center justify-center rounded-2xl bg-white shadow-[0_4px_16px_rgba(0,0,0,0.04)]"
@@ -468,7 +449,7 @@
 					</p>
 				</div>
 				<div
-					class="gsap-reveal flex flex-col items-center rounded-3xl border border-[#F0F0F0] bg-gradient-to-br from-white to-[#FAFAF7] p-8 text-center shadow-[0_2px_12px_rgba(0,0,0,0.02)]"
+					class="flex flex-col items-center rounded-3xl border border-[#F0F0F0] bg-gradient-to-br from-white to-[#FAFAF7] p-8 text-center shadow-[0_2px_12px_rgba(0,0,0,0.02)]"
 				>
 					<div
 						class="mb-6 flex size-14 items-center justify-center rounded-2xl bg-white shadow-[0_4px_16px_rgba(0,0,0,0.04)]"
@@ -495,7 +476,7 @@
 					</p>
 				</div>
 				<div
-					class="gsap-reveal flex flex-col items-center rounded-3xl border border-[#F0F0F0] bg-gradient-to-br from-white to-[#FAFAF7] p-8 text-center shadow-[0_2px_12px_rgba(0,0,0,0.02)]"
+					class="flex flex-col items-center rounded-3xl border border-[#F0F0F0] bg-gradient-to-br from-white to-[#FAFAF7] p-8 text-center shadow-[0_2px_12px_rgba(0,0,0,0.02)]"
 				>
 					<div
 						class="mb-6 flex size-14 items-center justify-center rounded-2xl bg-white shadow-[0_4px_16px_rgba(0,0,0,0.04)]"
@@ -533,13 +514,13 @@
 
 		<div class="relative z-10 mx-auto max-w-[1100px] px-6 md:px-12">
 			<div class="mb-14 flex flex-col items-center text-center md:mb-16">
-				<span class="gsap-reveal mb-5 text-[12px] font-semibold tracking-[0.08em] text-[#4ADE80]/60 uppercase">Real Gardens, Real Results</span>
-				<h2 id="proof-heading" class="gsap-reveal max-w-[600px] text-[32px] leading-[1.08] font-extrabold tracking-[-0.04em] text-white md:text-[40px]" style="text-wrap: balance">
+				<span class="mb-5 text-[12px] font-semibold tracking-[0.08em] text-[#4ADE80]/60 uppercase">Real Gardens, Real Results</span>
+				<h2 id="proof-heading" class="max-w-[600px] text-[32px] leading-[1.08] font-extrabold tracking-[-0.04em] text-white md:text-[40px]" style="text-wrap: balance">
 					Trusted by 20+ tea estates across 7 regions.
 				</h2>
 			</div>
 
-			<div class="gsap-reveal grid grid-cols-2 gap-x-8 gap-y-6 md:grid-cols-4 lg:grid-cols-7">
+			<div class="grid grid-cols-2 gap-x-8 gap-y-6 md:grid-cols-4 lg:grid-cols-7">
 				{#each [
 					{ region: 'Darjeeling', estates: ['Simulbarie T.E.', 'Longview T.E.'] },
 					{ region: 'Dooars', estates: ['Rheabari T.E.', 'Mogulkata T.E.', 'Rahimpur T.E.'] },
@@ -558,7 +539,7 @@
 				{/each}
 			</div>
 
-			<div class="gsap-reveal mt-12 flex justify-center">
+			<div class="mt-12 flex justify-center">
 				<span class="text-[13px] font-medium text-white/40">and more across Eastern India</span>
 			</div>
 		</div>
@@ -583,18 +564,18 @@
 		<div class="relative z-10 mx-auto max-w-[1100px] px-6 md:px-12">
 			<div class="mb-20 flex flex-col items-center text-center md:mb-28">
 				<span
-					class="gsap-reveal mb-6 text-[12px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase"
+					class="mb-6 text-[12px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase"
 					>The Solution</span
 				>
 				<h2
 					id="feat-heading"
-					class="gsap-reveal max-w-[680px] text-[36px] leading-[1.08] font-extrabold tracking-[-0.04em] text-[#0A0A0A] md:text-[44px] lg:text-[48px]"
+					class="max-w-[680px] text-[36px] leading-[1.08] font-extrabold tracking-[-0.04em] text-[#0A0A0A] md:text-[44px] lg:text-[48px]"
 					style="text-wrap: balance"
 				>
 					One system.<br class="hidden md:inline" /> No chasing papers.
 				</h2>
 				<p
-					class="gsap-reveal mt-8 max-w-[520px] text-[15px] leading-[1.7] text-[#71717A] md:text-[16px]"
+					class="mt-8 max-w-[520px] text-[15px] leading-[1.7] text-[#71717A] md:text-[16px]"
 				>
 					Attendance, weights, payroll, factory, stores, and the daily report all stay connected.
 				</p>
@@ -1084,18 +1065,18 @@
 		>
 			<div class="shrink-0 md:sticky md:top-32 md:w-[45%]">
 				<span
-					class="gsap-reveal mb-6 inline-block text-[12px] font-semibold tracking-[0.08em] text-[#A1A1AA] uppercase"
+					class="mb-6 inline-block text-[12px] font-semibold tracking-[0.08em] text-[#A1A1AA] uppercase"
 					>Why Managers Trust GardenSuite</span
 				>
 				<h2
 					id="why-heading"
-					class="gsap-reveal text-[36px] leading-[1.08] font-extrabold tracking-[-0.04em] text-[#0A0A0A] md:text-[44px] lg:text-[48px]"
+					class="text-[36px] leading-[1.08] font-extrabold tracking-[-0.04em] text-[#0A0A0A] md:text-[44px] lg:text-[48px]"
 					style="text-wrap: balance"
 				>
 					Built only for tea gardens.<br /> Backed by Sarbani Associates.
 				</h2>
 				<p
-					class="gsap-reveal mt-8 text-[15px] leading-[1.7] text-[#71717A] md:text-[16px]"
+					class="mt-8 text-[15px] leading-[1.7] text-[#71717A] md:text-[16px]"
 				>
 					GardenSuite is built and supported by Sarbani Associates. Trusted by 20+ tea estates
 					across Assam, Dooars, Terai, Darjeeling, Coochbehar, Uttar Dinajpur, and Jalpaiguri.
@@ -1103,7 +1084,7 @@
 			</div>
 			<div class="flex flex-col gap-6 md:w-[55%]">
 				<div
-					class="gsap-reveal flex gap-6 rounded-[24px] border border-[#F0F0F0] bg-gradient-to-br from-[#FAFAF7] to-[#F5F5F0] p-8 shadow-[0_2px_12px_rgba(0,0,0,0.02)]"
+					class="flex gap-6 rounded-[24px] border border-[#F0F0F0] bg-gradient-to-br from-[#FAFAF7] to-[#F5F5F0] p-8 shadow-[0_2px_12px_rgba(0,0,0,0.02)]"
 				>
 					<div
 						class="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-white shadow-[0_4px_16px_rgba(0,0,0,0.04)]"
@@ -1128,7 +1109,7 @@
 					</div>
 				</div>
 				<div
-					class="gsap-reveal flex gap-6 rounded-[24px] border border-[#F0F0F0] bg-gradient-to-br from-[#FAFAF7] to-[#F5F5F0] p-8 shadow-[0_2px_12px_rgba(0,0,0,0.02)]"
+					class="flex gap-6 rounded-[24px] border border-[#F0F0F0] bg-gradient-to-br from-[#FAFAF7] to-[#F5F5F0] p-8 shadow-[0_2px_12px_rgba(0,0,0,0.02)]"
 				>
 					<div
 						class="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-white shadow-[0_4px_16px_rgba(0,0,0,0.04)]"
@@ -1156,7 +1137,7 @@
 					</div>
 				</div>
 				<div
-					class="gsap-reveal flex gap-6 rounded-[24px] border border-[#F0F0F0] bg-gradient-to-br from-[#FAFAF7] to-[#F5F5F0] p-8 shadow-[0_2px_12px_rgba(0,0,0,0.02)]"
+					class="flex gap-6 rounded-[24px] border border-[#F0F0F0] bg-gradient-to-br from-[#FAFAF7] to-[#F5F5F0] p-8 shadow-[0_2px_12px_rgba(0,0,0,0.02)]"
 				>
 					<div
 						class="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-white shadow-[0_4px_16px_rgba(0,0,0,0.04)]"
@@ -1201,7 +1182,7 @@
 		>
 			<h2
 				id="faq-heading"
-				class="gsap-reveal text-center text-[36px] leading-[1.08] font-extrabold tracking-[-0.04em] text-[#0A0A0A] md:text-[44px]"
+				class="text-center text-[36px] leading-[1.08] font-extrabold tracking-[-0.04em] text-[#0A0A0A] md:text-[44px]"
 				style="text-wrap: balance"
 			>
 				Common questions
@@ -1209,7 +1190,7 @@
 
 			<div class="flex w-full flex-col">
 				{#each faqs as faq, i}
-					<div class="gsap-reveal border-b border-[#F0F0F0] last:border-b-0">
+					<div class="border-b border-[#F0F0F0] last:border-b-0">
 						<button
 							class="group flex w-full cursor-pointer items-center justify-between gap-4 py-6 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30"
 							onclick={() => toggleFaq(i)}
