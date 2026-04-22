@@ -194,13 +194,13 @@
 
 
 			<h1
-				class="hero-h1 mx-auto max-w-5xl text-center font-['Plus_Jakarta_Sans'] text-[3rem] font-medium leading-[0.95] tracking-tighter text-[#0A0A0A] sm:text-[3.5rem] md:text-[4.5rem] lg:text-[5.5rem]"
+				class="hero-h1 mx-auto max-w-5xl text-center text-[3rem] font-medium leading-[0.95] tracking-tighter text-[#0A0A0A] sm:text-[3.5rem] md:text-[4.5rem] lg:text-[5.5rem]"
 			>
 				Run your tea garden.<br />Not your paperwork.
 			</h1>
 
 			<p
-				class="hero-sub mx-auto mt-8 max-w-xl text-center font-['Inter'] text-xl leading-tight tracking-[-0.01em] text-[#71717A] sm:text-2xl"
+				class="hero-sub mx-auto mt-8 max-w-xl text-center text-xl leading-tight tracking-[-0.01em] text-[#71717A] sm:text-2xl"
 				style="text-wrap: balance;"
 			>
 				The complete offline software for face attendance, smart weighing, and automated payroll.
@@ -211,7 +211,7 @@
 					href={demoHref}
 					class="flex w-full items-center justify-center gap-2 rounded-full bg-[#1B5E3B] px-6 py-4 shadow-[0_4px_20px_rgba(27,94,59,0.25)] transition duration-150 hover:bg-[#144723] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 active:scale-[0.97] sm:w-auto"
 				>
-					<span class="font-['Inter'] text-sm font-medium text-white"
+					<span class="text-sm font-medium text-white"
 						>Book Free Demo</span
 					>
 					<svg
@@ -234,7 +234,7 @@
 					href="#features"
 					class="flex w-full items-center justify-center rounded-full border border-[#E4E4E7] bg-white px-6 py-4 shadow-[0_1px_3px_rgba(0,0,0,0.04)] transition duration-150 hover:border-[#D4D4D8] hover:bg-[#FAFAF7] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 active:scale-[0.97] sm:w-auto"
 				>
-					<span class="font-['Inter'] text-sm font-medium text-[#0A0A0A]"
+					<span class="text-sm font-medium text-[#0A0A0A]"
 						>See How It Works</span
 					>
 				</a>
@@ -293,7 +293,7 @@
 										stroke-linecap="round"
 									/></svg
 								>
-								<span class="font-['Inter'] text-[11px] text-white/30"
+								<span class="text-[11px] text-white/30"
 									>gardensuite.in/dashboard</span
 								>
 							</div>
@@ -314,14 +314,13 @@
 			<!-- Layer 3: Foreground hills -->
 			<!-- Moves with parallax; fg.png is bottom-masked so the hills dissolve naturally -->
 			<div
-				class="hero-fg-group pointer-events-none absolute inset-x-0 bottom-0 z-20 opacity-60"
-				style="height: 40%; min-height: 200px;"
+				class="hero-fg-group pointer-events-none absolute inset-x-0 bottom-0 z-20"
+				style="height: 80%; min-height: 400px;"
 			>
 				<img
 					src="/fg.png"
 					alt=""
 					class="absolute inset-0 h-full w-full object-cover object-bottom"
-					style="mask-image: linear-gradient(to bottom, black 75%, transparent 97%); -webkit-mask-image: linear-gradient(to bottom, black 75%, transparent 97%);"
 					width="1920"
 					height="1080"
 				/>
@@ -354,18 +353,18 @@
 			class="relative z-10 mx-auto flex max-w-[1100px] flex-col items-center px-6 text-center md:px-12"
 		>
 			<span
-				class="gsap-reveal mb-6 font-['Inter'] text-[12px] font-semibold tracking-[0.08em] text-[#A1A1AA] uppercase"
+				class="gsap-reveal mb-6 text-[12px] font-semibold tracking-[0.08em] text-[#A1A1AA] uppercase"
 				>The Old Way</span
 			>
 			<h2
 				id="problem-heading"
-				class="gsap-reveal max-w-[680px] font-['Plus_Jakarta_Sans'] text-[36px] leading-[1.08] font-extrabold tracking-[-0.04em] text-[#0A0A0A] md:text-[44px] lg:text-[48px]"
+				class="gsap-reveal max-w-[680px] text-[36px] leading-[1.08] font-extrabold tracking-[-0.04em] text-[#0A0A0A] md:text-[44px] lg:text-[48px]"
 				style="text-wrap: balance"
 			>
 				When problems hit,<br class="hidden md:inline" /> paper makes them worse.
 			</h2>
 			<p
-				class="gsap-reveal mt-8 max-w-[520px] font-['Inter'] text-[15px] leading-[1.7] text-[#71717A] md:text-[16px]"
+				class="gsap-reveal mt-8 max-w-[520px] text-[15px] leading-[1.7] text-[#71717A] md:text-[16px]"
 			>
 				Labour trouble, bad weather, and factory stoppages already slow the day. Paper registers and
 				broken Excel sheets slow it even more.
@@ -461,10 +460,10 @@
 							/><circle cx="12" cy="12" r="9" stroke="#A1A1AA" stroke-width="1.5" /></svg
 						>
 					</div>
-					<h3 class="mb-3 font-['Plus_Jakarta_Sans'] text-[18px] font-bold text-[#0A0A0A]">
+					<h3 class="mb-3 text-[18px] font-bold text-[#0A0A0A]">
 						Time keeps leaking
 					</h3>
-					<p class="font-['Inter'] text-[14px] leading-[1.65] text-[#71717A]">
+					<p class="text-[14px] leading-[1.65] text-[#71717A]">
 						Attendance, weighing, and payroll take hours when your team should be fixing the day.
 					</p>
 				</div>
@@ -488,10 +487,10 @@
 							/></svg
 						>
 					</div>
-					<h3 class="mb-3 font-['Plus_Jakarta_Sans'] text-[18px] font-bold text-[#0A0A0A]">
+					<h3 class="mb-3 text-[18px] font-bold text-[#0A0A0A]">
 						Buddy punching happens
 					</h3>
-					<p class="font-['Inter'] text-[14px] leading-[1.65] text-[#71717A]">
+					<p class="text-[14px] leading-[1.65] text-[#71717A]">
 						If you cannot verify the worker, you cannot trust the hazira.
 					</p>
 				</div>
@@ -513,10 +512,10 @@
 							/><path d="M4 10h16M10 10v10" stroke="#A1A1AA" stroke-width="1.5" /></svg
 						>
 					</div>
-					<h3 class="mb-3 font-['Plus_Jakarta_Sans'] text-[18px] font-bold text-[#0A0A0A]">
+					<h3 class="mb-3 text-[18px] font-bold text-[#0A0A0A]">
 						Numbers do not match
 					</h3>
-					<p class="font-['Inter'] text-[14px] leading-[1.65] text-[#71717A]">
+					<p class="text-[14px] leading-[1.65] text-[#71717A]">
 						Attendance in one place, weights in another, payroll in Excel. Month end becomes a
 						fight.
 					</p>
@@ -534,8 +533,8 @@
 
 		<div class="relative z-10 mx-auto max-w-[1100px] px-6 md:px-12">
 			<div class="mb-14 flex flex-col items-center text-center md:mb-16">
-				<span class="gsap-reveal mb-5 font-['Inter'] text-[12px] font-semibold tracking-[0.08em] text-[#4ADE80]/60 uppercase">Real Gardens, Real Results</span>
-				<h2 id="proof-heading" class="gsap-reveal max-w-[600px] font-['Plus_Jakarta_Sans'] text-[32px] leading-[1.08] font-extrabold tracking-[-0.04em] text-white md:text-[40px]" style="text-wrap: balance">
+				<span class="gsap-reveal mb-5 text-[12px] font-semibold tracking-[0.08em] text-[#4ADE80]/60 uppercase">Real Gardens, Real Results</span>
+				<h2 id="proof-heading" class="gsap-reveal max-w-[600px] text-[32px] leading-[1.08] font-extrabold tracking-[-0.04em] text-white md:text-[40px]" style="text-wrap: balance">
 					Trusted by 20+ tea estates across 7 regions.
 				</h2>
 			</div>
@@ -551,16 +550,16 @@
 					{ region: 'Jalpaiguri', estates: ['Himalayan Agro'] }
 				] as group}
 					<div class="flex flex-col gap-2">
-						<span class="font-['Inter'] text-[11px] font-bold tracking-[0.06em] text-[#4ADE80]/50 uppercase">{group.region}</span>
+						<span class="text-[11px] font-bold tracking-[0.06em] text-[#4ADE80]/50 uppercase">{group.region}</span>
 						{#each group.estates as estate}
-							<span class="font-['Inter'] text-[13px] leading-[1.5] font-medium text-white/70">{estate}</span>
+							<span class="text-[13px] leading-[1.5] font-medium text-white/70">{estate}</span>
 						{/each}
 					</div>
 				{/each}
 			</div>
 
 			<div class="gsap-reveal mt-12 flex justify-center">
-				<span class="font-['Inter'] text-[13px] font-medium text-white/40">and more across Eastern India</span>
+				<span class="text-[13px] font-medium text-white/40">and more across Eastern India</span>
 			</div>
 		</div>
 	</section>
@@ -584,18 +583,18 @@
 		<div class="relative z-10 mx-auto max-w-[1100px] px-6 md:px-12">
 			<div class="mb-20 flex flex-col items-center text-center md:mb-28">
 				<span
-					class="gsap-reveal mb-6 font-['Inter'] text-[12px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase"
+					class="gsap-reveal mb-6 text-[12px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase"
 					>The Solution</span
 				>
 				<h2
 					id="feat-heading"
-					class="gsap-reveal max-w-[680px] font-['Plus_Jakarta_Sans'] text-[36px] leading-[1.08] font-extrabold tracking-[-0.04em] text-[#0A0A0A] md:text-[44px] lg:text-[48px]"
+					class="gsap-reveal max-w-[680px] text-[36px] leading-[1.08] font-extrabold tracking-[-0.04em] text-[#0A0A0A] md:text-[44px] lg:text-[48px]"
 					style="text-wrap: balance"
 				>
 					One system.<br class="hidden md:inline" /> No chasing papers.
 				</h2>
 				<p
-					class="gsap-reveal mt-8 max-w-[520px] font-['Inter'] text-[15px] leading-[1.7] text-[#71717A] md:text-[16px]"
+					class="gsap-reveal mt-8 max-w-[520px] text-[15px] leading-[1.7] text-[#71717A] md:text-[16px]"
 				>
 					Attendance, weights, payroll, factory, stores, and the daily report all stay connected.
 				</p>
@@ -626,17 +625,17 @@
 								>
 							</div>
 							<h3
-								class="mb-4 font-['Plus_Jakarta_Sans'] text-[24px] leading-tight font-extrabold tracking-[-0.02em] text-[#0A0A0A] md:text-[28px]"
+								class="mb-4 text-[24px] leading-tight font-extrabold tracking-[-0.02em] text-[#0A0A0A] md:text-[28px]"
 							>
 								Face Attendance
 							</h3>
-							<p class="mb-8 font-['Inter'] text-[15px] leading-[1.65] text-[#71717A]">
+							<p class="mb-8 text-[15px] leading-[1.65] text-[#71717A]">
 								Stop buddy punching, even without internet. Real worker. Real hazira. No duplicate
 								entry.
 							</p>
 							<a
 								href="/products/attendance"
-								class="mt-auto -ml-1 inline-flex w-fit items-center gap-2 rounded-md px-1 py-0.5 font-['Inter'] text-[14px] font-semibold text-[#0A0A0A] transition duration-200 hover:gap-3 hover:text-[#1A5C2E] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30"
+								class="mt-auto -ml-1 inline-flex w-fit items-center gap-2 rounded-md px-1 py-0.5 text-[14px] font-semibold text-[#0A0A0A] transition duration-200 hover:gap-3 hover:text-[#1A5C2E] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30"
 							>
 								See how it works <svg
 									width="14"
@@ -702,11 +701,11 @@
 							>
 						</div>
 						<h3
-							class="mb-4 font-['Plus_Jakarta_Sans'] text-[22px] leading-tight font-extrabold tracking-[-0.02em] text-[#0A0A0A]"
+							class="mb-4 text-[22px] leading-tight font-extrabold tracking-[-0.02em] text-[#0A0A0A]"
 						>
 							Smart Weighing
 						</h3>
-						<p class="font-['Inter'] text-[15px] leading-[1.65] text-[#71717A]">
+						<p class="text-[15px] leading-[1.65] text-[#71717A]">
 							Scales connect automatically. No manual entry. No stolen weights.
 						</p>
 
@@ -721,7 +720,7 @@
 								style="animation: float-slow 4s ease-in-out infinite;"
 							>
 								<div
-									class="font-['Plus_Jakarta_Sans'] text-[20px] font-extrabold tracking-tight text-[#0A0A0A]"
+									class="text-[20px] font-extrabold tracking-tight text-[#0A0A0A]"
 								>
 									24.5<span class="ml-0.5 text-[12px] text-[#A1A1AA]">kg</span>
 								</div>
@@ -781,11 +780,11 @@
 						>
 					</div>
 					<h3
-						class="relative z-10 mb-3 font-['Plus_Jakarta_Sans'] text-[20px] font-bold tracking-[-0.01em] text-[#0A0A0A]"
+						class="relative z-10 mb-3 text-[20px] font-bold tracking-[-0.01em] text-[#0A0A0A]"
 					>
 						Automated Payroll
 					</h3>
-					<p class="relative z-10 font-['Inter'] text-[14px] leading-[1.65] text-[#71717A]">
+					<p class="relative z-10 text-[14px] leading-[1.65] text-[#71717A]">
 						Hazira, rates, PF, ESI, bonus, and deductions are ready without calculator work.
 					</p>
 
@@ -851,11 +850,11 @@
 						>
 					</div>
 					<h3
-						class="relative z-10 mb-3 font-['Plus_Jakarta_Sans'] text-[20px] font-bold tracking-[-0.01em] text-[#0A0A0A]"
+						class="relative z-10 mb-3 text-[20px] font-bold tracking-[-0.01em] text-[#0A0A0A]"
 					>
 						Factory Accounts
 					</h3>
-					<p class="relative z-10 font-['Inter'] text-[14px] leading-[1.65] text-[#71717A]">
+					<p class="relative z-10 text-[14px] leading-[1.65] text-[#71717A]">
 						Track daily production and know your exact manufacturing cost.
 					</p>
 
@@ -1003,11 +1002,11 @@
 						>
 					</div>
 					<h3
-						class="relative z-10 mb-4 font-['Plus_Jakarta_Sans'] text-[28px] font-bold tracking-[-0.01em] text-white"
+						class="relative z-10 mb-4 text-[28px] font-bold tracking-[-0.01em] text-white"
 					>
 						Daily Report Dashboard
 					</h3>
-					<p class="relative z-10 font-['Inter'] text-[15px] leading-[1.65] text-[#A1A1AA]">
+					<p class="relative z-10 text-[15px] leading-[1.65] text-[#A1A1AA]">
 						Open the daily report on your phone and see plucking, production, labour, and factory
 						numbers fast.
 					</p>
@@ -1085,18 +1084,18 @@
 		>
 			<div class="shrink-0 md:sticky md:top-32 md:w-[45%]">
 				<span
-					class="gsap-reveal mb-6 inline-block font-['Inter'] text-[12px] font-semibold tracking-[0.08em] text-[#A1A1AA] uppercase"
+					class="gsap-reveal mb-6 inline-block text-[12px] font-semibold tracking-[0.08em] text-[#A1A1AA] uppercase"
 					>Why Managers Trust GardenSuite</span
 				>
 				<h2
 					id="why-heading"
-					class="gsap-reveal font-['Plus_Jakarta_Sans'] text-[36px] leading-[1.08] font-extrabold tracking-[-0.04em] text-[#0A0A0A] md:text-[44px] lg:text-[48px]"
+					class="gsap-reveal text-[36px] leading-[1.08] font-extrabold tracking-[-0.04em] text-[#0A0A0A] md:text-[44px] lg:text-[48px]"
 					style="text-wrap: balance"
 				>
 					Built only for tea gardens.<br /> Backed by Sarbani Associates.
 				</h2>
 				<p
-					class="gsap-reveal mt-8 font-['Inter'] text-[15px] leading-[1.7] text-[#71717A] md:text-[16px]"
+					class="gsap-reveal mt-8 text-[15px] leading-[1.7] text-[#71717A] md:text-[16px]"
 				>
 					GardenSuite is built and supported by Sarbani Associates. Trusted by 20+ tea estates
 					across Assam, Dooars, Terai, Darjeeling, Coochbehar, Uttar Dinajpur, and Jalpaiguri.
@@ -1119,10 +1118,10 @@
 						>
 					</div>
 					<div>
-						<h3 class="mb-2 font-['Plus_Jakarta_Sans'] text-[17px] font-bold text-[#0A0A0A]">
+						<h3 class="mb-2 text-[17px] font-bold text-[#0A0A0A]">
 							Tea garden logic built in
 						</h3>
-						<p class="font-['Inter'] text-[14px] leading-[1.7] text-[#71717A]">
+						<p class="text-[14px] leading-[1.7] text-[#71717A]">
 							Hazira, section-wise attendance, plucking weight, payroll, stores, and factory costing
 							fit the way gardens already work.
 						</p>
@@ -1148,10 +1147,10 @@
 						>
 					</div>
 					<div>
-						<h3 class="mb-2 font-['Plus_Jakarta_Sans'] text-[17px] font-bold text-[#0A0A0A]">
+						<h3 class="mb-2 text-[17px] font-bold text-[#0A0A0A]">
 							Works without internet
 						</h3>
-						<p class="font-['Inter'] text-[14px] leading-[1.7] text-[#71717A]">
+						<p class="text-[14px] leading-[1.7] text-[#71717A]">
 							If the line is down, work continues. Data syncs later when the internet returns.
 						</p>
 					</div>
@@ -1172,10 +1171,10 @@
 						>
 					</div>
 					<div>
-						<h3 class="mb-2 font-['Plus_Jakarta_Sans'] text-[17px] font-bold text-[#0A0A0A]">
+						<h3 class="mb-2 text-[17px] font-bold text-[#0A0A0A]">
 							Sarbani Associates comes on site
 						</h3>
-						<p class="font-['Inter'] text-[14px] leading-[1.7] text-[#71717A]">
+						<p class="text-[14px] leading-[1.7] text-[#71717A]">
 							Our team visits your garden, sets up the system, and trains your staff. Demo, setup,
 							and training are free.
 						</p>
@@ -1202,7 +1201,7 @@
 		>
 			<h2
 				id="faq-heading"
-				class="gsap-reveal text-center font-['Plus_Jakarta_Sans'] text-[36px] leading-[1.08] font-extrabold tracking-[-0.04em] text-[#0A0A0A] md:text-[44px]"
+				class="gsap-reveal text-center text-[36px] leading-[1.08] font-extrabold tracking-[-0.04em] text-[#0A0A0A] md:text-[44px]"
 				style="text-wrap: balance"
 			>
 				Common questions
@@ -1217,7 +1216,7 @@
 							aria-expanded={openFaq === i}
 						>
 							<h3
-								class="font-['Inter'] text-[16px] leading-[1.4] font-semibold text-[#0A0A0A] transition-colors duration-150 group-hover:text-[#1A5C2E] md:text-[17px]"
+								class="text-[16px] leading-[1.4] font-semibold text-[#0A0A0A] transition-colors duration-150 group-hover:text-[#1A5C2E] md:text-[17px]"
 							>
 								{faq.q}
 							</h3>
@@ -1244,7 +1243,7 @@
 								? '1'
 								: '0'}"
 						>
-							<p class="pb-6 font-['Inter'] text-[15px] leading-[1.7] text-[#71717A]">{faq.a}</p>
+							<p class="pb-6 text-[15px] leading-[1.7] text-[#71717A]">{faq.a}</p>
 						</div>
 					</div>
 				{/each}
@@ -1278,13 +1277,13 @@
 				/>
 				<h2
 					id="cta-heading"
-					class="max-w-[680px] font-['Plus_Jakarta_Sans'] text-[36px] leading-[1.08] font-extrabold tracking-[-0.04em] text-[#0A0A0A] md:text-[44px] lg:text-[48px]"
+					class="max-w-[680px] text-[36px] leading-[1.08] font-extrabold tracking-[-0.04em] text-[#0A0A0A] md:text-[44px] lg:text-[48px]"
 					style="text-wrap: balance"
 				>
 					See it on your own numbers.
 				</h2>
 				<p
-					class="mt-8 max-w-[480px] text-center font-['Inter'] text-[15px] leading-[1.7] text-[#71717A] md:text-[16px]"
+					class="mt-8 max-w-[480px] text-center text-[15px] leading-[1.7] text-[#71717A] md:text-[16px]"
 				>
 					We will show how GardenSuite handles attendance, weights, payroll, factory, and the daily
 					report. Demo, setup, and training are free.
@@ -1294,7 +1293,7 @@
 						href={demoHref}
 						class="flex items-center justify-center rounded-full bg-[#1A5C2E] px-9 py-3.5 shadow-[0_4px_20px_rgba(26,92,46,0.3)] transition duration-150 hover:bg-[#144723] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 active:scale-[0.97]"
 					>
-						<span class="font-['Inter'] text-[15px] leading-none font-semibold text-white"
+						<span class="text-[15px] leading-none font-semibold text-white"
 							>Book Free Demo</span
 						>
 					</a>
@@ -1302,7 +1301,7 @@
 						href="mailto:contact@gardensuite.in"
 						class="flex items-center justify-center rounded-full border border-[#E4E4E7] bg-white px-9 py-3.5 shadow-[0_2px_8px_rgba(0,0,0,0.02)] transition duration-150 hover:border-[#D4D4D8] hover:bg-[#FAFAF7] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 active:scale-[0.97]"
 					>
-						<span class="font-['Inter'] text-[15px] leading-none font-semibold text-[#0A0A0A]"
+						<span class="text-[15px] leading-none font-semibold text-[#0A0A0A]"
 							>Email Us</span
 						>
 					</a>

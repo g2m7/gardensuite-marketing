@@ -43,7 +43,7 @@
 
 	/* Fonts */
 	--font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-	--font-display: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+	--font-display: 'Inter', system-ui, -apple-system, sans-serif;
 
 	/* Marquee */
 	--animate-marquee: marquee 40s linear infinite;

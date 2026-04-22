@@ -34,14 +34,14 @@
 	<section class="flex flex-col items-center w-full pt-20 md:pt-28 pb-16 md:pb-24 px-6 md:px-12 gap-6">
 		<div class="flex items-center gap-2">
 			<div class="w-1.5 h-1.5 rounded-full bg-[#3D7D2C]"></div>
-			<div class="tracking-widest uppercase text-[#6B7280] font-['Inter',system-ui,sans-serif] font-semibold text-[12px]/4">
+			<div class="tracking-widest uppercase text-[#6B7280] font-semibold text-[12px]/4">
 				Automated Payroll
 			</div>
 		</div>
-		<h1 class="text-[36px] md:text-[56px] lg:text-[64px] text-center leading-[1.05] tracking-[-0.04em] text-[#0A0A0A] font-['Plus_Jakarta_Sans',system-ui,sans-serif] font-extrabold max-w-4xl text-pretty">
+		<h1 class="text-[36px] md:text-[56px] lg:text-[64px] text-center leading-[1.05] tracking-[-0.04em] text-[#0A0A0A] font-extrabold max-w-4xl text-pretty">
 			Say goodbye to manual wage calculations.
 		</h1>
-		<p class="text-[16px] md:text-[18px] text-center leading-[1.7] max-w-[600px] text-[#777777] font-['Inter',system-ui,sans-serif]">
+		<p class="text-[16px] md:text-[18px] text-center leading-[1.7] max-w-[600px] text-[#777777] ">
 			GardenSuite automatically pulls data from attendance and weighing, accurately calculating wages, extra leaf rates, deductions, PF, and more without any spreadsheet wizardry.
 		</p>
 	</section>
@@ -50,10 +50,10 @@
 		<div class="flex flex-col items-center w-full max-w-[1100px] mx-auto px-6 md:px-12 gap-14">
 			<!-- Header -->
 			<div class="flex flex-col items-center gap-5 animate-on-scroll">
-				<h2 class="text-[32px] md:text-[48px] text-center leading-[1.1] tracking-[-0.03em] text-white font-['Plus_Jakarta_Sans',system-ui,sans-serif] font-extrabold">
+				<h2 class="text-[32px] md:text-[48px] text-center leading-[1.1] tracking-[-0.03em] text-white font-extrabold">
 					Built exclusively for the Tea Industry.
 				</h2>
-				<p class="text-[16px] text-center text-white/50 font-['Inter',system-ui,sans-serif] max-w-2xl">
+				<p class="text-[16px] text-center text-white/50 max-w-2xl">
 					Generic ERPs don't understand hazira, tikka, doubling, or plucking rates. We do. 
 					Generate payslips, PF records, and bonus reports effortlessly.
 				</p>

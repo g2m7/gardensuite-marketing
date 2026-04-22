@@ -57,7 +57,6 @@
 		backdrop-filter: blur(${scrollAnimated ? navProgress * 24 : 12}px);
 		-webkit-backdrop-filter: blur(${scrollAnimated ? navProgress * 24 : 12}px);
 		border-bottom: 1px solid rgba(0, 0, 0, ${scrollAnimated ? navProgress * 0.05 : 0.05});
-		box-shadow: 0 ${navProgress * 8}px ${navProgress * 30}px rgba(0, 0, 0, ${navProgress * 0.04});
 	`);
 </script>
 
@@ -81,7 +80,7 @@
 		<a href="/" class="flex items-center gap-2" aria-label="GardenSuite Home">
 			<GsLogoAnimation class="h-7 w-auto shrink-0" />
 			<span
-				class="font-['Plus_Jakarta_Sans',system-ui,sans-serif] text-[18px] leading-[22px] font-bold tracking-[-0.01em] text-[#0A0A0A]"
+				class="text-[18px] leading-[22px] font-bold tracking-[-0.01em] text-[#0A0A0A]"
 			>
 				GardenSuite
 			</span>
@@ -105,7 +104,7 @@
 		>
 			<nav class="flex flex-col gap-1" aria-label="Mobile navigation">
 				<button
-					class="flex w-full items-center justify-between rounded-xl px-4 py-3 text-left font-['Plus_Jakarta_Sans'] text-[16px] font-semibold text-[#18181B] transition-colors hover:bg-[#FAFAF7]"
+					class="flex w-full items-center justify-between rounded-xl px-4 py-3 text-left text-[16px] font-semibold text-[#18181B] transition-colors hover:bg-[#FAFAF7]"
 					onclick={() => (mobileProductsOpen = !mobileProductsOpen)}
 					aria-expanded={mobileProductsOpen}
 				>
@@ -132,44 +131,44 @@
 					<div class="flex flex-col gap-0.5 pb-2 pl-4">
 						<a
 							href="/products/attendance"
-							class="rounded-lg px-4 py-2.5 font-['Inter'] text-[14px] font-medium text-[#52525B] transition-colors hover:bg-[#FAFAF7] hover:text-[#1A5C2E]"
+							class="rounded-lg px-4 py-2.5 text-[14px] font-medium text-[#52525B] transition-colors hover:bg-[#FAFAF7] hover:text-[#1A5C2E]"
 							onclick={toggleMobileNav}>Face Attendance &amp; Smart Weighing</a
 						>
 						<a
 							href="/products/payroll"
-							class="rounded-lg px-4 py-2.5 font-['Inter'] text-[14px] font-medium text-[#52525B] transition-colors hover:bg-[#FAFAF7] hover:text-[#1A5C2E]"
+							class="rounded-lg px-4 py-2.5 text-[14px] font-medium text-[#52525B] transition-colors hover:bg-[#FAFAF7] hover:text-[#1A5C2E]"
 							onclick={toggleMobileNav}>Automated Payroll</a
 						>
 						<a
 							href="/products/factory"
-							class="rounded-lg px-4 py-2.5 font-['Inter'] text-[14px] font-medium text-[#52525B] transition-colors hover:bg-[#FAFAF7] hover:text-[#1A5C2E]"
+							class="rounded-lg px-4 py-2.5 text-[14px] font-medium text-[#52525B] transition-colors hover:bg-[#FAFAF7] hover:text-[#1A5C2E]"
 							onclick={toggleMobileNav}>Factory Accounts</a
 						>
 						<a
 							href="/products/stores"
-							class="rounded-lg px-4 py-2.5 font-['Inter'] text-[14px] font-medium text-[#52525B] transition-colors hover:bg-[#FAFAF7] hover:text-[#1A5C2E]"
+							class="rounded-lg px-4 py-2.5 text-[14px] font-medium text-[#52525B] transition-colors hover:bg-[#FAFAF7] hover:text-[#1A5C2E]"
 							onclick={toggleMobileNav}>Store Management</a
 						>
 						<a
 							href="/products/mis"
-							class="rounded-lg px-4 py-2.5 font-['Inter'] text-[14px] font-medium text-[#52525B] transition-colors hover:bg-[#FAFAF7] hover:text-[#1A5C2E]"
+							class="rounded-lg px-4 py-2.5 text-[14px] font-medium text-[#52525B] transition-colors hover:bg-[#FAFAF7] hover:text-[#1A5C2E]"
 							onclick={toggleMobileNav}>Daily Report</a
 						>
 					</div>
 				{/if}
 				<a
 					href="/#features"
-					class="rounded-xl px-4 py-3 font-['Plus_Jakarta_Sans'] text-[16px] font-semibold text-[#18181B] transition-colors hover:bg-[#FAFAF7]"
+					class="rounded-xl px-4 py-3 text-[16px] font-semibold text-[#18181B] transition-colors hover:bg-[#FAFAF7]"
 					onclick={toggleMobileNav}>Features</a
 				>
 				<a
 					href="/#about"
-					class="rounded-xl px-4 py-3 font-['Plus_Jakarta_Sans'] text-[16px] font-semibold text-[#18181B] transition-colors hover:bg-[#FAFAF7]"
+					class="rounded-xl px-4 py-3 text-[16px] font-semibold text-[#18181B] transition-colors hover:bg-[#FAFAF7]"
 					onclick={toggleMobileNav}>About</a
 				>
 				<a
 					href="/#contact"
-					class="rounded-xl px-4 py-3 font-['Plus_Jakarta_Sans'] text-[16px] font-semibold text-[#18181B] transition-colors hover:bg-[#FAFAF7]"
+					class="rounded-xl px-4 py-3 text-[16px] font-semibold text-[#18181B] transition-colors hover:bg-[#FAFAF7]"
 					onclick={toggleMobileNav}>Contact</a
 				>
 			</nav>
@@ -178,7 +177,7 @@
 				class="mt-6 flex h-12 w-full items-center justify-center rounded-full bg-[#1B5E3B] shadow-[0_4px_20px_rgba(27,94,59,0.25)] transition hover:bg-[#144723] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 active:scale-[0.97]"
 				onclick={toggleMobileNav}
 			>
-				<span class="font-['Inter'] text-[15px] leading-none font-semibold text-white"
+				<span class="text-[15px] leading-none font-semibold text-white"
 					>Book Free Demo</span
 				>
 			</a>
@@ -191,7 +190,7 @@
 		<!-- Products Dropdown -->
 		<div class="products-dropdown-container relative" onkeydown={handleProductsKeydown}>
 			<button
-				class="inline-flex h-10 items-center justify-center rounded-full px-4 font-['Inter'] text-[14px] font-semibold text-[#18181B] transition-colors duration-150 hover:bg-[#0000000A] hover:text-[#0A0A0A] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30"
+				class="inline-flex h-10 items-center justify-center rounded-full px-4 text-[14px] font-semibold text-[#18181B] transition-colors duration-150 hover:bg-[#0000000A] hover:text-[#0A0A0A] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30"
 				aria-label="Products menu"
 				aria-expanded={productsOpen}
 				aria-haspopup="true"
@@ -239,11 +238,11 @@
 					>
 					<div class="mt-4">
 						<span
-							class="block font-['Plus_Jakarta_Sans'] text-base leading-tight font-bold text-[#1A5C2E]"
+							class="block text-base leading-tight font-bold text-[#1A5C2E]"
 							>GardenSuite<br />V3</span
 						>
 						<span
-							class="mt-1.5 block font-['Inter'] text-xs leading-relaxed text-[#1A5C2E]/80"
+							class="mt-1.5 block text-xs leading-relaxed text-[#1A5C2E]/80"
 							>One simple system for tea gardens.</span
 						>
 					</div>
@@ -254,11 +253,11 @@
 						class="group/item col-span-2 block rounded-lg p-3 transition-colors hover:bg-[#FAFAF7]"
 						onclick={closeProducts}
 						><div
-							class="font-['Plus_Jakarta_Sans'] text-[13px] font-bold text-[#18181B] transition-colors group-hover/item:text-[#1A5C2E]"
+							class="text-[13px] font-bold text-[#18181B] transition-colors group-hover/item:text-[#1A5C2E]"
 						>
 							Face Attendance &amp; Smart Weighing
 						</div>
-						<div class="mt-1 font-['Inter'] text-xs leading-relaxed text-[#71717A]">
+						<div class="mt-1 text-xs leading-relaxed text-[#71717A]">
 							Stop buddy punching and stolen weights.
 						</div></a
 					>
@@ -267,11 +266,11 @@
 						class="group/item block rounded-lg p-3 transition-colors hover:bg-[#FAFAF7]"
 						onclick={closeProducts}
 						><div
-							class="font-['Plus_Jakarta_Sans'] text-[13px] font-bold text-[#18181B] transition-colors group-hover/item:text-[#1A5C2E]"
+							class="text-[13px] font-bold text-[#18181B] transition-colors group-hover/item:text-[#1A5C2E]"
 						>
 							Automated Payroll
 						</div>
-						<div class="mt-1 font-['Inter'] text-xs leading-relaxed text-[#71717A]">
+						<div class="mt-1 text-xs leading-relaxed text-[#71717A]">
 							Hazira, PF, bonus, and wages auto-ready.
 						</div></a
 					>
@@ -280,11 +279,11 @@
 						class="group/item block rounded-lg p-3 transition-colors hover:bg-[#FAFAF7]"
 						onclick={closeProducts}
 						><div
-							class="font-['Plus_Jakarta_Sans'] text-[13px] font-bold text-[#18181B] transition-colors group-hover/item:text-[#1A5C2E]"
+							class="text-[13px] font-bold text-[#18181B] transition-colors group-hover/item:text-[#1A5C2E]"
 						>
 							Factory Accounts
 						</div>
-						<div class="mt-1 font-['Inter'] text-xs leading-relaxed text-[#71717A]">
+						<div class="mt-1 text-xs leading-relaxed text-[#71717A]">
 							Track output and exact factory cost.
 						</div></a
 					>
@@ -293,11 +292,11 @@
 						class="group/item block rounded-lg p-3 transition-colors hover:bg-[#FAFAF7]"
 						onclick={closeProducts}
 						><div
-							class="font-['Plus_Jakarta_Sans'] text-[13px] font-bold text-[#18181B] transition-colors group-hover/item:text-[#1A5C2E]"
+							class="text-[13px] font-bold text-[#18181B] transition-colors group-hover/item:text-[#1A5C2E]"
 						>
 							Store Management
 						</div>
-						<div class="mt-1 font-['Inter'] text-xs leading-relaxed text-[#71717A]">
+						<div class="mt-1 text-xs leading-relaxed text-[#71717A]">
 							Know stock without chasing registers.
 						</div></a
 					>
@@ -306,11 +305,11 @@
 						class="group/item block rounded-lg p-3 transition-colors hover:bg-[#FAFAF7]"
 						onclick={closeProducts}
 						><div
-							class="font-['Plus_Jakarta_Sans'] text-[13px] font-bold text-[#18181B] transition-colors group-hover/item:text-[#1A5C2E]"
+							class="text-[13px] font-bold text-[#18181B] transition-colors group-hover/item:text-[#1A5C2E]"
 						>
 							Daily Report
 						</div>
-						<div class="mt-1 font-['Inter'] text-xs leading-relaxed text-[#71717A]">
+						<div class="mt-1 text-xs leading-relaxed text-[#71717A]">
 							See daily numbers on any device.
 						</div></a
 					>
@@ -319,12 +318,12 @@
 		</div>
 		<a
 			href="/#features"
-			class="inline-flex h-10 items-center justify-center rounded-full px-4 font-['Inter'] text-[14px] font-semibold text-[#18181B] transition-colors duration-150 hover:bg-[#0000000A] hover:text-[#0A0A0A]"
+			class="inline-flex h-10 items-center justify-center rounded-full px-4 text-[14px] font-semibold text-[#18181B] transition-colors duration-150 hover:bg-[#0000000A] hover:text-[#0A0A0A]"
 			>Features</a
 		>
 		<a
 			href="/#about"
-			class="inline-flex h-10 items-center justify-center rounded-full px-4 font-['Inter'] text-[14px] font-semibold text-[#18181B] transition-colors duration-150 hover:bg-[#0000000A] hover:text-[#0A0A0A]"
+			class="inline-flex h-10 items-center justify-center rounded-full px-4 text-[14px] font-semibold text-[#18181B] transition-colors duration-150 hover:bg-[#0000000A] hover:text-[#0A0A0A]"
 			>About</a
 		>
 	</div>
@@ -334,14 +333,14 @@
 	<div class="flex items-center gap-2">
 		<a
 			href="/#contact"
-			class="mr-4 hidden h-10 items-center rounded-md px-2 font-['Inter'] text-[14px] font-semibold text-[#18181B] transition-colors hover:text-[#0A0A0A] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 md:inline-flex"
+			class="mr-4 hidden h-10 items-center rounded-md px-2 text-[14px] font-semibold text-[#18181B] transition-colors hover:text-[#0A0A0A] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 md:inline-flex"
 			>Contact</a
 		>
 		<a
 			href={demoHref}
 			class="hidden h-10 items-center justify-center rounded-full bg-[#1B5E3B] px-6 shadow-[0_2px_8px_rgba(27,94,59,0.25)] transition hover:bg-[#144723] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 active:scale-[0.97] md:flex"
 		>
-			<span class="font-['Inter'] text-[14px] leading-none font-semibold text-white"
+			<span class="text-[14px] leading-none font-semibold text-white"
 				>Book Free Demo</span
 			>
 		</a>
