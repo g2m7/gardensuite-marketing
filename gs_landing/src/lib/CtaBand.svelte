@@ -4,10 +4,10 @@
 
 <section class="flex flex-col items-center w-full py-24 md:py-28 px-6 md:px-14 gap-6 bg-[#0A0A0A]">
 	<img src="/gardensuite-icon-white.svg" alt="" class="h-12 w-auto mb-2 opacity-90" aria-hidden="true" width="48" height="48" />
-	<h2 class="text-[32px] md:text-[40px] text-center tracking-[-0.02em] leading-[1.15] text-white font-extrabold" style="text-wrap: balance">
+	<h2 class="text-[32px] md:text-[44px] text-center tracking-[-0.05em] leading-[1.05] text-white font-medium" style="text-wrap: balance">
 		Ready to modernize your tea garden?
 	</h2>
-	<p class="text-[15px] text-center leading-[1.6] max-w-[500px] text-[#A3A3A3] ">
+	<p class="text-[15px] text-center leading-[1.5] max-w-[500px] text-[#A3A3A3]">
 		Book a free demo and see how GardenSuite can replace paperwork with a single tap. Free setup, free training - no risk.
 	</p>
 	<div class="flex flex-col sm:flex-row pt-4 gap-4 w-full sm:w-auto">

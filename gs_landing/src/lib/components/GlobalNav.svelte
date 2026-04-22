@@ -80,7 +80,7 @@
 		<a href="/" class="flex items-center gap-2" aria-label="GardenSuite Home">
 			<GsLogoAnimation class="h-7 w-auto shrink-0" />
 			<span
-				class="text-[18px] leading-[22px] font-bold tracking-[-0.01em] text-[#0A0A0A]"
+				class="text-[18px] leading-[22px] font-medium tracking-[-0.01em] text-[#0A0A0A]"
 			>
 				GardenSuite
 			</span>
@@ -238,7 +238,7 @@
 					>
 					<div class="mt-4">
 						<span
-							class="block text-base leading-tight font-bold text-[#1A5C2E]"
+							class="block text-base leading-tight font-medium text-[#1A5C2E]"
 							>GardenSuite<br />V3</span
 						>
 						<span
@@ -253,7 +253,7 @@
 						class="group/item col-span-2 block rounded-lg p-3 transition-colors hover:bg-[#FAFAF7]"
 						onclick={closeProducts}
 						><div
-							class="text-[13px] font-bold text-[#18181B] transition-colors group-hover/item:text-[#1A5C2E]"
+							class="text-[13px] font-medium text-[#18181B] transition-colors group-hover/item:text-[#1A5C2E]"
 						>
 							Face Attendance &amp; Smart Weighing
 						</div>
@@ -266,7 +266,7 @@
 						class="group/item block rounded-lg p-3 transition-colors hover:bg-[#FAFAF7]"
 						onclick={closeProducts}
 						><div
-							class="text-[13px] font-bold text-[#18181B] transition-colors group-hover/item:text-[#1A5C2E]"
+							class="text-[13px] font-medium text-[#18181B] transition-colors group-hover/item:text-[#1A5C2E]"
 						>
 							Automated Payroll
 						</div>
@@ -279,7 +279,7 @@
 						class="group/item block rounded-lg p-3 transition-colors hover:bg-[#FAFAF7]"
 						onclick={closeProducts}
 						><div
-							class="text-[13px] font-bold text-[#18181B] transition-colors group-hover/item:text-[#1A5C2E]"
+							class="text-[13px] font-medium text-[#18181B] transition-colors group-hover/item:text-[#1A5C2E]"
 						>
 							Factory Accounts
 						</div>
@@ -292,7 +292,7 @@
 						class="group/item block rounded-lg p-3 transition-colors hover:bg-[#FAFAF7]"
 						onclick={closeProducts}
 						><div
-							class="text-[13px] font-bold text-[#18181B] transition-colors group-hover/item:text-[#1A5C2E]"
+							class="text-[13px] font-medium text-[#18181B] transition-colors group-hover/item:text-[#1A5C2E]"
 						>
 							Store Management
 						</div>
@@ -305,7 +305,7 @@
 						class="group/item block rounded-lg p-3 transition-colors hover:bg-[#FAFAF7]"
 						onclick={closeProducts}
 						><div
-							class="text-[13px] font-bold text-[#18181B] transition-colors group-hover/item:text-[#1A5C2E]"
+							class="text-[13px] font-medium text-[#18181B] transition-colors group-hover/item:text-[#1A5C2E]"
 						>
 							Daily Report
 						</div>

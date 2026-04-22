@@ -41,7 +41,7 @@
 				Our Products
 			</div>
 		</div>
-		<h1 class="text-[36px] md:text-[56px] lg:text-[64px] text-center leading-[1.05] tracking-[-0.04em] text-[#0A0A0A] font-extrabold max-w-4xl text-pretty">
+		<h1 class="text-[36px] md:text-[56px] lg:text-[64px] text-center leading-[1.05] tracking-[-0.04em] text-[#0A0A0A] font-medium max-w-4xl text-pretty">
 			See how face recognition and smart weighing work together.
 		</h1>
 		<p class="text-[16px] md:text-[18px] text-center leading-[1.7] max-w-[600px] text-[#777777] ">
@@ -68,7 +68,7 @@
 					<span class="tracking-[0.15em] uppercase text-[#7A917A] font-medium text-[11px]">The Arrival</span>
 				</div>
 
-				<h2 class="text-[32px] md:text-[44px] leading-[1.1] tracking-[-0.03em] text-[#1A2E16] font-extrabold">
+				<h2 class="text-[32px] md:text-[44px] leading-[1.1] tracking-[-0.03em] text-[#1A2E16] font-medium">
 					A worker looks at the camera. That's it.
 				</h2>
 
@@ -189,7 +189,7 @@
 					<span class="tracking-[0.15em] uppercase text-[#0369A1]/70 font-medium text-[11px]">Confirmed</span>
 				</div>
 
-				<h2 class="text-[32px] md:text-[44px] leading-[1.1] tracking-[-0.03em] text-[#1A2E16] font-extrabold">
+				<h2 class="text-[32px] md:text-[44px] leading-[1.1] tracking-[-0.03em] text-[#1A2E16] font-medium">
 					Identity verified. Attendance logged.
 				</h2>
 
@@ -232,7 +232,7 @@
 					<span class="tracking-[0.15em] uppercase text-[#D97706]/70 font-medium text-[11px]">The Weigh-In</span>
 				</div>
 
-				<h2 class="text-[32px] md:text-[44px] leading-[1.1] tracking-[-0.03em] text-[#1A2E16] font-extrabold">
+				<h2 class="text-[32px] md:text-[44px] leading-[1.1] tracking-[-0.03em] text-[#1A2E16] font-medium">
 					Green leaf meets smart scale.
 				</h2>
 
@@ -314,7 +314,7 @@
 					<div class="w-10 h-px bg-[#7C3AED]"></div>
 					<span class="tracking-[0.15em] uppercase text-[#7C3AED] font-medium text-[11px]">The Sync</span>
 				</div>
-				<h2 class="text-[32px] md:text-[48px] text-center leading-[1.1] tracking-[-0.03em] text-white font-extrabold">
+				<h2 class="text-[32px] md:text-[48px] text-center leading-[1.1] tracking-[-0.03em] text-white font-medium">
 					From field to cloud in real time.
 				</h2>
 				<p class="text-[16px] text-center text-white/50 ">

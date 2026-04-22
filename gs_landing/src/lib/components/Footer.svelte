@@ -13,11 +13,11 @@
 				<a href="/" aria-label="GardenSuite Home" class="mb-5 flex items-center gap-2.5">
 					<GsLogoAnimation class="h-8 w-auto" />
 					<span
-						class="text-[17px] font-bold tracking-[-0.01em] text-[#0A0A0A]"
+						class="text-[17px] font-medium tracking-[-0.01em] text-[#111111]"
 						>GardenSuite</span
 					>
 				</a>
-				<p class="text-[13px] leading-[1.7] text-[#71717A]">
+				<p class="text-[13px] leading-[1.5] text-[#666666]">
 					Complete tea garden management software. Built and supported by Sarbani Associates,
 					Bagdogra, Siliguri.
 				</p>
@@ -29,7 +29,7 @@
 				<!-- Products -->
 				<div class="flex flex-col gap-3">
 					<span
-						class="text-[11px] font-bold tracking-[0.06em] text-[#A1A1AA] uppercase"
+						class="text-[11px] font-medium tracking-[0.06em] text-[#999999] uppercase"
 						>Products</span
 					>
 					<a
@@ -62,7 +62,7 @@
 				<!-- Company -->
 				<div class="flex flex-col gap-3">
 					<span
-						class="text-[11px] font-bold tracking-[0.06em] text-[#A1A1AA] uppercase"
+						class="text-[11px] font-medium tracking-[0.06em] text-[#999999] uppercase"
 						>Company</span
 					>
 					<a
@@ -85,7 +85,7 @@
 				<!-- Support -->
 				<div class="flex flex-col gap-3">
 					<span
-						class="text-[11px] font-bold tracking-[0.06em] text-[#A1A1AA] uppercase"
+						class="text-[11px] font-medium tracking-[0.06em] text-[#999999] uppercase"
 						>Support</span
 					>
 					<a
@@ -127,7 +127,7 @@
 			class="absolute left-[35%] top-1/2 z-0 h-[35vw] w-[35vw] -translate-y-1/2 rounded-full bg-[#3D7D2C]/[0.05] blur-[120px]"
 		></div>
 		<div
-			class="relative z-10 translate-y-[35%] whitespace-nowrap pr-8 text-[20vw] font-extrabold leading-[0.7] tracking-[-0.06em] text-[#EBEBE8]"
+			class="relative z-10 translate-y-[35%] whitespace-nowrap pr-8 text-[20vw] font-medium leading-[0.7] tracking-[-0.06em] text-[#EBEBE8]"
 		>
 			Sarbani
 		</div>

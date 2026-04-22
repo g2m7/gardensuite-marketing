@@ -38,7 +38,7 @@
 				MIS Dashboard
 			</div>
 		</div>
-		<h1 class="text-[36px] md:text-[56px] lg:text-[64px] text-center leading-[1.05] tracking-[-0.04em] text-[#0A0A0A] font-extrabold max-w-4xl text-pretty">
+		<h1 class="text-[36px] md:text-[56px] lg:text-[64px] text-center leading-[1.05] tracking-[-0.04em] text-[#0A0A0A] font-medium max-w-4xl text-pretty">
 			Your tea garden, right in your pocket.
 		</h1>
 		<p class="text-[16px] md:text-[18px] text-center leading-[1.7] max-w-[600px] text-[#777777] ">

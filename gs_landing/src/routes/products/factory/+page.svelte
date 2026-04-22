@@ -38,7 +38,7 @@
 				Factory Accounts
 			</div>
 		</div>
-		<h1 class="text-[36px] md:text-[56px] lg:text-[64px] text-center leading-[1.05] tracking-[-0.04em] text-[#0A0A0A] font-extrabold max-w-4xl text-pretty">
+		<h1 class="text-[36px] md:text-[56px] lg:text-[64px] text-center leading-[1.05] tracking-[-0.04em] text-[#0A0A0A] font-medium max-w-4xl text-pretty">
 			Master your factory production data.
 		</h1>
 		<p class="text-[16px] md:text-[18px] text-center leading-[1.7] max-w-[600px] text-[#777777] ">
@@ -49,7 +49,7 @@
 	<section class="relative w-full bg-[#F3F6F1] overflow-hidden py-20 md:py-28">
 		<div class="flex flex-col items-center w-full max-w-[1100px] mx-auto px-6 md:px-12 gap-14">
 			<div class="flex flex-col items-center gap-5 animate-on-scroll">
-				<h2 class="text-[32px] md:text-[48px] text-center leading-[1.1] tracking-[-0.03em] text-[#1A2E16] font-extrabold">
+				<h2 class="text-[32px] md:text-[48px] text-center leading-[1.1] tracking-[-0.03em] text-[#1A2E16] font-medium">
 					From green leaf to invoiced tea.
 				</h2>
 				<p class="text-[16px] text-center text-[#5A6B58] max-w-2xl">

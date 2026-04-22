@@ -175,13 +175,13 @@
 
 
 			<h1
-				class="hero-h1 mx-auto max-w-5xl text-center text-[3rem] font-medium leading-[0.95] tracking-tighter text-[#0A0A0A] sm:text-[3.5rem] md:text-[4.5rem] lg:text-[5.5rem]"
+				class="hero-h1 mx-auto max-w-5xl text-center text-[3rem] font-medium leading-[0.9] tracking-[-0.05em] text-[#111111] sm:text-[3.5rem] md:text-[4.5rem] lg:text-[5.5rem]"
 			>
 				Run your tea garden.<br />Not your paperwork.
 			</h1>
 
 			<p
-				class="hero-sub mx-auto mt-8 max-w-xl text-center text-xl leading-tight tracking-[-0.01em] text-[#71717A] sm:text-2xl"
+				class="hero-sub mx-auto mt-8 max-w-xl text-center text-lg leading-[1.25] tracking-[-0.01em] text-[#666666] sm:text-2xl"
 				style="text-wrap: balance;"
 			>
 				The complete offline software for face attendance, smart weighing, and automated payroll.
@@ -339,13 +339,13 @@
 			>
 			<h2
 				id="problem-heading"
-				class="max-w-[680px] text-[36px] leading-[1.08] font-extrabold tracking-[-0.04em] text-[#0A0A0A] md:text-[44px] lg:text-[48px]"
+				class="max-w-[680px] text-[36px] leading-[1.05] font-medium tracking-[-0.05em] text-[#111111] md:text-[48px] lg:text-[60px]"
 				style="text-wrap: balance"
 			>
 				When problems hit,<br class="hidden md:inline" /> paper makes them worse.
 			</h2>
 			<p
-				class="mt-8 max-w-[520px] text-[15px] leading-[1.7] text-[#71717A] md:text-[16px]"
+				class="mt-8 max-w-[520px] text-base leading-[1.5] text-[#666666] md:text-[16px]"
 			>
 				Labour trouble, bad weather, and factory stoppages already slow the day. Paper registers and
 				broken Excel sheets slow it even more.
@@ -441,10 +441,10 @@
 							/><circle cx="12" cy="12" r="9" stroke="#A1A1AA" stroke-width="1.5" /></svg
 						>
 					</div>
-					<h3 class="mb-3 text-[18px] font-bold text-[#0A0A0A]">
+					<h3 class="mb-3 text-[18px] font-medium tracking-[-0.01em] text-[#111111]">
 						Time keeps leaking
 					</h3>
-					<p class="text-[14px] leading-[1.65] text-[#71717A]">
+					<p class="text-[14px] leading-[1.5] text-[#666666]">
 						Attendance, weighing, and payroll take hours when your team should be fixing the day.
 					</p>
 				</div>
@@ -468,10 +468,10 @@
 							/></svg
 						>
 					</div>
-					<h3 class="mb-3 text-[18px] font-bold text-[#0A0A0A]">
+					<h3 class="mb-3 text-[18px] font-medium tracking-[-0.01em] text-[#111111]">
 						Buddy punching happens
 					</h3>
-					<p class="text-[14px] leading-[1.65] text-[#71717A]">
+					<p class="text-[14px] leading-[1.5] text-[#666666]">
 						If you cannot verify the worker, you cannot trust the hazira.
 					</p>
 				</div>
@@ -493,10 +493,10 @@
 							/><path d="M4 10h16M10 10v10" stroke="#A1A1AA" stroke-width="1.5" /></svg
 						>
 					</div>
-					<h3 class="mb-3 text-[18px] font-bold text-[#0A0A0A]">
+					<h3 class="mb-3 text-[18px] font-medium tracking-[-0.01em] text-[#111111]">
 						Numbers do not match
 					</h3>
-					<p class="text-[14px] leading-[1.65] text-[#71717A]">
+					<p class="text-[14px] leading-[1.5] text-[#666666]">
 						Attendance in one place, weights in another, payroll in Excel. Month end becomes a
 						fight.
 					</p>
@@ -515,7 +515,7 @@
 		<div class="relative z-10 mx-auto max-w-[1100px] px-6 md:px-12">
 			<div class="mb-14 flex flex-col items-center text-center md:mb-16">
 				<span class="mb-5 text-[12px] font-semibold tracking-[0.08em] text-[#4ADE80]/60 uppercase">Real Gardens, Real Results</span>
-				<h2 id="proof-heading" class="max-w-[600px] text-[32px] leading-[1.08] font-extrabold tracking-[-0.04em] text-white md:text-[40px]" style="text-wrap: balance">
+				<h2 id="proof-heading" class="max-w-[600px] text-[32px] leading-[1.05] font-medium tracking-[-0.05em] text-white md:text-[44px]" style="text-wrap: balance">
 					Trusted by 20+ tea estates across 7 regions.
 				</h2>
 			</div>
@@ -531,7 +531,7 @@
 					{ region: 'Jalpaiguri', estates: ['Himalayan Agro'] }
 				] as group}
 					<div class="flex flex-col gap-2">
-						<span class="text-[11px] font-bold tracking-[0.06em] text-[#4ADE80]/50 uppercase">{group.region}</span>
+						<span class="text-[11px] font-medium tracking-[0.06em] text-[#4ADE80]/50 uppercase">{group.region}</span>
 						{#each group.estates as estate}
 							<span class="text-[13px] leading-[1.5] font-medium text-white/70">{estate}</span>
 						{/each}
@@ -569,13 +569,13 @@
 				>
 				<h2
 					id="feat-heading"
-					class="max-w-[680px] text-[36px] leading-[1.08] font-extrabold tracking-[-0.04em] text-[#0A0A0A] md:text-[44px] lg:text-[48px]"
+					class="max-w-[680px] text-[36px] leading-[1.05] font-medium tracking-[-0.05em] text-[#111111] md:text-[48px] lg:text-[60px]"
 					style="text-wrap: balance"
 				>
 					One system.<br class="hidden md:inline" /> No chasing papers.
 				</h2>
 				<p
-					class="mt-8 max-w-[520px] text-[15px] leading-[1.7] text-[#71717A] md:text-[16px]"
+					class="mt-8 max-w-[520px] text-base leading-[1.5] text-[#666666] md:text-[16px]"
 				>
 					Attendance, weights, payroll, factory, stores, and the daily report all stay connected.
 				</p>
@@ -606,11 +606,11 @@
 								>
 							</div>
 							<h3
-								class="mb-4 text-[24px] leading-tight font-extrabold tracking-[-0.02em] text-[#0A0A0A] md:text-[28px]"
+								class="mb-4 text-[24px] leading-tight font-medium tracking-[-0.02em] text-[#111111] md:text-[28px]"
 							>
 								Face Attendance
 							</h3>
-							<p class="mb-8 text-[15px] leading-[1.65] text-[#71717A]">
+							<p class="mb-8 text-[15px] leading-[1.5] text-[#666666]">
 								Stop buddy punching, even without internet. Real worker. Real hazira. No duplicate
 								entry.
 							</p>
@@ -682,11 +682,11 @@
 							>
 						</div>
 						<h3
-							class="mb-4 text-[22px] leading-tight font-extrabold tracking-[-0.02em] text-[#0A0A0A]"
+							class="mb-4 text-[22px] leading-tight font-medium tracking-[-0.02em] text-[#111111]"
 						>
 							Smart Weighing
 						</h3>
-						<p class="text-[15px] leading-[1.65] text-[#71717A]">
+						<p class="text-[15px] leading-[1.5] text-[#666666]">
 							Scales connect automatically. No manual entry. No stolen weights.
 						</p>
 
@@ -761,11 +761,11 @@
 						>
 					</div>
 					<h3
-						class="relative z-10 mb-3 text-[20px] font-bold tracking-[-0.01em] text-[#0A0A0A]"
+						class="relative z-10 mb-3 text-[20px] font-medium tracking-[-0.01em] text-[#111111]"
 					>
 						Automated Payroll
 					</h3>
-					<p class="relative z-10 text-[14px] leading-[1.65] text-[#71717A]">
+					<p class="relative z-10 text-[14px] leading-[1.5] text-[#666666]">
 						Hazira, rates, PF, ESI, bonus, and deductions are ready without calculator work.
 					</p>
 
@@ -831,11 +831,11 @@
 						>
 					</div>
 					<h3
-						class="relative z-10 mb-3 text-[20px] font-bold tracking-[-0.01em] text-[#0A0A0A]"
+						class="relative z-10 mb-3 text-[20px] font-medium tracking-[-0.01em] text-[#111111]"
 					>
 						Factory Accounts
 					</h3>
-					<p class="relative z-10 text-[14px] leading-[1.65] text-[#71717A]">
+					<p class="relative z-10 text-[14px] leading-[1.5] text-[#666666]">
 						Track daily production and know your exact manufacturing cost.
 					</p>
 
@@ -983,11 +983,11 @@
 						>
 					</div>
 					<h3
-						class="relative z-10 mb-4 text-[28px] font-bold tracking-[-0.01em] text-white"
+						class="relative z-10 mb-4 text-[28px] font-medium tracking-[-0.02em] text-white"
 					>
 						Daily Report Dashboard
 					</h3>
-					<p class="relative z-10 text-[15px] leading-[1.65] text-[#A1A1AA]">
+					<p class="relative z-10 text-[15px] leading-[1.5] text-[#A1A1AA]">
 						Open the daily report on your phone and see plucking, production, labour, and factory
 						numbers fast.
 					</p>
@@ -1070,13 +1070,13 @@
 				>
 				<h2
 					id="why-heading"
-					class="text-[36px] leading-[1.08] font-extrabold tracking-[-0.04em] text-[#0A0A0A] md:text-[44px] lg:text-[48px]"
+					class="text-[36px] leading-[1.05] font-medium tracking-[-0.05em] text-[#111111] md:text-[48px] lg:text-[60px]"
 					style="text-wrap: balance"
 				>
 					Built only for tea gardens.<br /> Backed by Sarbani Associates.
 				</h2>
 				<p
-					class="mt-8 text-[15px] leading-[1.7] text-[#71717A] md:text-[16px]"
+					class="mt-8 text-base leading-[1.5] text-[#666666] md:text-[16px]"
 				>
 					GardenSuite is built and supported by Sarbani Associates. Trusted by 20+ tea estates
 					across Assam, Dooars, Terai, Darjeeling, Coochbehar, Uttar Dinajpur, and Jalpaiguri.
@@ -1099,10 +1099,10 @@
 						>
 					</div>
 					<div>
-						<h3 class="mb-2 text-[17px] font-bold text-[#0A0A0A]">
+						<h3 class="mb-2 text-[17px] font-medium text-[#111111]">
 							Tea garden logic built in
 						</h3>
-						<p class="text-[14px] leading-[1.7] text-[#71717A]">
+						<p class="text-[14px] leading-[1.5] text-[#666666]">
 							Hazira, section-wise attendance, plucking weight, payroll, stores, and factory costing
 							fit the way gardens already work.
 						</p>
@@ -1128,10 +1128,10 @@
 						>
 					</div>
 					<div>
-						<h3 class="mb-2 text-[17px] font-bold text-[#0A0A0A]">
+						<h3 class="mb-2 text-[17px] font-medium text-[#111111]">
 							Works without internet
 						</h3>
-						<p class="text-[14px] leading-[1.7] text-[#71717A]">
+						<p class="text-[14px] leading-[1.5] text-[#666666]">
 							If the line is down, work continues. Data syncs later when the internet returns.
 						</p>
 					</div>
@@ -1152,10 +1152,10 @@
 						>
 					</div>
 					<div>
-						<h3 class="mb-2 text-[17px] font-bold text-[#0A0A0A]">
+						<h3 class="mb-2 text-[17px] font-medium text-[#111111]">
 							Sarbani Associates comes on site
 						</h3>
-						<p class="text-[14px] leading-[1.7] text-[#71717A]">
+						<p class="text-[14px] leading-[1.5] text-[#666666]">
 							Our team visits your garden, sets up the system, and trains your staff. Demo, setup,
 							and training are free.
 						</p>
@@ -1182,7 +1182,7 @@
 		>
 			<h2
 				id="faq-heading"
-				class="text-center text-[36px] leading-[1.08] font-extrabold tracking-[-0.04em] text-[#0A0A0A] md:text-[44px]"
+				class="text-center text-[36px] leading-[1.05] font-medium tracking-[-0.05em] text-[#111111] md:text-[48px]"
 				style="text-wrap: balance"
 			>
 				Common questions
@@ -1197,7 +1197,7 @@
 							aria-expanded={openFaq === i}
 						>
 							<h3
-								class="text-[16px] leading-[1.4] font-semibold text-[#0A0A0A] transition-colors duration-150 group-hover:text-[#1A5C2E] md:text-[17px]"
+								class="text-[16px] leading-[1.4] font-medium text-[#111111] transition-colors duration-150 group-hover:text-[#1A5C2E] md:text-[17px]"
 							>
 								{faq.q}
 							</h3>
@@ -1224,7 +1224,7 @@
 								? '1'
 								: '0'}"
 						>
-							<p class="pb-6 text-[15px] leading-[1.7] text-[#71717A]">{faq.a}</p>
+							<p class="pb-6 text-[15px] leading-[1.5] text-[#666666]">{faq.a}</p>
 						</div>
 					</div>
 				{/each}
@@ -1258,13 +1258,13 @@
 				/>
 				<h2
 					id="cta-heading"
-					class="max-w-[680px] text-[36px] leading-[1.08] font-extrabold tracking-[-0.04em] text-[#0A0A0A] md:text-[44px] lg:text-[48px]"
+					class="max-w-[680px] text-[36px] leading-[1.05] font-medium tracking-[-0.05em] text-[#111111] md:text-[48px] lg:text-[60px]"
 					style="text-wrap: balance"
 				>
 					See it on your own numbers.
 				</h2>
 				<p
-					class="mt-8 max-w-[480px] text-center text-[15px] leading-[1.7] text-[#71717A] md:text-[16px]"
+					class="mt-8 max-w-[480px] text-center text-base leading-[1.5] text-[#666666] md:text-[16px]"
 				>
 					We will show how GardenSuite handles attendance, weights, payroll, factory, and the daily
 					report. Demo, setup, and training are free.
