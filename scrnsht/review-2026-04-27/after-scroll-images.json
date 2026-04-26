@@ -1,0 +1,72 @@
+[
+  {
+    "src": "/hero-sky.png",
+    "complete": true,
+    "w": 1024,
+    "h": 1024,
+    "top": 0
+  },
+  {
+    "src": "/bg.png",
+    "complete": true,
+    "w": 3125,
+    "h": 1750,
+    "top": 618
+  },
+  {
+    "src": "/mis-dashboard.png",
+    "complete": true,
+    "w": 2880,
+    "h": 1556,
+    "top": 498
+  },
+  {
+    "src": "/fg.png",
+    "complete": true,
+    "w": 3125,
+    "h": 1750,
+    "top": 576
+  },
+  {
+    "src": "/img/home/problem-old-way.png",
+    "complete": true,
+    "w": 1024,
+    "h": 1024,
+    "top": 1623
+  },
+  {
+    "src": "/img/home/workflow.png",
+    "complete": true,
+    "w": 1024,
+    "h": 1024,
+    "top": 4028
+  },
+  {
+    "src": "/img/home/face-attendance.png",
+    "complete": true,
+    "w": 1024,
+    "h": 1024,
+    "top": 5940
+  },
+  {
+    "src": "/img/home/smart-weighing.png",
+    "complete": true,
+    "w": 1024,
+    "h": 1024,
+    "top": 6559
+  },
+  {
+    "src": "/img/home/payroll.png",
+    "complete": true,
+    "w": 1024,
+    "h": 1024,
+    "top": 7186
+  },
+  {
+    "src": "/img/home/factory.png",
+    "complete": true,
+    "w": 1024,
+    "h": 1024,
+    "top": 7792
+  }
+]

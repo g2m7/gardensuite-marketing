@@ -1,0 +1,59 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - banner "Main" [ref=e4]:
+      - generic [ref=e6]
+    - generic [ref=e43]:
+      - img "Floor background"
+      - generic [ref=e45]
+    - generic [ref=e57]:
+      - paragraph [ref=e58]
+      - generic [ref=e60]
+      - generic [ref=e115]
+    - generic [ref=e151]:
+      - heading "Integrate this morning" [level=2] [ref=e153]
+      - paragraph [ref=e154]: A simple, elegant interface so you can start sending emails in minutes. It fits right into your code with SDKs for your favorite programming languages.
+      - generic [ref=e155]
+    - generic [ref=e363]:
+      - heading "First-class developer experience" [level=2] [ref=e364]
+      - paragraph [ref=e365]
+      - generic [ref=e367]
+    - generic [ref=e584]:
+      - heading "Write using a delightful editor" [level=2] [ref=e586]
+      - paragraph [ref=e587]
+      - generic [ref=e588]
+    - generic [ref=e632]:
+      - heading "Go beyond editing" [level=2] [ref=e633]
+      - paragraph [ref=e634]
+      - generic [ref=e635]
+    - generic [ref=e662]:
+      - heading "Develop emails using React" [level=2] [ref=e664]
+      - paragraph [ref=e665]
+      - generic [ref=e666]
+      - generic [ref=e675]
+    - generic [ref=e856]:
+      - heading "Reach humans, not spam folders" [level=2] [ref=e857]
+      - generic [ref=e858]
+    - generic [ref=e976]:
+      - img "Vercel" [ref=e978]
+      - blockquote [ref=e979]: Resend is transforming email for developers. Simple interface, easy integrations, handy templates. What else could we ask for.
+      - generic [ref=e980]
+      - link "Send with Next.js":
+        - /url: https://resend.com/docs/send-with-nextjs
+    - generic [ref=e986]:
+      - heading "Everything in your control" [level=2] [ref=e988]
+      - paragraph [ref=e989]
+      - generic [ref=e990]
+    - generic [ref=e1041]:
+      - heading "Beyond expectations" [level=2] [ref=e1042]
+      - paragraph [ref=e1043]
+      - generic [ref=e1046]
+    - generic [ref=e1596]:
+      - heading "Email reimagined. Available today." [level=2] [ref=e1597]
+      - generic [ref=e1598]
+      - generic [ref=e1607]
+    - contentinfo [ref=e1609]:
+      - generic [ref=e1610]
+      - generic [ref=e1627]
+  - region "Notifications alt+T"
+  - img
+  - alert [ref=e1701]

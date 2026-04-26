@@ -1,0 +1,2 @@
+[    3448ms] [ERROR] Failed to load resource: the server responded with a status of 502 () @ https://resend.com/relay-qWzP/e/?ip=0&_=1777232594365&ver=1.369.3&compression=gzip-js:0
+[   50089ms] [WARNING] updating from  115 to  118 @ https://resend.com/relay-qWzP/static/posthog-recorder.js?v=1.369.3:0

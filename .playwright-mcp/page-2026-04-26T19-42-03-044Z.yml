@@ -1,0 +1,275 @@
+- generic [ref=e2]:
+  - link "Skip to main content" [ref=e3] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation "Main navigation" [ref=e4]:
+    - link "GardenSuite Home" [ref=e5] [cursor=pointer]:
+      - /url: /
+      - generic "GardenSuite Logo" [ref=e6]:
+        - img [ref=e7]
+      - generic [ref=e22]: GardenSuite
+    - generic [ref=e23]:
+      - button "Products menu" [ref=e24]:
+        - text: Products
+        - img [ref=e25]
+      - link "Features" [ref=e27] [cursor=pointer]:
+        - /url: /#features
+      - link "About" [ref=e28] [cursor=pointer]:
+        - /url: /#about
+    - generic [ref=e29]:
+      - link "Contact" [ref=e30] [cursor=pointer]:
+        - /url: /#contact
+      - link "Book Free Demo" [ref=e31] [cursor=pointer]:
+        - /url: mailto:contact@gardensuite.in?subject=GardenSuite%20Demo%20Request
+        - generic [ref=e32]: Book Free Demo
+  - main [ref=e35]:
+    - region "Hero" [ref=e36]:
+      - generic [ref=e37]:
+        - heading "Run your tea garden. Not your paperwork." [level=1] [ref=e38]:
+          - text: Run your tea garden.
+          - text: Not your paperwork.
+        - paragraph [ref=e39]: The complete offline software for face attendance, smart weighing, and automated payroll.
+        - generic [ref=e40]:
+          - link "Book Free Demo" [ref=e41] [cursor=pointer]:
+            - /url: mailto:contact@gardensuite.in?subject=GardenSuite%20Demo%20Request
+            - generic [ref=e42]: Book Free Demo
+            - img [ref=e43]
+          - link "See How It Works" [ref=e45] [cursor=pointer]:
+            - /url: "#features"
+            - generic [ref=e46]: See How It Works
+      - generic [ref=e49]:
+        - generic [ref=e56]:
+          - img [ref=e57]
+          - generic [ref=e59]: gardensuite.in/dashboard
+        - img "GardenSuite daily report dashboard" [ref=e60]
+    - region "When problems hit, paper makes them worse." [ref=e61]:
+      - generic [ref=e62]:
+        - generic [ref=e63]: The Old Way
+        - heading "When problems hit, paper makes them worse." [level=2] [ref=e64]:
+          - text: When problems hit,
+          - text: paper makes them worse.
+        - paragraph [ref=e65]: Attendance in one register. Leaf weight in another. Payroll in Excel. When work is spread across paper, mistakes become normal. GardenSuite keeps attendance, weighing, payroll, stores, factory, and reports connected from the start.
+        - img "Tea garden office overwhelmed with paper registers, wage sheets, and manual record keeping" [ref=e67]
+        - generic [ref=e68]:
+          - generic [ref=e69]:
+            - img [ref=e71]
+            - heading "Time keeps leaking" [level=3] [ref=e74]
+            - paragraph [ref=e75]: Attendance, weighing, and payroll take hours when your team should be fixing the day.
+          - generic [ref=e76]:
+            - img [ref=e78]
+            - heading "Buddy punching happens" [level=3] [ref=e82]
+            - paragraph [ref=e83]: If you cannot verify the worker, you cannot trust the hazira.
+          - generic [ref=e84]:
+            - img [ref=e86]
+            - heading "Numbers do not match" [level=3] [ref=e89]
+            - paragraph [ref=e90]: Attendance in one place, weights in another, payroll in Excel. Month end becomes a fight.
+    - region "Trusted by 20+ tea estates across 7 regions." [ref=e91]:
+      - generic [ref=e92]:
+        - generic [ref=e93]:
+          - generic [ref=e94]: Real Gardens, Real Results
+          - heading "Trusted by 20+ tea estates across 7 regions." [level=2] [ref=e95]
+        - generic [ref=e96]:
+          - generic [ref=e97]:
+            - generic [ref=e98]: Darjeeling
+            - generic [ref=e99]: Simulbarie T.E.
+            - generic [ref=e100]: Longview T.E.
+          - generic [ref=e101]:
+            - generic [ref=e102]: Dooars
+            - generic [ref=e103]: Rheabari T.E.
+            - generic [ref=e104]: Mogulkata T.E.
+            - generic [ref=e105]: Rahimpur T.E.
+          - generic [ref=e106]:
+            - generic [ref=e107]: Terai
+            - generic [ref=e108]: Atal T.E.
+            - generic [ref=e109]: Naxalbari T.E.
+          - generic [ref=e110]:
+            - generic [ref=e111]: Assam
+            - generic [ref=e112]: Choibari T.E.
+            - generic [ref=e113]: Chapar T.E.
+          - generic [ref=e114]:
+            - generic [ref=e115]: Coochbehar
+            - generic [ref=e116]: Tinbigha T.E.
+          - generic [ref=e117]:
+            - generic [ref=e118]: Uttar Dinajpur
+            - generic [ref=e119]: Chandan T.E.
+          - generic [ref=e120]:
+            - generic [ref=e121]: Jalpaiguri
+            - generic [ref=e122]: Himalayan Agro
+        - generic [ref=e124]: and more across Eastern India
+    - region "A day with GardenSuite." [ref=e125]:
+      - generic [ref=e126]:
+        - generic [ref=e127]:
+          - generic [ref=e128]: Connected Workflow
+          - heading "A day with GardenSuite." [level=2] [ref=e129]
+          - paragraph [ref=e130]: From the first face scan to the owner's evening report, every step stays connected.
+        - 'img "Five connected stages of a tea garden day: face scan, leaf weighing, record verification, payroll calculation, and daily report" [ref=e132]'
+        - generic [ref=e133]:
+          - generic [ref=e134]:
+            - generic [ref=e135]: "1"
+            - heading "Face verified" [level=3] [ref=e136]
+            - paragraph [ref=e137]: Worker identity confirmed by face scan on mobile.
+          - generic [ref=e138]:
+            - generic [ref=e139]: "2"
+            - heading "Weight captured" [level=3] [ref=e140]
+            - paragraph [ref=e141]: Leaf bag weighed on smart scale, synced to phone.
+          - generic [ref=e142]:
+            - generic [ref=e143]: "3"
+            - heading "Records sync" [level=3] [ref=e144]
+            - paragraph [ref=e145]: Attendance and weight linked automatically.
+          - generic [ref=e146]:
+            - generic [ref=e147]: "4"
+            - heading "Payroll ready" [level=3] [ref=e148]
+            - paragraph [ref=e149]: Wages, PF, ESI, bonus calculated. No manual work.
+          - generic [ref=e150]:
+            - generic [ref=e151]: "5"
+            - heading "Owner sees report" [level=3] [ref=e152]
+            - paragraph [ref=e153]: Daily numbers on phone, tablet, or laptop.
+    - region "One system. No chasing papers." [ref=e154]:
+      - generic [ref=e155]:
+        - generic [ref=e156]:
+          - generic [ref=e157]: The Solution
+          - heading "One system. No chasing papers." [level=2] [ref=e158]:
+            - text: One system.
+            - text: No chasing papers.
+          - paragraph [ref=e159]: Attendance, weights, payroll, factory, stores, and the daily report all stay connected.
+        - generic [ref=e160]:
+          - generic [ref=e162]:
+            - generic [ref=e163]:
+              - img [ref=e165]
+              - heading "Face Attendance" [level=3] [ref=e168]
+              - paragraph [ref=e169]: Stop buddy punching, even without internet. Real worker. Real hazira. No duplicate entry.
+              - link "See how it works" [ref=e170] [cursor=pointer]:
+                - /url: /products/attendance
+                - text: See how it works
+                - img [ref=e171]
+            - img "Supervisor using face scan on mobile to verify tea garden worker identity" [ref=e174]
+          - generic [ref=e176]:
+            - generic [ref=e177]:
+              - img [ref=e179]
+              - heading "Smart Weighing" [level=3] [ref=e181]
+              - paragraph [ref=e182]: Scales connect automatically. No manual entry. No stolen weights.
+            - img "Digital hanging scale weighing tea leaves with wireless sync to smartphone" [ref=e184]
+          - generic [ref=e185]:
+            - generic [ref=e186]:
+              - img [ref=e188]
+              - heading "Automated Payroll" [level=3] [ref=e191]
+              - paragraph [ref=e192]: Hazira, rates, PF, ESI, bonus, and deductions are ready without calculator work.
+            - img "Automated payroll workflow connecting attendance, leaf weights, and wage calculations" [ref=e194]
+          - generic [ref=e195]:
+            - generic [ref=e196]:
+              - img [ref=e198]
+              - heading "Factory Accounts" [level=3] [ref=e201]
+              - paragraph [ref=e202]: Track daily production and know your exact manufacturing cost.
+            - img "Tea factory workflow from withering to rolling, drying, packing, and final stock" [ref=e204]
+          - generic [ref=e206]:
+            - img [ref=e208]
+            - heading "Daily Report Dashboard" [level=3] [ref=e213]
+            - paragraph [ref=e214]: Open the daily report on your phone and see plucking, production, labour, and factory numbers fast.
+    - region "Built only for tea gardens. Backed by Sarbani Associates." [ref=e244]:
+      - generic [ref=e245]:
+        - generic [ref=e246]:
+          - generic [ref=e247]: Why Managers Trust GardenSuite
+          - heading "Built only for tea gardens. Backed by Sarbani Associates." [level=2] [ref=e248]:
+            - text: Built only for tea gardens.
+            - text: Backed by Sarbani Associates.
+          - paragraph [ref=e249]: GardenSuite is built and supported by Sarbani Associates. Trusted by 20+ tea estates across Assam, Dooars, Terai, Darjeeling, Coochbehar, Uttar Dinajpur, and Jalpaiguri.
+        - generic [ref=e250]:
+          - generic [ref=e251]:
+            - img [ref=e253]
+            - generic [ref=e255]:
+              - heading "Tea garden logic built in" [level=3] [ref=e256]
+              - paragraph [ref=e257]: Hazira, section-wise attendance, plucking weight, payroll, stores, and factory costing fit the way gardens already work.
+          - generic [ref=e258]:
+            - img [ref=e260]
+            - generic [ref=e263]:
+              - heading "Works without internet" [level=3] [ref=e264]
+              - paragraph [ref=e265]: If the line is down, work continues. Data syncs later when the internet returns.
+          - generic [ref=e266]:
+            - img [ref=e268]
+            - generic [ref=e271]:
+              - heading "Sarbani Associates comes on site" [level=3] [ref=e272]
+              - paragraph [ref=e273]: Our team visits your garden, sets up the system, and trains your staff. Demo, setup, and training are free.
+    - region "Common questions" [ref=e274]:
+      - generic [ref=e275]:
+        - heading "Common questions" [level=2] [ref=e276]
+        - generic [ref=e277]:
+          - generic [ref=e278]:
+            - button "Does it work without internet?" [ref=e279] [cursor=pointer]:
+              - heading "Does it work without internet?" [level=3] [ref=e280]
+              - img [ref=e281]
+            - paragraph [ref=e283]: Yes. Attendance, weighing, payroll, stores, and factory work offline at the garden. Data syncs when the internet returns.
+          - generic [ref=e284]:
+            - button "How long does setup take?" [ref=e285] [cursor=pointer]:
+              - heading "How long does setup take?" [level=3] [ref=e286]
+              - img [ref=e287]
+            - paragraph [ref=e289]: Usually 1-2 days at your garden. Sarbani Associates handles setup and staff training.
+          - generic [ref=e290]:
+            - button "Which regions do you cover?" [ref=e291] [cursor=pointer]:
+              - heading "Which regions do you cover?" [level=3] [ref=e292]
+              - img [ref=e293]
+            - paragraph [ref=e295]: Assam, Dooars, Terai, Darjeeling, Coochbehar, Uttar Dinajpur, Jalpaiguri.
+          - generic [ref=e296]:
+            - button "Can I see the daily report from outside the garden?" [ref=e297] [cursor=pointer]:
+              - heading "Can I see the daily report from outside the garden?" [level=3] [ref=e298]
+              - img [ref=e299]
+            - paragraph [ref=e301]: Yes. Open it on your phone, tablet, or laptop and check daily numbers from anywhere.
+          - generic [ref=e302]:
+            - button "What does it cost?" [ref=e303] [cursor=pointer]:
+              - heading "What does it cost?" [level=3] [ref=e304]
+              - img [ref=e305]
+            - paragraph [ref=e307]: Cost depends on your estate size and modules. Demo, setup, and training are free.
+    - region "See it on your own numbers." [ref=e308]:
+      - generic [ref=e310]:
+        - generic "GardenSuite Logo" [ref=e311]:
+          - img [ref=e312]
+        - heading "See it on your own numbers." [level=2] [ref=e327]
+        - paragraph [ref=e328]: We will show how GardenSuite handles attendance, weights, payroll, factory, and the daily report. Demo, setup, and training are free.
+        - generic [ref=e329]:
+          - link "Book Free Demo" [ref=e330] [cursor=pointer]:
+            - /url: mailto:contact@gardensuite.in?subject=GardenSuite%20Demo%20Request
+            - generic [ref=e331]: Book Free Demo
+          - link "Email Us" [ref=e332] [cursor=pointer]:
+            - /url: mailto:contact@gardensuite.in
+            - generic [ref=e333]: Email Us
+  - contentinfo [ref=e334]:
+    - generic [ref=e335]:
+      - generic [ref=e336]:
+        - generic [ref=e337]:
+          - link "GardenSuite Home" [ref=e338] [cursor=pointer]:
+            - /url: /
+            - generic "GardenSuite Logo" [ref=e339]:
+              - img [ref=e340]
+            - generic [ref=e355]: GardenSuite
+          - paragraph [ref=e356]: Complete tea garden management software. Built and supported by Sarbani Associates, Bagdogra, Siliguri.
+          - paragraph [ref=e357]: Serving tea gardens since 2000.
+        - generic [ref=e358]:
+          - generic [ref=e359]:
+            - generic [ref=e360]: Products
+            - link "Face Attendance & Smart Weighing" [ref=e361] [cursor=pointer]:
+              - /url: /products/attendance
+            - link "Automated Payroll" [ref=e362] [cursor=pointer]:
+              - /url: /products/payroll
+            - link "Factory Accounts" [ref=e363] [cursor=pointer]:
+              - /url: /products/factory
+            - link "Store Management" [ref=e364] [cursor=pointer]:
+              - /url: /products/stores
+            - link "Daily Report" [ref=e365] [cursor=pointer]:
+              - /url: /products/mis
+          - generic [ref=e366]:
+            - generic [ref=e367]: Company
+            - link "About" [ref=e368] [cursor=pointer]:
+              - /url: /#about
+            - link "Features" [ref=e369] [cursor=pointer]:
+              - /url: /#features
+            - link "FAQ" [ref=e370] [cursor=pointer]:
+              - /url: /#faq-heading
+          - generic [ref=e371]:
+            - generic [ref=e372]: Support
+            - link "contact@gardensuite.in" [ref=e373] [cursor=pointer]:
+              - /url: mailto:contact@gardensuite.in
+            - link "Book Free Demo" [ref=e374] [cursor=pointer]:
+              - /url: /#contact
+      - generic [ref=e376]:
+        - generic [ref=e377]: © 2026 Sarbani Associates. All rights reserved.
+        - generic [ref=e380]: Supported by Sarbani Associates, Bagdogra
+    - generic:
+      - generic: Sarbani

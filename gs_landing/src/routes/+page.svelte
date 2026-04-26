@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import GsLogoAnimation from '$lib/components/GsLogoAnimation.svelte';
 
 	// ─── GSAP + ScrollTrigger ───
 	let ready = $state(false);
@@ -40,8 +39,7 @@
 			// Text entrance stagger
 			const heroTl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 			heroTl
-				.from('.hero-badge', { opacity: 0, y: 20, duration: 0.6, delay: 0.2 })
-				.from('.hero-h1', { opacity: 0, y: 50, duration: 0.9 }, '-=0.3')
+				.from('.hero-h1', { opacity: 0, y: 50, duration: 0.9, delay: 0.2 })
 				.from('.hero-sub', { opacity: 0, y: 30, duration: 0.7 }, '-=0.5')
 				.from('.hero-cta', { opacity: 0, y: 24, duration: 0.6 }, '-=0.4');
 
@@ -105,9 +103,22 @@
 			});
 		}
 
-
-
-
+		// ── Why Stats scroll-triggered entrance ──
+		const statsEl = document.querySelector('.why-stats');
+		if (statsEl) {
+			const statsObs = new IntersectionObserver(
+				(entries) => {
+					entries.forEach((e) => {
+						if (e.isIntersecting) {
+							e.target.classList.add('is-visible');
+							statsObs.unobserve(e.target);
+						}
+					});
+				},
+				{ threshold: 0.3 }
+			);
+			statsObs.observe(statsEl);
+		}
 
 		ready = true;
 	});
@@ -184,7 +195,7 @@
 				class="hero-sub mx-auto mt-8 max-w-xl text-center text-lg leading-[1.25] tracking-[-0.01em] text-[#666666] sm:text-2xl"
 				style="text-wrap: balance;"
 			>
-				The complete offline software for face attendance, smart weighing, and automated payroll.
+				Offline software for face attendance, smart weighing, payroll, factory, stores, and daily reporting.
 			</p>
 
 			<div class="hero-cta mt-8 flex w-full flex-col items-center justify-center gap-3 sm:w-auto sm:flex-row">
@@ -314,875 +325,408 @@
 			></div>
 		</div>
 	</section>
-
 	<!-- ═══════════════════════════════════════════════════════════ -->
-	<!-- THE PROBLEM (Obvious.ai / Keytail style)                  -->
+	<!-- PROOF STRIP                                                -->
 	<!-- ═══════════════════════════════════════════════════════════ -->
-	<section
-		class="relative w-full overflow-hidden bg-white pt-32 pb-32 md:pt-44 md:pb-44"
-		aria-labelledby="problem-heading"
-	>
-		<!-- Background depth glows -->
-		<div
-			class="pointer-events-none absolute top-1/4 -left-[200px] h-[500px] w-[500px] rounded-full bg-[#A1A1AA]/[0.03] blur-[150px]"
-		></div>
-		<div
-			class="pointer-events-none absolute -right-[150px] bottom-1/3 h-[400px] w-[400px] rounded-full bg-[#1B5E3B]/[0.02] blur-[120px]"
-		></div>
-
-		<div
-			class="relative z-10 mx-auto flex max-w-[1100px] flex-col items-center px-6 text-center md:px-12"
-		>
-			<span
-				class="mb-6 text-[12px] font-semibold tracking-[0.08em] text-[#A1A1AA] uppercase"
-				>The Old Way</span
-			>
-			<h2
-				id="problem-heading"
-				class="max-w-[680px] text-[36px] leading-[1.05] font-medium tracking-[-0.05em] text-[#111111] md:text-[48px] lg:text-[60px]"
-				style="text-wrap: balance"
-			>
-				When problems hit,<br class="hidden md:inline" /> paper makes them worse.
-			</h2>
-			<p
-				class="mt-8 max-w-[520px] text-base leading-[1.5] text-[#666666] md:text-[16px]"
-			>
-				Labour trouble, bad weather, and factory stoppages already slow the day. Paper registers and
-				broken Excel sheets slow it even more.
-			</p>
-
-			<!-- Old Way Illustration -->
-			<div
-				class="relative mt-20 flex h-[250px] w-full justify-center md:mt-24 md:h-[300px]"
-			>
-				<div
-					class="relative -ml-12 flex h-full w-full max-w-[600px] items-center justify-center md:-ml-0"
-					style="perspective: 1000px;"
-				>
-					<!-- Card 1: Messy Ledger -->
-					<div
-						class="absolute z-0 flex h-[160px] w-[240px] flex-col rounded border border-[#E4E4E7] bg-[#FAFAF7] p-4 opacity-80 shadow-[0_8px_30px_rgba(0,0,0,0.06)] md:h-[200px] md:w-[280px]"
-						style="transform: rotate(-12deg) translate(-20px, 10px);"
-					>
-						<div class="mb-2 h-1 w-full rounded-full bg-[#D4D4D8] opacity-60"></div>
-						<div class="mb-4 h-1 w-3/4 rounded-full bg-[#D4D4D8] opacity-60"></div>
-						{#each Array(5) as _}
-							<div class="mb-2 flex w-full gap-2">
-								<div class="h-3 w-1/4 border-b border-[#E4E4E7]"></div>
-								<div class="h-3 w-1/4 border-b border-[#E4E4E7]"></div>
-								<div class="h-3 w-1/4 border-b border-[#E4E4E7]"></div>
-								<div
-									class="flex h-3 w-1/4 items-end border-b border-[#E4E4E7] text-[6px] text-[#A1A1AA]"
-								>
-									SIGN
-								</div>
-							</div>
-						{/each}
-					</div>
-					<!-- Card 2: Manual Record -->
-					<div
-						class="absolute z-10 flex h-[180px] w-[260px] flex-col border border-[#E4E4E7] bg-white p-5 opacity-90 shadow-[0_12px_40px_rgba(0,0,0,0.08)] md:h-[220px] md:w-[300px]"
-						style="transform: rotate(6deg) translate(20px, -10px);"
-					>
-						<!-- scribbles -->
-						<div class="mb-6 h-1 w-1/2 rounded bg-[#A1A1AA]/30"></div>
-						{#each Array(6) as _}
-							<div class="mb-3 flex w-full gap-2">
-								<div class="h-1 w-full rounded bg-[#F0F0F0]"></div>
-								<div class="h-1 w-[30%] rounded bg-[#D4D4D8]"></div>
-							</div>
-						{/each}
-					</div>
-					<!-- Card 3: Cluttered Spreadsheet -->
-					<div
-						class="absolute z-20 flex h-[150px] w-[240px] flex-col rounded-sm border border-[#D4D4D8] bg-white shadow-[0_20px_50px_rgba(0,0,0,0.12)] md:h-[180px] md:w-[280px]"
-						style="transform: rotate(-3deg) translate(25px, 25px);"
-					>
-						<div
-							class="flex w-full flex-1 flex-col gap-px border-b border-[#D4D4D8] bg-[#E4E4E7] p-px"
-						>
-							{#each Array(5) as _}
-								<div class="flex h-[18%] w-full gap-px">
-									<div class="flex h-full w-[30%] items-center bg-white px-1">
-										<div class="h-1 w-1/2 rounded bg-[#D4D4D8]"></div>
-									</div>
-									<div class="flex h-full flex-1 items-center bg-white px-1">
-										<div class="h-1 w-full rounded bg-[#F0F0F0]"></div>
-									</div>
-									<div class="flex h-full w-[20%] items-center bg-white px-1">
-										<div class="h-1 w-2/3 rounded bg-red-200"></div>
-									</div>
-								</div>
-							{/each}
-						</div>
-						<div class="flex h-8 w-full items-center justify-end bg-[#FAFAF7] px-3">
-							<div class="text-[9px] font-bold tracking-widest text-[#A1A1AA] uppercase">
-								Error #REF!
-							</div>
-						</div>
-					</div>
+	<section class="relative w-full border-b border-[#F0F0F0] bg-white py-12 md:py-16" aria-label="Trust indicators">
+		<div class="mx-auto flex max-w-[1100px] flex-col items-center gap-8 px-6 md:flex-row md:justify-between md:gap-12 md:px-12">
+			<div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-4 md:gap-x-14">
+				<div class="flex flex-col items-center gap-1">
+					<span class="text-[32px] font-semibold tracking-[-0.03em] text-[#111111] md:text-[36px]">20+</span>
+					<span class="text-[13px] font-semibold tracking-[0.04em] text-[#71717A] uppercase">Tea Estates</span>
+				</div>
+				<div class="hidden h-8 w-px bg-[#E4E4E7] md:block"></div>
+				<div class="flex flex-col items-center gap-1">
+					<span class="text-[32px] font-semibold tracking-[-0.03em] text-[#111111] md:text-[36px]">7</span>
+					<span class="text-[13px] font-semibold tracking-[0.04em] text-[#71717A] uppercase">Regions</span>
+				</div>
+				<div class="hidden h-8 w-px bg-[#E4E4E7] md:block"></div>
+				<div class="flex flex-col items-center gap-1">
+					<span class="text-[32px] font-semibold tracking-[-0.03em] text-[#111111] md:text-[36px]">25+</span>
+					<span class="text-[13px] font-semibold tracking-[0.04em] text-[#71717A] uppercase">Years</span>
 				</div>
 			</div>
+			<div class="flex flex-col items-center gap-1 md:items-end">
+				<span class="text-[14px] font-semibold text-[#3F3F46]">Built &amp; supported by Sarbani Associates</span>
+				<span class="text-[13px] text-[#71717A]">Bagdogra, Siliguri</span>
+			</div>
+		</div>
+	</section>
 
-			<div class="mt-20 grid w-full grid-cols-1 gap-5 md:mt-24 md:grid-cols-3">
-				<!-- Minimal problem cards -->
-				<div
-					class="flex flex-col items-center rounded-3xl border border-[#F0F0F0] bg-gradient-to-br from-white to-[#FAFAF7] p-8 text-center shadow-[0_2px_12px_rgba(0,0,0,0.02)]"
+	<!-- ═══════════════════════════════════════════════════════════ -->
+	<!-- CONNECTED WORKFLOW                                         -->
+	<!-- ═══════════════════════════════════════════════════════════ -->
+	<section
+		id="workflow"
+		class="relative w-full scroll-mt-20 bg-white py-24 md:py-32"
+		aria-labelledby="workflow-heading"
+	>
+		<div class="mx-auto max-w-[1100px] px-6 md:px-12">
+			<div class="mb-16 max-w-[640px]">
+				<h2
+					id="workflow-heading"
+					class="text-[40px] leading-[1.05] font-semibold tracking-[-0.04em] text-[#111111] md:text-[52px]"
+					style="text-wrap: balance"
 				>
-					<div
-						class="mb-6 flex size-14 items-center justify-center rounded-2xl bg-white shadow-[0_4px_16px_rgba(0,0,0,0.04)]"
-					>
-						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"
-							><path
-								d="M12 8v4l3 3"
-								stroke="#A1A1AA"
-								stroke-width="1.5"
-								stroke-linecap="round"
-							/><circle cx="12" cy="12" r="9" stroke="#A1A1AA" stroke-width="1.5" /></svg
-						>
+					From face scan to daily report. Every step connected.
+				</h2>
+				<p class="mt-6 max-w-[520px] text-[17px] leading-[1.6] text-[#52525B]">
+					GardenSuite links attendance, weighing, payroll, and reporting. Data flows from the field to the office without manual re-entry.
+				</p>
+			</div>
+
+			<div class="grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-[#F0F0F0] bg-[#F0F0F0] sm:grid-cols-2 lg:grid-cols-5">
+				{#each [
+					{ step: '01', title: 'Face verified', desc: 'Worker identity confirmed by face scan on mobile before hazira is marked.' },
+					{ step: '02', title: 'Leaf weighed', desc: 'Smart scale sends weight directly to the linked worker record.' },
+					{ step: '03', title: 'Records sync', desc: 'Attendance and weight data linked automatically. No register work.' },
+					{ step: '04', title: 'Payroll ready', desc: 'Wages, PF, ESI, bonus calculated from real field data.' },
+					{ step: '05', title: 'Owner sees report', desc: 'Daily MIS on phone, tablet, or laptop from anywhere.' }
+				] as item}
+					<div class="flex flex-col bg-white p-6 md:p-8">
+						<span class="mb-4 text-[13px] font-semibold tracking-[0.06em] text-[#1B5E3B]">{item.step}</span>
+						<h3 class="mb-2 text-[17px] font-semibold tracking-[-0.01em] text-[#111111]">{item.title}</h3>
+						<p class="text-[14px] leading-[1.5] text-[#52525B]">{item.desc}</p>
 					</div>
-					<h3 class="mb-3 text-[18px] font-medium tracking-[-0.01em] text-[#111111]">
-						Time keeps leaking
-					</h3>
-					<p class="text-[14px] leading-[1.5] text-[#666666]">
-						Attendance, weighing, and payroll take hours when your team should be fixing the day.
+				{/each}
+			</div>
+		</div>
+	</section>
+
+	<!-- ═══════════════════════════════════════════════════════════ -->
+	<!-- MODULE: FACE ATTENDANCE                                    -->
+	<!-- ═══════════════════════════════════════════════════════════ -->
+	<section
+		id="features"
+		class="relative w-full scroll-mt-20 bg-[#FAFAF7] py-24 md:py-32"
+		aria-labelledby="mod-attendance-heading"
+	>
+		<div class="mx-auto max-w-[1100px] px-6 md:px-12">
+			<div class="flex flex-col items-center gap-12 md:flex-row md:items-start md:gap-16 lg:gap-20">
+				<div class="flex-1">
+					<span class="mb-4 inline-block text-[13px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase">Attendance</span>
+					<h2
+						id="mod-attendance-heading"
+						class="text-[36px] leading-[1.08] font-semibold tracking-[-0.04em] text-[#111111] md:text-[44px]"
+						style="text-wrap: balance"
+					>
+						Face attendance stops proxy punching.
+					</h2>
+					<p class="mt-6 max-w-[440px] text-[17px] leading-[1.6] text-[#52525B]">
+						The worker's face is scanned on a mobile phone before hazira is marked. If the face does not match, the attendance does not go through. Works without internet.
 					</p>
+					<ul class="mt-8 flex flex-col gap-3">
+						{#each ['No buddy punching - real face, real hazira', 'Offline face matching on the phone', 'Section-wise attendance for field and factory'] as point}
+							<li class="flex items-start gap-3 text-[15px] leading-[1.5] text-[#3F3F46]">
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-0.5 shrink-0" aria-hidden="true"><path d="M3 8.5l3.5 3L13 5" stroke="#1B5E3B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+								{point}
+							</li>
+						{/each}
+					</ul>
+					<a
+						href="/products/attendance"
+						class="mt-8 inline-flex items-center gap-2 text-[15px] font-semibold text-[#111111] transition-colors duration-150 hover:text-[#1B5E3B] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30"
+					>
+						Learn more
+						<svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M5 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+					</a>
 				</div>
-				<div
-					class="flex flex-col items-center rounded-3xl border border-[#F0F0F0] bg-gradient-to-br from-white to-[#FAFAF7] p-8 text-center shadow-[0_2px_12px_rgba(0,0,0,0.02)]"
-				>
-					<div
-						class="mb-6 flex size-14 items-center justify-center rounded-2xl bg-white shadow-[0_4px_16px_rgba(0,0,0,0.04)]"
-					>
-						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"
-							><path
-								d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"
-								stroke="#A1A1AA"
-								stroke-width="1.5"
-								stroke-linecap="round"
-							/><circle cx="8.5" cy="7" r="4" stroke="#A1A1AA" stroke-width="1.5" /><path
-								d="M20 8v6M23 11h-6"
-								stroke="#A1A1AA"
-								stroke-width="1.5"
-								stroke-linecap="round"
-							/></svg
-						>
+				<div class="w-full flex-1">
+					<div class="overflow-hidden rounded-2xl border border-[#F0F0F0] bg-white shadow-[0_4px_20px_rgba(0,0,0,0.04)]">
+						<img
+							src="/img/home/face-attendance.png"
+							alt="Supervisor using face scan on mobile to verify tea garden worker identity"
+							class="h-auto w-full object-cover"
+							width="1024"
+							height="1024"
+							loading="lazy"
+						/>
 					</div>
-					<h3 class="mb-3 text-[18px] font-medium tracking-[-0.01em] text-[#111111]">
-						Buddy punching happens
-					</h3>
-					<p class="text-[14px] leading-[1.5] text-[#666666]">
-						If you cannot verify the worker, you cannot trust the hazira.
-					</p>
-				</div>
-				<div
-					class="flex flex-col items-center rounded-3xl border border-[#F0F0F0] bg-gradient-to-br from-white to-[#FAFAF7] p-8 text-center shadow-[0_2px_12px_rgba(0,0,0,0.02)]"
-				>
-					<div
-						class="mb-6 flex size-14 items-center justify-center rounded-2xl bg-white shadow-[0_4px_16px_rgba(0,0,0,0.04)]"
-					>
-						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"
-							><rect
-								x="4"
-								y="4"
-								width="16"
-								height="16"
-								rx="3"
-								stroke="#A1A1AA"
-								stroke-width="1.5"
-							/><path d="M4 10h16M10 10v10" stroke="#A1A1AA" stroke-width="1.5" /></svg
-						>
-					</div>
-					<h3 class="mb-3 text-[18px] font-medium tracking-[-0.01em] text-[#111111]">
-						Numbers do not match
-					</h3>
-					<p class="text-[14px] leading-[1.5] text-[#666666]">
-						Attendance in one place, weights in another, payroll in Excel. Month end becomes a
-						fight.
-					</p>
 				</div>
 			</div>
 		</div>
 	</section>
 
 	<!-- ═══════════════════════════════════════════════════════════ -->
-	<!-- PROOF BAND - Named Tea Estates                              -->
+	<!-- MODULE: SMART WEIGHING                                     -->
 	<!-- ═══════════════════════════════════════════════════════════ -->
-	<section class="relative w-full overflow-hidden bg-[#0F2E0C] py-20 md:py-28" aria-labelledby="proof-heading">
-		<!-- Ambient glow -->
-		<div class="pointer-events-none absolute top-1/2 left-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#1B5E3B]/20 blur-[150px]"></div>
+	<section
+		class="relative w-full bg-white py-24 md:py-32"
+		aria-labelledby="mod-weighing-heading"
+	>
+		<div class="mx-auto max-w-[1100px] px-6 md:px-12">
+			<div class="flex flex-col-reverse items-center gap-12 md:flex-row md:items-start md:gap-16 lg:gap-20">
+				<div class="w-full flex-1">
+					<div class="overflow-hidden rounded-2xl border border-[#F0F0F0] bg-white shadow-[0_4px_20px_rgba(0,0,0,0.04)]">
+						<img
+							src="/img/home/smart-weighing.png"
+							alt="Digital hanging scale weighing tea leaves with wireless sync to smartphone"
+							class="h-auto w-full object-cover"
+							width="1024"
+							height="1024"
+							loading="lazy"
+						/>
+					</div>
+				</div>
+				<div class="flex-1">
+					<span class="mb-4 inline-block text-[13px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase">Weighing</span>
+					<h2
+						id="mod-weighing-heading"
+						class="text-[36px] leading-[1.08] font-semibold tracking-[-0.04em] text-[#111111] md:text-[44px]"
+						style="text-wrap: balance"
+					>
+						Smart scale sends weight to the worker record.
+					</h2>
+					<p class="mt-6 max-w-[440px] text-[17px] leading-[1.6] text-[#52525B]">
+						The wireless scale weighs the leaf bag and sends the number directly to the worker's record on the phone. No writing, no errors, no stolen weights.
+					</p>
+					<ul class="mt-8 flex flex-col gap-3">
+						{#each ['Bluetooth connection to the phone', 'Weight linked to verified worker automatically', 'No manual register entry needed'] as point}
+							<li class="flex items-start gap-3 text-[15px] leading-[1.5] text-[#3F3F46]">
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-0.5 shrink-0" aria-hidden="true"><path d="M3 8.5l3.5 3L13 5" stroke="#1B5E3B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+								{point}
+							</li>
+						{/each}
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- ═══════════════════════════════════════════════════════════ -->
+	<!-- MODULE: PAYROLL                                            -->
+	<!-- ═══════════════════════════════════════════════════════════ -->
+	<section
+		class="relative w-full bg-[#FAFAF7] py-24 md:py-32"
+		aria-labelledby="mod-payroll-heading"
+	>
+		<div class="mx-auto max-w-[1100px] px-6 md:px-12">
+			<div class="flex flex-col items-center gap-12 md:flex-row md:items-start md:gap-16 lg:gap-20">
+				<div class="flex-1">
+					<span class="mb-4 inline-block text-[13px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase">Payroll</span>
+					<h2
+						id="mod-payroll-heading"
+						class="text-[36px] leading-[1.08] font-semibold tracking-[-0.04em] text-[#111111] md:text-[44px]"
+						style="text-wrap: balance"
+					>
+						Payroll calculated from real field data.
+					</h2>
+					<p class="mt-6 max-w-[440px] text-[17px] leading-[1.6] text-[#52525B]">
+						Wages, PF, ESI, bonus, and deductions are ready from actual attendance and weight records. No calculator, no Excel rework at month end.
+					</p>
+					<ul class="mt-8 flex flex-col gap-3">
+						{#each ['Hazira-based wage calculation', 'PF, ESI, bonus rules built in', 'Month-end payroll without rework'] as point}
+							<li class="flex items-start gap-3 text-[15px] leading-[1.5] text-[#3F3F46]">
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-0.5 shrink-0" aria-hidden="true"><path d="M3 8.5l3.5 3L13 5" stroke="#1B5E3B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+								{point}
+							</li>
+						{/each}
+					</ul>
+					<a
+						href="/products/payroll"
+						class="mt-8 inline-flex items-center gap-2 text-[15px] font-semibold text-[#111111] transition-colors duration-150 hover:text-[#1B5E3B] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30"
+					>
+						Learn more
+						<svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M5 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+					</a>
+				</div>
+				<div class="w-full flex-1">
+					<div class="overflow-hidden rounded-2xl border border-[#F0F0F0] bg-white shadow-[0_4px_20px_rgba(0,0,0,0.04)]">
+						<img
+							src="/img/home/payroll.png"
+							alt="Automated payroll calculation connecting attendance and leaf weight records"
+							class="h-auto w-full object-cover"
+							width="1024"
+							height="1024"
+							loading="lazy"
+						/>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
-		<div class="relative z-10 mx-auto max-w-[1100px] px-6 md:px-12">
-			<div class="mb-14 flex flex-col items-center text-center md:mb-16">
-				<span class="mb-5 text-[12px] font-semibold tracking-[0.08em] text-[#4ADE80]/60 uppercase">Real Gardens, Real Results</span>
-				<h2 id="proof-heading" class="max-w-[600px] text-[32px] leading-[1.05] font-medium tracking-[-0.05em] text-white md:text-[44px]" style="text-wrap: balance">
-					Trusted by 20+ tea estates across 7 regions.
+	<!-- ═══════════════════════════════════════════════════════════ -->
+	<!-- MODULE: DAILY MIS & FACTORY                                -->
+	<!-- ═══════════════════════════════════════════════════════════ -->
+	<section
+		class="relative w-full bg-white py-24 md:py-32"
+		aria-labelledby="mod-mis-heading"
+	>
+		<div class="mx-auto max-w-[1100px] px-6 md:px-12">
+			<div class="flex flex-col-reverse items-center gap-12 md:flex-row md:items-start md:gap-16 lg:gap-20">
+				<div class="w-full flex-1">
+					<div class="overflow-hidden rounded-2xl border border-white/40 bg-[#1a1a1a] shadow-[0_20px_60px_rgba(0,0,0,0.15)]">
+						<!-- Browser chrome bar -->
+						<div class="flex items-center gap-2 border-b border-white/[0.06] bg-[#1a1a1a] px-4 py-2.5">
+							<div class="flex gap-1.5">
+								<div class="h-2.5 w-2.5 rounded-full bg-[#FF5F57]"></div>
+								<div class="h-2.5 w-2.5 rounded-full bg-[#FEBC2E]"></div>
+								<div class="h-2.5 w-2.5 rounded-full bg-[#28C840]"></div>
+							</div>
+							<div class="flex flex-1 justify-center">
+								<div class="flex min-w-[200px] items-center gap-1.5 rounded-md bg-white/[0.06] px-3 py-1">
+									<span class="text-[11px] text-white/30">gardensuite.in/dashboard</span>
+								</div>
+							</div>
+						</div>
+						<img
+							src="/mis-dashboard.png"
+							alt="GardenSuite daily MIS report dashboard showing plucking, production, and labour data"
+							class="h-auto w-full object-cover object-top"
+							width="1400"
+							height="900"
+							loading="lazy"
+						/>
+					</div>
+				</div>
+				<div class="flex-1">
+					<span class="mb-4 inline-block text-[13px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase">Daily Report</span>
+					<h2
+						id="mod-mis-heading"
+						class="text-[36px] leading-[1.08] font-semibold tracking-[-0.04em] text-[#111111] md:text-[44px]"
+						style="text-wrap: balance"
+					>
+						Daily report on any device.
+					</h2>
+					<p class="mt-6 max-w-[440px] text-[17px] leading-[1.6] text-[#52525B]">
+						Open the daily MIS on your phone, tablet, or laptop. See plucking, production, labour, and factory numbers without calling the garden.
+					</p>
+					<ul class="mt-8 flex flex-col gap-3">
+						{#each ['Updated daily with field and factory data', 'Works on phone, tablet, or laptop', 'Factory, stores, and field data in one view'] as point}
+							<li class="flex items-start gap-3 text-[15px] leading-[1.5] text-[#3F3F46]">
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-0.5 shrink-0" aria-hidden="true"><path d="M3 8.5l3.5 3L13 5" stroke="#1B5E3B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+								{point}
+							</li>
+						{/each}
+					</ul>
+					<a
+						href="/products/mis"
+						class="mt-8 inline-flex items-center gap-2 text-[15px] font-semibold text-[#111111] transition-colors duration-150 hover:text-[#1B5E3B] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30"
+					>
+						Learn more
+						<svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M5 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ═══════════════════════════════════════════════════════════ -->
+	<!-- TRUST / WHY GARDENSUITE                                    -->
+	<!-- ═══════════════════════════════════════════════════════════ -->
+	<section
+		id="about"
+		class="relative w-full scroll-mt-20 bg-[#FAFAF7] py-24 md:py-32"
+		aria-labelledby="trust-heading"
+	>
+		<div class="mx-auto max-w-[1100px] px-6 md:px-12">
+			<div class="mb-12 max-w-[640px]">
+				<span class="mb-4 inline-block text-[13px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase">Why GardenSuite</span>
+				<h2
+					id="trust-heading"
+					class="text-[36px] leading-[1.08] font-semibold tracking-[-0.04em] text-[#111111] md:text-[44px] lg:text-[52px]"
+					style="text-wrap: balance"
+				>
+					Installed, trained, and supported on site.
 				</h2>
 			</div>
 
-			<div class="grid grid-cols-2 gap-x-8 gap-y-6 md:grid-cols-4 lg:grid-cols-7">
+			<!-- Stats row with animated entrance -->
+			<div class="why-stats mb-14 grid grid-cols-1 gap-6 sm:grid-cols-3 md:gap-10">
 				{#each [
-					{ region: 'Darjeeling', estates: ['Simulbarie T.E.', 'Longview T.E.'] },
-					{ region: 'Dooars', estates: ['Rheabari T.E.', 'Mogulkata T.E.', 'Rahimpur T.E.'] },
-					{ region: 'Terai', estates: ['Atal T.E.', 'Naxalbari T.E.'] },
-					{ region: 'Assam', estates: ['Choibari T.E.', 'Chapar T.E.'] },
-					{ region: 'Coochbehar', estates: ['Tinbigha T.E.'] },
-					{ region: 'Uttar Dinajpur', estates: ['Chandan T.E.'] },
-					{ region: 'Jalpaiguri', estates: ['Himalayan Agro'] }
-				] as group}
-					<div class="flex flex-col gap-2">
-						<span class="text-[11px] font-medium tracking-[0.06em] text-[#4ADE80]/50 uppercase">{group.region}</span>
-						{#each group.estates as estate}
-							<span class="text-[13px] leading-[1.5] font-medium text-white/70">{estate}</span>
-						{/each}
+					{
+						value: '25+',
+						label: 'Years serving tea gardens',
+						icon: 'calendar'
+					},
+					{
+						value: '7',
+						label: 'Regions covered',
+						icon: 'map'
+					},
+					{
+						value: '20+',
+						label: 'Tea estates running GardenSuite',
+						icon: 'building'
+					}
+				] as stat, i}
+					<div
+						class="why-stat-item flex items-center gap-4"
+						style="--delay: {i * 120}ms"
+					>
+						<div class="why-stat-icon flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#1B5E3B]/8">
+							{#if stat.icon === 'calendar'}
+								<svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+									<rect x="3" y="5" width="16" height="14" rx="2.5" stroke="#1B5E3B" stroke-width="1.5"/>
+									<path d="M3 9.5h16" stroke="#1B5E3B" stroke-width="1.5"/>
+									<path d="M7.5 3v3M14.5 3v3" stroke="#1B5E3B" stroke-width="1.5" stroke-linecap="round"/>
+									<circle cx="11" cy="14" r="1.25" fill="#1B5E3B"/>
+								</svg>
+							{:else if stat.icon === 'map'}
+								<svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+									<path d="M11 2C7.14 2 4 5.14 4 9c0 5.25 7 11 7 11s7-5.75 7-11c0-3.86-3.14-7-7-7z" stroke="#1B5E3B" stroke-width="1.5" stroke-linejoin="round"/>
+									<circle cx="11" cy="9" r="2.5" stroke="#1B5E3B" stroke-width="1.5"/>
+								</svg>
+							{:else}
+								<svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+									<path d="M3 19V7.5a2 2 0 012-2h4.5V4a1.5 1.5 0 011.5-1.5h0A1.5 1.5 0 0112.5 4v1.5H17a2 2 0 012 2V19" stroke="#1B5E3B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M3 19h16" stroke="#1B5E3B" stroke-width="1.5" stroke-linecap="round"/>
+									<rect x="7" y="9" width="2.5" height="2.5" rx="0.5" fill="#1B5E3B"/>
+									<rect x="12.5" y="9" width="2.5" height="2.5" rx="0.5" fill="#1B5E3B"/>
+									<rect x="7" y="13.5" width="2.5" height="2.5" rx="0.5" fill="#1B5E3B"/>
+									<rect x="12.5" y="13.5" width="2.5" height="2.5" rx="0.5" fill="#1B5E3B"/>
+								</svg>
+							{/if}
+						</div>
+						<div>
+							<div class="text-[28px] font-semibold tracking-[-0.04em] text-[#111111] md:text-[32px]" style="font-variant-numeric: tabular-nums">{stat.value}</div>
+							<div class="text-[13px] font-medium leading-[1.4] text-[#71717A]">{stat.label}</div>
+						</div>
 					</div>
 				{/each}
 			</div>
 
-			<div class="mt-12 flex justify-center">
-				<span class="text-[13px] font-medium text-white/40">and more across Eastern India</span>
+			<div class="grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-[#E4E4E7] bg-[#E4E4E7] md:grid-cols-3">
+				{#each [
+					{
+						title: 'Tea garden workflow built in',
+						desc: 'Hazira, plucking, payroll, stores, and factory - the way gardens already run.'
+					},
+					{
+						title: 'Runs offline at the garden',
+						desc: 'Attendance, weighing, and payroll continue even when the internet drops.'
+					},
+					{
+						title: 'Setup and support on site',
+						desc: 'Sarbani Associates installs, trains staff, and supports rollout at the garden.'
+					}
+				] as item}
+					<div class="bg-white p-6 md:p-8">
+						<div class="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-[#1B5E3B]/8">
+							<svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+								<path d="M9 2.5l5 2.2v3.3c0 3.2-1.9 5.7-5 7.5-3.1-1.8-5-4.3-5-7.5V4.7L9 2.5z" stroke="#1B5E3B" stroke-width="1.5" stroke-linejoin="round"/>
+								<path d="M6.4 8.9l1.7 1.7 3.5-3.7" stroke="#1B5E3B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+						</div>
+						<h3 class="text-[17px] font-semibold leading-[1.35] text-[#111111]">{item.title}</h3>
+						<p class="mt-2 text-[14px] leading-[1.55] text-[#52525B]">{item.desc}</p>
+					</div>
+				{/each}
 			</div>
 		</div>
 	</section>
 
 	<!-- ═══════════════════════════════════════════════════════════ -->
-	<!-- FEATURES BENTO                                              -->
+	<!-- FAQ                                                        -->
 	<!-- ═══════════════════════════════════════════════════════════ -->
 	<section
-		id="features"
-		class="relative w-full scroll-mt-20 overflow-hidden bg-[#FAFAF7] py-32 md:py-44"
-		aria-labelledby="feat-heading"
-	>
-		<!-- Subtle glow backgrounds -->
-		<div
-			class="bg-gradient-radial pointer-events-none absolute top-1/3 left-1/2 h-[800px] w-[800px] -translate-x-1/2 -translate-y-1/2 rounded-full from-[#1B5E3B]/[0.05] to-transparent"
-		></div>
-		<div
-			class="pointer-events-none absolute -right-[100px] bottom-1/4 h-[500px] w-[500px] rounded-full bg-[#C8DDB8]/[0.06] blur-[120px]"
-		></div>
-
-		<div class="relative z-10 mx-auto max-w-[1100px] px-6 md:px-12">
-			<div class="mb-20 flex flex-col items-center text-center md:mb-28">
-				<span
-					class="mb-6 text-[12px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase"
-					>The Solution</span
-				>
-				<h2
-					id="feat-heading"
-					class="max-w-[680px] text-[36px] leading-[1.05] font-medium tracking-[-0.05em] text-[#111111] md:text-[48px] lg:text-[60px]"
-					style="text-wrap: balance"
-				>
-					One system.<br class="hidden md:inline" /> No chasing papers.
-				</h2>
-				<p
-					class="mt-8 max-w-[520px] text-base leading-[1.5] text-[#666666] md:text-[16px]"
-				>
-					Attendance, weights, payroll, factory, stores, and the daily report all stay connected.
-				</p>
-			</div>
-
-			<!-- Bento Grid -->
-			<div class="grid grid-cols-1 gap-5 md:grid-cols-6">
-				<!-- Large Card: Face Attendance -->
-				<div
-					class="feat-card group relative col-span-1 overflow-hidden rounded-[32px] border border-[#F0F0F0] bg-gradient-to-br from-white to-[#FAFAF7] p-10 shadow-[0_8px_30px_rgba(0,0,0,0.02)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(0,0,0,0.06)] md:col-span-4 md:p-12"
-				>
-					<div
-						class="pointer-events-none absolute -top-20 -right-20 h-[400px] w-[400px] rounded-full bg-[#1B5E3B]/[0.04] blur-[80px] transition duration-500 group-hover:bg-[#1B5E3B]/[0.08]"
-					></div>
-
-					<div class="relative z-10 flex h-full flex-col items-center gap-10 md:flex-row">
-						<div class="flex h-full max-w-[380px] flex-col">
-							<div
-								class="mb-8 flex size-14 items-center justify-center rounded-2xl border border-[#F0F0F0] bg-[#FAFAF7]"
-							>
-								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"
-									><circle cx="12" cy="12" r="9" stroke="#1A5C2E" stroke-width="1.5" /><path
-										d="M12 11a2 2 0 100-4 2 2 0 000 4zM16 17v-1a4 4 0 00-8 0v1"
-										stroke="#1A5C2E"
-										stroke-width="1.5"
-										stroke-linecap="round"
-									/></svg
-								>
-							</div>
-							<h3
-								class="mb-4 text-[24px] leading-tight font-medium tracking-[-0.02em] text-[#111111] md:text-[28px]"
-							>
-								Face Attendance
-							</h3>
-							<p class="mb-8 text-[15px] leading-[1.5] text-[#666666]">
-								Stop buddy punching, even without internet. Real worker. Real hazira. No duplicate
-								entry.
-							</p>
-							<a
-								href="/products/attendance"
-								class="mt-auto -ml-1 inline-flex w-fit items-center gap-2 rounded-md px-1 py-0.5 text-[14px] font-semibold text-[#0A0A0A] transition duration-200 hover:gap-3 hover:text-[#1A5C2E] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30"
-							>
-								See how it works <svg
-									width="14"
-									height="14"
-									viewBox="0 0 14 14"
-									fill="none"
-									aria-hidden="true"
-									><path
-										d="M5 3l4 4-4 4"
-										stroke="currentColor"
-										stroke-width="1.5"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-									/></svg
-								>
-							</a>
-						</div>
-
-						<!-- Code Illustration: Face Scanner -->
-						<div class="hidden flex-1 justify-end pr-4 md:flex" style="perspective: 1000px;">
-							<div
-								class="relative flex aspect-[1080/2400] w-full max-w-[220px] translate-y-4 items-center justify-center"
-							>
-								<div
-									class="relative z-10 h-full w-full transform overflow-hidden rounded-2xl border-[3px] border-[#1A1A1A] bg-[#0A0A0A] shadow-[0_20px_50px_rgba(26,92,46,0.15)] transition-transform duration-700 ease-out group-hover:scale-[1.03] group-hover:-rotate-y-4"
-								>
-									<img
-										src="/img/app/Screenshot_20260418-121621.png"
-										alt="Face App Setup"
-										class="h-full w-full object-cover"
-										width="1080"
-										height="2400"
-									/>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Medium Card: Smart Weighing -->
-				<div
-					class="feat-card group relative col-span-1 overflow-hidden rounded-[32px] border border-[#F0F0F0] bg-gradient-to-br from-white to-[#FAFAF7] p-10 shadow-[0_8px_30px_rgba(0,0,0,0.02)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(0,0,0,0.06)] md:col-span-2"
-				>
-					<div class="relative z-10 flex h-full flex-col">
-						<div
-							class="mb-8 flex size-14 items-center justify-center rounded-2xl border border-[#F0F0F0] bg-[#FAFAF7]"
-						>
-							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"
-								><rect
-									x="4"
-									y="6"
-									width="16"
-									height="12"
-									rx="3"
-									stroke="#1A5C2E"
-									stroke-width="1.5"
-								/><path
-									d="M12 6L12 3"
-									stroke="#1A5C2E"
-									stroke-width="1.5"
-									stroke-linecap="round"
-								/></svg
-							>
-						</div>
-						<h3
-							class="mb-4 text-[22px] leading-tight font-medium tracking-[-0.02em] text-[#111111]"
-						>
-							Smart Weighing
-						</h3>
-						<p class="text-[15px] leading-[1.5] text-[#666666]">
-							Scales connect automatically. No manual entry. No stolen weights.
-						</p>
-
-						<!-- Code Illustration: Smart Scale -->
-						<div
-							class="relative mt-8 flex w-full flex-col items-center pt-6"
-							style="perspective: 1000px;"
-						>
-							<!-- Syncing Mobile Hover -->
-							<div
-								class="relative z-20 mb-6 flex w-28 flex-col items-center gap-1 rounded-lg border border-[#F0F0F0] bg-white pt-4 pb-3 shadow-[0_12px_24px_rgba(26,92,46,0.06)]"
-								style="animation: float-slow 4s ease-in-out infinite;"
-							>
-								<div
-									class="text-[20px] font-extrabold tracking-tight text-[#0A0A0A]"
-								>
-									24.5<span class="ml-0.5 text-[12px] text-[#A1A1AA]">kg</span>
-								</div>
-								<div
-									class="flex items-center gap-1.5 rounded-full border border-[#DCFCE7] bg-[#F0FDF4] px-2 py-0.5"
-								>
-									<div class="h-1.5 w-1.5 animate-pulse rounded-full bg-[#1B5E3B]"></div>
-									<span class="text-[9px] font-bold tracking-wider text-[#1B5E3B] uppercase"
-										>Synced</span
-									>
-								</div>
-							</div>
-							<!-- Connection Waves -->
-							<div
-								class="absolute bottom-16 left-1/2 z-10 flex h-8 w-8 -translate-x-1/2 justify-center text-[#1B5E3B] opacity-40"
-							>
-								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="animate-pulse"
-									><path
-										d="M12 20v.01M8.5 16.5a5 5 0 017 0M5 13a10 10 0 0114 0"
-										stroke="currentColor"
-										stroke-width="2"
-										stroke-linecap="round"
-									/></svg
-								>
-							</div>
-							<!-- Scale Base Platform -->
-							<div
-								class="relative z-0 flex h-16 w-48 transform items-center justify-center rounded-3xl border border-b-[6px] border-[#E4E4E7] border-b-[#E4E4E7] bg-gradient-to-b from-[#FAFAF7] to-[#F5F5F0] shadow-sm transition-transform duration-500 group-hover:scale-[1.02]"
-								style="transform: rotateX(60deg);"
-							>
-								<div
-									class="absolute inset-1.5 rounded-2xl border border-[#E4E4E7]/60 bg-white/40"
-								></div>
-								<div class="h-2 w-12 rounded-full bg-[#1B5E3B]/10"></div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- The other 4 cards as squares -->
-				<div
-					class="feat-card group relative col-span-1 flex flex-col overflow-hidden rounded-[32px] border border-[#F0F0F0] bg-gradient-to-br from-white to-[#FAFAF7] p-10 shadow-[0_8px_30px_rgba(0,0,0,0.02)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(0,0,0,0.06)] md:col-span-3"
-				>
-					<div
-						class="relative z-10 mb-6 flex size-14 items-center justify-center rounded-2xl border border-[#F0F0F0] bg-[#FAFAF7]"
-					>
-						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"
-							><rect
-								x="4"
-								y="4"
-								width="16"
-								height="16"
-								rx="3"
-								stroke="#1A5C2E"
-								stroke-width="1.5"
-							/><path d="M4 10h16M8 10v10" stroke="#1A5C2E" stroke-width="1.5" /></svg
-						>
-					</div>
-					<h3
-						class="relative z-10 mb-3 text-[20px] font-medium tracking-[-0.01em] text-[#111111]"
-					>
-						Automated Payroll
-					</h3>
-					<p class="relative z-10 text-[14px] leading-[1.5] text-[#666666]">
-						Hazira, rates, PF, ESI, bonus, and deductions are ready without calculator work.
-					</p>
-
-					<!-- Code Illustration: Payroll Matrix -->
-					<div
-						class="mt-auto flex h-[120px] w-full flex-col pt-10 opacity-80"
-						style="perspective: 500px;"
-					>
-						<div class="relative z-10 flex w-full flex-1 items-end justify-center gap-1.5">
-							<div
-								class="w-1/6 rounded-t-lg border-t border-r border-l border-[#1A5C2E]/10 bg-[#1A5C2E]/5"
-								style="height: 30%"
-							></div>
-							<div
-								class="w-1/6 rounded-t-lg border-t border-r border-l border-[#1A5C2E]/20 bg-[#1A5C2E]/10"
-								style="height: 45%"
-							></div>
-							<div
-								class="w-1/6 origin-bottom rounded-t-lg border-t border-r border-l border-[#1A5C2E]/30 bg-[#1A5C2E]/20"
-								style="height: 60%; transform: rotateX(10deg);"
-							></div>
-							<div
-								class="relative -top-2 flex w-1/6 origin-bottom justify-center rounded-t-lg border-t border-r border-l border-[#1B5E3B]/80 bg-gradient-to-t from-[#1B5E3B]/30 to-[#1B5E3B]/70 shadow-[0_-4px_12px_rgba(27,94,59,0.1)] transition-transform duration-500 group-hover:scale-y-110"
-								style="height: 90%; transform: rotateX(10deg);"
-							>
-								<div
-									class="absolute -top-7 rounded-md border border-[#F0F0F0] bg-white px-2 py-0.5 text-[10px] font-bold tracking-tight whitespace-nowrap text-[#1A5C2E] opacity-0 shadow-sm transition-opacity duration-300 group-hover:opacity-100"
-								>
-									Ready
-								</div>
-							</div>
-							<div
-								class="w-1/6 origin-bottom rounded-t-lg bg-gradient-to-t from-[#1A5C2E] to-[rgba(26,92,46,0.85)] shadow-[0_0_20px_rgba(26,92,46,0.25)]"
-								style="height: 110%; transform: rotateX(10deg) translateZ(5px);"
-							></div>
-						</div>
-						<!-- X-Axis to ground the bars -->
-						<div
-							class="mt-0 flex h-px w-full items-center justify-center gap-6 bg-gradient-to-r from-[#E4E4E7]/0 via-[#E4E4E7] to-[#E4E4E7]/0"
-						>
-							<div class="h-1 w-1 rounded-full bg-[#D4D4D8]"></div>
-							<div class="h-1 w-1 rounded-full bg-[#D4D4D8]"></div>
-							<div class="h-1 w-1 rounded-full bg-[#D4D4D8]"></div>
-							<div class="h-1 w-1 rounded-full bg-[#D4D4D8]"></div>
-						</div>
-					</div>
-				</div>
-
-				<div
-					class="feat-card col-span-1 rounded-[32px] border border-[#F0F0F0] bg-gradient-to-br from-white to-[#FAFAF7] p-10 shadow-[0_8px_30px_rgba(0,0,0,0.02)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(0,0,0,0.06)] md:col-span-3"
-				>
-					<div
-						class="relative z-10 mb-6 flex size-14 items-center justify-center rounded-2xl border border-[#F0F0F0] bg-[#FAFAF7]"
-					>
-						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"
-							><path
-								d="M5 19V9l7-5 7 5v10"
-								stroke="#1A5C2E"
-								stroke-width="1.5"
-								stroke-linecap="round"
-								stroke-linejoin="round"
-							/><path d="M9 19v-5h6v5" stroke="#1A5C2E" stroke-width="1.5" /></svg
-						>
-					</div>
-					<h3
-						class="relative z-10 mb-3 text-[20px] font-medium tracking-[-0.01em] text-[#111111]"
-					>
-						Factory Accounts
-					</h3>
-					<p class="relative z-10 text-[14px] leading-[1.5] text-[#666666]">
-						Track daily production and know your exact manufacturing cost.
-					</p>
-
-					<!-- Code Illustration: Supply Chain Nodes -->
-					<div
-						class="relative -mx-10 mt-auto flex h-[120px] w-full flex-col justify-center overflow-hidden border-t border-[#F0F0F0] px-10 pt-10"
-					>
-						<div
-							class="absolute top-1/2 right-10 left-10 h-1 -translate-y-1/2 overflow-hidden rounded-full bg-[#E4E4E7]"
-						>
-							<div
-								class="h-full w-1/3 animate-pulse rounded-full bg-[#1B5E3B]/40"
-								style="animation: dash 3s linear infinite;"
-							></div>
-						</div>
-
-						<div class="relative z-10 flex h-full items-center justify-between">
-							<div
-								class="flex transform flex-col items-center gap-2 transition-transform duration-300 group-hover:-translate-y-1"
-							>
-								<div
-									class="flex h-10 w-10 items-center justify-center rounded-full border-2 border-[#E4E4E7] bg-white shadow-[0_4px_12px_rgba(0,0,0,0.04)]"
-								>
-									<div class="h-3 w-3 rounded-sm bg-[#A1A1AA]"></div>
-								</div>
-								<span
-									class="rounded bg-white/80 px-1 text-[10px] font-bold tracking-widest text-[#A1A1AA] uppercase"
-									>RAW</span
-								>
-							</div>
-
-							<div
-								class="flex transform flex-col items-center gap-2 transition-transform delay-100 duration-300 group-hover:-translate-y-1"
-							>
-								<div
-									class="relative flex h-12 w-12 items-center justify-center rounded-full border-2 border-[#1B5E3B] bg-white shadow-[0_4px_12px_rgba(26,92,46,0.12)]"
-								>
-									<div
-										class="absolute inset-[-4px] animate-ping rounded-full border border-[#1B5E3B]/30"
-										style="animation-duration: 3s;"
-									></div>
-									<div class="h-4 w-4 rounded-sm bg-[#1B5E3B]"></div>
-								</div>
-								<span
-									class="rounded bg-white/80 px-1 text-[10px] font-bold tracking-widest text-[#1B5E3B] uppercase"
-									>WIP</span
-								>
-							</div>
-
-							<div
-								class="flex transform flex-col items-center gap-2 transition-transform delay-200 duration-300 group-hover:-translate-y-1"
-							>
-								<div
-									class="flex h-10 w-10 items-center justify-center rounded-full border-2 border-[#E4E4E7] bg-white shadow-[0_4px_12px_rgba(0,0,0,0.04)]"
-								>
-									<div class="h-3 w-3 rounded-full bg-[#A1A1AA]"></div>
-								</div>
-								<span
-									class="rounded bg-white/80 px-1 text-[10px] font-bold tracking-widest text-[#A1A1AA] uppercase"
-									>PKG</span
-								>
-							</div>
-						</div>
-					</div>
-
-					<style>
-						@keyframes dash {
-							to {
-								stroke-dashoffset: -200;
-							}
-						}
-						@keyframes float-slow {
-							0%,
-							100% {
-								transform: translateY(0);
-							}
-							50% {
-								transform: translateY(-4px);
-							}
-						}
-						@keyframes scan {
-							0% {
-								transform: translateY(-80px);
-							}
-							50% {
-								transform: translateY(220px);
-							}
-							100% {
-								transform: translateY(-80px);
-							}
-						}
-					</style>
-				</div>
-			</div>
-
-			<!-- Advanced Dashboard (spanning all 6 cols) -->
-			<div
-				class="feat-card group relative col-span-1 flex min-h-[360px] flex-col items-center gap-10 overflow-hidden rounded-[32px] border border-[#1A5C2E]/50 bg-gradient-to-br from-[#1A5C2E] to-[#124220] p-10 shadow-[0_12px_40px_rgba(26,92,46,0.15)] transition duration-300 hover:shadow-[0_20px_50px_rgba(26,92,46,0.25)] md:col-span-6 md:flex-row md:items-stretch"
-			>
-				<!-- Text Content -->
-				<div class="relative z-10 flex w-full max-w-md flex-1 flex-col justify-center">
-					<div
-						class="relative z-10 mb-6 flex size-14 items-center justify-center rounded-2xl border border-white/20 bg-white/10"
-					>
-						<svg
-							width="24"
-							height="24"
-							viewBox="0 0 24 24"
-							fill="none"
-							class="text-white"
-							aria-hidden="true"
-							><rect
-								x="3"
-								y="3"
-								width="7"
-								height="7"
-								rx="1.5"
-								stroke="currentColor"
-								stroke-width="1.5"
-							/><rect
-								x="14"
-								y="3"
-								width="7"
-								height="7"
-								rx="1.5"
-								stroke="currentColor"
-								stroke-width="1.5"
-							/><rect
-								x="14"
-								y="14"
-								width="7"
-								height="7"
-								rx="1.5"
-								stroke="currentColor"
-								stroke-width="1.5"
-							/><rect
-								x="3"
-								y="14"
-								width="7"
-								height="7"
-								rx="1.5"
-								stroke="currentColor"
-								stroke-width="1.5"
-							/></svg
-						>
-					</div>
-					<h3
-						class="relative z-10 mb-4 text-[28px] font-medium tracking-[-0.02em] text-white"
-					>
-						Daily Report Dashboard
-					</h3>
-					<p class="relative z-10 text-[15px] leading-[1.5] text-[#A1A1AA]">
-						Open the daily report on your phone and see plucking, production, labour, and factory
-						numbers fast.
-					</p>
-				</div>
-
-				<!-- Code Illustration: Dashboard Mockup -->
-				<div
-					class="relative flex h-[300px] w-full flex-1 translate-y-6 transform flex-col overflow-hidden rounded-xl border border-white/10 bg-[#09090B] shadow-[0_20px_60px_rgba(0,0,0,0.5)] transition-transform duration-700 ease-out group-hover:-translate-x-2 group-hover:-translate-y-2 md:h-auto md:translate-x-6 md:translate-y-0"
-				>
-					<!-- Window Header -->
-					<div class="flex h-8 w-full items-center gap-2 border-b border-white/10 bg-white/5 px-4">
-						<div class="h-2.5 w-2.5 rounded-full bg-[#3F3F46]"></div>
-						<div class="h-2.5 w-2.5 rounded-full bg-[#3F3F46]"></div>
-						<div class="h-2.5 w-2.5 rounded-full bg-[#3F3F46]"></div>
-					</div>
-
-					<div class="flex h-full flex-col gap-4 p-6">
-						<!-- Top stats row -->
-						<div class="flex gap-4">
-							<div
-								class="flex h-16 flex-1 flex-col gap-2 rounded-lg border border-white/10 bg-white/5 p-3"
-							>
-								<div class="h-2 w-1/2 rounded bg-white/20"></div>
-								<div class="h-4 w-3/4 rounded bg-white/60"></div>
-							</div>
-							<div
-								class="flex h-16 flex-1 flex-col gap-2 rounded-lg border border-[#1B5E3B]/30 bg-[#1B5E3B]/20 p-3"
-							>
-								<div class="h-2 w-1/2 rounded bg-[#1B5E3B]"></div>
-								<div class="h-4 w-5/6 rounded bg-[#4ADE80]"></div>
-							</div>
-							<div
-								class="flex h-16 flex-1 flex-col gap-2 rounded-lg border border-white/10 bg-white/5 p-3"
-							>
-								<div class="h-2 w-1/2 rounded bg-white/20"></div>
-								<div class="h-4 w-2/3 rounded bg-white/60"></div>
-							</div>
-						</div>
-
-						<!-- Big chart area -->
-						<div
-							class="flex w-full flex-1 items-end gap-2 rounded-lg border border-white/10 bg-white/5 p-4"
-						>
-							{#each [30, 45, 60, 40, 80, 50, 90, 70, 65, 85, 45, 100] as height, i}
-								<div
-									class="flex-1 rounded-t-sm bg-gradient-to-t from-[#1B5E3B]/40 to-[#4ADE80]/40"
-									style="height: {height}%; {i % 3 === 0 ? 'opacity: 1;' : 'opacity: 0.5;'}"
-								></div>
-							{/each}
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!-- ═══════════════════════════════════════════════════════════ -->
-	<!-- WHY GARDENSUITE (Obvious style simple section)              -->
-	<!-- ═══════════════════════════════════════════════════════════ -->
-	<section
-		id="about"
-		class="relative w-full scroll-mt-20 overflow-hidden bg-white py-32 md:py-44"
-		aria-labelledby="why-heading"
-	>
-		<!-- Background depth -->
-		<div
-			class="pointer-events-none absolute top-1/3 -right-[200px] h-[500px] w-[500px] rounded-full bg-[#1B5E3B]/[0.02] blur-[140px]"
-		></div>
-		<div
-			class="pointer-events-none absolute bottom-1/4 -left-[150px] h-[400px] w-[400px] rounded-full bg-[#C8DDB8]/[0.04] blur-[120px]"
-		></div>
-
-		<div
-			class="relative z-10 mx-auto flex max-w-[1100px] flex-col items-start gap-16 px-6 md:flex-row md:gap-24 md:px-12"
-		>
-			<div class="shrink-0 md:sticky md:top-32 md:w-[45%]">
-				<span
-					class="mb-6 inline-block text-[12px] font-semibold tracking-[0.08em] text-[#A1A1AA] uppercase"
-					>Why Managers Trust GardenSuite</span
-				>
-				<h2
-					id="why-heading"
-					class="text-[36px] leading-[1.05] font-medium tracking-[-0.05em] text-[#111111] md:text-[48px] lg:text-[60px]"
-					style="text-wrap: balance"
-				>
-					Built only for tea gardens.<br /> Backed by Sarbani Associates.
-				</h2>
-				<p
-					class="mt-8 text-base leading-[1.5] text-[#666666] md:text-[16px]"
-				>
-					GardenSuite is built and supported by Sarbani Associates. Trusted by 20+ tea estates
-					across Assam, Dooars, Terai, Darjeeling, Coochbehar, Uttar Dinajpur, and Jalpaiguri.
-				</p>
-			</div>
-			<div class="flex flex-col gap-6 md:w-[55%]">
-				<div
-					class="flex gap-6 rounded-[24px] border border-[#F0F0F0] bg-gradient-to-br from-[#FAFAF7] to-[#F5F5F0] p-8 shadow-[0_2px_12px_rgba(0,0,0,0.02)]"
-				>
-					<div
-						class="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-white shadow-[0_4px_16px_rgba(0,0,0,0.04)]"
-					>
-						<svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"
-							><path
-								d="M10 3a7 7 0 100 14 7 7 0 000-14zM10 7v3l2 2"
-								stroke="#0A0A0A"
-								stroke-width="1.5"
-								stroke-linecap="round"
-							/></svg
-						>
-					</div>
-					<div>
-						<h3 class="mb-2 text-[17px] font-medium text-[#111111]">
-							Tea garden logic built in
-						</h3>
-						<p class="text-[14px] leading-[1.5] text-[#666666]">
-							Hazira, section-wise attendance, plucking weight, payroll, stores, and factory costing
-							fit the way gardens already work.
-						</p>
-					</div>
-				</div>
-				<div
-					class="flex gap-6 rounded-[24px] border border-[#F0F0F0] bg-gradient-to-br from-[#FAFAF7] to-[#F5F5F0] p-8 shadow-[0_2px_12px_rgba(0,0,0,0.02)]"
-				>
-					<div
-						class="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-white shadow-[0_4px_16px_rgba(0,0,0,0.04)]"
-					>
-						<svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"
-							><path
-								d="M4 14V6c0-1.1.9-2 2-2h8a2 2 0 012 2v8"
-								stroke="#0A0A0A"
-								stroke-width="1.5"
-							/><path
-								d="M2 14h16M10 14v4"
-								stroke="#0A0A0A"
-								stroke-width="1.5"
-								stroke-linecap="round"
-							/></svg
-						>
-					</div>
-					<div>
-						<h3 class="mb-2 text-[17px] font-medium text-[#111111]">
-							Works without internet
-						</h3>
-						<p class="text-[14px] leading-[1.5] text-[#666666]">
-							If the line is down, work continues. Data syncs later when the internet returns.
-						</p>
-					</div>
-				</div>
-				<div
-					class="flex gap-6 rounded-[24px] border border-[#F0F0F0] bg-gradient-to-br from-[#FAFAF7] to-[#F5F5F0] p-8 shadow-[0_2px_12px_rgba(0,0,0,0.02)]"
-				>
-					<div
-						class="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-white shadow-[0_4px_16px_rgba(0,0,0,0.04)]"
-					>
-						<svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"
-							><path
-								d="M10 13l3-3m0 0l-3-3m3 3H7"
-								stroke="#0A0A0A"
-								stroke-width="1.5"
-								stroke-linecap="round"
-							/><circle cx="10" cy="10" r="8" stroke="#0A0A0A" stroke-width="1.5" /></svg
-						>
-					</div>
-					<div>
-						<h3 class="mb-2 text-[17px] font-medium text-[#111111]">
-							Sarbani Associates comes on site
-						</h3>
-						<p class="text-[14px] leading-[1.5] text-[#666666]">
-							Our team visits your garden, sets up the system, and trains your staff. Demo, setup,
-							and training are free.
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!-- ═══════════════════════════════════════════════════════════ -->
-	<!-- FAQ                                                         -->
-	<!-- ═══════════════════════════════════════════════════════════ -->
-	<section
-		class="relative w-full overflow-hidden bg-white py-32 md:py-44"
+		class="relative w-full bg-white py-24 md:py-32"
 		aria-labelledby="faq-heading"
 	>
-		<!-- Background depth -->
-		<div
-			class="pointer-events-none absolute top-1/2 left-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#1B5E3B]/[0.02] blur-[140px]"
-		></div>
-
-		<div
-			class="relative z-10 mx-auto flex max-w-[680px] flex-col items-center gap-16 px-6 md:px-12"
-		>
+		<div class="mx-auto flex max-w-[680px] flex-col items-center gap-12 px-6 md:px-12">
 			<h2
 				id="faq-heading"
-				class="text-center text-[36px] leading-[1.05] font-medium tracking-[-0.05em] text-[#111111] md:text-[48px]"
+				class="scroll-mt-20 text-center text-[36px] leading-[1.08] font-semibold tracking-[-0.04em] text-[#111111] md:text-[44px]"
 				style="text-wrap: balance"
 			>
 				Common questions
@@ -1197,7 +741,7 @@
 							aria-expanded={openFaq === i}
 						>
 							<h3
-								class="text-[16px] leading-[1.4] font-medium text-[#111111] transition-colors duration-150 group-hover:text-[#1A5C2E] md:text-[17px]"
+								class="text-[17px] leading-[1.4] font-semibold text-[#111111] transition-colors duration-150 group-hover:text-[#1B5E3B] md:text-[18px]"
 							>
 								{faq.q}
 							</h3>
@@ -1224,7 +768,7 @@
 								? '1'
 								: '0'}"
 						>
-							<p class="pb-6 text-[15px] leading-[1.5] text-[#666666]">{faq.a}</p>
+							<p class="pb-6 text-[16px] leading-[1.6] text-[#52525B]">{faq.a}</p>
 						</div>
 					</div>
 				{/each}
@@ -1233,60 +777,37 @@
 	</section>
 
 	<!-- ═══════════════════════════════════════════════════════════ -->
-	<!-- CTA (Obvious.ai style glassy light container instead of black) -->
+	<!-- CTA                                                        -->
 	<!-- ═══════════════════════════════════════════════════════════ -->
 	<section
 		id="contact"
-		class="relative w-full scroll-mt-20 overflow-hidden bg-[#FAFAF7] px-6 py-32 md:px-12 md:py-44"
+		class="relative w-full scroll-mt-20 bg-[#FAFAF7] px-6 py-24 md:px-12 md:py-32"
 		aria-labelledby="cta-heading"
 	>
-		<div
-			class="relative mx-auto max-w-[1100px] overflow-hidden rounded-[40px] border border-[#E4E4E7]/60 bg-gradient-to-br from-white to-[#FAFAF7] shadow-[0_20px_80px_rgba(0,0,0,0.04)]"
-		>
-			<!-- Glows inside container -->
-			<div class="pointer-events-none absolute inset-0">
-				<div
-					class="absolute top-1/2 left-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#1B5E3B]/[0.06] blur-[100px]"
-				></div>
-			</div>
-
-			<div
-				class="cta-content relative z-10 flex flex-col items-center px-6 py-28 text-center md:py-36"
+		<div class="mx-auto flex max-w-[640px] flex-col items-center text-center">
+			<h2
+				id="cta-heading"
+				class="text-[36px] leading-[1.08] font-semibold tracking-[-0.04em] text-[#111111] md:text-[44px] lg:text-[52px]"
+				style="text-wrap: balance"
 			>
-				<GsLogoAnimation
-					class="mb-10 h-10 w-auto rounded-2xl border border-[#F0F0F0] bg-white p-2 shadow-[0_4px_20px_rgba(0,0,0,0.03)]"
-				/>
-				<h2
-					id="cta-heading"
-					class="max-w-[680px] text-[36px] leading-[1.05] font-medium tracking-[-0.05em] text-[#111111] md:text-[48px] lg:text-[60px]"
-					style="text-wrap: balance"
+				See it on your own numbers.
+			</h2>
+			<p class="mt-6 max-w-[480px] text-[17px] leading-[1.6] text-[#52525B]">
+				We will show how GardenSuite handles attendance, weights, payroll, factory, and the daily report at your garden. Demo, setup, and training are free.
+			</p>
+			<div class="mt-10 flex w-full flex-col justify-center gap-4 sm:w-auto sm:flex-row">
+				<a
+					href={demoHref}
+					class="flex items-center justify-center rounded-full bg-[#1B5E3B] px-8 py-3.5 shadow-[0_2px_12px_rgba(27,94,59,0.2)] transition duration-150 hover:bg-[#144723] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 active:scale-[0.97]"
 				>
-					See it on your own numbers.
-				</h2>
-				<p
-					class="mt-8 max-w-[480px] text-center text-base leading-[1.5] text-[#666666] md:text-[16px]"
+					<span class="text-[15px] leading-none font-semibold text-white">Book Free Demo</span>
+				</a>
+				<a
+					href="mailto:contact@gardensuite.in"
+					class="flex items-center justify-center rounded-full border border-[#E4E4E7] bg-white px-8 py-3.5 shadow-[0_1px_3px_rgba(0,0,0,0.04)] transition duration-150 hover:border-[#D4D4D8] hover:bg-[#FAFAF7] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 active:scale-[0.97]"
 				>
-					We will show how GardenSuite handles attendance, weights, payroll, factory, and the daily
-					report. Demo, setup, and training are free.
-				</p>
-				<div class="mt-12 flex w-full flex-col justify-center gap-4 sm:w-auto sm:flex-row">
-					<a
-						href={demoHref}
-						class="flex items-center justify-center rounded-full bg-[#1A5C2E] px-9 py-3.5 shadow-[0_4px_20px_rgba(26,92,46,0.3)] transition duration-150 hover:bg-[#144723] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 active:scale-[0.97]"
-					>
-						<span class="text-[15px] leading-none font-semibold text-white"
-							>Book Free Demo</span
-						>
-					</a>
-					<a
-						href="mailto:contact@gardensuite.in"
-						class="flex items-center justify-center rounded-full border border-[#E4E4E7] bg-white px-9 py-3.5 shadow-[0_2px_8px_rgba(0,0,0,0.02)] transition duration-150 hover:border-[#D4D4D8] hover:bg-[#FAFAF7] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 active:scale-[0.97]"
-					>
-						<span class="text-[15px] leading-none font-semibold text-[#0A0A0A]"
-							>Email Us</span
-						>
-					</a>
-				</div>
+					<span class="text-[15px] leading-none font-semibold text-[#111111]">Email Us</span>
+				</a>
 			</div>
 		</div>
 	</section>

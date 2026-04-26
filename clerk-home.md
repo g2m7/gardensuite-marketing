@@ -1,0 +1,29 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - link "Skip to main content" [ref=e4] [cursor=pointer]:
+      - /url: "#main"
+    - banner [ref=e5]:
+      - generic [ref=e8]
+    - main [ref=e77]:
+      - link "Clerk raises $50m Series C" [ref=e78] [cursor=pointer]:
+        - /url: /blog/series-c
+      - generic [ref=e89]
+      - generic [ref=e102]
+      - generic [ref=e152]
+      - generic [ref=e398]
+      - generic [ref=e490]
+      - generic [ref=e496]
+      - generic [ref=e533]
+      - generic [ref=e723]
+      - generic [ref=e809]
+      - generic [ref=e815]
+    - contentinfo [ref=e969]:
+      - generic [ref=e970]
+    - button "Support" [ref=e1073] [cursor=pointer]:
+      - generic [ref=e1074]: Support
+      - img [ref=e1075]
+    - generic [ref=e1079]:
+      - img [ref=e1081]
+      - generic [ref=e1085]
+      - generic [ref=e1090]
+  - alert [ref=e1093]

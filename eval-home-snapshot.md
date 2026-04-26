@@ -1,0 +1,79 @@
+- generic [ref=e2]:
+  - link "Skip to main content" [ref=e3] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation "Main navigation" [ref=e4]:
+    - link "GardenSuite Home" [ref=e5] [cursor=pointer]:
+      - /url: /
+      - generic "GardenSuite Logo" [ref=e6]:
+        - img [ref=e7]
+      - generic [ref=e22]: GardenSuite
+    - generic [ref=e23]:
+      - button "Products menu" [ref=e24]:
+        - text: Products
+        - img [ref=e25]
+      - link "Features" [ref=e27] [cursor=pointer]:
+        - /url: /#features
+      - link "About" [ref=e28] [cursor=pointer]:
+        - /url: /#about
+    - generic [ref=e29]:
+      - link "Contact" [ref=e30] [cursor=pointer]:
+        - /url: /#contact
+      - link "Book Free Demo" [ref=e31] [cursor=pointer]:
+        - /url: mailto:contact@gardensuite.in?subject=GardenSuite%20Demo%20Request
+        - generic [ref=e32]: Book Free Demo
+  - main [ref=e35]:
+    - region "Hero" [ref=e36]:
+      - generic [ref=e37]:
+        - heading "Run your tea garden. Not your paperwork." [level=1] [ref=e38]
+        - paragraph [ref=e39]: Offline software for face attendance, smart weighing, payroll, factory, stores, and daily reporting.
+        - generic [ref=e40]
+      - generic [ref=e49]:
+        - generic [ref=e56]
+        - img "GardenSuite daily report dashboard" [ref=e60]
+    - region "Trust indicators" [ref=e61]:
+      - generic [ref=e62]:
+        - generic [ref=e63]
+        - generic [ref=e75]
+    - region "From face scan to daily report. Every step connected." [ref=e78]:
+      - generic [ref=e79]:
+        - generic [ref=e80]
+        - generic [ref=e83]
+    - region "Face attendance stops proxy punching." [ref=e104]:
+      - generic [ref=e106]:
+        - generic [ref=e107]
+        - img "Supervisor using face scan on mobile to verify tea garden worker identity" [ref=e126]
+    - region "Smart scale sends weight to the worker record." [ref=e127]:
+      - generic [ref=e129]:
+        - img "Digital hanging scale weighing tea leaves with wireless sync to smartphone" [ref=e132]
+        - generic [ref=e133]
+    - region "Payroll calculated from real field data." [ref=e147]:
+      - generic [ref=e149]:
+        - generic [ref=e150]
+        - img "Automated payroll calculation connecting attendance and leaf weight records" [ref=e169]
+    - region "Daily report on any device." [ref=e170]:
+      - generic [ref=e172]:
+        - generic [ref=e174]
+        - generic [ref=e184]
+    - region "Built only for tea gardens. Backed by Sarbani Associates." [ref=e201]:
+      - generic [ref=e203]:
+        - generic [ref=e204]
+        - generic [ref=e207]
+    - region "Common questions" [ref=e236]:
+      - generic [ref=e237]:
+        - heading "Common questions" [level=2] [ref=e238]
+        - generic [ref=e239]
+    - region "See it on your own numbers." [ref=e270]:
+      - generic [ref=e271]:
+        - heading "See it on your own numbers." [level=2] [ref=e272]
+        - paragraph [ref=e273]: We will show how GardenSuite handles attendance, weights, payroll, factory, and the daily report at your garden. Demo, setup, and training are free.
+        - generic [ref=e274]
+  - contentinfo [ref=e279]:
+    - generic [ref=e280]:
+      - generic [ref=e281]:
+        - generic [ref=e282]
+        - generic [ref=e303]
+      - generic [ref=e321]:
+        - generic [ref=e322]: © 2026 Sarbani Associates. All rights reserved.
+        - generic [ref=e325]: Supported by Sarbani Associates, Bagdogra
+    - generic:
+      - generic: Sarbani

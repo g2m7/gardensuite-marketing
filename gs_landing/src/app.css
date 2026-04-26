@@ -45,19 +45,6 @@
 	--font-sans: 'Inter', system-ui, -apple-system, sans-serif;
 	--font-display: 'Inter', system-ui, -apple-system, sans-serif;
 
-	/* Marquee */
-	--animate-marquee: marquee 40s linear infinite;
-	--animate-marquee-reverse: marquee-reverse 40s linear infinite;
-
-	@keyframes marquee {
-		0% { transform: translateX(0); }
-		100% { transform: translateX(-50%); }
-	}
-	
-	@keyframes marquee-reverse {
-		0% { transform: translateX(-50%); }
-		100% { transform: translateX(0); }
-	}
 }
 
 /* ─── Base ─── */
@@ -101,4 +88,47 @@
 
 @utility shadow-card-hover {
 	box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+/* ─── Why Stats Animations ─── */
+
+@keyframes why-stat-in {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes icon-pulse {
+	0%, 100% { transform: scale(1); }
+	50% { transform: scale(1.08); }
+}
+
+.why-stat-item {
+	opacity: 0;
+	transform: translateY(20px);
+}
+
+.why-stats.is-visible .why-stat-item {
+	animation: why-stat-in 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+	animation-delay: var(--delay, 0ms);
+}
+
+.why-stats.is-visible .why-stat-icon {
+	animation: icon-pulse 2.4s ease-in-out 0.8s infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.why-stat-item {
+		opacity: 1;
+		transform: none;
+		animation: none !important;
+	}
+	.why-stat-icon {
+		animation: none !important;
+	}
 }

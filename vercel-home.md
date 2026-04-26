@@ -1,0 +1,18 @@
+- generic [active] [ref=e1]:
+  - alertdialog "Your Privacy" [ref=e332]:
+    - document [ref=e334]:
+      - generic [ref=e339]: This site uses tracking technologies. You may opt in or opt out of the use of these technologies.
+      - generic [ref=e340]
+  - link "Skip to content":
+    - /url: "#geist-skip-nav"
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - banner [ref=e5]
+      - generic [ref=e27]
+      - main [ref=e37]
+      - contentinfo [ref=e138]
+    - complementary
+  - alert [ref=e375]
+  - generic:
+    - generic:
+      - generic

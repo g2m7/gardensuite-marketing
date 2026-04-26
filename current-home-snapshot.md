@@ -1,0 +1,43 @@
+- generic [ref=e2]:
+  - link "Skip to main content" [ref=e3] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation "Main navigation" [ref=e4]:
+    - link "GardenSuite Home" [ref=e5] [cursor=pointer]:
+      - /url: /
+      - generic "GardenSuite Logo" [ref=e6]
+      - generic [ref=e22]: GardenSuite
+    - generic [ref=e23]:
+      - button "Products menu" [ref=e24]
+      - link "Features" [ref=e27] [cursor=pointer]:
+        - /url: /#features
+      - link "About" [ref=e28] [cursor=pointer]:
+        - /url: /#about
+    - generic [ref=e29]:
+      - link "Contact" [ref=e30] [cursor=pointer]:
+        - /url: /#contact
+      - link "Book Free Demo" [ref=e31] [cursor=pointer]:
+        - /url: mailto:contact@gardensuite.in?subject=GardenSuite%20Demo%20Request
+  - main [ref=e35]:
+    - region "Hero" [ref=e36]:
+      - generic [ref=e37]
+      - generic [ref=e49]
+    - region "When problems hit, paper makes them worse." [ref=e61]:
+      - generic [ref=e62]
+    - region "Trusted by 20+ tea estates across 7 regions." [ref=e91]:
+      - generic [ref=e92]
+    - region "A day with GardenSuite." [ref=e125]:
+      - generic [ref=e126]
+    - region "One system. No chasing papers." [ref=e154]:
+      - generic [ref=e155]
+    - region "Built only for tea gardens. Backed by Sarbani Associates." [ref=e244]:
+      - generic [ref=e245]
+    - region "Common questions" [ref=e274]:
+      - generic [ref=e275]
+    - region "See it on your own numbers." [ref=e308]:
+      - generic [ref=e310]
+  - contentinfo [ref=e334]:
+    - generic [ref=e335]:
+      - generic [ref=e336]
+      - generic [ref=e376]
+    - generic:
+      - generic: Sarbani

@@ -1,0 +1,2512 @@
+{
+  "desktop": {
+    "viewport": {
+      "name": "desktop",
+      "width": 1440,
+      "height": 1000
+    },
+    "logs": [],
+    "failed": [],
+    "title": "GardenSuite - Tea Garden Software That Stops Paper Chaos",
+    "headings": [
+      {
+        "tag": "H1",
+        "text": "Run your tea garden.Not your paperwork.",
+        "top": 144
+      },
+      {
+        "tag": "H2",
+        "text": "When problems hit, paper makes them worse.",
+        "top": 1578
+      },
+      {
+        "tag": "H3",
+        "text": "Time keeps leaking",
+        "top": 3109
+      },
+      {
+        "tag": "H3",
+        "text": "Buddy punching happens",
+        "top": 3109
+      },
+      {
+        "tag": "H3",
+        "text": "Numbers do not match",
+        "top": 3109
+      },
+      {
+        "tag": "H2",
+        "text": "Trusted by 20+ tea estates across 7 regions.",
+        "top": 3570
+      },
+      {
+        "tag": "H2",
+        "text": "A day with GardenSuite.",
+        "top": 4223
+      },
+      {
+        "tag": "H3",
+        "text": "Face verified",
+        "top": 5586
+      },
+      {
+        "tag": "H3",
+        "text": "Weight captured",
+        "top": 5586
+      },
+      {
+        "tag": "H3",
+        "text": "Records sync",
+        "top": 5586
+      },
+      {
+        "tag": "H3",
+        "text": "Payroll ready",
+        "top": 5586
+      },
+      {
+        "tag": "H3",
+        "text": "Owner sees report",
+        "top": 5586
+      },
+      {
+        "tag": "H2",
+        "text": "One system. No chasing papers.",
+        "top": 6051
+      },
+      {
+        "tag": "H3",
+        "text": "Face Attendance",
+        "top": 6506
+      },
+      {
+        "tag": "H3",
+        "text": "Smart Weighing",
+        "top": 6498
+      },
+      {
+        "tag": "H3",
+        "text": "Automated Payroll",
+        "top": 7088
+      },
+      {
+        "tag": "H3",
+        "text": "Factory Accounts",
+        "top": 7088
+      },
+      {
+        "tag": "H3",
+        "text": "Daily Report Dashboard",
+        "top": 7892
+      },
+      {
+        "tag": "H2",
+        "text": "Built only for tea gardens. Backed by Sarbani Associates.",
+        "top": 8531
+      },
+      {
+        "tag": "H3",
+        "text": "Tea garden logic built in",
+        "top": 8468
+      },
+      {
+        "tag": "H3",
+        "text": "Works without internet",
+        "top": 8655
+      },
+      {
+        "tag": "H3",
+        "text": "Sarbani Associates comes on site",
+        "top": 8820
+      },
+      {
+        "tag": "H2",
+        "text": "Common questions",
+        "top": 9302
+      },
+      {
+        "tag": "H3",
+        "text": "Does it work without internet?",
+        "top": 9440
+      },
+      {
+        "tag": "H3",
+        "text": "How long does setup take?",
+        "top": 9513
+      },
+      {
+        "tag": "H3",
+        "text": "Which regions do you cover?",
+        "top": 9586
+      },
+      {
+        "tag": "H3",
+        "text": "Can I see the daily report from outside the garden?",
+        "top": 9658
+      },
+      {
+        "tag": "H3",
+        "text": "What does it cost?",
+        "top": 9731
+      },
+      {
+        "tag": "H2",
+        "text": "See it on your own numbers.",
+        "top": 10356
+      }
+    ],
+    "imgs": [
+      {
+        "src": "/hero-sky.png",
+        "alt": "",
+        "w": 1024,
+        "h": 1024,
+        "visibleW": 1440,
+        "visibleH": 1360,
+        "top": 0,
+        "loading": "auto"
+      },
+      {
+        "src": "/bg.png",
+        "alt": "",
+        "w": 3125,
+        "h": 1750,
+        "visibleW": 1440,
+        "visibleH": 840,
+        "top": 520,
+        "loading": "auto"
+      },
+      {
+        "src": "/mis-dashboard.png",
+        "alt": "GardenSuite daily report dashboard",
+        "w": 2880,
+        "h": 1556,
+        "visibleW": 1098,
+        "visibleH": 593,
+        "top": 617,
+        "loading": "eager"
+      },
+      {
+        "src": "/fg.png",
+        "alt": "",
+        "w": 3125,
+        "h": 1750,
+        "visibleW": 1440,
+        "visibleH": 672,
+        "top": 688,
+        "loading": "auto"
+      },
+      {
+        "src": "/img/home/problem-old-way.png",
+        "alt": "Tea garden office overwhelmed with paper registers, wage sheets, and manual record keeping",
+        "w": 1024,
+        "h": 1024,
+        "visibleW": 1002,
+        "visibleH": 1002,
+        "top": 1913,
+        "loading": "lazy"
+      },
+      {
+        "src": "/img/home/workflow.png",
+        "alt": "Five connected stages of a tea garden day: face scan, leaf weighing, record verification, payroll calculation, and daily report",
+        "w": 0,
+        "h": 0,
+        "visibleW": 1002,
+        "visibleH": 1002,
+        "top": 4447,
+        "loading": "lazy"
+      },
+      {
+        "src": "/img/home/face-attendance.png",
+        "alt": "Supervisor using face scan on mobile to verify tea garden worker identity",
+        "w": 0,
+        "h": 0,
+        "visibleW": 281,
+        "visibleH": 281,
+        "top": 6518,
+        "loading": "lazy"
+      },
+      {
+        "src": "/img/home/smart-weighing.png",
+        "alt": "Digital hanging scale weighing tea leaves with wireless sync to smartphone",
+        "w": 0,
+        "h": 0,
+        "visibleW": 319,
+        "visibleH": 319,
+        "top": 6627,
+        "loading": "lazy"
+      },
+      {
+        "src": "/img/home/payroll.png",
+        "alt": "Automated payroll workflow connecting attendance, leaf weights, and wage calculations",
+        "w": 0,
+        "h": 0,
+        "visibleW": 490,
+        "visibleH": 490,
+        "top": 7212,
+        "loading": "lazy"
+      },
+      {
+        "src": "/img/home/factory.png",
+        "alt": "Tea factory workflow from withering to rolling, drying, packing, and final stock",
+        "w": 0,
+        "h": 0,
+        "visibleW": 490,
+        "visibleH": 490,
+        "top": 7212,
+        "loading": "lazy"
+      }
+    ],
+    "sections": [
+      {
+        "i": 0,
+        "id": "",
+        "aria": "Hero",
+        "top": 0,
+        "h": 1360,
+        "textStart": "Run your tea garden.Not your paperwork. The complete offline software for face attendance, smart weighing, and automated payroll. Book Free Demo See How It Works gardensuite.in/das"
+      },
+      {
+        "i": 1,
+        "id": "",
+        "aria": "",
+        "top": 1360,
+        "h": 2060,
+        "textStart": "The Old Way When problems hit, paper makes them worse. Attendance in one register. Leaf weight in another. Payroll in Excel. When work is spread across paper, mistakes become norma"
+      },
+      {
+        "i": 2,
+        "id": "",
+        "aria": "",
+        "top": 3420,
+        "h": 585,
+        "textStart": "Real Gardens, Real Results Trusted by 20+ tea estates across 7 regions. Darjeeling Simulbarie T.E.Longview T.E.Dooars Rheabari T.E.Mogulkata T.E.Rahimpur T.E.Terai Atal T.E.Naxalba"
+      },
+      {
+        "i": 3,
+        "id": "workflow",
+        "aria": "",
+        "top": 4005,
+        "h": 1828,
+        "textStart": "Connected Workflow A day with GardenSuite. From the first face scan to the owner's evening report, every step stays connected. 1 Face verified Worker identity confirmed by face sca"
+      },
+      {
+        "i": 4,
+        "id": "features",
+        "aria": "",
+        "top": 5833,
+        "h": 2426,
+        "textStart": "The Solution One system. No chasing papers. Attendance, weights, payroll, factory, stores, and the daily report all stay connected. Face Attendance Stop buddy punching, even withou"
+      },
+      {
+        "i": 5,
+        "id": "about",
+        "aria": "",
+        "top": 8259,
+        "h": 867,
+        "textStart": "Why Managers Trust GardenSuite Built only for tea gardens. Backed by Sarbani Associates. GardenSuite is built and supported by Sarbani Associates. Trusted by 20+ tea estates across"
+      },
+      {
+        "i": 6,
+        "id": "",
+        "aria": "",
+        "top": 9126,
+        "h": 829,
+        "textStart": "Common questions Does it work without internet? Yes. Attendance, weighing, payroll, stores, and factory work offline at the garden. Data syncs when the internet returns.How long do"
+      },
+      {
+        "i": 7,
+        "id": "contact",
+        "aria": "",
+        "top": 9955,
+        "h": 1045,
+        "textStart": "See it on your own numbers. We will show how GardenSuite handles attendance, weights, payroll, factory, and the daily report. Demo, setup, and training are free. Book Free Demo Ema"
+      }
+    ],
+    "overflow": [
+      {
+        "tag": "DIV",
+        "cls": "pointer-events-none absolute top-1/4 -left-[200px] h-[500px] w-[500px] rounded-full bg-[#A1A1AA]/[0.03] blur-[150px]",
+        "text": "",
+        "left": -200,
+        "right": 300
+      },
+      {
+        "tag": "DIV",
+        "cls": "pointer-events-none absolute -right-[150px] bottom-1/3 h-[400px] w-[400px] rounded-full bg-[#1B5E3B]/[0.02] blur-[120px]",
+        "text": "",
+        "left": 1190,
+        "right": 1590
+      },
+      {
+        "tag": "DIV",
+        "cls": "pointer-events-none absolute -right-[100px] bottom-1/4 h-[500px] w-[500px] rounded-full bg-[#C8DDB8]/[0.06] blur-[120px]",
+        "text": "",
+        "left": 1040,
+        "right": 1540
+      },
+      {
+        "tag": "DIV",
+        "cls": "pointer-events-none absolute top-1/3 -right-[200px] h-[500px] w-[500px] rounded-full bg-[#1B5E3B]/[0.02] blur-[140px]",
+        "text": "",
+        "left": 1140,
+        "right": 1640
+      },
+      {
+        "tag": "DIV",
+        "cls": "pointer-events-none absolute bottom-1/4 -left-[150px] h-[400px] w-[400px] rounded-full bg-[#C8DDB8]/[0.04] blur-[120px]",
+        "text": "",
+        "left": -150,
+        "right": 250
+      }
+    ],
+    "buttons": [
+      {
+        "tag": "A",
+        "text": "Skip to main content",
+        "aria": null,
+        "href": "#main-content",
+        "top": -1
+      },
+      {
+        "tag": "A",
+        "text": "GardenSuite",
+        "aria": "GardenSuite Home",
+        "href": "/",
+        "top": 22
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Products",
+        "aria": "Products menu",
+        "href": null,
+        "top": 16
+      },
+      {
+        "tag": "A",
+        "text": "Face Attendance & Smart Weighing Stop buddy punching and stolen weights.",
+        "aria": null,
+        "href": "/products/attendance",
+        "top": 77
+      },
+      {
+        "tag": "A",
+        "text": "Automated Payroll Hazira, PF, bonus, and wages auto-ready.",
+        "aria": null,
+        "href": "/products/payroll",
+        "top": 145
+      },
+      {
+        "tag": "A",
+        "text": "Factory Accounts Track output and exact factory cost.",
+        "aria": null,
+        "href": "/products/factory",
+        "top": 145
+      },
+      {
+        "tag": "A",
+        "text": "Store Management Know stock without chasing registers.",
+        "aria": null,
+        "href": "/products/stores",
+        "top": 233
+      },
+      {
+        "tag": "A",
+        "text": "Daily Report See daily numbers on any device.",
+        "aria": null,
+        "href": "/products/mis",
+        "top": 233
+      },
+      {
+        "tag": "A",
+        "text": "Features",
+        "aria": null,
+        "href": "/#features",
+        "top": 16
+      },
+      {
+        "tag": "A",
+        "text": "About",
+        "aria": null,
+        "href": "/#about",
+        "top": 16
+      },
+      {
+        "tag": "A",
+        "text": "Contact",
+        "aria": null,
+        "href": "/#contact",
+        "top": 16
+      },
+      {
+        "tag": "A",
+        "text": "Book Free Demo",
+        "aria": null,
+        "href": "mailto:contact@gardensuite.in?subject=GardenSuite%20Demo%20Request",
+        "top": 16
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "aria": "Open menu",
+        "href": null,
+        "top": 0
+      },
+      {
+        "tag": "A",
+        "text": "Book Free Demo",
+        "aria": null,
+        "href": "mailto:contact@gardensuite.in?subject=GardenSuite%20Demo%20Request",
+        "top": 427
+      },
+      {
+        "tag": "A",
+        "text": "See How It Works",
+        "aria": null,
+        "href": "#features",
+        "top": 426
+      },
+      {
+        "tag": "A",
+        "text": "See how it works",
+        "aria": null,
+        "href": "/products/attendance",
+        "top": 6873
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Does it work without internet?",
+        "aria": null,
+        "href": null,
+        "top": 9416
+      },
+      {
+        "tag": "BUTTON",
+        "text": "How long does setup take?",
+        "aria": null,
+        "href": null,
+        "top": 9489
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Which regions do you cover?",
+        "aria": null,
+        "href": null,
+        "top": 9562
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Can I see the daily report from outside the garden?",
+        "aria": null,
+        "href": null,
+        "top": 9634
+      },
+      {
+        "tag": "BUTTON",
+        "text": "What does it cost?",
+        "aria": null,
+        "href": null,
+        "top": 9707
+      },
+      {
+        "tag": "A",
+        "text": "Book Free Demo",
+        "aria": null,
+        "href": "mailto:contact@gardensuite.in?subject=GardenSuite%20Demo%20Request",
+        "top": 10634
+      },
+      {
+        "tag": "A",
+        "text": "Email Us",
+        "aria": null,
+        "href": "mailto:contact@gardensuite.in",
+        "top": 10634
+      },
+      {
+        "tag": "A",
+        "text": "GardenSuite",
+        "aria": "GardenSuite Home",
+        "href": "/",
+        "top": 11097
+      },
+      {
+        "tag": "A",
+        "text": "Face Attendance & Smart Weighing",
+        "aria": null,
+        "href": "/products/attendance",
+        "top": 11125
+      },
+      {
+        "tag": "A",
+        "text": "Automated Payroll",
+        "aria": null,
+        "href": "/products/payroll",
+        "top": 11176
+      },
+      {
+        "tag": "A",
+        "text": "Factory Accounts",
+        "aria": null,
+        "href": "/products/factory",
+        "top": 11208
+      },
+      {
+        "tag": "A",
+        "text": "Store Management",
+        "aria": null,
+        "href": "/products/stores",
+        "top": 11239
+      },
+      {
+        "tag": "A",
+        "text": "Daily Report",
+        "aria": null,
+        "href": "/products/mis",
+        "top": 11271
+      },
+      {
+        "tag": "A",
+        "text": "About",
+        "aria": null,
+        "href": "/#about",
+        "top": 11125
+      },
+      {
+        "tag": "A",
+        "text": "Features",
+        "aria": null,
+        "href": "/#features",
+        "top": 11157
+      },
+      {
+        "tag": "A",
+        "text": "FAQ",
+        "aria": null,
+        "href": "/#faq-heading",
+        "top": 11188
+      },
+      {
+        "tag": "A",
+        "text": "contact@gardensuite.in",
+        "aria": null,
+        "href": "mailto:contact@gardensuite.in",
+        "top": 11125
+      },
+      {
+        "tag": "A",
+        "text": "Book Free Demo",
+        "aria": null,
+        "href": "/#contact",
+        "top": 11157
+      }
+    ],
+    "height": 11495
+  },
+  "wide": {
+    "viewport": {
+      "name": "wide",
+      "width": 1920,
+      "height": 1080
+    },
+    "logs": [],
+    "failed": [],
+    "title": "GardenSuite - Tea Garden Software That Stops Paper Chaos",
+    "headings": [
+      {
+        "tag": "H1",
+        "text": "Run your tea garden.Not your paperwork.",
+        "top": 144
+      },
+      {
+        "tag": "H2",
+        "text": "When problems hit, paper makes them worse.",
+        "top": 1578
+      },
+      {
+        "tag": "H3",
+        "text": "Time keeps leaking",
+        "top": 3109
+      },
+      {
+        "tag": "H3",
+        "text": "Buddy punching happens",
+        "top": 3109
+      },
+      {
+        "tag": "H3",
+        "text": "Numbers do not match",
+        "top": 3109
+      },
+      {
+        "tag": "H2",
+        "text": "Trusted by 20+ tea estates across 7 regions.",
+        "top": 3570
+      },
+      {
+        "tag": "H2",
+        "text": "A day with GardenSuite.",
+        "top": 4223
+      },
+      {
+        "tag": "H3",
+        "text": "Face verified",
+        "top": 5586
+      },
+      {
+        "tag": "H3",
+        "text": "Weight captured",
+        "top": 5586
+      },
+      {
+        "tag": "H3",
+        "text": "Records sync",
+        "top": 5586
+      },
+      {
+        "tag": "H3",
+        "text": "Payroll ready",
+        "top": 5586
+      },
+      {
+        "tag": "H3",
+        "text": "Owner sees report",
+        "top": 5586
+      },
+      {
+        "tag": "H2",
+        "text": "One system. No chasing papers.",
+        "top": 6051
+      },
+      {
+        "tag": "H3",
+        "text": "Face Attendance",
+        "top": 6506
+      },
+      {
+        "tag": "H3",
+        "text": "Smart Weighing",
+        "top": 6498
+      },
+      {
+        "tag": "H3",
+        "text": "Automated Payroll",
+        "top": 7088
+      },
+      {
+        "tag": "H3",
+        "text": "Factory Accounts",
+        "top": 7088
+      },
+      {
+        "tag": "H3",
+        "text": "Daily Report Dashboard",
+        "top": 7892
+      },
+      {
+        "tag": "H2",
+        "text": "Built only for tea gardens. Backed by Sarbani Associates.",
+        "top": 8531
+      },
+      {
+        "tag": "H3",
+        "text": "Tea garden logic built in",
+        "top": 8468
+      },
+      {
+        "tag": "H3",
+        "text": "Works without internet",
+        "top": 8655
+      },
+      {
+        "tag": "H3",
+        "text": "Sarbani Associates comes on site",
+        "top": 8820
+      },
+      {
+        "tag": "H2",
+        "text": "Common questions",
+        "top": 9302
+      },
+      {
+        "tag": "H3",
+        "text": "Does it work without internet?",
+        "top": 9440
+      },
+      {
+        "tag": "H3",
+        "text": "How long does setup take?",
+        "top": 9513
+      },
+      {
+        "tag": "H3",
+        "text": "Which regions do you cover?",
+        "top": 9586
+      },
+      {
+        "tag": "H3",
+        "text": "Can I see the daily report from outside the garden?",
+        "top": 9658
+      },
+      {
+        "tag": "H3",
+        "text": "What does it cost?",
+        "top": 9731
+      },
+      {
+        "tag": "H2",
+        "text": "See it on your own numbers.",
+        "top": 10356
+      }
+    ],
+    "imgs": [
+      {
+        "src": "/hero-sky.png",
+        "alt": "",
+        "w": 1024,
+        "h": 1024,
+        "visibleW": 1920,
+        "visibleH": 1360,
+        "top": 0,
+        "loading": "auto"
+      },
+      {
+        "src": "/bg.png",
+        "alt": "",
+        "w": 3125,
+        "h": 1750,
+        "visibleW": 1920,
+        "visibleH": 840,
+        "top": 520,
+        "loading": "auto"
+      },
+      {
+        "src": "/mis-dashboard.png",
+        "alt": "GardenSuite daily report dashboard",
+        "w": 2880,
+        "h": 1556,
+        "visibleW": 1098,
+        "visibleH": 593,
+        "top": 617,
+        "loading": "eager"
+      },
+      {
+        "src": "/fg.png",
+        "alt": "",
+        "w": 3125,
+        "h": 1750,
+        "visibleW": 1920,
+        "visibleH": 672,
+        "top": 688,
+        "loading": "auto"
+      },
+      {
+        "src": "/img/home/problem-old-way.png",
+        "alt": "Tea garden office overwhelmed with paper registers, wage sheets, and manual record keeping",
+        "w": 1024,
+        "h": 1024,
+        "visibleW": 1002,
+        "visibleH": 1002,
+        "top": 1913,
+        "loading": "lazy"
+      },
+      {
+        "src": "/img/home/workflow.png",
+        "alt": "Five connected stages of a tea garden day: face scan, leaf weighing, record verification, payroll calculation, and daily report",
+        "w": 0,
+        "h": 0,
+        "visibleW": 1002,
+        "visibleH": 1002,
+        "top": 4447,
+        "loading": "lazy"
+      },
+      {
+        "src": "/img/home/face-attendance.png",
+        "alt": "Supervisor using face scan on mobile to verify tea garden worker identity",
+        "w": 0,
+        "h": 0,
+        "visibleW": 281,
+        "visibleH": 281,
+        "top": 6518,
+        "loading": "lazy"
+      },
+      {
+        "src": "/img/home/smart-weighing.png",
+        "alt": "Digital hanging scale weighing tea leaves with wireless sync to smartphone",
+        "w": 0,
+        "h": 0,
+        "visibleW": 319,
+        "visibleH": 319,
+        "top": 6627,
+        "loading": "lazy"
+      },
+      {
+        "src": "/img/home/payroll.png",
+        "alt": "Automated payroll workflow connecting attendance, leaf weights, and wage calculations",
+        "w": 0,
+        "h": 0,
+        "visibleW": 490,
+        "visibleH": 490,
+        "top": 7212,
+        "loading": "lazy"
+      },
+      {
+        "src": "/img/home/factory.png",
+        "alt": "Tea factory workflow from withering to rolling, drying, packing, and final stock",
+        "w": 0,
+        "h": 0,
+        "visibleW": 490,
+        "visibleH": 490,
+        "top": 7212,
+        "loading": "lazy"
+      }
+    ],
+    "sections": [
+      {
+        "i": 0,
+        "id": "",
+        "aria": "Hero",
+        "top": 0,
+        "h": 1360,
+        "textStart": "Run your tea garden.Not your paperwork. The complete offline software for face attendance, smart weighing, and automated payroll. Book Free Demo See How It Works gardensuite.in/das"
+      },
+      {
+        "i": 1,
+        "id": "",
+        "aria": "",
+        "top": 1360,
+        "h": 2060,
+        "textStart": "The Old Way When problems hit, paper makes them worse. Attendance in one register. Leaf weight in another. Payroll in Excel. When work is spread across paper, mistakes become norma"
+      },
+      {
+        "i": 2,
+        "id": "",
+        "aria": "",
+        "top": 3420,
+        "h": 585,
+        "textStart": "Real Gardens, Real Results Trusted by 20+ tea estates across 7 regions. Darjeeling Simulbarie T.E.Longview T.E.Dooars Rheabari T.E.Mogulkata T.E.Rahimpur T.E.Terai Atal T.E.Naxalba"
+      },
+      {
+        "i": 3,
+        "id": "workflow",
+        "aria": "",
+        "top": 4005,
+        "h": 1828,
+        "textStart": "Connected Workflow A day with GardenSuite. From the first face scan to the owner's evening report, every step stays connected. 1 Face verified Worker identity confirmed by face sca"
+      },
+      {
+        "i": 4,
+        "id": "features",
+        "aria": "",
+        "top": 5833,
+        "h": 2426,
+        "textStart": "The Solution One system. No chasing papers. Attendance, weights, payroll, factory, stores, and the daily report all stay connected. Face Attendance Stop buddy punching, even withou"
+      },
+      {
+        "i": 5,
+        "id": "about",
+        "aria": "",
+        "top": 8259,
+        "h": 867,
+        "textStart": "Why Managers Trust GardenSuite Built only for tea gardens. Backed by Sarbani Associates. GardenSuite is built and supported by Sarbani Associates. Trusted by 20+ tea estates across"
+      },
+      {
+        "i": 6,
+        "id": "",
+        "aria": "",
+        "top": 9126,
+        "h": 829,
+        "textStart": "Common questions Does it work without internet? Yes. Attendance, weighing, payroll, stores, and factory work offline at the garden. Data syncs when the internet returns.How long do"
+      },
+      {
+        "i": 7,
+        "id": "contact",
+        "aria": "",
+        "top": 9955,
+        "h": 1045,
+        "textStart": "See it on your own numbers. We will show how GardenSuite handles attendance, weights, payroll, factory, and the daily report. Demo, setup, and training are free. Book Free Demo Ema"
+      }
+    ],
+    "overflow": [
+      {
+        "tag": "DIV",
+        "cls": "pointer-events-none absolute top-1/4 -left-[200px] h-[500px] w-[500px] rounded-full bg-[#A1A1AA]/[0.03] blur-[150px]",
+        "text": "",
+        "left": -200,
+        "right": 300
+      },
+      {
+        "tag": "DIV",
+        "cls": "pointer-events-none absolute -right-[150px] bottom-1/3 h-[400px] w-[400px] rounded-full bg-[#1B5E3B]/[0.02] blur-[120px]",
+        "text": "",
+        "left": 1670,
+        "right": 2070
+      },
+      {
+        "tag": "DIV",
+        "cls": "pointer-events-none absolute -right-[100px] bottom-1/4 h-[500px] w-[500px] rounded-full bg-[#C8DDB8]/[0.06] blur-[120px]",
+        "text": "",
+        "left": 1520,
+        "right": 2020
+      },
+      {
+        "tag": "DIV",
+        "cls": "pointer-events-none absolute top-1/3 -right-[200px] h-[500px] w-[500px] rounded-full bg-[#1B5E3B]/[0.02] blur-[140px]",
+        "text": "",
+        "left": 1620,
+        "right": 2120
+      },
+      {
+        "tag": "DIV",
+        "cls": "pointer-events-none absolute bottom-1/4 -left-[150px] h-[400px] w-[400px] rounded-full bg-[#C8DDB8]/[0.04] blur-[120px]",
+        "text": "",
+        "left": -150,
+        "right": 250
+      }
+    ],
+    "buttons": [
+      {
+        "tag": "A",
+        "text": "Skip to main content",
+        "aria": null,
+        "href": "#main-content",
+        "top": -1
+      },
+      {
+        "tag": "A",
+        "text": "GardenSuite",
+        "aria": "GardenSuite Home",
+        "href": "/",
+        "top": 22
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Products",
+        "aria": "Products menu",
+        "href": null,
+        "top": 16
+      },
+      {
+        "tag": "A",
+        "text": "Face Attendance & Smart Weighing Stop buddy punching and stolen weights.",
+        "aria": null,
+        "href": "/products/attendance",
+        "top": 77
+      },
+      {
+        "tag": "A",
+        "text": "Automated Payroll Hazira, PF, bonus, and wages auto-ready.",
+        "aria": null,
+        "href": "/products/payroll",
+        "top": 145
+      },
+      {
+        "tag": "A",
+        "text": "Factory Accounts Track output and exact factory cost.",
+        "aria": null,
+        "href": "/products/factory",
+        "top": 145
+      },
+      {
+        "tag": "A",
+        "text": "Store Management Know stock without chasing registers.",
+        "aria": null,
+        "href": "/products/stores",
+        "top": 233
+      },
+      {
+        "tag": "A",
+        "text": "Daily Report See daily numbers on any device.",
+        "aria": null,
+        "href": "/products/mis",
+        "top": 233
+      },
+      {
+        "tag": "A",
+        "text": "Features",
+        "aria": null,
+        "href": "/#features",
+        "top": 16
+      },
+      {
+        "tag": "A",
+        "text": "About",
+        "aria": null,
+        "href": "/#about",
+        "top": 16
+      },
+      {
+        "tag": "A",
+        "text": "Contact",
+        "aria": null,
+        "href": "/#contact",
+        "top": 16
+      },
+      {
+        "tag": "A",
+        "text": "Book Free Demo",
+        "aria": null,
+        "href": "mailto:contact@gardensuite.in?subject=GardenSuite%20Demo%20Request",
+        "top": 16
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "aria": "Open menu",
+        "href": null,
+        "top": 0
+      },
+      {
+        "tag": "A",
+        "text": "Book Free Demo",
+        "aria": null,
+        "href": "mailto:contact@gardensuite.in?subject=GardenSuite%20Demo%20Request",
+        "top": 427
+      },
+      {
+        "tag": "A",
+        "text": "See How It Works",
+        "aria": null,
+        "href": "#features",
+        "top": 426
+      },
+      {
+        "tag": "A",
+        "text": "See how it works",
+        "aria": null,
+        "href": "/products/attendance",
+        "top": 6873
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Does it work without internet?",
+        "aria": null,
+        "href": null,
+        "top": 9416
+      },
+      {
+        "tag": "BUTTON",
+        "text": "How long does setup take?",
+        "aria": null,
+        "href": null,
+        "top": 9489
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Which regions do you cover?",
+        "aria": null,
+        "href": null,
+        "top": 9562
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Can I see the daily report from outside the garden?",
+        "aria": null,
+        "href": null,
+        "top": 9634
+      },
+      {
+        "tag": "BUTTON",
+        "text": "What does it cost?",
+        "aria": null,
+        "href": null,
+        "top": 9707
+      },
+      {
+        "tag": "A",
+        "text": "Book Free Demo",
+        "aria": null,
+        "href": "mailto:contact@gardensuite.in?subject=GardenSuite%20Demo%20Request",
+        "top": 10634
+      },
+      {
+        "tag": "A",
+        "text": "Email Us",
+        "aria": null,
+        "href": "mailto:contact@gardensuite.in",
+        "top": 10634
+      },
+      {
+        "tag": "A",
+        "text": "GardenSuite",
+        "aria": "GardenSuite Home",
+        "href": "/",
+        "top": 11097
+      },
+      {
+        "tag": "A",
+        "text": "Face Attendance & Smart Weighing",
+        "aria": null,
+        "href": "/products/attendance",
+        "top": 11125
+      },
+      {
+        "tag": "A",
+        "text": "Automated Payroll",
+        "aria": null,
+        "href": "/products/payroll",
+        "top": 11176
+      },
+      {
+        "tag": "A",
+        "text": "Factory Accounts",
+        "aria": null,
+        "href": "/products/factory",
+        "top": 11208
+      },
+      {
+        "tag": "A",
+        "text": "Store Management",
+        "aria": null,
+        "href": "/products/stores",
+        "top": 11239
+      },
+      {
+        "tag": "A",
+        "text": "Daily Report",
+        "aria": null,
+        "href": "/products/mis",
+        "top": 11271
+      },
+      {
+        "tag": "A",
+        "text": "About",
+        "aria": null,
+        "href": "/#about",
+        "top": 11125
+      },
+      {
+        "tag": "A",
+        "text": "Features",
+        "aria": null,
+        "href": "/#features",
+        "top": 11157
+      },
+      {
+        "tag": "A",
+        "text": "FAQ",
+        "aria": null,
+        "href": "/#faq-heading",
+        "top": 11188
+      },
+      {
+        "tag": "A",
+        "text": "contact@gardensuite.in",
+        "aria": null,
+        "href": "mailto:contact@gardensuite.in",
+        "top": 11125
+      },
+      {
+        "tag": "A",
+        "text": "Book Free Demo",
+        "aria": null,
+        "href": "/#contact",
+        "top": 11157
+      }
+    ],
+    "height": 11514
+  },
+  "tablet": {
+    "viewport": {
+      "name": "tablet",
+      "width": 768,
+      "height": 1024
+    },
+    "logs": [],
+    "failed": [],
+    "title": "GardenSuite - Tea Garden Software That Stops Paper Chaos",
+    "headings": [
+      {
+        "tag": "H1",
+        "text": "Run your tea garden.Not your paperwork.",
+        "top": 128
+      },
+      {
+        "tag": "H2",
+        "text": "When problems hit, paper makes them worse.",
+        "top": 1414
+      },
+      {
+        "tag": "H3",
+        "text": "Time keeps leaking",
+        "top": 2587
+      },
+      {
+        "tag": "H3",
+        "text": "Buddy punching happens",
+        "top": 2587
+      },
+      {
+        "tag": "H3",
+        "text": "Numbers do not match",
+        "top": 2587
+      },
+      {
+        "tag": "H2",
+        "text": "Trusted by 20+ tea estates across 7 regions.",
+        "top": 3117
+      },
+      {
+        "tag": "H2",
+        "text": "A day with GardenSuite.",
+        "top": 3838
+      },
+      {
+        "tag": "H3",
+        "text": "Face verified",
+        "top": 4857
+      },
+      {
+        "tag": "H3",
+        "text": "Weight captured",
+        "top": 4857
+      },
+      {
+        "tag": "H3",
+        "text": "Records sync",
+        "top": 4988
+      },
+      {
+        "tag": "H3",
+        "text": "Payroll ready",
+        "top": 4988
+      },
+      {
+        "tag": "H3",
+        "text": "Owner sees report",
+        "top": 5120
+      },
+      {
+        "tag": "H2",
+        "text": "One system. No chasing papers.",
+        "top": 5565
+      },
+      {
+        "tag": "H3",
+        "text": "Face Attendance",
+        "top": 5995
+      },
+      {
+        "tag": "H3",
+        "text": "Smart Weighing",
+        "top": 5987
+      },
+      {
+        "tag": "H3",
+        "text": "Automated Payroll",
+        "top": 6539
+      },
+      {
+        "tag": "H3",
+        "text": "Factory Accounts",
+        "top": 6539
+      },
+      {
+        "tag": "H3",
+        "text": "Daily Report Dashboard",
+        "top": 7165
+      },
+      {
+        "tag": "H2",
+        "text": "Built only for tea gardens. Backed by Sarbani Associates.",
+        "top": 7916
+      },
+      {
+        "tag": "H3",
+        "text": "Tea garden logic built in",
+        "top": 7774
+      },
+      {
+        "tag": "H3",
+        "text": "Works without internet",
+        "top": 8070
+      },
+      {
+        "tag": "H3",
+        "text": "Sarbani Associates comes on site",
+        "top": 8324
+      },
+      {
+        "tag": "H2",
+        "text": "Common questions",
+        "top": 8919
+      },
+      {
+        "tag": "H3",
+        "text": "Does it work without internet?",
+        "top": 9057
+      },
+      {
+        "tag": "H3",
+        "text": "How long does setup take?",
+        "top": 9130
+      },
+      {
+        "tag": "H3",
+        "text": "Which regions do you cover?",
+        "top": 9203
+      },
+      {
+        "tag": "H3",
+        "text": "Can I see the daily report from outside the garden?",
+        "top": 9276
+      },
+      {
+        "tag": "H3",
+        "text": "What does it cost?",
+        "top": 9349
+      },
+      {
+        "tag": "H2",
+        "text": "See it on your own numbers.",
+        "top": 9973
+      }
+    ],
+    "imgs": [
+      {
+        "src": "/hero-sky.png",
+        "alt": "",
+        "w": 1024,
+        "h": 1024,
+        "visibleW": 768,
+        "visibleH": 1196,
+        "top": 0,
+        "loading": "auto"
+      },
+      {
+        "src": "/bg.png",
+        "alt": "",
+        "w": 3125,
+        "h": 1750,
+        "visibleW": 768,
+        "visibleH": 720,
+        "top": 476,
+        "loading": "auto"
+      },
+      {
+        "src": "/mis-dashboard.png",
+        "alt": "GardenSuite daily report dashboard",
+        "w": 2880,
+        "h": 1556,
+        "visibleW": 689,
+        "visibleH": 372,
+        "top": 565,
+        "loading": "eager"
+      },
+      {
+        "src": "/fg.png",
+        "alt": "",
+        "w": 3125,
+        "h": 1750,
+        "visibleW": 768,
+        "visibleH": 576,
+        "top": 620,
+        "loading": "auto"
+      },
+      {
+        "src": "/img/home/problem-old-way.png",
+        "alt": "Tea garden office overwhelmed with paper registers, wage sheets, and manual record keeping",
+        "w": 1024,
+        "h": 1024,
+        "visibleW": 670,
+        "visibleH": 670,
+        "top": 1723,
+        "loading": "lazy"
+      },
+      {
+        "src": "/img/home/workflow.png",
+        "alt": "Five connected stages of a tea garden day: face scan, leaf weighing, record verification, payroll calculation, and daily report",
+        "w": 0,
+        "h": 0,
+        "visibleW": 670,
+        "visibleH": 670,
+        "top": 4050,
+        "loading": "lazy"
+      },
+      {
+        "src": "/img/home/face-attendance.png",
+        "alt": "Supervisor using face scan on mobile to verify tea garden worker identity",
+        "w": 0,
+        "h": 0,
+        "visibleW": 59,
+        "visibleH": 59,
+        "top": 6098,
+        "loading": "lazy"
+      },
+      {
+        "src": "/img/home/smart-weighing.png",
+        "alt": "Digital hanging scale weighing tea leaves with wireless sync to smartphone",
+        "w": 0,
+        "h": 0,
+        "visibleW": 209,
+        "visibleH": 209,
+        "top": 6188,
+        "loading": "lazy"
+      },
+      {
+        "src": "/img/home/payroll.png",
+        "alt": "Automated payroll workflow connecting attendance, leaf weights, and wage calculations",
+        "w": 0,
+        "h": 0,
+        "visibleW": 324,
+        "visibleH": 324,
+        "top": 6684,
+        "loading": "lazy"
+      },
+      {
+        "src": "/img/home/factory.png",
+        "alt": "Tea factory workflow from withering to rolling, drying, packing, and final stock",
+        "w": 0,
+        "h": 0,
+        "visibleW": 324,
+        "visibleH": 324,
+        "top": 6663,
+        "loading": "lazy"
+      }
+    ],
+    "sections": [
+      {
+        "i": 0,
+        "id": "",
+        "aria": "Hero",
+        "top": 0,
+        "h": 1196,
+        "textStart": "Run your tea garden.Not your paperwork. The complete offline software for face attendance, smart weighing, and automated payroll. Book Free Demo See How It Works gardensuite.in/das"
+      },
+      {
+        "i": 1,
+        "id": "",
+        "aria": "",
+        "top": 1196,
+        "h": 1772,
+        "textStart": "The Old Way When problems hit, paper makes them worse. Attendance in one register. Leaf weight in another. Payroll in Excel. When work is spread across paper, mistakes become norma"
+      },
+      {
+        "i": 2,
+        "id": "",
+        "aria": "",
+        "top": 2967,
+        "h": 653,
+        "textStart": "Real Gardens, Real Results Trusted by 20+ tea estates across 7 regions. Darjeeling Simulbarie T.E.Longview T.E.Dooars Rheabari T.E.Mogulkata T.E.Rahimpur T.E.Terai Atal T.E.Naxalba"
+      },
+      {
+        "i": 3,
+        "id": "workflow",
+        "aria": "",
+        "top": 3620,
+        "h": 1727,
+        "textStart": "Connected Workflow A day with GardenSuite. From the first face scan to the owner's evening report, every step stays connected. 1 Face verified Worker identity confirmed by face sca"
+      },
+      {
+        "i": 4,
+        "id": "features",
+        "aria": "",
+        "top": 5347,
+        "h": 2217,
+        "textStart": "The Solution One system. No chasing papers. Attendance, weights, payroll, factory, stores, and the daily report all stay connected. Face Attendance Stop buddy punching, even withou"
+      },
+      {
+        "i": 5,
+        "id": "about",
+        "aria": "",
+        "top": 7565,
+        "h": 1179,
+        "textStart": "Why Managers Trust GardenSuite Built only for tea gardens. Backed by Sarbani Associates. GardenSuite is built and supported by Sarbani Associates. Trusted by 20+ tea estates across"
+      },
+      {
+        "i": 6,
+        "id": "",
+        "aria": "",
+        "top": 8743,
+        "h": 829,
+        "textStart": "Common questions Does it work without internet? Yes. Attendance, weighing, payroll, stores, and factory work offline at the garden. Data syncs when the internet returns.How long do"
+      },
+      {
+        "i": 7,
+        "id": "contact",
+        "aria": "",
+        "top": 9572,
+        "h": 969,
+        "textStart": "See it on your own numbers. We will show how GardenSuite handles attendance, weights, payroll, factory, and the daily report. Demo, setup, and training are free. Book Free Demo Ema"
+      }
+    ],
+    "overflow": [
+      {
+        "tag": "DIV",
+        "cls": "absolute top-full left-1/2 z-50 mt-1 flex w-[620px] origin-top -translate-x-1/2 gap-3 rounded-xl border border-[#0000000F] bg-white p-3 shadow-[0_10px_30px_rgba(0,0,0,0.08)] transition-all duration-200 ease-out pointer-events-none invisible translate-y-1 scale-[0.97] opacity-0",
+        "text": "GardenSuiteV3 One simple system for tea gardens. Face Attendance & Smart Weighing Stop bud",
+        "left": -49,
+        "right": 552
+      },
+      {
+        "tag": "DIV",
+        "cls": "flex w-1/3 flex-col justify-between rounded-lg bg-gradient-to-b from-[#F0FDF4] to-[#DCFCE7] p-4",
+        "text": "GardenSuiteV3 One simple system for tea gardens.",
+        "left": -36,
+        "right": 152
+      },
+      {
+        "tag": "svg",
+        "cls": "",
+        "text": "",
+        "left": -21,
+        "right": 10
+      },
+      {
+        "tag": "path",
+        "cls": "",
+        "text": "",
+        "left": -16,
+        "right": 5
+      },
+      {
+        "tag": "DIV",
+        "cls": "mt-4",
+        "text": "GardenSuiteV3 One simple system for tea gardens.",
+        "left": -21,
+        "right": 137
+      },
+      {
+        "tag": "SPAN",
+        "cls": "block text-base leading-tight font-medium text-[#1A5C2E]",
+        "text": "GardenSuiteV3",
+        "left": -21,
+        "right": 137
+      },
+      {
+        "tag": "SPAN",
+        "cls": "mt-1.5 block text-xs leading-relaxed text-[#1A5C2E]/80",
+        "text": "One simple system for tea gardens.",
+        "left": -21,
+        "right": 137
+      },
+      {
+        "tag": "DIV",
+        "cls": "pointer-events-none absolute top-1/4 -left-[200px] h-[500px] w-[500px] rounded-full bg-[#A1A1AA]/[0.03] blur-[150px]",
+        "text": "",
+        "left": -200,
+        "right": 300
+      },
+      {
+        "tag": "DIV",
+        "cls": "pointer-events-none absolute -right-[150px] bottom-1/3 h-[400px] w-[400px] rounded-full bg-[#1B5E3B]/[0.02] blur-[120px]",
+        "text": "",
+        "left": 518,
+        "right": 918
+      },
+      {
+        "tag": "DIV",
+        "cls": "bg-gradient-radial pointer-events-none absolute top-1/3 left-1/2 h-[800px] w-[800px] -translate-x-1/2 -translate-y-1/2 rounded-full from-[#1B5E3B]/[0.05] to-transparent",
+        "text": "",
+        "left": -16,
+        "right": 784
+      },
+      {
+        "tag": "DIV",
+        "cls": "pointer-events-none absolute -right-[100px] bottom-1/4 h-[500px] w-[500px] rounded-full bg-[#C8DDB8]/[0.06] blur-[120px]",
+        "text": "",
+        "left": 368,
+        "right": 868
+      },
+      {
+        "tag": "DIV",
+        "cls": "pointer-events-none absolute top-1/3 -right-[200px] h-[500px] w-[500px] rounded-full bg-[#1B5E3B]/[0.02] blur-[140px]",
+        "text": "",
+        "left": 468,
+        "right": 968
+      },
+      {
+        "tag": "DIV",
+        "cls": "pointer-events-none absolute bottom-1/4 -left-[150px] h-[400px] w-[400px] rounded-full bg-[#C8DDB8]/[0.04] blur-[120px]",
+        "text": "",
+        "left": -150,
+        "right": 250
+      }
+    ],
+    "buttons": [
+      {
+        "tag": "A",
+        "text": "Skip to main content",
+        "aria": null,
+        "href": "#main-content",
+        "top": -1
+      },
+      {
+        "tag": "A",
+        "text": "GardenSuite",
+        "aria": "GardenSuite Home",
+        "href": "/",
+        "top": 22
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Products",
+        "aria": "Products menu",
+        "href": null,
+        "top": 16
+      },
+      {
+        "tag": "A",
+        "text": "Face Attendance & Smart Weighing Stop buddy punching and stolen weights.",
+        "aria": null,
+        "href": "/products/attendance",
+        "top": 77
+      },
+      {
+        "tag": "A",
+        "text": "Automated Payroll Hazira, PF, bonus, and wages auto-ready.",
+        "aria": null,
+        "href": "/products/payroll",
+        "top": 145
+      },
+      {
+        "tag": "A",
+        "text": "Factory Accounts Track output and exact factory cost.",
+        "aria": null,
+        "href": "/products/factory",
+        "top": 145
+      },
+      {
+        "tag": "A",
+        "text": "Store Management Know stock without chasing registers.",
+        "aria": null,
+        "href": "/products/stores",
+        "top": 233
+      },
+      {
+        "tag": "A",
+        "text": "Daily Report See daily numbers on any device.",
+        "aria": null,
+        "href": "/products/mis",
+        "top": 233
+      },
+      {
+        "tag": "A",
+        "text": "Features",
+        "aria": null,
+        "href": "/#features",
+        "top": 16
+      },
+      {
+        "tag": "A",
+        "text": "About",
+        "aria": null,
+        "href": "/#about",
+        "top": 16
+      },
+      {
+        "tag": "A",
+        "text": "Contact",
+        "aria": null,
+        "href": "/#contact",
+        "top": 16
+      },
+      {
+        "tag": "A",
+        "text": "Book Free Demo",
+        "aria": null,
+        "href": "mailto:contact@gardensuite.in?subject=GardenSuite%20Demo%20Request",
+        "top": 16
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "aria": "Open menu",
+        "href": null,
+        "top": 0
+      },
+      {
+        "tag": "A",
+        "text": "Book Free Demo",
+        "aria": null,
+        "href": "mailto:contact@gardensuite.in?subject=GardenSuite%20Demo%20Request",
+        "top": 383
+      },
+      {
+        "tag": "A",
+        "text": "See How It Works",
+        "aria": null,
+        "href": "#features",
+        "top": 382
+      },
+      {
+        "tag": "A",
+        "text": "See how it works",
+        "aria": null,
+        "href": "/products/attendance",
+        "top": 6324
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Does it work without internet?",
+        "aria": null,
+        "href": null,
+        "top": 9033
+      },
+      {
+        "tag": "BUTTON",
+        "text": "How long does setup take?",
+        "aria": null,
+        "href": null,
+        "top": 9106
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Which regions do you cover?",
+        "aria": null,
+        "href": null,
+        "top": 9179
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Can I see the daily report from outside the garden?",
+        "aria": null,
+        "href": null,
+        "top": 9252
+      },
+      {
+        "tag": "BUTTON",
+        "text": "What does it cost?",
+        "aria": null,
+        "href": null,
+        "top": 9325
+      },
+      {
+        "tag": "A",
+        "text": "Book Free Demo",
+        "aria": null,
+        "href": "mailto:contact@gardensuite.in?subject=GardenSuite%20Demo%20Request",
+        "top": 10176
+      },
+      {
+        "tag": "A",
+        "text": "Email Us",
+        "aria": null,
+        "href": "mailto:contact@gardensuite.in",
+        "top": 10176
+      },
+      {
+        "tag": "A",
+        "text": "GardenSuite",
+        "aria": "GardenSuite Home",
+        "href": "/",
+        "top": 10639
+      },
+      {
+        "tag": "A",
+        "text": "Face Attendance & Smart Weighing",
+        "aria": null,
+        "href": "/products/attendance",
+        "top": 10667
+      },
+      {
+        "tag": "A",
+        "text": "Automated Payroll",
+        "aria": null,
+        "href": "/products/payroll",
+        "top": 10757
+      },
+      {
+        "tag": "A",
+        "text": "Factory Accounts",
+        "aria": null,
+        "href": "/products/factory",
+        "top": 10808
+      },
+      {
+        "tag": "A",
+        "text": "Store Management",
+        "aria": null,
+        "href": "/products/stores",
+        "top": 10859
+      },
+      {
+        "tag": "A",
+        "text": "Daily Report",
+        "aria": null,
+        "href": "/products/mis",
+        "top": 10910
+      },
+      {
+        "tag": "A",
+        "text": "About",
+        "aria": null,
+        "href": "/#about",
+        "top": 10667
+      },
+      {
+        "tag": "A",
+        "text": "Features",
+        "aria": null,
+        "href": "/#features",
+        "top": 10699
+      },
+      {
+        "tag": "A",
+        "text": "FAQ",
+        "aria": null,
+        "href": "/#faq-heading",
+        "top": 10730
+      },
+      {
+        "tag": "A",
+        "text": "contact@gardensuite.in",
+        "aria": null,
+        "href": "mailto:contact@gardensuite.in",
+        "top": 10667
+      },
+      {
+        "tag": "A",
+        "text": "Book Free Demo",
+        "aria": null,
+        "href": "/#contact",
+        "top": 10699
+      }
+    ],
+    "height": 11108
+  },
+  "mobile": {
+    "viewport": {
+      "name": "mobile",
+      "width": 390,
+      "height": 844
+    },
+    "logs": [],
+    "failed": [],
+    "title": "GardenSuite - Tea Garden Software That Stops Paper Chaos",
+    "headings": [
+      {
+        "tag": "H1",
+        "text": "Run your tea garden.Not your paperwork.",
+        "top": 112
+      },
+      {
+        "tag": "H2",
+        "text": "When problems hit, paper makes them worse.",
+        "top": 1268
+      },
+      {
+        "tag": "H3",
+        "text": "Time keeps leaking",
+        "top": 2141
+      },
+      {
+        "tag": "H3",
+        "text": "Buddy punching happens",
+        "top": 2409
+      },
+      {
+        "tag": "H3",
+        "text": "Numbers do not match",
+        "top": 2656
+      },
+      {
+        "tag": "H2",
+        "text": "Trusted by 20+ tea estates across 7 regions.",
+        "top": 3037
+      },
+      {
+        "tag": "H2",
+        "text": "A day with GardenSuite.",
+        "top": 3808
+      },
+      {
+        "tag": "H3",
+        "text": "Face verified",
+        "top": 4489
+      },
+      {
+        "tag": "H3",
+        "text": "Weight captured",
+        "top": 4621
+      },
+      {
+        "tag": "H3",
+        "text": "Records sync",
+        "top": 4752
+      },
+      {
+        "tag": "H3",
+        "text": "Payroll ready",
+        "top": 4884
+      },
+      {
+        "tag": "H3",
+        "text": "Owner sees report",
+        "top": 5015
+      },
+      {
+        "tag": "H2",
+        "text": "One system. No chasing papers.",
+        "top": 5365
+      },
+      {
+        "tag": "H3",
+        "text": "Face Attendance",
+        "top": 5730
+      },
+      {
+        "tag": "H3",
+        "text": "Smart Weighing",
+        "top": 6430
+      },
+      {
+        "tag": "H3",
+        "text": "Automated Payroll",
+        "top": 7041
+      },
+      {
+        "tag": "H3",
+        "text": "Factory Accounts",
+        "top": 7668
+      },
+      {
+        "tag": "H3",
+        "text": "Daily Report Dashboard",
+        "top": 8274
+      },
+      {
+        "tag": "H2",
+        "text": "Built only for tea gardens. Backed by Sarbani Associates.",
+        "top": 9021
+      },
+      {
+        "tag": "H3",
+        "text": "Tea garden logic built in",
+        "top": 9421
+      },
+      {
+        "tag": "H3",
+        "text": "Works without internet",
+        "top": 9650
+      },
+      {
+        "tag": "H3",
+        "text": "Sarbani Associates comes on site",
+        "top": 9836
+      },
+      {
+        "tag": "H2",
+        "text": "Common questions",
+        "top": 10268
+      },
+      {
+        "tag": "H3",
+        "text": "Does it work without internet?",
+        "top": 10394
+      },
+      {
+        "tag": "H3",
+        "text": "How long does setup take?",
+        "top": 10465
+      },
+      {
+        "tag": "H3",
+        "text": "Which regions do you cover?",
+        "top": 10537
+      },
+      {
+        "tag": "H3",
+        "text": "Can I see the daily report from outside the garden?",
+        "top": 10608
+      },
+      {
+        "tag": "H3",
+        "text": "What does it cost?",
+        "top": 10702
+      },
+      {
+        "tag": "H2",
+        "text": "See it on your own numbers.",
+        "top": 11197
+      }
+    ],
+    "imgs": [
+      {
+        "src": "/hero-sky.png",
+        "alt": "",
+        "w": 1024,
+        "h": 1024,
+        "visibleW": 390,
+        "visibleH": 1098,
+        "top": 0,
+        "loading": "auto"
+      },
+      {
+        "src": "/bg.png",
+        "alt": "",
+        "w": 3125,
+        "h": 1750,
+        "visibleW": 390,
+        "visibleH": 540,
+        "top": 558,
+        "loading": "auto"
+      },
+      {
+        "src": "/mis-dashboard.png",
+        "alt": "GardenSuite daily report dashboard",
+        "w": 2880,
+        "h": 1556,
+        "visibleW": 349,
+        "visibleH": 189,
+        "top": 648,
+        "loading": "eager"
+      },
+      {
+        "src": "/fg.png",
+        "alt": "",
+        "w": 3125,
+        "h": 1750,
+        "visibleW": 390,
+        "visibleH": 432,
+        "top": 666,
+        "loading": "auto"
+      },
+      {
+        "src": "/img/home/problem-old-way.png",
+        "alt": "Tea garden office overwhelmed with paper registers, wage sheets, and manual record keeping",
+        "w": 1024,
+        "h": 1024,
+        "visibleW": 340,
+        "visibleH": 340,
+        "top": 1623,
+        "loading": "lazy"
+      },
+      {
+        "src": "/img/home/workflow.png",
+        "alt": "Five connected stages of a tea garden day: face scan, leaf weighing, record verification, payroll calculation, and daily report",
+        "w": 0,
+        "h": 0,
+        "visibleW": 340,
+        "visibleH": 340,
+        "top": 4028,
+        "loading": "lazy"
+      },
+      {
+        "src": "/img/home/face-attendance.png",
+        "alt": "Supervisor using face scan on mobile to verify tea garden worker identity",
+        "w": 0,
+        "h": 0,
+        "visibleW": 340,
+        "visibleH": 340,
+        "top": 5940,
+        "loading": "lazy"
+      },
+      {
+        "src": "/img/home/smart-weighing.png",
+        "alt": "Digital hanging scale weighing tea leaves with wireless sync to smartphone",
+        "w": 0,
+        "h": 0,
+        "visibleW": 340,
+        "visibleH": 340,
+        "top": 6559,
+        "loading": "lazy"
+      },
+      {
+        "src": "/img/home/payroll.png",
+        "alt": "Automated payroll workflow connecting attendance, leaf weights, and wage calculations",
+        "w": 0,
+        "h": 0,
+        "visibleW": 340,
+        "visibleH": 340,
+        "top": 7186,
+        "loading": "lazy"
+      },
+      {
+        "src": "/img/home/factory.png",
+        "alt": "Tea factory workflow from withering to rolling, drying, packing, and final stock",
+        "w": 0,
+        "h": 0,
+        "visibleW": 340,
+        "visibleH": 340,
+        "top": 7792,
+        "loading": "lazy"
+      }
+    ],
+    "sections": [
+      {
+        "i": 0,
+        "id": "",
+        "aria": "Hero",
+        "top": 0,
+        "h": 1098,
+        "textStart": "Run your tea garden.Not your paperwork. The complete offline software for face attendance, smart weighing, and automated payroll. Book Free Demo See How It Works gardensuite.in/das"
+      },
+      {
+        "i": 1,
+        "id": "",
+        "aria": "",
+        "top": 1098,
+        "h": 1820,
+        "textStart": "The Old Way When problems hit, paper makes them worse. Attendance in one register. Leaf weight in another. Payroll in Excel. When work is spread across paper, mistakes become norma"
+      },
+      {
+        "i": 2,
+        "id": "",
+        "aria": "",
+        "top": 2919,
+        "h": 719,
+        "textStart": "Real Gardens, Real Results Trusted by 20+ tea estates across 7 regions. Darjeeling Simulbarie T.E.Longview T.E.Dooars Rheabari T.E.Mogulkata T.E.Rahimpur T.E.Terai Atal T.E.Naxalba"
+      },
+      {
+        "i": 3,
+        "id": "workflow",
+        "aria": "",
+        "top": 3638,
+        "h": 1557,
+        "textStart": "Connected Workflow A day with GardenSuite. From the first face scan to the owner's evening report, every step stays connected. 1 Face verified Worker identity confirmed by face sca"
+      },
+      {
+        "i": 4,
+        "id": "features",
+        "aria": "",
+        "top": 5195,
+        "h": 3651,
+        "textStart": "The Solution One system. No chasing papers. Attendance, weights, payroll, factory, stores, and the daily report all stay connected. Face Attendance Stop buddy punching, even withou"
+      },
+      {
+        "i": 5,
+        "id": "about",
+        "aria": "",
+        "top": 8846,
+        "h": 1294,
+        "textStart": "Why Managers Trust GardenSuite Built only for tea gardens. Backed by Sarbani Associates. GardenSuite is built and supported by Sarbani Associates. Trusted by 20+ tea estates across"
+      },
+      {
+        "i": 6,
+        "id": "",
+        "aria": "",
+        "top": 10140,
+        "h": 736,
+        "textStart": "Common questions Does it work without internet? Yes. Attendance, weighing, payroll, stores, and factory work offline at the garden. Data syncs when the internet returns.How long do"
+      },
+      {
+        "i": 7,
+        "id": "contact",
+        "aria": "",
+        "top": 10876,
+        "h": 918,
+        "textStart": "See it on your own numbers. We will show how GardenSuite handles attendance, weights, payroll, factory, and the daily report. Demo, setup, and training are free. Book Free Demo Ema"
+      }
+    ],
+    "overflow": [
+      {
+        "tag": "DIV",
+        "cls": "pointer-events-none absolute top-[30%] left-1/2 z-[1] h-[400px] w-[600px] -translate-x-1/2 rounded-full bg-white/40 blur-[100px]",
+        "text": "",
+        "left": -105,
+        "right": 495
+      },
+      {
+        "tag": "DIV",
+        "cls": "pointer-events-none absolute top-1/4 -left-[200px] h-[500px] w-[500px] rounded-full bg-[#A1A1AA]/[0.03] blur-[150px]",
+        "text": "",
+        "left": -200,
+        "right": 300
+      },
+      {
+        "tag": "DIV",
+        "cls": "pointer-events-none absolute -right-[150px] bottom-1/3 h-[400px] w-[400px] rounded-full bg-[#1B5E3B]/[0.02] blur-[120px]",
+        "text": "",
+        "left": 140,
+        "right": 540
+      },
+      {
+        "tag": "DIV",
+        "cls": "pointer-events-none absolute top-1/2 left-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#1B5E3B]/20 blur-[150px]",
+        "text": "",
+        "left": -55,
+        "right": 445
+      },
+      {
+        "tag": "DIV",
+        "cls": "bg-gradient-radial pointer-events-none absolute top-1/3 left-1/2 h-[800px] w-[800px] -translate-x-1/2 -translate-y-1/2 rounded-full from-[#1B5E3B]/[0.05] to-transparent",
+        "text": "",
+        "left": -205,
+        "right": 595
+      },
+      {
+        "tag": "DIV",
+        "cls": "pointer-events-none absolute -right-[100px] bottom-1/4 h-[500px] w-[500px] rounded-full bg-[#C8DDB8]/[0.06] blur-[120px]",
+        "text": "",
+        "left": -10,
+        "right": 490
+      },
+      {
+        "tag": "DIV",
+        "cls": "pointer-events-none absolute -top-20 -right-20 h-[400px] w-[400px] rounded-full bg-[#1B5E3B]/[0.04] blur-[80px] transition duration-500 group-hover:bg-[#1B5E3B]/[0.08]",
+        "text": "",
+        "left": 45,
+        "right": 445
+      },
+      {
+        "tag": "DIV",
+        "cls": "pointer-events-none absolute top-1/3 -right-[200px] h-[500px] w-[500px] rounded-full bg-[#1B5E3B]/[0.02] blur-[140px]",
+        "text": "",
+        "left": 90,
+        "right": 590
+      },
+      {
+        "tag": "DIV",
+        "cls": "pointer-events-none absolute bottom-1/4 -left-[150px] h-[400px] w-[400px] rounded-full bg-[#C8DDB8]/[0.04] blur-[120px]",
+        "text": "",
+        "left": -150,
+        "right": 250
+      },
+      {
+        "tag": "DIV",
+        "cls": "pointer-events-none absolute top-1/2 left-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#1B5E3B]/[0.02] blur-[140px]",
+        "text": "",
+        "left": -105,
+        "right": 495
+      },
+      {
+        "tag": "DIV",
+        "cls": "absolute top-1/2 left-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#1B5E3B]/[0.06] blur-[100px]",
+        "text": "",
+        "left": -105,
+        "right": 495
+      }
+    ],
+    "buttons": [
+      {
+        "tag": "A",
+        "text": "Skip to main content",
+        "aria": null,
+        "href": "#main-content",
+        "top": -1
+      },
+      {
+        "tag": "A",
+        "text": "GardenSuite",
+        "aria": "GardenSuite Home",
+        "href": "/",
+        "top": 22
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Products",
+        "aria": "Products menu",
+        "href": null,
+        "top": 0
+      },
+      {
+        "tag": "A",
+        "text": "Face Attendance & Smart Weighing Stop buddy punching and stolen weights.",
+        "aria": null,
+        "href": "/products/attendance",
+        "top": 0
+      },
+      {
+        "tag": "A",
+        "text": "Automated Payroll Hazira, PF, bonus, and wages auto-ready.",
+        "aria": null,
+        "href": "/products/payroll",
+        "top": 0
+      },
+      {
+        "tag": "A",
+        "text": "Factory Accounts Track output and exact factory cost.",
+        "aria": null,
+        "href": "/products/factory",
+        "top": 0
+      },
+      {
+        "tag": "A",
+        "text": "Store Management Know stock without chasing registers.",
+        "aria": null,
+        "href": "/products/stores",
+        "top": 0
+      },
+      {
+        "tag": "A",
+        "text": "Daily Report See daily numbers on any device.",
+        "aria": null,
+        "href": "/products/mis",
+        "top": 0
+      },
+      {
+        "tag": "A",
+        "text": "Features",
+        "aria": null,
+        "href": "/#features",
+        "top": 0
+      },
+      {
+        "tag": "A",
+        "text": "About",
+        "aria": null,
+        "href": "/#about",
+        "top": 0
+      },
+      {
+        "tag": "A",
+        "text": "Contact",
+        "aria": null,
+        "href": "/#contact",
+        "top": 0
+      },
+      {
+        "tag": "A",
+        "text": "Book Free Demo",
+        "aria": null,
+        "href": "mailto:contact@gardensuite.in?subject=GardenSuite%20Demo%20Request",
+        "top": 0
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "aria": "Open menu",
+        "href": null,
+        "top": 16
+      },
+      {
+        "tag": "A",
+        "text": "Book Free Demo",
+        "aria": null,
+        "href": "mailto:contact@gardensuite.in?subject=GardenSuite%20Demo%20Request",
+        "top": 416
+      },
+      {
+        "tag": "A",
+        "text": "See How It Works",
+        "aria": null,
+        "href": "#features",
+        "top": 480
+      },
+      {
+        "tag": "A",
+        "text": "See how it works",
+        "aria": null,
+        "href": "/products/attendance",
+        "top": 5875
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Does it work without internet?",
+        "aria": null,
+        "href": null,
+        "top": 10370
+      },
+      {
+        "tag": "BUTTON",
+        "text": "How long does setup take?",
+        "aria": null,
+        "href": null,
+        "top": 10441
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Which regions do you cover?",
+        "aria": null,
+        "href": null,
+        "top": 10513
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Can I see the daily report from outside the garden?",
+        "aria": null,
+        "href": null,
+        "top": 10584
+      },
+      {
+        "tag": "BUTTON",
+        "text": "What does it cost?",
+        "aria": null,
+        "href": null,
+        "top": 10678
+      },
+      {
+        "tag": "A",
+        "text": "Book Free Demo",
+        "aria": null,
+        "href": "mailto:contact@gardensuite.in?subject=GardenSuite%20Demo%20Request",
+        "top": 11449
+      },
+      {
+        "tag": "A",
+        "text": "Email Us",
+        "aria": null,
+        "href": "mailto:contact@gardensuite.in",
+        "top": 11508
+      },
+      {
+        "tag": "A",
+        "text": "GardenSuite",
+        "aria": "GardenSuite Home",
+        "href": "/",
+        "top": 11891
+      },
+      {
+        "tag": "A",
+        "text": "Face Attendance & Smart Weighing",
+        "aria": null,
+        "href": "/products/attendance",
+        "top": 12092
+      },
+      {
+        "tag": "A",
+        "text": "Automated Payroll",
+        "aria": null,
+        "href": "/products/payroll",
+        "top": 12143
+      },
+      {
+        "tag": "A",
+        "text": "Factory Accounts",
+        "aria": null,
+        "href": "/products/factory",
+        "top": 12175
+      },
+      {
+        "tag": "A",
+        "text": "Store Management",
+        "aria": null,
+        "href": "/products/stores",
+        "top": 12206
+      },
+      {
+        "tag": "A",
+        "text": "Daily Report",
+        "aria": null,
+        "href": "/products/mis",
+        "top": 12238
+      },
+      {
+        "tag": "A",
+        "text": "About",
+        "aria": null,
+        "href": "/#about",
+        "top": 12092
+      },
+      {
+        "tag": "A",
+        "text": "Features",
+        "aria": null,
+        "href": "/#features",
+        "top": 12124
+      },
+      {
+        "tag": "A",
+        "text": "FAQ",
+        "aria": null,
+        "href": "/#faq-heading",
+        "top": 12155
+      },
+      {
+        "tag": "A",
+        "text": "contact@gardensuite.in",
+        "aria": null,
+        "href": "mailto:contact@gardensuite.in",
+        "top": 12318
+      },
+      {
+        "tag": "A",
+        "text": "Book Free Demo",
+        "aria": null,
+        "href": "/#contact",
+        "top": 12349
+      }
+    ],
+    "height": 12566
+  }
+}

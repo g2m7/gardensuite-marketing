@@ -60,9 +60,7 @@
 	`);
 </script>
 
-<!-- svelte-ignore a11y_click_events_have_key_events -->
-<!-- svelte-ignore a11y_no_static_element_interactions -->
-<div onclick={handleClickOutside}>
+<div role="presentation" onclick={handleClickOutside} onkeydown={handleProductsKeydown}>
 	<!-- Skip Link -->
 	<a
 		href="#main-content"
@@ -188,7 +186,7 @@
 {#snippet desktopLinks()}
 	<div class="hidden items-center gap-1 md:flex">
 		<!-- Products Dropdown -->
-		<div class="products-dropdown-container relative" onkeydown={handleProductsKeydown}>
+		<div role="presentation" class="products-dropdown-container relative" onkeydown={handleProductsKeydown}>
 			<button
 				class="inline-flex h-10 items-center justify-center rounded-full px-4 text-[14px] font-semibold text-[#18181B] transition-colors duration-150 hover:bg-[#0000000A] hover:text-[#0A0A0A] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30"
 				aria-label="Products menu"

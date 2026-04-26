@@ -1,0 +1,70 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e4]:
+      - link [ref=e6] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e11]
+      - generic [ref=e22]
+    - generic [ref=e27]:
+      - generic [ref=e28]
+      - generic [ref=e32]
+      - link "Introducing Glaze | Join waitlist" [ref=e47] [cursor=pointer]:
+        - /url: /blog/introducing-glaze
+    - generic [ref=e57]:
+      - generic [ref=e58]
+      - generic [ref=e160]
+      - generic [ref=e698]: Remember Everything. Stop playing Clipboard ping pong - with Clipboard History you’ll never forget anything.
+    - generic [ref=e700]:
+      - generic [ref=e701]
+      - generic [ref=e709]
+    - generic [ref=e981]:
+      - generic [ref=e982]
+      - generic [ref=e1001]
+      - generic [ref=e1194]
+    - generic [ref=e1206]:
+      - generic [ref=e1207]
+      - generic [ref=e1215]
+      - link "More about AI" [ref=e1234] [cursor=pointer]:
+        - /url: /core-features/ai
+    - generic [ref=e1238]:
+      - generic [ref=e1239]
+      - generic [ref=e1243]
+      - generic [ref=e1364]
+    - generic [ref=e1392]:
+      - generic [ref=e1393]
+      - generic [ref=e1396]
+    - generic [ref=e1434]:
+      - generic [ref=e1435]
+      - generic [ref=e1477]
+    - generic [ref=e1492]:
+      - img "Background image" [ref=e1493]
+      - generic [ref=e1494]
+      - generic [ref=e1525]
+      - generic [ref=e1598]
+    - generic [ref=e1610]:
+      - heading "Build the perfect tools." [level=3] [ref=e1637]
+      - link "Our extension API is designed to allow anyone with web development skills to unleash the power of Raycast. Read the docs" [ref=e1638] [cursor=pointer]:
+        - /url: https://developers.raycast.com/
+      - generic [ref=e1643]
+      - generic [ref=e1719]
+      - 'link "React to macOS Build rich, native extensions with the technologies you already know: React, TypeScript and Node." [ref=e1752] [cursor=pointer]':
+        - /url: /blog/how-raycast-api-extensions-work
+      - generic [ref=e1758]
+      - link "Built-in UI Our UI component library allows you to concentrate on the logic while we push the pixels." [ref=e1803] [cursor=pointer]:
+        - /url: https://developers.raycast.com/api-reference/user-interface/list
+      - generic [ref=e1809]
+      - link "Batteries included A strongly typed API, hot-reloading and modern tooling that make it a blast to work with." [ref=e1835] [cursor=pointer]:
+        - /url: https://developers.raycast.com/information/tools/cli
+      - generic [ref=e1841]
+      - generic [ref=e1887]
+      - link "Publish to the Store Submit your extension to the Raycast Store and share it with thousands of users." [ref=e1982] [cursor=pointer]:
+        - /url: https://developers.raycast.com/basics/prepare-an-extension-for-store
+      - link "Get started" [ref=e1988] [cursor=pointer]:
+        - /url: https://developers.raycast.com/basics/getting-started
+    - generic [ref=e2008]:
+      - img [ref=e2010]
+      - generic [ref=e2266]
+    - generic [ref=e2284]:
+      - generic [ref=e2285]
+      - generic [ref=e2397]
+  - alert [ref=e2411]
