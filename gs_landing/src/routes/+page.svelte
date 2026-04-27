@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import FeaturesCarousel from '$lib/components/FeaturesCarousel.svelte';
+	import HowItWorks from '$lib/components/HowItWorks.svelte';
 
 	// ─── GSAP + ScrollTrigger ───
 	let ready = $state(false);
@@ -215,7 +217,7 @@
 					>
 				</a>
 				<a
-					href="#features"
+					href="#how-it-works"
 					class="flex w-full items-center justify-center rounded-full border border-[#E4E4E7] bg-white px-6 py-4 shadow-[0_1px_3px_rgba(0,0,0,0.04)] transition duration-150 hover:border-[#D4D4D8] hover:bg-[#FAFAF7] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 active:scale-[0.97] sm:w-auto"
 				>
 					<span class="text-sm font-medium text-[#0A0A0A]"
@@ -357,262 +359,14 @@
 	</section>
 
 	<!-- ═══════════════════════════════════════════════════════════ -->
-	<!-- CONNECTED WORKFLOW                                         -->
+	<!-- HOW IT WORKS                                               -->
 	<!-- ═══════════════════════════════════════════════════════════ -->
-	<section
-		id="workflow"
-		class="relative w-full scroll-mt-20 bg-white py-24 md:py-32"
-		aria-labelledby="workflow-heading"
-	>
-		<div class="mx-auto max-w-[1344px] px-6 md:px-12">
-			<div class="mb-16 max-w-[640px]">
-				<h2
-					id="workflow-heading"
-					class="text-[40px] leading-[1.05] font-semibold tracking-[-0.04em] text-[#111111] md:text-[52px]"
-					style="text-wrap: balance"
-				>
-					From face scan to daily report. Every step connected.
-				</h2>
-				<p class="mt-6 max-w-[520px] text-[17px] leading-[1.6] text-[#52525B]">
-					GardenSuite links attendance, weighing, payroll, and reporting. Data flows from the field to the office without manual re-entry.
-				</p>
-			</div>
-
-			<div class="grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-[#F0F0F0] bg-[#F0F0F0] sm:grid-cols-2 lg:grid-cols-5">
-				{#each [
-					{ step: '01', title: 'Face verified', desc: 'Worker identity confirmed by face scan on mobile before hazira is marked.' },
-					{ step: '02', title: 'Leaf weighed', desc: 'Smart scale sends weight directly to the linked worker record.' },
-					{ step: '03', title: 'Records sync', desc: 'Attendance and weight data linked automatically. No register work.' },
-					{ step: '04', title: 'Payroll ready', desc: 'Wages, PF, ESI, bonus calculated from real field data.' },
-					{ step: '05', title: 'Owner sees report', desc: 'Daily MIS on phone, tablet, or laptop from anywhere.' }
-				] as item}
-					<div class="flex flex-col bg-white p-6 md:p-8">
-						<span class="mb-4 text-[13px] font-semibold tracking-[0.06em] text-[#1B5E3B]">{item.step}</span>
-						<h3 class="mb-2 text-[17px] font-semibold tracking-[-0.01em] text-[#111111]">{item.title}</h3>
-						<p class="text-[14px] leading-[1.5] text-[#52525B]">{item.desc}</p>
-					</div>
-				{/each}
-			</div>
-		</div>
-	</section>
+	<HowItWorks />
 
 	<!-- ═══════════════════════════════════════════════════════════ -->
-	<!-- MODULE: FACE ATTENDANCE                                    -->
+	<!-- FEATURES CAROUSEL                                         -->
 	<!-- ═══════════════════════════════════════════════════════════ -->
-	<section
-		id="features"
-		class="relative w-full scroll-mt-20 bg-[#FAFAF7] py-24 md:py-32"
-		aria-labelledby="mod-attendance-heading"
-	>
-		<div class="mx-auto max-w-[1344px] px-6 md:px-12">
-			<div class="flex flex-col items-center gap-12 md:flex-row md:items-start md:gap-16 lg:gap-20">
-				<div class="flex-1">
-					<span class="mb-4 inline-block text-[13px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase">Attendance</span>
-					<h2
-						id="mod-attendance-heading"
-						class="text-[36px] leading-[1.08] font-semibold tracking-[-0.04em] text-[#111111] md:text-[44px]"
-						style="text-wrap: balance"
-					>
-						Face attendance stops proxy punching.
-					</h2>
-					<p class="mt-6 max-w-[440px] text-[17px] leading-[1.6] text-[#52525B]">
-						The worker's face is scanned on a mobile phone before hazira is marked. If the face does not match, the attendance does not go through. Works without internet.
-					</p>
-					<ul class="mt-8 flex flex-col gap-3">
-						{#each ['No buddy punching - real face, real hazira', 'Offline face matching on the phone', 'Section-wise attendance for field and factory'] as point}
-							<li class="flex items-start gap-3 text-[15px] leading-[1.5] text-[#3F3F46]">
-								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-0.5 shrink-0" aria-hidden="true"><path d="M3 8.5l3.5 3L13 5" stroke="#1B5E3B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-								{point}
-							</li>
-						{/each}
-					</ul>
-					<a
-						href="/products/attendance"
-						class="mt-8 inline-flex items-center gap-2 text-[15px] font-semibold text-[#111111] transition-colors duration-150 hover:text-[#1B5E3B] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30"
-					>
-						Learn more
-						<svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M5 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-					</a>
-				</div>
-				<div class="w-full flex-1">
-					<div class="overflow-hidden rounded-2xl border border-[#F0F0F0] bg-white shadow-[0_4px_20px_rgba(0,0,0,0.04)]">
-						<img
-							src="/img/home/face-attendance.png"
-							alt="Supervisor using face scan on mobile to verify tea garden worker identity"
-							class="h-auto w-full object-cover"
-							width="1024"
-							height="1024"
-							loading="lazy"
-						/>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!-- ═══════════════════════════════════════════════════════════ -->
-	<!-- MODULE: SMART WEIGHING                                     -->
-	<!-- ═══════════════════════════════════════════════════════════ -->
-	<section
-		class="relative w-full bg-white py-24 md:py-32"
-		aria-labelledby="mod-weighing-heading"
-	>
-		<div class="mx-auto max-w-[1344px] px-6 md:px-12">
-			<div class="flex flex-col-reverse items-center gap-12 md:flex-row md:items-start md:gap-16 lg:gap-20">
-				<div class="w-full flex-1">
-					<div class="overflow-hidden rounded-2xl border border-[#F0F0F0] bg-white shadow-[0_4px_20px_rgba(0,0,0,0.04)]">
-						<img
-							src="/img/home/smart-weighing.png"
-							alt="Digital hanging scale weighing tea leaves with wireless sync to smartphone"
-							class="h-auto w-full object-cover"
-							width="1024"
-							height="1024"
-							loading="lazy"
-						/>
-					</div>
-				</div>
-				<div class="flex-1">
-					<span class="mb-4 inline-block text-[13px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase">Weighing</span>
-					<h2
-						id="mod-weighing-heading"
-						class="text-[36px] leading-[1.08] font-semibold tracking-[-0.04em] text-[#111111] md:text-[44px]"
-						style="text-wrap: balance"
-					>
-						Smart scale sends weight to the worker record.
-					</h2>
-					<p class="mt-6 max-w-[440px] text-[17px] leading-[1.6] text-[#52525B]">
-						The wireless scale weighs the leaf bag and sends the number directly to the worker's record on the phone. No writing, no errors, no stolen weights.
-					</p>
-					<ul class="mt-8 flex flex-col gap-3">
-						{#each ['Bluetooth connection to the phone', 'Weight linked to verified worker automatically', 'No manual register entry needed'] as point}
-							<li class="flex items-start gap-3 text-[15px] leading-[1.5] text-[#3F3F46]">
-								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-0.5 shrink-0" aria-hidden="true"><path d="M3 8.5l3.5 3L13 5" stroke="#1B5E3B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-								{point}
-							</li>
-						{/each}
-					</ul>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- ═══════════════════════════════════════════════════════════ -->
-	<!-- MODULE: PAYROLL                                            -->
-	<!-- ═══════════════════════════════════════════════════════════ -->
-	<section
-		class="relative w-full bg-[#FAFAF7] py-24 md:py-32"
-		aria-labelledby="mod-payroll-heading"
-	>
-		<div class="mx-auto max-w-[1344px] px-6 md:px-12">
-			<div class="flex flex-col items-center gap-12 md:flex-row md:items-start md:gap-16 lg:gap-20">
-				<div class="flex-1">
-					<span class="mb-4 inline-block text-[13px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase">Payroll</span>
-					<h2
-						id="mod-payroll-heading"
-						class="text-[36px] leading-[1.08] font-semibold tracking-[-0.04em] text-[#111111] md:text-[44px]"
-						style="text-wrap: balance"
-					>
-						Payroll calculated from real field data.
-					</h2>
-					<p class="mt-6 max-w-[440px] text-[17px] leading-[1.6] text-[#52525B]">
-						Wages, PF, ESI, bonus, and deductions are ready from actual attendance and weight records. No calculator, no Excel rework at month end.
-					</p>
-					<ul class="mt-8 flex flex-col gap-3">
-						{#each ['Hazira-based wage calculation', 'PF, ESI, bonus rules built in', 'Month-end payroll without rework'] as point}
-							<li class="flex items-start gap-3 text-[15px] leading-[1.5] text-[#3F3F46]">
-								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-0.5 shrink-0" aria-hidden="true"><path d="M3 8.5l3.5 3L13 5" stroke="#1B5E3B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-								{point}
-							</li>
-						{/each}
-					</ul>
-					<a
-						href="/products/payroll"
-						class="mt-8 inline-flex items-center gap-2 text-[15px] font-semibold text-[#111111] transition-colors duration-150 hover:text-[#1B5E3B] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30"
-					>
-						Learn more
-						<svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M5 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-					</a>
-				</div>
-				<div class="w-full flex-1">
-					<div class="overflow-hidden rounded-2xl border border-[#F0F0F0] bg-white shadow-[0_4px_20px_rgba(0,0,0,0.04)]">
-						<img
-							src="/img/home/payroll.png"
-							alt="Automated payroll calculation connecting attendance and leaf weight records"
-							class="h-auto w-full object-cover"
-							width="1024"
-							height="1024"
-							loading="lazy"
-						/>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!-- ═══════════════════════════════════════════════════════════ -->
-	<!-- MODULE: DAILY MIS & FACTORY                                -->
-	<!-- ═══════════════════════════════════════════════════════════ -->
-	<section
-		class="relative w-full bg-white py-24 md:py-32"
-		aria-labelledby="mod-mis-heading"
-	>
-		<div class="mx-auto max-w-[1344px] px-6 md:px-12">
-			<div class="flex flex-col-reverse items-center gap-12 md:flex-row md:items-start md:gap-16 lg:gap-20">
-				<div class="w-full flex-1">
-					<div class="overflow-hidden rounded-2xl border border-white/40 bg-[#1a1a1a] shadow-[0_20px_60px_rgba(0,0,0,0.15)]">
-						<!-- Browser chrome bar -->
-						<div class="flex items-center gap-2 border-b border-white/[0.06] bg-[#1a1a1a] px-4 py-2.5">
-							<div class="flex gap-1.5">
-								<div class="h-2.5 w-2.5 rounded-full bg-[#FF5F57]"></div>
-								<div class="h-2.5 w-2.5 rounded-full bg-[#FEBC2E]"></div>
-								<div class="h-2.5 w-2.5 rounded-full bg-[#28C840]"></div>
-							</div>
-							<div class="flex flex-1 justify-center">
-								<div class="flex min-w-[200px] items-center gap-1.5 rounded-md bg-white/[0.06] px-3 py-1">
-									<span class="text-[11px] text-white/30">gardensuite.in/dashboard</span>
-								</div>
-							</div>
-						</div>
-						<img
-							src="/mis-dashboard.png"
-							alt="GardenSuite daily MIS report dashboard showing plucking, production, and labour data"
-							class="h-auto w-full object-cover object-top"
-							width="1400"
-							height="900"
-							loading="lazy"
-						/>
-					</div>
-				</div>
-				<div class="flex-1">
-					<span class="mb-4 inline-block text-[13px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase">Daily Report</span>
-					<h2
-						id="mod-mis-heading"
-						class="text-[36px] leading-[1.08] font-semibold tracking-[-0.04em] text-[#111111] md:text-[44px]"
-						style="text-wrap: balance"
-					>
-						Daily report on any device.
-					</h2>
-					<p class="mt-6 max-w-[440px] text-[17px] leading-[1.6] text-[#52525B]">
-						Open the daily MIS on your phone, tablet, or laptop. See plucking, production, labour, and factory numbers without calling the garden.
-					</p>
-					<ul class="mt-8 flex flex-col gap-3">
-						{#each ['Updated daily with field and factory data', 'Works on phone, tablet, or laptop', 'Factory, stores, and field data in one view'] as point}
-							<li class="flex items-start gap-3 text-[15px] leading-[1.5] text-[#3F3F46]">
-								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-0.5 shrink-0" aria-hidden="true"><path d="M3 8.5l3.5 3L13 5" stroke="#1B5E3B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-								{point}
-							</li>
-						{/each}
-					</ul>
-					<a
-						href="/products/mis"
-						class="mt-8 inline-flex items-center gap-2 text-[15px] font-semibold text-[#111111] transition-colors duration-150 hover:text-[#1B5E3B] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30"
-					>
-						Learn more
-						<svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M5 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-					</a>
-				</div>
-			</div>
-		</div>
-	</section>
+	<FeaturesCarousel />
 
 	<!-- ═══════════════════════════════════════════════════════════ -->
 	<!-- TRUST / WHY GARDENSUITE                                    -->
