@@ -19,11 +19,11 @@
 			return;
 		}
 
-		// ── Lenis smooth scroll (keytail-style lerped interpolation) ──
+		// ── Lenis smooth scroll — heavy, dramatic feel ──
 		const lenis = new Lenis({
-			lerp: 0.1,
-			wheelMultiplier: 1,
-			touchMultiplier: 2
+			lerp: 0.06,
+			wheelMultiplier: 0.9,
+			touchMultiplier: 1.6
 		});
 
 		// Sync Lenis with GSAP — single shared RAF frame, zero jitter
@@ -32,6 +32,10 @@
 			lenis.raf(time * 1000);
 		});
 		gsap.ticker.lagSmoothing(0);
+
+		// Shared scrub config — aggressive bezier with momentum lag
+		const scrubCfg = { trigger: '.hero-parallax', start: 'top top', end: 'bottom top', scrub: 1.5 };
+		const aggEase = 'power4.inOut';
 
 		// ── Hero entrance ──
 		const heroSection = document.querySelector('.hero-parallax');
@@ -54,52 +58,40 @@
 			});
 
 			// ── Scroll-driven parallax (3D sandwich depth) ──
-			// Text moves up at the same speed as the mockup
+			// Text — rises with the mockup
 			gsap.to('.hero-text-content', {
 				y: -98,
-				ease: 'none',
-				scrollTrigger: {
-					trigger: '.hero-parallax',
-					start: 'top top',
-					end: 'bottom top',
-					scrub: true
-				}
+				ease: aggEase,
+				scrollTrigger: { ...scrubCfg }
 			});
 
-			// Dashboard rises from behind the foreground hills
+			// Dashboard — dramatic rise from behind the hills
 			gsap.to('.hero-mockup', {
 				y: -150,
-				ease: 'none',
-				scrollTrigger: {
-					trigger: '.hero-parallax',
-					start: 'top top',
-					end: 'bottom top',
-					scrub: true
-				}
+				ease: aggEase,
+				scrollTrigger: { ...scrubCfg }
 			});
 
-			// Foreground hills + clouds rise SLOWLY — stays closer to viewer, mockup escapes behind it
+			// Foreground hills — barely drifts, anchored to the viewer
 			gsap.to('.hero-fg-group', {
-				y: -90,
-				ease: 'none',
-				scrollTrigger: {
-					trigger: '.hero-parallax',
-					start: 'top top',
-					end: 'bottom top',
-					scrub: true
-				}
+				y: -35,
+				ease: aggEase,
+				scrollTrigger: { ...scrubCfg }
 			});
 
-			// Background layer moves DOWN slowly to deepen parallax effect
+			// Background landscape — subtle downward sink
 			gsap.to('.hero-bg-landscape', {
-				y: 60,
-				ease: 'none',
-				scrollTrigger: {
-					trigger: '.hero-parallax',
-					start: 'top top',
-					end: 'bottom top',
-					scrub: true
-				}
+				y: 30,
+				ease: aggEase,
+				scrollTrigger: { ...scrubCfg }
+			});
+
+
+			// White cover — grows to fill gap (fg 35 + bg 30 = 65px)
+			gsap.to('.hero-bottom-cover', {
+				height: 65,
+				ease: aggEase,
+				scrollTrigger: { ...scrubCfg }
 			});
 		}
 
@@ -169,7 +161,7 @@
 	<!-- HERO - Clean editorial (keytail-style)                      -->
 	<!-- ═══════════════════════════════════════════════════════════ -->
 	<main id="main-content">
-	<section class="hero-parallax relative w-full overflow-hidden" aria-label="Hero">
+	<section class="hero-parallax relative w-full" aria-label="Hero">
 		<!-- Sky extension: covers the ENTIRE hero section from the very top (behind nav) -->
 		<img
 			src="/hero-sky.png"
@@ -258,7 +250,7 @@
 			<!-- Layer 2: Product dashboard mockup -->
 			<!-- Absolutely positioned so it floats in the middle of the composition -->
 			<div
-				class="hero-mockup absolute top-[8%] left-1/2 z-10 w-[90%] max-w-[1100px] -translate-x-1/2 md:top-[6%]"
+				class="hero-mockup absolute top-[20%] left-1/2 z-10 w-[90%] max-w-[1100px] -translate-x-1/2 md:top-[16%]"
 			>
 				<div
 					class="hero-mockup-inner relative overflow-hidden rounded-xl border border-white/40 bg-[#1a1a1a] shadow-[0_30px_100px_rgba(0,0,0,0.18)] md:rounded-2xl"
@@ -303,32 +295,43 @@
 				</div>
 			</div>
 
-			<!-- Layer 3: Foreground hills -->
-			<!-- Moves with parallax; fg.png is bottom-masked so the hills dissolve naturally -->
+			<!-- White cover: sits between bg and fg, grows via GSAP to hide gap -->
 			<div
-				class="hero-fg-group pointer-events-none absolute inset-x-0 bottom-0 z-20"
-				style="height: 80%; min-height: 400px;"
+				class="hero-bottom-cover pointer-events-none absolute inset-x-0 bottom-0 z-[2] bg-white"
+				style="height: 0px;"
+			></div>
+
+			<!-- Layer 3: Foreground hills + cloud border (moves together) -->
+			<!-- Extra bottom padding (pb) ensures the group extends past the section edge, closing the gap -->
+			<div
+				class="hero-fg-group pointer-events-none absolute inset-x-0 bottom-0 z-20 h-[90%] md:h-[80%]"
+				style="min-height: 400px; padding-bottom: 60px; margin-bottom: -60px;"
 			>
 				<img
 					src="/fg.png"
 					alt=""
-					class="absolute inset-0 h-full w-full object-cover object-bottom"
+					class="absolute bottom-[60px] left-1/2 h-full min-w-[120%] -translate-x-1/2 object-cover object-bottom md:min-w-full"
 					width="1920"
 					height="1080"
 				/>
+				<!-- Cloud/mist border — pushed further down to cover the entire transition zone -->
+				<img
+					src="/cloud-border.png"
+					alt=""
+					class="hero-cloud-border absolute inset-x-0 bottom-0 z-10 w-full translate-y-[10%] saturate-0 brightness-[1.15]"
+					width="1920"
+					height="400"
+				/>
+				<!-- White fill below clouds to guarantee no gap ever shows -->
+				<div class="absolute inset-x-0 bottom-0 z-[9] h-[60px] bg-white"></div>
 			</div>
 
-			<!-- Static bottom fade: tall gradient that stays fixed at the bottom of hero-visuals -->
-			<!-- Creates the Keytail-style dissolve from landscape into white page background -->
-			<div
-				class="pointer-events-none absolute inset-x-0 bottom-0 z-[25] h-[100px] bg-gradient-to-b from-transparent via-white/90 to-white md:h-[160px]"
-			></div>
 		</div>
 	</section>
 	<!-- ═══════════════════════════════════════════════════════════ -->
 	<!-- PROOF STRIP                                                -->
 	<!-- ═══════════════════════════════════════════════════════════ -->
-	<section class="relative w-full border-b border-[#F0F0F0] bg-white py-12 md:py-16" aria-label="Trust indicators">
+	<section class="relative z-30 w-full border-b border-[#F0F0F0] bg-white py-12 md:py-16" aria-label="Trust indicators">
 		<div class="mx-auto flex max-w-[1100px] flex-col items-center gap-8 px-6 md:flex-row md:justify-between md:gap-12 md:px-12">
 			<div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-4 md:gap-x-14">
 				<div class="flex flex-col items-center gap-1">
