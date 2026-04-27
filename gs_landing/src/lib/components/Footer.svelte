@@ -5,7 +5,7 @@
 <footer
 	class="relative mt-auto flex w-full flex-col overflow-hidden border-t border-[#0000000A] bg-[#FAFAF7] pt-24 pb-0"
 >
-	<div class="relative z-10 mx-auto w-full max-w-[1100px] px-6 md:px-12">
+	<div class="relative z-10 mx-auto w-full max-w-[1344px] px-6 md:px-12">
 		<!-- Top: Brand + Navigation Grid -->
 		<div class="flex flex-col gap-12 md:flex-row md:gap-16 lg:gap-24">
 			<!-- Brand Column -->

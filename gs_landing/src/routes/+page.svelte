@@ -173,7 +173,7 @@
 
 		<!-- Text content -->
 		<div
-			class="hero-text-content relative z-20 flex flex-col items-center px-6 pt-28 md:pt-32 lg:pt-36"
+			class="hero-text-content relative z-20 flex flex-col items-center px-6 pt-32 md:pt-36 lg:pt-40"
 		>
 
 
@@ -229,7 +229,7 @@
 
 		<!-- Visuals container: Keytail-style 3D parallax sandwich -->
 		<div
-			class="hero-visuals relative mt-6 h-[540px] w-full overflow-visible md:mt-10 md:h-[720px] lg:h-[840px]"
+			class="hero-visuals relative -mt-6 h-[540px] w-full overflow-visible md:-mt-4 md:h-[720px] lg:h-[840px]"
 		>
 			<!-- Layer 1: Background landscape (bg.png) -->
 			<!-- Top-masked so bg.png's own sky fades away, letting the sky extension show through above -->
@@ -250,7 +250,7 @@
 			<!-- Layer 2: Product dashboard mockup -->
 			<!-- Absolutely positioned so it floats in the middle of the composition -->
 			<div
-				class="hero-mockup absolute top-[20%] left-1/2 z-10 w-[90%] max-w-[1100px] -translate-x-1/2 md:top-[16%]"
+				class="hero-mockup absolute top-[20%] left-1/2 z-10 w-[90%] max-w-[1344px] -translate-x-1/2 md:top-[16%]"
 			>
 				<div
 					class="hero-mockup-inner relative overflow-hidden rounded-xl border border-white/40 bg-[#1a1a1a] shadow-[0_30px_100px_rgba(0,0,0,0.18)] md:rounded-2xl"
@@ -332,7 +332,7 @@
 	<!-- PROOF STRIP                                                -->
 	<!-- ═══════════════════════════════════════════════════════════ -->
 	<section class="relative z-30 w-full border-b border-[#F0F0F0] bg-white py-12 md:py-16" aria-label="Trust indicators">
-		<div class="mx-auto flex max-w-[1100px] flex-col items-center gap-8 px-6 md:flex-row md:justify-between md:gap-12 md:px-12">
+		<div class="mx-auto flex max-w-[1344px] flex-col items-center gap-8 px-6 md:flex-row md:justify-between md:gap-12 md:px-12">
 			<div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-4 md:gap-x-14">
 				<div class="flex flex-col items-center gap-1">
 					<span class="text-[32px] font-semibold tracking-[-0.03em] text-[#111111] md:text-[36px]">20+</span>
@@ -364,7 +364,7 @@
 		class="relative w-full scroll-mt-20 bg-white py-24 md:py-32"
 		aria-labelledby="workflow-heading"
 	>
-		<div class="mx-auto max-w-[1100px] px-6 md:px-12">
+		<div class="mx-auto max-w-[1344px] px-6 md:px-12">
 			<div class="mb-16 max-w-[640px]">
 				<h2
 					id="workflow-heading"
@@ -404,7 +404,7 @@
 		class="relative w-full scroll-mt-20 bg-[#FAFAF7] py-24 md:py-32"
 		aria-labelledby="mod-attendance-heading"
 	>
-		<div class="mx-auto max-w-[1100px] px-6 md:px-12">
+		<div class="mx-auto max-w-[1344px] px-6 md:px-12">
 			<div class="flex flex-col items-center gap-12 md:flex-row md:items-start md:gap-16 lg:gap-20">
 				<div class="flex-1">
 					<span class="mb-4 inline-block text-[13px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase">Attendance</span>
@@ -457,7 +457,7 @@
 		class="relative w-full bg-white py-24 md:py-32"
 		aria-labelledby="mod-weighing-heading"
 	>
-		<div class="mx-auto max-w-[1100px] px-6 md:px-12">
+		<div class="mx-auto max-w-[1344px] px-6 md:px-12">
 			<div class="flex flex-col-reverse items-center gap-12 md:flex-row md:items-start md:gap-16 lg:gap-20">
 				<div class="w-full flex-1">
 					<div class="overflow-hidden rounded-2xl border border-[#F0F0F0] bg-white shadow-[0_4px_20px_rgba(0,0,0,0.04)]">
@@ -502,7 +502,7 @@
 		class="relative w-full bg-[#FAFAF7] py-24 md:py-32"
 		aria-labelledby="mod-payroll-heading"
 	>
-		<div class="mx-auto max-w-[1100px] px-6 md:px-12">
+		<div class="mx-auto max-w-[1344px] px-6 md:px-12">
 			<div class="flex flex-col items-center gap-12 md:flex-row md:items-start md:gap-16 lg:gap-20">
 				<div class="flex-1">
 					<span class="mb-4 inline-block text-[13px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase">Payroll</span>
@@ -555,7 +555,7 @@
 		class="relative w-full bg-white py-24 md:py-32"
 		aria-labelledby="mod-mis-heading"
 	>
-		<div class="mx-auto max-w-[1100px] px-6 md:px-12">
+		<div class="mx-auto max-w-[1344px] px-6 md:px-12">
 			<div class="flex flex-col-reverse items-center gap-12 md:flex-row md:items-start md:gap-16 lg:gap-20">
 				<div class="w-full flex-1">
 					<div class="overflow-hidden rounded-2xl border border-white/40 bg-[#1a1a1a] shadow-[0_20px_60px_rgba(0,0,0,0.15)]">
@@ -622,7 +622,7 @@
 		class="relative w-full scroll-mt-20 bg-[#FAFAF7] py-24 md:py-32"
 		aria-labelledby="trust-heading"
 	>
-		<div class="mx-auto max-w-[1100px] px-6 md:px-12">
+		<div class="mx-auto max-w-[1344px] px-6 md:px-12">
 			<div class="mb-12 max-w-[640px]">
 				<span class="mb-4 inline-block text-[13px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase">Why GardenSuite</span>
 				<h2
