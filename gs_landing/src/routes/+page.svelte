@@ -65,10 +65,10 @@
 				scrollTrigger: { ...scrubCfg }
 			});
 
-			// Dashboard — dramatic rise from behind the hills
+			// Dashboard — steady rise from behind the hills
 			gsap.to('.hero-mockup', {
 				y: -150,
-				ease: aggEase,
+				ease: 'power1.inOut',
 				scrollTrigger: { ...scrubCfg }
 			});
 
