@@ -82,6 +82,40 @@ Target:
 - one clarifying paragraph
 - trust line close by
 
+### Problem Strip
+
+Job:
+
+- name the pain the audience already knows
+
+Use:
+
+- specific scenarios (lost registers, proxy attendance, manual payroll)
+- short, visceral language
+- real tea garden vocabulary (hazira, plucking weight, PF, ESI)
+
+Avoid:
+
+- generic "running a business is hard" language
+- broad claims without specific mechanisms
+
+### Product Grid
+
+Job:
+
+- show what the system does, module by module
+- route visitors to product pages for the deep story
+
+Use:
+
+- one-liner descriptions tied to real workflow outcomes
+- operational language (face scan, wireless scale, linked worker record)
+
+Avoid:
+
+- marketing slogans as section labels
+- abstract "connected system" language without naming the chain
+
 ### Proof Strip
 
 Job:
@@ -90,43 +124,14 @@ Job:
 
 Use:
 
-- estate names
-- region coverage
-- Sarbani Associates support line
+- estate count and region coverage
+- Sarbani Associates name and location
 
-### Connected Workflow
-
-Job:
-
-- explain the chain from worker verification to daily report
-
-Use:
-
-- step-based writing
-- specific transitions between modules
-
-Avoid:
-
-- broad “everything connected” language without naming the chain
-
-### Module Sections
+### Differentiator
 
 Job:
 
-- explain what each module does
-- show where it fits in the day
-
-Pattern:
-
-- clear headline
-- one paragraph
-- two or three factual supporting points at most
-
-### Trust Section
-
-Job:
-
-- explain why the system fits tea gardens specifically
+- explain why GardenSuite fits tea gardens specifically
 
 Use:
 

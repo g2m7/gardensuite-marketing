@@ -94,50 +94,50 @@ Change:
 - ensure product proof remains the main focal point
 - make the supporting copy more category-led and operational
 
-### 2. Proof Strip
+### 2. Problem Strip
 
-Move trust closer to the top:
+Name the pain the audience recognizes:
 
+- registers getting lost
+- buddy punching and inflated weights
+- payroll taking days
+
+This earns emotional buy-in before showing the solution. Three columns, short and visceral.
+
+### 3. Product Grid
+
+Show all 5 modules as cards linking to their product pages:
+
+- Face Attendance & Smart Weighing (featured, larger card)
+- Automated Payroll
+- Factory Accounts
+- Store Management
+- Daily MIS Report
+
+Each card should include a mini UI preview (CSS-recreated from real app screenshots when available), one sharp headline, and a one-liner description. The section heading should frame the connected system, not just list features.
+
+This replaces the earlier connected workflow + module detail sections.
+
+### 4. Proof Strip
+
+Social proof repositioned after products:
+
+- 20+ tea estates
+- 7 regions
+- 25+ years
 - built and supported by Sarbani Associates
-- used by 20+ tea estates
-- regions served
 
-This should come immediately after the hero or at the lower edge of the hero.
+Placed after products so the visitor has seen the solution before being asked to trust the company. Proof answers "can I trust these people?" at the moment it matters.
 
-### 3. Connected Workflow
+### 5. Differentiator
 
-Replace the current split between problem/solution/workflow sections with one stronger section that shows:
+Three cards explaining why GardenSuite over generic ERPs:
 
-- face attendance
-- weighing
-- payroll
-- MIS
+- tea garden workflow built in
+- runs offline at the garden
+- setup and support on site by Sarbani Associates
 
-The section should explain the chain, not just list modules.
-
-### 4. Module Detail Sections
-
-Use 3 to 4 larger product-led sections:
-
-- Face Attendance
-- Smart Weighing
-- Payroll
-- Daily MIS / Factory / Stores
-
-Each section should include:
-
-- one sharp headline
-- one concrete paragraph
-- one real product visual or real workflow moment
-
-### 5. Tea-Garden Fit / Trust Section
-
-This is where the page proves why GardenSuite is credible for estates:
-
-- tea garden logic already built in
-- offline operation
-- on-site setup and training
-- Sarbani Associates support
+No stats row here (stats are in the proof strip above).
 
 ### 6. FAQ
 
@@ -155,10 +155,11 @@ Short, direct, low-drama CTA. No extra aesthetic trick needed.
 
 ## Section Design Rules
 
-- Do not repeat the same rounded cream card formula section after section
-- Alternate between editorial open sections and tighter product proof sections
-- Use larger blocks and fewer nested cards
-- Let some sections breathe with plain white backgrounds
+- Alternate section backgrounds between white and off-white to create rhythm
+- Problem strip and proof strip should feel tight and factual
+- Product grid cards should feel interactive and route to product pages
+- Differentiator cards should feel calm and authoritative
+- Let FAQ and CTA sections breathe with plain backgrounds
 - Use accent color sparingly and intentionally
 
 ## Visual System Rules

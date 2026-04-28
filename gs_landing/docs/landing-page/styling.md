@@ -97,15 +97,14 @@ Use color with restraint. The page should not feel washed in green.
 Recommended rhythm:
 
 1. high-impact hero
-2. tight proof strip
-3. connected workflow section
-4. product proof section
-5. product proof section
-6. trust / support section
-7. FAQ
-8. CTA
+2. problem strip (tight, factual)
+3. product grid (cards routing to product pages)
+4. proof strip (stats + Sarbani Associates)
+5. differentiator (3 trust cards)
+6. FAQ
+7. CTA
 
-This is calmer than the current rhythm and gives each section a clear role.
+This gives each section a clear role without repeating the same layout.
 
 ## Motion
 
