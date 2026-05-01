@@ -65,6 +65,14 @@ bun run build
 - **Simple language.** Not everyone in the target audience is fluent in English. Use clear, simple words. No big words just to sound sophisticated. Stay professional but accessible.
 - **Parent company: Sarbani Associates.** Mention in copyright footer and appropriate places (hero badge, CTA section, about areas).
 
+## Required Audit Skills
+
+When auditing or improving homepage copy, landing page messaging, sales clarity, styling, UX, or conversion quality, use these skills:
+
+- `/Users/g2m7/.agents/skills/landing-page-copywriter/SKILL.md`
+- `/Users/g2m7/.agents/skills/landing-page-design/SKILL.md`
+- `/Users/g2m7/.agents/skills/web-design-guidelines/SKILL.md`
+
 ## Content Needed (See CONTENTS-NEEDED.md)
 
 - Product information (all modules)

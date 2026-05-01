@@ -50,6 +50,14 @@ Jalpaiguri: Himalayan Agro Plantation
 - Sales funnel structure: Hook -> Problem -> Solution -> Proof -> Desire -> Differentiator -> Features -> Trust -> FAQ -> CTA
 - Parent company branding: Sarbani Associates in copyright footer and trust-building sections
 
+## Required Audit Skills
+
+When auditing or improving homepage copy, landing page messaging, sales clarity, styling, UX, or conversion quality, use these skills:
+
+- `/Users/g2m7/.agents/skills/landing-page-copywriter/SKILL.md`
+- `/Users/g2m7/.agents/skills/landing-page-design/SKILL.md`
+- `/Users/g2m7/.agents/skills/web-design-guidelines/SKILL.md`
+
 ## Tech Stack
 
 - SvelteKit (Svelte 5) + Tailwind CSS v4 + TypeScript
