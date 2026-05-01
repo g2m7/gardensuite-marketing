@@ -5,6 +5,7 @@ This directory is the current documentation home for the GardenSuite landing pag
 ## Current Source of Truth
 
 - `landing-page/README.md` - master direction for layout, section structure, visual strategy, and inspiration takeaways
+- `landing-page/all-pages-copy-guidelines.md` - master copy rules for homepage, product pages, nav, footer, CTAs, FAQ, trust sections, and SEO copy
 - `landing-page/copy.md` - copy rules, messaging priorities, and section-by-section writing direction
 - `landing-page/product-page-copy-guidelines.md` - product-page copy audit, dos and don'ts, vocabulary rules, and module-specific standards
 - `landing-page/typography.md` - type system direction and usage rules
