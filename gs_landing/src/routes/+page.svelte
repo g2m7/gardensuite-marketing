@@ -618,25 +618,21 @@
 					{#if product.featured}
 						<a
 							href={product.href}
-							class="group/product mb-6 block overflow-hidden rounded-2xl border border-[#E4E4E7] bg-white transition-all duration-200 hover:border-[#1B5E3B]/20 hover:shadow-[0_12px_40px_rgba(27,94,59,0.1)] md:mb-8"
+							class="group/product relative mb-6 block overflow-hidden rounded-2xl border border-[#0F2E0C]/15 bg-[#0B1712] p-4 shadow-[0_30px_90px_rgba(15,46,12,0.18)] transition-all duration-300 hover:border-white/20 hover:shadow-[0_40px_100px_rgba(15,46,12,0.25)] md:mb-8 md:p-5"
 						>
-							<div class="grid grid-cols-1 md:grid-cols-2">
-								<div class="relative aspect-[16/9] overflow-hidden bg-gradient-to-br from-[#F0FDF4] to-[#DCFCE7] md:aspect-auto md:min-h-[320px]">
-									<img
-										src="/img/home/face-attendance.png"
-										alt="Face attendance and smart weighing feature"
-										class="absolute inset-0 h-full w-full object-cover object-center opacity-20 saturate-[0.4] brightness-[1.1] transition-transform duration-300 group-hover/product:scale-[1.02]"
-										width="800"
-										height="600"
-										loading="eager"
-									/>
-									<div class="absolute top-6 left-6 z-10">
-										<span class="rounded-full bg-[#1B5E3B] px-3 py-1 text-[11px] font-semibold tracking-[0.04em] text-white uppercase">
+							<img src="/hero-sky.png" alt="" class="absolute inset-0 z-0 h-full w-full object-cover brightness-[1.15] transition-transform duration-700 group-hover/product:scale-105" />
+							<img src="/bg.png" alt="" class="absolute inset-x-0 bottom-0 z-[1] h-[60%] w-full object-cover object-top brightness-[1.15] transition-transform duration-700 group-hover/product:scale-105" style="mask-image: linear-gradient(to bottom, transparent 0%, black 30%); -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 30%);" />
+							<div class="relative z-10 rounded-xl border border-white/15 bg-white/[0.04] p-3 backdrop-blur-sm md:p-5">
+								<div class="overflow-hidden rounded-2xl border border-white/30 bg-white/95 shadow-[0_20px_60px_rgba(0,0,0,0.18)]">
+									<div class="grid grid-cols-1 md:grid-cols-2">
+								<div class="relative flex aspect-[16/9] items-center justify-center overflow-hidden bg-gradient-to-br from-[#F0FDF4] to-[#DCFCE7] p-6 md:aspect-auto md:min-h-[320px]">
+									<div class="absolute top-5 left-5 z-10">
+										<span class="rounded-full bg-[#1B5E3B] px-3 py-1 text-[11px] font-semibold tracking-[0.04em] text-white uppercase shadow-sm">
 											{product.badge}
 										</span>
 									</div>
-									<!-- Floating overlay card -->
-									<div class="absolute bottom-6 left-6 z-10 w-[240px] rounded-xl border border-white/60 bg-white/95 p-4 shadow-[0_8px_32px_rgba(0,0,0,0.08)] backdrop-blur-md">
+									<!-- Centered overlay card -->
+									<div class="relative z-10 w-full max-w-[280px] rounded-xl border border-white/60 bg-white/95 p-5 shadow-[0_8px_32px_rgba(0,0,0,0.08)] backdrop-blur-md transition-all duration-300 group-hover/product:scale-[1.03] group-hover/product:shadow-[0_16px_48px_rgba(0,0,0,0.12)]">
 										<div class="mb-2 flex items-center gap-2">
 											<div class="flex h-6 w-6 items-center justify-center rounded-full bg-[#1B5E3B]/10">
 												<svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 6.5l2 2 4-4" stroke="#1B5E3B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -666,6 +662,8 @@
 									</span>
 								</div>
 							</div>
+								</div>
+							</div>
 						</a>
 					{/if}
 				{/each}
@@ -676,20 +674,16 @@
 						{#if !product.featured}
 							<a
 								href={product.href}
-								class="group/product flex flex-col overflow-hidden rounded-2xl border border-[#E4E4E7] bg-white transition-all duration-200 hover:border-[#1B5E3B]/20 hover:shadow-[0_12px_40px_rgba(27,94,59,0.1)]"
+								class="group/product relative flex flex-col overflow-hidden rounded-2xl border border-[#0F2E0C]/15 bg-[#0B1712] p-4 shadow-[0_30px_90px_rgba(15,46,12,0.18)] transition-all duration-300 hover:border-white/20 hover:shadow-[0_40px_100px_rgba(15,46,12,0.25)] md:p-5"
 							>
-								<div class="relative aspect-[16/10] overflow-hidden bg-gradient-to-br from-[#F0FDF4] to-[#DCFCE7]">
+								<img src="/hero-sky.png" alt="" class="absolute inset-0 z-0 h-full w-full object-cover brightness-[1.15] transition-transform duration-700 group-hover/product:scale-105" />
+								<img src="/bg.png" alt="" class="absolute inset-x-0 bottom-0 z-[1] h-[60%] w-full object-cover object-top brightness-[1.15] transition-transform duration-700 group-hover/product:scale-105" style="mask-image: linear-gradient(to bottom, transparent 0%, black 30%); -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 30%);" />
+								<div class="relative z-10 flex flex-1 flex-col rounded-xl border border-white/15 bg-white/[0.04] p-3 backdrop-blur-sm md:p-4">
+									<div class="flex flex-1 flex-col overflow-hidden rounded-2xl border border-white/30 bg-white/95 shadow-[0_20px_60px_rgba(0,0,0,0.18)]">
+										<div class="relative flex aspect-[16/10] items-center justify-center overflow-hidden bg-gradient-to-br from-[#F0FDF4] to-[#DCFCE7] p-6">
 									{#if product.icon === 'payroll'}
-										<img
-											src="/img/home/payroll.png"
-											alt="Automated payroll feature"
-											class="absolute inset-0 h-full w-full object-cover object-center opacity-20 saturate-[0.4] brightness-[1.1] transition-transform duration-300 group-hover/product:scale-[1.02]"
-											width="800"
-											height="600"
-											loading="lazy"
-										/>
 										<!-- Payroll overlay -->
-										<div class="absolute right-6 bottom-6 z-10 w-[200px] rounded-xl border border-white/60 bg-white/95 p-4 shadow-[0_8px_32px_rgba(0,0,0,0.08)] backdrop-blur-md">
+										<div class="relative z-10 w-full max-w-[240px] rounded-xl border border-white/60 bg-white/95 p-5 shadow-[0_8px_32px_rgba(0,0,0,0.08)] backdrop-blur-md transition-all duration-300 group-hover/product:scale-[1.03] group-hover/product:shadow-[0_16px_48px_rgba(0,0,0,0.12)]">
 											<div class="mb-2 text-[12px] font-semibold tracking-[0.04em] text-[#4B5563] uppercase">Month Summary</div>
 											<div class="flex justify-between border-t border-[#F0F0F0] py-1.5 text-[12px]">
 												<span class="text-[#4B5563]">Gross wages</span>
@@ -705,8 +699,7 @@
 											</div>
 										</div>
 									{:else if product.icon === 'factory'}
-										<div class="absolute inset-0 h-full w-full bg-[#1B5E3B]/5 transition-transform duration-300 group-hover/product:scale-[1.02]"></div>
-										<div class="absolute right-5 bottom-5 left-5 z-10 rounded-xl border border-white/60 bg-white/95 p-4 shadow-[0_8px_32px_rgba(0,0,0,0.08)] backdrop-blur-md">
+										<div class="relative z-10 w-full max-w-[240px] rounded-xl border border-white/60 bg-white/95 p-5 shadow-[0_8px_32px_rgba(0,0,0,0.08)] backdrop-blur-md transition-all duration-300 group-hover/product:scale-[1.03] group-hover/product:shadow-[0_16px_48px_rgba(0,0,0,0.12)]">
 											<div class="mb-2 text-[11px] font-semibold tracking-[0.06em] text-[#1B5E3B] uppercase">Cost Per Kg</div>
 											{#each [{ label: 'Green leaf', value: '₹32.50' }, { label: 'Manufacturing', value: '₹12.80' }, { label: 'Power & fuel', value: '₹5.40' }] as row}
 												<div class="flex items-center justify-between border-t border-[#F0F0F0] py-1 text-[12px]">
@@ -720,8 +713,7 @@
 											</div>
 										</div>
 									{:else if product.icon === 'stores'}
-										<div class="absolute inset-0 h-full w-full bg-[#1B5E3B]/5 transition-transform duration-300 group-hover/product:scale-[1.02]"></div>
-										<div class="absolute right-5 bottom-5 left-5 z-10 rounded-xl border border-white/60 bg-white/95 p-4 shadow-[0_8px_32px_rgba(0,0,0,0.08)] backdrop-blur-md">
+										<div class="relative z-10 w-full max-w-[240px] rounded-xl border border-white/60 bg-white/95 p-5 shadow-[0_8px_32px_rgba(0,0,0,0.08)] backdrop-blur-md transition-all duration-300 group-hover/product:scale-[1.03] group-hover/product:shadow-[0_16px_48px_rgba(0,0,0,0.12)]">
 											<div class="mb-2 text-[11px] font-semibold tracking-[0.06em] text-[#1B5E3B] uppercase">Stock Levels</div>
 											{#each [{ label: 'NPK Fertilizer', value: '2,450 kg', ok: true }, { label: 'Diesel', value: '1,200 L', ok: true }, { label: 'Pruning Shears', value: '18 pcs', ok: false }] as row}
 												<div class="flex items-center justify-between border-t border-[#F0F0F0] py-1 text-[12px]">
@@ -734,16 +726,8 @@
 											{/each}
 										</div>
 									{:else}
-										<img
-											src="/mis-dashboard.png"
-											alt="Daily MIS report feature"
-											class="absolute inset-0 h-full w-full object-cover object-center opacity-20 saturate-[0.4] brightness-[1.1] transition-transform duration-300 group-hover/product:scale-[1.02]"
-											width="800"
-											height="600"
-											loading="lazy"
-										/>
 										<!-- Dashboard overlay -->
-										<div class="absolute right-6 top-6 z-10 rounded-xl border border-[#FDE68A] bg-[#FEF9C3]/95 p-4 shadow-[0_8px_32px_rgba(0,0,0,0.06)] backdrop-blur-sm">
+										<div class="relative z-10 w-full max-w-[240px] rounded-xl border border-[#FDE68A] bg-[#FEF9C3]/95 p-5 shadow-[0_8px_32px_rgba(0,0,0,0.08)] backdrop-blur-sm transition-all duration-300 group-hover/product:scale-[1.03] group-hover/product:shadow-[0_16px_48px_rgba(0,0,0,0.12)]">
 											<div class="mb-2 flex items-center justify-between gap-6">
 												<span class="text-[13px] font-semibold text-[#92400E]">Today's Numbers</span>
 												<span class="text-[11px] font-medium text-[#B45309]">Live</span>
@@ -769,6 +753,8 @@
 										Learn more
 										<svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M5 2.5l4.5 4.5L5 11.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
 									</span>
+								</div>
+									</div>
 								</div>
 							</a>
 						{/if}
