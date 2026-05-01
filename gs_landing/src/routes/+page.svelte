@@ -947,14 +947,14 @@
 			aria-labelledby="trust-heading"
 		>
 			<div class="mx-auto max-w-[1344px] px-6 md:px-12">
-				<div class="max-w-4xl">
+				<div class="max-w-3xl">
 						<span
 							class="mb-4 inline-block text-[13px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase"
 							>Why GardenSuite</span
 						>
 						<h2
 							id="trust-heading"
-							class="text-[32px] leading-[1.08] font-semibold tracking-[-0.04em] text-[#111111] md:text-[40px] lg:text-[48px]"
+							class="text-[28px] leading-[1.08] font-semibold tracking-[-0.04em] text-[#111111] md:text-[36px]"
 							style="text-wrap: balance"
 						>
 							Installed, trained, and supported by Sarbani Associates.
@@ -964,7 +964,7 @@
 						</p>
 				</div>
 
-				<div class="mt-16 grid grid-cols-1 gap-x-12 gap-y-14 md:grid-cols-2 lg:grid-cols-3">
+				<div class="mt-20 grid grid-cols-1 gap-x-12 gap-y-16 md:grid-cols-2 lg:grid-cols-3">
 					{#each [
 						{
 							title: 'Tea garden payroll logic',
@@ -997,7 +997,7 @@
 							icon: 'support'
 						}
 					] as item}
-						<div class="group flex gap-5 transition-transform duration-500 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:-translate-y-1">
+						<div class="group flex gap-5 rounded-2xl p-4 transition-all duration-500 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:-translate-y-1 hover:bg-white/60">
 							<div class="mt-1 shrink-0 text-[#1B5E3B] drop-shadow-[0_2px_4px_rgba(27,94,59,0.25)]">
 								{#if item.icon === 'payroll'}
 									<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M12 9v4M9 11h6"/></svg>
