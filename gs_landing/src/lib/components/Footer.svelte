@@ -2,8 +2,8 @@
 	import GsLogoAnimation from '$lib/components/GsLogoAnimation.svelte';
 </script>
 
-<footer class="bg-white py-8 sm:py-20">
-	<div class="mx-auto max-w-[1344px] space-y-16 px-6 md:px-12">
+<footer class="relative overflow-hidden bg-white pt-8 sm:pt-20">
+	<div class="relative z-10 mx-auto max-w-[1344px] space-y-16 px-6 pb-8 md:px-12 sm:pb-12">
 		<div class="grid gap-12 md:grid-cols-5">
 			<div class="space-y-6 md:col-span-2 md:space-y-12">
 				<a href="/" aria-label="GardenSuite Home" class="flex items-center gap-2.5">
@@ -49,29 +49,26 @@
 
 		<div aria-hidden="true" class="h-px bg-[length:6px_1px] bg-repeat-x opacity-25 [background-image:linear-gradient(90deg,#111111_1px,transparent_1px)]"></div>
 
-		<div class="flex flex-col gap-6">
-			<div class="flex flex-wrap items-center justify-between gap-4">
-				<span class="text-[13px] text-[#71717A]">&copy; {new Date().getFullYear()} Sarbani Associates. All rights reserved.</span>
-				<span class="flex items-center gap-2">
-					<span class="relative flex h-2 w-2">
-						<span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#1B5E3B]/30"></span>
-						<span class="relative inline-flex h-2 w-2 rounded-full bg-[#1B5E3B]"></span>
-					</span>
-					<span class="text-[13px] text-[#52525B]">All Systems Online</span>
+		<div class="flex flex-wrap items-center justify-between gap-4">
+			<span class="text-[13px] text-[#71717A]">&copy; {new Date().getFullYear()} Sarbani Associates. All rights reserved.</span>
+			<span class="inline-flex items-center gap-2 rounded-full border border-[#E4E4E7] bg-[#FAFAF7] px-3 py-1">
+				<span class="relative flex h-2 w-2">
+					<span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#1B5E3B]/30"></span>
+					<span class="relative inline-flex h-2 w-2 rounded-full bg-[#1B5E3B]"></span>
 				</span>
-			</div>
-
-			<div class="rounded-2xl border border-[#E4E4E7] bg-[#FAFAF7] px-6 py-5">
-				<div class="flex flex-col items-start gap-4 md:flex-row md:items-center md:justify-between">
-					<div class="flex items-center gap-3">
-						<span class="text-[15px] font-semibold tracking-[-0.01em] text-[#111111]">Sarbani Associates</span>
-						<span class="text-[13px] text-[#71717A]">Bagdogra, Siliguri</span>
-					</div>
-					<p class="text-[13px] leading-[1.5] text-[#4B5563]">
-						Tea garden software, built on-site. Serving estates in Assam, Dooars, Terai, Darjeeling, Coochbehar, Uttar Dinajpur, and Jalpaiguri since 2000.
-					</p>
-				</div>
-			</div>
+				<span class="text-[12px] font-medium text-[#52525B]">All Systems Online</span>
+			</span>
 		</div>
+	</div>
+
+	<!-- Massive Footer Typography -->
+	<div class="pointer-events-none relative flex w-full select-none justify-center -mb-[4vw] sm:-mb-[3vw]">
+		<!-- Aurora Gradient Strip -->
+		<div class="absolute -bottom-10 -left-10 -right-10 h-[85%] bg-gradient-to-t from-[#1B5E3B] from-30% via-[#1B5E3B]/60 to-transparent blur-2xl sm:blur-3xl"></div>
+		
+		<!-- Large white text -->
+		<span class="relative z-10 text-[24vw] font-bold leading-[0.75] tracking-tighter text-white sm:text-[20vw]">
+			sarbaa
+		</span>
 	</div>
 </footer>

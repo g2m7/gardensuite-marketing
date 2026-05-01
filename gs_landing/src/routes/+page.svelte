@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { fly } from 'svelte/transition';
 
 	// ─── GSAP + ScrollTrigger ───
 	let ready = $state(false);
@@ -14,7 +15,21 @@
 		const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 		if (prefersReduced) {
 			ready = true;
+			fabVisible = true;
 			return;
+		}
+
+		// ── FAB: show after scrolling past hero ──
+		const heroEl = document.querySelector('.hero-parallax');
+		if (heroEl) {
+			ScrollTrigger.create({
+				trigger: heroEl,
+				start: 'bottom 80%',
+				onEnter: () => (fabVisible = true),
+				onLeaveBack: () => (fabVisible = false)
+			});
+		} else {
+			fabVisible = true;
 		}
 
 		// ── Lenis smooth scroll ──
@@ -111,6 +126,7 @@
 	// ─── Contact Form ───
 	const WA_NUMBER = '919734101330';
 	let contactPanelOpen = $state(false);
+	let fabVisible = $state(false);
 	let formNeed = $state('Book a demo');
 	let formName = $state('');
 	let formPhone = $state('');
@@ -427,12 +443,12 @@
 					>
 					<h2
 						id="problem-heading"
-						class="text-[40px] leading-[1.05] font-semibold tracking-[-0.04em] text-[#111111] md:text-[56px] lg:text-[64px]"
+						class="text-[28px] leading-[1.08] font-semibold tracking-[-0.04em] text-[#111111] md:text-[36px]"
 						style="text-wrap: balance"
 					>
 						Paper work hides real daily losses.
 					</h2>
-					<p class="mt-6 max-w-lg text-[17px] leading-[1.6] text-[#4B5563]">
+					<p class="mt-5 max-w-lg text-[16px] leading-[1.65] text-[#374151]">
 						Manual records create delay, leakage, and disputes before management can react.
 					</p>
 				</div>
@@ -455,7 +471,7 @@
 							icon: 'payroll'
 						}
 					] as item}
-						<div class="flex gap-4">
+						<div class="flex gap-5">
 							<div class="relative mt-1 shrink-0 text-[#DC2626] drop-shadow-[0_2px_4px_rgba(220,38,38,0.2)]">
 								{#if item.icon === 'register'}
 									<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg>
@@ -469,8 +485,8 @@
 								</span>
 							</div>
 							<div>
-								<h3 class="text-[26px] leading-[1.2] font-semibold tracking-[-0.02em] text-[#111111] md:text-[30px]">{item.title}</h3>
-								<p class="mt-2 max-w-[560px] text-[16px] leading-[1.65] text-[#4B5563]">{item.desc}</p>
+								<h3 class="text-[19px] font-semibold leading-[1.3] text-[#111111]">{item.title}</h3>
+								<p class="mt-2 max-w-[560px] text-[15px] leading-[1.6] text-[#4B5563]">{item.desc}</p>
 							</div>
 						</div>
 					{/each}
@@ -495,7 +511,7 @@
 						>
 						<h2
 							id="solution-heading"
-							class="text-[40px] leading-[1.05] font-semibold tracking-[-0.04em] text-[#111111] md:text-[56px]"
+							class="text-[28px] leading-[1.08] font-semibold tracking-[-0.04em] text-[#111111] md:text-[36px]"
 							style="text-wrap: balance"
 						>
 							One system for the whole tea garden.
@@ -517,10 +533,10 @@
 						</a>
 					</div>
 
-					<div class="relative overflow-hidden rounded-[28px] border border-[#0F2E0C]/15 bg-[#0B1712] p-4 shadow-[0_30px_90px_rgba(15,46,12,0.18)] md:p-5">
-						<div class="absolute inset-0 bg-[radial-gradient(circle_at_20%_85%,rgba(65,190,125,0.55),transparent_36%),radial-gradient(circle_at_95%_70%,rgba(74,144,226,0.55),transparent_38%)]"></div>
-						<div class="absolute inset-0 opacity-25" style="background-image: radial-gradient(circle, rgba(255,255,255,0.28) 1px, transparent 1px); background-size: 18px 18px;"></div>
-						<div class="relative rounded-[22px] border border-white/15 bg-white/[0.04] p-6 backdrop-blur-sm md:p-8">
+					<div class="relative overflow-hidden rounded-2xl border border-[#0F2E0C]/15 bg-[#0B1712] p-4 shadow-[0_30px_90px_rgba(15,46,12,0.18)] md:p-5">
+						<img src="/hero-sky.png" alt="" class="absolute inset-0 z-0 h-full w-full object-cover brightness-[1.15]" />
+						<img src="/bg.png" alt="" class="absolute inset-x-0 bottom-0 z-[1] h-[60%] w-full object-cover object-top brightness-[1.15]" style="mask-image: linear-gradient(to bottom, transparent 0%, black 30%); -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 30%);" />
+						<div class="relative z-10 rounded-xl border border-white/15 bg-white/[0.04] p-6 backdrop-blur-sm md:p-8">
 							<div class="mx-auto max-w-[420px] rounded-3xl border border-white/30 bg-white/95 p-5 shadow-[0_20px_60px_rgba(0,0,0,0.18)] md:p-6">
 								<div class="mb-5 flex items-center justify-between border-b border-[#E4E4E7] pb-4">
 									<div>
@@ -587,13 +603,13 @@
 						>
 					<h2
 						id="products-heading"
-						class="text-[36px] leading-[1.08] font-semibold tracking-[-0.04em] text-[#111111] md:text-[44px] lg:text-[52px]"
+						class="text-[28px] leading-[1.08] font-semibold tracking-[-0.04em] text-[#111111] md:text-[36px]"
 						style="text-wrap: balance"
 					>
-						5 modules. One connected system.
+						One product. Five connected modules.
 					</h2>
-					<p class="mt-5 text-[17px] leading-[1.6] text-[#374151]">
-						Face attendance, leaf weight, payroll, factory, stores, and daily reports stay connected. No repeated entry from paper registers.
+					<p class="mt-5 text-[16px] leading-[1.65] text-[#374151]">
+						Face attendance, leaf weight, payroll, factory, stores, and daily reports. Every module shares data so your office does not repeat entries from paper registers.
 					</p>
 				</div>
 
@@ -642,7 +658,7 @@
 									</div>
 								</div>
 								<div class="flex flex-col justify-center p-8 md:p-10">
-									<h3 class="text-[22px] font-semibold tracking-[-0.02em] text-[#111111] md:text-[26px]">{product.title}</h3>
+									<h3 class="text-[19px] font-semibold tracking-[-0.02em] text-[#111111]">{product.title}</h3>
 									<p class="mt-3 text-[15px] leading-[1.6] text-[#374151] md:text-[16px]">{product.desc}</p>
 									<span class="mt-6 inline-flex items-center gap-1.5 text-[14px] font-semibold text-[#1B5E3B] transition-colors group-hover/product:gap-2.5">
 										Learn more
@@ -776,8 +792,8 @@
 							class="mb-4 inline-block text-[13px] font-semibold tracking-[0.08em] text-[#4ADE80] uppercase"
 						>Comparison</span>
 						<h2
-							id="compare-heading"
-							class="text-[32px] leading-[1.08] font-semibold tracking-[-0.04em] text-white md:text-[40px] lg:text-[48px]"
+						id="compare-heading"
+						class="text-[28px] leading-[1.08] font-semibold tracking-[-0.04em] text-white md:text-[36px]"
 							style="text-wrap: balance"
 						>Paper way vs GardenSuite</h2>
 						<p class="mt-5 text-[16px] leading-[1.65] text-[#9CA3AF] lg:max-w-xs">
@@ -849,7 +865,7 @@
 					</span>
 					<h2
 						id="confidential-proof-heading"
-						class="text-[32px] leading-[1.12] font-semibold tracking-[-0.03em] text-[#111111] md:text-[40px]"
+						class="text-[28px] leading-[1.08] font-semibold tracking-[-0.04em] text-[#111111] md:text-[36px]"
 						style="text-wrap: balance"
 					>
 						Proof from the field, not just brochure claims.
@@ -868,13 +884,13 @@
 								<path d="M5 15h20" stroke="#6366F1" stroke-width="2" />
 							</svg>
 						</div>
-						<h3 class="text-[28px] leading-[1.2] font-semibold tracking-[-0.02em] text-[#111111]">Face identity linked with plucking weight.</h3>
+						<h3 class="text-[24px] leading-[1.2] font-semibold tracking-[-0.02em] text-[#111111]">Face identity linked with plucking weight.</h3>
 						<p class="mt-4 text-[16px] leading-[1.6] text-[#4B5563]">One step capture at the garden gate. Less manual correction and less dispute at payroll time.</p>
 					</div>
 
 					<div class="border-b border-[#E4E4E7] p-7 md:border-r md:border-b">
 						<div class="mb-8 h-24 rounded-xl bg-gradient-to-r from-[#C7D2FE] via-[#818CF8] to-[#4F46E5] opacity-40"></div>
-						<h3 class="text-[28px] leading-[1.2] font-semibold tracking-[-0.02em] text-[#111111]">Daily MIS visibility for owners and managers.</h3>
+						<h3 class="text-[24px] leading-[1.2] font-semibold tracking-[-0.02em] text-[#111111]">Daily MIS visibility for owners and managers.</h3>
 						<p class="mt-4 text-[16px] leading-[1.6] text-[#4B5563]">Check plucking, production, labour, and factory trends from phone, tablet, or laptop.</p>
 					</div>
 
@@ -917,7 +933,7 @@
 								<div class="text-[15px] text-[#52525B]"><span class="font-semibold text-[#111111]">Day 3</span> Live operations support</div>
 							</div>
 						</div>
-						<h3 class="text-[26px] leading-[1.2] font-semibold tracking-[-0.02em] text-[#111111]">Fast rollout with on-site training.</h3>
+						<h3 class="text-[24px] leading-[1.2] font-semibold tracking-[-0.02em] text-[#111111]">Fast rollout with on-site training.</h3>
 						<p class="mt-3 text-[16px] leading-[1.6] text-[#4B5563]">Sarbani Associates team stays on-site until your office and field team are confident.</p>
 					</div>
 
@@ -931,7 +947,7 @@
 								Manager update received. Payroll totals reconciled for this week. Reports synced.
 							</p>
 						</div>
-						<h3 class="text-[26px] leading-[1.2] font-semibold tracking-[-0.02em] text-[#111111]">Local communication and support flow.</h3>
+						<h3 class="text-[24px] leading-[1.2] font-semibold tracking-[-0.02em] text-[#111111]">Local communication and support flow.</h3>
 						<p class="mt-3 text-[16px] leading-[1.6] text-[#4B5563]">Direct support from Sarbani Associates in your region, not a remote ticket queue only.</p>
 					</div>
 				</div>
@@ -1031,8 +1047,8 @@
 				<div class="grid border border-[#E4E4E7] bg-white md:grid-cols-5 md:divide-x md:divide-[#E4E4E7]">
 					<div class="p-8 md:col-span-2 md:p-10 lg:p-12">
 						<h2
-							id="faq-heading"
-							class="scroll-mt-20 text-[40px] leading-[1.05] font-semibold tracking-[-0.04em] text-[#111111] md:text-[56px]"
+						id="faq-heading"
+						class="scroll-mt-20 text-[28px] leading-[1.08] font-semibold tracking-[-0.04em] text-[#111111] md:text-[36px]"
 							style="text-wrap: balance"
 						>
 							FAQs
@@ -1112,7 +1128,7 @@
 					<div class="mb-6 w-fit text-[12px] font-semibold tracking-[0.06em] text-[#6EA66B] uppercase">Talk to Sarbani Associates</div>
 					<h2
 						id="cta-heading"
-						class="text-[32px] leading-[1.08] font-semibold tracking-[-0.03em] text-white md:text-[40px]"
+						class="text-[28px] leading-[1.08] font-semibold tracking-[-0.04em] text-white md:text-[36px]"
 						style="text-wrap: balance"
 					>
 						Ask a question, check fit, or book a demo.
@@ -1215,70 +1231,61 @@
 		</section>
 		</main>
 
-		<div class="fixed right-5 bottom-5 z-[80] flex flex-col items-end gap-3 md:right-7 md:bottom-7">
+		<div class="fixed right-5 bottom-5 z-[80] transition-all duration-500 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] md:right-7 md:bottom-7 {fabVisible ? 'translate-x-0 opacity-100' : 'translate-x-24 opacity-0 pointer-events-none'}">
 			{#if contactPanelOpen}
-				<div class="w-[min(calc(100vw-2.5rem),360px)] overflow-hidden rounded-3xl border border-[#DDE8DA] bg-white shadow-[0_24px_80px_rgba(15,46,12,0.2)]">
-					<div class="bg-gradient-to-br from-[#F1F6EB] to-white p-5">
-						<div class="flex items-start justify-between gap-4">
-							<div>
-								<div class="text-[12px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase">GardenSuite contact</div>
-								<h2 class="mt-2 text-[22px] leading-[1.15] font-semibold tracking-[-0.02em] text-[#111111]">
-									Ask Sarbani Associates
-								</h2>
-								<p class="mt-2 text-[14px] leading-[1.5] text-[#4B5563]">
-									Get a demo, pricing answer, setup details, or product help.
-								</p>
-							</div>
-							<button
-								type="button"
-								class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#E4E4E7] bg-white text-[#374151] transition hover:bg-[#FAFAF7] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30"
-								aria-label="Close contact options"
-								onclick={() => (contactPanelOpen = false)}
-							>
-								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-									<path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-								</svg>
-							</button>
+				<div
+					class="absolute bottom-0 right-0 w-[min(calc(100vw-2.5rem),360px)] overflow-hidden rounded-3xl bg-[#141A16] shadow-[0_24px_80px_rgba(0,0,0,0.45)] pb-16"
+					transition:fly={{ y: 16, duration: 220, easing: (t: number) => 1 - Math.pow(1 - t, 4) }}
+				>
+					<div class="p-5 pb-3">
+						<div>
+							<div class="text-[12px] font-semibold tracking-[0.08em] text-white/50 uppercase">GardenSuite contact</div>
+							<h2 class="mt-2 text-[22px] leading-[1.15] font-semibold tracking-[-0.02em] text-white">
+								Ask Sarbani Associates
+							</h2>
+							<p class="mt-2 text-[14px] leading-[1.5] text-white/60">
+								Get a demo, pricing answer, setup details, or product help.
+							</p>
 						</div>
 					</div>
-					<div class="grid gap-2 p-3">
+					<div class="grid gap-2 p-3 pt-1">
 						<a
 							href={buildWaLink()}
 							target="_blank"
 							rel="noreferrer"
-							class="flex items-center gap-3 rounded-2xl border border-[#E4E4E7] bg-white p-4 transition hover:border-[#25D366]/40 hover:bg-[#F0FDF4] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366]/30"
+							class="flex items-center gap-3 rounded-2xl bg-white/[0.06] p-4 transition-colors duration-150 hover:bg-white/[0.12] focus:outline-none focus-visible:ring-2 focus-visible:ring-white/30"
 						>
 							<span class="flex h-10 w-10 items-center justify-center rounded-full bg-[#25D366] text-white">
 								<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 							</span>
 							<span>
-								<span class="block text-[15px] font-semibold text-[#111111]">WhatsApp</span>
-								<span class="mt-0.5 block text-[13px] text-[#4B5563]">Fastest for demo and quick questions</span>
+								<span class="block text-[15px] font-semibold text-white">WhatsApp</span>
+								<span class="mt-0.5 block text-[13px] text-white/50">Fastest for demo and quick questions</span>
 							</span>
 						</a>
 						<a
 							href={buildMailtoHref()}
-							class="flex items-center gap-3 rounded-2xl border border-[#E4E4E7] bg-white p-4 transition hover:border-[#1B5E3B]/35 hover:bg-[#F8FAF8] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30"
+							class="flex items-center gap-3 rounded-2xl bg-white/[0.06] p-4 transition-colors duration-150 hover:bg-white/[0.12] focus:outline-none focus-visible:ring-2 focus-visible:ring-white/30"
 						>
-							<span class="flex h-10 w-10 items-center justify-center rounded-full bg-[#1B5E3B] text-white">
+							<span class="flex h-10 w-10 items-center justify-center rounded-full bg-white/[0.12] text-white">
 								<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4 12 13 2 4"/></svg>
 							</span>
 							<span>
-								<span class="block text-[15px] font-semibold text-[#111111]">Email</span>
-								<span class="mt-0.5 block text-[13px] text-[#4B5563]">Best for detailed requirements</span>
+								<span class="block text-[15px] font-semibold text-white">Email</span>
+								<span class="mt-0.5 block text-[13px] text-white/50">Best for detailed requirements</span>
 							</span>
 						</a>
 						<a
 							href="#contact"
-							class="flex items-center gap-3 rounded-2xl border border-[#E4E4E7] bg-white p-4 transition hover:border-[#1B5E3B]/35 hover:bg-[#F8FAF8] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30"
+							class="flex items-center gap-3 rounded-2xl bg-white/[0.06] p-4 transition-colors duration-150 hover:bg-white/[0.12] focus:outline-none focus-visible:ring-2 focus-visible:ring-white/30"
 							onclick={() => (contactPanelOpen = false)}
 						>
-							<span class="flex h-10 w-10 items-center justify-center rounded-full bg-[#E1EED6] text-[#1B5E3B]">
+							<span class="flex h-10 w-10 items-center justify-center rounded-full bg-white/[0.08] text-white">
 								<svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 5h12M4 10h12M4 15h7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
 							</span>
 							<span>
-								<span class="block text-[15px] font-semibold text-[#111111]">Use contact form</span>
-								<span class="mt-0.5 block text-[13px] text-[#4B5563]">Choose demo, pricing, support, or question</span>
+								<span class="block text-[15px] font-semibold text-white">Use contact form</span>
+								<span class="mt-0.5 block text-[13px] text-white/50">Choose demo, pricing, support, or question</span>
 							</span>
 						</a>
 					</div>
@@ -1286,21 +1293,45 @@
 			{/if}
 			<button
 				type="button"
-				class="group relative flex h-16 w-16 items-center justify-center rounded-full bg-[#1B5E3B] text-white shadow-[0_16px_44px_rgba(27,94,59,0.35)] transition hover:bg-[#144723] focus:outline-none focus-visible:ring-4 focus-visible:ring-[#1B5E3B]/25 active:scale-[0.97]"
+				class="group relative z-10 flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-[#141A16] text-white transition-all duration-200 focus:outline-none focus-visible:ring-4 focus-visible:ring-white/15 active:scale-[0.97] {contactPanelOpen ? 'shadow-none' : 'hover:bg-[#1a2420] shadow-[0_16px_44px_rgba(0,0,0,0.35)]'}"
 				aria-label={contactPanelOpen ? 'Close contact options' : 'Open contact options'}
 				aria-expanded={contactPanelOpen}
 				onclick={() => (contactPanelOpen = !contactPanelOpen)}
 			>
-				<span class="absolute inset-0 rounded-full border border-white/20"></span>
-				{#if contactPanelOpen}
-					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-						<path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+				<span class="absolute inset-0 rounded-full border border-white/10 transition-opacity duration-200 {contactPanelOpen ? 'opacity-0' : 'opacity-100'}"></span>
+				<div class="relative flex h-full w-full items-center justify-center">
+					<svg
+						width="27"
+						height="27"
+						viewBox="0 0 24 24"
+						fill="none"
+						aria-hidden="true"
+						class="absolute transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] {contactPanelOpen ? 'scale-50 opacity-0 -rotate-90' : 'scale-100 opacity-100 rotate-0'}"
+					>
+						<path
+							d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5Z"
+							stroke="currentColor"
+							stroke-width="1.8"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						/>
 					</svg>
-				{:else}
-					<svg width="27" height="27" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-						<path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+					<svg
+						width="24"
+						height="24"
+						viewBox="0 0 24 24"
+						fill="none"
+						aria-hidden="true"
+						class="absolute transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] {contactPanelOpen ? 'scale-100 opacity-100 rotate-0' : 'scale-50 opacity-0 rotate-90'}"
+					>
+						<path
+							d="M6 6l12 12M18 6 6 18"
+							stroke="currentColor"
+							stroke-width="2.5"
+							stroke-linecap="round"
+						/>
 					</svg>
-				{/if}
+				</div>
 			</button>
 		</div>
 	</div>
