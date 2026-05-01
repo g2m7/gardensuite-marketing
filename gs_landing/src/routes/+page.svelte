@@ -107,6 +107,43 @@
 	function toggleFaq(i: number) {
 		openFaq = openFaq === i ? null : i;
 	}
+
+	// ─── Contact Form ───
+	const WA_NUMBER = '919734101330';
+	let contactPanelOpen = $state(false);
+	let formNeed = $state('Book a demo');
+	let formName = $state('');
+	let formPhone = $state('');
+	let formEmail = $state('');
+	let formGarden = $state('');
+	let formMessage = $state('');
+
+	function buildWaLink(): string {
+		const lines = [
+			"Hi, I'd like to discuss GardenSuite.",
+			formNeed ? `Need: ${formNeed}` : '',
+			formName ? `Name: ${formName}` : '',
+			formPhone ? `Phone: ${formPhone}` : '',
+			formEmail ? `Email: ${formEmail}` : '',
+			formGarden ? `Garden: ${formGarden}` : '',
+			formMessage ? `Details: ${formMessage}` : ''
+		].filter(Boolean);
+		return `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(lines.join('\n'))}`;
+	}
+
+	function buildMailtoHref(): string {
+		const subject = encodeURIComponent(`GardenSuite - ${formNeed || 'Contact Request'}`);
+		const lines = [
+			formNeed ? `Need: ${formNeed}` : '',
+			formName ? `Name: ${formName}` : '',
+			formPhone ? `Phone: ${formPhone}` : '',
+			formEmail ? `Email: ${formEmail}` : '',
+			formGarden ? `Garden: ${formGarden}` : '',
+			formMessage ? `Details: ${formMessage}` : ''
+		].filter(Boolean);
+		const body = encodeURIComponent(lines.join('\n'));
+		return `mailto:contact@gardensuite.in?subject=${subject}&body=${body}`;
+	}
 	const demoHref = 'mailto:contact@gardensuite.in?subject=GardenSuite%20Demo%20Request';
 
 	const faqs = [
@@ -188,7 +225,7 @@
 	/>
 </svelte:head>
 
-<div class="flex min-h-screen w-full flex-col overflow-clip bg-[#FAFAF7] antialiased">
+<div class="flex min-h-screen w-full flex-col overflow-clip bg-white antialiased">
 	<main id="main-content">
 		<!-- ═══════════════════════════════════════════════════════════ -->
 		<!-- HERO (unchanged)                                           -->
@@ -212,7 +249,7 @@
 				</h1>
 
 				<p
-					class="hero-sub mx-auto mt-8 max-w-xl text-center text-lg leading-[1.25] tracking-[-0.01em] text-[#666666] sm:text-2xl"
+					class="hero-sub mx-auto mt-8 max-w-xl text-center text-lg leading-[1.25] tracking-[-0.01em] text-[#4B5563] sm:text-2xl"
 					style="text-wrap: balance;"
 				>
 					Stop proxy attendance, catch stolen weights, and finish payroll in hours - not days. One system for your whole tea estate.
@@ -249,7 +286,7 @@
 						<span class="text-sm font-medium text-[#0A0A0A]">See How It Works</span>
 					</a>
 				</div>
-				<p class="mt-4 text-center text-[14px] font-medium text-[#3F3F46]">
+				<p class="mt-4 text-center text-[14px] font-medium text-[#374151]">
 					Built and supported by Sarbani Associates, serving tea gardens since 2000.
 				</p>
 			</div>
@@ -345,29 +382,32 @@
 		<!-- TRUST ROW (compact, above fold)                            -->
 		<!-- ═══════════════════════════════════════════════════════════ -->
 		<section
-			class="relative z-30 w-full border-b border-[#F0F0F0] bg-white py-5 md:py-6"
+			class="relative z-30 w-full border-b border-[#E4E4E7] bg-white py-8 md:py-10"
 			aria-label="Trust indicators"
 		>
 			<div
-				class="mx-auto flex max-w-[1344px] flex-wrap items-center justify-center gap-x-6 gap-y-3 px-6 md:gap-x-10 md:px-12"
+				class="mx-auto flex max-w-[1344px] flex-wrap items-center justify-center gap-x-10 gap-y-4 px-6 md:gap-x-14 md:px-12"
 			>
-				<div class="flex items-center gap-2">
-					<span class="text-[20px] font-semibold tracking-[-0.02em] text-[#111111] md:text-[24px]">20+</span>
-					<span class="text-[13px] text-[#52525B]">Tea Estates</span>
+				<div class="flex flex-col items-center">
+					<span class="text-[28px] font-semibold tracking-[-0.03em] text-[#111111] md:text-[34px]">20+</span>
+					<span class="mt-0.5 text-[12px] font-medium uppercase tracking-[0.04em] text-[#4B5563]">Tea Estates</span>
 				</div>
-				<div class="hidden h-5 w-px bg-[#E4E4E7] md:block"></div>
-				<div class="flex items-center gap-2">
-					<span class="text-[20px] font-semibold tracking-[-0.02em] text-[#111111] md:text-[24px]">7</span>
-					<span class="text-[13px] text-[#52525B]">Regions</span>
+				<div class="hidden h-8 w-px bg-[#E4E4E7] md:block"></div>
+				<div class="flex flex-col items-center">
+					<span class="text-[28px] font-semibold tracking-[-0.03em] text-[#111111] md:text-[34px]">7</span>
+					<span class="mt-0.5 text-[12px] font-medium uppercase tracking-[0.04em] text-[#4B5563]">Regions</span>
 				</div>
-				<div class="hidden h-5 w-px bg-[#E4E4E7] md:block"></div>
-				<div class="flex items-center gap-2">
-					<span class="text-[13px] font-medium text-[#3F3F46]">Since 2000</span>
+				<div class="hidden h-8 w-px bg-[#E4E4E7] md:block"></div>
+				<div class="flex flex-col items-center">
+					<span class="text-[28px] font-semibold tracking-[-0.03em] text-[#111111] md:text-[34px]">25</span>
+					<span class="mt-0.5 text-[12px] font-medium uppercase tracking-[0.04em] text-[#4B5563]">Years</span>
 				</div>
-				<div class="hidden h-5 w-px bg-[#E4E4E7] md:block"></div>
-				<div class="flex items-center gap-2">
-					<div class="h-1.5 w-1.5 rounded-full bg-[#1B5E3B]"></div>
-					<span class="text-[13px] font-medium text-[#3F3F46]">Offline at the garden</span>
+				<div class="hidden h-8 w-px bg-[#E4E4E7] md:block"></div>
+				<div class="flex flex-col items-center">
+					<div class="flex items-center gap-1.5">
+						<span class="text-[28px] font-semibold tracking-[-0.03em] text-[#1B5E3B] md:text-[34px]">100%</span>
+					</div>
+					<span class="mt-0.5 text-[12px] font-medium uppercase tracking-[0.04em] text-[#4B5563]">Offline Ready</span>
 				</div>
 			</div>
 		</section>
@@ -376,68 +416,155 @@
 		<!-- PROBLEM STRIP                                              -->
 		<!-- ═══════════════════════════════════════════════════════════ -->
 		<section
-			class="reveal-on-scroll relative w-full border-b border-[#F0F0F0] bg-white py-20 md:py-28"
+			class="reveal-on-scroll relative w-full border-b border-[#E4E4E7] bg-white py-20 md:py-28"
 			aria-labelledby="problem-heading"
 		>
-			<div class="mx-auto max-w-[1344px] px-6 md:px-12">
-				<div class="mb-12 max-w-3xl">
+			<div class="mx-auto grid max-w-[1344px] gap-12 px-6 md:grid-cols-2 md:gap-16 md:px-12">
+				<div class="max-w-xl">
 					<span
-						class="mb-4 inline-block text-[13px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase"
-						>The problem</span
+						class="mb-4 inline-block text-[13px] font-semibold tracking-[0.08em] text-[#B91C1C] uppercase"
+							>The problem</span
 					>
 					<h2
 						id="problem-heading"
-						class="text-[32px] leading-[1.1] font-semibold tracking-[-0.04em] text-[#111111] md:text-[40px]"
+						class="text-[40px] leading-[1.05] font-semibold tracking-[-0.04em] text-[#111111] md:text-[56px] lg:text-[64px]"
 						style="text-wrap: balance"
 					>
-						Running a tea garden on paper is expensive.
+						Paper work hides real daily losses.
 					</h2>
+					<p class="mt-6 max-w-lg text-[17px] leading-[1.6] text-[#4B5563]">
+						Manual records create delay, leakage, and disputes before management can react.
+					</p>
 				</div>
 
-				<div class="grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-8">
+				<div class="space-y-10 md:pt-8">
 					{#each [
 						{
-							icon: 'register',
-							title: 'Registers get lost',
-							desc: 'Paper muster rolls, weight chits, and stock registers vanish or arrive late. Decisions wait for data that never comes.'
+							title: 'Registers get lost or delayed',
+							desc: 'Muster rolls, weight chits, and stock notes vanish or arrive late. Decisions wait because data is incomplete.',
+							icon: 'register'
 						},
 						{
-							icon: 'punch',
-							title: 'Proxy attendance costs money',
-							desc: 'Proxy attendance and inflated weights can go undetected. You may pay for workers who did not show up and leaf that was never plucked.'
+							title: 'Proxy attendance and inflated weight',
+							desc: 'Without verified identity and linked weighing, you may pay for workers who did not report and leaf that was not plucked.',
+							icon: 'proxy'
 						},
 						{
-							icon: 'payroll',
-							title: 'Payroll takes days',
-							desc: 'Manual calculation of hazira, PF, ESI, and bonus across hundreds of workers every month. Errors compound. Disputes follow.'
+							title: 'Monthly payroll takes too long',
+							desc: 'Manual hazira, PF, ESI, and bonus calculations across large teams increase errors, delay payout, and trigger avoidable disputes.',
+							icon: 'payroll'
 						}
 					] as item}
-						<div class="group rounded-2xl border border-[#F0F0F0] bg-white p-6 transition-all duration-200 hover:border-[#E4E4E7] hover:shadow-[0_8px_30px_rgba(0,0,0,0.04)] md:p-8">
-							<div class="mb-5 flex h-11 w-11 items-center justify-center rounded-xl bg-[#DC2626]/8">
+						<div class="flex gap-4">
+							<div class="relative mt-1 shrink-0 text-[#DC2626] drop-shadow-[0_2px_4px_rgba(220,38,38,0.2)]">
 								{#if item.icon === 'register'}
-									<svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-										<path d="M4 4h12v13H4z" stroke="#DC2626" stroke-width="1.5" stroke-linejoin="round" />
-										<path d="M8 2v4M12 2v4" stroke="#DC2626" stroke-width="1.5" stroke-linecap="round" />
-										<path d="M4 8h12" stroke="#DC2626" stroke-width="1.5" />
-										<path d="M7 11h2M11 11h2M7 14h2M11 14h2" stroke="#DC2626" stroke-width="1.2" stroke-linecap="round" />
-									</svg>
-								{:else if item.icon === 'punch'}
-									<svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-										<circle cx="10" cy="7" r="3.5" stroke="#DC2626" stroke-width="1.5" />
-										<path d="M3 17c0-3.3 3.1-6 7-6s7 2.7 7 6" stroke="#DC2626" stroke-width="1.5" stroke-linecap="round" />
-										<path d="M15 4l2 2M17 4l-2 2" stroke="#DC2626" stroke-width="1.5" stroke-linecap="round" />
-									</svg>
+									<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg>
+								{:else if item.icon === 'proxy'}
+									<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
 								{:else}
-									<svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-										<path d="M3 5h14v11H3z" stroke="#DC2626" stroke-width="1.5" stroke-linejoin="round" />
-										<path d="M3 9h14" stroke="#DC2626" stroke-width="1.5" />
-										<path d="M7 5V3M13 5V3" stroke="#DC2626" stroke-width="1.5" stroke-linecap="round" />
-										<path d="M8 13h4" stroke="#DC2626" stroke-width="1.2" stroke-linecap="round" />
-									</svg>
+									<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
 								{/if}
+								<span class="absolute -right-1.5 -top-1">
+									<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+								</span>
 							</div>
-							<h3 class="mb-2 text-[17px] font-semibold tracking-[-0.01em] text-[#111111]">{item.title}</h3>
-							<p class="text-[14px] leading-[1.6] text-[#3F3F46]">{item.desc}</p>
+							<div>
+								<h3 class="text-[26px] leading-[1.2] font-semibold tracking-[-0.02em] text-[#111111] md:text-[30px]">{item.title}</h3>
+								<p class="mt-2 max-w-[560px] text-[16px] leading-[1.65] text-[#4B5563]">{item.desc}</p>
+							</div>
+						</div>
+					{/each}
+				</div>
+			</div>
+		</section>
+
+		<!-- ═══════════════════════════════════════════════════════════ -->
+		<!-- SOLUTION BRIDGE                                            -->
+		<!-- ═══════════════════════════════════════════════════════════ -->
+		<section
+			id="solution"
+			class="reveal-on-scroll relative w-full scroll-mt-20 border-b border-[#E4E4E7] bg-white py-20 md:py-28"
+			aria-labelledby="solution-heading"
+		>
+			<div class="mx-auto max-w-[1344px] px-6 md:px-12">
+				<div class="grid items-center gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20">
+					<div class="max-w-xl">
+						<span
+							class="mb-4 inline-block text-[13px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase"
+							>The solution</span
+						>
+						<h2
+							id="solution-heading"
+							class="text-[40px] leading-[1.05] font-semibold tracking-[-0.04em] text-[#111111] md:text-[56px]"
+							style="text-wrap: balance"
+						>
+							One system for the whole tea garden.
+						</h2>
+						<p class="mt-6 text-[20px] leading-[1.6] tracking-[-0.01em] text-[#18181B]">
+							GardenSuite connects face attendance, smart weighing, payroll, factory, stores, and daily MIS so your office does not repeat the same data in different registers.
+						</p>
+						<p class="mt-6 text-[16px] leading-[1.65] text-[#4B5563]">
+							Built by Sarbani Associates for tea estates, installed on-site, and made to work even when internet is not available.
+						</p>
+						<a
+							href="#products"
+							class="mt-8 inline-flex h-12 items-center justify-center gap-2 rounded-xl border border-[#D4D4D8] bg-white px-5 text-[15px] font-semibold text-[#111111] shadow-[0_2px_10px_rgba(0,0,0,0.05)] transition hover:border-[#1B5E3B]/30 hover:bg-[#F8FAF8] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 active:scale-[0.98]"
+						>
+							See products
+							<svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+								<path d="M6 3.5 10.5 8 6 12.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+						</a>
+					</div>
+
+					<div class="relative overflow-hidden rounded-[28px] border border-[#0F2E0C]/15 bg-[#0B1712] p-4 shadow-[0_30px_90px_rgba(15,46,12,0.18)] md:p-5">
+						<div class="absolute inset-0 bg-[radial-gradient(circle_at_20%_85%,rgba(65,190,125,0.55),transparent_36%),radial-gradient(circle_at_95%_70%,rgba(74,144,226,0.55),transparent_38%)]"></div>
+						<div class="absolute inset-0 opacity-25" style="background-image: radial-gradient(circle, rgba(255,255,255,0.28) 1px, transparent 1px); background-size: 18px 18px;"></div>
+						<div class="relative rounded-[22px] border border-white/15 bg-white/[0.04] p-6 backdrop-blur-sm md:p-8">
+							<div class="mx-auto max-w-[420px] rounded-3xl border border-white/30 bg-white/95 p-5 shadow-[0_20px_60px_rgba(0,0,0,0.18)] md:p-6">
+								<div class="mb-5 flex items-center justify-between border-b border-[#E4E4E7] pb-4">
+									<div>
+										<div class="text-[13px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase">Today</div>
+										<div class="mt-1 text-[22px] font-semibold tracking-[-0.02em] text-[#111111]">Garden workflow</div>
+									</div>
+									<div class="flex h-10 w-10 items-center justify-center rounded-full bg-[#1B5E3B] text-white">
+										<svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+											<path d="M4 10.5 8 14l8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</div>
+								</div>
+								<div class="space-y-3">
+									{#each [
+										{ label: 'Worker face verified', meta: 'Attendance locked' },
+										{ label: 'Leaf weight captured', meta: 'Wireless scale synced' },
+										{ label: 'Payroll updated', meta: 'Hazira and plucking ready' },
+										{ label: 'Factory stock updated', meta: 'Green leaf to made tea' },
+										{ label: 'MIS report synced', meta: 'Owner view from anywhere' }
+									] as step, i}
+										<div class="flex items-center gap-3 rounded-2xl border border-[#E4E4E7] bg-[#FAFAF7] px-4 py-3">
+											<div class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#1B5E3B]/10 text-[12px] font-semibold text-[#1B5E3B]">{i + 1}</div>
+											<div class="min-w-0 flex-1">
+												<div class="truncate text-[15px] font-semibold text-[#111111]">{step.label}</div>
+												<div class="mt-0.5 truncate text-[13px] text-[#4B5563]">{step.meta}</div>
+											</div>
+										</div>
+									{/each}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="mt-14 grid gap-8 border-t border-[#E4E4E7] pt-10 sm:grid-cols-2 lg:grid-cols-4">
+					{#each [
+						{ title: 'Offline first', desc: 'Works at the garden without internet.' },
+						{ title: 'Connected data', desc: 'Attendance, weight, payroll, factory, and stores in one flow.' },
+						{ title: 'Less leakage', desc: 'Reduces proxy attendance and inflated weights.' },
+						{ title: 'Sarbani support', desc: 'Setup and training by the local team.' }
+					] as point}
+						<div>
+							<h3 class="text-[17px] font-semibold text-[#111111]">{point.title}</h3>
+							<p class="mt-2 text-[15px] leading-[1.6] text-[#4B5563]">{point.desc}</p>
 						</div>
 					{/each}
 				</div>
@@ -449,15 +576,15 @@
 		<!-- ═══════════════════════════════════════════════════════════ -->
 		<section
 			id="products"
-			class="reveal-on-scroll relative w-full scroll-mt-20 bg-[#FAFAF7] py-24 md:py-32"
+			class="reveal-on-scroll relative w-full scroll-mt-20 overflow-hidden bg-gradient-to-b from-[#F8FAF8] to-white py-24 md:py-32"
 			aria-labelledby="products-heading"
 		>
 			<div class="mx-auto max-w-[1344px] px-6 md:px-12">
 				<div class="mb-14 max-w-3xl">
-					<span
-						class="mb-4 inline-block text-[13px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase"
-						>The solution</span
-					>
+						<span
+							class="mb-4 inline-block text-[13px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase"
+							>Products</span
+						>
 					<h2
 						id="products-heading"
 						class="text-[36px] leading-[1.08] font-semibold tracking-[-0.04em] text-[#111111] md:text-[44px] lg:text-[52px]"
@@ -465,7 +592,7 @@
 					>
 						5 modules. One connected system.
 					</h2>
-					<p class="mt-5 text-[17px] leading-[1.6] text-[#3F3F46]">
+					<p class="mt-5 text-[17px] leading-[1.6] text-[#374151]">
 						Face attendance, leaf weight, payroll, factory, stores, and daily reports stay connected. No repeated entry from paper registers.
 					</p>
 				</div>
@@ -475,7 +602,7 @@
 					{#if product.featured}
 						<a
 							href={product.href}
-							class="group/product mb-6 block overflow-hidden rounded-2xl border border-[#E4E4E7] bg-white transition-all duration-200 hover:border-[#D4D4D8] hover:shadow-[0_12px_40px_rgba(0,0,0,0.06)] md:mb-8"
+							class="group/product mb-6 block overflow-hidden rounded-2xl border border-[#E4E4E7] bg-white transition-all duration-200 hover:border-[#1B5E3B]/20 hover:shadow-[0_12px_40px_rgba(27,94,59,0.1)] md:mb-8"
 						>
 							<div class="grid grid-cols-1 md:grid-cols-2">
 								<div class="relative aspect-[16/9] overflow-hidden bg-gradient-to-br from-[#F0FDF4] to-[#DCFCE7] md:aspect-auto md:min-h-[320px]">
@@ -501,22 +628,22 @@
 											<span class="text-[12px] font-semibold text-[#1B5E3B]">Face Verified</span>
 										</div>
 										<div class="flex justify-between border-t border-[#F0F0F0] py-1.5 text-[12px]">
-											<span class="text-[#52525B]">Worker</span>
+											<span class="text-[#4B5563]">Worker</span>
 											<span class="font-semibold text-[#111]">Ramesh K.</span>
 										</div>
 										<div class="flex justify-between border-t border-[#F0F0F0] py-1.5 text-[12px]">
-											<span class="text-[#52525B]">Match</span>
+											<span class="text-[#4B5563]">Match</span>
 											<span class="font-semibold text-[#111]">98.7%</span>
 										</div>
 										<div class="flex justify-between border-t border-[#F0F0F0] py-1.5 text-[12px]">
-											<span class="text-[#52525B]">Section</span>
-											<span class="text-[#3F3F46]">Div. 3 - East</span>
+											<span class="text-[#4B5563]">Section</span>
+											<span class="text-[#374151]">Div. 3 - East</span>
 										</div>
 									</div>
 								</div>
 								<div class="flex flex-col justify-center p-8 md:p-10">
 									<h3 class="text-[22px] font-semibold tracking-[-0.02em] text-[#111111] md:text-[26px]">{product.title}</h3>
-									<p class="mt-3 text-[15px] leading-[1.6] text-[#3F3F46] md:text-[16px]">{product.desc}</p>
+									<p class="mt-3 text-[15px] leading-[1.6] text-[#374151] md:text-[16px]">{product.desc}</p>
 									<span class="mt-6 inline-flex items-center gap-1.5 text-[14px] font-semibold text-[#1B5E3B] transition-colors group-hover/product:gap-2.5">
 										Learn more
 										<svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M5 2.5l4.5 4.5L5 11.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -533,7 +660,7 @@
 						{#if !product.featured}
 							<a
 								href={product.href}
-								class="group/product flex flex-col overflow-hidden rounded-2xl border border-[#E4E4E7] bg-white transition-all duration-200 hover:border-[#D4D4D8] hover:shadow-[0_12px_40px_rgba(0,0,0,0.06)]"
+								class="group/product flex flex-col overflow-hidden rounded-2xl border border-[#E4E4E7] bg-white transition-all duration-200 hover:border-[#1B5E3B]/20 hover:shadow-[0_12px_40px_rgba(27,94,59,0.1)]"
 							>
 								<div class="relative aspect-[16/10] overflow-hidden bg-gradient-to-br from-[#F0FDF4] to-[#DCFCE7]">
 									{#if product.icon === 'payroll'}
@@ -547,17 +674,17 @@
 										/>
 										<!-- Payroll overlay -->
 										<div class="absolute right-6 bottom-6 z-10 w-[200px] rounded-xl border border-white/60 bg-white/95 p-4 shadow-[0_8px_32px_rgba(0,0,0,0.08)] backdrop-blur-md">
-											<div class="mb-2 text-[12px] font-semibold tracking-[0.04em] text-[#52525B] uppercase">Month Summary</div>
+											<div class="mb-2 text-[12px] font-semibold tracking-[0.04em] text-[#4B5563] uppercase">Month Summary</div>
 											<div class="flex justify-between border-t border-[#F0F0F0] py-1.5 text-[12px]">
-												<span class="text-[#52525B]">Gross wages</span>
-												<span class="text-[#3F3F46]">&#8377;2,48,500</span>
+												<span class="text-[#4B5563]">Gross wages</span>
+												<span class="text-[#374151]">&#8377;2,48,500</span>
 											</div>
 											<div class="flex justify-between border-t border-[#F0F0F0] py-1.5 text-[12px]">
-												<span class="text-[#52525B]">PF deducted</span>
-												<span class="text-[#3F3F46]">&#8377;29,820</span>
+												<span class="text-[#4B5563]">PF deducted</span>
+												<span class="text-[#374151]">&#8377;29,820</span>
 											</div>
 											<div class="flex justify-between border-t border-[#F0F0F0] py-1.5 text-[12px]">
-												<span class="text-[#52525B]">Net payable</span>
+												<span class="text-[#4B5563]">Net payable</span>
 												<span class="font-semibold text-[#111]">&#8377;2,14,207</span>
 											</div>
 										</div>
@@ -567,8 +694,8 @@
 											<div class="mb-2 text-[11px] font-semibold tracking-[0.06em] text-[#1B5E3B] uppercase">Cost Per Kg</div>
 											{#each [{ label: 'Green leaf', value: '₹32.50' }, { label: 'Manufacturing', value: '₹12.80' }, { label: 'Power & fuel', value: '₹5.40' }] as row}
 												<div class="flex items-center justify-between border-t border-[#F0F0F0] py-1 text-[12px]">
-													<span class="text-[#52525B]">{row.label}</span>
-													<span class="font-semibold tabular-nums text-[#3F3F46]" style="font-variant-numeric: tabular-nums">{row.value}</span>
+													<span class="text-[#4B5563]">{row.label}</span>
+													<span class="font-semibold tabular-nums text-[#374151]" style="font-variant-numeric: tabular-nums">{row.value}</span>
 												</div>
 											{/each}
 											<div class="flex items-center justify-between border-t-2 border-[#E4E4E7] pt-1.5 text-[12px]">
@@ -584,9 +711,9 @@
 												<div class="flex items-center justify-between border-t border-[#F0F0F0] py-1 text-[12px]">
 													<div class="flex items-center gap-1.5">
 														<div class="h-1.5 w-1.5 rounded-full {row.ok ? 'bg-[#1B5E3B]' : 'bg-[#D97706]'}"></div>
-														<span class="text-[#52525B]">{row.label}</span>
+														<span class="text-[#4B5563]">{row.label}</span>
 													</div>
-													<span class="font-semibold tabular-nums text-[#3F3F46]" style="font-variant-numeric: tabular-nums">{row.value}</span>
+													<span class="font-semibold tabular-nums text-[#374151]" style="font-variant-numeric: tabular-nums">{row.value}</span>
 												</div>
 											{/each}
 										</div>
@@ -621,7 +748,7 @@
 								</div>
 								<div class="flex flex-1 flex-col p-6 md:p-7">
 									<h3 class="text-[17px] font-semibold tracking-[-0.01em] text-[#111111]">{product.title}</h3>
-									<p class="mt-2 flex-1 text-[14px] leading-[1.6] text-[#3F3F46]">{product.desc}</p>
+									<p class="mt-2 flex-1 text-[14px] leading-[1.6] text-[#374151]">{product.desc}</p>
 									<span class="mt-4 inline-flex items-center gap-1.5 text-[14px] font-semibold text-[#1B5E3B] transition-colors group-hover/product:gap-2.5">
 										Learn more
 										<svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M5 2.5l4.5 4.5L5 11.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -638,65 +765,69 @@
 		<!-- GS vs PAPER - FULL WIDTH COMPARISON (Tailark Comparator)   -->
 		<!-- ═══════════════════════════════════════════════════════════ -->
 		<section
-			class="reveal-on-scroll relative w-full bg-white py-24 md:py-32"
+			class="reveal-on-scroll relative w-full overflow-hidden bg-[#141A16] py-16 md:py-24"
 			aria-labelledby="compare-heading"
 		>
-			<div class="mx-auto max-w-[1344px] px-6 md:px-12">
-				<div class="mb-14 text-center">
-					<span
-						class="mb-4 inline-block text-[13px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase"
-					>Comparison</span>
-					<h2
-						id="compare-heading"
-						class="text-[36px] leading-[1.08] font-semibold tracking-[-0.04em] text-[#111111] md:text-[44px] lg:text-[52px]"
-						style="text-wrap: balance"
-					>Paper way vs GardenSuite</h2>
-					<p class="mx-auto mt-5 max-w-2xl text-[17px] leading-[1.6] text-[#3F3F46]">
-						Stop relying on muster rolls, paper chits, and phone-call reporting. See how GardenSuite brings your entire operation into one connected system.
-					</p>
-				</div>
-
-				<div class="grid grid-cols-[1.4fr_1fr_1fr] overflow-hidden rounded-2xl ring-1 ring-[#E4E4E7] md:grid-cols-[1.6fr_1fr_1fr]">
-					<!-- Features Column -->
-					<div class="bg-[#FAFAF7]">
-						<div class="flex h-16 items-end px-5 pb-3 md:px-8">
-							<span class="text-[12px] font-semibold tracking-[0.04em] text-[#71717A] uppercase">Capability</span>
-						</div>
-						{#each ['Face scan attendance', 'Smart wireless scale', 'Auto-calculated payroll', 'Connected factory data', 'Live store balances', 'Cloud daily reports', 'Offline at the garden', 'On-site setup & training'] as feature, i}
-							<div class="flex h-14 items-center border-t border-[#F0F0F0] px-5 text-[14px] font-medium text-[#3F3F46] {i % 2 === 0 ? '' : 'bg-white/60'} md:px-8">
-								{feature}
-							</div>
-						{/each}
+			<div class="relative z-10 mx-auto max-w-[1100px] px-6 md:px-8">
+				<div class="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+					<!-- Left: Heading + description -->
+					<div class="max-w-lg">
+						<span
+							class="mb-4 inline-block text-[13px] font-semibold tracking-[0.08em] text-[#4ADE80] uppercase"
+						>Comparison</span>
+						<h2
+							id="compare-heading"
+							class="text-[32px] leading-[1.08] font-semibold tracking-[-0.04em] text-white md:text-[40px] lg:text-[48px]"
+							style="text-wrap: balance"
+						>Paper way vs GardenSuite</h2>
+						<p class="mt-5 text-[16px] leading-[1.65] text-[#9CA3AF] lg:max-w-xs">
+							Stop relying on muster rolls, paper chits, and phone-call reporting. One connected system for your whole tea estate.
+						</p>
 					</div>
 
-					<!-- Paper Way -->
-					<div class="group border-l border-[#F0F0F0]">
-						<div class="flex h-16 flex-col items-center justify-center gap-1 border-b border-[#F0F0F0] bg-[#FEF2F2]/50 px-4">
-							<span class="text-[13px] font-bold tracking-[0.02em] text-[#991B1B]">Paper Way</span>
+					<!-- Right: Comparison table -->
+					<div class="grid grid-cols-[1.4fr_1fr_1fr] overflow-hidden rounded-2xl ring-1 ring-white/10">
+						<!-- Features Column -->
+						<div class="bg-[#1A1F1C]">
+							<div class="flex h-14 items-center px-4 pb-0 text-[11px] font-semibold tracking-[0.06em] text-[#6B7280] uppercase md:px-5">
+								Feature
+							</div>
+							{#each ['Face scan attendance', 'Smart wireless scale', 'Auto-calculated payroll', 'Connected factory data', 'Live store balances', 'Cloud daily reports', 'Offline at the garden', 'On-site setup & training'] as feature, i}
+								<div class="flex h-12 items-center border-t border-white/[0.06] px-4 text-[13px] font-medium text-[#D1D5DB] md:px-5">
+									{feature}
+								</div>
+							{/each}
 						</div>
-						{#each [false, false, false, false, false, false, false, false] as hasFeature, i}
-							<div class="flex h-14 items-center justify-center border-t border-[#F0F0F0] {i % 2 === 0 ? '' : 'bg-[#FAFAF7]'}">
-								<span class="flex h-5 w-5 items-center justify-center rounded-full bg-[#FEF2F2] text-[#DC2626]">
-									<svg width="10" height="10" viewBox="0 0 14 14" fill="none"><path d="M3.5 10.5l7-7M10.5 10.5l-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-								</span>
-							</div>
-						{/each}
-					</div>
 
-					<!-- GardenSuite (highlighted) -->
-					<div class="group relative">
-						<div class="absolute inset-0 bg-white shadow-[0_8px_40px_rgba(0,0,0,0.06)]"></div>
-						<div class="relative z-10">
-							<div class="flex h-16 flex-col items-center justify-center gap-1 border-b border-[#E4E4E7] bg-[#F0FDF4] px-4">
-								<span class="text-[13px] font-bold tracking-[0.02em] text-[#1B5E3B]">GardenSuite</span>
+						<!-- Paper Way -->
+						<div class="border-l border-white/[0.06]">
+							<div class="flex h-14 items-center justify-center bg-[#DC2626]/10 px-3">
+								<span class="text-[12px] font-bold tracking-[0.02em] text-[#FCA5A5]">Paper Way</span>
 							</div>
-							{#each [true, true, true, true, true, true, true, true] as hasFeature, i}
-								<div class="flex h-14 items-center justify-center border-t border-[#F0F0F0]/60">
-									<span class="flex h-5 w-5 items-center justify-center rounded-full bg-[#1B5E3B] text-white shadow-sm">
-										<svg width="10" height="10" viewBox="0 0 14 14" fill="none"><path d="M3 7.5l2.5 2.5L11 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+							{#each [false, false, false, false, false, false, false, false] as hasFeature, i}
+								<div class="flex h-12 items-center justify-center border-t border-white/[0.06]">
+									<span class="flex h-5 w-5 items-center justify-center rounded-full bg-[#DC2626]/20 text-[#FCA5A5]">
+										<svg width="10" height="10" viewBox="0 0 14 14" fill="none"><path d="M3.5 10.5l7-7M10.5 10.5l-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
 									</span>
 								</div>
 							{/each}
+						</div>
+
+						<!-- GardenSuite (highlighted) -->
+						<div class="relative">
+							<div class="absolute inset-0 rounded-r-2xl bg-[#1B5E3B]/20 shadow-[0_0_60px_rgba(27,94,59,0.12)]"></div>
+							<div class="relative z-10">
+								<div class="flex h-14 items-center justify-center border-b border-[#1B5E3B]/40 bg-[#1B5E3B]/30 px-3">
+									<span class="text-[12px] font-bold tracking-[0.02em] text-[#4ADE80]">GardenSuite</span>
+								</div>
+								{#each [true, true, true, true, true, true, true, true] as hasFeature, i}
+									<div class="flex h-12 items-center justify-center border-t border-white/[0.06]">
+										<span class="flex h-5 w-5 items-center justify-center rounded-full bg-[#1B5E3B] text-white shadow-[0_0_8px_rgba(27,94,59,0.4)]">
+											<svg width="10" height="10" viewBox="0 0 14 14" fill="none"><path d="M3 7.5l2.5 2.5L11 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+										</span>
+									</div>
+								{/each}
+							</div>
 						</div>
 					</div>
 				</div>
@@ -704,9 +835,13 @@
 		</section>
 
 		<!-- ═══════════════════════════════════════════════════════════ -->
-		<!-- CONFIDENTIAL PROOF                                          -->
+		<!-- CONFIDENTIAL PROOF (Bento)                                  -->
 		<!-- ═══════════════════════════════════════════════════════════ -->
-		<section class="reveal-on-scroll relative w-full bg-[#FAFAF7] py-20 md:py-24" aria-labelledby="confidential-proof-heading">
+		<section
+			id="proof"
+			class="reveal-on-scroll relative w-full scroll-mt-20 overflow-hidden bg-gradient-to-b from-[#F8FAF8] to-white py-20 md:py-24"
+			aria-labelledby="confidential-proof-heading"
+		>
 			<div class="mx-auto max-w-[1344px] px-6 md:px-12">
 				<div class="mb-10 max-w-4xl">
 					<span class="mb-4 inline-block text-[13px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase">
@@ -717,130 +852,171 @@
 						class="text-[32px] leading-[1.12] font-semibold tracking-[-0.03em] text-[#111111] md:text-[40px]"
 						style="text-wrap: balance"
 					>
-						Trusted across tea-growing regions, with client privacy respected.
+						Proof from the field, not just brochure claims.
 					</h2>
-					<p class="mt-4 text-[16px] leading-[1.65] text-[#3F3F46]">
-						GardenSuite is used across Assam, Dooars, Terai, Darjeeling, Coochbehar, Uttar Dinajpur, and Jalpaiguri. Many estates prefer to keep internal software private, so we share region-level experience instead of public client names.
+					<p class="mt-4 text-[16px] leading-[1.65] text-[#374151]">
+						GardenSuite is used across Assam, Dooars, Terai, Darjeeling, Coochbehar, Uttar Dinajpur, and Jalpaiguri. Client estate privacy is respected, so names are shared during demo only.
 					</p>
 				</div>
 
-				<div class="grid grid-cols-1 gap-5 md:grid-cols-3">
-					<div class="rounded-2xl border border-[#E4E4E7] bg-white p-6">
-						<div class="text-[11px] font-semibold tracking-[0.06em] text-[#1B5E3B] uppercase">Dooars estate</div>
-						<p class="mt-2 text-[14px] leading-[1.6] text-[#3F3F46]">Face attendance and payroll for large worker teams, with offline daily operations.</p>
+				<div class="grid overflow-hidden rounded-3xl border border-[#E4E4E7] bg-white md:grid-cols-3">
+					<div class="border-b border-[#E4E4E7] p-7 md:border-r md:border-b">
+						<div class="mb-8 inline-flex h-14 w-14 items-center justify-center rounded-2xl border border-[#D4D4D8] bg-[#F8FAF8]">
+							<svg width="30" height="30" viewBox="0 0 30 30" fill="none" aria-hidden="true">
+								<path d="M8 12.5a7 7 0 1 1 14 0" stroke="#A1A1AA" stroke-width="2" stroke-linecap="round" />
+								<path d="M4.5 12.5C6.2 7.5 10.2 5 15 5s8.8 2.5 10.5 7.5" stroke="#6366F1" stroke-width="2" stroke-linecap="round" />
+								<path d="M5 15h20" stroke="#6366F1" stroke-width="2" />
+							</svg>
+						</div>
+						<h3 class="text-[28px] leading-[1.2] font-semibold tracking-[-0.02em] text-[#111111]">Face identity linked with plucking weight.</h3>
+						<p class="mt-4 text-[16px] leading-[1.6] text-[#4B5563]">One step capture at the garden gate. Less manual correction and less dispute at payroll time.</p>
 					</div>
-					<div class="rounded-2xl border border-[#E4E4E7] bg-white p-6">
-						<div class="text-[11px] font-semibold tracking-[0.06em] text-[#1B5E3B] uppercase">Terai estate</div>
-						<p class="mt-2 text-[14px] leading-[1.6] text-[#3F3F46]">Smart weighing linked to worker identity, with daily MIS visibility for management.</p>
+
+					<div class="border-b border-[#E4E4E7] p-7 md:border-r md:border-b">
+						<div class="mb-8 h-24 rounded-xl bg-gradient-to-r from-[#C7D2FE] via-[#818CF8] to-[#4F46E5] opacity-40"></div>
+						<h3 class="text-[28px] leading-[1.2] font-semibold tracking-[-0.02em] text-[#111111]">Daily MIS visibility for owners and managers.</h3>
+						<p class="mt-4 text-[16px] leading-[1.6] text-[#4B5563]">Check plucking, production, labour, and factory trends from phone, tablet, or laptop.</p>
 					</div>
-					<div class="rounded-2xl border border-[#E4E4E7] bg-white p-6">
-						<div class="text-[11px] font-semibold tracking-[0.06em] text-[#1B5E3B] uppercase">Assam estate</div>
-						<p class="mt-2 text-[14px] leading-[1.6] text-[#3F3F46]">Payroll, factory, and store records connected in one system for faster monthly closing.</p>
+
+					<div class="border-b border-[#E4E4E7] p-7 md:border-b">
+						<div class="mb-6 flex items-end justify-between">
+							<div class="text-[34px] font-semibold tracking-[-0.02em] text-[#111111]">20+</div>
+							<div class="text-[26px] font-semibold text-[#A1A1AA]">7</div>
+						</div>
+						<div class="mb-4 h-2 rounded-full bg-[#F4F4F5]">
+							<div class="h-full w-[72%] rounded-full bg-gradient-to-r from-[#10B981] to-[#6366F1]"></div>
+						</div>
+						<p class="text-[14px] text-[#4B5563]"><span class="font-semibold text-[#111111]">20+ tea estates</span> in <span class="font-semibold text-[#111111]">7 regions</span>, supported by Sarbani Associates.</p>
+					</div>
+
+					<div class="border-b border-[#E4E4E7] p-7 md:border-r md:border-b-0">
+						<div class="rounded-2xl border border-[#E4E4E7] bg-[#FAFAF7] p-5">
+							<div class="mb-2 flex items-center justify-between text-[16px]">
+								<span class="text-[#52525B]">Offline runtime</span>
+								<span class="font-semibold text-[#111111]">99.9%</span>
+							</div>
+							<div class="grid grid-cols-8 gap-1.5">
+								{#each Array(32) as _, i}
+									<div class="h-8 rounded-sm {i % 7 === 0 ? 'bg-[#D4D4D8]' : 'bg-[#10B981]/80'}"></div>
+								{/each}
+							</div>
+						</div>
+						<h3 class="mt-6 text-[26px] leading-[1.2] font-semibold tracking-[-0.02em] text-[#111111]">Service reliability at garden level.</h3>
+						<p class="mt-3 text-[16px] leading-[1.6] text-[#4B5563]">Attendance, weighing, payroll, and stores continue even when internet drops.</p>
+					</div>
+
+					<div class="border-b border-[#E4E4E7] p-7 md:border-r md:border-b-0">
+						<div class="relative mb-6 pl-6">
+							<div class="absolute top-1 left-2 h-[122px] border-l border-dashed border-[#A1A1AA]"></div>
+							<div class="space-y-3">
+								<div class="text-[15px] text-[#52525B]"><span class="font-semibold text-[#111111]">Day 1</span> Site visit and process mapping</div>
+								<div class="rounded-xl border border-[#E4E4E7] bg-white p-3">
+									<div class="text-[15px] font-semibold text-[#111111]">Day 2 Staff training completed</div>
+									<div class="text-[14px] text-[#52525B]">Payroll and reporting handover done.</div>
+								</div>
+								<div class="text-[15px] text-[#52525B]"><span class="font-semibold text-[#111111]">Day 3</span> Live operations support</div>
+							</div>
+						</div>
+						<h3 class="text-[26px] leading-[1.2] font-semibold tracking-[-0.02em] text-[#111111]">Fast rollout with on-site training.</h3>
+						<p class="mt-3 text-[16px] leading-[1.6] text-[#4B5563]">Sarbani Associates team stays on-site until your office and field team are confident.</p>
+					</div>
+
+					<div class="p-7">
+						<div class="mb-6 rounded-2xl border border-[#E4E4E7] bg-[#FAFAF7] p-5">
+							<div class="mb-3 flex items-center gap-2">
+								<div class="h-7 w-7 rounded-full bg-gradient-to-br from-[#4F46E5] to-[#A78BFA]"></div>
+								<div class="text-[14px] font-semibold text-[#111111]">Support desk - 12 min ago</div>
+							</div>
+							<p class="rounded-xl border border-[#E4E4E7] bg-white px-4 py-3 text-[15px] leading-[1.5] text-[#18181B]">
+								Manager update received. Payroll totals reconciled for this week. Reports synced.
+							</p>
+						</div>
+						<h3 class="text-[26px] leading-[1.2] font-semibold tracking-[-0.02em] text-[#111111]">Local communication and support flow.</h3>
+						<p class="mt-3 text-[16px] leading-[1.6] text-[#4B5563]">Direct support from Sarbani Associates in your region, not a remote ticket queue only.</p>
 					</div>
 				</div>
 			</div>
 		</section>
 
 		<!-- ═══════════════════════════════════════════════════════════ -->
-		<!-- DIFFERENTIATOR (Tailark features/four style)               -->
+		<!-- DIFFERENTIATOR (Tailark description list style)             -->
 		<!-- ═══════════════════════════════════════════════════════════ -->
 		<section
 			id="about"
-			class="reveal-on-scroll relative w-full scroll-mt-20 bg-white py-24 md:py-32"
+			class="reveal-on-scroll relative w-full scroll-mt-20 overflow-hidden bg-[#F8F7F3] py-24 md:py-32"
 			aria-labelledby="trust-heading"
 		>
 			<div class="mx-auto max-w-[1344px] px-6 md:px-12">
-				<!-- Top: Sarbani trust band -->
-				<div class="mb-16 grid grid-cols-1 items-center gap-12 md:grid-cols-2 md:gap-16">
-					<div>
+				<div class="max-w-4xl">
 						<span
 							class="mb-4 inline-block text-[13px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase"
-							>Why trust Sarbani Associates</span
+							>Why GardenSuite</span
 						>
 						<h2
 							id="trust-heading"
-							class="text-[36px] leading-[1.08] font-semibold tracking-[-0.04em] text-[#111111] md:text-[44px] lg:text-[52px]"
+							class="text-[32px] leading-[1.08] font-semibold tracking-[-0.04em] text-[#111111] md:text-[40px] lg:text-[48px]"
 							style="text-wrap: balance"
 						>
-							Local team. On-site setup. 25+ years.
+							Installed, trained, and supported by Sarbani Associates.
 						</h2>
-						<p class="mt-5 max-w-2xl text-[17px] leading-[1.6] text-[#3F3F46]">
-							GardenSuite is not a generic ERP (office software). It is purpose-built for tea garden operations. Sarbani Associates visits your garden, sets up the system, trains your staff, and stays until you are confident.
+						<p class="mt-5 text-[16px] leading-[1.65] text-[#374151]">
+							Tea garden operations are different. GardenSuite handles field attendance, plucking weight, payroll, factory, and stores in one connected flow while Sarbani Associates handles rollout on-site.
 						</p>
-						<!-- Sarbani timeline -->
-						<div class="mt-8 flex flex-col gap-3">
-							{#each [
-								{ year: '2000', event: 'GardenSuite v1 launched' },
-								{ year: '2018', event: 'Face attendance app introduced' },
-								{ year: '2026', event: 'v3 with cloud daily report' }
-							] as milestone}
-								<div class="flex items-center gap-3">
-									<span class="shrink-0 rounded-md bg-[#1B5E3B]/10 px-2 py-0.5 text-[12px] font-semibold tabular-nums text-[#1B5E3B]" style="font-variant-numeric: tabular-nums">{milestone.year}</span>
-									<span class="text-[14px] text-[#3F3F46]">{milestone.event}</span>
-								</div>
-							{/each}
-							<p class="mt-2 text-[13px] text-[#52525B]">Based in Bagdogra, Siliguri - in your region.</p>
-						</div>
-					</div>
-					<div class="relative">
-						<div class="overflow-hidden rounded-2xl border border-[#E4E4E7] bg-gradient-to-br from-[#F0FDF4] to-[#DCFCE7]">
-							<img
-								src="/mis-dashboard.png"
-								alt="GardenSuite dashboard showing daily garden operations"
-								class="h-auto w-full object-cover object-top"
-								width="800"
-								height="500"
-								loading="lazy"
-							/>
-						</div>
-						<div class="pointer-events-none absolute -top-10 -right-10 h-40 w-40 rounded-full bg-[#1B5E3B]/5 blur-[60px]"></div>
-					</div>
 				</div>
 
-				<!-- Bottom: 3 mini-feature cards (Tailark style) -->
-				<div class="grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-8">
+				<div class="mt-16 grid grid-cols-1 gap-x-12 gap-y-14 md:grid-cols-2 lg:grid-cols-3">
 					{#each [
 						{
-							title: 'Knows tea garden rules',
-							desc: 'Hazira, tikka, doubling, plucking rates, PF, ESI - not generic payroll. Built for how your garden already runs.',
-							icon: 'workflow'
+							title: 'Tea garden payroll logic',
+							desc: 'Hazira, tikka, plucking rates, PF, ESI, and bonus calculations match tea estate workflow.',
+							icon: 'payroll'
 						},
 						{
-							title: 'All 5 modules connected',
-							desc: 'Face data flows to payroll. Leaf weight flows to factory. Store issues flow to cost reports. No re-entry.',
+							title: 'Offline operations',
+							desc: 'Attendance, weighing, payroll, factory, and stores continue at the garden without internet.',
 							icon: 'offline'
 						},
 						{
-							title: 'On-site setup and training',
-							desc: 'We visit your garden, install the system, train your staff in person, and stay on call for support.',
+							title: 'Face verified attendance',
+							desc: 'Worker identity is verified by face scan to reduce proxy attendance and disputes.',
+							icon: 'face'
+						},
+						{
+							title: 'Smart wireless weighing',
+							desc: 'Leaf weight is linked directly to verified worker records in one step.',
+							icon: 'weigh'
+						},
+						{
+							title: 'Live MIS for management',
+							desc: 'Owners and managers track daily plucking, production, labour, and factory numbers anywhere.',
+							icon: 'dashboard'
+						},
+						{
+							title: 'On-site setup and support',
+							desc: 'Sarbani Associates installs, trains staff on-site, and supports your team after go-live.',
 							icon: 'support'
 						}
 					] as item}
-						<div class="rounded-2xl border border-[#E4E4E7] bg-white p-6 transition-all duration-200 hover:border-[#D4D4D8] hover:shadow-[0_8px_30px_rgba(0,0,0,0.04)] md:p-8">
-							<div
-								class="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#1B5E3B]/8"
-							>
-								{#if item.icon === 'workflow'}
-									<svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
-										<path d="M3 7h4v4H3zM15 7h4v4h-4z" stroke="#1B5E3B" stroke-width="1.5" stroke-linejoin="round" />
-										<path d="M7 9h8M11 7v4" stroke="#1B5E3B" stroke-width="1.5" stroke-linecap="round" />
-										<path d="M3 17h16" stroke="#1B5E3B" stroke-width="1.5" stroke-linecap="round" />
-									</svg>
+						<div class="group flex gap-5 transition-transform duration-500 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:-translate-y-1">
+							<div class="mt-1 shrink-0 text-[#1B5E3B] drop-shadow-[0_2px_4px_rgba(27,94,59,0.25)]">
+								{#if item.icon === 'payroll'}
+									<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M12 9v4M9 11h6"/></svg>
 								{:else if item.icon === 'offline'}
-									<svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
-										<path d="M5 11l3 3 8-8" stroke="#1B5E3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-										<path d="M2 11a9 9 0 0118 0" stroke="#1B5E3B" stroke-width="1.5" stroke-linecap="round" />
-										<path d="M5 15a7 7 0 0112 0" stroke="#1B5E3B" stroke-width="1.5" stroke-linecap="round" opacity="0.4" />
-									</svg>
+									<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1"/></svg>
+								{:else if item.icon === 'face'}
+									<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a5 5 0 1 0 0 10 5 5 0 0 0 0-10z"/><path d="M12 14c-5.33 0-8 2.67-8 4v2h16v-2c0-1.33-2.67-4-8-4z"/></svg>
+								{:else if item.icon === 'weigh'}
+									<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5"/><path d="m15 15 6 6M4 4l5 5"/></svg>
+								{:else if item.icon === 'dashboard'}
+									<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
 								{:else}
-									<svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
-										<path d="M11 3v4M11 15v4M3 11h4M15 11h4" stroke="#1B5E3B" stroke-width="1.5" stroke-linecap="round" />
-										<circle cx="11" cy="11" r="3" stroke="#1B5E3B" stroke-width="1.5" />
-									</svg>
+									<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
 								{/if}
 							</div>
-							<h3 class="text-[17px] leading-[1.35] font-semibold text-[#111111]">{item.title}</h3>
-							<p class="mt-2 text-[14px] leading-[1.6] text-[#3F3F46]">{item.desc}</p>
+							<div>
+								<h3 class="text-[19px] font-semibold leading-[1.3] text-[#111111]">{item.title}</h3>
+								<p class="mt-2 text-[15px] leading-[1.6] text-[#4B5563]">{item.desc}</p>
+							</div>
 						</div>
 					{/each}
 				</div>
@@ -848,78 +1024,77 @@
 		</section>
 
 		<!-- ═══════════════════════════════════════════════════════════ -->
-		<!-- FAQ (Tailark faqs/one, full width)                         -->
+		<!-- FAQ (Tailark faqs/three, divided card)                     -->
 		<!-- ═══════════════════════════════════════════════════════════ -->
-		<section class="reveal-on-scroll relative w-full bg-[#FAFAF7] py-24 md:py-32" aria-labelledby="faq-heading">
+		<section class="reveal-on-scroll relative w-full overflow-hidden bg-gradient-to-b from-white to-[#F8FAF8] py-24 md:py-32" aria-labelledby="faq-heading">
 			<div class="mx-auto max-w-[1344px] px-6 md:px-12">
-				<div class="grid gap-8 md:grid-cols-5 md:gap-12">
-					<div class="max-w-lg md:col-span-2">
+				<div class="grid border border-[#E4E4E7] bg-white md:grid-cols-5 md:divide-x md:divide-[#E4E4E7]">
+					<div class="p-8 md:col-span-2 md:p-10 lg:p-12">
 						<h2
 							id="faq-heading"
-							class="scroll-mt-20 text-[36px] leading-[1.08] font-semibold tracking-[-0.04em] text-[#111111] md:text-[44px]"
+							class="scroll-mt-20 text-[40px] leading-[1.05] font-semibold tracking-[-0.04em] text-[#111111] md:text-[56px]"
 							style="text-wrap: balance"
 						>
 							FAQs
 						</h2>
-						<p class="mt-4 text-[18px] leading-[1.6] text-[#3F3F46]">
+						<p class="mt-5 text-[17px] leading-[1.6] text-[#374151]">
 							Your questions answered
 						</p>
-						<p class="mt-6 hidden text-[16px] text-[#52525B] md:block">
-							Can't find what you're looking for? Contact our <br/>
-							<a href="mailto:contact@gardensuite.in" class="mt-2 inline-block font-medium text-[#1B5E3B] hover:underline">customer support team</a>
+						<p class="mt-6 hidden text-[16px] text-[#4B5563] md:block">
+							Can't find what you're looking for? <br/>
+							<a href="mailto:contact@gardensuite.in" class="mt-2 inline-block font-medium text-[#1B5E3B] hover:underline">contact our team</a>
 						</p>
 					</div>
 
-					<div class="md:col-span-3">
-						<div class="space-y-4">
-							<h3 class="pl-6 text-[17px] font-semibold text-[#111111]">General</h3>
-							<div class="-space-y-px">
-								{#each faqs as faq, i}
-									{@const isOpen = openFaq === i}
-									<div
-										class="rounded-xl border-none px-6 py-1 transition-all duration-200 {isOpen
-											? 'bg-white shadow-[0_2px_12px_rgba(0,0,0,0.04)] ring-1 ring-[#E4E4E7]'
-											: ''}"
+					<div class="space-y-4 p-8 md:col-span-3 md:p-10 lg:p-12">
+						<h3 class="pl-6 text-[20px] font-semibold text-[#111111]">General</h3>
+						<div class="space-y-0">
+							{#each faqs as faq, i}
+								{@const isOpen = openFaq === i}
+								{@const nextOpen = i < faqs.length - 1 && openFaq === i + 1}
+								<div
+									class="border-b px-6 py-1 transition-all duration-200 {isOpen || nextOpen ? 'border-transparent' : 'border-[#F0F0F0]'} {isOpen
+										? 'rounded-lg bg-[#F8FAF8] shadow-[0_2px_12px_rgba(0,0,0,0.04)] ring-1 ring-[#E4E4E7]'
+										: ''}"
+								>
+									<button
+										class="group flex w-full cursor-pointer items-start justify-between gap-4 py-4 text-left transition-none focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30"
+										onclick={() => toggleFaq(i)}
+										aria-expanded={isOpen}
 									>
-										<button
-											class="group flex w-full cursor-pointer items-start justify-between gap-4 border-b py-4 text-left transition-none {isOpen ? 'border-transparent' : 'border-[#F0F0F0]'} focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30"
-											onclick={() => toggleFaq(i)}
-											aria-expanded={isOpen}
+										<h3 class="text-[17px] font-medium text-[#111111]">
+											{faq.q}
+										</h3>
+										<svg
+											width="16"
+											height="16"
+											viewBox="0 0 24 24"
+											fill="none"
+											class="mt-0.5 shrink-0 text-[#A1A1AA] transition-transform duration-200 {isOpen ? 'rotate-180' : ''}"
+											aria-hidden="true"
+										><path
+												d="m6 9 6 6 6-6"
+												stroke="currentColor"
+												stroke-width="2"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+											/></svg
 										>
-											<h3 class="text-[16px] font-medium text-[#111111]">
-												{faq.q}
-											</h3>
-											<svg
-												width="16"
-												height="16"
-												viewBox="0 0 24 24"
-												fill="none"
-												class="mt-0.5 shrink-0 text-[#A1A1AA] transition-transform duration-200 {isOpen ? 'rotate-180' : ''}"
-												aria-hidden="true"
-											><path
-													d="m6 9 6 6 6-6"
-													stroke="currentColor"
-													stroke-width="2"
-													stroke-linecap="round"
-													stroke-linejoin="round"
-												/></svg
-											>
-										</button>
-										<div
-											class="grid transition-all duration-200 ease-out {isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}"
-										>
-											<div class="overflow-hidden">
-												<p class="pb-4 text-[16px] leading-[1.6] text-[#52525B]">{faq.a}</p>
-											</div>
+									</button>
+									<div
+										class="grid transition-all duration-200 ease-out {isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}"
+									>
+										<div class="overflow-hidden">
+											<p class="pb-4 text-[16px] leading-[1.6] text-[#4B5563]">{faq.a}</p>
 										</div>
 									</div>
-								{/each}
-							</div>
+								</div>
+							{/each}
 						</div>
 					</div>
 				</div>
-				<p class="mt-12 px-6 text-[16px] text-[#52525B] md:hidden">
-					Can't find what you're looking for? Contact our <a href="mailto:contact@gardensuite.in" class="font-medium text-[#1B5E3B] hover:underline">customer support team</a>
+				<p class="mt-8 text-center text-[14px] text-[#4B5563] md:hidden">
+					Can't find what you're looking for? <a href="mailto:contact@gardensuite.in" class="font-medium text-[#1B5E3B] hover:underline">contact our team</a>
 				</p>
 			</div>
 		</section>
@@ -929,45 +1104,206 @@
 		<!-- ═══════════════════════════════════════════════════════════ -->
 		<section
 			id="contact"
-			class="reveal-on-scroll relative w-full scroll-mt-20 bg-white px-6 py-24 md:px-12 md:py-32"
+			class="reveal-on-scroll w-full bg-[#141A16]"
 			aria-labelledby="cta-heading"
 		>
-			<div class="mx-auto flex max-w-3xl flex-col items-center text-center">
-				<h2
-					id="cta-heading"
-					class="text-[36px] leading-[1.08] font-semibold tracking-[-0.04em] text-[#111111] md:text-[44px] lg:text-[52px]"
-					style="text-wrap: balance"
-				>
-					See GardenSuite with your own garden data.
-				</h2>
-				<p class="mt-6 max-w-2xl text-[17px] leading-[1.6] text-[#3F3F46]">
-					We will show how attendance, leaf weight, payroll, factory, stores, and daily reports work together at your garden. Demo, on-site setup, and training are free.
-				</p>
-				<!-- Buyer-role microcopy -->
-				<div class="mt-6 flex flex-col gap-1.5">
-					<p class="text-[14px] text-[#3F3F46]"><span class="font-semibold text-[#111111]">Owner:</span> Check daily numbers from anywhere</p>
-					<p class="text-[14px] text-[#3F3F46]"><span class="font-semibold text-[#111111]">Manager:</span> Control attendance and output</p>
-					<p class="text-[14px] text-[#3F3F46]"><span class="font-semibold text-[#111111]">Office staff:</span> Finish payroll faster</p>
-				</div>
-				<div class="mt-10 flex w-full flex-col justify-center gap-4 sm:w-auto sm:flex-row">
-					<a
-						href={demoHref}
-						class="flex items-center justify-center rounded-full bg-[#1B5E3B] px-8 py-3.5 shadow-[0_2px_12px_rgba(27,94,59,0.2)] transition duration-150 hover:bg-[#144723] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 active:scale-[0.97]"
+			<div class="grid min-h-[90vh] md:grid-cols-2">
+				<div class="mx-auto flex w-full max-w-[672px] flex-col justify-center px-6 py-24 md:px-12 lg:px-16">
+					<div class="mb-6 w-fit text-[12px] font-semibold tracking-[0.06em] text-[#6EA66B] uppercase">Talk to Sarbani Associates</div>
+					<h2
+						id="cta-heading"
+						class="text-[32px] leading-[1.08] font-semibold tracking-[-0.03em] text-white md:text-[40px]"
+						style="text-wrap: balance"
 					>
-						<span class="text-[15px] leading-none font-semibold text-white">Book Free Demo</span>
-					</a>
-					<a
-						href="mailto:contact@gardensuite.in"
-						class="flex items-center justify-center rounded-full border border-[#E4E4E7] bg-white px-8 py-3.5 shadow-[0_1px_3px_rgba(0,0,0,0.04)] transition duration-150 hover:border-[#D4D4D8] hover:bg-[#FAFAF7] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 active:scale-[0.97]"
-					>
-						<span class="text-[15px] leading-none font-semibold text-[#111111]">Email Us</span>
-					</a>
+						Ask a question, check fit, or book a demo.
+					</h2>
+					<p class="mt-5 text-[16px] leading-[1.65] text-[#9CA3AF]">
+						Some visitors are ready for a demo. Others need pricing, module fit, setup details, or a simple first conversation. Use whichever route is comfortable.
+					</p>
+					<div class="mt-8 grid gap-4">
+						{#each [
+							{ title: 'For owners', desc: 'Ask about MIS, control, and outside-garden visibility.' },
+							{ title: 'For managers', desc: 'Discuss attendance, plucking, weighing, and daily reports.' },
+							{ title: 'For office staff', desc: 'Check payroll, factory, stores, and monthly closing flow.' }
+						] as audience}
+							<div class="flex items-start gap-3.5">
+								<div class="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#1B5E3B]/20">
+									<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6EA66B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+								</div>
+								<div>
+									<div class="text-[15px] font-semibold text-white">{audience.title}</div>
+									<p class="mt-0.5 text-[13px] leading-[1.5] text-[#8B9590]">{audience.desc}</p>
+								</div>
+							</div>
+						{/each}
+					</div>
+					<p class="mt-8 text-[13px] leading-[1.6] text-[#6B7280]">
+						Reply within 1 working day. Demo scheduling and first answers come from the Sarbani Associates team.
+					</p>
 				</div>
-				<p class="mt-4 text-[13px] text-[#52525B]">Reply within 1 working day. Demo scheduling call by the Sarbani team.</p>
+
+				<div class="border-l border-[#E4E4E7] flex flex-col justify-center bg-[#F8F7F3] px-6 py-24 md:px-12 lg:px-16">
+					<div class="mx-auto w-full max-w-[480px]">
+						<h3 class="text-[22px] font-semibold text-[#111827]">Talk to our team</h3>
+						<p class="mt-2 text-[14px] leading-[1.6] text-[#6B7280]">
+							Fill out the form and we'll be in touch within 24 hours.
+						</p>
+						<form
+							class="mt-6 flex flex-col gap-3.5"
+							onsubmit={(e) => e.preventDefault()}
+						>
+							<input
+								type="text"
+								placeholder="Your name"
+								aria-label="Your name"
+								bind:value={formName}
+								class="w-full rounded-lg border border-[#D1D5DB] bg-white px-4 py-3 text-[14px] text-[#111827] placeholder-[#9CA3AF] outline-none transition focus:border-[#1B5E3B] focus:ring-2 focus:ring-[#1B5E3B]/15"
+							/>
+							<input
+								type="tel"
+								placeholder="Phone number"
+								aria-label="Phone number"
+								bind:value={formPhone}
+								class="w-full rounded-lg border border-[#D1D5DB] bg-white px-4 py-3 text-[14px] text-[#111827] placeholder-[#9CA3AF] outline-none transition focus:border-[#1B5E3B] focus:ring-2 focus:ring-[#1B5E3B]/15"
+							/>
+							<input
+								type="email"
+								placeholder="Email address"
+								aria-label="Email address"
+								bind:value={formEmail}
+								class="w-full rounded-lg border border-[#D1D5DB] bg-white px-4 py-3 text-[14px] text-[#111827] placeholder-[#9CA3AF] outline-none transition focus:border-[#1B5E3B] focus:ring-2 focus:ring-[#1B5E3B]/15"
+							/>
+							<input
+								type="text"
+								placeholder="Garden name"
+								aria-label="Garden name"
+								bind:value={formGarden}
+								class="w-full rounded-lg border border-[#D1D5DB] bg-white px-4 py-3 text-[14px] text-[#111827] placeholder-[#9CA3AF] outline-none transition focus:border-[#1B5E3B] focus:ring-2 focus:ring-[#1B5E3B]/15"
+							/>
+							<textarea
+								placeholder="Question or message"
+								aria-label="Question or message"
+								bind:value={formMessage}
+								rows="3"
+								class="w-full resize-none rounded-lg border border-[#D1D5DB] bg-white px-4 py-3 text-[14px] text-[#111827] placeholder-[#9CA3AF] outline-none transition focus:border-[#1B5E3B] focus:ring-2 focus:ring-[#1B5E3B]/15"
+							></textarea>
+							<div class="mt-1 flex flex-col gap-2.5 sm:flex-row">
+								<a
+									href={buildWaLink()}
+									target="_blank"
+									rel="noreferrer"
+									class="flex flex-1 items-center justify-center gap-2 rounded-lg bg-[#25D366] px-6 py-3.5 transition duration-150 hover:bg-[#1EBE57] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366]/30 active:scale-[0.97]"
+								>
+									<svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+									<span class="text-[14px] font-semibold text-white">WhatsApp</span>
+								</a>
+								<a
+									href={buildMailtoHref()}
+									class="flex flex-1 items-center justify-center gap-2 rounded-lg bg-[#1B5E3B] px-6 py-3.5 transition duration-150 hover:bg-[#237A4E] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 active:scale-[0.97]"
+								>
+									<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13 2 4"/></svg>
+									<span class="text-[14px] font-semibold text-white">Email</span>
+								</a>
+							</div>
+						</form>
+						<p class="mt-4 text-center text-[12px] text-[#9CA3AF]">
+							By submitting, you agree to our <a href="/terms" class="underline text-[#6B7280] hover:text-[#1B5E3B] transition">Terms</a> and <a href="/privacy" class="underline text-[#6B7280] hover:text-[#1B5E3B] transition">Privacy Policy</a>.
+						</p>
+					</div>
+				</div>
 			</div>
 		</section>
-	</main>
-</div>
+		</main>
+
+		<div class="fixed right-5 bottom-5 z-[80] flex flex-col items-end gap-3 md:right-7 md:bottom-7">
+			{#if contactPanelOpen}
+				<div class="w-[min(calc(100vw-2.5rem),360px)] overflow-hidden rounded-3xl border border-[#DDE8DA] bg-white shadow-[0_24px_80px_rgba(15,46,12,0.2)]">
+					<div class="bg-gradient-to-br from-[#F1F6EB] to-white p-5">
+						<div class="flex items-start justify-between gap-4">
+							<div>
+								<div class="text-[12px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase">GardenSuite contact</div>
+								<h2 class="mt-2 text-[22px] leading-[1.15] font-semibold tracking-[-0.02em] text-[#111111]">
+									Ask Sarbani Associates
+								</h2>
+								<p class="mt-2 text-[14px] leading-[1.5] text-[#4B5563]">
+									Get a demo, pricing answer, setup details, or product help.
+								</p>
+							</div>
+							<button
+								type="button"
+								class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#E4E4E7] bg-white text-[#374151] transition hover:bg-[#FAFAF7] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30"
+								aria-label="Close contact options"
+								onclick={() => (contactPanelOpen = false)}
+							>
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+									<path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<div class="grid gap-2 p-3">
+						<a
+							href={buildWaLink()}
+							target="_blank"
+							rel="noreferrer"
+							class="flex items-center gap-3 rounded-2xl border border-[#E4E4E7] bg-white p-4 transition hover:border-[#25D366]/40 hover:bg-[#F0FDF4] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366]/30"
+						>
+							<span class="flex h-10 w-10 items-center justify-center rounded-full bg-[#25D366] text-white">
+								<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+							</span>
+							<span>
+								<span class="block text-[15px] font-semibold text-[#111111]">WhatsApp</span>
+								<span class="mt-0.5 block text-[13px] text-[#4B5563]">Fastest for demo and quick questions</span>
+							</span>
+						</a>
+						<a
+							href={buildMailtoHref()}
+							class="flex items-center gap-3 rounded-2xl border border-[#E4E4E7] bg-white p-4 transition hover:border-[#1B5E3B]/35 hover:bg-[#F8FAF8] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30"
+						>
+							<span class="flex h-10 w-10 items-center justify-center rounded-full bg-[#1B5E3B] text-white">
+								<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4 12 13 2 4"/></svg>
+							</span>
+							<span>
+								<span class="block text-[15px] font-semibold text-[#111111]">Email</span>
+								<span class="mt-0.5 block text-[13px] text-[#4B5563]">Best for detailed requirements</span>
+							</span>
+						</a>
+						<a
+							href="#contact"
+							class="flex items-center gap-3 rounded-2xl border border-[#E4E4E7] bg-white p-4 transition hover:border-[#1B5E3B]/35 hover:bg-[#F8FAF8] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30"
+							onclick={() => (contactPanelOpen = false)}
+						>
+							<span class="flex h-10 w-10 items-center justify-center rounded-full bg-[#E1EED6] text-[#1B5E3B]">
+								<svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 5h12M4 10h12M4 15h7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+							</span>
+							<span>
+								<span class="block text-[15px] font-semibold text-[#111111]">Use contact form</span>
+								<span class="mt-0.5 block text-[13px] text-[#4B5563]">Choose demo, pricing, support, or question</span>
+							</span>
+						</a>
+					</div>
+				</div>
+			{/if}
+			<button
+				type="button"
+				class="group relative flex h-16 w-16 items-center justify-center rounded-full bg-[#1B5E3B] text-white shadow-[0_16px_44px_rgba(27,94,59,0.35)] transition hover:bg-[#144723] focus:outline-none focus-visible:ring-4 focus-visible:ring-[#1B5E3B]/25 active:scale-[0.97]"
+				aria-label={contactPanelOpen ? 'Close contact options' : 'Open contact options'}
+				aria-expanded={contactPanelOpen}
+				onclick={() => (contactPanelOpen = !contactPanelOpen)}
+			>
+				<span class="absolute inset-0 rounded-full border border-white/20"></span>
+				{#if contactPanelOpen}
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+						<path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+					</svg>
+				{:else}
+					<svg width="27" height="27" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+						<path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+				{/if}
+			</button>
+		</div>
+	</div>
 
 <style>
 	:global(.reveal-on-scroll) {

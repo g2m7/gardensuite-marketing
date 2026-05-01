@@ -49,6 +49,7 @@ Jalpaiguri: Himalayan Agro Plantation
 - Apple-inspired landing page: clean, minimal, large typography, generous whitespace
 - Sales funnel structure: Hook -> Problem -> Solution -> Proof -> Desire -> Differentiator -> Features -> Trust -> FAQ -> CTA
 - Parent company branding: Sarbani Associates in copyright footer and trust-building sections
+- NO background circles/boxes behind icons. Use color directly on the icon with a subtle drop-shadow only.
 
 ## Required Audit Skills
 

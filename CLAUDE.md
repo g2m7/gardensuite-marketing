@@ -64,6 +64,7 @@ bun run build
 - **NO em dashes (—).** Always use regular hyphens (-) instead. This applies to all content: UI copy, descriptions, comments, docs.
 - **Simple language.** Not everyone in the target audience is fluent in English. Use clear, simple words. No big words just to sound sophisticated. Stay professional but accessible.
 - **Parent company: Sarbani Associates.** Mention in copyright footer and appropriate places (hero badge, CTA section, about areas).
+- **NO background circles/boxes behind icons.** Use color directly on the icon with a subtle drop-shadow only.
 
 ## Required Audit Skills
 
