@@ -256,7 +256,7 @@
 							Face Attendance &amp; Smart Weighing
 						</div>
 						<div class="mt-1 text-xs leading-relaxed text-[#71717A]">
-							Stop buddy punching and stolen weights.
+							Stop proxy attendance and stolen weights.
 						</div></a
 					>
 					<a

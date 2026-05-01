@@ -31,8 +31,32 @@
 						Every worker verified. Every leaf weighed. Zero paper.
 					</h1>
 					<p class="mx-auto mt-6 max-w-[560px] text-[17px] leading-[1.6] text-[#52525B]">
-						Face recognition catches proxy attendance. Bluetooth scales record exact weights. Both work offline. Data syncs when the internet comes back.
+						Face attendance checks worker identity. Bluetooth scale records exact leaf weight. Both work offline. Data syncs when internet returns.
 					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- TRUST ROW -->
+		<section class="relative z-30 w-full border-b border-[#F0F0F0] bg-white py-5 md:py-6" aria-label="Trust indicators">
+			<div class="mx-auto flex max-w-[1344px] flex-wrap items-center justify-center gap-x-6 gap-y-3 px-6 md:gap-x-10 md:px-12">
+				<div class="flex items-center gap-2">
+					<span class="text-[20px] font-semibold tracking-[-0.02em] text-[#111111] md:text-[24px]">20+</span>
+					<span class="text-[13px] text-[#71717A]">Tea Estates</span>
+				</div>
+				<div class="hidden h-5 w-px bg-[#E4E4E7] md:block"></div>
+				<div class="flex items-center gap-2">
+					<span class="text-[20px] font-semibold tracking-[-0.02em] text-[#111111] md:text-[24px]">7</span>
+					<span class="text-[13px] text-[#71717A]">Regions</span>
+				</div>
+				<div class="hidden h-5 w-px bg-[#E4E4E7] md:block"></div>
+				<div class="flex items-center gap-2">
+					<span class="text-[13px] font-medium text-[#3F3F46]">Since 2000</span>
+				</div>
+				<div class="hidden h-5 w-px bg-[#E4E4E7] md:block"></div>
+				<div class="flex items-center gap-2">
+					<div class="h-1.5 w-1.5 rounded-full bg-[#1B5E3B]"></div>
+					<span class="text-[13px] font-medium text-[#3F3F46]">Offline at the garden</span>
 				</div>
 			</div>
 		</section>
@@ -52,8 +76,8 @@
 				<div class="grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-8">
 					{#each [
 						{
-							title: 'Buddy punching',
-							desc: 'Workers mark friends as present. You pay for people who never showed up. Adds up to lakhs per year.'
+							title: 'Proxy attendance',
+							desc: 'Workers may mark attendance for others. You pay for people who did not show up.'
 						},
 						{
 							title: 'Fake weight chits',
@@ -89,10 +113,10 @@
 						A worker looks at the camera. That's it.
 					</h2>
 					<p class="mt-5 text-[17px] leading-[1.6] text-[#52525B]">
-						No registers. No buddy punching. The app identifies workers in under 2 seconds using face recognition - even without internet.
+						No registers. No proxy attendance. The app identifies workers in under 2 seconds using face recognition - even without internet.
 					</p>
 					<ul class="mt-6 flex flex-col gap-3" role="list">
-						{#each ['Works fully offline - no internet needed', 'Identifies workers in under 2 seconds', 'Stops proxy punching completely'] as bullet}
+						{#each ['Works offline - no internet needed', 'Identifies workers in under 2 seconds', 'Helps stop proxy attendance'] as bullet}
 							<li class="flex items-center gap-2.5">
 								<div class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#1B5E3B]/10">
 									<svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M2 5l2 2 4-4" stroke="#1B5E3B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -116,7 +140,7 @@
 									<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#1B5E3B" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg>
 								</div>
 							</div>
-							<span class="text-[14px] text-[#71717A]">Scanning face...</span>
+							<span class="text-[14px] text-[#71717A]">Scanning face…</span>
 							<div class="flex gap-1.5">
 								<div class="h-2 w-2 rounded-full bg-[#1B5E3B]"></div>
 								<div class="h-2 w-2 rounded-full bg-[#1B5E3B]/40"></div>
@@ -162,7 +186,7 @@
 					<!-- Floating chip -->
 					<div class="absolute -right-2 top-20 hidden items-center gap-2.5 rounded-xl border border-[#E4E4E7] bg-white px-4 py-3 shadow-[0_8px_32px_rgba(0,0,0,0.06)] md:flex">
 						<div class="h-2 w-2 rounded-full bg-[#1B5E3B]"></div>
-						<span class="text-[13px] font-medium text-[#3F3F46]">Auto-synced to ERP</span>
+						<span class="text-[13px] font-medium text-[#3F3F46]">Auto-synced to ERP (office software)</span>
 					</div>
 					<!-- Floating stat -->
 					<div class="absolute -bottom-4 -right-2 hidden rounded-xl border border-[#E4E4E7] bg-white px-5 py-3.5 shadow-[0_8px_32px_rgba(0,0,0,0.08)] md:flex md:flex-col md:gap-1">
@@ -319,6 +343,34 @@
 			</div>
 		</section>
 
+		<!-- HOW ROLLOUT WORKS -->
+		<section class="reveal-on-scroll relative w-full bg-[#FAFAF7] py-20 md:py-28" aria-labelledby="rollout-heading">
+			<div class="mx-auto max-w-[1344px] px-6 md:px-12">
+				<div class="mb-10 text-center">
+					<span class="mb-4 inline-block text-[13px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase">How rollout works</span>
+					<h2 id="rollout-heading" class="text-[32px] leading-[1.1] font-semibold tracking-[-0.04em] text-[#111111] md:text-[40px]" style="text-wrap: balance">
+						From first call to running live.
+					</h2>
+				</div>
+				<div class="grid grid-cols-1 gap-6 md:grid-cols-4 md:gap-8">
+					{#each [
+						{ step: '1', title: 'Site Visit', desc: 'Sarbani team visits your garden to understand your workflow.' },
+						{ step: '2', title: 'On-site Setup', desc: 'Software installed and configured at the garden.' },
+						{ step: '3', title: 'Staff Training', desc: 'Hands-on training for office and field staff.' },
+						{ step: '4', title: 'Go-Live Support', desc: 'Support stays on-site until your team is confident.' }
+					] as item}
+						<div class="rounded-2xl border border-[#E4E4E7] bg-white p-6 md:p-8">
+							<div class="mb-3 flex h-9 w-9 items-center justify-center rounded-xl bg-[#1B5E3B]/10">
+								<span class="text-[14px] font-bold text-[#1B5E3B]">{item.step}</span>
+							</div>
+							<h3 class="text-[17px] font-semibold tracking-[-0.01em] text-[#111111]">{item.title}</h3>
+							<p class="mt-2 text-[14px] leading-[1.6] text-[#52525B]">{item.desc}</p>
+						</div>
+					{/each}
+				</div>
+			</div>
+		</section>
+
 		<!-- ═══════════════════════════════════════════════════════════ -->
 		<!-- CTA                                                         -->
 		<!-- ═══════════════════════════════════════════════════════════ -->
@@ -328,7 +380,11 @@
 					See face attendance at your garden.
 				</h2>
 				<p class="mt-6 max-w-[480px] text-[17px] leading-[1.6] text-[#52525B]">
-					We will set up a live demo with your own workers and show you the weight capture flow. Free setup, free training.
+					We will set up a live demo with your own workers and show you the weight capture flow. Free on-site setup, free training.
+				</p>
+				<p class="mt-2 text-[14px] text-[#52525B]"><span class="font-semibold text-[#111111]">Manager:</span> Know exactly who showed up today</p>
+				<p class="mt-3 max-w-[520px] text-[14px] leading-[1.6] text-[#71717A]">
+					Many estates keep software details private. We respect confidentiality and share region-level experience.
 				</p>
 				<div class="mt-10 flex w-full flex-col justify-center gap-4 sm:w-auto sm:flex-row">
 					<a
@@ -344,6 +400,7 @@
 						<span class="text-[15px] leading-none font-semibold text-[#111111]">Email Us</span>
 					</a>
 				</div>
+				<p class="mt-4 text-[13px] text-[#71717A]">Reply within 1 working day. Demo scheduling call by the Sarbani team.</p>
 			</div>
 		</section>
 

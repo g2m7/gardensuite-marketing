@@ -31,9 +31,22 @@
 						Say goodbye to manual wage calculations.
 					</h1>
 					<p class="mx-auto mt-6 max-w-[560px] text-[17px] leading-[1.6] text-[#52525B]">
-						Attendance and weighing data flows straight into payroll. Wages, PF, ESI, bonus - all calculated automatically. No spreadsheets. No disputes.
+						Attendance and weighing data goes straight into payroll. Wages, PF, ESI, and bonus are calculated automatically. No spreadsheets.
 					</p>
 				</div>
+			</div>
+		</section>
+
+		<!-- TRUST ROW -->
+		<section class="relative z-30 w-full border-b border-[#F0F0F0] bg-white py-5 md:py-6" aria-label="Trust indicators">
+			<div class="mx-auto flex max-w-[1344px] flex-wrap items-center justify-center gap-x-6 gap-y-3 px-6 md:gap-x-10 md:px-12">
+				<div class="flex items-center gap-2"><span class="text-[20px] font-semibold tracking-[-0.02em] text-[#111111] md:text-[24px]">20+</span><span class="text-[13px] text-[#71717A]">Tea Estates</span></div>
+				<div class="hidden h-5 w-px bg-[#E4E4E7] md:block"></div>
+				<div class="flex items-center gap-2"><span class="text-[20px] font-semibold tracking-[-0.02em] text-[#111111] md:text-[24px]">7</span><span class="text-[13px] text-[#71717A]">Regions</span></div>
+				<div class="hidden h-5 w-px bg-[#E4E4E7] md:block"></div>
+				<div class="flex items-center gap-2"><span class="text-[13px] font-medium text-[#3F3F46]">Since 2000</span></div>
+				<div class="hidden h-5 w-px bg-[#E4E4E7] md:block"></div>
+				<div class="flex items-center gap-2"><div class="h-1.5 w-1.5 rounded-full bg-[#1B5E3B]"></div><span class="text-[13px] font-medium text-[#3F3F46]">Offline at the garden</span></div>
 			</div>
 		</section>
 
@@ -262,6 +275,32 @@
 			</div>
 		</section>
 
+		<!-- HOW ROLLOUT WORKS -->
+		<section class="reveal-on-scroll relative w-full bg-[#FAFAF7] py-20 md:py-28" aria-labelledby="rollout-heading">
+			<div class="mx-auto max-w-[1344px] px-6 md:px-12">
+				<div class="mb-10 text-center">
+					<span class="mb-4 inline-block text-[13px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase">How rollout works</span>
+					<h2 id="rollout-heading" class="text-[32px] leading-[1.1] font-semibold tracking-[-0.04em] text-[#111111] md:text-[40px]" style="text-wrap: balance">From first call to running live.</h2>
+				</div>
+				<div class="grid grid-cols-1 gap-6 md:grid-cols-4 md:gap-8">
+					{#each [
+						{ step: '1', title: 'Site Visit', desc: 'Sarbani team visits your garden to understand your workflow.' },
+						{ step: '2', title: 'On-site Setup', desc: 'Software installed and configured at the garden.' },
+						{ step: '3', title: 'Staff Training', desc: 'Hands-on training for office and field staff.' },
+						{ step: '4', title: 'Go-Live Support', desc: 'Support stays on-site until your team is confident.' }
+					] as item}
+						<div class="rounded-2xl border border-[#E4E4E7] bg-white p-6 md:p-8">
+							<div class="mb-3 flex h-9 w-9 items-center justify-center rounded-xl bg-[#1B5E3B]/10">
+								<span class="text-[14px] font-bold text-[#1B5E3B]">{item.step}</span>
+							</div>
+							<h3 class="text-[17px] font-semibold tracking-[-0.01em] text-[#111111]">{item.title}</h3>
+							<p class="mt-2 text-[14px] leading-[1.6] text-[#52525B]">{item.desc}</p>
+						</div>
+					{/each}
+				</div>
+			</div>
+		</section>
+
 		<!-- ═══════════════════════════════════════════════════════════ -->
 		<!-- CTA                                                         -->
 		<!-- ═══════════════════════════════════════════════════════════ -->
@@ -271,22 +310,17 @@
 					Stop calculating payroll by hand.
 				</h2>
 				<p class="mt-6 max-w-[480px] text-[17px] leading-[1.6] text-[#52525B]">
-					See how GardenSuite calculates wages, deductions, and generates payslips for your estate. Demo, setup, and training are free.
+					See how GardenSuite calculates wages, deductions, and generates payslips for your estate. Demo, on-site setup, and training are free.
+				</p>
+				<p class="mt-2 text-[14px] text-[#52525B]"><span class="font-semibold text-[#111111]">Office staff:</span> Finish payroll in minutes, not days</p>
+				<p class="mt-3 max-w-[520px] text-[14px] leading-[1.6] text-[#71717A]">
+					Many estates keep software details private. We respect confidentiality and share region-level experience.
 				</p>
 				<div class="mt-10 flex w-full flex-col justify-center gap-4 sm:w-auto sm:flex-row">
-					<a
-						href={demoHref}
-						class="flex items-center justify-center rounded-full bg-[#1B5E3B] px-8 py-3.5 shadow-[0_2px_12px_rgba(27,94,59,0.2)] transition duration-150 hover:bg-[#144723] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 active:scale-[0.97]"
-					>
-						<span class="text-[15px] leading-none font-semibold text-white">Book Free Demo</span>
-					</a>
-					<a
-						href="mailto:contact@gardensuite.in"
-						class="flex items-center justify-center rounded-full border border-[#E4E4E7] bg-white px-8 py-3.5 shadow-[0_1px_3px_rgba(0,0,0,0.04)] transition duration-150 hover:border-[#D4D4D8] hover:bg-[#FAFAF7] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 active:scale-[0.97]"
-					>
-						<span class="text-[15px] leading-none font-semibold text-[#111111]">Email Us</span>
-					</a>
+					<a href={demoHref} class="flex items-center justify-center rounded-full bg-[#1B5E3B] px-8 py-3.5 shadow-[0_2px_12px_rgba(27,94,59,0.2)] transition duration-150 hover:bg-[#144723] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 active:scale-[0.97]"><span class="text-[15px] leading-none font-semibold text-white">Book Free Demo</span></a>
+					<a href="mailto:contact@gardensuite.in" class="flex items-center justify-center rounded-full border border-[#E4E4E7] bg-white px-8 py-3.5 shadow-[0_1px_3px_rgba(0,0,0,0.04)] transition duration-150 hover:border-[#D4D4D8] hover:bg-[#FAFAF7] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 active:scale-[0.97]"><span class="text-[15px] leading-none font-semibold text-[#111111]">Email Us</span></a>
 				</div>
+				<p class="mt-4 text-[13px] text-[#71717A]">Reply within 1 working day. Demo scheduling call by the Sarbani team.</p>
 			</div>
 		</section>
 

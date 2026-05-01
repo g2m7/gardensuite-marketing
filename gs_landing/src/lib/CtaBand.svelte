@@ -8,7 +8,7 @@
 		Ready to modernize your tea garden?
 	</h2>
 	<p class="text-[15px] text-center leading-[1.5] max-w-[500px] text-[#A3A3A3]">
-		Book a free demo and see how GardenSuite can replace paperwork with a single tap. Free setup, free training - no risk.
+		Book a free demo and see how GardenSuite can replace paperwork with a single tap. Free on-site setup, free training - no risk.
 	</p>
 	<div class="flex flex-col sm:flex-row pt-4 gap-4 w-full sm:w-auto">
 		<a
@@ -28,4 +28,5 @@
 			</span>
 		</a>
 	</div>
+	<p class="mt-3 text-[12px] text-[#666666]">Reply within 1 working day. Demo scheduling call by the Sarbani team.</p>
 </section>

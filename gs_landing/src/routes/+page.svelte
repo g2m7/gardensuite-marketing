@@ -123,12 +123,16 @@
 			a: 'Assam, Dooars, Terai, Darjeeling, Coochbehar, Uttar Dinajpur, Jalpaiguri.'
 		},
 		{
+			q: 'Can you share client estate names?',
+			a: 'Many tea estates prefer to keep internal software private. We respect client confidentiality and share region-level experience during demos.'
+		},
+		{
 			q: 'Can I see the daily report from outside the garden?',
 			a: 'Yes. Open it on your phone, tablet, or laptop and check daily numbers from anywhere.'
 		},
 		{
 			q: 'What does it cost?',
-			a: 'Cost depends on your estate size and modules. Demo, setup, and training are free.'
+			a: 'Cost depends on your garden size and selected modules. We explain pricing clearly after understanding your requirement. Demo, setup, and training are free.'
 		}
 	];
 
@@ -159,7 +163,7 @@
 		},
 		{
 			title: 'Store Management',
-			desc: 'Know stock levels without chasing registers. Purchase, issue, and balance at a glance.',
+			desc: 'Track purchase, issue, and stock balance in one place. Know section-wise usage without chasing registers.',
 			href: '/products/stores',
 			badge: 'Stores',
 			icon: 'stores',
@@ -246,6 +250,9 @@
 						<span class="text-sm font-medium text-[#0A0A0A]">See How It Works</span>
 					</a>
 				</div>
+				<p class="mt-4 text-center text-[14px] font-medium text-[#52525B]">
+					Built and supported by Sarbani Associates, serving tea gardens since 2000.
+				</p>
 			</div>
 
 			<div
@@ -336,6 +343,37 @@
 		</section>
 
 		<!-- ═══════════════════════════════════════════════════════════ -->
+		<!-- TRUST ROW (compact, above fold)                            -->
+		<!-- ═══════════════════════════════════════════════════════════ -->
+		<section
+			class="relative z-30 w-full border-b border-[#F0F0F0] bg-white py-5 md:py-6"
+			aria-label="Trust indicators"
+		>
+			<div
+				class="mx-auto flex max-w-[1344px] flex-wrap items-center justify-center gap-x-6 gap-y-3 px-6 md:gap-x-10 md:px-12"
+			>
+				<div class="flex items-center gap-2">
+					<span class="text-[20px] font-semibold tracking-[-0.02em] text-[#111111] md:text-[24px]">20+</span>
+					<span class="text-[13px] text-[#71717A]">Tea Estates</span>
+				</div>
+				<div class="hidden h-5 w-px bg-[#E4E4E7] md:block"></div>
+				<div class="flex items-center gap-2">
+					<span class="text-[20px] font-semibold tracking-[-0.02em] text-[#111111] md:text-[24px]">7</span>
+					<span class="text-[13px] text-[#71717A]">Regions</span>
+				</div>
+				<div class="hidden h-5 w-px bg-[#E4E4E7] md:block"></div>
+				<div class="flex items-center gap-2">
+					<span class="text-[13px] font-medium text-[#3F3F46]">Since 2000</span>
+				</div>
+				<div class="hidden h-5 w-px bg-[#E4E4E7] md:block"></div>
+				<div class="flex items-center gap-2">
+					<div class="h-1.5 w-1.5 rounded-full bg-[#1B5E3B]"></div>
+					<span class="text-[13px] font-medium text-[#3F3F46]">Offline at the garden</span>
+				</div>
+			</div>
+		</section>
+
+		<!-- ═══════════════════════════════════════════════════════════ -->
 		<!-- PROBLEM STRIP                                              -->
 		<!-- ═══════════════════════════════════════════════════════════ -->
 		<section
@@ -366,8 +404,8 @@
 						},
 						{
 							icon: 'punch',
-							title: 'Buddy punching costs lakhs',
-							desc: 'Proxy attendance and inflated weights go undetected. You pay for workers who never showed up and leaf that was never plucked.'
+							title: 'Proxy attendance costs money',
+							desc: 'Proxy attendance and inflated weights can go undetected. You may pay for workers who did not show up and leaf that was never plucked.'
 						},
 						{
 							icon: 'payroll',
@@ -429,7 +467,7 @@
 						5 modules. One connected system.
 					</h2>
 					<p class="mt-5 text-[17px] leading-[1.6] text-[#52525B]">
-						From face scan to daily report. Data flows from the field to the office without manual re-entry.
+						Face attendance, leaf weight, payroll, factory, stores, and daily reports stay connected. No repeated entry from paper registers.
 					</p>
 				</div>
 
@@ -525,19 +563,33 @@
 											</div>
 										</div>
 									{:else if product.icon === 'factory'}
-										<div class="absolute inset-0 flex items-center justify-center">
-											<svg width="48" height="48" viewBox="0 0 24 24" fill="none" class="text-[#1B5E3B]/20">
-												<path d="M3 21h18M5 21V9l4 3V7l4 3V5l4 3v13" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
-												<path d="M9 14h1M13 14h1M9 17h1M13 17h1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-											</svg>
+										<div class="absolute inset-0 h-full w-full bg-[#1B5E3B]/5 transition-transform duration-300 group-hover/product:scale-[1.02]"></div>
+										<div class="absolute right-5 bottom-5 left-5 z-10 rounded-xl border border-white/60 bg-white/95 p-4 shadow-[0_8px_32px_rgba(0,0,0,0.08)] backdrop-blur-md">
+											<div class="mb-2 text-[11px] font-semibold tracking-[0.06em] text-[#1B5E3B] uppercase">Cost Per Kg</div>
+											{#each [{ label: 'Green leaf', value: '₹32.50' }, { label: 'Manufacturing', value: '₹12.80' }, { label: 'Power & fuel', value: '₹5.40' }] as row}
+												<div class="flex items-center justify-between border-t border-[#F0F0F0] py-1 text-[12px]">
+													<span class="text-[#71717A]">{row.label}</span>
+													<span class="font-semibold tabular-nums text-[#3F3F46]" style="font-variant-numeric: tabular-nums">{row.value}</span>
+												</div>
+											{/each}
+											<div class="flex items-center justify-between border-t-2 border-[#E4E4E7] pt-1.5 text-[12px]">
+												<span class="font-semibold text-[#111]">Total</span>
+												<span class="font-bold tabular-nums text-[#1B5E3B]" style="font-variant-numeric: tabular-nums">₹62.00</span>
+											</div>
 										</div>
 									{:else if product.icon === 'stores'}
-										<div class="absolute inset-0 flex items-center justify-center">
-											<svg width="48" height="48" viewBox="0 0 24 24" fill="none" class="text-[#1B5E3B]/20">
-												<path d="M20 7H4v14h16V7z" stroke="currentColor" stroke-width="1.5" />
-												<path d="M8 7V4h8v3" stroke="currentColor" stroke-width="1.5" />
-												<path d="M4 11h16" stroke="currentColor" stroke-width="1.5" />
-											</svg>
+										<div class="absolute inset-0 h-full w-full bg-[#1B5E3B]/5 transition-transform duration-300 group-hover/product:scale-[1.02]"></div>
+										<div class="absolute right-5 bottom-5 left-5 z-10 rounded-xl border border-white/60 bg-white/95 p-4 shadow-[0_8px_32px_rgba(0,0,0,0.08)] backdrop-blur-md">
+											<div class="mb-2 text-[11px] font-semibold tracking-[0.06em] text-[#1B5E3B] uppercase">Stock Levels</div>
+											{#each [{ label: 'NPK Fertilizer', value: '2,450 kg', ok: true }, { label: 'Diesel', value: '1,200 L', ok: true }, { label: 'Pruning Shears', value: '18 pcs', ok: false }] as row}
+												<div class="flex items-center justify-between border-t border-[#F0F0F0] py-1 text-[12px]">
+													<div class="flex items-center gap-1.5">
+														<div class="h-1.5 w-1.5 rounded-full {row.ok ? 'bg-[#1B5E3B]' : 'bg-[#D97706]'}"></div>
+														<span class="text-[#71717A]">{row.label}</span>
+													</div>
+													<span class="font-semibold tabular-nums text-[#3F3F46]" style="font-variant-numeric: tabular-nums">{row.value}</span>
+												</div>
+											{/each}
 										</div>
 									{:else}
 										<img
@@ -584,48 +636,83 @@
 		</section>
 
 		<!-- ═══════════════════════════════════════════════════════════ -->
-		<!-- PROOF STRIP (repositioned after products)                  -->
+		<!-- BEFORE / AFTER COMPARISON                                  -->
 		<!-- ═══════════════════════════════════════════════════════════ -->
 		<section
-			class="reveal-on-scroll relative z-30 w-full border-y border-[#F0F0F0] bg-white py-12 md:py-16"
-			aria-label="Trust indicators"
+			class="reveal-on-scroll relative w-full bg-white py-20 md:py-28"
+			aria-labelledby="compare-heading"
 		>
-			<div
-				class="mx-auto flex max-w-[1344px] flex-col items-center gap-8 px-6 md:flex-row md:justify-between md:gap-12 md:px-12"
-			>
-				<div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-4 md:gap-x-14">
-					<div class="flex flex-col items-center gap-1">
-						<span class="text-[32px] font-semibold tracking-[-0.03em] text-[#111111] md:text-[36px]"
-							>20+</span
-						>
-						<span class="text-[13px] font-semibold tracking-[0.04em] text-[#71717A] uppercase"
-							>Tea Estates</span
-						>
-					</div>
-					<div class="hidden h-8 w-px bg-[#E4E4E7] md:block"></div>
-					<div class="flex flex-col items-center gap-1">
-						<span class="text-[32px] font-semibold tracking-[-0.03em] text-[#111111] md:text-[36px]"
-							>7</span
-						>
-						<span class="text-[13px] font-semibold tracking-[0.04em] text-[#71717A] uppercase"
-							>Regions</span
-						>
-					</div>
-					<div class="hidden h-8 w-px bg-[#E4E4E7] md:block"></div>
-					<div class="flex flex-col items-center gap-1">
-						<span class="text-[32px] font-semibold tracking-[-0.03em] text-[#111111] md:text-[36px]"
-							>25+</span
-						>
-						<span class="text-[13px] font-semibold tracking-[0.04em] text-[#71717A] uppercase"
-							>Years</span
-						>
-					</div>
-				</div>
-				<div class="flex flex-col items-center gap-1 md:items-end">
-					<span class="text-[14px] font-semibold text-[#3F3F46]"
-						>Built &amp; supported by Sarbani Associates</span
+			<div class="mx-auto max-w-[900px] px-6 md:px-12">
+				<div class="mb-10 text-center">
+					<h2
+						id="compare-heading"
+						class="text-[32px] leading-[1.1] font-semibold tracking-[-0.04em] text-[#111111] md:text-[40px]"
+						style="text-wrap: balance"
 					>
-					<span class="text-[13px] text-[#71717A]">Bagdogra, Siliguri</span>
+						Paper way vs GardenSuite way
+					</h2>
+				</div>
+				<div class="overflow-hidden rounded-2xl border border-[#E4E4E7]">
+					<div class="grid grid-cols-2">
+						<div class="border-r border-[#E4E4E7] bg-[#FEF2F2] px-5 py-3 text-center text-[13px] font-semibold tracking-[0.04em] text-[#991B1B] uppercase">Paper Way</div>
+						<div class="bg-[#F0FDF4] px-5 py-3 text-center text-[13px] font-semibold tracking-[0.04em] text-[#166534] uppercase">GardenSuite Way</div>
+					</div>
+					{#each [
+						{ paper: 'Muster rolls and paper chits', gs: 'Face scan and smart scale' },
+						{ paper: 'Hand-calculated wages', gs: 'Auto-calculated payroll' },
+						{ paper: 'Factory cost in ledgers', gs: 'Connected production data' },
+						{ paper: 'Stock guesswork', gs: 'Live store balances' },
+						{ paper: 'Phone-call reporting', gs: 'Cloud daily report on any device' }
+					] as row}
+						<div class="grid grid-cols-2 border-t border-[#F0F0F0]">
+							<div class="flex items-center gap-2.5 border-r border-[#F0F0F0] px-5 py-3.5">
+								<svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="shrink-0" aria-hidden="true"><path d="M3.5 10.5l7-7M10.5 10.5l-7-7" stroke="#DC2626" stroke-width="1.5" stroke-linecap="round"/></svg>
+								<span class="text-[14px] text-[#52525B]">{row.paper}</span>
+							</div>
+							<div class="flex items-center gap-2.5 px-5 py-3.5">
+								<svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="shrink-0" aria-hidden="true"><path d="M3 7.5l2.5 2.5L11 4" stroke="#1B5E3B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+								<span class="text-[14px] font-medium text-[#111111]">{row.gs}</span>
+							</div>
+						</div>
+					{/each}
+				</div>
+			</div>
+		</section>
+
+		<!-- ═══════════════════════════════════════════════════════════ -->
+		<!-- CONFIDENTIAL PROOF                                          -->
+		<!-- ═══════════════════════════════════════════════════════════ -->
+		<section class="reveal-on-scroll relative w-full bg-[#FAFAF7] py-20 md:py-24" aria-labelledby="confidential-proof-heading">
+			<div class="mx-auto max-w-[1344px] px-6 md:px-12">
+				<div class="mb-10 max-w-[820px]">
+					<span class="mb-4 inline-block text-[13px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase">
+						Trusted across regions
+					</span>
+					<h2
+						id="confidential-proof-heading"
+						class="text-[32px] leading-[1.12] font-semibold tracking-[-0.03em] text-[#111111] md:text-[40px]"
+						style="text-wrap: balance"
+					>
+						Trusted across tea-growing regions, with client privacy respected.
+					</h2>
+					<p class="mt-4 text-[16px] leading-[1.65] text-[#52525B]">
+						GardenSuite is used across Assam, Dooars, Terai, Darjeeling, Coochbehar, Uttar Dinajpur, and Jalpaiguri. Many estates prefer to keep internal software private, so we share region-level experience instead of public client names.
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 gap-5 md:grid-cols-3">
+					<div class="rounded-2xl border border-[#E4E4E7] bg-white p-6">
+						<div class="text-[11px] font-semibold tracking-[0.06em] text-[#1B5E3B] uppercase">Dooars estate</div>
+						<p class="mt-2 text-[14px] leading-[1.6] text-[#52525B]">Face attendance and payroll for large worker teams, with offline daily operations.</p>
+					</div>
+					<div class="rounded-2xl border border-[#E4E4E7] bg-white p-6">
+						<div class="text-[11px] font-semibold tracking-[0.06em] text-[#1B5E3B] uppercase">Terai estate</div>
+						<p class="mt-2 text-[14px] leading-[1.6] text-[#52525B]">Smart weighing linked to worker identity, with daily MIS visibility for management.</p>
+					</div>
+					<div class="rounded-2xl border border-[#E4E4E7] bg-white p-6">
+						<div class="text-[11px] font-semibold tracking-[0.06em] text-[#1B5E3B] uppercase">Assam estate</div>
+						<p class="mt-2 text-[14px] leading-[1.6] text-[#52525B]">Payroll, factory, and store records connected in one system for faster monthly closing.</p>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -639,23 +726,37 @@
 			aria-labelledby="trust-heading"
 		>
 			<div class="mx-auto max-w-[1344px] px-6 md:px-12">
-				<!-- Top: 2-column split - heading left, visual right -->
+				<!-- Top: Sarbani trust band -->
 				<div class="mb-16 grid grid-cols-1 items-center gap-12 md:grid-cols-2 md:gap-16">
 					<div>
 						<span
 							class="mb-4 inline-block text-[13px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase"
-							>Why GardenSuite</span
+							>Why trust Sarbani Associates</span
 						>
 						<h2
 							id="trust-heading"
 							class="text-[36px] leading-[1.08] font-semibold tracking-[-0.04em] text-[#111111] md:text-[44px] lg:text-[52px]"
 							style="text-wrap: balance"
 						>
-							Installed, trained, and supported on site.
+							Local team. On-site setup. 25+ years.
 						</h2>
 						<p class="mt-5 max-w-[480px] text-[17px] leading-[1.6] text-[#52525B]">
-							Not a generic ERP you adapt to your garden. GardenSuite is built around how tea estates already work - and we set it up for you.
+							GardenSuite is not a generic ERP (office software). It is purpose-built for tea garden operations. Sarbani Associates visits your garden, sets up the system, trains your staff, and stays until you are confident.
 						</p>
+						<!-- Sarbani timeline -->
+						<div class="mt-8 flex flex-col gap-3">
+							{#each [
+								{ year: '2000', event: 'GardenSuite v1 launched' },
+								{ year: '2018', event: 'Face attendance app introduced' },
+								{ year: '2026', event: 'v3 with cloud daily report' }
+							] as milestone}
+								<div class="flex items-center gap-3">
+									<span class="shrink-0 rounded-md bg-[#1B5E3B]/10 px-2 py-0.5 text-[12px] font-semibold tabular-nums text-[#1B5E3B]" style="font-variant-numeric: tabular-nums">{milestone.year}</span>
+									<span class="text-[14px] text-[#52525B]">{milestone.event}</span>
+								</div>
+							{/each}
+							<p class="mt-2 text-[13px] text-[#71717A]">Based in Bagdogra, Siliguri - in your region.</p>
+						</div>
 					</div>
 					<div class="relative">
 						<div class="overflow-hidden rounded-2xl border border-[#E4E4E7] bg-gradient-to-br from-[#F0FDF4] to-[#DCFCE7]">
@@ -668,7 +769,6 @@
 								loading="lazy"
 							/>
 						</div>
-						<!-- Decorative glow -->
 						<div class="pointer-events-none absolute -top-10 -right-10 h-40 w-40 rounded-full bg-[#1B5E3B]/5 blur-[60px]"></div>
 					</div>
 				</div>
@@ -677,18 +777,18 @@
 				<div class="grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-8">
 					{#each [
 						{
-							title: 'Tea garden workflow built in',
-							desc: 'Hazira, plucking, payroll, stores, and factory - the way gardens already run.',
+							title: 'Knows tea garden rules',
+							desc: 'Hazira, tikka, doubling, plucking rates, PF, ESI - not generic payroll. Built for how your garden already runs.',
 							icon: 'workflow'
 						},
 						{
-							title: 'Runs offline at the garden',
-							desc: 'Attendance, weighing, and payroll continue even when the internet drops.',
+							title: 'All 5 modules connected',
+							desc: 'Face data flows to payroll. Leaf weight flows to factory. Store issues flow to cost reports. No re-entry.',
 							icon: 'offline'
 						},
 						{
-							title: 'Setup and support on site',
-							desc: 'Sarbani Associates installs, trains staff, and supports rollout at the garden.',
+							title: 'On-site setup and training',
+							desc: 'We visit your garden, install the system, train your staff in person, and stay on call for support.',
 							icon: 'support'
 						}
 					] as item}
@@ -794,12 +894,17 @@
 					class="text-[36px] leading-[1.08] font-semibold tracking-[-0.04em] text-[#111111] md:text-[44px] lg:text-[52px]"
 					style="text-wrap: balance"
 				>
-					See it on your own numbers.
+					See GardenSuite with your own garden data.
 				</h2>
 				<p class="mt-6 max-w-[480px] text-[17px] leading-[1.6] text-[#52525B]">
-					We will show how GardenSuite handles attendance, weights, payroll, factory, and the daily
-					report at your garden. Demo, setup, and training are free.
+					We will show how attendance, leaf weight, payroll, factory, stores, and daily reports work together at your garden. Demo, on-site setup, and training are free.
 				</p>
+				<!-- Buyer-role microcopy -->
+				<div class="mt-6 flex flex-col gap-1.5">
+					<p class="text-[14px] text-[#52525B]"><span class="font-semibold text-[#111111]">Owner:</span> Check daily numbers from anywhere</p>
+					<p class="text-[14px] text-[#52525B]"><span class="font-semibold text-[#111111]">Manager:</span> Control attendance and output</p>
+					<p class="text-[14px] text-[#52525B]"><span class="font-semibold text-[#111111]">Office staff:</span> Finish payroll faster</p>
+				</div>
 				<div class="mt-10 flex w-full flex-col justify-center gap-4 sm:w-auto sm:flex-row">
 					<a
 						href={demoHref}
@@ -814,6 +919,7 @@
 						<span class="text-[15px] leading-none font-semibold text-[#111111]">Email Us</span>
 					</a>
 				</div>
+				<p class="mt-4 text-[13px] text-[#71717A]">Reply within 1 working day. Demo scheduling call by the Sarbani team.</p>
 			</div>
 		</section>
 	</main>
