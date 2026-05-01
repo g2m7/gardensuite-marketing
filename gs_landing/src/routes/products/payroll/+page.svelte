@@ -28,7 +28,7 @@
 				<div class="mx-auto max-w-[800px] text-center">
 					<span class="mb-4 inline-block rounded-full bg-[#1B5E3B] px-3 py-1 text-[11px] font-semibold tracking-[0.04em] text-white uppercase">Automated Payroll</span>
 					<h1 class="text-[36px] leading-[1.08] font-semibold tracking-[-0.04em] text-[#111111] md:text-[44px] lg:text-[52px]" style="text-wrap: balance">
-						Say goodbye to manual wage calculations.
+						Wages. PF. Bonus. Calculated, not handwritten.
 					</h1>
 					<p class="mx-auto mt-6 max-w-[560px] text-[17px] leading-[1.6] text-[#52525B]">
 						Attendance and weighing data goes straight into payroll. Wages, PF, ESI, and bonus are calculated automatically. No spreadsheets.

@@ -31,25 +31,25 @@
 						Every bag. Every part. Every drop. Tracked.
 					</h1>
 					<p class="mx-auto mt-6 max-w-[560px] text-[17px] leading-[1.6] text-[#52525B]">
-						Fertilizer, spare parts, fuel, and chemicals are tracked from purchase to issue, with live running balance.
+						Track fertilizer, spare parts, fuel, and chemicals from purchase to issue - with a live running balance.
 					</p>
 				</div>
 			</div>
 		</section>
 
 		<!-- ═══════════════════════════════════════════════════════════ -->
-tt<!-- TRUST ROW -->
-tt<section class="relative z-30 w-full border-b border-[#F0F0F0] bg-white py-5 md:py-6" aria-label="Trust indicators">
-ttt<div class="mx-auto flex max-w-[1344px] flex-wrap items-center justify-center gap-x-6 gap-y-3 px-6 md:gap-x-10 md:px-12">
-tttt<div class="flex items-center gap-2"><span class="text-[20px] font-semibold tracking-[-0.02em] text-[#111111] md:text-[24px]">20+</span><span class="text-[13px] text-[#71717A]">Tea Estates</span></div>
-tttt<div class="hidden h-5 w-px bg-[#E4E4E7] md:block"></div>
-tttt<div class="flex items-center gap-2"><span class="text-[20px] font-semibold tracking-[-0.02em] text-[#111111] md:text-[24px]">7</span><span class="text-[13px] text-[#71717A]">Regions</span></div>
-tttt<div class="hidden h-5 w-px bg-[#E4E4E7] md:block"></div>
-tttt<div class="flex items-center gap-2"><span class="text-[13px] font-medium text-[#3F3F46]">Since 2000</span></div>
-tttt<div class="hidden h-5 w-px bg-[#E4E4E7] md:block"></div>
-tttt<div class="flex items-center gap-2"><div class="h-1.5 w-1.5 rounded-full bg-[#1B5E3B]"></div><span class="text-[13px] font-medium text-[#3F3F46]">Offline at the garden</span></div>
-ttt</div>
-tt</section>
+		<!-- TRUST ROW -->
+		<section class="relative z-30 w-full border-b border-[#F0F0F0] bg-white py-5 md:py-6" aria-label="Trust indicators">
+			<div class="mx-auto flex max-w-[1344px] flex-wrap items-center justify-center gap-x-6 gap-y-3 px-6 md:gap-x-10 md:px-12">
+				<div class="flex items-center gap-2"><span class="text-[20px] font-semibold tracking-[-0.02em] text-[#111111] md:text-[24px]">20+</span><span class="text-[13px] text-[#71717A]">Tea Estates</span></div>
+				<div class="hidden h-5 w-px bg-[#E4E4E7] md:block"></div>
+				<div class="flex items-center gap-2"><span class="text-[20px] font-semibold tracking-[-0.02em] text-[#111111] md:text-[24px]">7</span><span class="text-[13px] text-[#71717A]">Regions</span></div>
+				<div class="hidden h-5 w-px bg-[#E4E4E7] md:block"></div>
+				<div class="flex items-center gap-2"><span class="text-[13px] font-medium text-[#3F3F46]">Since 2000</span></div>
+				<div class="hidden h-5 w-px bg-[#E4E4E7] md:block"></div>
+				<div class="flex items-center gap-2"><div class="h-1.5 w-1.5 rounded-full bg-[#1B5E3B]"></div><span class="text-[13px] font-medium text-[#3F3F46]">Offline at the garden</span></div>
+			</div>
+		</section>
 
 		<!-- PROBLEM STRIP                                              -->
 		<!-- ═══════════════════════════════════════════════════════════ -->

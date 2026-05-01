@@ -215,8 +215,7 @@
 					class="hero-sub mx-auto mt-8 max-w-xl text-center text-lg leading-[1.25] tracking-[-0.01em] text-[#666666] sm:text-2xl"
 					style="text-wrap: balance;"
 				>
-					Offline software for face attendance, smart weighing, payroll, factory, stores, and daily
-					reporting.
+					Stop proxy attendance, catch stolen weights, and finish payroll in hours - not days. One system for your whole tea estate.
 				</p>
 
 				<div

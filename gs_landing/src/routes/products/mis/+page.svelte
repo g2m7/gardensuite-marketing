@@ -43,24 +43,24 @@
 		<section class="reveal-on-scroll relative w-full bg-white pb-20 md:pb-28">
 			<div class="mx-auto max-w-[1100px] px-6 md:px-12">
 				<div class="overflow-hidden rounded-2xl border border-[#E4E4E7] bg-white shadow-[0_20px_80px_rgba(0,0,0,0.07)]">
-					<img src="/mis-dashboard.png" alt="GardenSuite MIS Dashboard showing daily garden operations" class="h-auto w-full object-cover object-top" width="1920" height="1080" />
+					<img src="/mis-dashboard.png" alt="GardenSuite MIS Dashboard showing daily garden operations" class="h-auto w-full object-cover object-top" loading="lazy" width="1920" height="1080" />
 				</div>
 			</div>
 		</section>
 
 		<!-- ═══════════════════════════════════════════════════════════ -->
-tt<!-- TRUST ROW -->
-tt<section class="relative z-30 w-full border-b border-[#F0F0F0] bg-white py-5 md:py-6" aria-label="Trust indicators">
-ttt<div class="mx-auto flex max-w-[1344px] flex-wrap items-center justify-center gap-x-6 gap-y-3 px-6 md:gap-x-10 md:px-12">
-tttt<div class="flex items-center gap-2"><span class="text-[20px] font-semibold tracking-[-0.02em] text-[#111111] md:text-[24px]">20+</span><span class="text-[13px] text-[#71717A]">Tea Estates</span></div>
-tttt<div class="hidden h-5 w-px bg-[#E4E4E7] md:block"></div>
-tttt<div class="flex items-center gap-2"><span class="text-[20px] font-semibold tracking-[-0.02em] text-[#111111] md:text-[24px]">7</span><span class="text-[13px] text-[#71717A]">Regions</span></div>
-tttt<div class="hidden h-5 w-px bg-[#E4E4E7] md:block"></div>
-tttt<div class="flex items-center gap-2"><span class="text-[13px] font-medium text-[#3F3F46]">Since 2000</span></div>
-tttt<div class="hidden h-5 w-px bg-[#E4E4E7] md:block"></div>
-tttt<div class="flex items-center gap-2"><div class="h-1.5 w-1.5 rounded-full bg-[#1B5E3B]"></div><span class="text-[13px] font-medium text-[#3F3F46]">Offline at the garden</span></div>
-ttt</div>
-tt</section>
+		<!-- TRUST ROW -->
+		<section class="relative z-30 w-full border-b border-[#F0F0F0] bg-white py-5 md:py-6" aria-label="Trust indicators">
+			<div class="mx-auto flex max-w-[1344px] flex-wrap items-center justify-center gap-x-6 gap-y-3 px-6 md:gap-x-10 md:px-12">
+				<div class="flex items-center gap-2"><span class="text-[20px] font-semibold tracking-[-0.02em] text-[#111111] md:text-[24px]">20+</span><span class="text-[13px] text-[#71717A]">Tea Estates</span></div>
+				<div class="hidden h-5 w-px bg-[#E4E4E7] md:block"></div>
+				<div class="flex items-center gap-2"><span class="text-[20px] font-semibold tracking-[-0.02em] text-[#111111] md:text-[24px]">7</span><span class="text-[13px] text-[#71717A]">Regions</span></div>
+				<div class="hidden h-5 w-px bg-[#E4E4E7] md:block"></div>
+				<div class="flex items-center gap-2"><span class="text-[13px] font-medium text-[#3F3F46]">Since 2000</span></div>
+				<div class="hidden h-5 w-px bg-[#E4E4E7] md:block"></div>
+				<div class="flex items-center gap-2"><div class="h-1.5 w-1.5 rounded-full bg-[#1B5E3B]"></div><span class="text-[13px] font-medium text-[#3F3F46]">Offline at the garden</span></div>
+			</div>
+		</section>
 
 		<!-- PROBLEM STRIP                                              -->
 		<!-- ═══════════════════════════════════════════════════════════ -->
