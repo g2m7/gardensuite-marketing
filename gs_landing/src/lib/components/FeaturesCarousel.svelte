@@ -9,6 +9,7 @@
 			title: 'Face attendance',
 			desc: 'that stops proxy punching. Worker identity verified by face scan on mobile before hazira is marked. Works offline.',
 			image: '/img/home/face-attendance.png',
+			imageWebp: '/img/home/face-attendance-800.webp',
 			href: '/products/attendance',
 			badge: 'Attendance',
 			overlay: {
@@ -25,6 +26,7 @@
 			title: 'Smart weighing',
 			desc: 'that links leaf weight to verified workers. Wireless scale sends weight directly to the phone. No register, no errors.',
 			image: '/img/home/smart-weighing.png',
+			imageWebp: '/img/home/smart-weighing-800.webp',
 			href: '#features',
 			badge: 'Weighing',
 			overlay: {
@@ -39,6 +41,7 @@
 			title: 'Payroll calculated',
 			desc: 'from real field data. Wages, PF, ESI, bonus, deductions ready from actual attendance and weight records.',
 			image: '/img/home/payroll.png',
+			imageWebp: '/img/home/payroll-800.webp',
 			href: '/products/payroll',
 			badge: 'Payroll',
 			overlay: {
@@ -55,6 +58,7 @@
 			title: 'Daily MIS report',
 			desc: 'on any device. Plucking, production, labour, and factory numbers on your phone, tablet, or laptop from anywhere.',
 			image: '/mis-dashboard.png',
+			imageWebp: '/mis-dashboard-900.webp',
 			href: '/products/mis',
 			badge: 'Daily Report',
 			overlay: {
@@ -141,14 +145,17 @@
 				<div class="carousel-card flex w-[85%] shrink-0 snap-start flex-col sm:w-[calc(50%-12px)]">
 					<!-- Card image with overlay -->
 					<div class="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-[#E8E8E8] bg-[#E8E5DE]">
-						<img
-							src={feature.image}
-							alt={`${feature.badge} feature preview`}
-							class="absolute inset-0 h-full w-full object-cover object-center opacity-20 saturate-[0.4] brightness-[1.1]"
-							width="800"
-							height="600"
-							loading={i < 2 ? 'eager' : 'lazy'}
-						/>
+						<picture>
+							<source srcset={feature.imageWebp} type="image/webp" />
+							<img
+								src={feature.image}
+								alt={`${feature.badge} feature preview`}
+								class="absolute inset-0 h-full w-full object-cover object-center opacity-20 saturate-[0.4] brightness-[1.1]"
+								width="800"
+								height="600"
+								loading="lazy"
+							/>
+						</picture>
 
 						<!-- Subtle gradient overlay for depth -->
 						<div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/[0.04] to-transparent" aria-hidden="true"></div>

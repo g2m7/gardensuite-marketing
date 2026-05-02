@@ -247,13 +247,18 @@
 		<!-- HERO (unchanged)                                           -->
 		<!-- ═══════════════════════════════════════════════════════════ -->
 		<section class="hero-parallax relative w-full" aria-label="Hero">
-			<img
-				src="/hero-sky.png"
-				alt=""
-				class="hero-sky-ext pointer-events-none absolute inset-0 z-0 h-full w-full object-cover object-top opacity-80 brightness-[1.4] saturate-[0.6]"
-				width="1920"
-				height="1080"
-			/>
+			<picture>
+				<source srcset="/hero-sky.webp" type="image/webp" />
+				<img
+					src="/hero-sky.png"
+					alt=""
+					class="hero-sky-ext pointer-events-none absolute inset-0 z-0 h-full w-full object-cover object-top opacity-80 brightness-[1.4] saturate-[0.6]"
+					width="1024"
+					height="1024"
+					loading="eager"
+					fetchpriority="high"
+				/>
+			</picture>
 
 			<div
 				class="hero-text-content relative z-20 flex flex-col items-center px-6 pt-32 md:pt-36 lg:pt-40"
@@ -310,14 +315,23 @@
 			<div
 				class="hero-visuals relative -mt-6 h-[540px] w-full overflow-visible md:-mt-4 md:h-[720px] lg:h-[840px]"
 			>
-				<img
-					src="/bg.png"
-					alt=""
-					class="hero-bg-landscape pointer-events-none absolute inset-0 z-[1] h-full w-full object-cover object-top"
-					style="mask-image: linear-gradient(to bottom, transparent 0%, black 40%); -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 40%);"
-					width="1920"
-					height="1080"
-				/>
+				<picture>
+					<source
+						srcset="/bg-960.webp 960w, /bg-1920.webp 1920w"
+						sizes="100vw"
+						type="image/webp"
+					/>
+					<img
+						src="/bg.png"
+						alt=""
+						class="hero-bg-landscape pointer-events-none absolute inset-0 z-[1] h-full w-full object-cover object-top"
+						style="mask-image: linear-gradient(to bottom, transparent 0%, black 40%); -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 40%);"
+						width="1920"
+						height="1075"
+						loading="eager"
+						fetchpriority="high"
+					/>
+				</picture>
 
 				<div
 					class="pointer-events-none absolute top-[30%] left-1/2 z-[1] h-[400px] w-[600px] -translate-x-1/2 rounded-full bg-white/40 blur-[100px]"
@@ -354,15 +368,22 @@
 								</div>
 							</div>
 						</div>
-						<img
-							src="/mis-dashboard.png"
-							alt="GardenSuite daily report dashboard"
-							class="h-auto w-full object-cover object-top"
-							width="1400"
-							height="900"
-							loading="eager"
-							fetchpriority="high"
-						/>
+						<picture>
+							<source
+								srcset="/mis-dashboard-900.webp 900w, /mis-dashboard-1400.webp 1400w"
+								sizes="(min-width: 1024px) 1200px, 90vw"
+								type="image/webp"
+							/>
+							<img
+								src="/mis-dashboard.png"
+								alt="GardenSuite daily report dashboard"
+								class="h-auto w-full object-cover object-top"
+								width="1400"
+								height="757"
+								loading="eager"
+								fetchpriority="high"
+							/>
+						</picture>
 					</div>
 				</div>
 
@@ -375,20 +396,33 @@
 					class="hero-fg-group pointer-events-none absolute inset-x-0 bottom-0 z-20 h-[90%] md:h-[80%]"
 					style="min-height: 400px; padding-bottom: 60px; margin-bottom: -60px;"
 				>
-					<img
-						src="/fg.png"
-						alt=""
-						class="absolute bottom-[60px] left-1/2 h-full min-w-[120%] -translate-x-1/2 object-cover object-bottom md:min-w-full"
-						width="1920"
-						height="1080"
-					/>
-					<img
-						src="/cloud-border.png"
-						alt=""
-						class="hero-cloud-border absolute inset-x-0 bottom-0 z-10 w-full translate-y-[10%] brightness-[1.15] saturate-0"
-						width="1920"
-						height="400"
-					/>
+					<picture>
+						<source
+							srcset="/fg-960.webp 960w, /fg-1920.webp 1920w"
+							sizes="120vw"
+							type="image/webp"
+						/>
+						<img
+							src="/fg.png"
+							alt=""
+							class="absolute bottom-[60px] left-1/2 h-full min-w-[120%] -translate-x-1/2 object-cover object-bottom md:min-w-full"
+							width="1920"
+							height="1075"
+							loading="eager"
+							fetchpriority="high"
+						/>
+					</picture>
+					<picture>
+						<source srcset="/cloud-border.webp" type="image/webp" />
+						<img
+							src="/cloud-border.png"
+							alt=""
+							class="hero-cloud-border absolute inset-x-0 bottom-0 z-10 w-full translate-y-[10%] brightness-[1.15] saturate-0"
+							width="1800"
+							height="411"
+							loading="eager"
+						/>
+					</picture>
 					<div class="absolute inset-x-0 bottom-0 z-[9] h-[60px] bg-white"></div>
 				</div>
 			</div>
@@ -534,8 +568,14 @@
 					</div>
 
 					<div class="relative overflow-hidden rounded-2xl border border-[#0F2E0C]/15 bg-[#0B1712] p-4 shadow-[0_30px_90px_rgba(15,46,12,0.18)] md:p-5">
-						<img src="/hero-sky.png" alt="" class="absolute inset-0 z-0 h-full w-full object-cover brightness-[1.15]" />
-						<img src="/bg.png" alt="" class="absolute inset-x-0 bottom-0 z-[1] h-[60%] w-full object-cover object-top brightness-[1.15]" style="mask-image: linear-gradient(to bottom, transparent 0%, black 30%); -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 30%);" />
+						<picture>
+							<source srcset="/hero-sky.webp" type="image/webp" />
+							<img src="/hero-sky.png" alt="" class="absolute inset-0 z-0 h-full w-full object-cover brightness-[1.15]" width="1024" height="1024" loading="lazy" />
+						</picture>
+						<picture>
+							<source srcset="/bg-960.webp 960w, /bg-1920.webp 1920w" sizes="(min-width: 1024px) 640px, 90vw" type="image/webp" />
+							<img src="/bg.png" alt="" class="absolute inset-x-0 bottom-0 z-[1] h-[60%] w-full object-cover object-top brightness-[1.15]" style="mask-image: linear-gradient(to bottom, transparent 0%, black 30%); -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 30%);" width="960" height="538" loading="lazy" />
+						</picture>
 						<div class="relative z-10 rounded-xl border border-white/15 bg-white/[0.04] p-6 backdrop-blur-sm md:p-8">
 							<div class="mx-auto max-w-[420px] rounded-3xl border border-white/30 bg-white/95 p-5 shadow-[0_20px_60px_rgba(0,0,0,0.18)] md:p-6">
 								<div class="mb-5 flex items-center justify-between border-b border-[#E4E4E7] pb-4">
@@ -620,8 +660,14 @@
 							href={product.href}
 							class="group/product relative mb-6 block overflow-hidden rounded-2xl border border-[#0F2E0C]/15 bg-[#0B1712] p-4 shadow-[0_30px_90px_rgba(15,46,12,0.18)] transition-all duration-300 hover:border-white/20 hover:shadow-[0_40px_100px_rgba(15,46,12,0.25)] md:mb-8 md:p-5"
 						>
-							<img src="/hero-sky.png" alt="" class="absolute inset-0 z-0 h-full w-full object-cover brightness-[1.15] transition-transform duration-700 group-hover/product:scale-105" />
-							<img src="/bg.png" alt="" class="absolute inset-x-0 bottom-0 z-[1] h-[60%] w-full object-cover object-top brightness-[1.15] transition-transform duration-700 group-hover/product:scale-105" style="mask-image: linear-gradient(to bottom, transparent 0%, black 30%); -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 30%);" />
+							<picture>
+								<source srcset="/hero-sky.webp" type="image/webp" />
+								<img src="/hero-sky.png" alt="" class="absolute inset-0 z-0 h-full w-full object-cover brightness-[1.15] transition-transform duration-700 group-hover/product:scale-105" width="1024" height="1024" loading="lazy" />
+							</picture>
+							<picture>
+								<source srcset="/bg-960.webp 960w, /bg-1920.webp 1920w" sizes="(min-width: 1024px) 1280px, 90vw" type="image/webp" />
+								<img src="/bg.png" alt="" class="absolute inset-x-0 bottom-0 z-[1] h-[60%] w-full object-cover object-top brightness-[1.15] transition-transform duration-700 group-hover/product:scale-105" style="mask-image: linear-gradient(to bottom, transparent 0%, black 30%); -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 30%);" width="1280" height="717" loading="lazy" />
+							</picture>
 							<div class="relative z-10 rounded-xl border border-white/15 bg-white/[0.04] p-3 backdrop-blur-sm md:p-5">
 								<div class="overflow-hidden rounded-2xl border border-white/30 bg-white/95 shadow-[0_20px_60px_rgba(0,0,0,0.18)]">
 									<div class="grid grid-cols-1 md:grid-cols-2">
@@ -676,8 +722,14 @@
 								href={product.href}
 								class="group/product relative flex flex-col overflow-hidden rounded-2xl border border-[#0F2E0C]/15 bg-[#0B1712] p-4 shadow-[0_30px_90px_rgba(15,46,12,0.18)] transition-all duration-300 hover:border-white/20 hover:shadow-[0_40px_100px_rgba(15,46,12,0.25)] md:p-5"
 							>
-								<img src="/hero-sky.png" alt="" class="absolute inset-0 z-0 h-full w-full object-cover brightness-[1.15] transition-transform duration-700 group-hover/product:scale-105" />
-								<img src="/bg.png" alt="" class="absolute inset-x-0 bottom-0 z-[1] h-[60%] w-full object-cover object-top brightness-[1.15] transition-transform duration-700 group-hover/product:scale-105" style="mask-image: linear-gradient(to bottom, transparent 0%, black 30%); -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 30%);" />
+								<picture>
+									<source srcset="/hero-sky.webp" type="image/webp" />
+									<img src="/hero-sky.png" alt="" class="absolute inset-0 z-0 h-full w-full object-cover brightness-[1.15] transition-transform duration-700 group-hover/product:scale-105" width="1024" height="1024" loading="lazy" />
+								</picture>
+								<picture>
+									<source srcset="/bg-960.webp 960w, /bg-1920.webp 1920w" sizes="(min-width: 1024px) 640px, 90vw" type="image/webp" />
+									<img src="/bg.png" alt="" class="absolute inset-x-0 bottom-0 z-[1] h-[60%] w-full object-cover object-top brightness-[1.15] transition-transform duration-700 group-hover/product:scale-105" style="mask-image: linear-gradient(to bottom, transparent 0%, black 30%); -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 30%);" width="960" height="538" loading="lazy" />
+								</picture>
 								<div class="relative z-10 flex flex-1 flex-col rounded-xl border border-white/15 bg-white/[0.04] p-3 backdrop-blur-sm md:p-4">
 									<div class="flex flex-1 flex-col overflow-hidden rounded-2xl border border-white/30 bg-white/95 shadow-[0_20px_60px_rgba(0,0,0,0.18)]">
 										<div class="relative flex aspect-[16/10] items-center justify-center overflow-hidden bg-gradient-to-br from-[#F0FDF4] to-[#DCFCE7] p-6">
