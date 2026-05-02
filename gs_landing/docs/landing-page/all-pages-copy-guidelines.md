@@ -56,7 +56,7 @@ Do not write first for:
 
 Internal positioning:
 
-`GardenSuite is an offline-first tea garden management system by Sarbani Associates. It connects face attendance, smart weighing, payroll, factory accounts, stores, and daily reports.`
+`GardenSuite is an offline-first tea garden management system by Sarbani Associates. It connects face attendance, smart weighing, payroll, factory production, stores, and daily reports.`
 
 Plain page-level version:
 
@@ -217,7 +217,7 @@ Product labels:
 
 - `Face Attendance & Smart Weighing`
 - `Automated Payroll`
-- `Factory Accounts`
+- `Factory Production`
 - `Store Management`
 - `Daily Report`
 
@@ -729,4 +729,3 @@ Use these docs as supporting material:
 - `copy.md` for landing-page section direction
 - `product-page-copy-guidelines.md` for deeper module-specific standards
 - `trust-pivot-plan.md` for the current strategic pivot
-

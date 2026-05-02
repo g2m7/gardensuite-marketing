@@ -207,7 +207,7 @@
 			featured: false
 		},
 		{
-			title: 'Factory Accounts',
+			title: 'Factory Production',
 			desc: 'Track tea production from green leaf to made tea. Know exact factory cost per kg.',
 			href: '/products/factory',
 			badge: 'Factory',

@@ -170,7 +170,7 @@
 **Sections:**
 1. **Hero** (above fold)
    - Headline: "Complete ERP Software for Tea Gardens"
-   - Subheadline: "Manage payroll, kamjari, factory, accounts & more"
+   - Subheadline: "Manage payroll, kamjari, factory, stores and daily reports"
    - Primary CTA: "Request Free Demo"
    - Secondary CTA: "Watch Demo Video"
    - Hero image: Product screenshot or video
@@ -568,7 +568,7 @@
 - Length: 150-160 characters
 - Include: Primary keyword + benefit + CTA
 - Examples:
-  - "Complete ERP software for tea gardens. Manage payroll, kamjari, factory, accounts & more. Trusted by 15+ Indian tea estates. Request a free demo!"
+  - "Complete ERP software for tea gardens. Manage payroll, kamjari, factory, stores and daily reports. Trusted by 15+ Indian tea estates. Request a free demo!"
   - "Tea garden payroll software made simple. Automate wages, attendance, bonuses & compliance. See how GardenSuite transforms your payroll. Book demo!"
 
 #### **Headings:**

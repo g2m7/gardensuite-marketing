@@ -9,7 +9,7 @@
 	const faqs = [
 		{
 			q: 'What is GardenSuite?',
-			a: 'GardenSuite is a complete software made specially for tea gardens. It handles everything — from worker attendance and plucking records to payroll, stores, factory accounts and more. It works offline on your computers and also gives you online dashboards to check data from anywhere.'
+			a: 'GardenSuite is a complete software made specially for tea gardens. It handles worker attendance, plucking records, payroll, stores, factory production and daily MIS. It works offline on your computers and also gives you online dashboards to check data from anywhere.'
 		},
 		{
 			q: 'How does the face attendance system work?',
@@ -73,19 +73,9 @@
 			desc: 'Track factory production, bought leaf purchases and manufacturing costs.',
 			features: [
 				'Daily production records',
-				'Bought leaf accounting',
+				'Bought leaf purchase tracking',
 				'Manufacturing cost tracking',
 				'Green leaf to made tea conversion'
-			]
-		},
-		{
-			title: 'Garden Accounts',
-			desc: 'Complete financial accounting — cash book, ledgers, SOE, MES and trial balance.',
-			features: [
-				'Cash book and bank book',
-				'Ledger accounts with SOE/MES',
-				'Trial balance and financial reports',
-				'Integrated with other modules'
 			]
 		}
 	];
@@ -378,7 +368,7 @@
 				Everything a Tea Garden Needs
 			</h2>
 			<p class="mt-4 text-lg text-text-secondary">
-				One software, every task — from field to factory to accounts.
+				One software, every task - from field to factory to daily reports.
 			</p>
 		</div>
 

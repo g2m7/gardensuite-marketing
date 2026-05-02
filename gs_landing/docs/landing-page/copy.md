@@ -31,7 +31,7 @@ The user should understand this order:
 
 Working internal version:
 
-`GardenSuite is an offline-first tea garden ERP by Sarbani Associates for attendance, smart weighing, payroll, factory accounts, stores, and daily MIS reporting.`
+`GardenSuite is an offline-first tea garden ERP by Sarbani Associates for attendance, smart weighing, payroll, factory production, stores, and daily MIS reporting.`
 
 This is not final homepage copy. It is the message anchor.
 

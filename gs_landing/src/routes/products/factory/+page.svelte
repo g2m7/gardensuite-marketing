@@ -10,10 +10,10 @@
 </script>
 
 <svelte:head>
-	<title>Factory Accounts - GardenSuite Products</title>
+	<title>Factory Production - GardenSuite Products</title>
 	<meta
 		name="description"
-		content="GardenSuite Factory Accounts module for processing, production, and manufacturing cost tracking."
+		content="GardenSuite Factory Production module for processing, production, and manufacturing cost tracking."
 	/>
 </svelte:head>
 
@@ -26,12 +26,12 @@
 		<section class="relative w-full bg-white pt-28 pb-20 md:pt-36 md:pb-28">
 			<div class="mx-auto max-w-[1344px] px-6 md:px-12">
 				<div class="mx-auto max-w-[800px] text-center">
-					<span class="mb-4 inline-block rounded-full bg-[#1B5E3B] px-3 py-1 text-[11px] font-semibold tracking-[0.04em] text-white uppercase">Factory Accounts</span>
+					<span class="mb-4 inline-block rounded-full bg-[#1B5E3B] px-3 py-1 text-[11px] font-semibold tracking-[0.04em] text-white uppercase">Factory Production</span>
 					<h1 class="text-[36px] leading-[1.08] font-semibold tracking-[-0.04em] text-[#111111] md:text-[44px] lg:text-[52px]" style="text-wrap: balance">
 						Know exactly what every kg of tea costs to make.
 					</h1>
 					<p class="mx-auto mt-6 max-w-[560px] text-[17px] leading-[1.6] text-[#52525B]">
-						Track green leaf inflow, each manufacturing step, power use, and dispatch. Get clear factory cost data without manual ledgers.
+						Track green leaf inflow, each manufacturing step, power use, and dispatch. Get clear factory production and cost data without manual registers.
 					</p>
 				</div>
 			</div>
@@ -58,7 +58,7 @@
 				<div class="mb-12 max-w-[520px]">
 					<span class="mb-4 inline-block text-[13px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase">The old way</span>
 					<h2 class="text-[32px] leading-[1.1] font-semibold tracking-[-0.04em] text-[#111111] md:text-[40px]" style="text-wrap: balance">
-						Factory costs stay hidden in ledgers.
+						Factory production costs stay hidden in registers.
 					</h2>
 				</div>
 

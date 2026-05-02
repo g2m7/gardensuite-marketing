@@ -137,25 +137,19 @@ Build a **modern, SEO-optimized, conversion-focused** website that:
    - Process flows
    - ROI calculator
 
-5. **Accounts & Finance**
-   - URL: /accounts-finance
-   - Garden-level accounting
-   - Compliance features
-   - Reports
-
-6. **Stores & Inventory**
+5. **Stores & Inventory**
    - URL: /stores-inventory
    - Inventory management
    - Procurement
    - Tracking
 
-7. **Bought Leaf Management**
+6. **Bought Leaf Management**
    - URL: /bought-leaf
    - Supplier management
    - Quality tracking
    - Payments
 
-8. **Mobile App**
+7. **Mobile App**
    - URL: /mobile-app
    - App screenshots
    - Features list
@@ -206,9 +200,6 @@ Homepage → tea garden ERP, tea estate software
 
 /factory-production → tea factory software
                      → tea production management
-
-/accounts-finance → tea garden accounting software
-                   → estate finance management
 
 /stores-inventory → tea garden inventory management
                    → stores management software

@@ -110,7 +110,7 @@ Show all 5 modules as cards linking to their product pages:
 
 - Face Attendance & Smart Weighing (featured, larger card)
 - Automated Payroll
-- Factory Accounts
+- Factory Production
 - Store Management
 - Daily MIS Report
 

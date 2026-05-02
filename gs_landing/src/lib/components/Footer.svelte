@@ -21,7 +21,7 @@
 					<div class="flex flex-col gap-3">
 						<a href="/products/attendance" class="text-[13px] text-[#52525B] transition-colors duration-150 hover:text-[#1B5E3B]">Face Attendance and Smart Weighing</a>
 						<a href="/products/payroll" class="text-[13px] text-[#52525B] transition-colors duration-150 hover:text-[#1B5E3B]">Automated Payroll</a>
-						<a href="/products/factory" class="text-[13px] text-[#52525B] transition-colors duration-150 hover:text-[#1B5E3B]">Factory Accounts</a>
+						<a href="/products/factory" class="text-[13px] text-[#52525B] transition-colors duration-150 hover:text-[#1B5E3B]">Factory Production</a>
 						<a href="/products/stores" class="text-[13px] text-[#52525B] transition-colors duration-150 hover:text-[#1B5E3B]">Store Management</a>
 						<a href="/products/mis" class="text-[13px] text-[#52525B] transition-colors duration-150 hover:text-[#1B5E3B]">Daily Report</a>
 					</div>

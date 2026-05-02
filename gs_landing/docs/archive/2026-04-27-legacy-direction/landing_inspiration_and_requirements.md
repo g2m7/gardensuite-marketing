@@ -232,7 +232,7 @@
 #### 6. Feature Showcase (Bento Grid)
 - Bento-style card grid showing key modules:
   - Attendance & Biometric
-  - Factory Accounts
+  - Factory Production
   - Stores Management
   - Payroll & Compliance
   - MIS Dashboard

@@ -15,7 +15,6 @@
   - Labour Wages & Payroll
   - Bought Leaf Management
   - Stores & Inventory
-  - Garden Accounts
   - Factory Production
   - Mobile App for Field Operations
 
@@ -55,9 +54,8 @@
 2. **kamjari management system tea** - 50-100 searches/month
 3. **tea factory production software** - 50-100 searches/month
 4. **bought leaf management software** - 30-80 searches/month
-5. **tea garden accounting software** - 30-80 searches/month
-6. **tea garden inventory management** - 30-80 searches/month
-7. **mobile app tea garden attendance** - 20-60 searches/month
+5. **tea garden inventory management** - 30-80 searches/month
+6. **mobile app tea garden attendance** - 20-60 searches/month
 
 ### Location-Based Keywords (Regional Domination)
 **Assam Region:**
@@ -194,17 +192,12 @@
    - Content: Supplier management, Quality tracking, Payments
    - Supplier portal, fine leaf % tracking
 
-5. **Tea Garden Accounts Software**
-   - Keywords: tea garden accounting, garden-level accounts
-   - Content: Ledgers, Vouchers, Cash/Bank books, Expenditure
-   - Compliance, reporting, integration
-
-6. **Tea Garden Inventory Management**
+5. **Tea Garden Inventory Management**
    - Keywords: tea garden stores, inventory management
    - Content: Purchase, Issue, Stock management
    - Requisition workflows, stock reports
 
-7. **Mobile App for Tea Gardens**
+6. **Mobile App for Tea Gardens**
    - Keywords: tea garden mobile app, attendance app
    - Content: Muhuri app, Offline capability, Sync
    - Screenshots, user guides, benefits

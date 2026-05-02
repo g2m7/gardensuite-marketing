@@ -6,7 +6,7 @@ This document is the copy standard for GardenSuite product pages:
 
 - Face Attendance & Smart Weighing
 - Automated Payroll
-- Factory Accounts
+- Factory Production
 - Store Management
 - Daily Report (MIS Dashboard)
 
@@ -83,7 +83,7 @@ Do not write for:
 
 Use this internal positioning:
 
-`GardenSuite is an offline-first tea garden management system by Sarbani Associates. It connects face attendance, smart weighing, payroll, factory accounts, stores, and daily reports.`
+`GardenSuite is an offline-first tea garden management system by Sarbani Associates. It connects face attendance, smart weighing, payroll, factory production, stores, and daily reports.`
 
 Use this simpler page-level version:
 
@@ -404,7 +404,7 @@ Best CTA support line:
 
 `Office staff: Finish payroll in minutes, not days`
 
-### Factory Accounts
+### Factory Production
 
 Best promise:
 
@@ -585,4 +585,3 @@ Before shipping any product-page copy, check:
 - Is client confidentiality handled honestly?
 - Is the CTA plain?
 - Could this line appear on any generic ERP site? If yes, rewrite it.
-

@@ -33,7 +33,7 @@ The design should sell both ideas:
 
 Working positioning:
 
-`GardenSuite is an offline-first tea garden management system by Sarbani Associates for face attendance, smart weighing, payroll, factory accounts, stores, and daily reporting.`
+`GardenSuite is an offline-first tea garden management system by Sarbani Associates for face attendance, smart weighing, payroll, factory production, stores, and daily reporting.`
 
 Plain-English version for the page:
 
@@ -214,7 +214,7 @@ Recommended copy style:
 
 `Wages, PF, ESI, bonus, and deductions are calculated from attendance and leaf weight data.`
 
-`Factory Accounts`
+`Factory Production`
 
 `Track green leaf, made tea, grades, dispatch, and factory cost per kg.`
 
@@ -520,4 +520,3 @@ It should also not look like a generic SaaS product that does not understand tea
 The best direction is:
 
 `Modern and premium on the surface. Local, practical, and trustworthy in the sales argument.`
-

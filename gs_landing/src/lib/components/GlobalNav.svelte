@@ -140,7 +140,7 @@
 						<a
 							href="/products/factory"
 							class="rounded-lg px-4 py-2.5 text-[14px] font-medium text-[#52525B] transition-colors hover:bg-[#FAFAF7] hover:text-[#1A5C2E]"
-							onclick={toggleMobileNav}>Factory Accounts</a
+							onclick={toggleMobileNav}>Factory Production</a
 						>
 						<a
 							href="/products/stores"
@@ -279,7 +279,7 @@
 						><div
 							class="text-[13px] font-medium text-[#18181B] transition-colors group-hover/item:text-[#1A5C2E]"
 						>
-							Factory Accounts
+							Factory Production
 						</div>
 						<div class="mt-1 text-xs leading-relaxed text-[#71717A]">
 							Track output and exact factory cost.

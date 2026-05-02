@@ -2,7 +2,7 @@
 
 ## Product Overview
 
-GardenSuite is a complete tea garden management ERP software, built and maintained by **Sarbani Associates** (Bagdogra, Siliguri). It handles everything from worker attendance to payroll, stores, factory accounts and more.
+GardenSuite is a complete tea garden management ERP software, built and maintained by **Sarbani Associates** (Bagdogra, Siliguri). It handles everything from worker attendance to payroll, stores, factory production, daily MIS and more.
 
 ## Key Differentiators
 

@@ -1670,7 +1670,7 @@
                               "id": "weaGE",
                               "name": "pfTitle",
                               "fill": "$charcoal",
-                              "content": "Factory Accounts",
+                              "content": "Factory Production",
                               "fontFamily": "Inter",
                               "fontSize": 16,
                               "fontWeight": "600"

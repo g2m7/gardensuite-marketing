@@ -12,7 +12,7 @@ Needed for the 5 product module cards on the home page and individual product pa
 |---|--------|---------------|---------|
 | 1 | Face Attendance & Smart Weighing | Face scan screen + weighing scale input screen | Product Grid card + `/products/attendance` page |
 | 2 | Automated Payroll | Payroll summary/dashboard + hazira calculation view | Product Grid card + `/products/payroll` page |
-| 3 | Factory Accounts | Factory dashboard + manufacturing cost breakdown | Product Grid card + `/products/factory` page |
+| 3 | Factory Production | Factory dashboard + manufacturing cost breakdown | Product Grid card + `/products/factory` page |
 | 4 | Store Management | Inventory list + stock entry/dispatch view | Product Grid card + `/products/stores` page |
 | 5 | Daily MIS Report | MIS dashboard + daily summary report | Product Grid card + `/products/mis` page |
 
@@ -69,7 +69,7 @@ Needed for the 5 product module cards on the home page and individual product pa
 - How does it handle different worker types? (permanent, casual, seasonal?)
 - Pay slip format?
 
-**Factory Accounts:**
+**Factory Production:**
 - What does it track? (green leaf, made tea, manufacturing cost?)
 - How does it integrate with weighing data?
 - What reports for management?

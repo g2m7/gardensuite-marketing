@@ -7,7 +7,7 @@ gardensuite.in/
 ├── / (Home) ← sales funnel, routes to product pages
 ├── /products/attendance ← Face attendance + smart weighing deep-dive
 ├── /products/payroll ← Automated payroll deep-dive
-├── /products/factory ← Factory accounts deep-dive
+├── /products/factory ← Factory production deep-dive
 ├── /products/stores ← Store management deep-dive
 └── /products/mis ← Daily MIS report deep-dive
 ```
@@ -68,7 +68,7 @@ Below is every proposed section in scroll order. Each has:
 **The 5 modules:**
 1. Face Attendance & Smart Weighing → `/products/attendance`
 2. Automated Payroll → `/products/payroll`
-3. Factory Accounts → `/products/factory`
+3. Factory Production → `/products/factory`
 4. Store Management → `/products/stores`
 5. Daily MIS Report → `/products/mis`
 
@@ -170,7 +170,7 @@ Each product page gets a deep-dive with:
 | `/` | "tea garden software", "tea estate management system", "tea garden ERP" | Awareness |
 | `/products/attendance` | "tea garden attendance system", "face recognition attendance tea estate", "smart weighing tea garden" | Solution |
 | `/products/payroll` | "tea garden payroll software", "tea estate wage calculation", "hazira calculation software" | Solution |
-| `/products/factory` | "tea factory accounts software", "tea manufacturing cost software" | Solution |
+| `/products/factory` | "tea factory production software", "tea manufacturing cost software" | Solution |
 | `/products/stores` | "tea garden store management", "tea estate inventory" | Solution |
 | `/products/mis` | "tea garden MIS dashboard", "tea estate daily report software" | Solution |
 
