@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
+	import ModulePreview from './ModulePreview.svelte';
 
 	// ─── GSAP + ScrollTrigger ───
 	let ready = $state(false);
@@ -191,43 +192,51 @@
 
 	const products = [
 		{
+			id: 'attendance',
 			title: 'Face Attendance & Smart Weighing',
-			desc: 'Worker identity verified by face scan. Wireless scale sends weight directly to the linked worker record. Works offline.',
+			desc: 'Worker identity verified by face scan. Wireless scale sends weight directly to the linked worker record.',
 			href: '/products/attendance',
-			badge: 'Attendance',
-			icon: 'face',
+			badge: 'Attendance & Weighing',
 			featured: true
 		},
 		{
-			title: 'Automated Payroll',
-			desc: 'Wages, PF, ESI, bonus, and deductions calculated from real attendance and weight data. Ready in minutes.',
-			href: '/products/payroll',
-			badge: 'Payroll',
-			icon: 'payroll',
-			featured: false
-		},
-		{
-			title: 'Factory Production',
-			desc: 'Track tea production from green leaf to made tea. Know exact factory cost per kg.',
-			href: '/products/factory',
-			badge: 'Factory',
-			icon: 'factory',
-			featured: false
-		},
-		{
-			title: 'Store Management',
-			desc: 'Track purchase, issue, and stock balance in one place. Know section-wise usage without chasing registers.',
-			href: '/products/stores',
-			badge: 'Stores',
-			icon: 'stores',
-			featured: false
-		},
-		{
+			id: 'mis',
 			title: 'Daily MIS Report',
 			desc: 'Plucking, production, labour, and factory numbers on your phone, tablet, or laptop from anywhere.',
 			href: '/products/mis',
 			badge: 'Daily Report',
-			icon: 'mis',
+			featured: true
+		},
+		{
+			id: 'plucking',
+			title: 'Plucking / Leaf Collection',
+			desc: 'Track individual and gang-wise leaf collection accurately right from the field.',
+			href: '/products/attendance', // Links to attendance since plucking doesn't exist yet
+			badge: 'Plucking',
+			featured: false
+		},
+		{
+			id: 'payroll',
+			title: 'Payroll / Wages',
+			desc: 'Wages, PF, ESI, bonus, and deductions calculated from real attendance and weight data.',
+			href: '/products/payroll',
+			badge: 'Payroll',
+			featured: false
+		},
+		{
+			id: 'stores',
+			title: 'Store Management',
+			desc: 'Track purchase, issue, and stock balance in one place. Know section-wise usage.',
+			href: '/products/stores',
+			badge: 'Stores',
+			featured: false
+		},
+		{
+			id: 'factory',
+			title: 'Factory Production',
+			desc: 'Track tea production from green leaf to made tea. Know exact factory cost per kg.',
+			href: '/products/factory',
+			badge: 'Factory',
 			featured: false
 		}
 	];
@@ -646,14 +655,14 @@
 						class="text-[28px] leading-[1.08] font-semibold tracking-[-0.04em] text-[#111111] md:text-[36px]"
 						style="text-wrap: balance"
 					>
-						One product. Five connected modules.
+						One product. Six connected modules.
 					</h2>
 					<p class="mt-5 text-[16px] leading-[1.65] text-[#374151]">
 						Face attendance, leaf weight, payroll, factory, stores, and daily reports. Every module shares data so your office does not repeat entries from paper registers.
 					</p>
 				</div>
 
-				<!-- Featured card (Attendance) -->
+				<!-- Featured cards -->
 				{#each products as product, i}
 					{#if product.featured}
 						<a
@@ -671,51 +680,31 @@
 							<div class="relative z-10 rounded-xl border border-white/15 bg-white/[0.04] p-3 backdrop-blur-sm md:p-5">
 								<div class="overflow-hidden rounded-2xl border border-white/30 bg-white/95 shadow-[0_20px_60px_rgba(0,0,0,0.18)]">
 									<div class="grid grid-cols-1 md:grid-cols-2">
-								<div class="relative flex aspect-[16/9] items-center justify-center overflow-hidden bg-gradient-to-br from-[#F0FDF4] to-[#DCFCE7] p-6 md:aspect-auto md:min-h-[320px]">
-									<div class="absolute top-5 left-5 z-10">
-										<span class="rounded-full bg-[#1B5E3B] px-3 py-1 text-[11px] font-semibold tracking-[0.04em] text-white uppercase shadow-sm">
-											{product.badge}
-										</span>
-									</div>
-									<!-- Centered overlay card -->
-									<div class="relative z-10 w-full max-w-[280px] rounded-xl border border-white/60 bg-white/95 p-5 shadow-[0_8px_32px_rgba(0,0,0,0.08)] backdrop-blur-md transition-all duration-300 group-hover/product:scale-[1.03] group-hover/product:shadow-[0_16px_48px_rgba(0,0,0,0.12)]">
-										<div class="mb-2 flex items-center gap-2">
-											<div class="flex h-6 w-6 items-center justify-center rounded-full bg-[#1B5E3B]/10">
-												<svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 6.5l2 2 4-4" stroke="#1B5E3B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+										<div class="relative flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#F0FDF4] to-[#DCFCE7] p-8 md:min-h-[360px] md:p-10 lg:p-12">
+											<div class="absolute top-5 left-5 z-10">
+												<span class="rounded-full bg-[#1B5E3B] px-3 py-1 text-[11px] font-semibold tracking-[0.04em] text-white uppercase shadow-sm">
+													{product.badge}
+												</span>
 											</div>
-											<span class="text-[12px] font-semibold text-[#1B5E3B]">Face Verified</span>
+											<ModulePreview id={product.id} />
 										</div>
-										<div class="flex justify-between border-t border-[#F0F0F0] py-1.5 text-[12px]">
-											<span class="text-[#4B5563]">Worker</span>
-											<span class="font-semibold text-[#111]">Ramesh K.</span>
-										</div>
-										<div class="flex justify-between border-t border-[#F0F0F0] py-1.5 text-[12px]">
-											<span class="text-[#4B5563]">Match</span>
-											<span class="font-semibold text-[#111]">98.7%</span>
-										</div>
-										<div class="flex justify-between border-t border-[#F0F0F0] py-1.5 text-[12px]">
-											<span class="text-[#4B5563]">Section</span>
-											<span class="text-[#374151]">Div. 3 - East</span>
+										<div class="flex flex-col justify-center p-8 md:p-10 lg:p-12">
+											<h3 class="text-[20px] font-semibold tracking-[-0.02em] text-[#111111] lg:text-[24px]">{product.title}</h3>
+											<p class="mt-4 text-[15px] leading-[1.65] text-[#374151] md:text-[16px] lg:text-[17px]">{product.desc}</p>
+											<span class="mt-8 inline-flex items-center gap-1.5 text-[15px] font-semibold text-[#1B5E3B] transition-colors group-hover/product:gap-2.5">
+												Learn more
+												<svg width="16" height="16" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M5 2.5l4.5 4.5L5 11.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+											</span>
 										</div>
 									</div>
-								</div>
-								<div class="flex flex-col justify-center p-8 md:p-10">
-									<h3 class="text-[19px] font-semibold tracking-[-0.02em] text-[#111111]">{product.title}</h3>
-									<p class="mt-3 text-[15px] leading-[1.6] text-[#374151] md:text-[16px]">{product.desc}</p>
-									<span class="mt-6 inline-flex items-center gap-1.5 text-[14px] font-semibold text-[#1B5E3B] transition-colors group-hover/product:gap-2.5">
-										Learn more
-										<svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M5 2.5l4.5 4.5L5 11.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-									</span>
-								</div>
-							</div>
 								</div>
 							</div>
 						</a>
 					{/if}
 				{/each}
 
-				<!-- 2x2 Grid (remaining 4 products) -->
-				<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:gap-8">
+				<!-- Grid (remaining 4 products) -->
+				<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:gap-8 lg:grid-cols-2">
 					{#each products as product}
 						{#if !product.featured}
 							<a
@@ -732,80 +721,24 @@
 								</picture>
 								<div class="relative z-10 flex flex-1 flex-col rounded-xl border border-white/15 bg-white/[0.04] p-3 backdrop-blur-sm md:p-4">
 									<div class="flex flex-1 flex-col overflow-hidden rounded-2xl border border-white/30 bg-white/95 shadow-[0_20px_60px_rgba(0,0,0,0.18)]">
-										<div class="relative flex aspect-[16/10] items-center justify-center overflow-hidden bg-gradient-to-br from-[#F0FDF4] to-[#DCFCE7] p-6">
-									{#if product.icon === 'payroll'}
-										<!-- Payroll overlay -->
-										<div class="relative z-10 w-full max-w-[240px] rounded-xl border border-white/60 bg-white/95 p-5 shadow-[0_8px_32px_rgba(0,0,0,0.08)] backdrop-blur-md transition-all duration-300 group-hover/product:scale-[1.03] group-hover/product:shadow-[0_16px_48px_rgba(0,0,0,0.12)]">
-											<div class="mb-2 text-[12px] font-semibold tracking-[0.04em] text-[#4B5563] uppercase">Month Summary</div>
-											<div class="flex justify-between border-t border-[#F0F0F0] py-1.5 text-[12px]">
-												<span class="text-[#4B5563]">Gross wages</span>
-												<span class="text-[#374151]">&#8377;2,48,500</span>
+										<div class="relative flex min-h-[220px] items-center justify-center overflow-hidden bg-gradient-to-br from-[#F0FDF4] to-[#DCFCE7] px-6 pt-16 pb-8 md:min-h-[240px]">
+											<div class="absolute top-4 left-4 z-10">
+												<span class="rounded-full bg-white/90 px-3 py-1 text-[11px] font-semibold tracking-[0.04em] text-[#1B5E3B] uppercase shadow-sm backdrop-blur-sm">
+													{product.badge}
+												</span>
 											</div>
-											<div class="flex justify-between border-t border-[#F0F0F0] py-1.5 text-[12px]">
-												<span class="text-[#4B5563]">PF deducted</span>
-												<span class="text-[#374151]">&#8377;29,820</span>
-											</div>
-											<div class="flex justify-between border-t border-[#F0F0F0] py-1.5 text-[12px]">
-												<span class="text-[#4B5563]">Net payable</span>
-												<span class="font-semibold text-[#111]">&#8377;2,14,207</span>
-											</div>
+											<ModulePreview id={product.id} />
 										</div>
-									{:else if product.icon === 'factory'}
-										<div class="relative z-10 w-full max-w-[240px] rounded-xl border border-white/60 bg-white/95 p-5 shadow-[0_8px_32px_rgba(0,0,0,0.08)] backdrop-blur-md transition-all duration-300 group-hover/product:scale-[1.03] group-hover/product:shadow-[0_16px_48px_rgba(0,0,0,0.12)]">
-											<div class="mb-2 text-[11px] font-semibold tracking-[0.06em] text-[#1B5E3B] uppercase">Cost Per Kg</div>
-											{#each [{ label: 'Green leaf', value: '₹32.50' }, { label: 'Manufacturing', value: '₹12.80' }, { label: 'Power & fuel', value: '₹5.40' }] as row}
-												<div class="flex items-center justify-between border-t border-[#F0F0F0] py-1 text-[12px]">
-													<span class="text-[#4B5563]">{row.label}</span>
-													<span class="font-semibold tabular-nums text-[#374151]" style="font-variant-numeric: tabular-nums">{row.value}</span>
-												</div>
-											{/each}
-											<div class="flex items-center justify-between border-t-2 border-[#E4E4E7] pt-1.5 text-[12px]">
-												<span class="font-semibold text-[#111]">Total</span>
-												<span class="font-bold tabular-nums text-[#1B5E3B]" style="font-variant-numeric: tabular-nums">₹62.00</span>
+										<div class="flex flex-1 flex-col justify-between p-6 md:p-8">
+											<div>
+												<h3 class="text-[19px] font-semibold tracking-[-0.02em] text-[#111111]">{product.title}</h3>
+												<p class="mt-3 text-[14px] leading-[1.6] text-[#4B5563]">{product.desc}</p>
 											</div>
+											<span class="mt-6 inline-flex items-center gap-1.5 text-[14px] font-semibold text-[#1B5E3B] transition-colors group-hover/product:gap-2.5">
+												Learn more
+												<svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M5 2.5l4.5 4.5L5 11.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+											</span>
 										</div>
-									{:else if product.icon === 'stores'}
-										<div class="relative z-10 w-full max-w-[240px] rounded-xl border border-white/60 bg-white/95 p-5 shadow-[0_8px_32px_rgba(0,0,0,0.08)] backdrop-blur-md transition-all duration-300 group-hover/product:scale-[1.03] group-hover/product:shadow-[0_16px_48px_rgba(0,0,0,0.12)]">
-											<div class="mb-2 text-[11px] font-semibold tracking-[0.06em] text-[#1B5E3B] uppercase">Stock Levels</div>
-											{#each [{ label: 'NPK Fertilizer', value: '2,450 kg', ok: true }, { label: 'Diesel', value: '1,200 L', ok: true }, { label: 'Pruning Shears', value: '18 pcs', ok: false }] as row}
-												<div class="flex items-center justify-between border-t border-[#F0F0F0] py-1 text-[12px]">
-													<div class="flex items-center gap-1.5">
-														<div class="h-1.5 w-1.5 rounded-full {row.ok ? 'bg-[#1B5E3B]' : 'bg-[#D97706]'}"></div>
-														<span class="text-[#4B5563]">{row.label}</span>
-													</div>
-													<span class="font-semibold tabular-nums text-[#374151]" style="font-variant-numeric: tabular-nums">{row.value}</span>
-												</div>
-											{/each}
-										</div>
-									{:else}
-										<!-- Dashboard overlay -->
-										<div class="relative z-10 w-full max-w-[240px] rounded-xl border border-[#FDE68A] bg-[#FEF9C3]/95 p-5 shadow-[0_8px_32px_rgba(0,0,0,0.08)] backdrop-blur-sm transition-all duration-300 group-hover/product:scale-[1.03] group-hover/product:shadow-[0_16px_48px_rgba(0,0,0,0.12)]">
-											<div class="mb-2 flex items-center justify-between gap-6">
-												<span class="text-[13px] font-semibold text-[#92400E]">Today's Numbers</span>
-												<span class="text-[11px] font-medium text-[#B45309]">Live</span>
-											</div>
-											{#each [{ label: 'Green leaf', value: '12,450 kg' }, { label: 'Made tea', value: '2,890 kg' }, { label: 'Workers', value: '342' }] as stat}
-												<div class="flex items-center justify-between gap-8 py-1 text-[12px]">
-													<span class="text-[#92400E]/70">{stat.label}</span>
-													<span class="font-semibold text-[#78350F]" style="font-variant-numeric: tabular-nums">{stat.value}</span>
-												</div>
-											{/each}
-										</div>
-									{/if}
-									<div class="absolute top-5 left-5 z-10">
-										<span class="rounded-full bg-white/90 px-3 py-1 text-[11px] font-semibold tracking-[0.04em] text-[#1B5E3B] uppercase shadow-sm backdrop-blur-sm">
-											{product.badge}
-										</span>
-									</div>
-								</div>
-								<div class="flex flex-1 flex-col p-6 md:p-7">
-									<h3 class="text-[17px] font-semibold tracking-[-0.01em] text-[#111111]">{product.title}</h3>
-									<p class="mt-2 flex-1 text-[14px] leading-[1.6] text-[#374151]">{product.desc}</p>
-									<span class="mt-4 inline-flex items-center gap-1.5 text-[14px] font-semibold text-[#1B5E3B] transition-colors group-hover/product:gap-2.5">
-										Learn more
-										<svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M5 2.5l4.5 4.5L5 11.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-									</span>
-								</div>
 									</div>
 								</div>
 							</a>
