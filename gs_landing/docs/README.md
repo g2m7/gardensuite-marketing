@@ -8,6 +8,7 @@ This directory is the current documentation home for the GardenSuite landing pag
 - `landing-page/all-pages-copy-guidelines.md` - master copy rules for homepage, product pages, nav, footer, CTAs, FAQ, trust sections, and SEO copy
 - `landing-page/copy.md` - copy rules, messaging priorities, and section-by-section writing direction
 - `landing-page/product-page-copy-guidelines.md` - product-page copy audit, dos and don'ts, vocabulary rules, and module-specific standards
+- `landing-page/seo.md` - current SEO source of truth for page map, metadata, schema, keywords, and launch checklist
 - `landing-page/typography.md` - type system direction and usage rules
 - `landing-page/styling.md` - layout, component, color, imagery, and motion rules
 - `landing-page/trust-pivot-plan.md` - premium styling plus anonymous proof, local trust, and simple-English sales plan
