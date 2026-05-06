@@ -1,47 +1,97 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { initScrollReveal } from '$lib/scroll-reveal';
+	import ScaleWorkflow from './ScaleWorkflow.svelte';
 
 	onMount(() => {
 		return initScrollReveal();
 	});
 
 	const demoHref = 'mailto:contact@gardensuite.in?subject=GardenSuite%20Demo%20Request';
+
+	const problems = [
+		{
+			title: 'Proxy attendance',
+			desc: 'Workers may mark attendance for others. The office may pay for people who did not report.'
+		},
+		{
+			title: 'Loose weight chits',
+			desc: 'Leaf weight written on paper can be delayed, changed, or entered against the wrong worker.'
+		},
+		{
+			title: 'Payroll doubts',
+			desc: 'When attendance and leaf weight are separate, payroll staff spend extra time checking records.'
+		}
+	];
+
+	const proofRows = [
+		['Face check', 'Worker identity verified before attendance'],
+		['Weight capture', 'Bluetooth scale sends kg to the same record'],
+		['Offline save', 'Field data is stored even without internet'],
+		['Office sync', 'Payroll and reports use the captured data']
+	];
+
+	const rollout = [
+		['1', 'Garden visit', 'Sarbani Associates checks your section, worker, and weighing workflow.'],
+		[
+			'2',
+			'Setup',
+			'Face app, scale, and GardenSuite office software are configured for your garden.'
+		],
+		[
+			'3',
+			'Training',
+			'Supervisors and office staff learn the daily flow using real worker records.'
+		],
+		['4', 'Support', 'The Sarbani team supports your staff until the process is steady.']
+	];
+
+	const buyers = [
+		['Manager', 'Know who reported today and how much leaf was collected.'],
+		['Owner', 'Check daily attendance and plucking numbers from outside the garden.'],
+		['Office staff', 'Use the same attendance and weight data for payroll.']
+	];
 </script>
 
 <svelte:head>
-	<title>Face Attendance &amp; Smart Scale - Tea Garden Biometric | GardenSuite</title>
+	<title>Face Attendance &amp; Smart Weighing - Tea Garden Software | GardenSuite</title>
 	<meta
 		name="description"
-		content="Face recognition attendance and Bluetooth smart scale for tea gardens. Helps stop proxy attendance, records leaf weight, and works offline."
+		content="Face attendance and Bluetooth smart weighing for tea gardens. Verify workers, record leaf weight, work offline, and sync data for payroll."
 	/>
 	<link rel="canonical" href="https://gardensuite.in/products/attendance" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://gardensuite.in/products/attendance" />
-	<meta property="og:title" content="Face Attendance &amp; Smart Scale - GardenSuite" />
+	<meta property="og:title" content="Face Attendance &amp; Smart Weighing - GardenSuite" />
 	<meta
 		property="og:description"
-		content="Face recognition attendance and Bluetooth smart scale for tea gardens. Helps stop proxy attendance, records leaf weight, and works offline."
+		content="Verify workers by face, capture leaf weight by Bluetooth scale, and sync data for payroll when internet returns."
 	/>
-	<meta property="og:image" content="https://gardensuite.in/mis-dashboard-1400.webp" />
+	<meta
+		property="og:image"
+		content="https://gardensuite.in/screenshots/face-attendance_liveness-check_passed.png"
+	/>
 	<meta property="og:site_name" content="GardenSuite" />
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="Face Attendance &amp; Smart Scale - GardenSuite" />
+	<meta name="twitter:title" content="Face Attendance &amp; Smart Weighing - GardenSuite" />
 	<meta
 		name="twitter:description"
-		content="Face recognition attendance and Bluetooth smart scale for tea gardens. Helps stop proxy attendance and records leaf weight."
+		content="Face attendance and smart weighing software for tea gardens. Works offline and syncs when internet returns."
 	/>
-	<meta name="twitter:image" content="https://gardensuite.in/mis-dashboard-1400.webp" />
+	<meta
+		name="twitter:image"
+		content="https://gardensuite.in/screenshots/face-attendance_liveness-check_passed.png"
+	/>
 	{@html `<script type="application/ld+json">${JSON.stringify({
 		'@context': 'https://schema.org',
 		'@graph': [
 			{
 				'@type': 'SoftwareApplication',
-				name: 'GardenSuite Face Attendance & Smart Scale',
+				name: 'GardenSuite Face Attendance & Smart Weighing',
 				applicationCategory: 'BusinessApplication',
 				operatingSystem: 'Android, Windows',
 				description:
-					'Face recognition attendance and Bluetooth smart weighing scale for tea gardens. Helps stop proxy attendance and records leaf weight linked to verified workers.',
+					'Face attendance and Bluetooth smart weighing software for tea gardens. Verifies workers, records leaf weight, works offline, and syncs data for payroll.',
 				provider: {
 					'@type': 'Organization',
 					name: 'Sarbani Associates',
@@ -78,642 +128,312 @@
 
 <div class="flex min-h-screen w-full flex-col overflow-clip bg-[#FAFAF7] antialiased">
 	<main>
-		<!-- ═══════════════════════════════════════════════════════════ -->
-		<!-- HERO                                                       -->
-		<!-- ═══════════════════════════════════════════════════════════ -->
-		<section class="relative w-full bg-white pt-28 pb-20 md:pt-36 md:pb-28">
-			<div class="mx-auto max-w-[1344px] px-6 md:px-12">
-				<div class="mx-auto max-w-[800px] text-center">
-					<span
-						class="mb-4 inline-block rounded-full bg-[#1B5E3B] px-3 py-1 text-[11px] font-semibold tracking-[0.04em] text-white uppercase"
-						>Attendance &amp; Weighing</span
-					>
-					<h1
-						class="text-[36px] leading-[1.08] font-semibold tracking-[-0.04em] text-[#111111] md:text-[44px] lg:text-[52px]"
-						style="text-wrap: balance"
-					>
-						Every worker verified. Every leaf weighed.
-					</h1>
-					<p class="mx-auto mt-6 max-w-[560px] text-[17px] leading-[1.6] text-[#52525B]">
-						Face attendance checks worker identity. Bluetooth scale records exact leaf weight. Both
-						work offline. Data syncs when internet returns.
-					</p>
-				</div>
-			</div>
-		</section>
-
-		<!-- TRUST ROW -->
 		<section
-			class="relative z-30 w-full border-b border-[#F0F0F0] bg-white py-5 md:py-6"
-			aria-label="Trust indicators"
+			class="relative w-full border-b border-[#F0F0F0] bg-white pt-24 pb-16 md:pt-36 md:pb-24"
 		>
 			<div
-				class="mx-auto flex max-w-[1344px] flex-wrap items-center justify-center gap-x-6 gap-y-3 px-6 md:gap-x-10 md:px-12"
-			>
-				<div class="flex items-center gap-2">
-					<span class="text-[20px] font-semibold tracking-[-0.02em] text-[#111111] md:text-[24px]"
-						>20+</span
-					>
-					<span class="text-[13px] text-[#71717A]">Tea Estates</span>
-				</div>
-				<div class="hidden h-5 w-px bg-[#E4E4E7] md:block"></div>
-				<div class="flex items-center gap-2">
-					<span class="text-[20px] font-semibold tracking-[-0.02em] text-[#111111] md:text-[24px]"
-						>7</span
-					>
-					<span class="text-[13px] text-[#71717A]">Regions</span>
-				</div>
-				<div class="hidden h-5 w-px bg-[#E4E4E7] md:block"></div>
-				<div class="flex items-center gap-2">
-					<span class="text-[13px] font-medium text-[#3F3F46]">Since 2000</span>
-				</div>
-				<div class="hidden h-5 w-px bg-[#E4E4E7] md:block"></div>
-				<div class="flex items-center gap-2">
-					<div class="h-1.5 w-1.5 rounded-full bg-[#1B5E3B]"></div>
-					<span class="text-[13px] font-medium text-[#3F3F46]">Offline at the garden</span>
-				</div>
-			</div>
-		</section>
-
-		<!-- ═══════════════════════════════════════════════════════════ -->
-		<!-- PROBLEM STRIP                                              -->
-		<!-- ═══════════════════════════════════════════════════════════ -->
-		<section
-			class="reveal-on-scroll relative w-full border-b border-[#F0F0F0] bg-white py-20 md:py-28"
-		>
-			<div class="mx-auto max-w-[1344px] px-6 md:px-12">
-				<div class="mb-12 max-w-[520px]">
-					<span
-						class="mb-4 inline-block text-[13px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase"
-						>The old way</span
-					>
-					<h2
-						class="text-[32px] leading-[1.1] font-semibold tracking-[-0.04em] text-[#111111] md:text-[40px]"
-						style="text-wrap: balance"
-					>
-						Paper attendance leaks money every day.
-					</h2>
-				</div>
-
-				<div class="grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-8">
-					{#each [{ title: 'Proxy attendance', desc: 'Workers may mark attendance for others. You pay for people who did not show up.' }, { title: 'Fake weight chits', desc: 'Paper chits get altered or duplicated. Inflated green leaf weights go undetected until stock reconciliation.' }, { title: 'No real-time data', desc: 'Attendance registers take days to reach the office. Decisions wait for data that arrives too late.' }] as item}
-						<div
-							class="rounded-2xl border border-[#E4E4E7] bg-white p-6 transition-all duration-200 hover:border-[#D4D4D8] hover:shadow-[0_8px_30px_rgba(0,0,0,0.04)] md:p-8"
-						>
-							<div
-								class="mb-5 flex h-11 w-11 items-center justify-center rounded-xl bg-[#DC2626]/8"
-							>
-								<svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-									<path
-										d="M10 4v8M10 15v1"
-										stroke="#DC2626"
-										stroke-width="1.5"
-										stroke-linecap="round"
-									/>
-								</svg>
-							</div>
-							<h3 class="mb-2 text-[17px] font-semibold tracking-[-0.01em] text-[#111111]">
-								{item.title}
-							</h3>
-							<p class="text-[14px] leading-[1.6] text-[#52525B]">{item.desc}</p>
-						</div>
-					{/each}
-				</div>
-			</div>
-		</section>
-
-		<!-- ═══════════════════════════════════════════════════════════ -->
-		<!-- STORY 01: Face Scan (Text Left, Visual Right)              -->
-		<!-- ═══════════════════════════════════════════════════════════ -->
-		<section class="reveal-on-scroll relative w-full bg-[#FAFAF7] py-24 md:py-32">
-			<div
-				class="mx-auto grid max-w-[1344px] items-center gap-12 px-6 md:grid-cols-2 md:gap-16 md:px-12"
+				class="mx-auto grid max-w-[1344px] items-center gap-12 px-6 md:grid-cols-[0.92fr_1.08fr] md:px-12"
 			>
 				<div>
-					<span
-						class="mb-4 inline-block text-[13px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase"
-						>Step 1 - Face Scan</span
-					>
-					<h2
-						class="text-[32px] leading-[1.08] font-semibold tracking-[-0.04em] text-[#111111] md:text-[40px]"
+					<span class="text-[12px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase">
+						Face Attendance &amp; Smart Weighing
+					</span>
+					<h1
+						class="mt-5 max-w-[640px] text-[36px] leading-[1.04] font-semibold tracking-[-0.04em] text-[#111111] md:text-[56px] lg:text-[64px]"
 						style="text-wrap: balance"
 					>
-						A worker looks at the camera. That's it.
-					</h2>
-					<p class="mt-5 text-[17px] leading-[1.6] text-[#52525B]">
-						No registers. No proxy attendance. The app identifies workers in under 2 seconds using
-						face recognition - even without internet.
+						Verify the worker before weight reaches payroll.
+					</h1>
+					<p
+						class="mt-5 max-w-[560px] text-[16px] leading-[1.6] text-[#52525B] md:mt-6 md:text-[18px]"
+					>
+						Face attendance checks the worker. The Bluetooth hanging scale records leaf weight
+						against the same worker. Both work offline at the garden and sync when internet returns.
 					</p>
-					<ul class="mt-6 flex flex-col gap-3" role="list">
-						{#each ['Works offline - no internet needed', 'Identifies workers in under 2 seconds', 'Helps stop proxy attendance'] as bullet}
-							<li class="flex items-center gap-2.5">
-								<div
-									class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#1B5E3B]/10"
-								>
-									<svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"
-										><path
-											d="M2 5l2 2 4-4"
-											stroke="#1B5E3B"
-											stroke-width="1.5"
-											stroke-linecap="round"
-											stroke-linejoin="round"
-										/></svg
-									>
-								</div>
-								<span class="text-[14px] font-medium text-[#3F3F46]">{bullet}</span>
-							</li>
-						{/each}
-					</ul>
+					<div class="mt-6 grid grid-cols-[0.72fr_1fr] items-end gap-3 sm:hidden">
+						<figure
+							class="rounded-lg border border-[#E4E4E7] bg-[#FAFAF7] p-2 shadow-[0_12px_36px_rgba(0,0,0,0.06)]"
+						>
+							<img
+								src="/screenshots/face-attendance_liveness-check_passed.png"
+								alt="GardenSuite face attendance app showing liveness check passed"
+								width="1080"
+								height="2400"
+								class="aspect-[9/13] w-full rounded-md object-cover object-top"
+								fetchpriority="high"
+							/>
+						</figure>
+						<figure
+							class="rounded-lg border border-[#E4E4E7] bg-white p-3 shadow-[0_12px_36px_rgba(0,0,0,0.06)]"
+						>
+							<img
+								src="/bluetooth-scale.svg"
+								alt="Bluetooth hanging scale used with GardenSuite smart weighing"
+								width="512"
+								height="512"
+								class="mx-auto w-full max-w-[150px]"
+								fetchpriority="high"
+							/>
+						</figure>
+					</div>
+					<div class="mt-8 flex flex-col gap-3 sm:flex-row">
+						<a
+							href={demoHref}
+							class="inline-flex min-h-12 items-center justify-center rounded-lg bg-[#1B5E3B] px-6 text-[15px] font-semibold text-white shadow-[0_2px_12px_rgba(27,94,59,0.18)] transition duration-150 hover:bg-[#144723] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 active:scale-[0.98]"
+						>
+							Book Free Demo
+						</a>
+						<a
+							href="#workflow"
+							class="inline-flex min-h-12 items-center justify-center rounded-lg border border-[#D4D4D8] bg-white px-6 text-[15px] font-semibold text-[#111111] transition duration-150 hover:border-[#A1A1AA] hover:bg-[#FAFAF7] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 active:scale-[0.98]"
+						>
+							See Workflow
+						</a>
+					</div>
+					<div class="mt-8 flex flex-wrap gap-x-8 gap-y-3 text-[13px] text-[#52525B]">
+						<span><strong class="font-semibold text-[#111111]">20+</strong> tea estates</span>
+						<span
+							><strong class="font-semibold text-[#111111]">Since 2000</strong> in tea gardens</span
+						>
+						<span
+							><strong class="font-semibold text-[#111111]">Sarbani Associates</strong> support</span
+						>
+					</div>
 				</div>
 
-				<!-- Phone Mockup -->
-				<div class="relative flex justify-center">
-					<div
-						class="flex h-[560px] w-[280px] flex-col rounded-[36px] bg-[#1a1a1a] p-3.5 shadow-[0_30px_100px_rgba(0,0,0,0.18)] md:h-[600px] md:w-[300px]"
-					>
-						<div class="flex justify-between px-4 pt-2 pb-1">
-							<span class="text-[11px] text-white/50">9:41</span>
-							<div class="h-2.5 w-4 rounded-[2px] border border-white/40"></div>
-						</div>
-						<div
-							class="mx-0 my-1 flex flex-1 flex-col items-center justify-center gap-5 rounded-[24px] bg-[#f5f5f5]"
+				<div class="relative hidden sm:block">
+					<div class="grid items-center gap-5 sm:grid-cols-[0.95fr_1.05fr]">
+						<figure
+							class="rounded-lg border border-[#E4E4E7] bg-[#FAFAF7] p-3 shadow-[0_18px_55px_rgba(0,0,0,0.07)]"
 						>
-							<div
-								class="flex h-[140px] w-[140px] items-center justify-center rounded-full border-[3px] border-[#1B5E3B]"
-							>
-								<div
-									class="flex h-[110px] w-[110px] items-center justify-center rounded-full border-2 border-dashed border-[#1B5E3B]/30"
-								>
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										width="44"
-										height="44"
-										viewBox="0 0 24 24"
-										fill="none"
-										stroke="#1B5E3B"
-										stroke-width="1.5"
-										aria-hidden="true"
-										><circle cx="12" cy="8" r="4" /><path
-											d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"
-										/></svg
-									>
-								</div>
-							</div>
-							<span class="text-[14px] text-[#71717A]">Scanning face…</span>
-							<div class="flex gap-1.5">
-								<div class="h-2 w-2 rounded-full bg-[#1B5E3B]"></div>
-								<div class="h-2 w-2 rounded-full bg-[#1B5E3B]/40"></div>
-								<div class="h-2 w-2 rounded-full bg-[#1B5E3B]/20"></div>
-							</div>
-						</div>
-					</div>
-					<!-- Floating stat -->
-					<div
-						class="absolute -bottom-4 -left-2 hidden rounded-xl border border-[#E4E4E7] bg-white px-5 py-3.5 shadow-[0_8px_32px_rgba(0,0,0,0.08)] md:flex md:flex-col md:gap-1"
-					>
-						<span class="text-[10px] font-semibold tracking-[0.1em] text-[#71717A] uppercase"
-							>Response Time</span
+							<img
+								src="/screenshots/face-attendance_liveness-check_passed.png"
+								alt="GardenSuite face attendance app showing liveness check passed"
+								width="1080"
+								height="2400"
+								class="aspect-[9/20] w-full rounded-md object-cover object-top"
+								fetchpriority="high"
+							/>
+						</figure>
+						<figure
+							class="rounded-lg border border-[#E4E4E7] bg-white p-8 shadow-[0_18px_55px_rgba(0,0,0,0.07)]"
 						>
-						<span class="text-[28px] font-bold text-[#111111] tabular-nums">&lt; 2s</span>
+							<img
+								src="/bluetooth-scale.svg"
+								alt="Bluetooth hanging scale used with GardenSuite smart weighing"
+								width="512"
+								height="512"
+								class="mx-auto w-full max-w-[300px]"
+								fetchpriority="high"
+							/>
+							<figcaption class="mt-5 text-center text-[14px] font-semibold text-[#111111]">
+								Leaf weight linked to verified worker
+							</figcaption>
+						</figure>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<!-- ═══════════════════════════════════════════════════════════ -->
-		<!-- STORY 02: Verified (Visual Left, Text Right)               -->
-		<!-- ═══════════════════════════════════════════════════════════ -->
-		<section class="reveal-on-scroll relative w-full bg-white py-24 md:py-32">
-			<div
-				class="mx-auto grid max-w-[1344px] items-center gap-12 px-6 md:grid-cols-2 md:gap-16 md:px-12"
-			>
-				<!-- Phone Mockup -->
-				<div class="relative flex justify-center md:order-1">
-					<div
-						class="flex h-[560px] w-[280px] flex-col rounded-[36px] bg-[#1a1a1a] p-3.5 shadow-[0_30px_100px_rgba(0,0,0,0.18)] md:h-[600px] md:w-[300px]"
-					>
-						<div class="flex justify-between px-4 pt-2 pb-1">
-							<span class="text-[11px] text-white/50">9:41</span>
-							<div class="h-2.5 w-4 rounded-[2px] border border-white/40"></div>
-						</div>
-						<div
-							class="mx-0 my-1 flex flex-1 flex-col items-center justify-center gap-6 rounded-[24px] bg-[#f5f5f5]"
+		<section class="w-full border-b border-[#F0F0F0] bg-white py-14 md:py-18">
+			<div class="mx-auto max-w-[1344px] px-6 md:px-12">
+				<div class="grid gap-8 md:grid-cols-[0.8fr_1.2fr] md:items-start">
+					<div>
+						<span class="text-[12px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase">
+							The old way
+						</span>
+						<h2
+							class="mt-3 text-[30px] leading-[1.1] font-semibold tracking-[-0.04em] text-[#111111] md:text-[42px]"
+							style="text-wrap: balance"
 						>
-							<div
-								class="flex h-20 w-20 items-center justify-center rounded-full bg-[#1B5E3B] shadow-[0_0_40px_rgba(27,94,59,0.3)]"
-							>
+							Attendance and leaf weight should not depend on paper.
+						</h2>
+					</div>
+					<div class="grid gap-4 md:grid-cols-3">
+						{#each problems as item}
+							<article class="rounded-lg border border-[#E4E4E7] bg-white p-5">
 								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="36"
-									height="36"
+									width="22"
+									height="22"
 									viewBox="0 0 24 24"
 									fill="none"
-									stroke="#FFF"
-									stroke-width="2.5"
-									aria-hidden="true"><path d="M5 13l4 4L19 7" /></svg
+									aria-hidden="true"
+									class="mb-5 drop-shadow-[0_4px_10px_rgba(220,38,38,0.16)]"
 								>
-							</div>
-							<div class="flex flex-col items-center gap-1.5">
-								<span class="text-[18px] font-semibold text-[#111111]">Ramesh Kumar</span>
-								<span class="text-[13px] text-[#71717A]">Section A - Plucking</span>
-							</div>
-							<div
-								class="flex flex-col items-center gap-1 rounded-xl border border-[#1B5E3B]/20 bg-[#1B5E3B]/5 px-7 py-3.5"
-							>
-								<span class="text-[10px] font-semibold tracking-[0.12em] text-[#1B5E3B] uppercase"
-									>Attendance Logged</span
-								>
-								<span class="text-[20px] font-bold text-[#111111] tabular-nums">09:41 AM</span>
-							</div>
-						</div>
-					</div>
-					<!-- Floating chip -->
-					<div
-						class="absolute top-20 -right-2 hidden items-center gap-2.5 rounded-xl border border-[#E4E4E7] bg-white px-4 py-3 shadow-[0_8px_32px_rgba(0,0,0,0.06)] md:flex"
-					>
-						<div class="h-2 w-2 rounded-full bg-[#1B5E3B]"></div>
-						<span class="text-[13px] font-medium text-[#3F3F46]"
-							>Auto-synced to ERP (office software)</span
-						>
-					</div>
-					<!-- Floating stat -->
-					<div
-						class="absolute -right-2 -bottom-4 hidden rounded-xl border border-[#E4E4E7] bg-white px-5 py-3.5 shadow-[0_8px_32px_rgba(0,0,0,0.08)] md:flex md:flex-col md:gap-1"
-					>
-						<span class="text-[10px] font-semibold tracking-[0.1em] text-[#71717A] uppercase"
-							>Accuracy</span
-						>
-						<span class="text-[24px] font-bold text-[#111111] tabular-nums">99.7%</span>
-					</div>
-				</div>
-
-				<div class="md:order-2">
-					<span
-						class="mb-4 inline-block text-[13px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase"
-						>Step 2 - Verified</span
-					>
-					<h2
-						class="text-[32px] leading-[1.08] font-semibold tracking-[-0.04em] text-[#111111] md:text-[40px]"
-						style="text-wrap: balance"
-					>
-						Identity verified. Attendance logged.
-					</h2>
-					<p class="mt-5 text-[17px] leading-[1.6] text-[#52525B]">
-						Name, section, and time - all recorded automatically. No manual entry needed. Data syncs
-						to the desktop ERP the moment it goes online.
-					</p>
-					<ul class="mt-6 flex flex-col gap-3" role="list">
-						{#each ['Auto-records name, time, and section', 'Syncs to ERP automatically when connected', 'Zero manual data entry mistakes'] as bullet}
-							<li class="flex items-center gap-2.5">
-								<div
-									class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#1B5E3B]/10"
-								>
-									<svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"
-										><path
-											d="M2 5l2 2 4-4"
-											stroke="#1B5E3B"
-											stroke-width="1.5"
-											stroke-linecap="round"
-											stroke-linejoin="round"
-										/></svg
-									>
-								</div>
-								<span class="text-[14px] font-medium text-[#3F3F46]">{bullet}</span>
-							</li>
+									<path
+										d="M12 8v5M12 17h.01M10.3 4.6 2.9 17.4A2 2 0 0 0 4.6 20h14.8a2 2 0 0 0 1.7-2.6L13.7 4.6a2 2 0 0 0-3.4 0Z"
+										stroke="#DC2626"
+										stroke-width="1.6"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									/>
+								</svg>
+								<h3 class="text-[17px] font-semibold tracking-[-0.01em] text-[#111111]">
+									{item.title}
+								</h3>
+								<p class="mt-2 text-[14px] leading-[1.6] text-[#52525B]">{item.desc}</p>
+							</article>
 						{/each}
-					</ul>
+					</div>
 				</div>
 			</div>
 		</section>
 
-		<!-- ═══════════════════════════════════════════════════════════ -->
-		<!-- STORY 03: Smart Weighing (Text Left, Visual Right)         -->
-		<!-- ═══════════════════════════════════════════════════════════ -->
-		<section class="reveal-on-scroll relative w-full bg-[#FAFAF7] py-24 md:py-32">
+		<section
+			class="reveal-on-scroll w-full bg-[#FAFAF7] py-18 md:py-24"
+			aria-labelledby="proof-heading"
+		>
 			<div
-				class="mx-auto grid max-w-[1344px] items-center gap-12 px-6 md:grid-cols-2 md:gap-16 md:px-12"
+				class="mx-auto grid max-w-[1344px] gap-10 px-6 md:grid-cols-[0.95fr_1.05fr] md:items-center md:px-12"
 			>
 				<div>
-					<span
-						class="mb-4 inline-block text-[13px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase"
-						>Step 3 - Smart Weighing</span
-					>
+					<span class="text-[12px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase">
+						GardenSuite flow
+					</span>
 					<h2
-						class="text-[32px] leading-[1.08] font-semibold tracking-[-0.04em] text-[#111111] md:text-[40px]"
+						id="proof-heading"
+						class="mt-3 text-[32px] leading-[1.08] font-semibold tracking-[-0.04em] text-[#111111] md:text-[44px]"
 						style="text-wrap: balance"
 					>
-						Green leaf meets smart scale.
+						One field entry feeds attendance, leaf weight, payroll, and reports.
 					</h2>
-					<p class="mt-5 text-[17px] leading-[1.6] text-[#52525B]">
-						The Bluetooth-connected wireless scale sends weight directly to the app. Each reading is
-						linked to the verified worker - no paper chits, no confusion, no errors.
+					<p class="mt-5 max-w-[560px] text-[17px] leading-[1.65] text-[#52525B]">
+						The supervisor does not need separate registers for attendance and weighing. The worker
+						is verified, the kg is captured, and the record is ready for the office.
 					</p>
-					<ul class="mt-6 flex flex-col gap-3" role="list">
-						{#each ['Wireless Bluetooth connection', 'Weight linked to verified face ID', 'Eliminates paper chit weighing'] as bullet}
-							<li class="flex items-center gap-2.5">
-								<div
-									class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#1B5E3B]/10"
-								>
-									<svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"
-										><path
-											d="M2 5l2 2 4-4"
-											stroke="#1B5E3B"
-											stroke-width="1.5"
-											stroke-linecap="round"
-											stroke-linejoin="round"
-										/></svg
-									>
-								</div>
-								<span class="text-[14px] font-medium text-[#3F3F46]">{bullet}</span>
-							</li>
-						{/each}
-					</ul>
 				</div>
-
-				<!-- Scale Display -->
-				<div class="relative flex justify-center">
-					<div
-						class="flex w-[280px] flex-col items-center gap-4 rounded-2xl border-2 border-[#E4E4E7] bg-white px-6 py-8 shadow-[0_20px_60px_rgba(0,0,0,0.08)]"
-					>
-						<div class="flex items-center gap-1.5 rounded-full bg-[#1B5E3B]/10 px-3.5 py-1.5">
-							<div class="h-1.5 w-1.5 animate-pulse rounded-full bg-[#1B5E3B]"></div>
-							<span class="text-[11px] font-semibold text-[#1B5E3B]">CONNECTED</span>
-						</div>
-						<div class="mt-4 flex flex-col items-center gap-1">
-							<span
-								class="text-[64px] leading-none font-bold tracking-[-2px] text-[#111111] tabular-nums"
-								>4.23</span
+				<div class="rounded-lg border border-[#E4E4E7] bg-white p-5 md:p-6">
+					<div class="grid gap-0">
+						{#each proofRows as row}
+							<div
+								class="grid gap-2 border-b border-[#F0F0F0] py-4 last:border-b-0 md:grid-cols-[150px_1fr]"
 							>
-							<span class="text-[14px] text-[#71717A]">kg green leaf</span>
-						</div>
-						<div class="mt-4 flex flex-col items-center gap-0">
-							<div class="h-7 w-px bg-[#E4E4E7]"></div>
-							<svg width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true"
-								><path
-									d="M1 1l4 4 4-4"
-									stroke="#E4E4E7"
-									stroke-width="1.5"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-								/></svg
-							>
-						</div>
-					</div>
-					<!-- Floating receipt -->
-					<div
-						class="absolute -right-4 -bottom-6 hidden items-center gap-3 rounded-xl border border-[#E4E4E7] bg-white px-5 py-3.5 shadow-[0_12px_40px_rgba(0,0,0,0.08)] md:flex"
-					>
-						<div
-							class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#1B5E3B]/10"
-						>
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								width="16"
-								height="16"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="#1B5E3B"
-								stroke-width="2"
-								aria-hidden="true"><path d="M5 13l4 4L19 7" /></svg
-							>
-						</div>
-						<div class="flex flex-col gap-0.5">
-							<span class="text-[14px] font-semibold text-[#111111]">Ramesh Kumar</span>
-							<span class="text-[12px] text-[#71717A]">4.23 kg recorded</span>
-						</div>
+								<span class="text-[13px] font-semibold text-[#111111]">{row[0]}</span>
+								<span class="text-[14px] leading-[1.6] text-[#52525B]">{row[1]}</span>
+							</div>
+						{/each}
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<!-- ═══════════════════════════════════════════════════════════ -->
-		<!-- FLOW: How It All Connects                                   -->
-		<!-- ═══════════════════════════════════════════════════════════ -->
-		<section
-			class="reveal-on-scroll relative w-full border-t border-[#F0F0F0] bg-white py-24 md:py-32"
-		>
-			<div class="mx-auto max-w-[1344px] px-6 md:px-12">
-				<div class="mb-14 text-center">
-					<span
-						class="mb-4 inline-block text-[13px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase"
-						>How it connects</span
-					>
-					<h2
-						class="text-[36px] leading-[1.08] font-semibold tracking-[-0.04em] text-[#111111] md:text-[44px]"
-						style="text-wrap: balance"
-					>
-						From field to cloud in real time.
-					</h2>
-					<p class="mx-auto mt-5 max-w-[560px] text-[17px] leading-[1.6] text-[#52525B]">
-						Every piece of data flows through the system automatically. No manual re-entry. No
-						delays.
-					</p>
-				</div>
+		<div id="workflow">
+			<ScaleWorkflow />
+		</div>
 
-				<div class="grid grid-cols-1 gap-6 md:grid-cols-4 md:gap-8">
-					{#each [{ step: '1', title: 'Face App', desc: 'Worker scans in. Attendance logged offline.', icon: 'phone' }, { step: '2', title: 'Smart Scale', desc: 'Bluetooth weight sent to app. Linked to face.', icon: 'scale' }, { step: '3', title: 'Desktop ERP', desc: 'Data syncs when online. Payroll calculated.', icon: 'erp' }, { step: '4', title: 'Daily report', desc: 'Owner sees daily numbers from anywhere.', icon: 'cloud' }] as item}
-						<div
-							class="rounded-2xl border border-[#E4E4E7] bg-white p-6 transition-all duration-200 hover:border-[#D4D4D8] hover:shadow-[0_8px_30px_rgba(0,0,0,0.04)] md:p-8"
-						>
-							<div
-								class="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#1B5E3B]/8"
+		<section class="reveal-on-scroll w-full border-y border-[#F0F0F0] bg-white py-14 md:py-18">
+			<div class="mx-auto grid max-w-[1344px] gap-8 px-6 md:grid-cols-4 md:items-center md:px-12">
+				<div class="md:col-span-1">
+					<span class="text-[12px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase">
+						Result
+					</span>
+					<h2
+						class="mt-3 text-[28px] leading-[1.12] font-semibold tracking-[-0.04em] text-[#111111]"
+					>
+						Field data the office can use.
+					</h2>
+				</div>
+				<div class="grid gap-4 md:col-span-3 md:grid-cols-3">
+					{#each ['Attendance is tied to face verification', 'Leaf kg is tied to the same worker', 'Payroll starts from captured records'] as item}
+						<div class="rounded-lg border border-[#E4E4E7] bg-white p-5">
+							<svg
+								width="21"
+								height="21"
+								viewBox="0 0 24 24"
+								fill="none"
+								aria-hidden="true"
+								class="mb-4 drop-shadow-[0_4px_10px_rgba(27,94,59,0.14)]"
 							>
-								{#if item.icon === 'phone'}
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										width="22"
-										height="22"
-										viewBox="0 0 24 24"
-										fill="none"
-										stroke="#1B5E3B"
-										stroke-width="1.5"
-										aria-hidden="true"
-										><rect x="5" y="2" width="14" height="20" rx="2" /><circle
-											cx="12"
-											cy="18"
-											r="1"
-										/></svg
-									>
-								{:else if item.icon === 'scale'}
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										width="22"
-										height="22"
-										viewBox="0 0 24 24"
-										fill="none"
-										stroke="#1B5E3B"
-										stroke-width="1.5"
-										aria-hidden="true"
-										><path d="M6 2h12l2 8H4L6 2z" /><path
-											d="M4 10v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V10"
-										/><line x1="12" y1="14" x2="12" y2="18" /></svg
-									>
-								{:else if item.icon === 'erp'}
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										width="22"
-										height="22"
-										viewBox="0 0 24 24"
-										fill="none"
-										stroke="#1B5E3B"
-										stroke-width="1.5"
-										aria-hidden="true"
-										><rect x="2" y="3" width="20" height="14" rx="2" /><line
-											x1="8"
-											y1="21"
-											x2="16"
-											y2="21"
-										/><line x1="12" y1="17" x2="12" y2="21" /></svg
-									>
-								{:else}
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										width="22"
-										height="22"
-										viewBox="0 0 24 24"
-										fill="none"
-										stroke="#1B5E3B"
-										stroke-width="1.5"
-										aria-hidden="true"
-										><path d="M18 10a6 6 0 0 0-12 0 4 4 0 0 0 0 8h12a4 4 0 0 0 0-8z" /></svg
-									>
-								{/if}
-							</div>
-							<div
-								class="mb-2 text-[11px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase"
-							>
-								Step {item.step}
-							</div>
-							<h3 class="text-[17px] font-semibold tracking-[-0.01em] text-[#111111]">
-								{item.title}
-							</h3>
-							<p class="mt-2 text-[14px] leading-[1.6] text-[#52525B]">{item.desc}</p>
+								<path
+									d="m5 13 4 4L19 7"
+									stroke="#1B5E3B"
+									stroke-width="1.9"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
+							</svg>
+							<p class="text-[15px] leading-[1.45] font-semibold text-[#111111]">{item}</p>
 						</div>
 					{/each}
 				</div>
 			</div>
 		</section>
 
-		<!-- ═══════════════════════════════════════════════════════════ -->
-		<!-- KEY METRICS                                                 -->
-		<!-- ═══════════════════════════════════════════════════════════ -->
 		<section
-			class="reveal-on-scroll relative w-full border-y border-[#F0F0F0] bg-white py-12 md:py-16"
-		>
-			<div
-				class="mx-auto flex max-w-[1344px] flex-col items-center gap-8 px-6 md:flex-row md:justify-between md:gap-12 md:px-12"
-			>
-				<div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-4 md:gap-x-14">
-					<div class="flex flex-col items-center gap-1">
-						<span class="text-[32px] font-semibold tracking-[-0.03em] text-[#111111] md:text-[36px]"
-							>&lt; 2s</span
-						>
-						<span class="text-[13px] font-semibold tracking-[0.04em] text-[#71717A] uppercase"
-							>Face Match</span
-						>
-					</div>
-					<div class="hidden h-8 w-px bg-[#E4E4E7] md:block"></div>
-					<div class="flex flex-col items-center gap-1">
-						<span class="text-[32px] font-semibold tracking-[-0.03em] text-[#111111] md:text-[36px]"
-							>99.7%</span
-						>
-						<span class="text-[13px] font-semibold tracking-[0.04em] text-[#71717A] uppercase"
-							>Accuracy</span
-						>
-					</div>
-					<div class="hidden h-8 w-px bg-[#E4E4E7] md:block"></div>
-					<div class="flex flex-col items-center gap-1">
-						<span class="text-[32px] font-semibold tracking-[-0.03em] text-[#111111] md:text-[36px]"
-							>0</span
-						>
-						<span class="text-[13px] font-semibold tracking-[0.04em] text-[#71717A] uppercase"
-							>Paper Chits</span
-						>
-					</div>
-				</div>
-				<div class="flex flex-col items-center gap-1 md:items-end">
-					<span class="text-[14px] font-semibold text-[#3F3F46]"
-						>Works fully offline at the garden</span
-					>
-					<span class="text-[13px] text-[#71717A]">Syncs when internet returns</span>
-				</div>
-			</div>
-		</section>
-
-		<!-- HOW ROLLOUT WORKS -->
-		<section
-			class="reveal-on-scroll relative w-full bg-[#FAFAF7] py-20 md:py-28"
+			class="reveal-on-scroll w-full bg-[#FAFAF7] py-18 md:py-24"
 			aria-labelledby="rollout-heading"
 		>
 			<div class="mx-auto max-w-[1344px] px-6 md:px-12">
-				<div class="mb-10 text-center">
-					<span
-						class="mb-4 inline-block text-[13px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase"
-						>How rollout works</span
-					>
+				<div class="mb-10 max-w-[620px]">
+					<span class="text-[12px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase">
+						On-site rollout
+					</span>
 					<h2
 						id="rollout-heading"
-						class="text-[32px] leading-[1.1] font-semibold tracking-[-0.04em] text-[#111111] md:text-[40px]"
+						class="mt-3 text-[32px] leading-[1.08] font-semibold tracking-[-0.04em] text-[#111111] md:text-[44px]"
 						style="text-wrap: balance"
 					>
-						From first call to running live.
+						Sarbani Associates sets it up with your staff.
 					</h2>
+					<p class="mt-5 text-[17px] leading-[1.65] text-[#52525B]">
+						GardenSuite is not handed over as a self-service app. The Sarbani team visits, installs,
+						trains, and supports the garden.
+					</p>
 				</div>
-				<div class="grid grid-cols-1 gap-6 md:grid-cols-4 md:gap-8">
-					{#each [{ step: '1', title: 'Site Visit', desc: 'Sarbani team visits your garden to understand your workflow.' }, { step: '2', title: 'On-site Setup', desc: 'Software installed and configured at the garden.' }, { step: '3', title: 'Staff Training', desc: 'Hands-on training for office and field staff.' }, { step: '4', title: 'Go-Live Support', desc: 'Support stays on-site until your team is confident.' }] as item}
-						<div class="rounded-2xl border border-[#E4E4E7] bg-white p-6 md:p-8">
-							<div class="mb-3 flex h-9 w-9 items-center justify-center rounded-xl bg-[#1B5E3B]/10">
-								<span class="text-[14px] font-bold text-[#1B5E3B]">{item.step}</span>
-							</div>
-							<h3 class="text-[17px] font-semibold tracking-[-0.01em] text-[#111111]">
-								{item.title}
+				<div class="grid gap-4 md:grid-cols-4">
+					{#each rollout as item}
+						<article class="rounded-lg border border-[#E4E4E7] bg-white p-5">
+							<span class="text-[13px] font-semibold text-[#1B5E3B]">{item[0]}</span>
+							<h3 class="mt-3 text-[17px] font-semibold tracking-[-0.01em] text-[#111111]">
+								{item[1]}
 							</h3>
-							<p class="mt-2 text-[14px] leading-[1.6] text-[#52525B]">{item.desc}</p>
-						</div>
+							<p class="mt-2 text-[14px] leading-[1.6] text-[#52525B]">{item[2]}</p>
+						</article>
 					{/each}
 				</div>
 			</div>
 		</section>
 
-		<!-- ═══════════════════════════════════════════════════════════ -->
-		<!-- CTA                                                         -->
-		<!-- ═══════════════════════════════════════════════════════════ -->
-		<section class="reveal-on-scroll relative w-full bg-white px-6 py-24 md:px-12 md:py-32">
-			<div class="mx-auto flex max-w-[640px] flex-col items-center text-center">
-				<h2
-					class="text-[36px] leading-[1.08] font-semibold tracking-[-0.04em] text-[#111111] md:text-[44px] lg:text-[52px]"
-					style="text-wrap: balance"
-				>
-					See face attendance at your garden.
-				</h2>
-				<p class="mt-6 max-w-[480px] text-[17px] leading-[1.6] text-[#52525B]">
-					We will set up a live demo with your own workers and show you the weight capture flow.
-					Free on-site setup, free training.
-				</p>
-				<p class="mt-2 text-[14px] text-[#52525B]">
-					<span class="font-semibold text-[#111111]">Manager:</span> Know exactly who showed up today
-				</p>
-				<p class="mt-3 max-w-[520px] text-[14px] leading-[1.6] text-[#71717A]">
-					Many estates keep software details private. We respect confidentiality and share
-					region-level experience.
-				</p>
-				<div class="mt-10 flex w-full flex-col justify-center gap-4 sm:w-auto sm:flex-row">
-					<a
-						href={demoHref}
-						class="flex items-center justify-center rounded-full bg-[#1B5E3B] px-8 py-3.5 shadow-[0_2px_12px_rgba(27,94,59,0.2)] transition duration-150 hover:bg-[#144723] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 active:scale-[0.97]"
+		<section class="reveal-on-scroll w-full bg-white px-6 py-20 md:px-12 md:py-28">
+			<div class="mx-auto grid max-w-[1120px] gap-10 md:grid-cols-[0.9fr_1.1fr] md:items-center">
+				<div>
+					<h2
+						class="text-[34px] leading-[1.08] font-semibold tracking-[-0.04em] text-[#111111] md:text-[48px]"
+						style="text-wrap: balance"
 					>
-						<span class="text-[15px] leading-none font-semibold text-white">Book Free Demo</span>
-					</a>
-					<a
-						href="mailto:contact@gardensuite.in"
-						class="flex items-center justify-center rounded-full border border-[#E4E4E7] bg-white px-8 py-3.5 shadow-[0_1px_3px_rgba(0,0,0,0.04)] transition duration-150 hover:border-[#D4D4D8] hover:bg-[#FAFAF7] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 active:scale-[0.97]"
-					>
-						<span class="text-[15px] leading-none font-semibold text-[#111111]">Email Us</span>
-					</a>
+						See face attendance and weighing at your garden.
+					</h2>
+					<p class="mt-5 text-[17px] leading-[1.65] text-[#52525B]">
+						We will show the worker scan, scale capture, offline save, and sync flow. Demo, setup,
+						and training are handled by Sarbani Associates.
+					</p>
+					<div class="mt-8 flex flex-col gap-3 sm:flex-row">
+						<a
+							href={demoHref}
+							class="inline-flex min-h-12 items-center justify-center rounded-lg bg-[#1B5E3B] px-6 text-[15px] font-semibold text-white shadow-[0_2px_12px_rgba(27,94,59,0.18)] transition duration-150 hover:bg-[#144723] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 active:scale-[0.98]"
+						>
+							Book Free Demo
+						</a>
+						<a
+							href="mailto:contact@gardensuite.in"
+							class="inline-flex min-h-12 items-center justify-center rounded-lg border border-[#D4D4D8] bg-white px-6 text-[15px] font-semibold text-[#111111] transition duration-150 hover:border-[#A1A1AA] hover:bg-[#FAFAF7] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 active:scale-[0.98]"
+						>
+							Email Us
+						</a>
+					</div>
+					<p class="mt-4 text-[13px] leading-[1.6] text-[#71717A]">
+						Many estates keep software details private. We respect confidentiality and share
+						region-level experience.
+					</p>
 				</div>
-				<p class="mt-4 text-[13px] text-[#71717A]">
-					Reply within 1 working day. Demo scheduling call by the Sarbani team.
-				</p>
+				<div class="grid gap-4">
+					{#each buyers as item}
+						<div class="rounded-lg border border-[#E4E4E7] bg-white p-5">
+							<h3 class="text-[16px] font-semibold text-[#111111]">{item[0]}</h3>
+							<p class="mt-2 text-[14px] leading-[1.6] text-[#52525B]">{item[1]}</p>
+						</div>
+					{/each}
+				</div>
 			</div>
 		</section>
 	</main>
@@ -721,22 +441,11 @@
 
 <style>
 	:global(.reveal-on-scroll) {
-		opacity: 0;
-		transform: translateY(24px);
-		transition:
-			opacity 0.7s ease-out,
-			transform 0.7s ease-out;
+		opacity: 1;
+		transform: none;
 	}
 	:global(.reveal-on-scroll.is-visible) {
 		opacity: 1;
-		transform: translateY(0);
-	}
-
-	@media (prefers-reduced-motion: reduce) {
-		:global(.reveal-on-scroll) {
-			opacity: 1;
-			transform: none;
-			transition: none;
-		}
+		transform: none;
 	}
 </style>

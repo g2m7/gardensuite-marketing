@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-labelledby="title desc">
+  <title id="title">Generic Flat 2D Hanging Scale</title>
+  <desc id="desc">A clean, generic, square SVG illustration of a hanging weighing scale, with branding graphics removed and proportions adjusted to avoid vertical squashing.</desc>
+
+  <!--
+    Clean 1:1 SVG illustration.
+    - Brand/product-specific graphics removed.
+    - No shadows, gradients, or 3D effects.
+    - Slightly taller proportions to avoid a squished vertical look.
+    - Colors are editable through CSS variables below.
+  -->
+  <style>
+    :root {
+      --shell: #f2f4f8;
+      --shell-stroke: #d7dce6;
+      --bezel: #0b5faa;
+      --bezel-stroke: #074983;
+      --panel: #e8ecf3;
+      --panel-stroke: #2d4266;
+      --display-frame: #212938;
+      --display-bg: #3c4553;
+      --segment: #cdd4de;
+      --button-fill: #f5f7fb;
+      --button-stroke: #9daabc;
+      --metal: #90979d;
+      --metal-dark: #676d72;
+      --text: #22324f;
+    }
+
+    .label {
+      font-family: Arial, Helvetica, sans-serif;
+      fill: var(--text);
+      font-weight: 700;
+      letter-spacing: 0.3px;
+    }
+    .tiny { font-size: 8px; }
+  </style>
+
+  <defs>
+    <!-- Reusable seven-segment style digit. -->
+    <g id="digit8">
+      <rect x="3"  y="0"  width="18" height="4" rx="1" fill="var(--segment)"/>
+      <rect x="0"  y="4"  width="4"  height="12" rx="1" fill="var(--segment)"/>
+      <rect x="20" y="4"  width="4"  height="12" rx="1" fill="var(--segment)"/>
+      <rect x="3"  y="15" width="18" height="4" rx="1" fill="var(--segment)"/>
+      <rect x="0"  y="19" width="4"  height="12" rx="1" fill="var(--segment)"/>
+      <rect x="20" y="19" width="4"  height="12" rx="1" fill="var(--segment)"/>
+      <rect x="3"  y="30" width="18" height="4" rx="1" fill="var(--segment)"/>
+    </g>
+  </defs>
+
+  <!-- Top hanging handle. Slightly taller than before so the silhouette feels more natural. -->
+  <rect x="94" y="18" width="324" height="86" rx="44" ry="44" fill="none" stroke="var(--metal-dark)" stroke-width="14"/>
+  <rect x="112" y="32" width="288" height="58" rx="30" ry="30" fill="#ffffff" stroke="var(--metal)" stroke-width="5"/>
+
+  <!-- Connector neck between handle and body. -->
+  <path d="M234 104 H278 L272 132 H240 Z" fill="var(--metal)" stroke="var(--metal-dark)" stroke-width="4"/>
+  <rect x="223" y="124" width="66" height="22" rx="7" fill="var(--metal)" stroke="var(--metal-dark)" stroke-width="4"/>
+
+  <!-- Main outer shell. Height increased a bit so the body doesn't look vertically compressed. -->
+  <path d="M58 150
+           C36 154 21 174 25 204
+           L46 344
+           C51 375 74 393 106 393
+           H406
+           C438 393 461 375 466 344
+           L487 204
+           C491 174 476 154 454 150
+           C365 140 147 140 58 150 Z"
+        fill="var(--shell)" stroke="var(--shell-stroke)" stroke-width="8"/>
+
+  <!-- Blue bezel. -->
+  <path d="M73 166
+           C54 169 43 184 47 210
+           L64 336
+           C68 359 85 372 111 372
+           H401
+           C427 372 444 359 448 336
+           L465 210
+           C469 184 458 169 439 166
+           C356 158 156 158 73 166 Z"
+        fill="var(--bezel)" stroke="var(--bezel-stroke)" stroke-width="4"/>
+
+  <!-- Inner panel. Kept clean and generic: no branding artwork or decorative product decals. -->
+  <path d="M95 181
+           C81 184 73 196 76 217
+           L89 314
+           C93 335 108 346 128 346
+           H384
+           C404 346 419 335 423 314
+           L436 217
+           C439 196 431 184 417 181
+           C345 175 167 175 95 181 Z"
+        fill="var(--panel)" stroke="var(--panel-stroke)" stroke-width="3"/>
+
+  <!-- Generic top badge text. -->
+  <rect x="212" y="170" width="88" height="28" rx="5" fill="#f7f8fb" stroke="#aab3c2" stroke-width="2"/>
+  <text x="256" y="187" text-anchor="middle" class="label tiny">BLUETOOTH SCALE</text>
+
+  <!-- LCD display. -->
+  <text x="136" y="205" class="label tiny">Weight</text>
+  <rect x="136" y="212" width="240" height="49" rx="6" fill="var(--display-frame)"/>
+  <rect x="142" y="217" width="228" height="39" rx="4" fill="var(--display-bg)" stroke="#748092" stroke-width="1"/>
+
+  <!-- LCD digits. -->
+  <g transform="translate(151 220)">
+    <use href="#digit8"/>
+    <circle cx="28" cy="31" r="2" fill="var(--segment)"/>
+    <g transform="translate(36 0)"><use href="#digit8"/></g>
+    <circle cx="64" cy="31" r="2" fill="var(--segment)"/>
+    <g transform="translate(72 0)"><use href="#digit8"/></g>
+    <circle cx="100" cy="31" r="2" fill="var(--segment)"/>
+    <g transform="translate(108 0)"><use href="#digit8"/></g>
+    <circle cx="136" cy="31" r="2" fill="var(--segment)"/>
+    <g transform="translate(144 0)"><use href="#digit8"/></g>
+    <circle cx="172" cy="31" r="2" fill="var(--segment)"/>
+    <g transform="translate(180 0)"><use href="#digit8"/></g>
+  </g>
+  <text x="364" y="252" class="label tiny">kg</text>
+
+  <!-- Buttons. Generic controls retained because they are not branding. -->
+  <g>
+    <ellipse cx="158" cy="289" rx="27" ry="11" fill="var(--button-fill)" stroke="var(--button-stroke)" stroke-width="1.5"/>
+    <text x="158" y="292" text-anchor="middle" class="label tiny">TARE</text>
+
+    <ellipse cx="223" cy="289" rx="27" ry="11" fill="var(--button-fill)" stroke="var(--button-stroke)" stroke-width="1.5"/>
+    <text x="223" y="292" text-anchor="middle" class="label tiny">MODE</text>
+
+    <ellipse cx="288" cy="289" rx="27" ry="11" fill="var(--button-fill)" stroke="var(--button-stroke)" stroke-width="1.5"/>
+    <text x="288" y="286" text-anchor="middle" class="label tiny">M+</text>
+    <text x="288" y="294" text-anchor="middle" class="label tiny">▲</text>
+
+    <ellipse cx="353" cy="289" rx="27" ry="11" fill="var(--button-fill)" stroke="var(--button-stroke)" stroke-width="1.5"/>
+    <text x="353" y="286" text-anchor="middle" class="label tiny">M-</text>
+    <text x="353" y="294" text-anchor="middle" class="label tiny">▼</text>
+  </g>
+
+  <!-- Bottom rod and ring. Extended slightly for a less compressed overall shape. -->
+  <rect x="243" y="390" width="26" height="86" rx="9" fill="var(--metal)" stroke="var(--metal-dark)" stroke-width="4"/>
+  <circle cx="256" cy="418" r="5" fill="var(--metal-dark)"/>
+  <circle cx="256" cy="481" r="14" fill="#c2c9cd" stroke="var(--metal-dark)" stroke-width="4"/>
+  <circle cx="256" cy="481" r="5" fill="var(--shell)"/>
+</svg>
