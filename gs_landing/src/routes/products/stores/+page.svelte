@@ -6,7 +6,7 @@
 		return initScrollReveal();
 	});
 
-	const demoHref = 'mailto:contact@gardensuite.in?subject=GardenSuite%20Demo%20Request';
+	const demoHref = '/#contact';
 </script>
 
 <svelte:head>
@@ -436,7 +436,7 @@
 						></a
 					>
 					<a
-						href="mailto:contact@gardensuite.in"
+						href="/#contact"
 						class="flex items-center justify-center rounded-full border border-[#E4E4E7] bg-white px-8 py-3.5 shadow-[0_1px_3px_rgba(0,0,0,0.04)] transition duration-150 hover:border-[#D4D4D8] hover:bg-[#FAFAF7] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 active:scale-[0.97]"
 						><span class="text-[15px] leading-none font-semibold text-[#111111]">Email Us</span></a
 					>

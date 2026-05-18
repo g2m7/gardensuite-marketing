@@ -1,5 +1,5 @@
 <script lang="ts">
-	const demoHref = 'mailto:contact@gardensuite.in?subject=GardenSuite%20Demo%20Request';
+	const demoHref = '/#contact';
 </script>
 
 <section class="flex flex-col items-center w-full py-24 md:py-28 px-6 md:px-14 gap-6 bg-[#0A0A0A]">
@@ -20,7 +20,7 @@
 			</span>
 		</a>
 		<a
-			href="mailto:contact@gardensuite.in"
+			href="/#contact"
 			class="flex items-center justify-center rounded-full py-3.5 px-8 border border-[#333333] hover:bg-[#1A1A1A] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#5CA84A] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0A0A] active:scale-[0.97]"
 		>
 			<span class="font-semibold text-sm text-white">

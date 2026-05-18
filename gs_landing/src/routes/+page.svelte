@@ -126,6 +126,7 @@
 
 	// ─── Contact Form ───
 	const WA_NUMBER = '919734101330';
+	const ENQUIRY_EMAIL = 'sarbaniassociates@gmail.com';
 	let contactPanelOpen = $state(false);
 	let fabVisible = $state(false);
 	let formNeed = $state('Book a demo');
@@ -134,6 +135,8 @@
 	let formEmail = $state('');
 	let formGarden = $state('');
 	let formMessage = $state('');
+	let contactSubmitStatus = $state<'idle' | 'sending' | 'success' | 'error'>('idle');
+	let contactSubmitMessage = $state('');
 
 	function buildWaLink(): string {
 		const lines = [
@@ -148,20 +151,44 @@
 		return `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(lines.join('\n'))}`;
 	}
 
-	function buildMailtoHref(): string {
-		const subject = encodeURIComponent(`GardenSuite - ${formNeed || 'Contact Request'}`);
-		const lines = [
-			formNeed ? `Need: ${formNeed}` : '',
-			formName ? `Name: ${formName}` : '',
-			formPhone ? `Phone: ${formPhone}` : '',
-			formEmail ? `Email: ${formEmail}` : '',
-			formGarden ? `Garden: ${formGarden}` : '',
-			formMessage ? `Details: ${formMessage}` : ''
-		].filter(Boolean);
-		const body = encodeURIComponent(lines.join('\n'));
-		return `mailto:contact@gardensuite.in?subject=${subject}&body=${body}`;
+	async function submitContactForm() {
+		contactSubmitStatus = 'sending';
+		contactSubmitMessage = '';
+
+		try {
+			const response = await fetch('/api/contact', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify({
+					need: formNeed,
+					name: formName,
+					phone: formPhone,
+					email: formEmail,
+					garden: formGarden,
+					message: formMessage
+				})
+			});
+
+			const result = (await response.json().catch(() => ({}))) as { message?: string };
+
+			if (!response.ok) {
+				throw new Error(result.message || 'Could not send the enquiry right now.');
+			}
+
+			contactSubmitStatus = 'success';
+			contactSubmitMessage = result.message || 'Enquiry sent. We will contact you soon.';
+			formMessage = '';
+		} catch (error) {
+			contactSubmitStatus = 'error';
+			contactSubmitMessage =
+				error instanceof Error
+					? error.message
+					: 'Could not send the enquiry right now. Please use WhatsApp for now.';
+		}
 	}
-	const demoHref = 'mailto:contact@gardensuite.in?subject=GardenSuite%20Demo%20Request';
+	const demoHref = '#contact';
 
 	const faqs = [
 		{
@@ -305,7 +332,7 @@
 				],
 				contactPoint: {
 					'@type': 'ContactPoint',
-					email: 'contact@gardensuite.in',
+					email: ENQUIRY_EMAIL,
 					contactType: 'sales'
 				}
 			},
@@ -1527,7 +1554,7 @@
 						<p class="mt-6 hidden text-[16px] text-[#4B5563] md:block">
 							Can't find what you're looking for? <br />
 							<a
-								href="mailto:contact@gardensuite.in"
+								href="#contact"
 								class="mt-2 inline-block font-medium text-[#1B5E3B] hover:underline"
 								>contact our team</a
 							>
@@ -1589,7 +1616,7 @@
 				</div>
 				<p class="mt-8 text-center text-[14px] text-[#4B5563] md:hidden">
 					Can't find what you're looking for? <a
-						href="mailto:contact@gardensuite.in"
+						href="#contact"
 						class="font-medium text-[#1B5E3B] hover:underline">contact our team</a
 					>
 				</p>
@@ -1662,11 +1689,19 @@
 						<p class="mt-2 text-[14px] leading-[1.6] text-[#6B7280]">
 							Fill out the form and we'll be in touch within 24 hours.
 						</p>
-						<form class="mt-6 flex flex-col gap-3.5" onsubmit={(e) => e.preventDefault()}>
+						<form
+							class="mt-6 flex flex-col gap-3.5"
+							onsubmit={(e) => {
+								e.preventDefault();
+								submitContactForm();
+							}}
+						>
 							<input
 								type="text"
 								placeholder="Your name"
 								aria-label="Your name"
+								required
+								autocomplete="name"
 								bind:value={formName}
 								class="w-full rounded-lg border border-[#D1D5DB] bg-white px-4 py-3 text-[14px] text-[#111827] placeholder-[#9CA3AF] transition outline-none focus:border-[#1B5E3B] focus:ring-2 focus:ring-[#1B5E3B]/15"
 							/>
@@ -1674,6 +1709,7 @@
 								type="tel"
 								placeholder="Phone number"
 								aria-label="Phone number"
+								autocomplete="tel"
 								bind:value={formPhone}
 								class="w-full rounded-lg border border-[#D1D5DB] bg-white px-4 py-3 text-[14px] text-[#111827] placeholder-[#9CA3AF] transition outline-none focus:border-[#1B5E3B] focus:ring-2 focus:ring-[#1B5E3B]/15"
 							/>
@@ -1681,6 +1717,7 @@
 								type="email"
 								placeholder="Email address"
 								aria-label="Email address"
+								autocomplete="email"
 								bind:value={formEmail}
 								class="w-full rounded-lg border border-[#D1D5DB] bg-white px-4 py-3 text-[14px] text-[#111827] placeholder-[#9CA3AF] transition outline-none focus:border-[#1B5E3B] focus:ring-2 focus:ring-[#1B5E3B]/15"
 							/>
@@ -1698,23 +1735,11 @@
 								rows="3"
 								class="w-full resize-none rounded-lg border border-[#D1D5DB] bg-white px-4 py-3 text-[14px] text-[#111827] placeholder-[#9CA3AF] transition outline-none focus:border-[#1B5E3B] focus:ring-2 focus:ring-[#1B5E3B]/15"
 							></textarea>
-							<div class="mt-1 flex flex-col gap-2.5 sm:flex-row">
-								<a
-									href={buildWaLink()}
-									target="_blank"
-									rel="noreferrer"
-									class="flex flex-1 items-center justify-center gap-2 rounded-lg bg-[#25D366] px-6 py-3.5 transition duration-150 hover:bg-[#1EBE57] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366]/30 active:scale-[0.97]"
-								>
-									<svg width="18" height="18" viewBox="0 0 24 24" fill="white"
-										><path
-											d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
-										/></svg
-									>
-									<span class="text-[14px] font-semibold text-white">WhatsApp</span>
-								</a>
-								<a
-									href={buildMailtoHref()}
-									class="flex flex-1 items-center justify-center gap-2 rounded-lg bg-[#1B5E3B] px-6 py-3.5 transition duration-150 hover:bg-[#237A4E] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 active:scale-[0.97]"
+							<div class="mt-1 flex flex-col gap-2.5">
+								<button
+									type="submit"
+									disabled={contactSubmitStatus === 'sending'}
+									class="flex w-full items-center justify-center gap-2 rounded-lg bg-[#1B5E3B] px-6 py-3.5 transition duration-150 hover:bg-[#237A4E] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 active:scale-[0.97] disabled:cursor-wait disabled:opacity-70"
 								>
 									<svg
 										width="16"
@@ -1729,9 +1754,35 @@
 											d="M22 4L12 13 2 4"
 										/></svg
 									>
-									<span class="text-[14px] font-semibold text-white">Email</span>
+									<span class="text-[14px] font-semibold text-white">
+										{contactSubmitStatus === 'sending' ? 'Sending...' : 'Send Enquiry'}
+									</span>
+								</button>
+								<a
+									href={buildWaLink()}
+									target="_blank"
+									rel="noreferrer"
+									class="flex w-full items-center justify-center gap-2 rounded-lg bg-[#25D366] px-6 py-3.5 transition duration-150 hover:bg-[#1EBE57] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366]/30 active:scale-[0.97]"
+								>
+									<svg width="18" height="18" viewBox="0 0 24 24" fill="white"
+										><path
+											d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+										/></svg
+									>
+									<span class="text-[14px] font-semibold text-white">WhatsApp</span>
 								</a>
 							</div>
+							{#if contactSubmitMessage}
+								<p
+									class="rounded-lg px-3 py-2 text-center text-[13px] leading-[1.5] {contactSubmitStatus ===
+									'success'
+										? 'bg-[#DCFCE7] text-[#166534]'
+										: 'bg-[#FEF2F2] text-[#991B1B]'}"
+									role="status"
+								>
+									{contactSubmitMessage}
+								</p>
+							{/if}
 						</form>
 						<p class="mt-4 text-center text-[12px] text-[#9CA3AF]">
 							By submitting, you agree to our <a
@@ -1774,29 +1825,8 @@
 				</div>
 				<div class="grid gap-2 p-3 pt-1">
 					<a
-						href={buildWaLink()}
-						target="_blank"
-						rel="noreferrer"
-						class="flex items-center gap-3 rounded-2xl bg-white/[0.06] p-4 transition-colors duration-150 hover:bg-white/[0.12] focus:outline-none focus-visible:ring-2 focus-visible:ring-white/30"
-					>
-						<span
-							class="flex h-10 w-10 items-center justify-center rounded-full bg-[#25D366] text-white"
-						>
-							<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"
-								><path
-									d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
-								/></svg
-							>
-						</span>
-						<span>
-							<span class="block text-[15px] font-semibold text-white">WhatsApp</span>
-							<span class="mt-0.5 block text-[13px] text-white/50"
-								>Fastest for demo and quick questions</span
-							>
-						</span>
-					</a>
-					<a
-						href={buildMailtoHref()}
+						href="#contact"
+						onclick={() => (contactPanelOpen = false)}
 						class="flex items-center gap-3 rounded-2xl bg-white/[0.06] p-4 transition-colors duration-150 hover:bg-white/[0.12] focus:outline-none focus-visible:ring-2 focus-visible:ring-white/30"
 					>
 						<span
@@ -1816,9 +1846,31 @@
 							>
 						</span>
 						<span>
-							<span class="block text-[15px] font-semibold text-white">Email</span>
+							<span class="block text-[15px] font-semibold text-white">Send Enquiry</span>
 							<span class="mt-0.5 block text-[13px] text-white/50"
 								>Best for detailed requirements</span
+							>
+						</span>
+					</a>
+					<a
+						href={buildWaLink()}
+						target="_blank"
+						rel="noreferrer"
+						class="flex items-center gap-3 rounded-2xl bg-white/[0.06] p-4 transition-colors duration-150 hover:bg-white/[0.12] focus:outline-none focus-visible:ring-2 focus-visible:ring-white/30"
+					>
+						<span
+							class="flex h-10 w-10 items-center justify-center rounded-full bg-[#25D366] text-white"
+						>
+							<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"
+								><path
+									d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+								/></svg
+							>
+						</span>
+						<span>
+							<span class="block text-[15px] font-semibold text-white">WhatsApp</span>
+							<span class="mt-0.5 block text-[13px] text-white/50"
+								>Fastest for demo and quick questions</span
 							>
 						</span>
 					</a>

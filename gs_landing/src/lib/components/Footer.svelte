@@ -40,7 +40,7 @@
 					<span class="block text-[13px] font-semibold text-[#111111]">Contact</span>
 					<div class="flex flex-col gap-3">
 						<a href="https://wa.me/919734101330" target="_blank" rel="noreferrer" class="text-[13px] text-[#52525B] transition-colors duration-150 hover:text-[#1B5E3B]">WhatsApp: +91-9734101330</a>
-						<a href="mailto:contact@gardensuite.in" class="text-[13px] text-[#52525B] transition-colors duration-150 hover:text-[#1B5E3B]">contact@gardensuite.in</a>
+						<a href="/#contact" class="text-[13px] text-[#52525B] transition-colors duration-150 hover:text-[#1B5E3B]">sarbaniassociates@gmail.com</a>
 						<a href="/#contact" class="text-[13px] text-[#52525B] transition-colors duration-150 hover:text-[#1B5E3B]">Book Free Demo</a>
 					</div>
 				</div>

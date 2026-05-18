@@ -7,7 +7,7 @@
 		return initScrollReveal();
 	});
 
-	const demoHref = 'mailto:contact@gardensuite.in?subject=GardenSuite%20Demo%20Request';
+	const demoHref = '/#contact';
 
 	const problems = [
 		{
@@ -415,7 +415,7 @@
 							Book Free Demo
 						</a>
 						<a
-							href="mailto:contact@gardensuite.in"
+							href="/#contact"
 							class="inline-flex min-h-12 items-center justify-center rounded-lg border border-[#D4D4D8] bg-white px-6 text-[15px] font-semibold text-[#111111] transition duration-150 hover:border-[#A1A1AA] hover:bg-[#FAFAF7] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 active:scale-[0.98]"
 						>
 							Email Us

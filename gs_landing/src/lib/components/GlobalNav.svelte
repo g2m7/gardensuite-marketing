@@ -7,7 +7,7 @@
 	let productsOpen = $state(false);
 	let mobileProductsOpen = $state(false);
 
-	const demoHref = 'mailto:contact@gardensuite.in?subject=GardenSuite%20Demo%20Request';
+	const demoHref = '/#contact';
 
 	function toggleMobileNav() {
 		mobileNavOpen = !mobileNavOpen;
