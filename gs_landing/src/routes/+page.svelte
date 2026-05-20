@@ -940,14 +940,14 @@
 					{#if product.featured}
 						<a
 							href={product.href}
-							class="group/product relative mb-6 block overflow-hidden rounded-2xl border border-[#0F2E0C]/15 bg-[#0B1712] p-4 shadow-[0_30px_90px_rgba(15,46,12,0.18)] transition-all duration-300 hover:border-white/20 hover:shadow-[0_40px_100px_rgba(15,46,12,0.25)] md:mb-8 md:p-5"
+							class="group/product relative mb-6 block overflow-hidden rounded-[28px] border border-white/70 bg-[#DDEFE4] p-4 shadow-[0_18px_50px_rgba(15,46,12,0.12)] transition-all duration-300 hover:shadow-[0_24px_62px_rgba(15,46,12,0.16)] md:mb-8 md:p-5"
 						>
 							<picture>
 								<source srcset="/hero-sky.webp" type="image/webp" />
 								<img
 									src="/hero-sky.png"
 									alt=""
-									class="absolute inset-0 z-0 h-full w-full object-cover brightness-[1.15] transition-transform duration-700 group-hover/product:scale-105"
+									class="absolute inset-0 z-0 h-full w-full object-cover object-top brightness-[1.08] transition-transform duration-700 group-hover/product:scale-[1.03]"
 									width="1024"
 									height="1024"
 									loading="lazy"
@@ -956,41 +956,45 @@
 							<picture>
 								<source
 									srcset="/bg-960.webp 960w, /bg-1920.webp 1920w"
-									sizes="(min-width: 1024px) 1280px, 90vw"
+									sizes="(min-width: 1024px) 1280px, 92vw"
 									type="image/webp"
 								/>
 								<img
 									src="/bg.png"
 									alt=""
-									class="absolute inset-x-0 bottom-0 z-[1] h-[60%] w-full object-cover object-top brightness-[1.15] transition-transform duration-700 group-hover/product:scale-105"
-									style="mask-image: linear-gradient(to bottom, transparent 0%, black 30%); -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 30%);"
+									class="absolute inset-x-0 bottom-0 z-[1] h-[72%] w-full object-cover object-bottom brightness-[1.08] transition-transform duration-700 group-hover/product:scale-[1.03]"
+									style="mask-image: linear-gradient(to bottom, transparent 0%, black 16%); -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 16%);"
 									width="1280"
 									height="717"
 									loading="lazy"
 								/>
 							</picture>
+							<div class="absolute inset-0 z-[2] bg-white/[0.08]"></div>
+
 							<div
-								class="relative z-10 rounded-xl border border-white/15 bg-white/[0.04] p-3 backdrop-blur-sm md:p-5"
+								class="relative z-10 rounded-[22px] border border-white/65 bg-white/[0.08] shadow-[inset_0_1px_0_rgba(255,255,255,0.65)]"
 							>
-								<div
-									class="overflow-hidden rounded-2xl border border-white/30 bg-white/95 shadow-[0_20px_60px_rgba(0,0,0,0.18)]"
-								>
-									<div class="grid grid-cols-1 md:grid-cols-2">
-										<div
-											class="relative flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#F0FDF4] to-[#DCFCE7] p-8 md:min-h-[360px] md:p-10 lg:p-12"
-										>
-											<div class="absolute top-5 left-5 z-10">
-												<span
-													class="rounded-full bg-[#1B5E3B] px-3 py-1 text-[11px] font-semibold tracking-[0.04em] text-white uppercase shadow-sm"
-												>
-													{product.badge}
-												</span>
-											</div>
+								<div class="grid grid-cols-1 gap-5 p-4 md:grid-cols-[1fr_1fr] md:p-5 lg:p-6">
+									<div
+										class="relative flex min-h-[320px] items-center justify-center overflow-hidden rounded-[18px] px-5 pt-16 pb-0 md:min-h-[360px] md:px-7 md:pt-14 lg:px-8"
+									>
+										<div class="absolute top-5 left-5 z-30 md:top-6 md:left-6">
+											<span
+												class="rounded-full border border-white/80 bg-white/95 px-3.5 py-1.5 text-[11px] font-semibold tracking-[0.05em] text-[#1B5E3B] uppercase shadow-[0_8px_18px_rgba(15,46,12,0.10)] backdrop-blur"
+											>
+												{product.badge}
+											</span>
+										</div>
+										<div class="relative z-10 w-full max-w-[660px]">
 											<ModulePreview id={product.id} />
 										</div>
-										<div class="flex flex-col justify-center p-8 md:p-10 lg:p-12">
+									</div>
+									<div class="flex items-center justify-center p-1 md:p-4 lg:p-6">
+										<div
+											class="w-full rounded-[20px] bg-white/96 px-7 py-8 shadow-[0_14px_34px_rgba(15,23,42,0.10)] ring-1 ring-white/70 md:px-10 md:py-11 lg:px-12 lg:py-12"
+										>
 											<h3
-												class="text-[20px] font-semibold tracking-[-0.02em] text-[#111111] lg:text-[24px]"
+												class="text-[22px] font-semibold tracking-normal text-[#111111] lg:text-[26px]"
 											>
 												{product.title}
 											</h3>
@@ -1000,7 +1004,7 @@
 												{product.desc}
 											</p>
 											<span
-												class="mt-8 inline-flex items-center gap-1.5 text-[15px] font-semibold text-[#1B5E3B] transition-colors group-hover/product:gap-2.5"
+												class="mt-8 inline-flex items-center gap-1.5 text-[15px] font-semibold text-[#1B5E3B] transition-all duration-200 group-hover/product:gap-2.5"
 											>
 												Learn more
 												<svg
@@ -1032,14 +1036,14 @@
 						{#if !product.featured}
 							<a
 								href={product.href}
-								class="group/product relative flex flex-col overflow-hidden rounded-2xl border border-[#0F2E0C]/15 bg-[#0B1712] p-4 shadow-[0_30px_90px_rgba(15,46,12,0.18)] transition-all duration-300 hover:border-white/20 hover:shadow-[0_40px_100px_rgba(15,46,12,0.25)] md:p-5"
+								class="group/product relative block min-h-[520px] overflow-hidden rounded-[28px] border border-white/70 bg-[#DDEFE4] p-4 shadow-[0_18px_50px_rgba(15,46,12,0.12)] transition-all duration-300 hover:shadow-[0_24px_62px_rgba(15,46,12,0.16)] md:min-h-[560px] md:p-5"
 							>
 								<picture>
 									<source srcset="/hero-sky.webp" type="image/webp" />
 									<img
 										src="/hero-sky.png"
 										alt=""
-										class="absolute inset-0 z-0 h-full w-full object-cover brightness-[1.15] transition-transform duration-700 group-hover/product:scale-105"
+										class="absolute inset-0 z-0 h-full w-full object-cover object-top brightness-[1.08] transition-transform duration-700 group-hover/product:scale-[1.03]"
 										width="1024"
 										height="1024"
 										loading="lazy"
@@ -1048,64 +1052,61 @@
 								<picture>
 									<source
 										srcset="/bg-960.webp 960w, /bg-1920.webp 1920w"
-										sizes="(min-width: 1024px) 640px, 90vw"
+										sizes="(min-width: 1024px) 640px, 92vw"
 										type="image/webp"
 									/>
 									<img
 										src="/bg.png"
 										alt=""
-										class="absolute inset-x-0 bottom-0 z-[1] h-[60%] w-full object-cover object-top brightness-[1.15] transition-transform duration-700 group-hover/product:scale-105"
-										style="mask-image: linear-gradient(to bottom, transparent 0%, black 30%); -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 30%);"
+										class="absolute inset-x-0 bottom-0 z-[1] h-[64%] w-full object-cover object-bottom brightness-[1.06] transition-transform duration-700 group-hover/product:scale-[1.04]"
+										style="mask-image: linear-gradient(to bottom, transparent 0%, black 22%); -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 22%);"
 										width="960"
 										height="538"
 										loading="lazy"
 									/>
 								</picture>
+								<div class="absolute inset-0 z-[2] bg-white/[0.08]"></div>
+
 								<div
-									class="relative z-10 flex flex-1 flex-col rounded-xl border border-white/15 bg-white/[0.04] p-3 backdrop-blur-sm md:p-4"
+									class="relative z-10 h-full min-h-[488px] overflow-hidden rounded-[22px] border border-white/65 bg-white/[0.16] shadow-[inset_0_1px_0_rgba(255,255,255,0.65)] backdrop-blur-[6px] md:min-h-[520px]"
 								>
-									<div
-										class="flex flex-1 flex-col overflow-hidden rounded-2xl border border-white/30 bg-white/95 shadow-[0_20px_60px_rgba(0,0,0,0.18)]"
-									>
-										<div
-											class="relative flex min-h-[220px] items-center justify-center overflow-hidden bg-gradient-to-br from-[#F0FDF4] to-[#DCFCE7] px-6 pt-16 pb-8 md:min-h-[240px]"
+									<div class="absolute top-4 left-4 z-30 md:top-5 md:left-5">
+										<span
+											class="rounded-full border border-white/80 bg-white/95 px-3.5 py-1.5 text-[11px] font-semibold tracking-[0.05em] text-[#1B5E3B] uppercase shadow-[0_8px_18px_rgba(15,46,12,0.10)] backdrop-blur"
 										>
-											<div class="absolute top-4 left-4 z-10">
-												<span
-													class="rounded-full bg-white/90 px-3 py-1 text-[11px] font-semibold tracking-[0.04em] text-[#1B5E3B] uppercase shadow-sm backdrop-blur-sm"
-												>
-													{product.badge}
-												</span>
-											</div>
-											<ModulePreview id={product.id} />
+											{product.badge}
+										</span>
+									</div>
+
+									<div
+										class="relative z-10 flex h-[355px] items-start justify-center overflow-hidden px-5 pt-[76px] md:h-[390px] md:px-7 md:pt-[84px]"
+									>
+										<ModulePreview id={product.id} />
+									</div>
+
+									<div
+										class="absolute inset-x-0 bottom-0 z-20 flex min-h-[188px] flex-col justify-between rounded-b-[22px] bg-white px-6 pt-7 pb-6 shadow-[0_-12px_32px_rgba(15,23,42,0.08)] md:px-8 md:pt-8 md:pb-7"
+									>
+										<div>
+											<h3 class="text-[20px] font-semibold tracking-normal text-[#111111]">
+												{product.title}
+											</h3>
+											<p class="mt-3 text-[15px] leading-[1.65] text-[#4B5563]">{product.desc}</p>
 										</div>
-										<div class="flex flex-1 flex-col justify-between p-6 md:p-8">
-											<div>
-												<h3 class="text-[19px] font-semibold tracking-[-0.02em] text-[#111111]">
-													{product.title}
-												</h3>
-												<p class="mt-3 text-[14px] leading-[1.6] text-[#4B5563]">{product.desc}</p>
-											</div>
-											<span
-												class="mt-6 inline-flex items-center gap-1.5 text-[14px] font-semibold text-[#1B5E3B] transition-colors group-hover/product:gap-2.5"
+										<span
+											class="mt-6 inline-flex items-center gap-1.5 text-[15px] font-semibold text-[#1B5E3B] transition-all duration-200 group-hover/product:gap-2.5"
+										>
+											Learn more
+											<svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"
+												><path
+													d="M5 2.5l4.5 4.5L5 11.5"
+													stroke="currentColor"
+													stroke-width="2"
+													stroke-linecap="round"
+													stroke-linejoin="round"
+												/></svg
 											>
-												Learn more
-												<svg
-													width="14"
-													height="14"
-													viewBox="0 0 14 14"
-													fill="none"
-													aria-hidden="true"
-													><path
-														d="M5 2.5l4.5 4.5L5 11.5"
-														stroke="currentColor"
-														stroke-width="2"
-														stroke-linecap="round"
-														stroke-linejoin="round"
-													/></svg
-												>
-											</span>
-										</div>
+										</span>
 									</div>
 								</div>
 							</a>
