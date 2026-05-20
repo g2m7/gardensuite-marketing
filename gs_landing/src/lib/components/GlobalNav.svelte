@@ -71,7 +71,7 @@
 
 	<!-- Desktop Nav -->
 	<nav
-		class="{scrollAnimated ? 'fixed' : 'sticky'} top-0 z-[60] flex w-full items-center justify-between px-6 py-4 transition-colors md:px-14"
+		class="fixed top-0 z-[60] flex w-full items-center justify-between px-6 py-4 transition-colors md:px-14"
 		style={navStyles}
 		aria-label="Main navigation"
 	>

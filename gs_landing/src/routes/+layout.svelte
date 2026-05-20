@@ -10,7 +10,7 @@
 	let isHomepage = $derived($page.url.pathname === '/');
 </script>
 
-<GlobalNav />
+<GlobalNav scrollAnimated={isHomepage} />
 
 <div id="main-content">
 	{@render children()}
