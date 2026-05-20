@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GardenSuite Operations - Full Brochure 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <style>
+    @page { size: A4 portrait; margin: 0; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --near-black: #0a0a0a;
+      --charcoal: #1d1d1f;
+      --gray-700: #424245;
+      --gray-500: #6e6e73;
+      --gray-400: #86868b;
+      --gray-200: #d2d2d7;
+      --gray-100: #f5f5f7;
+      --white: #fbfbfd;
+      --pure-white: #ffffff;
+      --green-deep: #1a3a15;
+      --green-primary: #234b1d;
+      --green-accent: #2d6a4f;
+      --green-bright: #40916c;
+      --green-light: #74c69d;
+      --green-wash: #f0f7f0;
+      --font: "Inter", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+      --font-display: "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
+    }
+
+    html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    body {
+      font-family: var(--font);
+      background: #e8e8ed;
+      color: var(--charcoal);
+      font-size: 9pt;
+      line-height: 1.5;
+      padding-top: 42px;
+    }
+
+    .toolbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 10px 16px;
+      background: rgba(0,0,0,0.92);
+      color: var(--gray-400);
+      font-size: 12px;
+      font-weight: 500;
+    }
+    .toolbar button, .toolbar a {
+      background: var(--white);
+      color: var(--charcoal);
+      border: none;
+      padding: 6px 14px;
+      border-radius: 14px;
+      font-size: 10pt;
+      font-weight: 600;
+      font-family: inherit;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .toolbar .btn-primary { background: var(--green-primary); color: var(--pure-white); }
+
+    .page {
+      width: 210mm;
+      height: 297mm;
+      margin: 6mm auto;
+      background: var(--pure-white);
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 8px 40px rgba(0,0,0,0.16);
+      border-radius: 2px;
+      page-break-after: always;
+      page-break-inside: avoid;
+    }
+    .page--dark { background: var(--near-black); color: var(--pure-white); }
+    .page--green { background: var(--green-deep); color: var(--pure-white); }
+    .content { height: 100%; display: flex; flex-direction: column; }
+
+    .hdr {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 7mm 10mm 5mm;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 2.5mm;
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 10pt;
+      color: var(--charcoal);
+    }
+    .brand--light { color: var(--pure-white); }
+    .brand img { width: 5.5mm; height: 5.5mm; object-fit: contain; }
+    .tag {
+      font-size: 6.8pt;
+      font-weight: 600;
+      color: var(--gray-400);
+      letter-spacing: 0.02em;
+    }
+    .tag--light { color: rgba(255,255,255,0.35); }
+    .ftr {
+      margin-top: auto;
+      padding: 4mm 10mm 6mm;
+      display: flex;
+      justify-content: space-between;
+      font-size: 6.4pt;
+      color: var(--gray-400);
+    }
+    .ftr--light { color: rgba(255,255,255,0.32); }
+
+    .eyebrow {
+      font-size: 6.8pt;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--green-accent);
+    }
+    .eyebrow--light { color: var(--green-light); }
+    .headline {
+      font-family: var(--font-display);
+      font-size: 30pt;
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: 0;
+      color: var(--charcoal);
+      text-wrap: balance;
+    }
+    .headline--light { color: var(--pure-white); }
+    .headline--xl { font-size: 42pt; line-height: 0.98; }
+    .lead {
+      font-size: 10.5pt;
+      font-weight: 400;
+      line-height: 1.55;
+      letter-spacing: 0;
+      color: var(--gray-500);
+    }
+    .lead--light { color: rgba(255,255,255,0.66); }
+
+    .page-body {
+      flex: 1;
+      padding: 8mm 10mm 0;
+      display: flex;
+      flex-direction: column;
+      gap: 7mm;
+      justify-content: flex-start;
+    }
+    .intro-copy { display: flex; flex-direction: column; gap: 3mm; }
+    .tight-title { font-size: 25pt; }
+    .section-title { font-size: 27pt; }
+    .small-lead { font-size: 9.4pt; }
+    .micro { font-size: 6.7pt; line-height: 1.45; color: var(--gray-500); }
+    .page--dark .micro, .page--green .micro { color: rgba(255,255,255,0.52); }
+
+    .cover {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      position: relative;
+      overflow: hidden;
+    }
+    .cover-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+    .cover-bg img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .cover-bg::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0.18) 42%, rgba(0,0,0,0.92) 100%);
+    }
+    .cover-copy {
+      position: relative;
+      z-index: 2;
+      padding: 0 11mm 14mm;
+    }
+    .cover-copy .eyebrow { margin-bottom: 4mm; }
+    .cover-copy .headline { color: var(--pure-white); max-width: 174mm; margin-bottom: 5mm; }
+    .cover-copy .lead { color: rgba(255,255,255,0.76); max-width: 152mm; }
+    .stat-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 5mm;
+      margin-top: 9mm;
+      padding-top: 5mm;
+      border-top: 0.3mm solid rgba(255,255,255,0.14);
+    }
+    .stat strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 24pt;
+      line-height: 1;
+      font-weight: 900;
+      color: var(--pure-white);
+    }
+    .stat span {
+      display: block;
+      margin-top: 1.5mm;
+      font-size: 6.5pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: rgba(255,255,255,0.45);
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 7mm;
+      align-items: center;
+    }
+    .split--wide { grid-template-columns: 1.08fr 0.92fr; }
+    .split--reverse { grid-template-columns: 0.92fr 1.08fr; }
+    .vector-frame {
+      border-radius: 5mm;
+      overflow: hidden;
+      background: var(--gray-100);
+      box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+    }
+    .page--dark .vector-frame, .page--green .vector-frame { box-shadow: none; }
+    .vector-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .vector-frame--square { aspect-ratio: 1.18; }
+    .vector-frame--short { aspect-ratio: 1.6; }
+
+    .feature-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 2.6mm;
+    }
+    .feature-list li {
+      display: flex;
+      gap: 2.5mm;
+      align-items: flex-start;
+      font-size: 8.4pt;
+      line-height: 1.42;
+      color: var(--gray-700);
+    }
+    .feature-list i {
+      flex: 0 0 auto;
+      font-size: 15pt;
+      color: var(--green-primary);
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.12));
+      margin-top: 0.2mm;
+    }
+    .feature-list strong { color: var(--charcoal); font-weight: 800; }
+    .page--dark .feature-list li, .page--green .feature-list li { color: rgba(255,255,255,0.75); }
+    .page--dark .feature-list strong, .page--green .feature-list strong { color: var(--pure-white); }
+    .page--dark .feature-list i, .page--green .feature-list i { color: var(--green-light); }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3.6mm;
+    }
+    .cards--3 { grid-template-columns: repeat(3, 1fr); }
+    .card {
+      background: var(--gray-100);
+      border-radius: 3.5mm;
+      padding: 5.2mm 5.4mm;
+    }
+    .card--dark {
+      background: rgba(255,255,255,0.045);
+      border: 0.3mm solid rgba(255,255,255,0.08);
+    }
+    .card i {
+      display: block;
+      font-size: 21pt;
+      color: var(--green-primary);
+      filter: drop-shadow(0 2px 5px rgba(0,0,0,0.12));
+      margin-bottom: 2mm;
+    }
+    .card--dark i { color: var(--green-light); }
+    .card h3 {
+      font-family: var(--font-display);
+      font-size: 11.2pt;
+      line-height: 1.15;
+      font-weight: 800;
+      letter-spacing: 0;
+      color: var(--charcoal);
+      margin-bottom: 1.5mm;
+    }
+    .card--dark h3 { color: var(--pure-white); }
+    .card p {
+      font-size: 7.35pt;
+      line-height: 1.5;
+      color: var(--gray-500);
+    }
+    .card--dark p { color: rgba(255,255,255,0.55); }
+
+    .proof-strip {
+      display: flex;
+      align-items: center;
+      gap: 5mm;
+      background: var(--gray-100);
+      border-radius: 3.5mm;
+      padding: 5mm 6mm;
+    }
+    .proof-strip--dark {
+      background: rgba(255,255,255,0.045);
+      border: 0.3mm solid rgba(255,255,255,0.08);
+    }
+    .proof-stat { text-align: center; min-width: 23mm; }
+    .proof-stat strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 20pt;
+      font-weight: 900;
+      line-height: 1;
+      color: var(--green-primary);
+    }
+    .proof-stat span {
+      display: block;
+      margin-top: 1mm;
+      font-size: 6.2pt;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--gray-400);
+    }
+    .proof-strip--dark .proof-stat strong { color: var(--green-light); }
+    .proof-strip--dark .proof-stat span { color: rgba(255,255,255,0.38); }
+    .proof-divider { width: 0.3mm; height: 11mm; background: var(--gray-200); flex-shrink: 0; }
+    .proof-strip--dark .proof-divider { background: rgba(255,255,255,0.12); }
+    .proof-text { flex: 1; font-size: 7.7pt; line-height: 1.5; color: var(--gray-500); }
+    .proof-text strong { color: var(--charcoal); font-weight: 800; }
+    .proof-strip--dark .proof-text { color: rgba(255,255,255,0.58); }
+    .proof-strip--dark .proof-text strong { color: var(--pure-white); }
+
+    .module-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3mm;
+    }
+    .module {
+      background: var(--gray-100);
+      border-radius: 3.2mm;
+      padding: 5mm;
+      min-height: 44mm;
+    }
+    .module label {
+      display: block;
+      font-size: 6pt;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--green-accent);
+      margin-bottom: 1.5mm;
+    }
+    .module h3 {
+      font-size: 10.2pt;
+      line-height: 1.2;
+      font-weight: 800;
+      color: var(--charcoal);
+      margin-bottom: 1.5mm;
+    }
+    .module p { font-size: 7pt; color: var(--gray-500); line-height: 1.45; }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 2mm;
+    }
+    .step {
+      background: rgba(255,255,255,0.045);
+      border: 0.3mm solid rgba(255,255,255,0.08);
+      border-radius: 3mm;
+      padding: 4mm 3.5mm;
+      text-align: center;
+    }
+    .step strong {
+      display: block;
+      font-family: var(--font-display);
+      color: var(--green-light);
+      font-size: 16pt;
+      line-height: 1;
+      margin-bottom: 2mm;
+    }
+    .step h3 { color: var(--pure-white); font-size: 7.6pt; margin-bottom: 1.3mm; }
+    .step p { color: rgba(255,255,255,0.5); font-size: 6.3pt; line-height: 1.42; }
+
+    .client-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2.4mm;
+    }
+    .client {
+      border-radius: 2.5mm;
+      background: var(--gray-100);
+      padding: 3.4mm;
+      min-height: 20mm;
+    }
+    .client label {
+      display: block;
+      font-size: 5.8pt;
+      font-weight: 800;
+      color: var(--green-accent);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 1mm;
+    }
+    .client span { font-size: 7pt; line-height: 1.35; color: var(--gray-700); }
+
+    .contact-card {
+      background: rgba(255,255,255,0.045);
+      border: 0.3mm solid rgba(255,255,255,0.08);
+      border-radius: 4mm;
+      padding: 9mm;
+      width: 100%;
+      max-width: 154mm;
+      margin: 0 auto;
+    }
+    .contact-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3mm;
+    }
+    .contact-item {
+      text-align: left;
+      border-left: 0.4mm solid rgba(116,198,157,0.6);
+      padding-left: 4mm;
+    }
+    .contact-item i {
+      display: block;
+      font-size: 23pt;
+      color: var(--green-light);
+      filter: drop-shadow(0 3px 8px rgba(0,0,0,0.3));
+      margin-bottom: 2.5mm;
+    }
+    .contact-item label {
+      display: block;
+      font-size: 6pt;
+      font-weight: 800;
+      color: rgba(255,255,255,0.35);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 1.3mm;
+    }
+    .contact-item span {
+      display: block;
+      color: var(--pure-white);
+      font-size: 8.2pt;
+      font-weight: 700;
+      line-height: 1.35;
+      overflow-wrap: anywhere;
+    }
+
+    @media print {
+      html, body { background: #fff; margin: 0; padding: 0; }
+      .toolbar { display: none !important; }
+      .page {
+        margin: 0;
+        box-shadow: none;
+        border-radius: 0;
+        width: 210mm;
+        height: 297mm;
+        page-break-after: always;
+        break-after: page;
+      }
+      .page:last-child { page-break-after: avoid; break-after: avoid; }
+      .page--dark, .page--green { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <span>GardenSuite Operations - Full Brochure</span>
+    <span style="font-size: 10px;">Export: <code style="background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 4px;">Cmd+P &gt; Save as PDF</code></span>
+    <button class="btn-primary" onclick="window.print()">Download PDF</button>
+  </div>
+
+  <section class="page page--dark">
+    <div class="content">
+      <div class="hdr">
+        <div class="brand brand--light"><img src="icon-white.svg" alt="" />GardenSuite</div>
+        <div class="tag tag--light">Full Operations Brochure - 2026</div>
+      </div>
+      <div class="cover">
+        <div class="cover-bg"><img src="hero-tea-garden.png" alt="Tea garden landscape" /></div>
+        <div class="cover-copy">
+          <span class="eyebrow eyebrow--light">Built for tea gardens</span>
+          <h1 class="headline headline--xl">Complete operations system for tea garden management.</h1>
+          <p class="lead">GardenSuite helps estates manage attendance, kamjari, payroll, ration, stores, factory production, bought leaf, and daily MIS from one reliable system.</p>
+          <div class="stat-row">
+            <div class="stat"><strong>25+</strong><span>Years in tea gardens</span></div>
+            <div class="stat"><strong>20+</strong><span>Estate clients</span></div>
+            <div class="stat"><strong>Offline</strong><span>Garden office system</span></div>
+            <div class="stat"><strong>Cloud</strong><span>MIS dashboard</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="ftr ftr--light">
+        <span>Built and maintained by Sarbani Associates</span>
+        <span>gardensuite.in</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="content">
+      <div class="hdr">
+        <div class="brand"><img src="favicon.png" alt="" />GardenSuite</div>
+        <div class="tag">02 / 11 - Why GardenSuite</div>
+      </div>
+      <div class="page-body">
+        <div class="intro-copy">
+          <span class="eyebrow">The problem</span>
+          <h2 class="headline section-title">Tea garden data is often split across registers, sheets, and delayed reports.</h2>
+          <p class="lead">GardenSuite brings daily field work, wage calculation, stock movement, factory production, and MIS into one practical system. It is made for estate offices where internet may be weak and daily work cannot stop.</p>
+        </div>
+        <div class="cards">
+          <div class="card">
+            <i class="ph-duotone ph-notebook"></i>
+            <h3>Manual registers slow the office</h3>
+            <p>Attendance, plucking, issue slips, factory data, and daily summaries are often copied again before final reports are ready.</p>
+          </div>
+          <div class="card">
+            <i class="ph-duotone ph-clock-countdown"></i>
+            <h3>Reports arrive too late</h3>
+            <p>Managers need daily costs, crop, labour, and stock position quickly. Delayed data makes cost control difficult.</p>
+          </div>
+          <div class="card">
+            <i class="ph-duotone ph-link-break"></i>
+            <h3>Departments work separately</h3>
+            <p>Payroll, stores, factory, and MIS need the same facts, but disconnected systems create repeated work and errors.</p>
+          </div>
+          <div class="card">
+            <i class="ph-duotone ph-wifi-slash"></i>
+            <h3>Garden internet is not always reliable</h3>
+            <p>Estate offices need software that works locally first, then supports cloud viewing where required.</p>
+          </div>
+        </div>
+        <div class="proof-strip">
+          <div class="proof-stat"><strong>One</strong><span>System</span></div>
+          <div class="proof-divider"></div>
+          <div class="proof-text"><strong>Simple, connected, and made for tea gardens.</strong> Start with the modules you need. Use it in a single PC or LAN. Add face attendance, Smart Weigh, and cloud MIS when ready.</div>
+        </div>
+      </div>
+      <div class="ftr">
+        <span>GardenSuite operations system</span>
+        <span>&copy; 2026 Sarbani Associates</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="content">
+      <div class="hdr">
+        <div class="brand"><img src="favicon.png" alt="" />GardenSuite</div>
+        <div class="tag">03 / 11 - One Platform</div>
+      </div>
+      <div class="page-body">
+        <div class="split split--wide">
+          <div class="intro-copy">
+            <span class="eyebrow">Complete estate view</span>
+            <h2 class="headline section-title">From field attendance to daily management reports.</h2>
+            <p class="lead small-lead">GardenSuite modules can run together and exchange data, or run separately when an estate wants a phased rollout. The system supports multiple users with password rights and audit tracking.</p>
+            <ul class="feature-list">
+              <li><i class="ph-duotone ph-users-three"></i><span><strong>Multiple users and rights</strong> - control who can view, edit, delete, and print.</span></li>
+              <li><i class="ph-duotone ph-printer"></i><span><strong>Reports ready for office use</strong> - preview, search, zoom, print, and export to formats like PDF, Excel, CSV, Word, and HTML.</span></li>
+              <li><i class="ph-duotone ph-database"></i><span><strong>Secured database</strong> - password-protected data with daily local backup and manual external backup option.</span></li>
+              <li><i class="ph-duotone ph-network"></i><span><strong>Single PC or LAN</strong> - practical setup for estate offices using cabled or Wi-Fi LAN.</span></li>
+            </ul>
+          </div>
+          <div class="vector-frame vector-frame--square"><img src="vectors/gardensuite-platform.svg" alt="GardenSuite platform illustration" /></div>
+        </div>
+        <div class="module-grid">
+          <div class="module"><label>Field</label><h3>Kamjari and attendance</h3><p>Daily deployment, task work, plucking data, hazira, and correction controls.</p></div>
+          <div class="module"><label>Office</label><h3>Payroll and ration</h3><p>Fortnightly wages, salary, PF, bonus, leave, sick, maternity, ration, and tea distribution.</p></div>
+          <div class="module"><label>Operations</label><h3>Stores and factory</h3><p>Purchase, issue, stock, production, packing, despatch, and bought leaf records.</p></div>
+        </div>
+      </div>
+      <div class="ftr">
+        <span>One platform</span>
+        <span>Built by Sarbani Associates</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="page page--dark">
+    <div class="content">
+      <div class="hdr">
+        <div class="brand brand--light"><img src="icon-white.svg" alt="" />GardenSuite</div>
+        <div class="tag tag--light">04 / 11 - Face + Smart Weigh</div>
+      </div>
+      <div class="page-body">
+        <div class="split split--reverse">
+          <div class="vector-frame vector-frame--square"><img src="vectors/face-scale-workflow.svg" alt="Face and scale workflow illustration" /></div>
+          <div class="intro-copy">
+            <span class="eyebrow eyebrow--light">Modern attendance</span>
+            <h2 class="headline headline--light section-title">Verified worker, verified weight, one record.</h2>
+            <p class="lead lead--light small-lead">GardenSuite works with the in-house face attendance app and Smart Weigh wireless hanging scale. It helps stop proxy attendance and reduces copying errors during plucking weighment.</p>
+            <ul class="feature-list">
+              <li><i class="ph-duotone ph-scan"></i><span><strong>Face recognition attendance</strong> - worker identity is verified by face, not by paper or memory.</span></li>
+              <li><i class="ph-duotone ph-scales"></i><span><strong>Smart wireless scale</strong> - plucking weight can be linked to the verified worker in one workflow.</span></li>
+              <li><i class="ph-duotone ph-cloud-arrow-up"></i><span><strong>Offline first, sync later</strong> - field work can continue even where network is weak.</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="proof-strip proof-strip--dark">
+          <div class="proof-stat"><strong>Face</strong><span>Identity</span></div>
+          <div class="proof-divider"></div>
+          <div class="proof-stat"><strong>Weight</strong><span>Harvest</span></div>
+          <div class="proof-divider"></div>
+          <div class="proof-text"><strong>Built for daily field reality.</strong> Supervisors can capture attendance and plucking data faster, while management gets cleaner data for payroll, productivity, and cost reports.</div>
+        </div>
+      </div>
+      <div class="ftr ftr--light">
+        <span>Face attendance and Smart Weigh</span>
+        <span>Sarbani Associates</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="content">
+      <div class="hdr">
+        <div class="brand"><img src="favicon.png" alt="" />GardenSuite</div>
+        <div class="tag">05 / 11 - Kamjari + Payroll</div>
+      </div>
+      <div class="page-body">
+        <div class="split">
+          <div class="intro-copy">
+            <span class="eyebrow">Payroll module</span>
+            <h2 class="headline tight-title">Daily kamjari and payroll calculation in minutes.</h2>
+            <p class="lead small-lead">Import attendance and weighment data, add daily costing parameters, and generate daily kamjari quickly. Payroll reports support daily rated workers, monthly salary, payslips, PF, bonus, leave, ration, and more.</p>
+          </div>
+          <div class="vector-frame vector-frame--short"><img src="vectors/payroll-mis.svg" alt="Payroll and MIS illustration" /></div>
+        </div>
+        <div class="cards cards--3">
+          <div class="card"><i class="ph-duotone ph-calendar-check"></i><h3>Daily kamjari</h3><p>Daily deployment, summarized kamjari for a period, code-wise summary, and muhuri or boidar wise reports.</p></div>
+          <div class="card"><i class="ph-duotone ph-money"></i><h3>Wages and salary</h3><p>Fortnightly wages, monthly salary, payslips, carry forward coins, RTGS letters, and payment summaries.</p></div>
+          <div class="card"><i class="ph-duotone ph-file-text"></i><h3>Statutory reports</h3><p>PF returns, leave with wages, annual bonus, sick, maternity, overtime, retirement, and absent notices.</p></div>
+          <div class="card"><i class="ph-duotone ph-plant"></i><h3>Plucking control</h3><p>Section wise, date wise, month wise, plucker wise, cost analysis, rounds, average, and below task reports.</p></div>
+          <div class="card"><i class="ph-duotone ph-bowl-food"></i><h3>Ration and tea</h3><p>Ration distribution, workers tea distribution, deductions, loans, advances, and tracking registers.</p></div>
+          <div class="card"><i class="ph-duotone ph-user-list"></i><h3>Employee master</h3><p>Census data, promotions, basic pay, DA, VDA, PF, boidar, pay book, and admin controlled changes.</p></div>
+        </div>
+      </div>
+      <div class="ftr">
+        <span>Kamjari, payroll, ration and worker records</span>
+        <span>05</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="content">
+      <div class="hdr">
+        <div class="brand"><img src="favicon.png" alt="" />GardenSuite</div>
+        <div class="tag">06 / 11 - Stores</div>
+      </div>
+      <div class="page-body">
+        <div class="split split--wide">
+          <div class="intro-copy">
+            <span class="eyebrow">Stores module</span>
+            <h2 class="headline section-title">Know what came in, what went out, and what is left.</h2>
+            <p class="lead small-lead">GardenSuite Stores helps estates manage suppliers, purchases, challans, bills, requisitions, issue slips, item stock, and consumption reports.</p>
+            <ul class="feature-list">
+              <li><i class="ph-duotone ph-truck"></i><span><strong>Purchase register</strong> - supplier data, item master, HO and local challans, bill update, and payment marking.</span></li>
+              <li><i class="ph-duotone ph-clipboard-text"></i><span><strong>Issue register</strong> - requisition entry with request by, purpose, item details, and issue reports.</span></li>
+              <li><i class="ph-duotone ph-warehouse"></i><span><strong>Stock reports</strong> - item at a glance, stock book, average cost basis, and date wise stock view.</span></li>
+              <li><i class="ph-duotone ph-flask"></i><span><strong>Consumption reports</strong> - all stores consumption and chemical stores consumption for costing.</span></li>
+            </ul>
+          </div>
+          <div class="vector-frame vector-frame--square"><img src="vectors/factory-stores.svg" alt="Stores and factory illustration" /></div>
+        </div>
+        <div class="proof-strip">
+          <div class="proof-stat"><strong>Less</strong><span>Leakage</span></div>
+          <div class="proof-divider"></div>
+          <div class="proof-text"><strong>Control stock movement clearly.</strong> Estate staff can see purchase, issue, purpose, stock, and consumption in one place, instead of checking separate registers.</div>
+        </div>
+      </div>
+      <div class="ftr">
+        <span>Stores and consumption control</span>
+        <span>06</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="page page--dark">
+    <div class="content">
+      <div class="hdr">
+        <div class="brand brand--light"><img src="icon-white.svg" alt="" />GardenSuite</div>
+        <div class="tag tag--light">07 / 11 - Factory + Bought Leaf</div>
+      </div>
+      <div class="page-body">
+        <div class="intro-copy">
+          <span class="eyebrow eyebrow--light">Factory module</span>
+          <h2 class="headline headline--light section-title">Track factory run, green leaf, production, packing, and despatch.</h2>
+          <p class="lead lead--light">GardenSuite supports factory records from opening time to final despatch. It covers own leaf, bought leaf, made tea, grade wise stock, packing sizes, invoice, challan, gate pass, and daily MIS.</p>
+        </div>
+        <div class="cards cards--3">
+          <div class="card card--dark"><i class="ph-duotone ph-clock"></i><h3>Factory run data</h3><p>Factory open and close time, dryer start and stop, roll start, and fuel consumption for withering and drying.</p></div>
+          <div class="card card--dark"><i class="ph-duotone ph-leaf"></i><h3>Green leaf</h3><p>Own leaf entry, bought leaf entry, green leaf stock, withering, drying, and made tea reports.</p></div>
+          <div class="card card--dark"><i class="ph-duotone ph-package"></i><h3>Production and bulk</h3><p>Bulk tea made for CTC, orthodox, or green tea, and own leaf or bought leaf consumption against made tea.</p></div>
+          <div class="card card--dark"><i class="ph-duotone ph-stack"></i><h3>Sorting and grade stock</h3><p>Grade wise sorting of bulk and grade wise stock control for factory reporting.</p></div>
+          <div class="card card--dark"><i class="ph-duotone ph-barcode"></i><h3>Packing</h3><p>Lot number, serial number, gross weight, net weight, tare weight, bag stock, packet stock, and pack sizes.</p></div>
+          <div class="card card--dark"><i class="ph-duotone ph-receipt"></i><h3>Despatch</h3><p>GST invoice, despatch challan, gate pass, transporter, auction sale, private sale, employee tea, and sampling.</p></div>
+        </div>
+        <div class="proof-strip proof-strip--dark">
+          <div class="proof-stat"><strong>Daily</strong><span>Factory MIS</span></div>
+          <div class="proof-divider"></div>
+          <div class="proof-text"><strong>Keep factory figures ready for management.</strong> Fuel, packing material, mandays, crop synopsis, grade percentage, sorting, packing, despatch, and green leaf reports are available for day-to-day review.</div>
+        </div>
+      </div>
+      <div class="ftr ftr--light">
+        <span>Factory, bought leaf and despatch</span>
+        <span>07</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="page page--green">
+    <div class="content">
+      <div class="hdr">
+        <div class="brand brand--light"><img src="icon-white.svg" alt="" />GardenSuite</div>
+        <div class="tag tag--light">08 / 11 - MIS Dashboard</div>
+      </div>
+      <div class="page-body">
+        <div class="split split--wide">
+          <div class="intro-copy">
+            <span class="eyebrow eyebrow--light">Daily management reports</span>
+            <h2 class="headline headline--light section-title">See the estate position without waiting for paper reports.</h2>
+            <p class="lead lead--light small-lead">GardenSuite supports MIS reports for payroll, plucking, factory, and stores. The cloud dashboard gives daily updates viewable from phone, tablet, or laptop.</p>
+            <ul class="feature-list">
+              <li><i class="ph-duotone ph-chart-bar"></i><span><strong>Payroll MIS</strong> - deployment, section job, plucking, absentee, sick, maternity, wages, and salary summaries.</span></li>
+              <li><i class="ph-duotone ph-plant"></i><span><strong>Productivity reports</strong> - section wise yield, plucking average, below average workers, rounds, and productivity.</span></li>
+              <li><i class="ph-duotone ph-monitor"></i><span><strong>Cloud dashboard</strong> - daily data viewable from anywhere, designed for management visibility.</span></li>
+            </ul>
+          </div>
+          <div class="vector-frame vector-frame--square"><img src="vectors/offline-cloud.svg" alt="Offline software and cloud dashboard illustration" /></div>
+        </div>
+        <div class="proof-strip proof-strip--dark">
+          <div class="proof-stat"><strong>Daily</strong><span>Updates</span></div>
+          <div class="proof-divider"></div>
+          <div class="proof-text"><strong>Best of both worlds.</strong> Garden office work stays reliable with offline software. Owners and senior staff can still view key data through a cloud dashboard when enabled.</div>
+        </div>
+      </div>
+      <div class="ftr ftr--light">
+        <span>MIS and dashboard</span>
+        <span>08</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="content">
+      <div class="hdr">
+        <div class="brand"><img src="favicon.png" alt="" />GardenSuite</div>
+        <div class="tag">09 / 11 - Reliability + Support</div>
+      </div>
+      <div class="page-body">
+        <div class="intro-copy">
+          <span class="eyebrow">Made for estate offices</span>
+          <h2 class="headline section-title">Reliable local setup, controlled access, and practical support.</h2>
+          <p class="lead">GardenSuite is designed to reduce service issues and keep daily work moving. Support is available remotely and on-site when required. Sarbani Associates is based at Bagdogra, Siliguri, close to the tea regions it serves.</p>
+        </div>
+        <div class="cards cards--3">
+          <div class="card"><i class="ph-duotone ph-password"></i><h3>User rights</h3><p>Multiple users with password facility, different operational rights, and login activity tracking for audit purposes.</p></div>
+          <div class="card"><i class="ph-duotone ph-lock"></i><h3>Edit and delete control</h3><p>Important edit and delete facilities can be password protected and given only to authorized staff.</p></div>
+          <div class="card"><i class="ph-duotone ph-database"></i><h3>Data backup</h3><p>Automatic daily data backup through a third-party app, plus manual backup to pen drive or external HDD.</p></div>
+          <div class="card"><i class="ph-duotone ph-usb"></i><h3>Flexible data location</h3><p>Software can run from database saved in pen drive or external HDD where this setup is required.</p></div>
+          <div class="card"><i class="ph-duotone ph-headset"></i><h3>Remote support</h3><p>Support from 8 am to 6 pm through AnyDesk, TeamViewer, or similar tools for prompt resolution.</p></div>
+          <div class="card"><i class="ph-duotone ph-map-pin"></i><h3>On-site reach</h3><p>Bagdogra location helps the team reach many gardens by road, rail, or air when major support is needed.</p></div>
+        </div>
+        <div class="proof-strip">
+          <div class="proof-stat"><strong>7</strong><span>Days</span></div>
+          <div class="proof-divider"></div>
+          <div class="proof-text"><strong>Fast practical rollout.</strong> After customization, master file creation, testing with Easy Weigh or Wi-Fi scale, and trials, final kamjari can be produced after 7 days from installation and then for later fortnights.</div>
+        </div>
+      </div>
+      <div class="ftr">
+        <span>Reliability and support</span>
+        <span>09</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="content">
+      <div class="hdr">
+        <div class="brand"><img src="favicon.png" alt="" />GardenSuite</div>
+        <div class="tag">10 / 11 - Trust</div>
+      </div>
+      <div class="page-body">
+        <div class="intro-copy">
+          <span class="eyebrow">Trusted in tea regions</span>
+          <h2 class="headline section-title">Built by Sarbani Associates, backed by years of tea garden work.</h2>
+          <p class="lead">The GardenSuite journey started from computer service and grew into a complete tea garden operations system. It now serves estates across Darjeeling, Dooars, Assam, Terai, Coochbehar, Uttar Dinajpur, and Jalpaiguri.</p>
+        </div>
+        <div class="proof-strip">
+          <div class="proof-stat"><strong>1998</strong><span>Infoworld</span></div>
+          <div class="proof-divider"></div>
+          <div class="proof-stat"><strong>2000</strong><span>Garden Suite</span></div>
+          <div class="proof-divider"></div>
+          <div class="proof-stat"><strong>2018</strong><span>Sarbani</span></div>
+          <div class="proof-divider"></div>
+          <div class="proof-stat"><strong>2026</strong><span>Version 3</span></div>
+        </div>
+        <div class="client-grid">
+          <div class="client"><label>Darjeeling</label><span>Simulbarie T.E., Longview T.E.</span></div>
+          <div class="client"><label>Dooars</label><span>Rheabari, Mogulkata, Rahimpur, Debpara, Kurti, Looksan, Subhasini</span></div>
+          <div class="client"><label>Assam</label><span>Choibari T.E., Chapar T.E., Doolahat T.E.</span></div>
+          <div class="client"><label>Terai</label><span>Atal, Thanjhora, Naxalbari, Pahargoomiah, Kamalpur</span></div>
+          <div class="client"><label>Coochbehar</label><span>Tinbigha T.E.</span></div>
+          <div class="client"><label>Uttar Dinajpur</label><span>Chandan T.E.</span></div>
+          <div class="client"><label>Jalpaiguri</label><span>Himalayan Agro Plantation</span></div>
+          <div class="client"><label>Coverage</label><span>20+ tea estates and growing</span></div>
+        </div>
+        <div class="timeline">
+          <div class="step" style="background: var(--green-deep);"><strong>1</strong><h3>Discuss needs</h3><p>Choose modules and rollout scope.</p></div>
+          <div class="step" style="background: var(--green-deep);"><strong>2</strong><h3>Customize</h3><p>Set garden rules, masters, and reports.</p></div>
+          <div class="step" style="background: var(--green-deep);"><strong>3</strong><h3>Install</h3><p>Single PC, LAN, devices, and backup.</p></div>
+          <div class="step" style="background: var(--green-deep);"><strong>4</strong><h3>Train</h3><p>Train office and field users.</p></div>
+          <div class="step" style="background: var(--green-deep);"><strong>5</strong><h3>Go live</h3><p>Daily kamjari and reports.</p></div>
+        </div>
+      </div>
+      <div class="ftr">
+        <span>Trust and rollout</span>
+        <span>10</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="page page--dark">
+    <div class="content">
+      <div class="hdr">
+        <div class="brand brand--light"><img src="icon-white.svg" alt="" />GardenSuite</div>
+        <div class="tag tag--light">11 / 11 - Contact</div>
+      </div>
+      <div class="page-body" style="justify-content: center; text-align: center; padding: 0 14mm;">
+        <div class="intro-copy" style="align-items: center;">
+          <span class="eyebrow eyebrow--light">Book a demo</span>
+          <h2 class="headline headline--light headline--xl" style="max-width: 160mm;">Bring your tea garden operations into one system.</h2>
+          <p class="lead lead--light" style="max-width: 132mm;">See GardenSuite, face attendance, Smart Weigh, and MIS dashboard in a practical demo. We will explain the setup in simple language and suggest a rollout that fits your estate.</p>
+        </div>
+        <div class="contact-card">
+          <div class="contact-row">
+            <div class="contact-item">
+              <i class="ph-duotone ph-phone"></i>
+              <label>Call / WhatsApp</label>
+              <span>+91 97341 01330</span>
+            </div>
+            <div class="contact-item">
+              <i class="ph-duotone ph-envelope-simple"></i>
+              <label>Email</label>
+              <span>sarbaniassociates@gmail.com<br />info@gardensuite.tech</span>
+            </div>
+            <div class="contact-item">
+              <i class="ph-duotone ph-globe"></i>
+              <label>Website</label>
+              <span>gardensuite.in<br />www.gardensuite.tech</span>
+            </div>
+          </div>
+          <div style="height: 0.3mm; background: rgba(255,255,255,0.08); margin: 8mm 0;"></div>
+          <p class="lead lead--light" style="font-size: 9.4pt; max-width: 128mm; margin: 0 auto;">GardenSuite is built and maintained by Sarbani Associates, Bagdogra, Siliguri. Serving tea estates across Assam, Dooars, Terai, Darjeeling, Coochbehar, Uttar Dinajpur, and Jalpaiguri.</p>
+        </div>
+      </div>
+      <div class="ftr ftr--light">
+        <span>GardenSuite operations system by Sarbani Associates</span>
+        <span>&copy; 2026 Sarbani Associates</span>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
