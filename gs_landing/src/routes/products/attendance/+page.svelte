@@ -62,25 +62,31 @@
 	<link rel="canonical" href="https://gardensuite.in/products/attendance" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://gardensuite.in/products/attendance" />
-	<meta property="og:title" content="Face Attendance &amp; Smart Weighing - GardenSuite" />
+	<meta property="og:title" content="Face Attendance + Leaf Weight from Rs. 499/month" />
 	<meta
 		property="og:description"
-		content="Verify workers by face, capture leaf weight by Bluetooth scale, and sync data for payroll when internet returns."
+		content="For tea gardens. Worker face, plucking weight, and Kamjari record in one flow."
 	/>
 	<meta
 		property="og:image"
-		content="https://gardensuite.in/screenshots/face-attendance_liveness-check_passed.png"
+		content="https://gardensuite.in/og/face-attendance-weight-price-v4.jpg"
+	/>
+	<meta property="og:image:width" content="1080" />
+	<meta property="og:image:height" content="1080" />
+	<meta
+		property="og:image:alt"
+		content="GardenSuite face scan to leaf weight to Kamjari record workflow"
 	/>
 	<meta property="og:site_name" content="GardenSuite" />
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="Face Attendance &amp; Smart Weighing - GardenSuite" />
+	<meta name="twitter:title" content="Face Attendance + Leaf Weight from Rs. 499/month" />
 	<meta
 		name="twitter:description"
-		content="Face attendance and smart weighing software for tea gardens. Works offline and syncs when internet returns."
+		content="For tea gardens. Worker face, plucking weight, and Kamjari record in one flow."
 	/>
 	<meta
 		name="twitter:image"
-		content="https://gardensuite.in/screenshots/face-attendance_liveness-check_passed.png"
+		content="https://gardensuite.in/og/face-attendance-weight-price-v4.jpg"
 	/>
 	{@html `<script type="application/ld+json">${JSON.stringify({
 		'@context': 'https://schema.org',

@@ -3,3 +3,5 @@
 *.zip
 *.tar.gz
 .playwright-mcp/
+.wa-check-browser-profile/
+backup_*/
