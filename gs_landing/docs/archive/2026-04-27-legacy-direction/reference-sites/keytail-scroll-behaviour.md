@@ -12,6 +12,7 @@ Extracted from https://www.keytail.ai/
 ## 2. Hero Parallax (Scroll-Linked)
 
 **Image wrapper** (`.absolute.inset-0.scale-110`):
+
 - Starts at `transform: scale(1.1)` - image is 10% larger than container
 - On scroll, gets `translate3d(0px, Ypx, 0px)` applied via Framer Motion `useScroll` + `useTransform`
 - Image translates **downward** as user scrolls (parallax depth effect)
@@ -24,6 +25,7 @@ Extracted from https://www.keytail.ai/
 - Parent section has `overflow: hidden` to clip the scaled image
 
 **Hero mockup/product screenshot** (`.relative.w-full.max-w-5xl`):
+
 - Moves in **opposite direction** to the hero image (upward as user scrolls)
 - At scroll 0: `translate3d(0, 0, 0)`
 - At scroll 1500: `translate3d(0, -22.8px, 0)`
@@ -31,6 +33,7 @@ Extracted from https://www.keytail.ai/
 - **Translation is inverted** from the image parallax (negative Y)
 
 **Pattern:** Two elements parallax in opposite directions. Speed ratio is ~1:1 (same magnitude, opposite sign). Likely implemented as:
+
 ```
 scrollYProgress = useScroll().scrollYProgress
 imageY = useTransform(scrollYProgress, [0, 1], [0, ~70])
@@ -63,6 +66,7 @@ All below-fire animations use Framer Motion's `whileInView` with `once: true` (f
 **Element:** Section with `perspective: 1200px`
 
 Two elements use this:
+
 1. **Heading container** (docTop ~3781) - `perspective:1200px` on parent, `opacity: 1; transform: none;` on child
 2. **Video/product iframe** (docTop ~4079) - `perspective: 1200px; opacity: 1; transform: none;`
 
@@ -70,6 +74,7 @@ Two elements use this:
 **Revealed state:** `opacity: 1; transform: none;`
 
 **Implementation pattern:**
+
 ```jsx
 <motion.div
   initial={{ opacity: 0, rotateX: 10 }}
@@ -83,15 +88,21 @@ Two elements use this:
 ### 4b. Line-by-Line Text Reveal
 
 **Structure:**
+
 ```html
-<div style="overflow: hidden; height: 22px;">  <!-- each line's parent clips -->
-  <div class="line" style="transform: translateY(0%); transition: transform 0.9s cubic-bezier(0.625, 0.05, 0, 1);">
-    Text line here
-  </div>
+<div style="overflow: hidden; height: 22px;">
+	<!-- each line's parent clips -->
+	<div
+		class="line"
+		style="transform: translateY(0%); transition: transform 0.9s cubic-bezier(0.625, 0.05, 0, 1);"
+	>
+		Text line here
+	</div>
 </div>
 ```
 
 **Animation:**
+
 - Each line is wrapped in an `overflow: hidden` parent with fixed height (22px per line)
 - Line slides from `translateY(100%)` to `translateY(0%)`
 - **Duration:** 0.9s
@@ -103,23 +114,24 @@ Two elements use this:
   - Line 3: `0.15s` delay
 
 **Implementation pattern:**
+
 ```jsx
 lines.map((line, i) => (
-  <div style={{ overflow: 'hidden', height: '22px' }}>
-    <motion.div
-      initial={{ translateY: '100%' }}
-      whileInView={{ translateY: '0%' }}
-      transition={{ 
-        duration: 0.9, 
-        ease: [0.625, 0.05, 0, 1],
-        delay: i * 0.05 
-      }}
-      viewport={{ once: true }}
-    >
-      {line}
-    </motion.div>
-  </div>
-))
+	<div style={{ overflow: 'hidden', height: '22px' }}>
+		<motion.div
+			initial={{ translateY: '100%' }}
+			whileInView={{ translateY: '0%' }}
+			transition={{
+				duration: 0.9,
+				ease: [0.625, 0.05, 0, 1],
+				delay: i * 0.05
+			}}
+			viewport={{ once: true }}
+		>
+			{line}
+		</motion.div>
+	</div>
+));
 ```
 
 ### 4c. Fade-In-Up Reveals
@@ -127,6 +139,7 @@ lines.map((line, i) => (
 **Used for:** Chart section, stat numbers (584K, 581K), content sections
 
 **Pattern:**
+
 ```jsx
 <motion.div
   initial={{ opacity: 0, y: 20 }}
@@ -143,6 +156,7 @@ Final rendered state: `opacity: 1; transform: none;` or `opacity: 1;`
 **Location:** "Use Cases" section with tabs (Startups, Marketing & SEO Teams, Agencies, etc.)
 
 **Behavior:**
+
 - **Active tab:** `color: #111` (dark), font-medium, tracking-tight
 - **Inactive tabs:** `color: #BDBDBD` (light gray)
 - **Transition:** `color 0.3s ease`
@@ -151,58 +165,97 @@ Final rendered state: `opacity: 1; transform: none;` or `opacity: 1;`
 ## 6. CSS Keyframe Animations
 
 ### `fade-in` (scroll-triggered entrance)
+
 ```css
 @keyframes fade-in {
-  0%   { opacity: 0; transform: translateY(10px); }
-  100% { opacity: 1; transform: translateY(0px); }
+	0% {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0px);
+	}
 }
 ```
 
 ### `slideUp` (rotating text/counter)
+
 ```css
 @keyframes slideUp {
-  0%   { opacity: 0; transform: translateY(100%); }
-  20%  { opacity: 1; transform: translateY(0px); }
-  53%  { opacity: 1; transform: translateY(0px); }
-  73%  { opacity: 0; transform: translateY(-100%); }
-  100% { opacity: 0; transform: translateY(-100%); }
+	0% {
+		opacity: 0;
+		transform: translateY(100%);
+	}
+	20% {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+	53% {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+	73% {
+		opacity: 0;
+		transform: translateY(-100%);
+	}
+	100% {
+		opacity: 0;
+		transform: translateY(-100%);
+	}
 }
 ```
 
 ### `glow-pulse` (CTA button glow)
+
 ```css
 @keyframes glow-pulse {
-  0%, 100% { box-shadow: rgba(59, 130, 246, 0.3) 0px 0px 20px; }
-  50%      { box-shadow: rgba(59, 130, 246, 0.6) 0px 0px 30px; }
+	0%,
+	100% {
+		box-shadow: rgba(59, 130, 246, 0.3) 0px 0px 20px;
+	}
+	50% {
+		box-shadow: rgba(59, 130, 246, 0.6) 0px 0px 30px;
+	}
 }
 ```
 
 ### `shimmer` (loading/gradient sweep)
+
 ```css
 @keyframes shimmer {
-  0%   { background-position: 200% 0px; }
-  100% { background-position: -200% 0px; }
+	0% {
+		background-position: 200% 0px;
+	}
+	100% {
+		background-position: -200% 0px;
+	}
 }
 ```
 
 ### `line-fade-in`
+
 ```css
 @keyframes line-fade-in {
-  0%   { opacity: 0; }
-  100% { opacity: 1; }
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 ```
 
 ## 7. Summary: Animation Easing Functions
 
-| Usage | Easing |
-|-------|--------|
-| Line reveal | `cubic-bezier(0.625, 0.05, 0, 1)` (0.9s) |
-| Navbar bg | `cubic-bezier(0.4, 0, 0.2, 1)` (0.3s) |
-| Tab color | `ease` (0.3s) |
-| Framer Motion reveals | default Framer (likely `easeOut`) |
-| CSS fade-in | linear between keyframes |
-| Hover opacity | `ease` (0.2s) |
+| Usage                 | Easing                                   |
+| --------------------- | ---------------------------------------- |
+| Line reveal           | `cubic-bezier(0.625, 0.05, 0, 1)` (0.9s) |
+| Navbar bg             | `cubic-bezier(0.4, 0, 0.2, 1)` (0.3s)    |
+| Tab color             | `ease` (0.3s)                            |
+| Framer Motion reveals | default Framer (likely `easeOut`)        |
+| CSS fade-in           | linear between keyframes                 |
+| Hover opacity         | `ease` (0.2s)                            |
 
 ## 8. Tech Stack for Scroll
 

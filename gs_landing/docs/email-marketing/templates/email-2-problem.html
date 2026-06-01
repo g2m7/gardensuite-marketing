@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>The hidden cost of manual attendance</title>
+		<style>
+			body {
+				margin: 0;
+				padding: 0;
+				font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+				background: #f5f5f7;
+			}
+			.container {
+				max-width: 600px;
+				margin: 0 auto;
+				background: white;
+			}
+			.header {
+				background: #234b1d;
+				padding: 32px 24px;
+				text-align: center;
+			}
+			.header h1 {
+				color: white;
+				font-size: 24px;
+				margin: 0;
+				font-weight: 700;
+			}
+			.header p {
+				color: rgba(255, 255, 255, 0.8);
+				margin: 8px 0 0;
+				font-size: 14px;
+			}
+			.content {
+				padding: 32px 24px;
+			}
+			.content h2 {
+				color: #1a3a15;
+				font-size: 22px;
+				margin: 0 0 16px;
+				font-weight: 700;
+			}
+			.content p {
+				color: #424245;
+				font-size: 16px;
+				line-height: 1.6;
+				margin: 0 0 16px;
+			}
+			.content ul {
+				color: #424245;
+				font-size: 16px;
+				line-height: 1.6;
+				margin: 0 0 16px;
+				padding-left: 20px;
+			}
+			.content li {
+				margin-bottom: 8px;
+			}
+			.highlight {
+				background: #f0f7f0;
+				padding: 16px;
+				border-radius: 8px;
+				margin: 16px 0;
+			}
+			.cta {
+				text-align: center;
+				margin: 24px 0;
+			}
+			.cta a {
+				display: inline-block;
+				background: #234b1d;
+				color: white;
+				padding: 14px 28px;
+				border-radius: 8px;
+				text-decoration: none;
+				font-weight: 600;
+				font-size: 16px;
+			}
+			.footer {
+				background: #f5f5f7;
+				padding: 24px;
+				text-align: center;
+				border-top: 1px solid #e5e7eb;
+			}
+			.footer p {
+				color: #86868b;
+				font-size: 13px;
+				margin: 0 0 8px;
+			}
+			.footer a {
+				color: #234b1d;
+				text-decoration: none;
+			}
+			@media (max-width: 600px) {
+				.content {
+					padding: 24px 16px;
+				}
+				.header {
+					padding: 24px 16px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="header">
+				<h1>GardenSuite</h1>
+				<p>Tea Garden Management Software by Sarbani Associates</p>
+			</div>
+
+			<div class="content">
+				<p>Hi {{ contact.FIRSTNAME | default: "there" }},</p>
+
+				<p>Let us be honest. Manual attendance and weighing cause three big problems:</p>
+
+				<ol
+					style="
+						color: #424245;
+						font-size: 16px;
+						line-height: 1.6;
+						margin: 0 0 16px;
+						padding-left: 20px;
+					"
+				>
+					<li>
+						<strong>Proxy punching</strong> - One worker marks for another. You pay for work not
+						done.
+					</li>
+					<li>
+						<strong>Paper registers</strong> - Damaged by rain, lost, or filled with errors. Payroll
+						becomes a nightmare.
+					</li>
+					<li>
+						<strong>Weighing mistakes</strong> - Manual entry errors mean wrong payments and worker
+						complaints.
+					</li>
+				</ol>
+
+				<p>
+					These problems cost gardens thousands every month. But the bigger cost is trust. When
+					workers feel cheated, morale drops. Retention becomes hard.
+				</p>
+
+				<div class="highlight">
+					<p style="margin: 0; font-weight: 600; color: #1a3a15">
+						GardenSuite fixes this with one simple system:
+					</p>
+					<ul style="margin: 8px 0 0">
+						<li>Worker stands in front of the tablet. Face recognised. Attendance marked.</li>
+						<li>Worker puts leaves on the scale. Weight recorded. Linked to their face.</li>
+						<li>Data syncs to cloud. You see live numbers on your phone.</li>
+					</ul>
+				</div>
+
+				<div class="cta">
+					<a
+						href="https://gardensuite.in/products/attendance?utm_source=email&utm_medium=automation&utm_campaign=attendance_nurture&utm_content=email_2"
+						>Book a free demo</a
+					>
+				</div>
+
+				<p>Regards,<br />Sarbani Associates</p>
+			</div>
+
+			<div class="footer">
+				<p><strong>Sarbani Associates</strong></p>
+				<p>Bagdogra, Siliguri</p>
+				<p style="margin-top: 12px; font-size: 12px">
+					<a href="{{ unsubscribe }}">Unsubscribe</a> |
+					<a href="https://gardensuite.in">Visit Website</a>
+				</p>
+			</div>
+		</div>
+	</body>
+</html>

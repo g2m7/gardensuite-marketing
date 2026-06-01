@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Your attendance problem is solved</title>
+		<style>
+			body {
+				margin: 0;
+				padding: 0;
+				font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+				background: #f5f5f7;
+			}
+			.container {
+				max-width: 600px;
+				margin: 0 auto;
+				background: white;
+			}
+			.header {
+				background: #234b1d;
+				padding: 32px 24px;
+				text-align: center;
+			}
+			.header h1 {
+				color: white;
+				font-size: 24px;
+				margin: 0;
+				font-weight: 700;
+			}
+			.header p {
+				color: rgba(255, 255, 255, 0.8);
+				margin: 8px 0 0;
+				font-size: 14px;
+			}
+			.content {
+				padding: 32px 24px;
+			}
+			.content h2 {
+				color: #1a3a15;
+				font-size: 22px;
+				margin: 0 0 16px;
+				font-weight: 700;
+			}
+			.content p {
+				color: #424245;
+				font-size: 16px;
+				line-height: 1.6;
+				margin: 0 0 16px;
+			}
+			.content ul {
+				color: #424245;
+				font-size: 16px;
+				line-height: 1.6;
+				margin: 0 0 16px;
+				padding-left: 20px;
+			}
+			.content li {
+				margin-bottom: 8px;
+			}
+			.cta {
+				text-align: center;
+				margin: 24px 0;
+			}
+			.cta a {
+				display: inline-block;
+				background: #234b1d;
+				color: white;
+				padding: 14px 28px;
+				border-radius: 8px;
+				text-decoration: none;
+				font-weight: 600;
+				font-size: 16px;
+			}
+			.footer {
+				background: #f5f5f7;
+				padding: 24px;
+				text-align: center;
+				border-top: 1px solid #e5e7eb;
+			}
+			.footer p {
+				color: #86868b;
+				font-size: 13px;
+				margin: 0 0 8px;
+			}
+			.footer a {
+				color: #234b1d;
+				text-decoration: none;
+			}
+			@media (max-width: 600px) {
+				.content {
+					padding: 24px 16px;
+				}
+				.header {
+					padding: 24px 16px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="header">
+				<h1>GardenSuite</h1>
+				<p>Tea Garden Management Software by Sarbani Associates</p>
+			</div>
+
+			<div class="content">
+				<p>Hi {{ contact.FIRSTNAME | default: "there" }},</p>
+
+				<p>
+					Welcome. You are one step closer to fixing your garden's attendance and weighing problem.
+				</p>
+
+				<p>
+					GardenSuite's face attendance + wireless scale combo is already running at 20+ tea estates
+					across Assam, Dooars, Terai and Darjeeling.
+				</p>
+
+				<p><strong>Here is what you get:</strong></p>
+				<ul>
+					<li>Face recognition attendance - no cards, no fingerprints, no proxy punching</li>
+					<li>Wireless scale - plucking weight links directly to the worker's face</li>
+					<li>Full offline mode - works even without internet</li>
+					<li>Cloud dashboard - see everything from your phone</li>
+				</ul>
+
+				<div class="cta">
+					<a
+						href="https://gardensuite.in/#contact?utm_source=email&utm_medium=automation&utm_campaign=attendance_nurture&utm_content=email_1"
+						>Book a 15-minute demo call</a
+					>
+				</div>
+
+				<p>Best,<br />Team Sarbani Associates<br />Bagdogra, Siliguri</p>
+			</div>
+
+			<div class="footer">
+				<p><strong>Sarbani Associates</strong></p>
+				<p>Bagdogra, Siliguri</p>
+				<p>WhatsApp: [ADD NUMBER] | Email: sarbaniassociates@gmail.com</p>
+				<p style="margin-top: 12px; font-size: 12px">
+					<a href="{{ unsubscribe }}">Unsubscribe</a> |
+					<a href="https://gardensuite.in">Visit Website</a>
+				</p>
+			</div>
+		</div>
+	</body>
+</html>

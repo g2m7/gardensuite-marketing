@@ -141,9 +141,6 @@
 				class="mx-auto grid max-w-[1344px] items-center gap-12 px-6 md:grid-cols-[0.92fr_1.08fr] md:px-12"
 			>
 				<div>
-					<span class="text-[12px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase">
-						Face Attendance &amp; Smart Weighing
-					</span>
 					<h1
 						class="mt-5 max-w-[640px] text-[36px] leading-[1.04] font-semibold tracking-[-0.04em] text-[#111111] md:text-[56px] lg:text-[64px]"
 						style="text-wrap: balance"
@@ -245,9 +242,6 @@
 			<div class="mx-auto max-w-[1344px] px-6 md:px-12">
 				<div class="grid gap-8 md:grid-cols-[0.8fr_1.2fr] md:items-start">
 					<div>
-						<span class="text-[12px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase">
-							The old way
-						</span>
 						<h2
 							class="mt-3 text-[30px] leading-[1.1] font-semibold tracking-[-0.04em] text-[#111111] md:text-[42px]"
 							style="text-wrap: balance"
@@ -257,27 +251,28 @@
 					</div>
 					<div class="grid gap-4 md:grid-cols-3">
 						{#each problems as item}
-							<article class="rounded-lg border border-[#E4E4E7] bg-white p-5">
-								<svg
-									width="22"
-									height="22"
-									viewBox="0 0 24 24"
-									fill="none"
-									aria-hidden="true"
-									class="mb-5 drop-shadow-[0_4px_10px_rgba(220,38,38,0.16)]"
-								>
-									<path
-										d="M12 8v5M12 17h.01M10.3 4.6 2.9 17.4A2 2 0 0 0 4.6 20h14.8a2 2 0 0 0 1.7-2.6L13.7 4.6a2 2 0 0 0-3.4 0Z"
-										stroke="#DC2626"
-										stroke-width="1.6"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-									/>
-								</svg>
-								<h3 class="text-[17px] font-semibold tracking-[-0.01em] text-[#111111]">
+							<article class="rounded-xl border border-[#FECACA] bg-[#FEF2F2] p-5">
+								<div class="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-[#DC2626]/10">
+									<svg
+										width="20"
+										height="20"
+										viewBox="0 0 24 24"
+										fill="none"
+										aria-hidden="true"
+									>
+										<path
+											d="M12 8v5M12 17h.01M10.3 4.6 2.9 17.4A2 2 0 0 0 4.6 20h14.8a2 2 0 0 0 1.7-2.6L13.7 4.6a2 2 0 0 0-3.4 0Z"
+											stroke="#DC2626"
+											stroke-width="1.8"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										/>
+									</svg>
+								</div>
+								<h3 class="text-[17px] font-semibold tracking-[-0.01em] text-[#7F1D1D]">
 									{item.title}
 								</h3>
-								<p class="mt-2 text-[14px] leading-[1.6] text-[#52525B]">{item.desc}</p>
+								<p class="mt-2 text-[14px] leading-[1.6] text-[#991B1B]">{item.desc}</p>
 							</article>
 						{/each}
 					</div>
@@ -293,9 +288,6 @@
 				class="mx-auto grid max-w-[1344px] gap-10 px-6 md:grid-cols-[0.95fr_1.05fr] md:items-center md:px-12"
 			>
 				<div>
-					<span class="text-[12px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase">
-						GardenSuite flow
-					</span>
 					<h2
 						id="proof-heading"
 						class="mt-3 text-[32px] leading-[1.08] font-semibold tracking-[-0.04em] text-[#111111] md:text-[44px]"
@@ -308,14 +300,22 @@
 						is verified, the kg is captured, and the record is ready for the office.
 					</p>
 				</div>
-				<div class="rounded-lg border border-[#E4E4E7] bg-white p-5 md:p-6">
-					<div class="grid gap-0">
-						{#each proofRows as row}
-							<div
-								class="grid gap-2 border-b border-[#F0F0F0] py-4 last:border-b-0 md:grid-cols-[150px_1fr]"
-							>
-								<span class="text-[13px] font-semibold text-[#111111]">{row[0]}</span>
-								<span class="text-[14px] leading-[1.6] text-[#52525B]">{row[1]}</span>
+				<div class="rounded-xl border border-[#D4E8D4] bg-[#F8FAF8] p-6 md:p-8">
+					<div class="relative">
+						{#each proofRows as row, i}
+							<div class="relative flex gap-4 pb-8 last:pb-0">
+								<div class="flex flex-col items-center">
+									<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#1B5E3B] text-sm font-bold text-white">
+										{i + 1}
+									</div>
+									{#if i < proofRows.length - 1}
+										<div class="mt-2 w-px flex-1 bg-[#C8DDB8]"></div>
+									{/if}
+								</div>
+								<div class="pb-2">
+									<h3 class="text-[15px] font-semibold text-[#111111]">{row[0]}</h3>
+									<p class="mt-1 text-[14px] leading-[1.6] text-[#52525B]">{row[1]}</p>
+								</div>
 							</div>
 						{/each}
 					</div>
@@ -330,9 +330,6 @@
 		<section class="reveal-on-scroll w-full border-y border-[#F0F0F0] bg-white py-14 md:py-18">
 			<div class="mx-auto grid max-w-[1344px] gap-8 px-6 md:grid-cols-4 md:items-center md:px-12">
 				<div class="md:col-span-1">
-					<span class="text-[12px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase">
-						Result
-					</span>
 					<h2
 						class="mt-3 text-[28px] leading-[1.12] font-semibold tracking-[-0.04em] text-[#111111]"
 					>
@@ -341,24 +338,25 @@
 				</div>
 				<div class="grid gap-4 md:col-span-3 md:grid-cols-3">
 					{#each ['Attendance is tied to face verification', 'Leaf kg is tied to the same worker', 'Payroll starts from captured records'] as item}
-						<div class="rounded-lg border border-[#E4E4E7] bg-white p-5">
-							<svg
-								width="21"
-								height="21"
-								viewBox="0 0 24 24"
-								fill="none"
-								aria-hidden="true"
-								class="mb-4 drop-shadow-[0_4px_10px_rgba(27,94,59,0.14)]"
-							>
-								<path
-									d="m5 13 4 4L19 7"
-									stroke="#1B5E3B"
-									stroke-width="1.9"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-								/>
-							</svg>
-							<p class="text-[15px] leading-[1.45] font-semibold text-[#111111]">{item}</p>
+						<div class="rounded-xl border border-[#C8DDB8] bg-[#F1F6EB] p-5">
+							<div class="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-[#1B5E3B]">
+								<svg
+									width="20"
+									height="20"
+									viewBox="0 0 24 24"
+									fill="none"
+									aria-hidden="true"
+								>
+									<path
+										d="m5 13 4 4L19 7"
+										stroke="white"
+										stroke-width="2.5"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									/>
+								</svg>
+							</div>
+							<p class="text-[15px] leading-[1.45] font-semibold text-[#0F2E0C]">{item}</p>
 						</div>
 					{/each}
 				</div>
@@ -371,9 +369,6 @@
 		>
 			<div class="mx-auto max-w-[1344px] px-6 md:px-12">
 				<div class="mb-10 max-w-[620px]">
-					<span class="text-[12px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase">
-						On-site rollout
-					</span>
 					<h2
 						id="rollout-heading"
 						class="mt-3 text-[32px] leading-[1.08] font-semibold tracking-[-0.04em] text-[#111111] md:text-[44px]"
@@ -386,16 +381,23 @@
 						trains, and supports the garden.
 					</p>
 				</div>
-				<div class="grid gap-4 md:grid-cols-4">
-					{#each rollout as item}
-						<article class="rounded-lg border border-[#E4E4E7] bg-white p-5">
-							<span class="text-[13px] font-semibold text-[#1B5E3B]">{item[0]}</span>
-							<h3 class="mt-3 text-[17px] font-semibold tracking-[-0.01em] text-[#111111]">
-								{item[1]}
-							</h3>
-							<p class="mt-2 text-[14px] leading-[1.6] text-[#52525B]">{item[2]}</p>
-						</article>
-					{/each}
+				<div class="relative">
+					<div class="absolute top-8 left-8 hidden h-[calc(100%-64px)] w-px bg-[#C8DDB8] md:block"></div>
+					<div class="grid gap-6 md:gap-8">
+						{#each rollout as item}
+							<div class="relative flex gap-5 md:gap-6">
+								<div class="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-[#1B5E3B] text-xl font-bold text-white shadow-[0_4px_12px_rgba(27,94,59,0.2)]">
+									{item[0]}
+								</div>
+								<div class="rounded-xl border border-[#E4E4E7] bg-white p-5 shadow-sm md:p-6">
+									<h3 class="text-[18px] font-semibold tracking-[-0.01em] text-[#111111]">
+										{item[1]}
+									</h3>
+									<p class="mt-2 text-[15px] leading-[1.6] text-[#52525B]">{item[2]}</p>
+								</div>
+							</div>
+						{/each}
+					</div>
 				</div>
 			</div>
 		</section>
@@ -433,10 +435,13 @@
 					</p>
 				</div>
 				<div class="grid gap-4">
-					{#each buyers as item}
-						<div class="rounded-lg border border-[#E4E4E7] bg-white p-5">
-							<h3 class="text-[16px] font-semibold text-[#111111]">{item[0]}</h3>
-							<p class="mt-2 text-[14px] leading-[1.6] text-[#52525B]">{item[1]}</p>
+					{#each buyers as item, i}
+						<div class="relative rounded-xl border-l-4 border-[#1B5E3B] bg-[#F8FAF8] p-6">
+							<svg class="absolute top-4 right-4 h-8 w-8 text-[#C8DDB8]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+								<path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+							</svg>
+							<h3 class="text-[15px] font-semibold text-[#1B5E3B]">{item[0]}</h3>
+							<p class="mt-3 text-[15px] leading-[1.65] text-[#374151]">{item[1]}</p>
 						</div>
 					{/each}
 				</div>

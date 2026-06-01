@@ -3,7 +3,9 @@
 ## Inspiration Sites Analysis (Layout Focus)
 
 ### 1. [GitHub Codespaces](https://github.com/features/codespaces)
+
 **Layout patterns:**
+
 - Sticky top nav with mega-menu dropdowns, dual CTA (Get Started + Contact Sales)
 - Hero: bold headline + subtext + dual CTAs, large product visual below
 - Alternating section rhythm: text-left + visual-right, then vice versa
@@ -17,7 +19,9 @@
 ---
 
 ### 2. [Obvious.ai](https://obvious.ai/)
+
 **Layout patterns:**
+
 - Minimal sticky nav (logo + links + dual CTA)
 - Single-line tagline hero with animated product demo below
 - Logo bar for trust ("Trusted by professionals")
@@ -34,7 +38,9 @@
 ---
 
 ### 3. [folk.app](https://www.folk.app/)
+
 **Layout patterns:**
+
 - Clean nav with feature dropdown, "Try for free" CTA
 - Announcement banner above hero
 - Hero: short punchy tagline + product description + CTA
@@ -52,7 +58,9 @@
 ---
 
 ### 4. [Fey.com](https://fey.com/)
+
 **Layout patterns:**
+
 - Ultra-minimal nav (logo + links + minimal CTA)
 - Announcement banner (acquisition news)
 - Short, bold hero text + product screenshot carousel
@@ -68,7 +76,9 @@
 ---
 
 ### 5. [Modeinspect.com](https://modeinspect.com/)
+
 **Layout patterns:**
+
 - Ultra-minimal nav (Home, Security, Sign in)
 - Hero: massive h1 ("Design in code.") + 2-line description + single CTA
 - Logo trust bar
@@ -83,7 +93,9 @@
 ---
 
 ### 6. [Regpit.com](https://regpit.com/)
+
 **Layout patterns:**
+
 - Complex mega-menu nav organized by audience (Products, Services, Functions, Industries)
 - Hero: concise tagline + dual CTA (Free trial + Book demo)
 - Horizontal icon tabs for product modules
@@ -104,7 +116,9 @@
 ---
 
 ### 7. [Comma.to](https://www.comma.to/)
+
 **Layout patterns:**
+
 - Minimal nav (logo + Log in + Sign up)
 - Hero: product name + short tagline + CTA + sample link
 - Feature showcase as visual cards (Portfolio, Links, Custom, Blog, etc.)
@@ -118,7 +132,9 @@
 ---
 
 ### 8. [PayloadCMS](https://payloadcms.com/)
+
 **Layout patterns:**
+
 - Announcement bar + sticky nav with mega-menu
 - Asymmetric hero: bold left text + interactive CLI element + large product visual right
 - Product visual masonry: overlapping UI screenshots showing multiple features
@@ -132,7 +148,9 @@
 ---
 
 ### 9. [Index.app](https://index.app/)
+
 **Layout patterns:**
+
 - Dark theme nav with rolling text animation on buttons
 - Announcement banner with marquee effect
 - Large hero headline + subheadline + CTA
@@ -150,7 +168,9 @@
 ---
 
 ### 10. [Keytail.ai](https://www.keytail.ai/)
+
 **Layout patterns:**
+
 - Minimal nav with feature dropdown
 - Hero: bold headline with colored accent text + dual CTA (Get Started + Book Intro)
 - 3-card "why it matters" section (ChatGPT, Perplexity, Google AI)
@@ -168,25 +188,26 @@
 
 ## Common Layout Patterns Across All Sites
 
-| Pattern | Sites Using It | Priority for GardenSuite |
-|---------|---------------|-------------------------|
-| Sticky minimal nav | All 10 | **Must have** |
-| Bold single-line hero headline | 8/10 | **Must have** |
-| Logo trust bar (clients) | 7/10 | **Must have** |
-| Alternating text + visual sections | 6/10 | **Must have** |
-| Bento/card feature grid | 7/10 | **Must have** |
-| Testimonial section | 7/10 | **Must have** |
-| Numbered/stepped flow | 3/10 | **Should have** |
-| FAQ accordion | 3/10 | **Should have** |
-| Announcement/banner bar | 4/10 | **Nice to have** |
-| Tab-based feature switcher | 3/10 | **Nice to have** |
-| Pricing section | 2/10 | **Not for V1** |
+| Pattern                            | Sites Using It | Priority for GardenSuite |
+| ---------------------------------- | -------------- | ------------------------ |
+| Sticky minimal nav                 | All 10         | **Must have**            |
+| Bold single-line hero headline     | 8/10           | **Must have**            |
+| Logo trust bar (clients)           | 7/10           | **Must have**            |
+| Alternating text + visual sections | 6/10           | **Must have**            |
+| Bento/card feature grid            | 7/10           | **Must have**            |
+| Testimonial section                | 7/10           | **Must have**            |
+| Numbered/stepped flow              | 3/10           | **Should have**          |
+| FAQ accordion                      | 3/10           | **Should have**          |
+| Announcement/banner bar            | 4/10           | **Nice to have**         |
+| Tab-based feature switcher         | 3/10           | **Nice to have**         |
+| Pricing section                    | 2/10           | **Not for V1**           |
 
 ---
 
 ## High-Level Requirements for GardenSuite Landing Page
 
 ### Theme & Visual Direction
+
 - **Light-themed** (primarily white/off-white backgrounds)
 - Apple-inspired: clean, minimal, large typography, generous whitespace
 - Accent color for CTAs and highlights (green tones to match "Garden" branding)
@@ -196,12 +217,14 @@
 ### Layout Structure (Top to Bottom)
 
 #### 1. Navigation
+
 - Sticky, minimal nav bar
 - Logo left, links center, CTA right ("Book a Demo" or "Contact Us")
 - Transparent on hero, solid white on scroll
 - Mobile hamburger menu
 
 #### 2. Hero Section
+
 - **Large bold headline** (e.g., "The complete tea garden management system")
 - Short 1-2 line subtext explaining the value
 - Dual CTA: primary ("Book a Demo") + secondary ("Learn More")
@@ -209,17 +232,20 @@
 - Inspired by: Modeinspect, Fey, Keytail
 
 #### 3. Trust Bar
+
 - Client logos in a horizontal scrolling strip
 - "Trusted by 20+ tea estates across India"
 - Show: Simulbarie, Rheabari, Choibari, Atal, etc.
 - Inspired by: folk, Obvious, Modeinspect
 
 #### 4. Problem Statement
+
 - "Managing a tea garden is complex" section
 - 2-3 pain point cards (manual attendance fraud, disconnected systems, delayed reports)
 - Inspired by: Keytail's "why it matters" cards
 
 #### 5. Solution Overview
+
 - "One platform, everything you need" headline
 - Numbered workflow steps (like folk's 001-004):
   - 001: Face Recognition Attendance
@@ -230,6 +256,7 @@
 - Inspired by: folk, Index.app onboarding flow
 
 #### 6. Feature Showcase (Bento Grid)
+
 - Bento-style card grid showing key modules:
   - Attendance & Biometric
   - Factory Production
@@ -241,6 +268,7 @@
 - Inspired by: Obvious bento grid, Payload masonry
 
 #### 7. Key Differentiators
+
 - 3 large cards highlighting unique selling points:
   - Face recognition stops proxy punching
   - Smart scale links weight to verified worker
@@ -249,6 +277,7 @@
 - Inspired by: Modeinspect 3-card section, GitHub "What you can do"
 
 #### 8. Social Proof / Testimonials
+
 - Section heading: "Trusted by tea gardens across India"
 - 2-3 testimonial cards with quotes
 - Client name, designation, tea estate name
@@ -256,22 +285,26 @@
 - Inspired by: folk testimonials, Payload bento testimonials
 
 #### 9. Company Story / Trust
+
 - Brief "About Sarbani Associates" section
 - Key stats: "25+ years experience", "20+ tea estates", "Since 1998"
 - Version timeline (V1 > V2 > V3) could be shown subtly
 - Inspired by: Regpit explainer section
 
 #### 10. FAQ Section
+
 - Accordion-style FAQ
 - 5-7 common questions (pricing, offline capability, support, etc.)
 - Inspired by: GitHub Codespaces, Keytail
 
 #### 11. Final CTA
+
 - Bold headline: "Ready to modernize your tea garden?"
 - Subtext + "Book a Demo" + "Contact Us" buttons
 - Inspired by: Obvious, folk, Index.app repeated CTA
 
 #### 12. Footer
+
 - Company info (Sarbani Associates, Bagdogra, Siliguri)
 - Navigation links (Features, About, Contact)
 - Social links
@@ -279,11 +312,13 @@
 - Inspired by: Fey minimal footer
 
 ### Responsive Requirements
+
 - Desktop-first design
 - Fully responsive: tablet and mobile breakpoints
 - Mobile: stacked layouts, hamburger nav, touch-friendly CTAs
 
 ### Content Requirements
+
 - Simple, accessible language (not all users are fluent in English)
 - NO em dashes - use regular hyphens
 - Professional but easy to understand
@@ -291,6 +326,7 @@
 - Numerals for counts ("20+ estates" not "twenty-plus")
 
 ### Animation Requirements
+
 - Scroll-triggered fade-in animations for sections
 - Subtle hover effects on cards and CTAs
 - Logo bar auto-scroll

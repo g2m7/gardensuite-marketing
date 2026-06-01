@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GardenSuite Pricing Tiers - Internal Reference</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; background: #f5f5f5; color: #333; padding: 20px; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        h1 { text-align: center; color: #1a3a15; margin-bottom: 8px; }
+        .subtitle { text-align: center; color: #666; margin-bottom: 30px; }
+        
+        .tiers-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 30px; }
+        .tier-card { background: white; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border: 2px solid transparent; }
+        .tier-card:hover { border-color: #234b1d; }
+        .tier-name { font-size: 14pt; font-weight: bold; color: #1a3a15; margin-bottom: 4px; }
+        .tier-devices { font-size: 10pt; color: #666; margin-bottom: 12px; }
+        .tier-price { font-size: 22pt; font-weight: bold; color: #234b1d; }
+        .tier-period { font-size: 10pt; color: #666; margin-bottom: 12px; }
+        .tier-margin { font-size: 10pt; padding: 4px 8px; border-radius: 4px; display: inline-block; }
+        .margin-good { background: #e8f5e9; color: #2e7d32; }
+        .margin-ok { background: #fff3e0; color: #e65100; }
+        .margin-warning { background: #ffebee; color: #c62828; }
+        
+        .hardware-row { background: white; border-radius: 12px; padding: 20px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; }
+        .hardware-info h3 { color: #1a3a15; margin-bottom: 4px; }
+        .hardware-info p { color: #666; font-size: 10pt; }
+        .hardware-price { font-size: 20pt; font-weight: bold; color: #234b1d; }
+        
+        .examples-section { background: white; border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+        .examples-section h2 { color: #1a3a15; margin-bottom: 16px; }
+        .example-table { width: 100%; border-collapse: collapse; }
+        .example-table th { background: #234b1d; color: white; padding: 10px; text-align: left; font-size: 10pt; }
+        .example-table td { padding: 10px; border-bottom: 1px solid #eee; font-size: 10pt; }
+        .example-table tr:hover { background: #f5f5f5; }
+        .total-cell { font-weight: bold; color: #234b1d; }
+        
+        .competitive-section { background: white; border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+        .competitive-section h2 { color: #1a3a15; margin-bottom: 16px; }
+        .vs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .vs-card { padding: 16px; border-radius: 8px; }
+        .vs-us { background: #e8f5e9; }
+        .vs-them { background: #ffebee; }
+        .vs-card h3 { margin-bottom: 8px; font-size: 12pt; }
+        .vs-price { font-size: 18pt; font-weight: bold; }
+        .vs-us .vs-price { color: #2e7d32; }
+        .vs-them .vs-price { color: #c62828; }
+        
+        .rules-section { background: #fff3e0; border-radius: 12px; padding: 24px; margin-bottom: 20px; border-left: 4px solid #e65100; }
+        .rules-section h2 { color: #e65100; margin-bottom: 12px; }
+        .rules-section ul { padding-left: 20px; }
+        .rules-section li { margin: 6px 0; }
+        
+        .footer { text-align: center; padding: 20px; color: #999; font-size: 9pt; }
+        
+        @media print {
+            body { background: white; padding: 0; }
+            .tier-card { break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>GardenSuite Pricing Tiers</h1>
+        <p class="subtitle">Internal Reference - Super Competitive Pricing (May 2026)</p>
+        
+        <div class="hardware-row">
+            <div class="hardware-info">
+                <h3>Weight Scale</h3>
+                <p>One-time hardware. 1 year warranty. Cost: Rs. 4,500. Margin: 36%.</p>
+            </div>
+            <div class="hardware-price">Rs. 7,000</div>
+        </div>
+        
+        <div class="tiers-grid">
+            <div class="tier-card">
+                <div class="tier-name">Nano</div>
+                <div class="tier-devices">1-2 mobile devices</div>
+                <div class="tier-price">Rs. 10,000</div>
+                <div class="tier-period">per year</div>
+                <span class="tier-margin margin-good">Margin: 70%</span>
+            </div>
+            <div class="tier-card">
+                <div class="tier-name">Small</div>
+                <div class="tier-devices">3-5 mobile devices</div>
+                <div class="tier-price">Rs. 18,000</div>
+                <div class="tier-period">per year</div>
+                <span class="tier-margin margin-ok">Margin: 57%</span>
+            </div>
+            <div class="tier-card">
+                <div class="tier-name">Medium</div>
+                <div class="tier-devices">6-10 mobile devices</div>
+                <div class="tier-price">Rs. 30,000</div>
+                <div class="tier-period">per year</div>
+                <span class="tier-margin margin-ok">Margin: 54%</span>
+            </div>
+            <div class="tier-card">
+                <div class="tier-name">Large</div>
+                <div class="tier-devices">11-20 mobile devices</div>
+                <div class="tier-price">Rs. 50,000</div>
+                <div class="tier-period">per year</div>
+                <span class="tier-margin margin-warning">Margin: 48%</span>
+            </div>
+            <div class="tier-card">
+                <div class="tier-name">Enterprise</div>
+                <div class="tier-devices">21+ mobile devices</div>
+                <div class="tier-price">Rs. 75,000</div>
+                <div class="tier-period">per year</div>
+                <span class="tier-margin margin-good">Margin: 60%</span>
+            </div>
+        </div>
+        
+        <div class="examples-section">
+            <h2>Example Quotes (Year 1)</h2>
+            <table class="example-table">
+                <thead>
+                    <tr>
+                        <th>Scenario</th>
+                        <th>Tier</th>
+                        <th>Scales</th>
+                        <th>Software</th>
+                        <th>Services</th>
+                        <th>Total Year 1</th>
+                        <th>Year 2+</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1 scale + 1 mobile</td>
+                        <td>Nano</td>
+                        <td>Rs. 7,000</td>
+                        <td>Rs. 10,000</td>
+                        <td>Free onboarding</td>
+                        <td class="total-cell">Rs. 17,000</td>
+                        <td>Rs. 10,000</td>
+                    </tr>
+                    <tr>
+                        <td>3 scales + 4 mobiles</td>
+                        <td>Small</td>
+                        <td>Rs. 21,000</td>
+                        <td>Rs. 18,000</td>
+                        <td>Free onboarding</td>
+                        <td class="total-cell">Rs. 39,000</td>
+                        <td>Rs. 18,000</td>
+                    </tr>
+                    <tr>
+                        <td>8 scales + 8 mobiles</td>
+                        <td>Medium</td>
+                        <td>Rs. 56,000</td>
+                        <td>Rs. 30,000</td>
+                        <td>Rs. 2,000 training</td>
+                        <td class="total-cell">Rs. 93,000</td>
+                        <td>Rs. 30,000</td>
+                    </tr>
+                    <tr>
+                        <td>15 scales + 12 mobiles</td>
+                        <td>Large</td>
+                        <td>Rs. 1,05,000</td>
+                        <td>Rs. 50,000</td>
+                        <td>Rs. 5,000 training</td>
+                        <td class="total-cell">Rs. 1,68,000</td>
+                        <td>Rs. 50,000</td>
+                    </tr>
+                    <tr>
+                        <td>25 scales + 22 mobiles</td>
+                        <td>Enterprise</td>
+                        <td>Rs. 1,75,000</td>
+                        <td>Rs. 75,000</td>
+                        <td>Rs. 8,000 training</td>
+                        <td class="total-cell">Rs. 2,58,000</td>
+                        <td>Rs. 75,000</td>
+                    </tr>
+                    <tr style="background: #e8f5e9;">
+                        <td><strong>Existing Client A (15 scales + 12 mobiles)</strong></td>
+                        <td>Large</td>
+                        <td>Rs. 1,05,000</td>
+                        <td>Rs. 30,000 <span style="font-size: 9pt; color: #2e7d32;">(add-on)</span></td>
+                        <td>Rs. 5,000 training</td>
+                        <td class="total-cell">Rs. 1,88,000</td>
+                        <td>Rs. 1,70,000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="competitive-section">
+            <h2>vs Applied Data Logix Easyweigh</h2>
+            <div class="vs-grid">
+                <div class="vs-card vs-them">
+                    <h3>ADL Easyweigh (10 points)</h3>
+                    <div class="vs-price">Rs. 2,30,000 - 4,10,000</div>
+                    <p style="margin-top: 8px; font-size: 10pt; color: #666;">
+                        RFID cards + Iris scanner<br>
+                        Industrial terminals<br>
+                        Chennai-based support
+                    </p>
+                </div>
+                <div class="vs-card vs-us">
+                    <h3>GardenSuite (10 points)</h3>
+                    <div class="vs-price">Rs. 1,08,000</div>
+                    <p style="margin-top: 8px; font-size: 10pt; color: #666;">
+                        Face recognition<br>
+                        Bluetooth scales + phones<br>
+                        Bagdogra-based support
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="rules-section">
+            <h2>Sales Rules</h2>
+            <ul>
+                <li><strong>Minimum margin:</strong> Scales 36%, Tiers 48%+. Large tier is our floor.</li>
+                <li><strong>Never discount below tier price</strong> without director approval.</li>
+                <li><strong>Add travel cost</strong> for gardens beyond 100km from Bagdogra.</li>
+                <li><strong>Training is free</strong> for Nano and Small tiers (remote onboarding).</li>
+                <li><strong>Annual payment only.</strong> No monthly or quarterly.</li>
+                <li><strong>Minimum commitment:</strong> 1 year.</li>
+                <li><strong>Scale warranty:</strong> 1 year. Software never expires but support stops if not renewed.</li>
+            </ul>
+        </div>
+        
+        <div class="footer">
+            Sarbani Associates - Bagdogra, Siliguri | Internal Use Only | May 2026
+        </div>
+    </div>
+</body>
+</html>

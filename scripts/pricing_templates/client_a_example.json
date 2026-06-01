@@ -1,0 +1,10 @@
+{
+  "client_name": "Client A - Large Tea Estate",
+  "client_location": "Assam",
+  "client_contact": "Manager - 98765 43210",
+  "sales_person": "Sarbani Associates",
+  "num_scales": 15,
+  "num_devices": 12,
+  "training_days": 5,
+  "travel_cost": 8000
+}

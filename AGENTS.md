@@ -64,3 +64,25 @@ When auditing or improving homepage copy, landing page messaging, sales clarity,
 - SvelteKit (Svelte 5) + Tailwind CSS v4 + TypeScript
 - Bun runtime
 - Hosted on Vercel (planned)
+
+## Email Marketing
+
+We are actively running email marketing for the Attendance + Smart Weighing solution.  
+**CRITICAL**: Any agent working on email marketing MUST read `gs_landing/docs/email-marketing/AGENT_INSTRUCTIONS.md` before making changes.
+
+### Documentation Location
+`gs_landing/docs/email-marketing/` contains:
+- OVERVIEW.md - Strategy and goals
+- AGENT_INSTRUCTIONS.md - Rules for agents
+- CONTACT_DATABASE.md - Contact sources
+- BREVO_SETUP.md - Brevo automation setup
+- EMAIL_SEQUENCES.md - Email copy
+- LANDING_PAGE_INTEGRATION.md - Website forms
+
+### Contact Database
+916+ tea estate contacts located at: `/Users/g2m7/projects/scripts/extract_garden/data/`
+
+### Lead Capture
+- Component: `gs_landing/src/lib/components/LeadCapture.svelte`
+- API: `gs_landing/src/routes/api/subscribe/+server.ts`
+- Brevo integration for contact management

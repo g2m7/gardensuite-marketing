@@ -3,11 +3,13 @@
 Date: 2026-04-22
 
 Reviewed:
+
 - `http://127.0.0.1:5173`
 - `https://obvious.ai/`
 - `https://www.keytail.ai/`
 
 Method:
+
 - live rendered review of the current landing page
 - direct code inspection of the current Svelte files
 - re-check of the original audit findings after fixes were applied
@@ -17,6 +19,7 @@ Method:
 The page is clearly stronger than the earlier version.
 
 The biggest structural issues are fixed:
+
 - stronger hero message
 - working mobile navigation
 - click-based products menu
@@ -67,15 +70,18 @@ The remaining weaknesses are mostly visual and brand-quality issues, not basic l
 Status: Partial
 
 What improved:
+
 - The new headline is stronger.
 - The supporting line now pushes the differentiators clearly:
   face recognition attendance, wireless smart scale, offline ERP, and cloud MIS dashboard.
 
 What still holds:
+
 - The visual impact is still below Obvious and Keytail.
 - The hero composition still depends heavily on scenic treatment rather than a truly commanding product-first moment.
 
 Relevant code:
+
 - [src/routes/+page.svelte](/Users/g2m7/projects/biz/gardensuite.in/gs_landing/src/routes/+page.svelte:513)
 
 ### 2. The top nav is improved, but still not fully benchmark-level
@@ -83,14 +89,17 @@ Relevant code:
 Status: Partial
 
 What improved:
+
 - The nav no longer starts fully invisible.
 - Mobile nav exists and works.
 
 What still holds:
+
 - The header still feels more utility-driven than premium.
 - It is better, but it does not yet have the same calm confidence as the benchmark headers.
 
 Relevant code:
+
 - [src/routes/+page.svelte](/Users/g2m7/projects/biz/gardensuite.in/gs_landing/src/routes/+page.svelte:213)
 - [src/routes/+page.svelte](/Users/g2m7/projects/biz/gardensuite.in/gs_landing/src/routes/+page.svelte:272)
 
@@ -99,11 +108,13 @@ Relevant code:
 Status: Partial
 
 What improved:
+
 - Hero copy is now built around verification, weighing, and readiness.
 - Hero support text calls out the exact differentiators.
 - Proof band reinforces tea garden credibility.
 
 What still holds:
+
 - Those differentiators are clearer in copy than in the visual system.
 - The page still spends too much visual energy on style treatments that do not deepen trust.
 
@@ -114,17 +125,20 @@ What still holds:
 Status: Still stands
 
 Issue:
+
 - The sky, hills, glow, and parallax stack still lead the visual impression.
 - The product is present, but the composition still feels designed around atmosphere first.
 - Obvious and Keytail feel more decisive because their hero visuals are cleaner and more confident.
 
 What would improve it:
+
 - less scenic layering
 - less decorative parallax weight
 - a stronger real-product first frame
 - more believable workflow proof in the hero itself
 
 Relevant code:
+
 - [src/routes/+page.svelte](/Users/g2m7/projects/biz/gardensuite.in/gs_landing/src/routes/+page.svelte:578)
 
 ### 2. Too many illustrations still feel synthetic instead of product-led
@@ -132,16 +146,19 @@ Relevant code:
 Status: Still stands
 
 Issue:
+
 - The page still uses fake operational graphics in multiple places:
   fake ledger cards, fake spreadsheet treatment, fake smart-scale module, fake payroll bars, fake node workflows.
 - For a serious operational product, these weaken credibility compared with real screenshots, real device moments, and real workflow states.
 
 What would improve it:
+
 - replace decorative product metaphors with real interface proof
 - use more real screenshots from the face app, dashboard, and MIS
 - show a true attendance to weighing to payroll chain
 
 Relevant code:
+
 - [src/routes/+page.svelte](/Users/g2m7/projects/biz/gardensuite.in/gs_landing/src/routes/+page.svelte:614)
 - [src/routes/+page.svelte](/Users/g2m7/projects/biz/gardensuite.in/gs_landing/src/routes/+page.svelte:1045)
 - [src/routes/+page.svelte](/Users/g2m7/projects/biz/gardensuite.in/gs_landing/src/routes/+page.svelte:1096)
@@ -151,10 +168,12 @@ Relevant code:
 Status: Still stands
 
 Issue:
+
 - Many sections still rely on the same rounded off-white card, soft border, and soft glow formula.
 - The page scroll is improved, but still not as varied or intentional as the benchmark sites.
 
 What would improve it:
+
 - stronger section-to-section contrast
 - fewer repeated card formulas
 - one or two more distinctive section moods
@@ -164,15 +183,18 @@ What would improve it:
 Status: Still stands
 
 Issue:
+
 - `Plus Jakarta Sans` plus `Inter` is readable and modern, but it still feels like good default SaaS typography.
 - The copy is stronger now, but the type system still does not create a unique brand feel on its own.
 
 What would improve it:
+
 - a clearer display-type point of view
 - stronger hierarchy choices
 - tighter relationship between typography and tea-garden industrial trust
 
 Relevant code:
+
 - [src/routes/layout.css](/Users/g2m7/projects/biz/gardensuite.in/gs_landing/src/routes/layout.css:36)
 
 ### 5. One footer link still looks questionable
@@ -180,13 +202,16 @@ Relevant code:
 Status: Resolved (2026-04-22)
 
 Issue:
+
 - `Smart Weighing` in the footer linked to `/products/attendance` as a separate link from `Face Attendance`.
 - Both links went to the same page, which was misleading.
 
 Fix applied:
+
 - Merged the two links into a single "Face Attendance & Smart Weighing" link, matching the nav convention.
 
 Relevant code:
+
 - [src/lib/components/Footer.svelte](/Users/g2m7/projects/biz/gardensuite.in/gs_landing/src/lib/components/Footer.svelte:35)
 
 ## What Changed Most
@@ -194,6 +219,7 @@ Relevant code:
 The biggest shift is that the page is no longer failing on fundamentals.
 
 Before, the page had serious issues in:
+
 - mobile navigation
 - interaction model
 - trust proof
@@ -201,6 +227,7 @@ Before, the page had serious issues in:
 - accessibility basics
 
 Now the unresolved problems are mostly:
+
 - premium visual quality
 - originality
 - stronger product-truthful art direction
@@ -224,6 +251,7 @@ The audit findings do not fully stand anymore.
 A large number of them are resolved, and the current page is meaningfully better.
 
 What still stands is mainly the higher bar:
+
 - more product truth
 - more visual originality
 - more premium restraint

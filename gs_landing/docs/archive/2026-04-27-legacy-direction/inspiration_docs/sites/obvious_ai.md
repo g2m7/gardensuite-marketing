@@ -1,6 +1,7 @@
 # Design Analysis Report: Obvious.ai
 
 ## 1. Typography
+
 Obvious.ai employs a clean, modern, and tech-forward typographic system characterized by a high-quality geometric sans-serif (resembling **Satoshi** or **Inter**).
 
 - **Heading Styles**:
@@ -15,6 +16,7 @@ Obvious.ai employs a clean, modern, and tech-forward typographic system characte
 - **Special Formatting**: Buttons use `tracking-[-0.21px]` to refine the look of smaller text.
 
 ## 2. Color Palette
+
 The site uses a refined, Apple-inspired palette with high-contrast accent colors and soft backgrounds.
 
 - **Primary Colors**:
@@ -27,6 +29,7 @@ The site uses a refined, Apple-inspired palette with high-contrast accent colors
 - **Dark Mode**: Supports a high-contrast dark theme with deep grey/black backgrounds and white text.
 
 ## 3. Layout & Spacing
+
 The layout follows a "less is more" philosophy with significant whitespace and a clear vertical flow.
 
 - **Grid & Containers**:
@@ -38,6 +41,7 @@ The layout follows a "less is more" philosophy with significant whitespace and a
   - **Navigation**: Fixed or sticky top navigation bar with a minimal brand logo on the left and utility links/CTAs on the right.
 
 ## 4. Animations & Interactions
+
 Micro-interactions are used to provide tactile feedback and a high-end feel.
 
 - **Hover Interactions**:
@@ -49,6 +53,7 @@ Micro-interactions are used to provide tactile feedback and a high-end feel.
 - **Micro-animations**: Smooth entry reveals and interruptible horizontal scrolling in the carousel sections.
 
 ## 5. Mobile View (375px)
+
 The design adapts seamlessly to smaller screens with several key shifts:
 
 - **Navigation**: The desktop menu collapses into a clean **hamburger menu** on the right.
@@ -57,4 +62,5 @@ The design adapts seamlessly to smaller screens with several key shifts:
 - **Typography Scaling**: Headings scale down to maintain balance, ensuring the large hero text doesn't overwhelm the mobile viewport.
 
 ---
-*Recording Analysis File:* `file:///Users/g2m7/.gemini/antigravity/brain/688e120e-b959-424d-a7a0-1851549b8aee/analysis_obvious_ai_1775904039112.webp`
+
+_Recording Analysis File:_ `file:///Users/g2m7/.gemini/antigravity/brain/688e120e-b959-424d-a7a0-1851549b8aee/analysis_obvious_ai_1775904039112.webp`
