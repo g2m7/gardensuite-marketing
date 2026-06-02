@@ -2,6 +2,8 @@
 	import { onMount } from 'svelte';
 	import { initScrollReveal } from '$lib/scroll-reveal';
 	import ScaleWorkflow from './ScaleWorkflow.svelte';
+	import SeoHead from '$lib/seo/SeoHead.svelte';
+	import { softwareSchema, breadcrumbSchema } from '$lib/seo/schemas';
 
 	onMount(() => {
 		return initScrollReveal();
@@ -53,84 +55,24 @@
 	];
 </script>
 
-<svelte:head>
-	<title>Face Attendance &amp; Smart Weighing - Tea Garden Software | GardenSuite</title>
-	<meta
-		name="description"
-		content="Face attendance and Bluetooth smart weighing for tea gardens. Verify workers, record leaf weight, work offline, and sync data for payroll."
-	/>
-	<link rel="canonical" href="https://gardensuite.in/products/attendance" />
-	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://gardensuite.in/products/attendance" />
-	<meta property="og:title" content="Face Attendance + Leaf Weight from Rs. 499/month" />
-	<meta
-		property="og:description"
-		content="For tea gardens. Worker face, plucking weight, and Kamjari record in one flow."
-	/>
-	<meta
-		property="og:image"
-		content="https://gardensuite.in/og/face-attendance-weight-price-v4.jpg"
-	/>
-	<meta property="og:image:width" content="1080" />
-	<meta property="og:image:height" content="1080" />
-	<meta
-		property="og:image:alt"
-		content="GardenSuite face scan to leaf weight to Kamjari record workflow"
-	/>
-	<meta property="og:site_name" content="GardenSuite" />
-	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="Face Attendance + Leaf Weight from Rs. 499/month" />
-	<meta
-		name="twitter:description"
-		content="For tea gardens. Worker face, plucking weight, and Kamjari record in one flow."
-	/>
-	<meta
-		name="twitter:image"
-		content="https://gardensuite.in/og/face-attendance-weight-price-v4.jpg"
-	/>
-	{@html `<script type="application/ld+json">${JSON.stringify({
-		'@context': 'https://schema.org',
-		'@graph': [
-			{
-				'@type': 'SoftwareApplication',
-				name: 'GardenSuite Face Attendance & Smart Weighing',
-				applicationCategory: 'BusinessApplication',
-				operatingSystem: 'Android, Windows',
-				description:
-					'Face attendance and Bluetooth smart weighing software for tea gardens. Verifies workers, records leaf weight, works offline, and syncs data for payroll.',
-				provider: {
-					'@type': 'Organization',
-					name: 'Sarbani Associates',
-					url: 'https://gardensuite.in'
-				},
-				offers: {
-					'@type': 'Offer',
-					availability: 'https://schema.org/InStock',
-					description:
-						'Free demo, on-site setup, and staff training. Contact Sarbani Associates for module pricing.'
-				}
-			},
-			{
-				'@type': 'BreadcrumbList',
-				itemListElement: [
-					{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gardensuite.in/' },
-					{
-						'@type': 'ListItem',
-						position: 2,
-						name: 'Products',
-						item: 'https://gardensuite.in/#products'
-					},
-					{
-						'@type': 'ListItem',
-						position: 3,
-						name: 'Face Attendance & Smart Weighing',
-						item: 'https://gardensuite.in/products/attendance'
-					}
-				]
-			}
-		]
-	})}</script>`}
-</svelte:head>
+<SeoHead
+	title="Tea Garden Attendance System - Face & Weighing | GardenSuite"
+	description="Face attendance and Bluetooth smart weighing for tea gardens. Verify workers, record leaf weight, work offline, and sync data for payroll."
+	canonical="https://gardensuite.in/products/attendance"
+	ogImage="https://gardensuite.in/og/face-attendance-weight-price-v4.jpg"
+	schema={[
+		softwareSchema({
+			name: 'GardenSuite Face Attendance & Smart Weighing',
+			description: 'Face attendance and Bluetooth smart weighing software for tea gardens. Verifies workers, records leaf weight, works offline, and syncs data for payroll.',
+			os: 'Android, Windows'
+		}),
+		breadcrumbSchema([
+			{ name: 'Home', path: '/' },
+			{ name: 'Products', path: '/#products' },
+			{ name: 'Face Attendance & Smart Weighing', path: '/products/attendance' }
+		])
+	]}
+/>
 
 <div class="flex min-h-screen w-full flex-col overflow-clip bg-[#FAFAF7] antialiased">
 	<main>

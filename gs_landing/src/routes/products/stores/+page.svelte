@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { initScrollReveal } from '$lib/scroll-reveal';
+	import SeoHead from '$lib/seo/SeoHead.svelte';
+	import { softwareSchema, breadcrumbSchema } from '$lib/seo/schemas';
 
 	onMount(() => {
 		return initScrollReveal();
@@ -9,72 +11,23 @@
 	const demoHref = '/#contact';
 </script>
 
-<svelte:head>
-	<title>Tea Garden Store Management Software - Inventory Tracking | GardenSuite</title>
-	<meta
-		name="description"
-		content="Tea garden store management software for purchase, issue, stock balance, fertilizer, fuel, spare parts, and chemicals."
-	/>
-	<link rel="canonical" href="https://gardensuite.in/products/stores" />
-	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://gardensuite.in/products/stores" />
-	<meta property="og:title" content="Tea Garden Store Management Software - GardenSuite" />
-	<meta
-		property="og:description"
-		content="Track purchase, issue, and stock balance for tea garden stores. Fertilizer, fuel, spare parts, and chemicals."
-	/>
-	<meta property="og:image" content="https://gardensuite.in/mis-dashboard-1400.webp" />
-	<meta property="og:site_name" content="GardenSuite" />
-	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="Tea Garden Store Management Software - GardenSuite" />
-	<meta
-		name="twitter:description"
-		content="Track purchase, issue, and stock balance for tea garden stores. Fertilizer, fuel, spare parts, and chemicals."
-	/>
-	<meta name="twitter:image" content="https://gardensuite.in/mis-dashboard-1400.webp" />
-	{@html `<script type="application/ld+json">${JSON.stringify({
-		'@context': 'https://schema.org',
-		'@graph': [
-			{
-				'@type': 'SoftwareApplication',
-				name: 'GardenSuite Store Management',
-				applicationCategory: 'BusinessApplication',
-				operatingSystem: 'Windows',
-				description:
-					'Store and inventory management software for tea gardens. Tracks purchase orders, issue to sections, stock levels, and cost allocation.',
-				provider: {
-					'@type': 'Organization',
-					name: 'Sarbani Associates',
-					url: 'https://gardensuite.in'
-				},
-				offers: {
-					'@type': 'Offer',
-					availability: 'https://schema.org/InStock',
-					description:
-						'Free demo, on-site setup, and staff training. Contact Sarbani Associates for module pricing.'
-				}
-			},
-			{
-				'@type': 'BreadcrumbList',
-				itemListElement: [
-					{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gardensuite.in/' },
-					{
-						'@type': 'ListItem',
-						position: 2,
-						name: 'Products',
-						item: 'https://gardensuite.in/#products'
-					},
-					{
-						'@type': 'ListItem',
-						position: 3,
-						name: 'Store Management',
-						item: 'https://gardensuite.in/products/stores'
-					}
-				]
-			}
-		]
-	})}</script>`}
-</svelte:head>
+<SeoHead
+	title="Tea Garden Store Management Software - Inventory | GardenSuite"
+	description="Tea garden store management software for purchase, issue, stock balance, fertilizer, fuel, spare parts, and chemicals."
+	canonical="https://gardensuite.in/products/stores"
+	schema={[
+		softwareSchema({
+			name: 'GardenSuite Store Management',
+			description: 'Store and inventory management software for tea gardens. Tracks purchase orders, issue to sections, stock levels, and cost allocation.',
+			os: 'Windows'
+		}),
+		breadcrumbSchema([
+			{ name: 'Home', path: '/' },
+			{ name: 'Products', path: '/#products' },
+			{ name: 'Store Management', path: '/products/stores' }
+		])
+	]}
+/>
 
 <div class="flex min-h-screen w-full flex-col overflow-clip bg-[#FAFAF7] antialiased">
 	<main>

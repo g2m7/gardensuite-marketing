@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { initScrollReveal } from '$lib/scroll-reveal';
+	import SeoHead from '$lib/seo/SeoHead.svelte';
+	import { softwareSchema, breadcrumbSchema } from '$lib/seo/schemas';
 
 	onMount(() => {
 		return initScrollReveal();
@@ -9,72 +11,23 @@
 	const demoHref = '/#contact';
 </script>
 
-<svelte:head>
-	<title>Daily MIS Report Dashboard - Tea Garden Software | GardenSuite</title>
-	<meta
-		name="description"
-		content="Daily Report (MIS Dashboard) for tea gardens. See plucking, production, labour, and factory numbers on phone, tablet, or laptop."
-	/>
-	<link rel="canonical" href="https://gardensuite.in/products/mis" />
-	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://gardensuite.in/products/mis" />
-	<meta property="og:title" content="Daily MIS Report Dashboard - GardenSuite" />
-	<meta
-		property="og:description"
-		content="Daily Report (MIS Dashboard) for tea gardens. See plucking, production, labour, and factory numbers from anywhere."
-	/>
-	<meta property="og:image" content="https://gardensuite.in/mis-dashboard-1400.webp" />
-	<meta property="og:site_name" content="GardenSuite" />
-	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="Daily MIS Report Dashboard - GardenSuite" />
-	<meta
-		name="twitter:description"
-		content="Daily Report (MIS Dashboard) for tea gardens. See plucking, production, labour, and factory numbers from anywhere."
-	/>
-	<meta name="twitter:image" content="https://gardensuite.in/mis-dashboard-1400.webp" />
-	{@html `<script type="application/ld+json">${JSON.stringify({
-		'@context': 'https://schema.org',
-		'@graph': [
-			{
-				'@type': 'SoftwareApplication',
-				name: 'GardenSuite Daily MIS Report',
-				applicationCategory: 'BusinessApplication',
-				operatingSystem: 'Web',
-				description:
-					'Daily Report (MIS Dashboard) for tea gardens. Monitor plucking, production, labour, and factory numbers from phone, tablet, or laptop.',
-				provider: {
-					'@type': 'Organization',
-					name: 'Sarbani Associates',
-					url: 'https://gardensuite.in'
-				},
-				offers: {
-					'@type': 'Offer',
-					availability: 'https://schema.org/InStock',
-					description:
-						'Free demo, on-site setup, and staff training. Contact Sarbani Associates for module pricing.'
-				}
-			},
-			{
-				'@type': 'BreadcrumbList',
-				itemListElement: [
-					{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gardensuite.in/' },
-					{
-						'@type': 'ListItem',
-						position: 2,
-						name: 'Products',
-						item: 'https://gardensuite.in/#products'
-					},
-					{
-						'@type': 'ListItem',
-						position: 3,
-						name: 'Daily Report',
-						item: 'https://gardensuite.in/products/mis'
-					}
-				]
-			}
-		]
-	})}</script>`}
-</svelte:head>
+<SeoHead
+	title="Tea Garden MIS Dashboard - Daily Reports Online | GardenSuite"
+	description="Daily Report (MIS Dashboard) for tea gardens. See plucking, production, labour, and factory numbers on phone, tablet, or laptop."
+	canonical="https://gardensuite.in/products/mis"
+	schema={[
+		softwareSchema({
+			name: 'GardenSuite Daily MIS Report',
+			description: 'Daily Report (MIS Dashboard) for tea gardens. Monitor plucking, production, labour, and factory numbers from phone, tablet, or laptop.',
+			os: 'Web, Windows, Android'
+		}),
+		breadcrumbSchema([
+			{ name: 'Home', path: '/' },
+			{ name: 'Products', path: '/#products' },
+			{ name: 'Daily Report', path: '/products/mis' }
+		])
+	]}
+/>
 
 <div class="flex min-h-screen w-full flex-col overflow-clip bg-[#FAFAF7] antialiased">
 	<main>

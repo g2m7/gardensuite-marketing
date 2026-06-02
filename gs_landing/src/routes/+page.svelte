@@ -2,6 +2,14 @@
 	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
 	import ModulePreview from './ModulePreview.svelte';
+	import SeoHead from '$lib/seo/SeoHead.svelte';
+	import {
+		organizationSchema,
+		websiteSchema,
+		softwareSchema,
+		faqSchema,
+		breadcrumbSchema
+	} from '$lib/seo/schemas';
 
 	// ─── GSAP + ScrollTrigger ───
 	let ready = $state(false);
@@ -269,166 +277,51 @@
 	];
 </script>
 
-<svelte:head>
-	<title>GardenSuite - Tea Garden ERP Software | Face Attendance, Payroll, MIS</title>
-	<meta
-		name="description"
-		content="Tea garden ERP software for face attendance, smart weighing, payroll, factory, stores, and daily reports. Works offline. Built by Sarbani Associates."
-	/>
-	<link rel="canonical" href="https://gardensuite.in/" />
-
-	<!-- Open Graph -->
-	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://gardensuite.in/" />
-	<meta property="og:title" content="GardenSuite - Tea Garden ERP Software" />
-	<meta
-		property="og:description"
-		content="Face attendance, smart weighing, payroll, factory, stores, and daily reports in one offline-ready system. Trusted by 20+ tea estates across India."
-	/>
-	<meta property="og:image" content="https://gardensuite.in/mis-dashboard-1400.webp" />
-	<meta property="og:image:width" content="1400" />
-	<meta property="og:image:height" content="757" />
-	<meta property="og:site_name" content="GardenSuite" />
-	<meta property="og:locale" content="en_IN" />
-
-	<!-- Twitter Card -->
-	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="GardenSuite - Tea Garden ERP Software" />
-	<meta
-		name="twitter:description"
-		content="Face attendance, smart weighing, payroll, factory, stores, and daily reports in one offline-ready system. Trusted by 20+ tea estates."
-	/>
-	<meta name="twitter:image" content="https://gardensuite.in/mis-dashboard-1400.webp" />
-
-	<!-- Structured Data -->
-	{@html `<script type="application/ld+json">${JSON.stringify({
-		'@context': 'https://schema.org',
-		'@graph': [
+<SeoHead
+	title="Tea Garden ERP Software - Attendance, Payroll & MIS | GardenSuite"
+	description="Tea garden ERP software for face attendance, smart weighing, payroll, factory, stores, and daily reports. Works offline. Built by Sarbani Associates."
+	canonical="https://gardensuite.in/"
+	schema={[
+		organizationSchema(),
+		websiteSchema(),
+		softwareSchema({
+			name: 'GardenSuite',
+			description: 'Complete ERP software for tea gardens covering face attendance, smart weighing, payroll, factory production, stores, and daily MIS reporting.',
+			featureList: [
+				'Face recognition attendance',
+				'Bluetooth smart weighing scale',
+				'Automated payroll with PF, ESI, bonus',
+				'Factory production tracking',
+				'Store and inventory management',
+				'Daily report dashboard',
+				'Works offline at the garden'
+			]
+		}),
+		faqSchema([
 			{
-				'@type': 'Organization',
-				'@id': 'https://gardensuite.in/#organization',
-				name: 'Sarbani Associates',
-				url: 'https://gardensuite.in',
-				logo: {
-					'@type': 'ImageObject',
-					url: 'https://gardensuite.in/gardensuite-icon-white.svg'
-				},
-				description:
-					'Sarbani Associates builds GardenSuite, a complete ERP software for tea gardens in India. Serving the tea industry since 2000.',
-				foundingDate: '2000',
-				address: {
-					'@type': 'PostalAddress',
-					addressLocality: 'Bagdogra, Siliguri',
-					addressCountry: 'IN'
-				},
-				areaServed: [
-					'Assam',
-					'Darjeeling',
-					'Dooars',
-					'Terai',
-					'Coochbehar',
-					'Uttar Dinajpur',
-					'Jalpaiguri'
-				],
-				contactPoint: {
-					'@type': 'ContactPoint',
-					email: ENQUIRY_EMAIL,
-					contactType: 'sales'
-				}
+				q: 'Does GardenSuite work without internet?',
+				a: 'Yes. Attendance, weighing, payroll, stores, and factory work offline at the garden. Data syncs when the internet returns.'
 			},
 			{
-				'@type': 'SoftwareApplication',
-				'@id': 'https://gardensuite.in/#software',
-				name: 'GardenSuite',
-				applicationCategory: 'BusinessApplication',
-				operatingSystem: 'Windows, Web, Android',
-				description:
-					'Complete ERP software for tea gardens covering face attendance, smart weighing, payroll, factory production, stores, and daily MIS reporting.',
-				offers: {
-					'@type': 'Offer',
-					availability: 'https://schema.org/InStock',
-					description:
-						'Free demo, on-site setup, and staff training. Contact Sarbani Associates for module pricing.'
-				},
-				provider: { '@id': 'https://gardensuite.in/#organization' },
-				featureList: [
-					'Face recognition attendance',
-					'Bluetooth smart weighing scale',
-					'Automated payroll with PF, ESI, bonus',
-					'Factory production tracking',
-					'Store and inventory management',
-					'Daily report dashboard',
-					'Works offline at the garden'
-				]
+				q: 'How long does GardenSuite setup take?',
+				a: 'Usually 1-2 days at your garden. Sarbani Associates handles setup and staff training.'
 			},
 			{
-				'@type': 'WebSite',
-				'@id': 'https://gardensuite.in/#website',
-				url: 'https://gardensuite.in',
-				name: 'GardenSuite',
-				publisher: { '@id': 'https://gardensuite.in/#organization' }
+				q: 'Which regions does GardenSuite cover?',
+				a: 'Assam, Dooars, Terai, Darjeeling, Coochbehar, Uttar Dinajpur, Jalpaiguri.'
 			},
 			{
-				'@type': 'FAQPage',
-				'@id': 'https://gardensuite.in/#faq',
-				mainEntity: [
-					{
-						'@type': 'Question',
-						name: 'Does GardenSuite work without internet?',
-						acceptedAnswer: {
-							'@type': 'Answer',
-							text: 'Yes. Attendance, weighing, payroll, stores, and factory work offline at the garden. Data syncs when the internet returns.'
-						}
-					},
-					{
-						'@type': 'Question',
-						name: 'How long does GardenSuite setup take?',
-						acceptedAnswer: {
-							'@type': 'Answer',
-							text: 'Usually 1-2 days at your garden. Sarbani Associates handles setup and staff training.'
-						}
-					},
-					{
-						'@type': 'Question',
-						name: 'Which regions does GardenSuite cover?',
-						acceptedAnswer: {
-							'@type': 'Answer',
-							text: 'Assam, Dooars, Terai, Darjeeling, Coochbehar, Uttar Dinajpur, Jalpaiguri.'
-						}
-					},
-					{
-						'@type': 'Question',
-						name: 'Can I see the daily report from outside the garden?',
-						acceptedAnswer: {
-							'@type': 'Answer',
-							text: 'Yes. Open it on your phone, tablet, or laptop and check daily numbers from anywhere.'
-						}
-					},
-					{
-						'@type': 'Question',
-						name: 'What does GardenSuite cost?',
-						acceptedAnswer: {
-							'@type': 'Answer',
-							text: 'Cost depends on your garden size and selected modules. We explain pricing clearly after understanding your requirement. Demo, setup, and training are free.'
-						}
-					}
-				]
+				q: 'Can I see the daily report from outside the garden?',
+				a: 'Yes. Open it on your phone, tablet, or laptop and check daily numbers from anywhere.'
 			},
 			{
-				'@type': 'BreadcrumbList',
-				'@id': 'https://gardensuite.in/#breadcrumb',
-				itemListElement: [
-					{
-						'@type': 'ListItem',
-						position: 1,
-						name: 'Home',
-						item: 'https://gardensuite.in/'
-					}
-				]
+				q: 'What does GardenSuite cost?',
+				a: 'Cost depends on your garden size and selected modules. We explain pricing clearly after understanding your requirement. Demo, setup, and training are free.'
 			}
-		]
-	})}</script>`}
-</svelte:head>
+		]),
+		breadcrumbSchema([{ name: 'Home', path: '/' }])
+	]}
+/>
 
 <div class="flex min-h-screen w-full flex-col overflow-clip bg-white antialiased">
 	<main id="main-content">
@@ -497,9 +390,6 @@
 						<span class="text-sm font-medium text-[#0A0A0A]">See How It Works</span>
 					</a>
 				</div>
-				<p class="mt-4 text-center text-[14px] font-medium text-[#374151]">
-					Built and supported by Sarbani Associates, serving tea gardens since 2000.
-				</p>
 			</div>
 
 			<div
@@ -524,7 +414,7 @@
 				></div>
 
 				<div
-					class="hero-mockup absolute top-[20%] left-1/2 z-10 w-[90%] max-w-[1344px] -translate-x-1/2 md:top-[16%]"
+					class="hero-mockup absolute top-[20%] left-1/2 z-10 w-[90%] max-w-[1344px] -translate-x-1/2 md:top-[11%]"
 				>
 					<div
 						class="hero-mockup-inner relative overflow-hidden rounded-xl border border-white/40 bg-[#1a1a1a] shadow-[0_30px_100px_rgba(0,0,0,0.18)] md:rounded-2xl"
@@ -591,7 +481,8 @@
 						<img
 							src="/fg.png"
 							alt=""
-							class="absolute bottom-[60px] left-1/2 h-full min-w-[120%] -translate-x-1/2 object-cover object-bottom md:min-w-full"
+							class="absolute bottom-[60px] left-1/2 h-full min-w-[120%] -translate-x-1/2 object-cover md:min-w-full"
+							style="object-position: center 85%;"
 							width="1920"
 							height="1075"
 							loading="eager"
@@ -603,7 +494,7 @@
 						<img
 							src="/cloud-border.png"
 							alt=""
-							class="hero-cloud-border absolute inset-x-0 bottom-0 z-10 w-full translate-y-[10%] brightness-[1.15] saturate-0"
+							class="hero-cloud-border absolute inset-x-0 bottom-0 z-10 w-full h-[180px] md:h-[220px] lg:h-[260px] translate-y-[10%] brightness-[1.15] saturate-0"
 							width="1800"
 							height="411"
 							loading="eager"
@@ -1958,6 +1849,7 @@
 </div>
 
 <style>
+
 	:global(.reveal-on-scroll) {
 		opacity: 0;
 		transform: translateY(24px);

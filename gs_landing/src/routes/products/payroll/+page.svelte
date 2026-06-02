@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { initScrollReveal } from '$lib/scroll-reveal';
+	import SeoHead from '$lib/seo/SeoHead.svelte';
+	import { softwareSchema, breadcrumbSchema } from '$lib/seo/schemas';
 
 	onMount(() => {
 		return initScrollReveal();
@@ -9,72 +11,23 @@
 	const demoHref = '/#contact';
 </script>
 
-<svelte:head>
-	<title>Tea Garden Payroll Software - Automated Wages, PF, ESI | GardenSuite</title>
-	<meta
-		name="description"
-		content="Tea garden payroll software for wages, PF, ESI, bonus, hazira, and tikka. Calculate payroll from attendance and leaf weight records."
-	/>
-	<link rel="canonical" href="https://gardensuite.in/products/payroll" />
-	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://gardensuite.in/products/payroll" />
-	<meta property="og:title" content="Tea Garden Payroll Software - GardenSuite" />
-	<meta
-		property="og:description"
-		content="Automated payroll for tea gardens. Wages, PF, ESI, bonus, hazira, and tikka calculated from real attendance data. No spreadsheets."
-	/>
-	<meta property="og:image" content="https://gardensuite.in/mis-dashboard-1400.webp" />
-	<meta property="og:site_name" content="GardenSuite" />
-	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="Tea Garden Payroll Software - GardenSuite" />
-	<meta
-		name="twitter:description"
-		content="Automated payroll for tea gardens. Wages, PF, ESI, bonus, hazira, and tikka from real attendance data."
-	/>
-	<meta name="twitter:image" content="https://gardensuite.in/mis-dashboard-1400.webp" />
-	{@html `<script type="application/ld+json">${JSON.stringify({
-		'@context': 'https://schema.org',
-		'@graph': [
-			{
-				'@type': 'SoftwareApplication',
-				name: 'GardenSuite Automated Payroll',
-				applicationCategory: 'BusinessApplication',
-				operatingSystem: 'Windows',
-				description:
-					'Automated payroll software for tea gardens. Calculates wages, PF, ESI, bonus, hazira, tikka, and doubling from face attendance and weighing data.',
-				provider: {
-					'@type': 'Organization',
-					name: 'Sarbani Associates',
-					url: 'https://gardensuite.in'
-				},
-				offers: {
-					'@type': 'Offer',
-					availability: 'https://schema.org/InStock',
-					description:
-						'Free demo, on-site setup, and staff training. Contact Sarbani Associates for module pricing.'
-				}
-			},
-			{
-				'@type': 'BreadcrumbList',
-				itemListElement: [
-					{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gardensuite.in/' },
-					{
-						'@type': 'ListItem',
-						position: 2,
-						name: 'Products',
-						item: 'https://gardensuite.in/#products'
-					},
-					{
-						'@type': 'ListItem',
-						position: 3,
-						name: 'Automated Payroll',
-						item: 'https://gardensuite.in/products/payroll'
-					}
-				]
-			}
-		]
-	})}</script>`}
-</svelte:head>
+<SeoHead
+	title="Tea Garden Payroll Software - Wages, PF & ESI | GardenSuite"
+	description="Tea garden payroll software for wages, PF, ESI, bonus, hazira, and tikka. Calculate payroll from attendance and leaf weight records."
+	canonical="https://gardensuite.in/products/payroll"
+	schema={[
+		softwareSchema({
+			name: 'GardenSuite Automated Payroll',
+			description: 'Automated payroll software for tea gardens. Calculates wages, PF, ESI, bonus, hazira, tikka, and doubling from face attendance and weighing data.',
+			os: 'Windows'
+		}),
+		breadcrumbSchema([
+			{ name: 'Home', path: '/' },
+			{ name: 'Products', path: '/#products' },
+			{ name: 'Automated Payroll', path: '/products/payroll' }
+		])
+	]}
+/>
 
 <div class="flex min-h-screen w-full flex-col overflow-clip bg-[#FAFAF7] antialiased">
 	<main>

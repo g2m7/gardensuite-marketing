@@ -1,5 +1,10 @@
-# allow crawling everything by default
+# GardenSuite - gardensuite.in
+# Sarbani Associates
+
 User-agent: *
 Disallow:
+
+# Canonical host
+Host: https://gardensuite.in
 
 Sitemap: https://gardensuite.in/sitemap.xml

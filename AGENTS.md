@@ -51,13 +51,17 @@ Jalpaiguri: Himalayan Agro Plantation
 - Parent company branding: Sarbani Associates in copyright footer and trust-building sections
 - NO background circles/boxes behind icons. Use color directly on the icon with a subtle drop-shadow only.
 
-## Required Audit Skills
+## Reference Docs (Read Before Making Changes)
 
-When auditing or improving homepage copy, landing page messaging, sales clarity, styling, UX, or conversion quality, use these skills:
+Before auditing or improving copy, design, SEO, or UX, read the relevant docs in `gs_landing/docs/landing-page/`:
 
-- `/Users/g2m7/.agents/skills/landing-page-copywriter/SKILL.md`
-- `/Users/g2m7/.agents/skills/landing-page-design/SKILL.md`
-- `/Users/g2m7/.agents/skills/web-design-guidelines/SKILL.md`
+- `seo.md` - keyword map, title pattern, meta rules, schema rules, copy safety
+- `all-pages-copy-guidelines.md` - brand voice, vocabulary, claim safety
+- `product-page-copy-guidelines.md` - page formula, per-module vocabulary
+- `trust-pivot-plan.md` - proof strategy, confidentiality positioning
+- `styling.md` - visual direction, card usage, motion rules
+- `typography.md` - locked type system (DO NOT deviate)
+- `copy.md` - section-level copy direction and generic-copy test
 
 ## Tech Stack
 
@@ -86,3 +90,51 @@ We are actively running email marketing for the Attendance + Smart Weighing solu
 - Component: `gs_landing/src/lib/components/LeadCapture.svelte`
 - API: `gs_landing/src/routes/api/subscribe/+server.ts`
 - Brevo integration for contact management
+
+## SEO Rules (Mandatory for Every Page)
+
+1. Title: `Primary Keyword - Plain Benefit | GardenSuite` (50-65 chars)
+2. Meta description: simple English, one primary keyword, mention actual workflow (max 155 chars)
+3. Canonical URL: full absolute URL with `https://gardensuite.in` prefix
+4. OG tags: title, description, image (1200x630), type, url, locale (`en_IN`)
+5. Twitter card: `summary_large_image` with matching title/description/image
+6. Schema.org JSON-LD: BreadcrumbList + page-specific type (only true facts, no fake ratings/prices)
+7. Single `<h1>` containing the primary keyword naturally
+8. Image `alt` text: descriptive, keyword-relevant (not empty or "image")
+9. Internal links to/from at least 2 existing pages with descriptive anchor text
+10. Entry added to `sitemap.xml/+server.ts` with correct priority and `changefreq`
+
+## Performance Rules (Mandatory for Every Page)
+
+1. No image in `static/` may exceed 200KB in its served format (WebP preferred)
+2. All images must have `width` and `height` attributes
+3. Only above-fold hero/LCP images may use `loading="eager"` - maximum 2 per page
+4. Hero images must use `<picture>` with WebP `<source>` and responsive `srcset`
+5. All below-fold images must use `loading="lazy"`
+6. Third-party scripts (GSAP, Lenis) must be dynamically imported in `onMount()`
+7. CSS animations must respect `prefers-reduced-motion`
+8. No inline SVGs larger than 2KB - extract to component files
+
+## Copy Safety Rules (Mandatory for All Content)
+
+1. Use "helps stop proxy attendance" not "stops proxy attendance"
+2. Avoid: "zero paper", "100% automated", "no errors", "guaranteed", "real-time" (unless actually live)
+3. Avoid jargon: ecosystem, transformation, next-gen, frictionless, empower, seamless, optimize, cutting-edge, AI-powered, enterprise-grade, scalable platform
+4. Prefer tea garden vocabulary: hazira, plucking, leaf weight, proxy attendance, PF, ESI, made tea, muster roll
+5. Generic-copy test: "Could this sentence appear on a random HR/ERP software homepage? If yes, rewrite."
+6. Reading level test: "Will a busy tea garden owner understand this in one reading?"
+
+## New Page Checklist
+
+Complete ALL items before any new page goes live:
+
+1. SEO rules above - all 10 items verified
+2. Performance rules above - all 8 items verified
+3. Copy safety rules above - all 6 items verified
+4. Page follows the product page formula: Hero - Problem - Workflow - Result - Rollout - CTA
+5. Sarbani Associates mentioned in at least one trust-building context
+6. Mobile-responsive layout tested at 375px and 768px
+7. "Book Free Demo" and "Email Us" CTAs present
+8. Breadcrumb navigation from homepage
+9. Confidentiality note present if referencing clients: "Many estates keep software details private"
+10. Page added to sitemap with correct priority

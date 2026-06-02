@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { initScrollReveal } from '$lib/scroll-reveal';
+	import SeoHead from '$lib/seo/SeoHead.svelte';
+	import { softwareSchema, breadcrumbSchema } from '$lib/seo/schemas';
 
 	onMount(() => {
 		return initScrollReveal();
@@ -9,72 +11,23 @@
 	const demoHref = '/#contact';
 </script>
 
-<svelte:head>
-	<title>Tea Factory Production Software - Cost Per Kg Tracking | GardenSuite</title>
-	<meta
-		name="description"
-		content="Tea factory production software for green leaf intake, made tea, batch tracking, grade-wise output, and manufacturing cost per kg."
-	/>
-	<link rel="canonical" href="https://gardensuite.in/products/factory" />
-	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://gardensuite.in/products/factory" />
-	<meta property="og:title" content="Tea Factory Production Software - GardenSuite" />
-	<meta
-		property="og:description"
-		content="Track tea factory production from green leaf to made tea. Know exact manufacturing cost per kg. Batch tracking and grade-wise output."
-	/>
-	<meta property="og:image" content="https://gardensuite.in/mis-dashboard-1400.webp" />
-	<meta property="og:site_name" content="GardenSuite" />
-	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="Tea Factory Production Software - GardenSuite" />
-	<meta
-		name="twitter:description"
-		content="Track tea factory production from green leaf to made tea. Know exact manufacturing cost per kg."
-	/>
-	<meta name="twitter:image" content="https://gardensuite.in/mis-dashboard-1400.webp" />
-	{@html `<script type="application/ld+json">${JSON.stringify({
-		'@context': 'https://schema.org',
-		'@graph': [
-			{
-				'@type': 'SoftwareApplication',
-				name: 'GardenSuite Factory Production',
-				applicationCategory: 'BusinessApplication',
-				operatingSystem: 'Windows',
-				description:
-					'Factory production management software for tea gardens. Tracks green leaf intake, manufacturing steps, cost per kg, grade-wise output, and dispatch.',
-				provider: {
-					'@type': 'Organization',
-					name: 'Sarbani Associates',
-					url: 'https://gardensuite.in'
-				},
-				offers: {
-					'@type': 'Offer',
-					availability: 'https://schema.org/InStock',
-					description:
-						'Free demo, on-site setup, and staff training. Contact Sarbani Associates for module pricing.'
-				}
-			},
-			{
-				'@type': 'BreadcrumbList',
-				itemListElement: [
-					{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://gardensuite.in/' },
-					{
-						'@type': 'ListItem',
-						position: 2,
-						name: 'Products',
-						item: 'https://gardensuite.in/#products'
-					},
-					{
-						'@type': 'ListItem',
-						position: 3,
-						name: 'Factory Production',
-						item: 'https://gardensuite.in/products/factory'
-					}
-				]
-			}
-		]
-	})}</script>`}
-</svelte:head>
+<SeoHead
+	title="Tea Factory Production Software - Cost Per Kg | GardenSuite"
+	description="Tea factory production software for green leaf intake, made tea, batch tracking, grade-wise output, and manufacturing cost per kg."
+	canonical="https://gardensuite.in/products/factory"
+	schema={[
+		softwareSchema({
+			name: 'GardenSuite Factory Production',
+			description: 'Factory production management software for tea gardens. Tracks green leaf intake, manufacturing steps, cost per kg, grade-wise output, and dispatch.',
+			os: 'Windows'
+		}),
+		breadcrumbSchema([
+			{ name: 'Home', path: '/' },
+			{ name: 'Products', path: '/#products' },
+			{ name: 'Factory Production', path: '/products/factory' }
+		])
+	]}
+/>
 
 <div class="flex min-h-screen w-full flex-col overflow-clip bg-[#FAFAF7] antialiased">
 	<main>

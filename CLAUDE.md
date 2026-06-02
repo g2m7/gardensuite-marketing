@@ -33,24 +33,27 @@ bun run build
 | `brand-600` | `#3D7D2C` | Primary, CTAs, brand anchors |
 | `brand-700` | `#2B6321` | Hover states |
 | `brand-50` | `#F1F6EB` | Light accent bg |
-| `charcoal` | `#111827` | Body text |
-| `ink` | `#1F2937` | Secondary text |
-| `surface` | `#F6F8F3` | Subtle backgrounds |
-| `border` | `#DDE3D5` | Borders |
+| `charcoal` | `#0A0A0A` | Body text |
+| `ink` | `#18181B` | Secondary text |
+| `surface` | `#FAFAF7` | Subtle backgrounds |
+| `border` | `#E4E4E7` | Borders |
 
 ### Typography
 
 - **Font:** Inter (400, 500, 600, 700) via Google Fonts
 - **Feature settings:** `'cv02', 'cv03', 'cv04', 'cv11'`
+- **DO NOT** use `font-bold` - only `font-semibold` and `font-medium`
+- **DO NOT** add new heading sizes or change tracking values
+- Display headings: `-0.04em` to `-0.05em` tracking
 
 ### Radius
 
-- sm: 6px / md: 10px / lg: 14px / xl: 20px
+- sm: 8px / md: 12px / lg: 16px / xl: 24px
 
 ### Shadows
 
 - `shadow-soft`: `0 12px 30px rgba(74,157,53,0.15)` - CTAs
-- `shadow-card`: `0 8px 24px rgba(17,24,39,0.08)` - Cards
+- `shadow-card`: `0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.02)` - Cards
 
 ### Logo Assets (in gs_landing/static/)
 
@@ -66,13 +69,17 @@ bun run build
 - **Parent company: Sarbani Associates.** Mention in copyright footer and appropriate places (hero badge, CTA section, about areas).
 - **NO background circles/boxes behind icons.** Use color directly on the icon with a subtle drop-shadow only.
 
-## Required Audit Skills
+## Reference Docs (Source of Truth)
 
-When auditing or improving homepage copy, landing page messaging, sales clarity, styling, UX, or conversion quality, use these skills:
+Before making changes, read the relevant docs in `gs_landing/docs/landing-page/`:
 
-- `/Users/g2m7/.agents/skills/landing-page-copywriter/SKILL.md`
-- `/Users/g2m7/.agents/skills/landing-page-design/SKILL.md`
-- `/Users/g2m7/.agents/skills/web-design-guidelines/SKILL.md`
+- `seo.md` - keyword map, title/meta rules, schema rules, copy safety
+- `all-pages-copy-guidelines.md` - brand voice, vocabulary, claim safety
+- `product-page-copy-guidelines.md` - page formula, per-module vocabulary
+- `styling.md` - visual direction, card usage, motion rules
+- `typography.md` - locked type system (DO NOT deviate)
+
+See AGENTS.md for the full SEO checklist, performance rules, copy safety rules, and new page checklist.
 
 ## Content Needed (See CONTENTS-NEEDED.md)
 
