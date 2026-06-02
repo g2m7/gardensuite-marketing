@@ -359,10 +359,10 @@
 				<div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-4 md:gap-x-14">
 					<div class="flex flex-col items-center gap-1">
 						<span class="text-[32px] font-semibold tracking-[-0.03em] text-[#111111] md:text-[36px]"
-							>100%</span
+							>Auto</span
 						>
 						<span class="text-[13px] font-semibold tracking-[0.04em] text-[#71717A] uppercase"
-							>Automated</span
+							>Calculated</span
 						>
 					</div>
 					<div class="hidden h-8 w-px bg-[#E4E4E7] md:block"></div>
