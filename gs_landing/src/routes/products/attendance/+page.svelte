@@ -6,7 +6,6 @@
 	import { softwareSchema, breadcrumbSchema } from '$lib/seo/schemas';
 
 	// Shared layout components
-	import ProductHero from '$lib/components/product/ProductHero.svelte';
 	import ProductTrustRow from '$lib/components/product/ProductTrustRow.svelte';
 	import ProductProblemStrip from '$lib/components/product/ProductProblemStrip.svelte';
 	import ProductSolutionMockup from '$lib/components/product/ProductSolutionMockup.svelte';
@@ -78,54 +77,47 @@
 
 <div class="flex min-h-screen w-full flex-col overflow-clip bg-white antialiased">
 	<main>
-		<ProductHero
-			badgeText="Attendance & Weighing"
-			headline="Verify the worker before weight reaches payroll."
-			paragraph="Face attendance checks the worker. The Bluetooth hanging scale records leaf weight against the same worker. Both work offline at the garden and sync when internet returns."
-			{demoHref}
-			workflowHref="#workflow"
-		>
-			<!-- Centered mockup visual inside hero slot -->
-			<ProductCardFrame class="mx-auto mt-16 w-full max-w-[960px]" innerClass="p-5 md:p-8 lg:p-10">
-				<div class="grid items-center gap-8 md:grid-cols-2">
-					<div class="flex justify-center">
-						<div class="device-frame-phone w-full max-w-[270px]">
-							<div class="device-frame-phone-inner aspect-[9/19.5]">
-								<img
-									src="/screenshots/13_attendance_result_matched.png"
-									alt="GardenSuite face attendance app showing verified worker result"
-									width="1080"
-									height="2400"
-									class="h-full w-full object-cover object-top"
-									fetchpriority="high"
-								/>
-							</div>
-						</div>
-					</div>
-					
-					<div class="flex flex-col items-center justify-center p-2">
-						<div class="w-full max-w-[340px] rounded-2xl border border-white/85 bg-white/95 p-6 shadow-[0_14px_34px_rgba(15,23,42,0.06)] md:p-8">
-							<div class="flex items-center justify-center rounded-xl bg-[#F8FAF8] p-5 shadow-[inset_0_1px_3px_rgba(0,0,0,0.02)]">
-								<img
-									src="/bluetooth-scale.svg"
-									alt="Bluetooth hanging scale used with GardenSuite smart weighing"
-									width="512"
-									height="512"
-									class="h-auto w-full max-w-[180px]"
-									fetchpriority="high"
-								/>
-							</div>
-							<h3 class="mt-6 text-center text-[16px] font-semibold text-[#111111] tracking-tight">
-								Wireless leaf weight capture
-							</h3>
-							<p class="mt-2 text-center text-[13px] leading-[1.55] text-[#52525B]">
-								Scale sends kg values directly to the verified worker record via Bluetooth.
-							</p>
-						</div>
-					</div>
+		<section class="relative w-full h-[85vh] min-h-[600px] flex items-center justify-center border-b border-black bg-black overflow-hidden" aria-label="Hero">
+			<!-- Full-screen video background -->
+			<video
+				src="/timeline.mp4"
+				autoplay
+				loop
+				muted
+				playsinline
+				preload="metadata"
+				class="absolute inset-0 z-0 h-full w-full object-cover opacity-50 brightness-[0.35]"
+			>
+				Your browser does not support the video tag.
+			</video>
+
+			<!-- Subtle grid pattern & color overlay for depth -->
+			<div class="absolute inset-0 z-[1] bg-gradient-to-b from-black/30 via-transparent to-black/80"></div>
+			<div class="dot-grid-dark absolute inset-0 z-[2] opacity-35"></div>
+
+			<!-- Content Container -->
+			<div class="relative z-10 mx-auto flex max-w-[1344px] flex-col items-center px-6 text-center md:px-12">
+				<span class="mb-6 inline-block rounded-full bg-white/10 border border-white/20 px-3.5 py-1 text-[11px] font-semibold tracking-[0.05em] text-white uppercase backdrop-blur">
+					Attendance & Weighing
+				</span>
+				<h1 class="mx-auto max-w-4xl text-center text-[2.5rem] leading-[1.0] font-semibold tracking-[-0.04em] text-white sm:text-[3.25rem] md:text-[4.25rem] lg:text-[4.75rem]" style="text-wrap: balance">
+					Verify the worker before weight reaches payroll.
+				</h1>
+				<p class="mx-auto mt-6 max-w-2xl text-center text-base leading-[1.6] text-white/85 sm:text-lg md:text-xl" style="text-wrap: balance">
+					Face attendance checks the worker. The Bluetooth hanging scale records leaf weight against the same worker. Both work offline at the garden and sync when internet returns.
+				</p>
+				
+				<div class="mt-8 flex w-full flex-col items-center justify-center gap-3 sm:w-auto sm:flex-row">
+					<a href={demoHref} class="flex w-full items-center justify-center gap-2 rounded-full bg-[#1B5E3B] px-6 py-4 shadow-[0_4px_20px_rgba(27,94,59,0.3)] transition duration-150 hover:bg-[#144723] focus:outline-none active:scale-[0.97] sm:w-auto">
+						<span class="text-sm font-semibold text-white">Book Free Demo</span>
+						<svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="shrink-0"><path d="M5 2.5l4.5 4.5L5 11.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+					</a>
+					<a href="#workflow" class="flex w-full items-center justify-center rounded-full border border-white/20 bg-white/10 px-6 py-4 shadow-[0_1px_3px_rgba(0,0,0,0.1)] transition duration-150 hover:bg-white/20 hover:border-white/30 focus:outline-none active:scale-[0.97] sm:w-auto text-white backdrop-blur">
+						<span class="text-sm font-semibold">See Workflow</span>
+					</a>
 				</div>
-			</ProductCardFrame>
-		</ProductHero>
+			</div>
+		</section>
 
 		<ProductTrustRow 
 			stats={[
