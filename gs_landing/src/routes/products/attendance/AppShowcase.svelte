@@ -5,6 +5,13 @@
 	let activeTab = $state(0);
 	let containerRef: HTMLElement | null = $state(null);
 	let isMobile = $state(true);
+	let activeLightboxImage = $state<string | null>(null);
+
+	function handleKeyDown(e: KeyboardEvent) {
+		if (e.key === 'Escape') {
+			activeLightboxImage = null;
+		}
+	}
 
 	const tabs = [
 		{
@@ -12,16 +19,15 @@
 			label: "Biometric Attendance",
 			title: "Biometric Attendance",
 			subtitle: "Helps stop proxy attendance",
-			desc: "Verify worker identity directly in the field. The supervisor holds the camera, the app verifies the face in less than a second, and stamps the log offline.",
+			desc: "Verify worker identity directly in the field. The supervisor holds the phone, the app checks the face in less than a second, and saves the attendance hazira offline.",
 			bulletPoints: [
-				"On-device face match using fast local AI detection",
-				"3-image burst consensus check to verify identity",
-				"Works 100% offline with zero dependency on cellular network"
+				"Instant face comparison done directly on the phone",
+				"Quick multi-photo check to ensure the actual worker is present",
+				"Works offline with no need for mobile internet in the field"
 			],
-			leftImg: "/screenshots/12_attendance_capture_capturing.png",
-			leftAlt: "App camera screen capturing worker face",
-			rightImg: "/screenshots/13_attendance_result_matched.png",
-			rightAlt: "App result screen showing face matched and verified"
+			img: "/screenshots/13_attendance_result_matched.png",
+			alt: "App result screen showing face matched and verified",
+			cropPosition: "top"
 		},
 		{
 			id: "weighing",
@@ -32,12 +38,11 @@
 			bulletPoints: [
 				"Scale reading is locked beside the worker, not typed from paper",
 				"Saves gross weight, tare deduction, and rain slabs",
-				"Blocks saving if weight is missing or invalid to ensure clean data"
+				"Prevents saving if the weight is missing or entered incorrectly"
 			],
-			leftImg: "/screenshots/07_harvest_capture_ready.png",
-			leftAlt: "App camera view with live Bluetooth scale reading on top",
-			rightImg: "/screenshots/10_harvest_result_scale_connected_save.png",
-			rightAlt: "App result screen showing net leaf weight and save option"
+			img: "/screenshots/10_harvest_result_scale_connected_save.png",
+			alt: "App result screen showing net leaf weight and save option",
+			cropPosition: "bottom"
 		},
 		{
 			id: "punch",
@@ -48,44 +53,41 @@
 			bulletPoints: [
 				"Records the specific garden section and task work code",
 				"Stamps precise local timestamp on clock-in and clock-out",
-				"Shares the same fast offline face matching flow"
+				"Uses the same fast face checks to confirm worker identity"
 			],
-			leftImg: "/screenshots/15_punch_capture_ready.png",
-			leftAlt: "Punch capture screen ready for worker face scan",
-			rightImg: "/screenshots/16_punch_result_clock_in.png",
-			rightAlt: "Punch success screen showing clock-in saved offline"
+			img: "/screenshots/16_punch_result_clock_in.png",
+			alt: "Punch success screen showing clock-in saved offline",
+			cropPosition: "bottom"
 		},
 		{
 			id: "enrollment",
 			label: "Field Enrollment",
 			title: "Field Enrollment",
 			subtitle: "Register workers directly in the field",
-			desc: "No computer setup needed. Register new workers or update face templates right in the garden. Capture multiple angles and generate embeddings locally.",
+			desc: "No office computer needed. Register new workers or update face records right in the garden. Capture photos from different angles to set up the profile.",
 			bulletPoints: [
 				"Search or select the worker profile from the active garden list",
-				"Guided 3-angle capture (front, left, right) ensures quality templates",
-				"On-device embedding generation creates secure, encrypted face keys"
+				"3-photo guide (front, left, right) to capture a clear face record",
+				"Creates a secure face signature stored directly on the phone"
 			],
-			leftImg: "/screenshots/24_register_worker_ready.png",
-			leftAlt: "Worker profile ready for face enrollment",
-			rightImg: "/screenshots/26_register_review.png",
-			rightAlt: "Review screen showing captured face angles before saving"
+			img: "/screenshots/26_register_review.png",
+			alt: "Review screen showing captured face angles before saving",
+			cropPosition: "top"
 		},
 		{
 			id: "reports",
 			label: "Reports & Cloud Sync",
 			title: "Reports & Cloud Sync",
 			subtitle: "Track progress and sync with office",
-			desc: "Supervisors can review plucking records, search worker summaries, and check active session totals in the field. Sync to the central database in one tap.",
+			desc: "Supervisors can review leaf weight records, search worker history, and check daily plucking totals in the field. Send data to the main office in one tap.",
 			bulletPoints: [
 				"Review daily session list, totals, and net leaf weight collected",
-				"Export session logs to Excel formatted for ERP integration",
-				"Synchronize all offline records with central cloud dashboard when online"
+				"Save logs to Excel sheets formatted for your garden office",
+				"Sync all saved records to the online dashboard when network is found"
 			],
-			leftImg: "/screenshots/18_reports_harvest_list.png",
-			leftAlt: "App report screen showing active harvest session list",
-			rightImg: "/screenshots/27_sync_status.png",
-			rightAlt: "Sync status screen showing database sync progress"
+			img: "/screenshots/18_reports_harvest_list.png",
+			alt: "App report screen showing active harvest session list",
+			cropPosition: "top"
 		}
 	];
 
@@ -143,6 +145,8 @@
 	};
 </script>
 
+<svelte:window onkeydown={handleKeyDown} />
+
 <section
 	bind:this={containerRef}
 	class="relative w-full bg-[#F8FAF8] border-b border-[#E4E4E7] lg:h-[450vh]"
@@ -165,7 +169,7 @@
 					Inside the GardenSuite Face App
 				</h2>
 				<p class="mt-4 text-[16px] leading-[1.65] text-[#52525B] md:text-[17px] lg:mt-5">
-					An offline-first Android application designed for tea garden supervisors. It handles attendance, weighing, and enrollment directly in the field, with zero reliance on constant internet.
+					An offline Android app built for tea garden supervisors. It marks attendance, captures leaf weight, and registers workers directly in the field - even without a mobile network.
 				</p>
 			</div>
 
@@ -179,7 +183,7 @@
 							role="tab"
 							tabindex="0"
 							aria-selected={activeTab === i}
-							class="cursor-pointer rounded-[24px] border p-6 transition-all duration-300 text-left {activeTab === i ? 'bg-white border-white shadow-[0_16px_40px_rgba(27,94,59,0.06)] border-l-4 border-l-[#1B5E3B]' : 'bg-[#FAFAF8]/50 border-transparent hover:bg-[#FAFAF8] hover:border-[#E4E4E7]'}"
+							class="group cursor-pointer rounded-[24px] border p-6 transition-all duration-300 text-left {activeTab === i ? 'bg-white border-white shadow-[0_16px_40px_rgba(27,94,59,0.06)] border-l-4 border-l-[#1B5E3B] hover:shadow-[0_20px_48px_rgba(27,94,59,0.08)] hover:-translate-y-0.5' : 'bg-[#FAFAF8]/50 border-transparent hover:bg-[#FAFAF8] hover:border-[#E4E4E7] hover:translate-x-1'}"
 							onclick={() => handleTabClick(i)}
 							onkeydown={(e) => {
 								if (e.key === 'Enter' || e.key === ' ') {
@@ -189,10 +193,10 @@
 							}}
 						>
 							<div class="flex items-center justify-between">
-								<h3 class="text-[18px] font-semibold tracking-[-0.02em] {activeTab === i ? 'text-[#1B5E3B]' : 'text-[#3F3F46]'}" >
+								<h3 class="text-[18px] font-semibold tracking-[-0.02em] transition-colors duration-300 {activeTab === i ? 'text-[#1B5E3B]' : 'text-[#3F3F46] group-hover:text-[#111111]'}" >
 									{tab.label}
 								</h3>
-								<span class="text-[12px] font-mono text-[#A1A1AA]">0{i + 1}</span>
+								<span class="text-[12px] font-mono transition-colors duration-300 {activeTab === i ? 'text-[#1B5E3B]' : 'text-[#A1A1AA] group-hover:text-[#1B5E3B]'}" >0{i + 1}</span>
 							</div>
 							
 							{#if activeTab === i}
@@ -215,36 +219,23 @@
 					{/each}
 				</div>
 
-				<!-- Right side: Visual Phone Showcase Mockups -->
-				<ProductCardFrame class="w-full" innerClass="flex items-center justify-center min-h-[440px] md:min-h-[500px] lg:min-h-[540px]">
-					<div class="relative w-full max-w-[440px] aspect-[1/1.15] mx-auto">
+				<!-- Right side: Visual Phone Showcase Mockup (Single Zoomed & Cut) -->
+				<ProductCardFrame
+					onclick={() => activeLightboxImage = tabs[activeTab].img}
+					class="w-full group/card transition-all duration-500 ease-out hover:scale-[1.015] hover:-translate-y-1.5 hover:shadow-[0_32px_80px_rgba(15,46,12,0.18)]"
+					innerClass="!p-0 !overflow-hidden relative flex items-center justify-center h-[440px] md:h-[500px] lg:h-[540px]"
+				>
+					<div class="relative w-full h-full">
 						{#each tabs as tab, i}
-							<!-- Left phone -->
 							<div
-								class="device-frame-phone absolute left-0 top-4 w-[47%] shadow-[0_20px_50px_rgba(0,0,0,0.15)] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]
-								{activeTab === i ? 'opacity-100 translate-y-0 scale-100 pointer-events-auto' : 'opacity-0 translate-y-8 scale-95 pointer-events-none'}"
+								class="device-frame-phone absolute left-1/2 -translate-x-1/2 w-[240px] md:w-[280px] shadow-[0_25px_80px_rgba(0,0,0,0.25)] transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover/card:-translate-y-3.5
+								{tab.cropPosition === 'top' ? 'top-8 md:top-12' : 'bottom-8 md:bottom-12'}
+								{activeTab === i ? 'opacity-100 scale-100 pointer-events-auto' : 'opacity-0 scale-95 pointer-events-none'}"
 							>
 								<div class="device-frame-phone-inner aspect-[9/19.5]">
 									<img
-										src={tab.leftImg}
-										alt={tab.leftAlt}
-										width="1080"
-										height="2400"
-										class="h-full w-full object-cover object-top"
-										loading="eager"
-									/>
-								</div>
-							</div>
-
-							<!-- Right phone, offset bottom -->
-							<div
-								class="device-frame-phone absolute right-0 bottom-4 w-[47%] shadow-[0_25px_60px_rgba(0,0,0,0.2)] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]
-								{activeTab === i ? 'opacity-100 translate-y-0 scale-100 pointer-events-auto' : 'opacity-0 translate-y-8 scale-95 pointer-events-none'}"
-							>
-								<div class="device-frame-phone-inner aspect-[9/19.5]">
-									<img
-										src={tab.rightImg}
-										alt={tab.rightAlt}
+										src={tab.img}
+										alt={tab.alt}
 										width="1080"
 										height="2400"
 										class="h-full w-full object-cover object-top"
@@ -254,10 +245,62 @@
 							</div>
 						{/each}
 					</div>
+
+					<!-- View Large card corner hover overlay -->
+					<div class="absolute top-4 right-4 z-20 hidden lg:flex opacity-0 group-hover/card:opacity-100 transition-opacity duration-300 bg-black/70 backdrop-blur-md text-white px-3 py-1.5 rounded-full text-[10px] font-semibold items-center gap-1.5 shadow-lg pointer-events-none uppercase tracking-wider">
+						<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+							<path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+						</svg>
+						View Large
+					</div>
+
+					<!-- Discoverability float-zoom indicator overlay -->
+					<div class="absolute bottom-4 right-4 z-20 flex items-center gap-1.5 rounded-full bg-white/40 backdrop-blur-sm px-2.5 py-1 border border-white/40 shadow-sm text-[#1B5E3B]/80 pointer-events-none transition-opacity duration-300 group-hover/card:opacity-0 lg:hidden">
+						<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+							<path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+						</svg>
+						<span class="text-[9px] font-semibold uppercase tracking-wider">Tap to Zoom</span>
+					</div>
 				</ProductCardFrame>
 			</div>
 		</div>
 	</div>
+
+	{#if activeLightboxImage}
+		<!-- svelte-ignore a11y_click_events_have_key_events -->
+		<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
+		<!-- svelte-ignore a11y_no_static_element_interactions -->
+		<div
+			class="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4 backdrop-blur-sm transition-all duration-300 animate-fade-in"
+			onclick={() => activeLightboxImage = null}
+		>
+			<!-- Close button -->
+			<button
+				class="absolute top-6 right-6 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-white border border-white/20 hover:bg-white/20 active:scale-95 transition-all"
+				onclick={() => activeLightboxImage = null}
+				aria-label="Close image preview"
+			>
+				<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+					<path d="M18 6 6 18M6 6l12 12" />
+				</svg>
+			</button>
+
+			<!-- Lightbox Content -->
+			<!-- svelte-ignore a11y_click_events_have_key_events -->
+			<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
+			<!-- svelte-ignore a11y_no_static_element_interactions -->
+			<div
+				class="relative max-h-[85vh] max-w-[90vw] overflow-hidden rounded-2xl border border-white/10 bg-[#0B0B0C] p-2 shadow-2xl scale-100"
+				onclick={(e) => e.stopPropagation()}
+			>
+				<img
+					src={activeLightboxImage}
+					alt="Zoomed screenshot of the app"
+					class="max-h-[80vh] max-w-[85vw] object-contain rounded-lg shadow-inner"
+				/>
+			</div>
+		</div>
+	{/if}
 </section>
 
 <style>
