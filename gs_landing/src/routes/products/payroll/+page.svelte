@@ -9,7 +9,6 @@
 	import ProductTrustRow from '$lib/components/product/ProductTrustRow.svelte';
 	import ProductProblemStrip from '$lib/components/product/ProductProblemStrip.svelte';
 	import ProductRollout from '$lib/components/product/ProductRollout.svelte';
-	import ProductCta from '$lib/components/product/ProductCta.svelte';
 
 	onMount(() => {
 		return initScrollReveal();
@@ -37,12 +36,6 @@
 		{ step: '2', title: 'On-site Setup', desc: 'Software installed and configured at the garden.' },
 		{ step: '3', title: 'Staff Training', desc: 'Hands-on training for office and field staff.' },
 		{ step: '4', title: 'Go-Live Support', desc: 'Support stays on-site until your team is confident.' }
-	];
-
-	const buyers = [
-		{ role: 'Office staff', benefit: 'Finish payroll in minutes, not days.' },
-		{ role: 'Manager', benefit: 'Discuss and verify wage details immediately.' },
-		{ role: 'Owner', benefit: 'Review final payroll reports and ESI/PF statements online.' }
 	];
 </script>
 
@@ -388,13 +381,6 @@
 			headline="From first call to running live."
 			paragraph="Wages configurations are customized for your estate values. Sarbani Associates configures deduction percentages, ESI rates, and prints samples for validation."
 			steps={rollout}
-		/>
-
-		<ProductCta
-			headline="Stop calculating payroll by hand."
-			paragraph="See how GardenSuite calculates wages, deductions, and generates payslips for your estate. Demo, on-site setup, and training are free."
-			{demoHref}
-			{buyers}
 		/>
 	</main>
 </div>

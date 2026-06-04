@@ -9,7 +9,6 @@
 	import ProductTrustRow from '$lib/components/product/ProductTrustRow.svelte';
 	import ProductProblemStrip from '$lib/components/product/ProductProblemStrip.svelte';
 	import ProductRollout from '$lib/components/product/ProductRollout.svelte';
-	import ProductCta from '$lib/components/product/ProductCta.svelte';
 
 	onMount(() => {
 		return initScrollReveal();
@@ -37,12 +36,6 @@
 		{ step: '2', title: 'On-site Setup', desc: 'Software installed and configured at the garden.' },
 		{ step: '3', title: 'Staff Training', desc: 'Hands-on training for office and field staff.' },
 		{ step: '4', title: 'Go-Live Support', desc: 'Support stays on-site until your team is confident.' }
-	];
-
-	const buyers = [
-		{ role: 'Owner', benefit: 'See per-kg cost without asking anyone.' },
-		{ role: 'Manager', benefit: 'Track green leaf intake, daily yield, and sorting grades.' },
-		{ role: 'Factory staff', benefit: 'Record batches and manufacturing steps directly.' }
 	];
 </script>
 
@@ -395,13 +388,6 @@
 			headline="From first call to running live."
 			paragraph="GardenSuite factory setup is structured directly on site. Sarbani Associates visits, configures parameters, and trains your team."
 			steps={rollout}
-		/>
-
-		<ProductCta
-			headline="Know your factory numbers."
-			paragraph="See how GardenSuite tracks your production from green leaf to dispatch. Demo, on-site setup, and training are free."
-			{demoHref}
-			{buyers}
 		/>
 	</main>
 </div>

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { initScrollReveal } from '$lib/scroll-reveal';
-	import ScaleWorkflow from './ScaleWorkflow.svelte';
+	import AppShowcase from './AppShowcase.svelte';
 	import SeoHead from '$lib/seo/SeoHead.svelte';
 	import { softwareSchema, breadcrumbSchema } from '$lib/seo/schemas';
 
@@ -11,7 +11,6 @@
 	import ProductProblemStrip from '$lib/components/product/ProductProblemStrip.svelte';
 	import ProductSolutionMockup from '$lib/components/product/ProductSolutionMockup.svelte';
 	import ProductRollout from '$lib/components/product/ProductRollout.svelte';
-	import ProductCta from '$lib/components/product/ProductCta.svelte';
 
 	onMount(() => {
 		return initScrollReveal();
@@ -55,12 +54,6 @@
 		},
 		{ step: '4', title: 'Support', desc: 'The Sarbani team supports your staff until the process is steady.' }
 	];
-
-	const buyers = [
-		{ role: 'Manager', benefit: 'Know who reported today and how much leaf was collected.' },
-		{ role: 'Owner', benefit: 'Check daily attendance and plucking numbers from outside the garden.' },
-		{ role: 'Office staff', benefit: 'Use the same attendance and weight data for payroll.' }
-	];
 </script>
 
 <SeoHead
@@ -101,8 +94,8 @@
 						<div class="device-frame-phone w-full max-w-[270px]">
 							<div class="device-frame-phone-inner aspect-[9/19.5]">
 								<img
-									src="/screenshots/face-attendance_liveness-check_passed.png"
-									alt="GardenSuite face attendance app showing liveness check passed"
+									src="/screenshots/13_attendance_result_matched.png"
+									alt="GardenSuite face attendance app showing verified worker result"
 									width="1080"
 									height="2400"
 									class="h-full w-full object-cover object-top"
@@ -162,7 +155,7 @@
 		/>
 
 		<div id="workflow">
-			<ScaleWorkflow />
+			<AppShowcase />
 		</div>
 
 		<ProductRollout
@@ -170,13 +163,6 @@
 			headline="Sarbani Associates sets it up with your staff."
 			paragraph="GardenSuite is not handed over as a self-service app. The Sarbani team visits, installs, trains, and supports the garden."
 			steps={rollout}
-		/>
-
-		<ProductCta
-			headline="See face attendance and weighing at your garden."
-			paragraph="We will show the worker scan, scale capture, offline save, and sync flow. Demo, setup, and training are handled by Sarbani Associates."
-			{demoHref}
-			{buyers}
 		/>
 	</main>
 </div>

@@ -9,7 +9,6 @@
 	import ProductTrustRow from '$lib/components/product/ProductTrustRow.svelte';
 	import ProductProblemStrip from '$lib/components/product/ProductProblemStrip.svelte';
 	import ProductRollout from '$lib/components/product/ProductRollout.svelte';
-	import ProductCta from '$lib/components/product/ProductCta.svelte';
 
 	onMount(() => {
 		return initScrollReveal();
@@ -37,12 +36,6 @@
 		{ step: '2', title: 'On-site Setup', desc: 'Software installed and configured at the garden.' },
 		{ step: '3', title: 'Staff Training', desc: 'Hands-on training for office and field staff.' },
 		{ step: '4', title: 'Go-Live Support', desc: 'Support stays on-site until your team is confident.' }
-	];
-
-	const buyers = [
-		{ role: 'Owner', benefit: 'Check daily numbers from your phone.' },
-		{ role: 'Manager', benefit: 'Understand plucking and factory yield trends directly.' },
-		{ role: 'Office staff', benefit: 'Automatically sync records without repeating spreadsheet compilation.' }
 	];
 </script>
 
@@ -331,13 +324,6 @@
 			headline="From first call to running live."
 			paragraph="Our team sets up the cloud integrations and trains dashboard users. We support your managers on phone and tablet."
 			steps={rollout}
-		/>
-
-		<ProductCta
-			headline="See your garden from anywhere."
-			paragraph="Get a live demo of the daily report (MIS dashboard) with your own garden data. Demo, on-site setup, and training are free."
-			{demoHref}
-			{buyers}
 		/>
 	</main>
 </div>

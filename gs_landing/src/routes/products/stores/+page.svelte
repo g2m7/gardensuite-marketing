@@ -9,7 +9,6 @@
 	import ProductTrustRow from '$lib/components/product/ProductTrustRow.svelte';
 	import ProductProblemStrip from '$lib/components/product/ProductProblemStrip.svelte';
 	import ProductRollout from '$lib/components/product/ProductRollout.svelte';
-	import ProductCta from '$lib/components/product/ProductCta.svelte';
 
 	onMount(() => {
 		return initScrollReveal();
@@ -37,12 +36,6 @@
 		{ step: '2', title: 'On-site Setup', desc: 'Software installed and configured at the garden.' },
 		{ step: '3', title: 'Staff Training', desc: 'Hands-on training for office and field staff.' },
 		{ step: '4', title: 'Go-Live Support', desc: 'Support stays on-site until your team is confident.' }
-	];
-
-	const buyers = [
-		{ role: 'Manager', benefit: 'Know stock levels without calling the store.' },
-		{ role: 'Office staff', benefit: 'Post issues and reconcile physical balances in seconds.' },
-		{ role: 'Owner', benefit: 'Verify section-wise consumption and stock valuations from the dashboard.' }
 	];
 </script>
 
@@ -322,13 +315,6 @@
 			headline="From first call to running live."
 			paragraph="Store modules are pre-populated with default tea garden category profiles. Sarbani Associates helps input opening balances and reorder levels."
 			steps={rollout}
-		/>
-
-		<ProductCta
-			headline="Never lose track of a single item."
-			paragraph="See how GardenSuite tracks every item from purchase to issue at your estate store. Demo, on-site setup, and training are free."
-			{demoHref}
-			{buyers}
 		/>
 	</main>
 </div>
