@@ -11,6 +11,7 @@
 	import ProductProblemStrip from '$lib/components/product/ProductProblemStrip.svelte';
 	import ProductSolutionMockup from '$lib/components/product/ProductSolutionMockup.svelte';
 	import ProductRollout from '$lib/components/product/ProductRollout.svelte';
+	import ProductCardFrame from '$lib/components/product/ProductCardFrame.svelte';
 
 	onMount(() => {
 		return initScrollReveal();
@@ -85,11 +86,8 @@
 			workflowHref="#workflow"
 		>
 			<!-- Centered mockup visual inside hero slot -->
-			<div class="relative mx-auto mt-16 w-full max-w-[960px] rounded-[28px] border border-white/60 bg-[#DDEFE4] p-5 shadow-[0_24px_62px_rgba(15,46,12,0.1)] md:p-8 lg:p-10">
-				<div class="absolute inset-0 z-0 bg-gradient-to-b from-[#F8FAF8] to-[#E8F3ED] opacity-90 rounded-[28px]"></div>
-				<div class="dot-grid-light absolute inset-0 z-0 opacity-40 rounded-[28px]"></div>
-				
-				<div class="relative z-10 grid items-center gap-8 md:grid-cols-2">
+			<ProductCardFrame class="mx-auto mt-16 w-full max-w-[960px]" innerClass="p-5 md:p-8 lg:p-10">
+				<div class="grid items-center gap-8 md:grid-cols-2">
 					<div class="flex justify-center">
 						<div class="device-frame-phone w-full max-w-[270px]">
 							<div class="device-frame-phone-inner aspect-[9/19.5]">
@@ -126,7 +124,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</ProductCardFrame>
 		</ProductHero>
 
 		<ProductTrustRow 

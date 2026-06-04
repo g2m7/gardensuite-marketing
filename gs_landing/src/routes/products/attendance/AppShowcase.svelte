@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import ProductCardFrame from '$lib/components/product/ProductCardFrame.svelte';
 
 	let activeTab = $state(0);
 	let containerRef: HTMLElement | null = $state(null);
@@ -214,12 +215,9 @@
 					{/each}
 				</div>
 
-				<!-- Right side: Visual Phone Showcase Mockups (overlay absolute cards with aspect ratio container to prevent shifts) -->
-				<div class="relative flex items-center justify-center rounded-[32px] border border-white/60 bg-[#E8F2EC] p-6 shadow-[inset_0_1px_3px_rgba(0,0,0,0.02)] min-h-[460px] md:p-12 lg:min-h-[580px]">
-					<div class="absolute inset-0 bg-gradient-to-b from-[#F3F8F5] to-[#DCECE3] opacity-80 rounded-[32px]"></div>
-					<div class="dot-grid-light absolute inset-0 opacity-30 rounded-[32px]"></div>
-
-					<div class="relative z-10 w-full max-w-[440px] aspect-[1/1.15] mx-auto">
+				<!-- Right side: Visual Phone Showcase Mockups -->
+				<ProductCardFrame class="w-full" innerClass="flex items-center justify-center min-h-[440px] md:min-h-[500px] lg:min-h-[540px]">
+					<div class="relative w-full max-w-[440px] aspect-[1/1.15] mx-auto">
 						{#each tabs as tab, i}
 							<!-- Left phone -->
 							<div
@@ -256,7 +254,7 @@
 							</div>
 						{/each}
 					</div>
-				</div>
+				</ProductCardFrame>
 			</div>
 		</div>
 	</div>
