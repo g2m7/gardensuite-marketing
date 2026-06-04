@@ -12,6 +12,20 @@
 	import ProductRollout from '$lib/components/product/ProductRollout.svelte';
 	import ProductCardFrame from '$lib/components/product/ProductCardFrame.svelte';
 
+	let videoRef = $state<HTMLVideoElement | null>(null);
+	let isPlaying = $state(true);
+
+	function togglePlay() {
+		if (!videoRef) return;
+		if (isPlaying) {
+			videoRef.pause();
+			isPlaying = false;
+		} else {
+			videoRef.play().catch(() => {});
+			isPlaying = true;
+		}
+	}
+
 	onMount(() => {
 		return initScrollReveal();
 	});
@@ -80,6 +94,7 @@
 		<section class="relative w-full h-[85vh] min-h-[600px] flex items-center justify-center border-b border-black bg-black overflow-hidden" aria-label="Hero">
 			<!-- Full-screen video background -->
 			<video
+				bind:this={videoRef}
 				src="/timeline.mp4"
 				autoplay
 				loop
@@ -117,6 +132,23 @@
 					</a>
 				</div>
 			</div>
+
+			<!-- Play/Pause Control -->
+			<button
+				onclick={togglePlay}
+				class="absolute bottom-6 right-6 z-20 flex h-10 w-10 items-center justify-center rounded-full bg-white/10 border border-white/20 text-white shadow-sm hover:bg-white/20 active:scale-95 transition-all backdrop-blur focus:outline-none"
+				aria-label={isPlaying ? "Pause background video" : "Play background video"}
+			>
+				{#if isPlaying}
+					<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+						<path fill-rule="evenodd" d="M6.75 5.25a.75.75 0 0 1 .75-.75H9a.75.75 0 0 1 .75.75v13.5a.75.75 0 0 1-.75.75H7.5a.75.75 0 0 1-.75-.75V5.25Zm7.5 0A.75.75 0 0 1 15 4.5h1.5a.75.75 0 0 1 .75.75v13.5a.75.75 0 0 1-.75.75H15a.75.75 0 0 1-.75-.75V5.25Z" clip-rule="evenodd" />
+					</svg>
+				{:else}
+					<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" class="ml-0.5">
+						<path fill-rule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd" />
+					</svg>
+				{/if}
+			</button>
 		</section>
 
 		<ProductTrustRow 
