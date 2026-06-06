@@ -4,7 +4,8 @@
 	let { scrollAnimated = true, darkHero = false } = $props();
 
 	// When darkHero is true and nav bg is still transparent, use light text
-	let lightText = $derived(darkHero && navProgress < 0.5);
+	// But NOT when mobile nav sheet is open (it has a white bg)
+	let lightText = $derived(darkHero && navProgress < 0.5 && !mobileNavOpen);
 
 	let mobileNavOpen = $state(false);
 	let productsOpen = $state(false);
