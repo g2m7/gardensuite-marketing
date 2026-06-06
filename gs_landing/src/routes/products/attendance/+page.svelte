@@ -10,7 +10,7 @@
 	import ProductProblemStrip from '$lib/components/product/ProductProblemStrip.svelte';
 	import ProductSolutionMockup from '$lib/components/product/ProductSolutionMockup.svelte';
 	import ProductRollout from '$lib/components/product/ProductRollout.svelte';
-	import ProductCardFrame from '$lib/components/product/ProductCardFrame.svelte';
+
 
 	let videoRef = $state<HTMLVideoElement | null>(null);
 	let isPlaying = $state(true);

@@ -1,38 +1,38 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 /* ─── GardenSuite Design Tokens ─── */
 
 @theme {
 	/* Green scale (brand) */
-	--color-brand-50: #F1F6EB;
-	--color-brand-100: #E1EED6;
-	--color-brand-200: #C8DDB8;
-	--color-brand-300: #9DB88F;
-	--color-brand-400: #7BA86A;
-	--color-brand-500: #5F8F4D;
-	--color-brand-600: #3D7D2C;
-	--color-brand-700: #2B6321;
-	--color-brand-800: #1A4A15;
-	--color-brand-900: #0F2E0C;
+	--color-brand-50: #f1f6eb;
+	--color-brand-100: #e1eed6;
+	--color-brand-200: #c8ddb8;
+	--color-brand-300: #9db88f;
+	--color-brand-400: #7ba86a;
+	--color-brand-500: #5f8f4d;
+	--color-brand-600: #3d7d2c;
+	--color-brand-700: #2b6321;
+	--color-brand-800: #1a4a15;
+	--color-brand-900: #0f2e0c;
 
 	/* Neutrals (consolidated to zinc scale) */
-	--color-charcoal: #0A0A0A;
-	--color-ink: #18181B;
-	--color-muted: #71717A;
-	--color-subtle: #A1A1AA;
-	--color-surface: #FAFAF7;
-	--color-border: #E4E4E7;
-	--color-border-soft: #F0F0F0;
+	--color-charcoal: #0a0a0a;
+	--color-ink: #18181b;
+	--color-muted: #71717a;
+	--color-subtle: #a1a1aa;
+	--color-surface: #fafaf7;
+	--color-border: #e4e4e7;
+	--color-border-soft: #f0f0f0;
 
 	/* Semantic */
-	--color-canvas: #FFFFFF;
-	--color-text-primary: #0A0A0A;
-	--color-text-secondary: #71717A;
-	--color-text-inverse: #FFFFFF;
+	--color-canvas: #ffffff;
+	--color-text-primary: #0a0a0a;
+	--color-text-secondary: #71717a;
+	--color-text-inverse: #ffffff;
 
 	/* Accent */
-	--color-green-deep: #1B5E3B;
-	--color-green-dark: #1A5C2E;
+	--color-green-deep: #1b5e3b;
+	--color-green-dark: #1a5c2e;
 
 	/* Radius (Keytail scale) */
 	--radius-sm: 8px;
@@ -44,7 +44,6 @@
 	/* Fonts */
 	--font-sans: 'Inter', system-ui, -apple-system, sans-serif;
 	--font-display: 'Inter', system-ui, -apple-system, sans-serif;
-
 }
 
 /* ─── Base ─── */
@@ -63,7 +62,12 @@
 		-moz-osx-font-smoothing: grayscale;
 	}
 
-	h1, h2, h3, h4, h5, h6 {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
 		font-family: var(--font-display);
 		font-weight: 500;
 		letter-spacing: -0.04em;
@@ -83,11 +87,15 @@
 }
 
 @utility shadow-card {
-	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+	box-shadow:
+		0 1px 3px rgba(0, 0, 0, 0.04),
+		0 1px 2px rgba(0, 0, 0, 0.02);
 }
 
 @utility shadow-card-hover {
-	box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.04);
+	box-shadow:
+		0 12px 40px rgba(0, 0, 0, 0.08),
+		0 4px 12px rgba(0, 0, 0, 0.04);
 }
 
 /* ─── Why Stats Animations ─── */
@@ -104,8 +112,13 @@
 }
 
 @keyframes icon-pulse {
-	0%, 100% { transform: scale(1); }
-	50% { transform: scale(1.08); }
+	0%,
+	100% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.08);
+	}
 }
 
 .why-stat-item {

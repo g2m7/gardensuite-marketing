@@ -1,142 +1,232 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+
+	let workflowSection: HTMLElement;
+
 	const steps = [
 		{
 			step: '1',
-			title: 'Start the field session',
-			desc: 'The supervisor selects section, activity, deduction, and task weight before plucking starts.',
-			image: '/screenshots/smart-weighing_new-session_setup.png',
-			alt: 'GardenSuite smart weighing setup screen for starting a field session',
-			color: '#1B5E3B'
+			title: 'Open the field app',
+			desc: 'The supervisor starts from the GardenSuite app home and chooses the harvest workflow for field work.',
+			image: '/screenshots/workflow_avd/00_home_entry_points.png',
+			alt: 'GardenSuite app home screen with harvest workflow entry points',
+			kicker: 'Harvest workflow'
 		},
 		{
 			step: '2',
-			title: 'Capture leaf weight',
-			desc: 'The hanging scale sends the kg to the phone. The supervisor can check the value before moving ahead.',
-			image: '/bluetooth-scale.svg',
-			alt: 'Bluetooth hanging scale for GardenSuite smart weighing',
-			color: '#00695C'
+			title: 'Start the field session',
+			desc: 'Select the garden, section, activity, deduction, and task weight before plucking starts.',
+			image: '/screenshots/workflow_avd/01_harvest_start_session_ready.png',
+			alt: 'GardenSuite harvest start session screen ready for field setup',
+			kicker: 'Session ready'
 		},
 		{
 			step: '3',
-			title: 'Verify the worker',
-			desc: 'The worker looks at the camera. Face attendance confirms the worker before the record is saved.',
-			image: '/screenshots/face-attendance_liveness-check_passed.png',
-			alt: 'GardenSuite face attendance screen showing liveness check passed',
-			color: '#2E7D32'
+			title: 'Record leaf weights',
+			desc: 'Each worker record is saved in the active session, with leaf weight and daily totals visible to the supervisor.',
+			image: '/screenshots/workflow_avd/05_harvest_active_records.png',
+			alt: 'GardenSuite active harvest session showing saved worker leaf weight records',
+			kicker: 'Active session records'
 		},
 		{
 			step: '4',
+			title: 'Review the harvest list',
+			desc: 'The supervisor can open the reports area and check the day’s harvest sessions before sending data to the office.',
+			image: '/screenshots/workflow_avd/18_reports_harvest_list.png',
+			alt: 'GardenSuite reports screen showing harvest session list',
+			kicker: 'Daily harvest list'
+		},
+		{
+			step: '5',
+			title: 'Check session details',
+			desc: 'Open a session to review worker-wise leaf weight, totals, and saved records before payroll uses the data.',
+			image: '/screenshots/workflow_avd/20_reports_session_detail.png',
+			alt: 'GardenSuite harvest session detail report with worker records and totals',
+			kicker: 'Session detail'
+		},
+		{
+			step: '6',
 			title: 'Sync to the office',
-			desc: 'The record is saved offline and later syncs to GardenSuite office software for payroll and reports.',
-			image: '/screenshots/smart-weighing_active-session_capture-weight.png',
-			alt: 'GardenSuite active session screen after smart weighing capture',
-			color: '#558B2F'
+			desc: 'Saved records upload when network is available, ready for payroll, reports, and office checking.',
+			image: '/screenshots/workflow_avd/27_sync_status.png',
+			alt: 'GardenSuite sync status screen showing saved records uploaded to the office',
+			kicker: 'Office sync'
 		}
 	];
+
+	onMount(() => {
+		let cleanup = () => {};
+
+		const setupAnimation = async () => {
+			if (!workflowSection) return;
+
+			const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+			if (prefersReduced) {
+				workflowSection.style.setProperty('--workflow-progress', '1');
+				workflowSection.classList.add('workflow-ready');
+				return;
+			}
+
+			const { gsap } = await import('gsap');
+			const { ScrollTrigger } = await import('gsap/ScrollTrigger');
+			gsap.registerPlugin(ScrollTrigger);
+
+			const ctx = gsap.context(() => {
+				gsap.set(workflowSection, { '--workflow-progress': 0 });
+
+				workflowSection.classList.add('workflow-ready');
+
+				gsap.to(workflowSection, {
+					'--workflow-progress': 1,
+					ease: 'none',
+					scrollTrigger: {
+						trigger: '.workflow-timeline',
+						start: 'top 58%',
+						end: 'bottom 58%',
+						scrub: 0.65
+					}
+				});
+			}, workflowSection);
+
+			cleanup = () => ctx.revert();
+		};
+
+		setupAnimation();
+
+		return () => cleanup();
+	});
 </script>
 
 <section
-	class="reveal-on-scroll relative w-full overflow-hidden bg-[#F8FAF8] border-b border-[#E4E4E7] py-24 md:py-32"
+	id="workflow"
+	bind:this={workflowSection}
+	class="relative w-full scroll-mt-24 overflow-hidden border-b border-[#E4E4E7] bg-white px-6 py-20 md:scroll-mt-28 md:px-12 md:py-28"
 	aria-labelledby="workflow-heading"
 >
-	<div class="mx-auto max-w-[1344px] px-6 md:px-12">
-		<div class="grid gap-10 md:grid-cols-[0.9fr_1.1fr] md:items-end">
-			<div>
-				<span
-					class="mb-4 inline-block text-[13px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase"
-					>Process Flow</span
-				>
-				<h2
-					id="workflow-heading"
-					class="text-[28px] leading-[1.08] font-semibold tracking-[-0.04em] text-[#111111] md:text-[36px] lg:text-[44px]"
-					style="text-wrap: balance"
-				>
-					From leaf bag to payroll record in one flow.
-				</h2>
-				<p class="mt-5 max-w-[580px] text-[16px] leading-[1.65] text-[#52525B] md:text-[17px]">
-					The app keeps the field flow simple for supervisors. Select the session, capture the kg,
-					verify the worker, and send the same record to the office when internet is available.
-				</p>
-			</div>
-
-			<div
-				class="rounded-[24px] border border-[#E4E4E7] bg-white p-6 shadow-card hover:shadow-card-hover transition-all duration-300 md:p-8"
+	<div
+		class="workflow-panel mx-auto max-w-[1240px]"
+	>
+		<div class="workflow-intro mx-auto max-w-3xl text-center">
+			<span
+				class="mb-4 inline-flex text-[13px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase"
+				>Process Flow</span
 			>
-				<div class="grid items-center gap-6 sm:grid-cols-[180px_1fr]">
-					<div class="flex items-center justify-center rounded-2xl bg-[#F8FAF8] p-4 shadow-[inset_0_1px_3px_rgba(0,0,0,0.02)]">
-						<img
-							src="/bluetooth-scale.svg"
-							alt="Bluetooth hanging scale for GardenSuite smart weighing"
-							width="512"
-							height="512"
-							class="mx-auto w-full max-w-[150px]"
-							loading="lazy"
-						/>
-					</div>
-					<div>
-						<p class="text-[13px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase">
-							Hardware linked to app
-						</p>
-						<p
-							class="mt-3 text-[18px] leading-[1.4] font-semibold tracking-[-0.02em] text-[#111111]"
+			<h2
+				id="workflow-heading"
+				class="text-[28px] leading-[1.08] font-semibold tracking-[-0.04em] text-[#111111] md:text-[36px]"
+				style="text-wrap: balance"
+			>
+				From field app to office sync in six steps.
+			</h2>
+			<p
+				class="mx-auto mt-5 max-w-[640px] text-[16px] leading-[1.65] text-[#374151]"
+			>
+				The field flow stays simple for supervisors. Start the harvest session, save worker
+				records, review the day’s work, and sync the same data to the office.
+			</p>
+		</div>
+
+		<div class="workflow-timeline relative mt-14 md:mt-18">
+			<div
+				class="absolute top-0 bottom-0 left-4 w-px bg-[#DDEFE4] md:left-1/2 md:-translate-x-1/2"
+				aria-hidden="true"
+			></div>
+			<div
+				class="workflow-line-fill absolute top-0 bottom-0 left-4 w-px origin-top bg-[#1B5E3B] md:left-1/2 md:-translate-x-1/2"
+				aria-hidden="true"
+			></div>
+
+			<div class="grid gap-10 md:gap-0">
+				{#each steps as item, i}
+					{@const visualFirst = i % 2 === 1}
+					<article
+						class="workflow-step relative grid gap-5 pl-12 md:grid-cols-[1fr_72px_1fr] md:items-center md:gap-8 md:py-7 md:pl-0"
+						data-visual-first={visualFirst}
+					>
+						<div
+							class="workflow-dot absolute top-2 left-4 z-10 h-4 w-4 -translate-x-1/2 rounded-full border-4 border-white bg-[#1B5E3B] shadow-[0_0_0_1px_rgba(27,94,59,0.22)] md:top-1/2 md:left-1/2 md:-translate-y-1/2"
+							aria-hidden="true"
 						>
-							Weight is captured beside the worker, not typed later from paper.
-						</p>
-						<p class="mt-3 text-[14px] leading-[1.6] text-[#52525B]">
-							This helps the office use the same field record for leaf weight, payroll, and daily
-							reports.
-						</p>
-					</div>
-				</div>
+							<span
+								class="workflow-dot-ring absolute inset-[-8px] rounded-full border border-[#1B5E3B]/20"
+							></span>
+						</div>
+
+						<div class="workflow-copy {visualFirst ? 'md:order-3' : 'md:order-1'}">
+							<div class="max-w-[360px] {visualFirst ? 'md:ml-0' : 'md:ml-auto'}">
+								<span
+									class="inline-flex rounded-full border border-[#1B5E3B]/15 bg-[#1B5E3B]/5 px-3 py-1 text-[11px] font-semibold tracking-[0.04em] text-[#1B5E3B]"
+									>Step {item.step}</span
+								>
+								<h3
+									class="mt-4 text-[22px] leading-[1.16] font-semibold tracking-[-0.02em] text-[#111111] md:text-[26px]"
+								>
+									{item.title}
+								</h3>
+								<p class="mt-3 text-[15px] leading-[1.65] text-[#4B5563]">
+									{item.desc}
+								</p>
+							</div>
+						</div>
+
+						<div class="hidden md:order-2 md:block" aria-hidden="true"></div>
+
+						<div class={visualFirst ? 'md:order-1' : 'md:order-3'}>
+							<div
+								class="workflow-card relative max-w-[380px] overflow-hidden rounded-xl border border-[#E4E4E7] bg-white shadow-card transition-shadow duration-300 hover:shadow-card-hover {visualFirst
+									? 'md:ml-auto'
+									: 'md:ml-0'}"
+							>
+								<div
+									class="flex items-center justify-between border-b border-[#E4E4E7] bg-[#FAFAF7] px-4 py-3"
+								>
+									<span class="text-[12px] font-semibold tracking-[0.04em] text-[#1B5E3B]">
+										{item.kicker}
+									</span>
+									<span class="h-2 w-2 rounded-full bg-[#1B5E3B]"></span>
+								</div>
+								<div
+									class="workflow-card-panel flex min-h-[210px] items-center justify-center bg-[#F8F7F3] p-5 md:min-h-[250px]"
+								>
+									<div class="workflow-phone device-frame-phone w-[150px] md:w-[178px]">
+										<div class="device-frame-phone-inner aspect-[9/19.5]">
+											<img
+												src={item.image}
+												alt={item.alt}
+												width="412"
+												height="915"
+												class="h-full w-full object-cover object-top"
+												loading="lazy"
+											/>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</article>
+				{/each}
 			</div>
 		</div>
 
-		<div class="mt-16 grid gap-6 md:grid-cols-4">
-			{#each steps as item, i}
-				<article class="group relative flex flex-col justify-between rounded-[24px] border border-white/70 bg-white p-5 shadow-[0_12px_36px_rgba(0,0,0,0.04)] hover:shadow-card-hover hover:border-[#E4E4E7] transition-all duration-300">
-					<div>
-						<div class="mb-4 flex items-center justify-between">
-							<div class="flex h-12 w-12 items-center justify-center rounded-full text-lg font-bold text-white shadow-[0_4px_12px_rgba(27,94,59,0.15)]" style="background-color: {item.color};">
-								{item.step}
-							</div>
-							{#if i < steps.length - 1}
-								<svg class="hidden h-5 w-5 text-[#C8DDB8] md:block" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-									<path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
-								</svg>
-							{/if}
-						</div>
-						<div class="overflow-hidden rounded-2xl border border-[#E4E4E7] bg-[#FAFAF7]">
-							{#if item.image === '/bluetooth-scale.svg'}
-								<div class="flex aspect-[9/14] items-center justify-center bg-white p-6">
-									<img
-										src={item.image}
-										alt={item.alt}
-										width="512"
-										height="512"
-										class="w-full max-w-[140px]"
-										loading="lazy"
-									/>
-								</div>
-							{:else}
-								<img
-									src={item.image}
-									alt={item.alt}
-									width="1080"
-									height="2400"
-									class="aspect-[9/14] w-full object-cover object-top"
-									loading="lazy"
-								/>
-							{/if}
-						</div>
-					</div>
-					<div class="pt-5">
-						<h3 class="text-[17px] font-semibold tracking-[-0.01em] text-[#111111]">
-							{item.title}
-						</h3>
-						<p class="mt-2 text-[14px] leading-[1.65] text-[#52525B]">{item.desc}</p>
-					</div>
-				</article>
-			{/each}
+		<div
+			class="workflow-note mx-auto mt-12 max-w-[720px] border-t border-[#E4E4E7] pt-7 text-center"
+		>
+			<p class="text-[15px] leading-[1.65] text-[#4B5563]">
+				The same saved records help the office use leaf weight, attendance, payroll, and daily
+				reports without repeated entry from paper registers.
+			</p>
 		</div>
 	</div>
 </section>
+
+<style>
+	.workflow-line-fill {
+		transform: scaleY(var(--workflow-progress, 0));
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.workflow-line-fill {
+			transform: scaleY(1);
+		}
+	}
+</style>

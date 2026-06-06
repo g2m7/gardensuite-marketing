@@ -115,7 +115,13 @@
 					aria-label="Scroll to previous feature"
 				>
 					<svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-						<path d="M10 4L6 8l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+						<path
+							d="M10 4L6 8l4 4"
+							stroke="currentColor"
+							stroke-width="1.5"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						/>
 					</svg>
 				</button>
 				<button
@@ -125,7 +131,13 @@
 					aria-label="Scroll to next feature"
 				>
 					<svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-						<path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+						<path
+							d="M6 4l4 4-4 4"
+							stroke="currentColor"
+							stroke-width="1.5"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						/>
 					</svg>
 				</button>
 			</div>
@@ -144,13 +156,15 @@
 			{#each features as feature, i}
 				<div class="carousel-card flex w-[85%] shrink-0 snap-start flex-col sm:w-[calc(50%-12px)]">
 					<!-- Card image with overlay -->
-					<div class="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-[#E8E8E8] bg-[#E8E5DE]">
+					<div
+						class="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-[#E8E8E8] bg-[#E8E5DE]"
+					>
 						<picture>
 							<source srcset={feature.imageWebp} type="image/webp" />
 							<img
 								src={feature.image}
 								alt={`${feature.badge} feature preview`}
-								class="absolute inset-0 h-full w-full object-cover object-center opacity-20 saturate-[0.4] brightness-[1.1]"
+								class="absolute inset-0 h-full w-full object-cover object-center opacity-20 brightness-[1.1] saturate-[0.4]"
 								width="800"
 								height="600"
 								loading="lazy"
@@ -158,53 +172,100 @@
 						</picture>
 
 						<!-- Subtle gradient overlay for depth -->
-						<div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/[0.04] to-transparent" aria-hidden="true"></div>
+						<div
+							class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/[0.04] to-transparent"
+							aria-hidden="true"
+						></div>
 
 						<!-- Badge -->
 						<div class="absolute top-5 left-5 z-10">
-							<span class="rounded-full bg-white/90 px-3 py-1 text-[11px] font-semibold tracking-[0.04em] text-[#1B5E3B] uppercase shadow-sm backdrop-blur-sm">
+							<span
+								class="rounded-full bg-white/90 px-3 py-1 text-[11px] font-semibold tracking-[0.04em] text-[#1B5E3B] uppercase shadow-sm backdrop-blur-sm"
+							>
 								{feature.badge}
 							</span>
 						</div>
 
 						<!-- Floating UI overlay cards -->
 						{#if feature.overlay.type === 'status'}
-							<div class="absolute bottom-6 left-6 z-10 w-[240px] rounded-xl border border-white/60 bg-white/95 p-4 shadow-[0_8px_32px_rgba(0,0,0,0.08)] backdrop-blur-md sm:w-[260px]">
+							<div
+								class="absolute bottom-6 left-6 z-10 w-[240px] rounded-xl border border-white/60 bg-white/95 p-4 shadow-[0_8px_32px_rgba(0,0,0,0.08)] backdrop-blur-md sm:w-[260px]"
+							>
 								<div class="mb-2 flex items-center gap-2">
-									<div class="flex h-6 w-6 items-center justify-center rounded-full bg-[#1B5E3B]/10">
-										<svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 6.5l2 2 4-4" stroke="#1B5E3B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+									<div
+										class="flex h-6 w-6 items-center justify-center rounded-full bg-[#1B5E3B]/10"
+									>
+										<svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"
+											><path
+												d="M3 6.5l2 2 4-4"
+												stroke="#1B5E3B"
+												stroke-width="1.5"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+											/></svg
+										>
 									</div>
 									<span class="text-[12px] font-semibold text-[#1B5E3B]">Face Verified</span>
 								</div>
 								{#each feature.overlay.lines as line}
 									<div class="flex justify-between border-t border-[#F0F0F0] py-1.5 text-[12px]">
 										<span class="text-[#71717A]">{line.label}</span>
-										<span class={line.bold ? 'font-semibold text-[#111]' : 'text-[#3F3F46]'}>{line.value}</span>
+										<span class={line.bold ? 'font-semibold text-[#111]' : 'text-[#3F3F46]'}
+											>{line.value}</span
+										>
 									</div>
 								{/each}
 							</div>
 						{:else if feature.overlay.type === 'weight'}
-							<div class="absolute right-6 bottom-6 z-10 w-[200px] rounded-xl border border-white/60 bg-white/95 p-5 text-center shadow-[0_8px_32px_rgba(0,0,0,0.08)] backdrop-blur-md">
-								<div class="text-[11px] font-semibold tracking-[0.04em] text-[#71717A] uppercase">Leaf Weight</div>
-								<div class="mt-1 text-[36px] font-semibold leading-none tracking-[-0.04em] text-[#111]" style="font-variant-numeric: tabular-nums">{feature.overlay.value}<span class="ml-1 text-[16px] font-medium text-[#71717A]">{feature.overlay.unit}</span></div>
+							<div
+								class="absolute right-6 bottom-6 z-10 w-[200px] rounded-xl border border-white/60 bg-white/95 p-5 text-center shadow-[0_8px_32px_rgba(0,0,0,0.08)] backdrop-blur-md"
+							>
+								<div class="text-[11px] font-semibold tracking-[0.04em] text-[#71717A] uppercase">
+									Leaf Weight
+								</div>
+								<div
+									class="mt-1 text-[36px] leading-none font-semibold tracking-[-0.04em] text-[#111]"
+									style="font-variant-numeric: tabular-nums"
+								>
+									{feature.overlay.value}<span class="ml-1 text-[16px] font-medium text-[#71717A]"
+										>{feature.overlay.unit}</span
+									>
+								</div>
 								<div class="mt-2 text-[12px] text-[#52525B]">{feature.overlay.worker}</div>
-								<div class="mt-2 inline-flex items-center gap-1 rounded-full bg-[#1B5E3B]/10 px-2.5 py-0.5 text-[11px] font-semibold text-[#1B5E3B]">
-									<svg width="8" height="8" viewBox="0 0 8 8" fill="none" aria-hidden="true"><circle cx="4" cy="4" r="3" fill="#1B5E3B"/></svg>
+								<div
+									class="mt-2 inline-flex items-center gap-1 rounded-full bg-[#1B5E3B]/10 px-2.5 py-0.5 text-[11px] font-semibold text-[#1B5E3B]"
+								>
+									<svg width="8" height="8" viewBox="0 0 8 8" fill="none" aria-hidden="true"
+										><circle cx="4" cy="4" r="3" fill="#1B5E3B" /></svg
+									>
 									{feature.overlay.status}
 								</div>
 							</div>
 						{:else if feature.overlay.type === 'payroll'}
-							<div class="absolute right-6 bottom-6 z-10 w-[220px] rounded-xl border border-white/60 bg-white/95 p-4 shadow-[0_8px_32px_rgba(0,0,0,0.08)] backdrop-blur-md">
-								<div class="mb-2 text-[12px] font-semibold tracking-[0.04em] text-[#71717A] uppercase">Month Summary</div>
+							<div
+								class="absolute right-6 bottom-6 z-10 w-[220px] rounded-xl border border-white/60 bg-white/95 p-4 shadow-[0_8px_32px_rgba(0,0,0,0.08)] backdrop-blur-md"
+							>
+								<div
+									class="mb-2 text-[12px] font-semibold tracking-[0.04em] text-[#71717A] uppercase"
+								>
+									Month Summary
+								</div>
 								{#each feature.overlay.items as item}
-									<div class="flex justify-between border-t border-[#F0F0F0] py-1.5 text-[12px]" style="font-variant-numeric: tabular-nums">
+									<div
+										class="flex justify-between border-t border-[#F0F0F0] py-1.5 text-[12px]"
+										style="font-variant-numeric: tabular-nums"
+									>
 										<span class="text-[#71717A]">{item.label}</span>
-										<span class={item.bold ? 'font-semibold text-[#111]' : 'text-[#3F3F46]'}>{item.value}</span>
+										<span class={item.bold ? 'font-semibold text-[#111]' : 'text-[#3F3F46]'}
+											>{item.value}</span
+										>
 									</div>
 								{/each}
 							</div>
 						{:else if feature.overlay.type === 'dashboard'}
-							<div class="absolute right-6 top-16 z-10 rounded-xl border border-[#FDE68A] bg-[#FEF9C3]/95 p-4 shadow-[0_8px_32px_rgba(0,0,0,0.06)] backdrop-blur-sm">
+							<div
+								class="absolute top-16 right-6 z-10 rounded-xl border border-[#FDE68A] bg-[#FEF9C3]/95 p-4 shadow-[0_8px_32px_rgba(0,0,0,0.06)] backdrop-blur-sm"
+							>
 								<div class="mb-2 flex items-center justify-between gap-6">
 									<span class="text-[13px] font-semibold text-[#92400E]">Today's Numbers</span>
 									<span class="text-[11px] font-medium text-[#B45309]">Live</span>
@@ -212,7 +273,10 @@
 								{#each feature.overlay.stats as stat}
 									<div class="flex items-center justify-between gap-8 py-1 text-[12px]">
 										<span class="text-[#92400E]/70">{stat.label}</span>
-										<span class="font-semibold text-[#78350F]" style="font-variant-numeric: tabular-nums">{stat.value}</span>
+										<span
+											class="font-semibold text-[#78350F]"
+											style="font-variant-numeric: tabular-nums">{stat.value}</span
+										>
 									</div>
 								{/each}
 							</div>

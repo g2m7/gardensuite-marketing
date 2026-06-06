@@ -60,7 +60,7 @@
 <div class="flex min-h-screen w-full flex-col overflow-clip bg-white antialiased">
 	<main>
 		<ProductHero
-			badgeText="Factory Production"
+			badgeText="Tea Factory Production Software"
 			headline="Know exactly what every kg of tea costs to make."
 			paragraph="Track green leaf inflow, each manufacturing step, power use, and dispatch. Get clear factory production and cost data without manual registers."
 			{demoHref}

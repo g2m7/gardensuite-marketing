@@ -60,7 +60,7 @@
 <div class="flex min-h-screen w-full flex-col overflow-clip bg-white antialiased">
 	<main>
 		<ProductHero
-			badgeText="Store Management"
+			badgeText="Tea Garden Store Management Software"
 			headline="Every bag. Every part. Every drop. Tracked."
 			paragraph="Track fertilizer, spare parts, fuel, and chemicals from purchase to issue - with a live running balance."
 			{demoHref}

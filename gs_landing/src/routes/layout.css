@@ -1,37 +1,37 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 /* ─── Layout Design Tokens (inherits from app.css) ─── */
 
 @theme {
 	/* Green scale */
-	--color-brand-50: #F1F6EB;
-	--color-brand-100: #E1EED6;
-	--color-brand-200: #C8DDB8;
-	--color-brand-300: #9DB88F;
-	--color-brand-400: #7BA86A;
-	--color-brand-500: #5F8F4D;
-	--color-brand-600: #3D7D2C;
-	--color-brand-700: #2B6321;
-	--color-brand-800: #1A4A15;
-	--color-brand-900: #0F2E0C;
+	--color-brand-50: #f1f6eb;
+	--color-brand-100: #e1eed6;
+	--color-brand-200: #c8ddb8;
+	--color-brand-300: #9db88f;
+	--color-brand-400: #7ba86a;
+	--color-brand-500: #5f8f4d;
+	--color-brand-600: #3d7d2c;
+	--color-brand-700: #2b6321;
+	--color-brand-800: #1a4a15;
+	--color-brand-900: #0f2e0c;
 
 	/* Neutrals (consolidated) */
-	--color-charcoal: #0A0A0A;
-	--color-ink: #18181B;
-	--color-muted: #71717A;
-	--color-subtle: #A1A1AA;
-	--color-surface: #FAFAF7;
-	--color-border: #E4E4E7;
-	--color-border-soft: #F0F0F0;
+	--color-charcoal: #0a0a0a;
+	--color-ink: #18181b;
+	--color-muted: #71717a;
+	--color-subtle: #a1a1aa;
+	--color-surface: #fafaf7;
+	--color-border: #e4e4e7;
+	--color-border-soft: #f0f0f0;
 
 	/* Semantic */
-	--color-canvas: #FFFFFF;
-	--color-text-primary: #0A0A0A;
-	--color-text-secondary: #52525B;
-	--color-text-inverse: #FFFFFF;
+	--color-canvas: #ffffff;
+	--color-text-primary: #0a0a0a;
+	--color-text-secondary: #52525b;
+	--color-text-inverse: #ffffff;
 
-	--color-green-deep: #1B5E3B;
-	--color-green-dark: #1A5C2E;
+	--color-green-deep: #1b5e3b;
+	--color-green-dark: #1a5c2e;
 
 	/* Radius (Keytail scale) */
 	--radius-sm: 8px;
@@ -49,7 +49,8 @@
 
 @layer base {
 	/* Lenis smooth scroll overrides */
-	html.lenis, html.lenis body {
+	html.lenis,
+	html.lenis body {
 		height: auto;
 	}
 	.lenis.lenis-smooth {
@@ -71,7 +72,12 @@
 		-moz-osx-font-smoothing: grayscale;
 	}
 
-	h1, h2, h3, h4, h5, h6 {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
 		font-family: var(--font-display);
 		font-weight: 500;
 		letter-spacing: -0.04em;
@@ -91,22 +97,26 @@
 }
 
 @utility shadow-card {
-	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+	box-shadow:
+		0 1px 3px rgba(0, 0, 0, 0.04),
+		0 1px 2px rgba(0, 0, 0, 0.02);
 }
 
 @utility shadow-card-hover {
-	box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.04);
+	box-shadow:
+		0 12px 40px rgba(0, 0, 0, 0.08),
+		0 4px 12px rgba(0, 0, 0, 0.04);
 }
 
 @utility text-gradient {
-	background: linear-gradient(135deg, #7BA86A, #3D7D2C);
+	background: linear-gradient(135deg, #7ba86a, #3d7d2c);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	background-clip: text;
 }
 
 @utility text-gradient-light {
-	background: linear-gradient(135deg, #C8DDB8, #7BA86A);
+	background: linear-gradient(135deg, #c8ddb8, #7ba86a);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	background-clip: text;
@@ -115,13 +125,18 @@
 /* ─── Dot Grid Background Pattern (PayloadCMS / Index.app style) ─── */
 
 .dot-grid {
-	background-image: radial-gradient(circle, #D4D4D8 0.7px, transparent 0.7px);
+	background-image: radial-gradient(circle, #d4d4d8 0.7px, transparent 0.7px);
 	background-size: 28px 28px;
 }
 
 .dot-grid-light {
-	background-image: radial-gradient(circle, #E4E4E7 0.6px, transparent 0.6px);
+	background-image: radial-gradient(circle, #e4e4e7 0.6px, transparent 0.6px);
 	background-size: 32px 32px;
+}
+
+.dot-grid-dark {
+	background-image: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0.7px, transparent 0.7px);
+	background-size: 28px 28px;
 }
 
 /* ─── Grain / Noise Texture Overlay (folk.app style) ─── */
@@ -145,7 +160,9 @@
 	background: #1a1a1a;
 	border-radius: 28px;
 	padding: 8px;
-	box-shadow: 0 25px 80px rgba(0, 0, 0, 0.2), 0 8px 24px rgba(0, 0, 0, 0.1);
+	box-shadow:
+		0 25px 80px rgba(0, 0, 0, 0.2),
+		0 8px 24px rgba(0, 0, 0, 0.1);
 	border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -159,7 +176,9 @@
 	background: #1a1a1a;
 	border-radius: 20px;
 	padding: 10px;
-	box-shadow: 0 30px 80px rgba(0, 0, 0, 0.18), 0 8px 24px rgba(0, 0, 0, 0.08);
+	box-shadow:
+		0 30px 80px rgba(0, 0, 0, 0.18),
+		0 8px 24px rgba(0, 0, 0, 0.08);
 	border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
@@ -175,8 +194,8 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background: linear-gradient(135deg, #F0FDF4 0%, #DCFCE7 60%, #C8DDB8 100%);
-	color: #1A5C2E;
+	background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 60%, #c8ddb8 100%);
+	color: #1a5c2e;
 	font-family: var(--font-sans);
 	font-size: 13px;
 	font-weight: 600;

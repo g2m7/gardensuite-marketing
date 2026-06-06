@@ -25,7 +25,15 @@ export function organizationSchema() {
 			addressLocality: 'Bagdogra, Siliguri',
 			addressCountry: 'IN'
 		},
-		areaServed: ['Assam', 'Darjeeling', 'Dooars', 'Terai', 'Coochbehar', 'Uttar Dinajpur', 'Jalpaiguri'],
+		areaServed: [
+			'Assam',
+			'Darjeeling',
+			'Dooars',
+			'Terai',
+			'Coochbehar',
+			'Uttar Dinajpur',
+			'Jalpaiguri'
+		],
 		contactPoint: {
 			'@type': 'ContactPoint',
 			email: ORG_EMAIL,

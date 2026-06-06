@@ -45,7 +45,9 @@ export const POST: RequestHandler = async ({ request }) => {
 	const senderName = env.BREVO_SENDER_NAME || DEFAULT_SENDER_NAME;
 
 	if (!brevoApiKey || !senderEmail) {
-		console.error('Contact form email is not configured. Missing BREVO_API_KEY or BREVO_SENDER_EMAIL.');
+		console.error(
+			'Contact form email is not configured. Missing BREVO_API_KEY or BREVO_SENDER_EMAIL.'
+		);
 		return json(
 			{ message: 'Email sending is not configured yet. Please use WhatsApp for now.' },
 			{ status: 503 }

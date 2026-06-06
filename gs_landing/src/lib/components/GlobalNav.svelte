@@ -1,7 +1,10 @@
 <script lang="ts">
 	import GsLogoAnimation from '$lib/components/GsLogoAnimation.svelte';
 
-	let { scrollAnimated = true } = $props();
+	let { scrollAnimated = true, darkHero = false } = $props();
+
+	// When darkHero is true and nav bg is still transparent, use light text
+	let lightText = $derived(darkHero && navProgress < 0.5);
 
 	let mobileNavOpen = $state(false);
 	let productsOpen = $state(false);
@@ -57,6 +60,7 @@
 		backdrop-filter: blur(${scrollAnimated ? navProgress * 24 : 12}px);
 		-webkit-backdrop-filter: blur(${scrollAnimated ? navProgress * 24 : 12}px);
 		border-bottom: 1px solid rgba(0, 0, 0, ${scrollAnimated ? navProgress * 0.05 : 0.05});
+		transition: color 0.3s ease;
 	`);
 </script>
 
@@ -78,7 +82,7 @@
 		<a href="/" class="flex items-center gap-2" aria-label="GardenSuite Home">
 			<GsLogoAnimation class="h-7 w-auto shrink-0" />
 			<span
-				class="text-[18px] leading-[22px] font-medium tracking-[-0.01em] text-[#0A0A0A]"
+				class="text-[18px] leading-[22px] font-medium tracking-[-0.01em] transition-colors duration-300 {lightText ? 'text-white' : 'text-[#0A0A0A]'}"
 			>
 				GardenSuite
 			</span>
@@ -188,7 +192,7 @@
 		<!-- Products Dropdown -->
 		<div role="presentation" class="products-dropdown-container relative" onkeydown={handleProductsKeydown}>
 			<button
-				class="inline-flex h-10 items-center justify-center rounded-full px-4 text-[14px] font-semibold text-[#18181B] transition-colors duration-150 hover:bg-[#0000000A] hover:text-[#0A0A0A] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30"
+				class="inline-flex h-10 items-center justify-center rounded-full px-4 text-[14px] font-semibold transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 {lightText ? 'text-white/90 hover:bg-white/10 hover:text-white' : 'text-[#18181B] hover:bg-[#0000000A] hover:text-[#0A0A0A]'}"
 				aria-label="Products menu"
 				aria-expanded={productsOpen}
 				aria-haspopup="true"
@@ -316,12 +320,12 @@
 		</div>
 		<a
 			href="/#features"
-			class="inline-flex h-10 items-center justify-center rounded-full px-4 text-[14px] font-semibold text-[#18181B] transition-colors duration-150 hover:bg-[#0000000A] hover:text-[#0A0A0A]"
+			class="inline-flex h-10 items-center justify-center rounded-full px-4 text-[14px] font-semibold transition-colors duration-300 {lightText ? 'text-white/90 hover:bg-white/10 hover:text-white' : 'text-[#18181B] hover:bg-[#0000000A] hover:text-[#0A0A0A]'}"
 			>Features</a
 		>
 		<a
 			href="/#about"
-			class="inline-flex h-10 items-center justify-center rounded-full px-4 text-[14px] font-semibold text-[#18181B] transition-colors duration-150 hover:bg-[#0000000A] hover:text-[#0A0A0A]"
+			class="inline-flex h-10 items-center justify-center rounded-full px-4 text-[14px] font-semibold transition-colors duration-300 {lightText ? 'text-white/90 hover:bg-white/10 hover:text-white' : 'text-[#18181B] hover:bg-[#0000000A] hover:text-[#0A0A0A]'}"
 			>About</a
 		>
 	</div>
@@ -331,7 +335,7 @@
 	<div class="flex items-center gap-2">
 		<a
 			href="/#contact"
-			class="mr-4 hidden h-10 items-center rounded-md px-2 text-[14px] font-semibold text-[#18181B] transition-colors hover:text-[#0A0A0A] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 md:inline-flex"
+			class="mr-4 hidden h-10 items-center rounded-md px-2 text-[14px] font-semibold transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 md:inline-flex {lightText ? 'text-white/90 hover:text-white' : 'text-[#18181B] hover:text-[#0A0A0A]'}"
 			>Contact</a
 		>
 		<a
@@ -347,7 +351,7 @@
 
 {#snippet mobileHamburger()}
 	<button
-		class="flex h-10 w-10 items-center justify-center rounded-full transition-colors hover:bg-[#0000000A] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 md:hidden"
+		class="flex h-10 w-10 items-center justify-center rounded-full transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 md:hidden {lightText ? 'text-white hover:bg-white/10' : 'text-[#0A0A0A] hover:bg-[#0000000A]'}"
 		aria-label={mobileNavOpen ? 'Close menu' : 'Open menu'}
 		aria-expanded={mobileNavOpen}
 		onclick={toggleMobileNav}

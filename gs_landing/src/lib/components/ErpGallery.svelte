@@ -73,7 +73,8 @@
 	function handleLightboxKey(e: KeyboardEvent) {
 		if (!lightboxOpen) return;
 		if (e.key === 'ArrowRight') lightboxIndex = (lightboxIndex + 1) % items.length;
-		else if (e.key === 'ArrowLeft') lightboxIndex = (lightboxIndex - 1 + items.length) % items.length;
+		else if (e.key === 'ArrowLeft')
+			lightboxIndex = (lightboxIndex - 1 + items.length) % items.length;
 		else if (e.key === 'Escape') closeLightbox();
 	}
 
@@ -83,7 +84,9 @@
 
 	onMount(() => {
 		updateScrollState();
-		return () => { if (lightboxOpen) closeLightbox(); };
+		return () => {
+			if (lightboxOpen) closeLightbox();
+		};
 	});
 </script>
 
@@ -96,11 +99,7 @@
 	<!-- Dark background with tea garden imagery -->
 	<div class="absolute inset-0 bg-[#0B1712]">
 		<picture>
-			<source
-				srcset="/bg-960.webp 960w, /bg-1920.webp 1920w"
-				sizes="100vw"
-				type="image/webp"
-			/>
+			<source srcset="/bg-960.webp 960w, /bg-1920.webp 1920w" sizes="100vw" type="image/webp" />
 			<img
 				src="/bg.png"
 				alt=""
@@ -111,7 +110,9 @@
 				loading="lazy"
 			/>
 		</picture>
-		<div class="absolute inset-0 bg-gradient-to-b from-[#0B1712]/80 via-[#0B1712]/50 to-[#0B1712]/90"></div>
+		<div
+			class="absolute inset-0 bg-gradient-to-b from-[#0B1712]/80 via-[#0B1712]/50 to-[#0B1712]/90"
+		></div>
 	</div>
 
 	<div class="relative z-10 mx-auto max-w-[1344px] px-6 md:px-12">
@@ -119,7 +120,9 @@
 		<div class="mb-12 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
 			<div>
 				{#if title}
-					<span class="mb-3 inline-block text-[13px] font-semibold tracking-[0.08em] text-[#4ADE80] uppercase">
+					<span
+						class="mb-3 inline-block text-[13px] font-semibold tracking-[0.08em] text-[#4ADE80] uppercase"
+					>
 						Real software
 					</span>
 					<h2
@@ -141,21 +144,39 @@
 			<div class="flex items-center gap-2">
 				<button
 					type="button"
-					class="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/[0.06] text-white/70 backdrop-blur-sm transition-colors duration-150 hover:bg-white/[0.12] hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4ADE80]/50 disabled:opacity-30 disabled:cursor-not-allowed"
+					class="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/[0.06] text-white/70 backdrop-blur-sm transition-colors duration-150 hover:bg-white/[0.12] hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4ADE80]/50 disabled:cursor-not-allowed disabled:opacity-30"
 					aria-label="Previous screenshot"
 					disabled={!canScrollLeft}
 					onclick={() => scrollTo('left')}
 				>
-					<svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" /></svg>
+					<svg
+						width="18"
+						height="18"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke="currentColor"
+						stroke-width="2"
+						aria-hidden="true"
+						><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" /></svg
+					>
 				</button>
 				<button
 					type="button"
-					class="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/[0.06] text-white/70 backdrop-blur-sm transition-colors duration-150 hover:bg-white/[0.12] hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4ADE80]/50 disabled:opacity-30 disabled:cursor-not-allowed"
+					class="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/[0.06] text-white/70 backdrop-blur-sm transition-colors duration-150 hover:bg-white/[0.12] hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4ADE80]/50 disabled:cursor-not-allowed disabled:opacity-30"
 					aria-label="Next screenshot"
 					disabled={!canScrollRight}
 					onclick={() => scrollTo('right')}
 				>
-					<svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+					<svg
+						width="18"
+						height="18"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke="currentColor"
+						stroke-width="2"
+						aria-hidden="true"
+						><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg
+					>
 				</button>
 			</div>
 		</div>
@@ -177,9 +198,13 @@
 				onclick={() => openLightbox(i)}
 			>
 				<!-- Frosted glass outer frame -->
-				<div class="relative overflow-hidden rounded-2xl border border-white/[0.12] bg-white/[0.04] p-3 shadow-[0_20px_60px_rgba(0,0,0,0.3)] backdrop-blur-sm transition-transform duration-300 group-hover:scale-[1.02] md:p-4">
+				<div
+					class="relative overflow-hidden rounded-2xl border border-white/[0.12] bg-white/[0.04] p-3 shadow-[0_20px_60px_rgba(0,0,0,0.3)] backdrop-blur-sm transition-transform duration-300 group-hover:scale-[1.02] md:p-4"
+				>
 					<!-- Inner elevated card with screenshot -->
-					<div class="relative overflow-hidden rounded-xl border border-white/20 bg-white shadow-[0_8px_32px_rgba(0,0,0,0.15)]">
+					<div
+						class="relative overflow-hidden rounded-xl border border-white/20 bg-white shadow-[0_8px_32px_rgba(0,0,0,0.15)]"
+					>
 						<div class="relative aspect-[16/10] w-full overflow-hidden bg-[#F4F4F5]">
 							<img
 								src={item.src}
@@ -190,22 +215,52 @@
 								class="h-full w-full object-cover object-top"
 							/>
 							<!-- Hover overlay with zoom icon -->
-							<div class="pointer-events-none absolute inset-0 flex items-center justify-center bg-black/0 transition-colors duration-200 group-hover:bg-black/15">
-								<div class="flex h-10 w-10 items-center justify-center rounded-full bg-white/90 opacity-0 shadow-lg transition-opacity duration-200 group-hover:opacity-100">
-									<svg class="h-5 w-5 text-[#111111]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
-										<path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+							<div
+								class="pointer-events-none absolute inset-0 flex items-center justify-center bg-black/0 transition-colors duration-200 group-hover:bg-black/15"
+							>
+								<div
+									class="flex h-10 w-10 items-center justify-center rounded-full bg-white/90 opacity-0 shadow-lg transition-opacity duration-200 group-hover:opacity-100"
+								>
+									<svg
+										class="h-5 w-5 text-[#111111]"
+										fill="none"
+										viewBox="0 0 24 24"
+										stroke="currentColor"
+										stroke-width="2"
+										aria-hidden="true"
+									>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
+										/>
 									</svg>
 								</div>
 							</div>
 						</div>
 						<!-- Caption bar -->
 						<div class="flex items-center gap-3 border-t border-[#E4E4E7] bg-white px-4 py-3">
-							<div class="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-[#1B5E3B]/10">
-								<svg class="h-3.5 w-3.5 text-[#1B5E3B]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
-									<path stroke-linecap="round" stroke-linejoin="round" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+							<div
+								class="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-[#1B5E3B]/10"
+							>
+								<svg
+									class="h-3.5 w-3.5 text-[#1B5E3B]"
+									fill="none"
+									viewBox="0 0 24 24"
+									stroke="currentColor"
+									stroke-width="2"
+									aria-hidden="true"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+									/>
 								</svg>
 							</div>
-							<p class="min-w-0 truncate text-[13px] leading-[1.4] font-medium text-[#3F3F46]">{item.caption}</p>
+							<p class="min-w-0 truncate text-[13px] leading-[1.4] font-medium text-[#3F3F46]">
+								{item.caption}
+							</p>
 						</div>
 					</div>
 				</div>
@@ -218,7 +273,9 @@
 		{#each items as _, i}
 			<button
 				type="button"
-				class="h-1.5 rounded-full transition-all duration-200 {activeSlide === i ? 'w-6 bg-[#4ADE80]' : 'w-1.5 bg-white/25 hover:bg-white/40'}"
+				class="h-1.5 rounded-full transition-all duration-200 {activeSlide === i
+					? 'w-6 bg-[#4ADE80]'
+					: 'w-1.5 bg-white/25 hover:bg-white/40'}"
 				aria-label="Go to screenshot {i + 1}"
 				onclick={() => scrollToSlide(i)}
 			></button>
@@ -239,29 +296,64 @@
 			<div class="erp-lightbox__header">
 				<div class="flex items-center gap-3">
 					<div class="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-[#1B5E3B]/20">
-						<svg class="h-3.5 w-3.5 text-[#4ADE80]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
-							<path stroke-linecap="round" stroke-linejoin="round" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+						<svg
+							class="h-3.5 w-3.5 text-[#4ADE80]"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+							stroke-width="2"
+							aria-hidden="true"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+							/>
 						</svg>
 					</div>
 					<p class="text-[15px] font-medium text-[#fafafa]">{items[lightboxIndex].caption}</p>
 				</div>
 				<div class="flex items-center gap-2">
-					<span class="text-[13px] tabular-nums text-[#71717A]">{lightboxIndex + 1} / {items.length}</span>
+					<span class="text-[13px] text-[#71717A] tabular-nums"
+						>{lightboxIndex + 1} / {items.length}</span
+					>
 					<button
 						type="button"
 						class="erp-lightbox__nav"
 						aria-label="Previous screenshot"
-						onclick={() => { lightboxIndex = (lightboxIndex - 1 + items.length) % items.length; }}
+						onclick={() => {
+							lightboxIndex = (lightboxIndex - 1 + items.length) % items.length;
+						}}
 					>
-						<svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" /></svg>
+						<svg
+							width="18"
+							height="18"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+							stroke-width="2"
+							aria-hidden="true"
+							><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" /></svg
+						>
 					</button>
 					<button
 						type="button"
 						class="erp-lightbox__nav"
 						aria-label="Next screenshot"
-						onclick={() => { lightboxIndex = (lightboxIndex + 1) % items.length; }}
+						onclick={() => {
+							lightboxIndex = (lightboxIndex + 1) % items.length;
+						}}
 					>
-						<svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+						<svg
+							width="18"
+							height="18"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+							stroke-width="2"
+							aria-hidden="true"
+							><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg
+						>
 					</button>
 					<button
 						type="button"
@@ -269,7 +361,16 @@
 						aria-label="Close viewer"
 						onclick={closeLightbox}
 					>
-						<svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+						<svg
+							width="18"
+							height="18"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+							stroke-width="2"
+							aria-hidden="true"
+							><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg
+						>
 					</button>
 				</div>
 			</div>
@@ -367,7 +468,9 @@
 		background: rgba(255, 255, 255, 0.06);
 		color: #e4e4e7;
 		cursor: pointer;
-		transition: background-color 0.15s, border-color 0.15s;
+		transition:
+			background-color 0.15s,
+			border-color 0.15s;
 	}
 
 	.erp-lightbox__nav:hover {
@@ -392,7 +495,9 @@
 		color: #e4e4e7;
 		cursor: pointer;
 		margin-left: 0.25rem;
-		transition: background-color 0.15s, border-color 0.15s;
+		transition:
+			background-color 0.15s,
+			border-color 0.15s;
 	}
 
 	.erp-lightbox__close:hover {

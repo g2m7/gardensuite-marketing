@@ -24,9 +24,7 @@
 		breadcrumbs
 	}: Props = $props();
 
-	let schemaJson = $derived(
-		schema.length > 0 ? JSON.stringify(buildSchemaGraph(...schema)) : ''
-	);
+	let schemaJson = $derived(schema.length > 0 ? JSON.stringify(buildSchemaGraph(...schema)) : '');
 </script>
 
 <svelte:head>

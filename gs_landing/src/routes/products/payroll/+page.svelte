@@ -60,7 +60,7 @@
 <div class="flex min-h-screen w-full flex-col overflow-clip bg-white antialiased">
 	<main>
 		<ProductHero
-			badgeText="Automated Payroll"
+			badgeText="Tea Garden Payroll Software"
 			headline="Wages. PF. Bonus. Calculated, not handwritten."
 			paragraph="Attendance and weighing data goes straight into payroll. Wages, PF, ESI, and bonus are calculated automatically. No spreadsheets."
 			{demoHref}

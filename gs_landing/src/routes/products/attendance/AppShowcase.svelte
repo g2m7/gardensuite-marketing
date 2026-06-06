@@ -149,7 +149,7 @@
 
 <section
 	bind:this={containerRef}
-	class="relative w-full bg-[#F8FAF8] border-b border-[#E4E4E7] lg:h-[450vh]"
+	class="relative w-full bg-gradient-to-b from-[#F8FAF8] to-white border-b border-[#E4E4E7] lg:h-[450vh]"
 	aria-labelledby="showcase-heading"
 >
 	<!-- Sticky viewport panel: acts as sticky on desktop, static flow on mobile -->
@@ -168,7 +168,7 @@
 				>
 					Inside the GardenSuite Face App
 				</h2>
-				<p class="mt-4 text-[16px] leading-[1.65] text-[#52525B] md:text-[17px] lg:mt-5">
+				<p class="mt-4 text-[16px] leading-[1.65] text-[#374151] md:text-[17px] lg:mt-5">
 					An offline Android app built for tea garden supervisors. It marks attendance, captures leaf weight, and registers workers directly in the field - even without a mobile network.
 				</p>
 			</div>
@@ -183,7 +183,7 @@
 							role="tab"
 							tabindex="0"
 							aria-selected={activeTab === i}
-							class="group cursor-pointer rounded-[24px] border p-6 transition-all duration-300 text-left {activeTab === i ? 'bg-white border-white shadow-[0_16px_40px_rgba(27,94,59,0.06)] border-l-4 border-l-[#1B5E3B] hover:shadow-[0_20px_48px_rgba(27,94,59,0.08)] hover:-translate-y-0.5' : 'bg-[#FAFAF8]/50 border-transparent hover:bg-[#FAFAF8] hover:border-[#E4E4E7] hover:translate-x-1'}"
+							class="group cursor-pointer rounded-2xl border p-6 transition-all duration-500 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] text-left {activeTab === i ? 'bg-white border-[#E4E4E7] shadow-card-hover ring-1 ring-[#1B5E3B]/10' : 'bg-white/50 border-[#E4E4E7] hover:bg-[#FAFAF7] hover:-translate-y-0.5'}"
 							onclick={() => handleTabClick(i)}
 							onkeydown={(e) => {
 								if (e.key === 'Enter' || e.key === ' ') {
@@ -193,19 +193,19 @@
 							}}
 						>
 							<div class="flex items-center justify-between">
-								<h3 class="text-[18px] font-semibold tracking-[-0.02em] transition-colors duration-300 {activeTab === i ? 'text-[#1B5E3B]' : 'text-[#3F3F46] group-hover:text-[#111111]'}" >
+								<h3 class="text-[18px] font-semibold tracking-[-0.02em] transition-colors duration-300 {activeTab === i ? 'text-[#1B5E3B]' : 'text-[#111111]'}" >
 									{tab.label}
 								</h3>
-								<span class="text-[12px] font-mono transition-colors duration-300 {activeTab === i ? 'text-[#1B5E3B]' : 'text-[#A1A1AA] group-hover:text-[#1B5E3B]'}" >0{i + 1}</span>
+								<span class="text-[12px] font-mono transition-colors duration-300 {activeTab === i ? 'text-[#1B5E3B]' : 'text-[#A1A1AA]'}" >0{i + 1}</span>
 							</div>
 							
 							{#if activeTab === i}
 								<div class="mt-4 animate-fade-in">
 									<h4 class="text-[15px] font-semibold text-[#111111]">{tab.subtitle}</h4>
-									<p class="mt-2 text-[14px] leading-[1.6] text-[#52525B]">{tab.desc}</p>
+									<p class="mt-2 text-[14px] leading-[1.6] text-[#4B5563]">{tab.desc}</p>
 									<ul class="mt-4 grid gap-2">
 										{#each tab.bulletPoints as point}
-											<li class="flex items-start gap-2.5 text-[13px] leading-[1.5] text-[#3F3F46]">
+											<li class="flex items-start gap-2.5 text-[13px] leading-[1.5] text-[#4B5563]">
 												<svg class="h-4 w-4 mt-0.5 shrink-0 text-[#1B5E3B]" viewBox="0 0 20 20" fill="currentColor">
 													<path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
 												</svg>

@@ -2,22 +2,19 @@
 	import './layout.css';
 	import { page } from '$app/stores';
 	import GlobalNav from '$lib/components/GlobalNav.svelte';
-	import CtaBand from '$lib/CtaBand.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 
 	let { children } = $props();
 
-	let isHomepage = $derived($page.url.pathname === '/');
+	// Pages with dark hero sections need light nav text at scroll top
+	const darkHeroRoutes = ['/products/attendance'];
+	let darkHero = $derived(darkHeroRoutes.includes($page.url.pathname));
 </script>
 
-<GlobalNav scrollAnimated={isHomepage} />
+<GlobalNav {darkHero} />
 
 <div id="main-content">
 	{@render children()}
 </div>
-
-{#if !isHomepage}
-	<CtaBand />
-{/if}
 
 <Footer />

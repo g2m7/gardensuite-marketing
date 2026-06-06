@@ -3,7 +3,7 @@
 process.env.PORT = process.env.PORT || '3005';
 process.env.NODE_ENV = process.env.NODE_ENV || 'production';
 
-import('./build/index.js').catch(err => {
-    console.error('Failed to load SvelteKit app:', err);
-    process.exit(1);
+import('./build/index.js').catch((err) => {
+	console.error('Failed to load SvelteKit app:', err);
+	process.exit(1);
 });

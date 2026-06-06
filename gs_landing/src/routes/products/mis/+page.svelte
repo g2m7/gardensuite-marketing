@@ -60,7 +60,7 @@
 <div class="flex min-h-screen w-full flex-col overflow-clip bg-white antialiased">
 	<main>
 		<ProductHero
-			badgeText="Daily Report"
+			badgeText="Tea Garden MIS Dashboard"
 			headline="Your tea garden report, in your hand."
 			paragraph="Owners and managers do not need to wait for phone calls and meetings. See daily plucking, production, labour, and factory numbers from anywhere."
 			{demoHref}
