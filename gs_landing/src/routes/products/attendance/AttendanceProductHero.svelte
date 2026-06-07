@@ -1,7 +1,8 @@
-<script lang="ts">
-	import Button from '$lib/components/Button.svelte';
-</script>
-
+<!--
+  Attendance product hero section.
+  Two-column layout: text left, phone mockup right with a dashboard image layered behind it.
+  No CTA button here - the page has CTAs in the hero video section above and the CTA band below.
+-->
 <section
   class="relative w-full border-b border-[#E4E4E7] bg-white px-6 py-20 md:px-12 md:py-28"
   aria-labelledby="product-hero-heading"
@@ -73,24 +74,34 @@
             Works fully offline
           </li>
         </ul>
-
-        <div class="mt-8">
-			<Button href="/#contact" label="Book Free Demo" variant="primary" showIcon />
-        </div>
       </div>
 
-      <!-- Phone mockup column -->
+      <!-- Phone mockup column with dashboard behind -->
       <div class="flex justify-center">
-        <div class="device-frame-phone w-[220px] md:w-[260px]">
-          <div class="device-frame-phone-inner aspect-[9/19.5]">
+        <div class="relative">
+          <!-- Dashboard image layered behind the phone -->
+          <div class="absolute -top-6 -left-16 z-0 w-[320px] opacity-30 md:-left-24 md:w-[400px]">
             <img
-              src="/screenshots/workflow_avd/00_home_entry_points.png"
-              alt="GardenSuite face app home screen"
-              width="1080"
-              height="2400"
+              src="/dashboard.png"
+              alt="GardenSuite dashboard preview"
+              width="960"
+              height="640"
               loading="lazy"
-              class="h-full w-full object-cover object-top"
+              class="h-auto w-full rounded-xl shadow-2xl"
             />
+          </div>
+
+          <div class="device-frame-phone relative z-10 w-[220px] md:w-[260px]">
+            <div class="device-frame-phone-inner aspect-[9/19.5]">
+              <img
+                src="/screenshots/workflow_avd/00_home_entry_points.png"
+                alt="GardenSuite face app home screen"
+                width="1080"
+                height="2400"
+                loading="lazy"
+                class="h-full w-full object-cover object-top"
+              />
+            </div>
           </div>
         </div>
       </div>
