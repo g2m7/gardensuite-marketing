@@ -7,11 +7,13 @@
 	import FaqSection from '$lib/components/product/FaqSection.svelte';
 	import SeoHead from '$lib/seo/SeoHead.svelte';
 	import { softwareSchema, breadcrumbSchema } from '$lib/seo/schemas';
+	import SolutionWorkflowSection from '$lib/components/product/SolutionWorkflowSection.svelte';
+	import Button from '$lib/components/Button.svelte';
+	import ButtonGroup from '$lib/components/ButtonGroup.svelte';
 
 	// Shared layout components
 	import ProductTrustRow from '$lib/components/product/ProductTrustRow.svelte';
 	import ProductProblemStrip from '$lib/components/product/ProductProblemStrip.svelte';
-	import ProductSolutionMockup from '$lib/components/product/ProductSolutionMockup.svelte';
 	import ProductRollout from '$lib/components/product/ProductRollout.svelte';
 
 
@@ -142,7 +144,7 @@
 
 			<!-- Content Container -->
 			<div class="relative z-10 mx-auto flex max-w-[1344px] flex-col items-center px-6 text-center md:px-12">
-				<span class="mb-6 inline-block rounded-full bg-[#1B5E3B] px-3.5 py-1 text-[11px] font-semibold tracking-[0.05em] text-white uppercase">
+				<span class="mb-6 inline-block text-[13px] font-semibold tracking-[0.08em] text-white/70 uppercase">
 					Attendance & Weighing
 				</span>
 				<h1 class="mx-auto max-w-4xl text-center text-[2.5rem] leading-[1.0] font-semibold tracking-[-0.04em] text-white sm:text-[3.25rem] md:text-[4.25rem] lg:text-[4.75rem]" style="text-wrap: balance">
@@ -152,15 +154,10 @@
 					Face attendance checks the worker. The Bluetooth hanging scale records leaf weight against the same worker. Both work offline at the garden and sync when internet returns.
 				</p>
 				
-				<div class="mt-8 flex w-full flex-col items-center justify-center gap-3 sm:w-auto sm:flex-row">
-					<a href={demoHref} class="flex w-full items-center justify-center gap-2 rounded-full bg-[#1B5E3B] px-6 py-4 shadow-[0_4px_20px_rgba(27,94,59,0.3)] transition duration-150 hover:bg-[#144723] focus:outline-none active:scale-[0.97] sm:w-auto">
-						<span class="text-sm font-semibold text-white">Book Free Demo</span>
-						<svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="shrink-0"><path d="M5 2.5l4.5 4.5L5 11.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-					</a>
-					<a href="#workflow" class="flex w-full items-center justify-center rounded-full border border-white/30 bg-white/15 px-6 py-4 shadow-[0_1px_3px_rgba(0,0,0,0.1)] transition duration-150 hover:bg-white/25 focus:outline-none active:scale-[0.97] sm:w-auto text-white">
-						<span class="text-sm font-semibold">See Workflow</span>
-					</a>
-				</div>
+				<ButtonGroup class="mt-8">
+					<Button href={demoHref} label="Book Free Demo" variant="primary" showIcon />
+					<Button href="#workflow" label="See Workflow" variant="secondary" />
+				</ButtonGroup>
 			</div>
 
 			<!-- Play/Pause Control -->
@@ -199,13 +196,28 @@
 			{problems}
 		/>
 
-		<ProductSolutionMockup
+		<SolutionWorkflowSection
 			tagText="The solution"
 			headline="One field entry feeds attendance, leaf weight, payroll, and reports."
 			paragraph="The supervisor does not need separate registers for attendance and weighing. The worker is verified, the kg is captured, and the record is ready for the office."
+			paragraph2="Built by Sarbani Associates for tea estates, installed on-site, and made to work even when internet is not available."
+			ctaText="Book Free Demo"
+			ctaHref="/#contact"
 			cardHeaderTag="Today"
 			cardHeaderTitle="Field capture"
-			steps={proofRows}
+			steps={[
+				{ label: 'Face check', meta: 'Worker identity verified before attendance' },
+				{ label: 'Weight capture', meta: 'Bluetooth scale sends kg to the same record' },
+				{ label: 'Offline save', meta: 'Field data is stored even without internet' },
+				{ label: 'Office sync', meta: 'Payroll and reports use the captured data' }
+			]}
+			features={[
+				{ title: 'Face verified', desc: 'Worker identity checked before attendance is recorded.' },
+				{ title: 'Weight linked', desc: 'Bluetooth scale sends kg to the same worker record.' },
+				{ title: 'Works offline', desc: 'Field data saved on the phone without internet.' },
+				{ title: 'Ready for payroll', desc: 'Attendance and weight flow straight to office reports.' }
+			]}
+			showBackgroundImages={true}
 		/>
 
 		<div id="workflow">

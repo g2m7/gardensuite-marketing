@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Button from '$lib/components/Button.svelte';
 </script>
 
 <section
@@ -74,12 +75,7 @@
         </ul>
 
         <div class="mt-8">
-          <a
-            href="/#contact"
-            class="inline-block rounded-full bg-[#1B5E3B] px-6 py-3.5 text-sm font-semibold text-white transition-opacity hover:opacity-90"
-          >
-            Book Free Demo
-          </a>
+			<Button href="/#contact" label="Book Free Demo" variant="primary" showIcon />
         </div>
       </div>
 

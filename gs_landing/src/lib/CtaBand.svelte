@@ -1,4 +1,7 @@
 <script lang="ts">
+	import Button from '$lib/components/Button.svelte';
+	import ButtonGroup from '$lib/components/ButtonGroup.svelte';
+
 	const demoHref = '/#contact';
 </script>
 
@@ -10,23 +13,9 @@
 	<p class="text-[15px] text-center leading-[1.5] max-w-[500px] text-[#A3A3A3]">
 		Book a free demo and see how GardenSuite can replace paperwork with a single tap. Free on-site setup, free training - no risk. Get running before next season starts.
 	</p>
-	<div class="flex flex-col sm:flex-row pt-4 gap-4 w-full sm:w-auto">
-		<a
-			href={demoHref}
-			class="flex items-center justify-center rounded-full py-3.5 px-8 bg-[#1B5E3B] hover:bg-[#144723] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#5CA84A] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0A0A] active:scale-[0.97]"
-		>
-			<span class="font-semibold text-sm text-white">
-				Book Free Demo
-			</span>
-		</a>
-		<a
-			href="/#contact"
-			class="flex items-center justify-center rounded-full py-3.5 px-8 border border-[#333333] hover:bg-[#1A1A1A] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#5CA84A] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0A0A] active:scale-[0.97]"
-		>
-			<span class="font-semibold text-sm text-white">
-				Email Us
-			</span>
-		</a>
-	</div>
+	<ButtonGroup class="pt-4">
+		<Button href={demoHref} label="Book Free Demo" variant="primary" size="lg" />
+		<Button href="/#contact" label="Email Us" variant="secondary-dark" size="lg" />
+	</ButtonGroup>
 	<p class="mt-3 text-[12px] text-[#666666]">Reply within 1 working day. Demo scheduling call by the Sarbani team.</p>
 </section>

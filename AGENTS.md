@@ -50,6 +50,9 @@ Jalpaiguri: Himalayan Agro Plantation
 - Sales funnel structure: Hook -> Problem -> Solution -> Proof -> Desire -> Differentiator -> Features -> Trust -> FAQ -> CTA
 - Parent company branding: Sarbani Associates in copyright footer and trust-building sections
 - NO background circles/boxes behind icons. Use color directly on the icon with a subtle drop-shadow only.
+- NO pill-shaped badges or kickers (rounded-full colored background labels). Use plain uppercase text kickers only (`text-[13px] font-semibold tracking-[0.08em] uppercase`).
+- NO glassmorphism (backdrop-blur, bg-white/opacity overlays, frosted glass effects). Use solid opaque backgrounds only.
+- NO colored glow effects (ring-1 ring-[color]/opacity, shadow with color, gradient glow divs behind elements). Use neutral shadows only (rgba black).
 
 ## Reference Docs (Read Before Making Changes)
 

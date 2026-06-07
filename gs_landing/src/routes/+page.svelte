@@ -5,6 +5,9 @@
 	import SeoHead from '$lib/seo/SeoHead.svelte';
 	import ComparisonTable from '$lib/components/product/ComparisonTable.svelte';
 	import FaqSection from '$lib/components/product/FaqSection.svelte';
+	import SolutionWorkflowSection from '$lib/components/product/SolutionWorkflowSection.svelte';
+	import Button from '$lib/components/Button.svelte';
+	import ButtonGroup from '$lib/components/ButtonGroup.svelte';
 	import {
 		organizationSchema,
 		websiteSchema,
@@ -356,37 +359,10 @@
 					system for your whole tea estate.
 				</p>
 
-				<div
-					class="hero-cta mt-8 flex w-full flex-col items-center justify-center gap-3 sm:w-auto sm:flex-row"
-				>
-					<a
-						href={demoHref}
-						class="flex w-full items-center justify-center gap-2 rounded-full bg-[#1B5E3B] px-6 py-4 shadow-[0_4px_20px_rgba(27,94,59,0.25)] transition duration-150 hover:bg-[#144723] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 active:scale-[0.97] sm:w-auto"
-					>
-						<span class="text-sm font-medium text-white">Book Free Demo</span>
-						<svg
-							width="14"
-							height="14"
-							viewBox="0 0 14 14"
-							fill="none"
-							class="shrink-0"
-							aria-hidden="true"
-							><path
-								d="M5 2.5l4.5 4.5L5 11.5"
-								stroke="white"
-								stroke-width="2"
-								stroke-linecap="round"
-								stroke-linejoin="round"
-							/></svg
-						>
-					</a>
-					<a
-						href="#products"
-						class="flex w-full items-center justify-center rounded-full border border-[#E4E4E7] bg-white px-6 py-4 shadow-[0_1px_3px_rgba(0,0,0,0.04)] transition duration-150 hover:border-[#D4D4D8] hover:bg-[#FAFAF7] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 active:scale-[0.97] sm:w-auto"
-					>
-						<span class="text-sm font-medium text-[#0A0A0A]">See How It Works</span>
-					</a>
-				</div>
+				<ButtonGroup class="hero-cta mt-8">
+					<Button href={demoHref} label="Book Free Demo" variant="primary" showIcon />
+					<Button href="#products" label="See How It Works" variant="secondary" />
+				</ButtonGroup>
 			</div>
 
 			<div
@@ -656,145 +632,30 @@
 		<!-- ═══════════════════════════════════════════════════════════ -->
 		<!-- SOLUTION BRIDGE                                            -->
 		<!-- ═══════════════════════════════════════════════════════════ -->
-		<section
-			id="solution"
-			class="reveal-on-scroll relative w-full scroll-mt-20 border-b border-[#E4E4E7] bg-white py-20 md:py-28"
-			aria-labelledby="solution-heading"
-		>
-			<div class="mx-auto max-w-[1344px] px-6 md:px-12">
-				<div class="grid items-center gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20">
-					<div class="max-w-xl">
-						<span
-							class="mb-4 inline-block text-[13px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase"
-							>The solution</span
-						>
-						<h2
-							id="solution-heading"
-							class="text-[28px] leading-[1.08] font-semibold tracking-[-0.04em] text-[#111111] md:text-[36px]"
-							style="text-wrap: balance"
-						>
-							One system for the whole tea garden.
-						</h2>
-						<p class="mt-6 text-[20px] leading-[1.6] tracking-[-0.01em] text-[#18181B]">
-							GardenSuite connects face attendance, smart weighing, payroll, factory, stores, and
-							daily MIS so your office does not repeat the same data in different registers.
-						</p>
-						<p class="mt-6 text-[16px] leading-[1.65] text-[#4B5563]">
-							Built by Sarbani Associates for tea estates, installed on-site, and made to work even
-							when internet is not available.
-						</p>
-						<a
-							href="#products"
-							class="mt-8 inline-flex h-12 items-center justify-center gap-2 rounded-xl border border-[#D4D4D8] bg-white px-5 text-[15px] font-semibold text-[#111111] shadow-[0_2px_10px_rgba(0,0,0,0.05)] transition hover:border-[#1B5E3B]/30 hover:bg-[#F8FAF8] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 active:scale-[0.98]"
-						>
-							See products
-							<svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-								<path
-									d="M6 3.5 10.5 8 6 12.5"
-									stroke="currentColor"
-									stroke-width="1.8"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-								/>
-							</svg>
-						</a>
-					</div>
-
-					<div
-						class="relative overflow-hidden rounded-2xl border border-[#0F2E0C]/15 bg-[#0B1712] p-4 shadow-[0_30px_90px_rgba(15,46,12,0.18)] md:p-5"
-					>
-						<picture>
-							<source srcset="/hero-sky.webp" type="image/webp" />
-							<img
-								src="/hero-sky.png"
-								alt=""
-								class="absolute inset-0 z-0 h-full w-full object-cover brightness-[1.15]"
-								width="1024"
-								height="1024"
-								loading="lazy"
-							/>
-						</picture>
-						<picture>
-							<source
-								srcset="/bg-960.webp 960w, /bg-1920.webp 1920w"
-								sizes="(min-width: 1024px) 640px, 90vw"
-								type="image/webp"
-							/>
-							<img
-								src="/bg.png"
-								alt=""
-								class="absolute inset-x-0 bottom-0 z-[1] h-[60%] w-full object-cover object-top brightness-[1.15]"
-								style="mask-image: linear-gradient(to bottom, transparent 0%, black 30%); -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 30%);"
-								width="960"
-								height="538"
-								loading="lazy"
-							/>
-						</picture>
-						<div
-							class="relative z-10 rounded-xl border border-white/15 bg-white/[0.04] p-6 backdrop-blur-sm md:p-8"
-						>
-							<div
-								class="mx-auto max-w-[420px] rounded-3xl border border-white/30 bg-white/95 p-5 shadow-[0_20px_60px_rgba(0,0,0,0.18)] md:p-6"
-							>
-								<div class="mb-5 flex items-center justify-between border-b border-[#E4E4E7] pb-4">
-									<div>
-										<div
-											class="text-[13px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase"
-										>
-											Today
-										</div>
-										<div class="mt-1 text-[22px] font-semibold tracking-[-0.02em] text-[#111111]">
-											Garden workflow
-										</div>
-									</div>
-									<div
-										class="flex h-10 w-10 items-center justify-center rounded-full bg-[#1B5E3B] text-white"
-									>
-										<svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-											<path
-												d="M4 10.5 8 14l8-8"
-												stroke="currentColor"
-												stroke-width="2"
-												stroke-linecap="round"
-												stroke-linejoin="round"
-											/>
-										</svg>
-									</div>
-								</div>
-								<div class="space-y-3">
-									{#each [{ label: 'Worker face verified', meta: 'Attendance locked' }, { label: 'Leaf weight captured', meta: 'Wireless scale synced' }, { label: 'Payroll updated', meta: 'Hazira and plucking ready' }, { label: 'Factory stock updated', meta: 'Green leaf to made tea' }, { label: 'MIS report synced', meta: 'Owner view from anywhere' }] as step, i}
-										<div
-											class="flex items-center gap-3 rounded-2xl border border-[#E4E4E7] bg-[#FAFAF7] px-4 py-3"
-										>
-											<div
-												class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#1B5E3B]/10 text-[12px] font-semibold text-[#1B5E3B]"
-											>
-												{i + 1}
-											</div>
-											<div class="min-w-0 flex-1">
-												<div class="truncate text-[15px] font-semibold text-[#111111]">
-													{step.label}
-												</div>
-												<div class="mt-0.5 truncate text-[13px] text-[#4B5563]">{step.meta}</div>
-											</div>
-										</div>
-									{/each}
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="mt-14 grid gap-8 border-t border-[#E4E4E7] pt-10 sm:grid-cols-2 lg:grid-cols-4">
-					{#each [{ title: 'Offline first', desc: 'Works at the garden without internet.' }, { title: 'Connected data', desc: 'Attendance, weight, payroll, factory, and stores in one flow.' }, { title: 'Less leakage', desc: 'Reduces proxy attendance and inflated weights.' }, { title: 'Sarbani support', desc: 'Setup and training by the local team.' }] as point}
-						<div>
-							<h3 class="text-[17px] font-semibold text-[#111111]">{point.title}</h3>
-							<p class="mt-2 text-[15px] leading-[1.6] text-[#4B5563]">{point.desc}</p>
-						</div>
-					{/each}
-				</div>
-			</div>
-		</section>
+		<SolutionWorkflowSection
+			tagText="The solution"
+			headline="One system for the whole tea garden."
+			paragraph="GardenSuite connects face attendance, smart weighing, payroll, factory, stores, and daily MIS so your office does not repeat the same data in different registers."
+			paragraph2="Built by Sarbani Associates for tea estates, installed on-site, and made to work even when internet is not available."
+			ctaText="See products"
+			ctaHref="#products"
+			cardHeaderTag="Today"
+			cardHeaderTitle="Garden workflow"
+			steps={[
+				{ label: 'Worker face verified', meta: 'Attendance locked' },
+				{ label: 'Leaf weight captured', meta: 'Wireless scale synced' },
+				{ label: 'Payroll updated', meta: 'Hazira and plucking ready' },
+				{ label: 'Factory stock updated', meta: 'Green leaf to made tea' },
+				{ label: 'MIS report synced', meta: 'Owner view from anywhere' }
+			]}
+			features={[
+				{ title: 'Offline first', desc: 'Works at the garden without internet.' },
+				{ title: 'Connected data', desc: 'Attendance, weight, payroll, factory, and stores in one flow.' },
+				{ title: 'Less leakage', desc: 'Reduces proxy attendance and inflated weights.' },
+				{ title: 'Sarbani support', desc: 'Setup and training by the local team.' }
+			]}
+			showBackgroundImages={true}
+		/>
 
 		<!-- ═══════════════════════════════════════════════════════════ -->
 		<!-- PRODUCT GRID                                               -->

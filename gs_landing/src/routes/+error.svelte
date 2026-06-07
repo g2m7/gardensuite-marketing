@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import GsLogoAnimation from '$lib/components/GsLogoAnimation.svelte';
+	import Button from '$lib/components/Button.svelte';
+	import ButtonGroup from '$lib/components/ButtonGroup.svelte';
 
 	let status = $derived($page.status);
 	let message = $derived($page.error?.message || 'Something went wrong');
@@ -146,45 +148,15 @@
 			{description}
 		</p>
 
-		<!-- CTAs -->
-		<div
-			class="flex flex-col items-center gap-3 sm:flex-row transition-all delay-[250ms] duration-700 ease-out {mounted
-				? 'translate-y-0 opacity-100'
-				: 'translate-y-6 opacity-0'}"
-		>
-			<!-- Primary: Go Home -->
-			<a
-				href="/"
-				class="group inline-flex items-center justify-center rounded-full bg-[#1B5E3B] px-6 py-3.5 shadow-[0_4px_20px_rgba(27,94,59,0.25)] transition-all duration-150 hover:bg-[#144723] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 active:scale-[0.97]"
+			<!-- CTAs -->
+			<ButtonGroup
+				class="transition-all delay-[250ms] duration-700 ease-out {mounted
+					? 'translate-y-0 opacity-100'
+					: 'translate-y-6 opacity-0'}"
 			>
-				<span class="text-[14px] leading-none font-medium text-white">Go to Homepage</span>
-				<svg
-					width="14"
-					height="14"
-					viewBox="0 0 14 14"
-					fill="none"
-					class="ml-2 transition-transform duration-200 group-hover:translate-x-0.5"
-					aria-hidden="true"
-				>
-					<path
-						d="M5.25 3.5L8.75 7L5.25 10.5"
-						stroke="currentColor"
-						stroke-width="2"
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						class="text-white"
-					/>
-				</svg>
-			</a>
-
-			<!-- Secondary: Contact -->
-			<a
-				href="/#contact"
-				class="inline-flex items-center justify-center rounded-full border border-[#E4E4E7] bg-white px-6 py-3.5 shadow-[0_1px_3px_rgba(0,0,0,0.04)] transition-all duration-150 hover:border-[#D4D4D8] hover:bg-[#FAFAF7] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 active:scale-[0.97]"
-			>
-				<span class="text-[14px] leading-none font-medium text-[#0A0A0A]">Contact Support</span>
-			</a>
-		</div>
+				<Button href="/" label="Go to Homepage" variant="primary" showIcon size="lg" />
+				<Button href="/#contact" label="Contact Support" variant="secondary" size="lg" />
+			</ButtonGroup>
 
 		<!-- Server message (dev detail, subtle) -->
 		{#if message && message !== heading}

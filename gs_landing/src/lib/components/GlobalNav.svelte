@@ -1,15 +1,17 @@
 <script lang="ts">
 	import GsLogoAnimation from '$lib/components/GsLogoAnimation.svelte';
+	import Button from '$lib/components/Button.svelte';
 
 	let { scrollAnimated = true, darkHero = false } = $props();
-
-	// When darkHero is true and nav bg is still transparent, use light text
-	// But NOT when mobile nav sheet is open (it has a white bg)
-	let lightText = $derived(darkHero && navProgress < 0.5 && !mobileNavOpen);
 
 	let mobileNavOpen = $state(false);
 	let productsOpen = $state(false);
 	let mobileProductsOpen = $state(false);
+	let navProgress = $state(0);
+
+	// When darkHero is true and nav bg is still transparent, use light text
+	// But NOT when mobile nav sheet is open (it has a white bg)
+	let lightText = $derived(darkHero && navProgress < 0.5 && !mobileNavOpen);
 
 	const demoHref = '/#contact';
 
@@ -37,8 +39,6 @@
 			closeProducts();
 		}
 	}
-
-	let navProgress = $state(0);
 
 	$effect(() => {
 		const handler = () => {
@@ -175,15 +175,14 @@
 					onclick={toggleMobileNav}>Contact</a
 				>
 			</nav>
-			<a
+			<Button
 				href={demoHref}
-				class="mt-6 flex h-12 w-full items-center justify-center rounded-full bg-[#1B5E3B] shadow-[0_4px_20px_rgba(27,94,59,0.25)] transition hover:bg-[#144723] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 active:scale-[0.97]"
+				label="Book Free Demo"
+				variant="primary"
+				size="md"
+				class="mt-6 w-full"
 				onclick={toggleMobileNav}
-			>
-				<span class="text-[15px] leading-none font-semibold text-white"
-					>Book Free Demo</span
-				>
-			</a>
+			/>
 		</div>
 	{/if}
 </div>
@@ -339,14 +338,13 @@
 			class="mr-4 hidden h-10 items-center rounded-md px-2 text-[14px] font-semibold transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 md:inline-flex {lightText ? 'text-white/90 hover:text-white' : 'text-[#18181B] hover:text-[#0A0A0A]'}"
 			>Contact</a
 		>
-		<a
+		<Button
 			href={demoHref}
-			class="hidden h-10 items-center justify-center rounded-full bg-[#1B5E3B] px-6 shadow-[0_2px_8px_rgba(27,94,59,0.25)] transition hover:bg-[#144723] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 active:scale-[0.97] md:flex"
-		>
-			<span class="text-[14px] leading-none font-semibold text-white"
-				>Book Free Demo</span
-			>
-		</a>
+			label="Book Free Demo"
+			variant="primary"
+			size="sm"
+			class="hidden md:flex"
+		/>
 	</div>
 {/snippet}
 
