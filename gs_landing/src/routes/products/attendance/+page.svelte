@@ -1,7 +1,10 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { initScrollReveal } from '$lib/scroll-reveal';
-	import AppShowcase from './AppShowcase.svelte';
+	import AttendanceProductHero from './AttendanceProductHero.svelte';
+	import ScaleWorkflow from './ScaleWorkflow.svelte';
+	import ComparisonTable from '$lib/components/product/ComparisonTable.svelte';
+	import FaqSection from '$lib/components/product/FaqSection.svelte';
 	import SeoHead from '$lib/seo/SeoHead.svelte';
 	import { softwareSchema, breadcrumbSchema } from '$lib/seo/schemas';
 
@@ -68,6 +71,33 @@
 		},
 		{ step: '4', title: 'Support', desc: 'The Sarbani team supports your staff until the process is steady.' }
 	];
+
+	const attendanceFaqs = [
+		{
+			q: 'Does face attendance work without internet?',
+			a: 'Yes. The app stores face data and attendance records on the phone. Everything syncs to the office when network is available.'
+		},
+		{
+			q: 'What phone does the supervisor need?',
+			a: 'Any Android phone with a front camera. The app works on mid-range phones commonly available in the market.'
+		},
+		{
+			q: 'How does the Bluetooth scale connect?',
+			a: 'The hanging scale pairs once via Bluetooth. After that, it sends the leaf weight directly to the active worker record on the phone.'
+		},
+		{
+			q: 'Can workers be registered in the field?',
+			a: 'Yes. New workers can be enrolled directly in the garden by capturing face photos from different angles. No office computer needed.'
+		},
+		{
+			q: 'How does attendance data reach payroll?',
+			a: 'Once synced, attendance and leaf weight records flow directly into the GardenSuite payroll module. No re-entry from paper registers.'
+		},
+		{
+			q: 'What if a worker\'s face is not recognized?',
+			a: 'The app shows the closest match with a confidence score. The supervisor can retry or manually confirm. Poor lighting or angle changes can be handled by re-enrolling photos.'
+		}
+	];
 </script>
 
 <SeoHead
@@ -112,7 +142,7 @@
 
 			<!-- Content Container -->
 			<div class="relative z-10 mx-auto flex max-w-[1344px] flex-col items-center px-6 text-center md:px-12">
-				<span class="mb-6 inline-block rounded-full bg-white/10 border border-white/20 px-3.5 py-1 text-[11px] font-semibold tracking-[0.05em] text-white uppercase backdrop-blur">
+				<span class="mb-6 inline-block rounded-full bg-[#1B5E3B] px-3.5 py-1 text-[11px] font-semibold tracking-[0.05em] text-white uppercase">
 					Attendance & Weighing
 				</span>
 				<h1 class="mx-auto max-w-4xl text-center text-[2.5rem] leading-[1.0] font-semibold tracking-[-0.04em] text-white sm:text-[3.25rem] md:text-[4.25rem] lg:text-[4.75rem]" style="text-wrap: balance">
@@ -127,7 +157,7 @@
 						<span class="text-sm font-semibold text-white">Book Free Demo</span>
 						<svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="shrink-0"><path d="M5 2.5l4.5 4.5L5 11.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
 					</a>
-					<a href="#workflow" class="flex w-full items-center justify-center rounded-full border border-white/20 bg-white/10 px-6 py-4 shadow-[0_1px_3px_rgba(0,0,0,0.1)] transition duration-150 hover:bg-white/20 hover:border-white/30 focus:outline-none active:scale-[0.97] sm:w-auto text-white backdrop-blur">
+					<a href="#workflow" class="flex w-full items-center justify-center rounded-full border border-white/30 bg-white/15 px-6 py-4 shadow-[0_1px_3px_rgba(0,0,0,0.1)] transition duration-150 hover:bg-white/25 focus:outline-none active:scale-[0.97] sm:w-auto text-white">
 						<span class="text-sm font-semibold">See Workflow</span>
 					</a>
 				</div>
@@ -136,7 +166,7 @@
 			<!-- Play/Pause Control -->
 			<button
 				onclick={togglePlay}
-				class="absolute bottom-6 right-6 z-20 flex h-10 w-10 items-center justify-center rounded-full bg-white/10 border border-white/20 text-white shadow-sm hover:bg-white/20 active:scale-95 transition-all backdrop-blur focus:outline-none"
+				class="absolute bottom-6 right-6 z-20 flex h-10 w-10 items-center justify-center rounded-full bg-white/15 border border-white/30 text-white shadow-sm hover:bg-white/25 active:scale-95 transition-all focus:outline-none"
 				aria-label={isPlaying ? "Pause background video" : "Play background video"}
 			>
 				{#if isPlaying}
@@ -151,13 +181,15 @@
 			</button>
 		</section>
 
+		<AttendanceProductHero />
+
 		<ProductTrustRow 
 			stats={[
-				{ value: '20+', label: 'Tea Estates' },
-				{ value: '7', label: 'Regions' },
-				{ value: 'Since 2000', label: 'In Tea Gardens' }
+				{ value: 'Android', label: 'Field App' },
+				{ value: 'Offline', label: 'Works Without Internet' },
+				{ value: 'Since 2022', label: 'In Tea Gardens' }
 			]}
-			showOfflineBadge={true}
+			showOfflineBadge={false}
 		/>
 
 		<ProductProblemStrip
@@ -177,14 +209,32 @@
 		/>
 
 		<div id="workflow">
-			<AppShowcase />
+			<ScaleWorkflow />
 		</div>
+
+		<ComparisonTable
+			kicker="Why switch"
+			headline="Paper registers vs GardenSuite"
+			paragraph="The daily field workflow changes when attendance and leaf weight are captured digitally instead of paper."
+			features={['Worker identity check', 'Leaf weight recording', 'Proxy attendance risk', 'Data reaches office', 'Offline capability', 'Payroll preparation']}
+			paperLabel="Paper"
+			paperResults={[false, false, false, false, true, false]}
+			gsResults={[true, true, true, true, true, true]}
+		/>
 
 		<ProductRollout
 			tagText="Rollout"
 			headline="Sarbani Associates sets it up with your staff."
 			paragraph="GardenSuite is not handed over as a self-service app. The Sarbani team visits, installs, trains, and supports the garden."
 			steps={rollout}
+		/>
+
+		<FaqSection
+			heading="FAQs"
+			subheading="About the face app and smart scale"
+			contactHref="/#contact"
+			categoryLabel="Face Attendance & Weighing"
+			faqs={attendanceFaqs}
 		/>
 	</main>
 </div>

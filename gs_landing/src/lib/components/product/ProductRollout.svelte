@@ -35,23 +35,22 @@
 				{paragraph}
 			</p>
 		</div>
-		<div class="relative">
-			<div class="absolute top-8 left-12 hidden h-[calc(100%-80px)] w-px border-l border-dashed border-[#C8DDB8] md:block"></div>
-			<div class="grid gap-6 md:gap-8">
-				{#each steps as item}
-					<div class="relative flex flex-col gap-4 md:flex-row md:gap-6">
-						<div class="flex h-24 w-24 shrink-0 items-center justify-center rounded-full border border-white/60 bg-[#DDEFE4] text-2xl font-bold text-[#1B5E3B] shadow-sm">
-							{item.step}
-						</div>
-						<div class="flex-1 rounded-[20px] border border-[#E4E4E7] bg-white p-6 shadow-card hover:shadow-card-hover transition-all duration-300">
-							<h3 class="text-[18px] font-semibold tracking-[-0.01em] text-[#111111]">
-								{item.title}
-							</h3>
-							<p class="mt-2 text-[15px] leading-[1.6] text-[#52525B]">{item.desc}</p>
-						</div>
+
+		<!-- Steps as clean rows with dividers, no cards -->
+		<div class="grid gap-0">
+			{#each steps as item, i}
+				<div class="flex items-start gap-5 py-7 md:gap-8 md:py-9 {i < steps.length - 1 ? 'border-b border-[#D6D3CB]' : ''}">
+					<span class="mt-0.5 shrink-0 text-[28px] font-semibold tracking-[-0.03em] text-[#1B5E3B]/40 md:text-[32px] md:w-12 text-right">
+						{item.step}
+					</span>
+					<div>
+						<h3 class="text-[18px] font-semibold tracking-[-0.01em] text-[#111111]">
+							{item.title}
+						</h3>
+						<p class="mt-1.5 max-w-[520px] text-[15px] leading-[1.6] text-[#52525B]">{item.desc}</p>
 					</div>
-				{/each}
-			</div>
+				</div>
+			{/each}
 		</div>
 	</div>
 </section>

@@ -1,13 +1,15 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 
-	let workflowSection: HTMLElement;
+	let sectionRef: HTMLElement | null = $state(null);
+	let activeStep = $state(0);
+	let isMobile = $state(true);
 
 	const steps = [
 		{
 			step: '1',
 			title: 'Open the field app',
-			desc: 'The supervisor starts from the GardenSuite app home and chooses the harvest workflow for field work.',
+			desc: 'The supervisor starts from the GardenSuite app home and chooses the harvest workflow for the day.',
 			image: '/screenshots/workflow_avd/00_home_entry_points.png',
 			alt: 'GardenSuite app home screen with harvest workflow entry points',
 			kicker: 'Harvest workflow'
@@ -26,12 +28,12 @@
 			desc: 'Each worker record is saved in the active session, with leaf weight and daily totals visible to the supervisor.',
 			image: '/screenshots/workflow_avd/05_harvest_active_records.png',
 			alt: 'GardenSuite active harvest session showing saved worker leaf weight records',
-			kicker: 'Active session records'
+			kicker: 'Active session'
 		},
 		{
 			step: '4',
 			title: 'Review the harvest list',
-			desc: 'The supervisor can open the reports area and check the day’s harvest sessions before sending data to the office.',
+			desc: 'The supervisor can open the reports area and check the day\'s harvest sessions before sending data to the office.',
 			image: '/screenshots/workflow_avd/18_reports_harvest_list.png',
 			alt: 'GardenSuite reports screen showing harvest session list',
 			kicker: 'Daily harvest list'
@@ -55,178 +57,204 @@
 	];
 
 	onMount(() => {
-		let cleanup = () => {};
-
-		const setupAnimation = async () => {
-			if (!workflowSection) return;
-
-			const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-			if (prefersReduced) {
-				workflowSection.style.setProperty('--workflow-progress', '1');
-				workflowSection.classList.add('workflow-ready');
-				return;
-			}
-
-			const { gsap } = await import('gsap');
-			const { ScrollTrigger } = await import('gsap/ScrollTrigger');
-			gsap.registerPlugin(ScrollTrigger);
-
-			const ctx = gsap.context(() => {
-				gsap.set(workflowSection, { '--workflow-progress': 0 });
-
-				workflowSection.classList.add('workflow-ready');
-
-				gsap.to(workflowSection, {
-					'--workflow-progress': 1,
-					ease: 'none',
-					scrollTrigger: {
-						trigger: '.workflow-timeline',
-						start: 'top 58%',
-						end: 'bottom 58%',
-						scrub: 0.65
-					}
-				});
-			}, workflowSection);
-
-			cleanup = () => ctx.revert();
+		const checkMobile = () => {
+			isMobile = window.innerWidth < 1024;
 		};
 
-		setupAnimation();
+		const handleScroll = () => {
+			if (isMobile || !sectionRef) return;
+			const rect = sectionRef.getBoundingClientRect();
+			const totalScroll = rect.height - window.innerHeight;
+			if (totalScroll <= 0) return;
 
-		return () => cleanup();
+			const progress = Math.min(Math.max(-rect.top / totalScroll, 0), 1);
+			const index = Math.min(Math.floor(progress * steps.length), steps.length - 1);
+			activeStep = index;
+		};
+
+		window.addEventListener('resize', checkMobile);
+		window.addEventListener('scroll', handleScroll, { passive: true });
+
+		checkMobile();
+		handleScroll();
+
+		return () => {
+			window.removeEventListener('resize', checkMobile);
+			window.removeEventListener('scroll', handleScroll);
+		};
 	});
+
+	const handleStepClick = (index: number) => {
+		if (isMobile) {
+			activeStep = index;
+			return;
+		}
+		if (!sectionRef) return;
+		const rect = sectionRef.getBoundingClientRect();
+		const containerScrollTop = window.scrollY + rect.top;
+		const totalScroll = rect.height - window.innerHeight;
+		const targetScrollY = containerScrollTop + ((index + 0.3) / steps.length) * totalScroll;
+		window.scrollTo({ top: targetScrollY, behavior: 'smooth' });
+	};
 </script>
 
 <section
-	id="workflow"
-	bind:this={workflowSection}
-	class="relative w-full scroll-mt-24 overflow-hidden border-b border-[#E4E4E7] bg-white px-6 py-20 md:scroll-mt-28 md:px-12 md:py-28"
+	bind:this={sectionRef}
+	class="relative w-full border-b border-[#E4E4E7] bg-white lg:h-[420vh]"
 	aria-labelledby="workflow-heading"
 >
-	<div
-		class="workflow-panel mx-auto max-w-[1240px]"
-	>
-		<div class="workflow-intro mx-auto max-w-3xl text-center">
-			<span
-				class="mb-4 inline-flex text-[13px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase"
-				>Process Flow</span
-			>
-			<h2
-				id="workflow-heading"
-				class="text-[28px] leading-[1.08] font-semibold tracking-[-0.04em] text-[#111111] md:text-[36px]"
-				style="text-wrap: balance"
-			>
-				From field app to office sync in six steps.
-			</h2>
-			<p
-				class="mx-auto mt-5 max-w-[640px] text-[16px] leading-[1.65] text-[#374151]"
-			>
-				The field flow stays simple for supervisors. Start the harvest session, save worker
-				records, review the day’s work, and sync the same data to the office.
-			</p>
-		</div>
+	<!-- Sticky viewport: pins on desktop, flows on mobile -->
+	<div class="relative w-full px-6 py-20 md:px-12 md:py-28 lg:sticky lg:top-0 lg:flex lg:h-screen lg:items-center lg:overflow-hidden lg:py-0">
+		<div class="mx-auto w-full max-w-[1344px]">
 
-		<div class="workflow-timeline relative mt-14 md:mt-18">
-			<div
-				class="absolute top-0 bottom-0 left-4 w-px bg-[#DDEFE4] md:left-1/2 md:-translate-x-1/2"
-				aria-hidden="true"
-			></div>
-			<div
-				class="workflow-line-fill absolute top-0 bottom-0 left-4 w-px origin-top bg-[#1B5E3B] md:left-1/2 md:-translate-x-1/2"
-				aria-hidden="true"
-			></div>
+			<!-- Section header -->
+			<div class="mb-12 max-w-[560px] lg:mb-0 lg:hidden">
+				<span class="mb-3 inline-block text-[13px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase lg:mb-4">
+					Process Flow
+				</span>
+				<h2
+					id="workflow-heading"
+					class="text-[28px] leading-[1.08] font-semibold tracking-[-0.04em] text-[#111111] md:text-[36px]"
+					style="text-wrap: balance"
+				>
+					From field app to office sync in six steps.
+				</h2>
+				<p class="mt-4 text-[16px] leading-[1.65] text-[#374151] md:text-[17px]">
+					The field flow stays simple for supervisors. Start the harvest session, save worker records, review the day's work, and sync to the office.
+				</p>
+			</div>
 
-			<div class="grid gap-10 md:gap-0">
-				{#each steps as item, i}
-					{@const visualFirst = i % 2 === 1}
-					<article
-						class="workflow-step relative grid gap-5 pl-12 md:grid-cols-[1fr_72px_1fr] md:items-center md:gap-8 md:py-7 md:pl-0"
-						data-visual-first={visualFirst}
-					>
-						<div
-							class="workflow-dot absolute top-2 left-4 z-10 h-4 w-4 -translate-x-1/2 rounded-full border-4 border-white bg-[#1B5E3B] shadow-[0_0_0_1px_rgba(27,94,59,0.22)] md:top-1/2 md:left-1/2 md:-translate-y-1/2"
+			<!-- Main grid: steps left, phone right -->
+			<div class="grid items-center gap-10 lg:grid-cols-[1fr_1.1fr] lg:gap-20">
+				<!-- Left: scrollable step list -->
+				<div>
+					<!-- Desktop-only header above steps -->
+					<div class="mb-10 hidden max-w-[480px] lg:block">
+						<span class="mb-3 inline-block text-[13px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase lg:mb-4">
+							Process Flow
+						</span>
+						<p
+							class="text-[34px] leading-[1.08] font-semibold tracking-[-0.04em] text-[#111111] md:text-[44px]"
+							style="text-wrap: balance"
 							aria-hidden="true"
 						>
-							<span
-								class="workflow-dot-ring absolute inset-[-8px] rounded-full border border-[#1B5E3B]/20"
-							></span>
-						</div>
+							From field app to office sync in six steps.
+						</p>
+						<p class="mt-4 text-[16px] leading-[1.65] text-[#374151] md:text-[17px]">
+							The field flow stays simple for supervisors. Start the harvest session, save worker records, review the day's work, and sync to the office.
+						</p>
+					</div>
 
-						<div class="workflow-copy {visualFirst ? 'md:order-3' : 'md:order-1'}">
-							<div class="max-w-[360px] {visualFirst ? 'md:ml-0' : 'md:ml-auto'}">
-								<span
-									class="inline-flex rounded-full border border-[#1B5E3B]/15 bg-[#1B5E3B]/5 px-3 py-1 text-[11px] font-semibold tracking-[0.04em] text-[#1B5E3B]"
-									>Step {item.step}</span
-								>
-								<h3
-									class="mt-4 text-[22px] leading-[1.16] font-semibold tracking-[-0.02em] text-[#111111] md:text-[26px]"
-								>
-									{item.title}
-								</h3>
-								<p class="mt-3 text-[15px] leading-[1.65] text-[#4B5563]">
-									{item.desc}
-								</p>
-							</div>
-						</div>
-
-						<div class="hidden md:order-2 md:block" aria-hidden="true"></div>
-
-						<div class={visualFirst ? 'md:order-1' : 'md:order-3'}>
+					<div class="grid gap-3">
+						{#each steps as item, i}
+							<!-- svelte-ignore a11y_click_events_have_key_events -->
 							<div
-								class="workflow-card relative max-w-[380px] overflow-hidden rounded-xl border border-[#E4E4E7] bg-white shadow-card transition-shadow duration-300 hover:shadow-card-hover {visualFirst
-									? 'md:ml-auto'
-									: 'md:ml-0'}"
+								role="button"
+								tabindex="0"
+								class="group cursor-pointer rounded-2xl border p-5 text-left transition-all duration-500 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]
+								{activeStep === i
+									? 'bg-white border-[#E4E4E7] shadow-[0_2px_12px_rgba(0,0,0,0.06)]'
+									: 'bg-transparent border-transparent hover:bg-[#FAFAF7] hover:border-[#E4E4E7]/60'}"
+								onclick={() => handleStepClick(i)}
+								onkeydown={(e) => {
+									if (e.key === 'Enter' || e.key === ' ') {
+										handleStepClick(i);
+										e.preventDefault();
+									}
+								}}
 							>
-								<div
-									class="flex items-center justify-between border-b border-[#E4E4E7] bg-[#FAFAF7] px-4 py-3"
-								>
-									<span class="text-[12px] font-semibold tracking-[0.04em] text-[#1B5E3B]">
-										{item.kicker}
+								<div class="flex items-center gap-4">
+									<!-- Step number pill -->
+									<span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-[13px] font-semibold transition-colors duration-300
+										{activeStep === i
+											? 'bg-[#1B5E3B] text-white'
+											: 'bg-[#F1F1F1] text-[#71717A]'}">
+										{item.step}
 									</span>
-									<span class="h-2 w-2 rounded-full bg-[#1B5E3B]"></span>
+									<h3 class="text-[16px] font-semibold tracking-[-0.02em] transition-colors duration-300 md:text-[17px]
+										{activeStep === i ? 'text-[#111111]' : 'text-[#71717A]'}">
+										{item.title}
+									</h3>
 								</div>
-								<div
-									class="workflow-card-panel flex min-h-[210px] items-center justify-center bg-[#F8F7F3] p-5 md:min-h-[250px]"
-								>
-									<div class="workflow-phone device-frame-phone w-[150px] md:w-[178px]">
-										<div class="device-frame-phone-inner aspect-[9/19.5]">
-											<img
-												src={item.image}
-												alt={item.alt}
-												width="412"
-												height="915"
-												class="h-full w-full object-cover object-top"
-												loading="lazy"
-											/>
+
+								{#if activeStep === i}
+									<div class="mt-3 animate-fade-in pl-12">
+										<p class="text-[14px] leading-[1.6] text-[#4B5563]">{item.desc}</p>
+									</div>
+
+									<!-- Mobile: show screenshot inline -->
+									<div class="mt-5 flex justify-center lg:hidden">
+										<div class="device-frame-phone w-[180px]">
+											<div class="device-frame-phone-inner aspect-[9/19.5]">
+												<img
+													src={item.image}
+													alt={item.alt}
+													width="412"
+													height="915"
+													class="h-full w-full object-cover object-top"
+													loading="lazy"
+												/>
+											</div>
 										</div>
 									</div>
+								{/if}
+							</div>
+						{/each}
+					</div>
+				</div>
+
+				<!-- Right: sticky phone mockup (desktop only) -->
+				<div class="hidden lg:flex lg:items-center lg:justify-center">
+					<div class="relative">
+
+						<div class="relative">
+							{#each steps as item, i}
+								<div
+									class="device-frame-phone w-[260px] transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] xl:w-[280px]
+									{activeStep === i
+										? 'opacity-100 scale-100'
+										: 'opacity-0 scale-95 absolute inset-0 pointer-events-none'}"
+								>
+									<div class="device-frame-phone-inner aspect-[9/19.5]">
+										<img
+											src={item.image}
+											alt={item.alt}
+											width="412"
+											height="915"
+											class="h-full w-full object-cover object-top"
+											loading={i === 0 ? 'eager' : 'lazy'}
+										/>
+									</div>
 								</div>
+							{/each}
+
+							<!-- Kicker label below phone -->
+							<div class="mt-5 text-center">
+								<span class="inline-flex rounded-full border border-[#E4E4E7] bg-[#FAFAF7] px-3 py-1 text-[11px] font-semibold tracking-[0.04em] text-[#374151] transition-all duration-500">
+									{steps[activeStep].kicker}
+								</span>
 							</div>
 						</div>
-					</article>
-				{/each}
+					</div>
+				</div>
 			</div>
-		</div>
-
-		<div
-			class="workflow-note mx-auto mt-12 max-w-[720px] border-t border-[#E4E4E7] pt-7 text-center"
-		>
-			<p class="text-[15px] leading-[1.65] text-[#4B5563]">
-				The same saved records help the office use leaf weight, attendance, payroll, and daily
-				reports without repeated entry from paper registers.
-			</p>
 		</div>
 	</div>
 </section>
 
 <style>
-	.workflow-line-fill {
-		transform: scaleY(var(--workflow-progress, 0));
+	@keyframes fade-in {
+		0% {
+			opacity: 0;
+			transform: translateY(4px);
+		}
+		100% {
+			opacity: 1;
+			transform: translateY(0);
+		}
 	}
 
-	@media (prefers-reduced-motion: reduce) {
-		.workflow-line-fill {
-			transform: scaleY(1);
-		}
+	.animate-fade-in {
+		animation: fade-in 0.3s ease-out forwards;
 	}
 </style>

@@ -43,51 +43,6 @@
 			img: "/screenshots/10_harvest_result_scale_connected_save.png",
 			alt: "App result screen showing net leaf weight and save option",
 			cropPosition: "bottom"
-		},
-		{
-			id: "punch",
-			label: "Kamjari & Punches",
-			title: "Kamjari & Punches",
-			subtitle: "Clock-in & clock-out for general work",
-			desc: "For general garden work and tasks that do not require weighing (kamjari), supervisors can record simple clock-in and clock-out logs with face verification.",
-			bulletPoints: [
-				"Records the specific garden section and task work code",
-				"Stamps precise local timestamp on clock-in and clock-out",
-				"Uses the same fast face checks to confirm worker identity"
-			],
-			img: "/screenshots/16_punch_result_clock_in.png",
-			alt: "Punch success screen showing clock-in saved offline",
-			cropPosition: "bottom"
-		},
-		{
-			id: "enrollment",
-			label: "Field Enrollment",
-			title: "Field Enrollment",
-			subtitle: "Register workers directly in the field",
-			desc: "No office computer needed. Register new workers or update face records right in the garden. Capture photos from different angles to set up the profile.",
-			bulletPoints: [
-				"Search or select the worker profile from the active garden list",
-				"3-photo guide (front, left, right) to capture a clear face record",
-				"Creates a secure face signature stored directly on the phone"
-			],
-			img: "/screenshots/26_register_review.png",
-			alt: "Review screen showing captured face angles before saving",
-			cropPosition: "top"
-		},
-		{
-			id: "reports",
-			label: "Reports & Cloud Sync",
-			title: "Reports & Cloud Sync",
-			subtitle: "Track progress and sync with office",
-			desc: "Supervisors can review leaf weight records, search worker history, and check daily plucking totals in the field. Send data to the main office in one tap.",
-			bulletPoints: [
-				"Review daily session list, totals, and net leaf weight collected",
-				"Save logs to Excel sheets formatted for your garden office",
-				"Sync all saved records to the online dashboard when network is found"
-			],
-			img: "/screenshots/18_reports_harvest_list.png",
-			alt: "App report screen showing active harvest session list",
-			cropPosition: "top"
 		}
 	];
 
@@ -149,7 +104,7 @@
 
 <section
 	bind:this={containerRef}
-	class="relative w-full bg-gradient-to-b from-[#F8FAF8] to-white border-b border-[#E4E4E7] lg:h-[450vh]"
+	class="relative w-full bg-gradient-to-b from-[#F8FAF8] to-white border-b border-[#E4E4E7] lg:h-[250vh]"
 	aria-labelledby="showcase-heading"
 >
 	<!-- Sticky viewport panel: acts as sticky on desktop, static flow on mobile -->

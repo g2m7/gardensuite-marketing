@@ -3,6 +3,8 @@
 	import { fly } from 'svelte/transition';
 	import ModulePreview from './ModulePreview.svelte';
 	import SeoHead from '$lib/seo/SeoHead.svelte';
+	import ComparisonTable from '$lib/components/product/ComparisonTable.svelte';
+	import FaqSection from '$lib/components/product/FaqSection.svelte';
 	import {
 		organizationSchema,
 		websiteSchema,
@@ -126,11 +128,6 @@
 		ready = true;
 	});
 
-	// ─── FAQ Accordion ───
-	let openFaq = $state<number | null>(null);
-	function toggleFaq(i: number) {
-		openFaq = openFaq === i ? null : i;
-	}
 
 	// ─── Contact Form ───
 	const WA_NUMBER = '919734101330';
@@ -1007,114 +1004,14 @@
 			</div>
 		</section>
 
-		<!-- ═══════════════════════════════════════════════════════════ -->
-		<!-- GS vs PAPER - FULL WIDTH COMPARISON (Tailark Comparator)   -->
-		<!-- ═══════════════════════════════════════════════════════════ -->
-		<section
-			class="reveal-on-scroll relative w-full overflow-hidden bg-[#141A16] py-16 md:py-24"
-			aria-labelledby="compare-heading"
-		>
-			<div class="relative z-10 mx-auto max-w-[1100px] px-6 md:px-8">
-				<div class="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
-					<!-- Left: Heading + description -->
-					<div class="max-w-lg">
-						<span
-							class="mb-4 inline-block text-[13px] font-semibold tracking-[0.08em] text-[#4ADE80] uppercase"
-							>Comparison</span
-						>
-						<h2
-							id="compare-heading"
-							class="text-[28px] leading-[1.08] font-semibold tracking-[-0.04em] text-white md:text-[36px]"
-							style="text-wrap: balance"
-						>
-							Paper way vs GardenSuite
-						</h2>
-						<p class="mt-5 text-[16px] leading-[1.65] text-[#9CA3AF] lg:max-w-xs">
-							Stop relying on muster rolls, paper chits, and phone-call reporting. One connected
-							system for your whole tea estate.
-						</p>
-					</div>
-
-					<!-- Right: Comparison table -->
-					<div
-						class="grid grid-cols-[1.4fr_1fr_1fr] overflow-hidden rounded-2xl ring-1 ring-white/10"
-					>
-						<!-- Features Column -->
-						<div class="bg-[#1A1F1C]">
-							<div
-								class="flex h-14 items-center px-4 pb-0 text-[11px] font-semibold tracking-[0.06em] text-[#6B7280] uppercase md:px-5"
-							>
-								Feature
-							</div>
-							{#each ['Face scan attendance', 'Smart wireless scale', 'Auto-calculated payroll', 'Connected factory data', 'Live store balances', 'Cloud daily reports', 'Offline at the garden', 'On-site setup & training'] as feature, i}
-								<div
-									class="flex h-12 items-center border-t border-white/[0.06] px-4 text-[13px] font-medium text-[#D1D5DB] md:px-5"
-								>
-									{feature}
-								</div>
-							{/each}
-						</div>
-
-						<!-- Paper Way -->
-						<div class="border-l border-white/[0.06]">
-							<div class="flex h-14 items-center justify-center bg-[#DC2626]/10 px-3">
-								<span class="text-[12px] font-bold tracking-[0.02em] text-[#FCA5A5]">Paper Way</span
-								>
-							</div>
-							{#each [false, false, false, false, false, false, false, false] as hasFeature, i}
-								<div class="flex h-12 items-center justify-center border-t border-white/[0.06]">
-									<span
-										class="flex h-5 w-5 items-center justify-center rounded-full bg-[#DC2626]/20 text-[#FCA5A5]"
-									>
-										<svg width="10" height="10" viewBox="0 0 14 14" fill="none"
-											><path
-												d="M3.5 10.5l7-7M10.5 10.5l-7-7"
-												stroke="currentColor"
-												stroke-width="2"
-												stroke-linecap="round"
-											/></svg
-										>
-									</span>
-								</div>
-							{/each}
-						</div>
-
-						<!-- GardenSuite (highlighted) -->
-						<div class="relative">
-							<div
-								class="absolute inset-0 rounded-r-2xl bg-[#1B5E3B]/20 shadow-[0_0_60px_rgba(27,94,59,0.12)]"
-							></div>
-							<div class="relative z-10">
-								<div
-									class="flex h-14 items-center justify-center border-b border-[#1B5E3B]/40 bg-[#1B5E3B]/30 px-3"
-								>
-									<span class="text-[12px] font-bold tracking-[0.02em] text-[#4ADE80]"
-										>GardenSuite</span
-									>
-								</div>
-								{#each [true, true, true, true, true, true, true, true] as hasFeature, i}
-									<div class="flex h-12 items-center justify-center border-t border-white/[0.06]">
-										<span
-											class="flex h-5 w-5 items-center justify-center rounded-full bg-[#1B5E3B] text-white shadow-[0_0_8px_rgba(27,94,59,0.4)]"
-										>
-											<svg width="10" height="10" viewBox="0 0 14 14" fill="none"
-												><path
-													d="M3 7.5l2.5 2.5L11 4"
-													stroke="currentColor"
-													stroke-width="2"
-													stroke-linecap="round"
-													stroke-linejoin="round"
-												/></svg
-											>
-										</span>
-									</div>
-								{/each}
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+		<ComparisonTable
+			kicker="Comparison"
+			headline="Paper way vs GardenSuite"
+			paragraph="Stop relying on muster rolls, paper chits, and phone-call reporting. One connected system for your whole tea estate."
+			features={['Face scan attendance', 'Smart wireless scale', 'Auto-calculated payroll', 'Connected factory data', 'Live store balances', 'Cloud daily reports', 'Offline at the garden', 'On-site setup & training']}
+			paperResults={[false, false, false, false, false, false, false, false]}
+			gsResults={[true, true, true, true, true, true, true, true]}
+		/>
 
 		<!-- ═══════════════════════════════════════════════════════════ -->
 		<!-- CONFIDENTIAL PROOF (Bento)                                  -->
@@ -1423,97 +1320,7 @@
 			</div>
 		</section>
 
-		<!-- ═══════════════════════════════════════════════════════════ -->
-		<!-- FAQ (Tailark faqs/three, divided card)                     -->
-		<!-- ═══════════════════════════════════════════════════════════ -->
-		<section
-			class="reveal-on-scroll relative w-full overflow-hidden bg-gradient-to-b from-white to-[#F8FAF8] py-24 md:py-32"
-			aria-labelledby="faq-heading"
-		>
-			<div class="mx-auto max-w-[1344px] px-6 md:px-12">
-				<div
-					class="grid border border-[#E4E4E7] bg-white md:grid-cols-5 md:divide-x md:divide-[#E4E4E7]"
-				>
-					<div class="p-8 md:col-span-2 md:p-10 lg:p-12">
-						<h2
-							id="faq-heading"
-							class="scroll-mt-20 text-[28px] leading-[1.08] font-semibold tracking-[-0.04em] text-[#111111] md:text-[36px]"
-							style="text-wrap: balance"
-						>
-							FAQs
-						</h2>
-						<p class="mt-5 text-[17px] leading-[1.6] text-[#374151]">Your questions answered</p>
-						<p class="mt-6 hidden text-[16px] text-[#4B5563] md:block">
-							Can't find what you're looking for? <br />
-							<a
-								href="#contact"
-								class="mt-2 inline-block font-medium text-[#1B5E3B] hover:underline"
-								>contact our team</a
-							>
-						</p>
-					</div>
-
-					<div class="space-y-4 p-8 md:col-span-3 md:p-10 lg:p-12">
-						<h3 class="pl-6 text-[20px] font-semibold text-[#111111]">General</h3>
-						<div class="space-y-0">
-							{#each faqs as faq, i}
-								{@const isOpen = openFaq === i}
-								{@const nextOpen = i < faqs.length - 1 && openFaq === i + 1}
-								<div
-									class="border-b px-6 py-1 transition-all duration-200 {isOpen || nextOpen
-										? 'border-transparent'
-										: 'border-[#F0F0F0]'} {isOpen
-										? 'rounded-lg bg-[#F8FAF8] shadow-[0_2px_12px_rgba(0,0,0,0.04)] ring-1 ring-[#E4E4E7]'
-										: ''}"
-								>
-									<button
-										class="group flex w-full cursor-pointer items-start justify-between gap-4 py-4 text-left transition-none focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30"
-										onclick={() => toggleFaq(i)}
-										aria-expanded={isOpen}
-									>
-										<h3 class="text-[17px] font-medium text-[#111111]">
-											{faq.q}
-										</h3>
-										<svg
-											width="16"
-											height="16"
-											viewBox="0 0 24 24"
-											fill="none"
-											class="mt-0.5 shrink-0 text-[#A1A1AA] transition-transform duration-200 {isOpen
-												? 'rotate-180'
-												: ''}"
-											aria-hidden="true"
-											><path
-												d="m6 9 6 6 6-6"
-												stroke="currentColor"
-												stroke-width="2"
-												stroke-linecap="round"
-												stroke-linejoin="round"
-											/></svg
-										>
-									</button>
-									<div
-										class="grid transition-all duration-200 ease-out {isOpen
-											? 'grid-rows-[1fr] opacity-100'
-											: 'grid-rows-[0fr] opacity-0'}"
-									>
-										<div class="overflow-hidden">
-											<p class="pb-4 text-[16px] leading-[1.6] text-[#4B5563]">{faq.a}</p>
-										</div>
-									</div>
-								</div>
-							{/each}
-						</div>
-					</div>
-				</div>
-				<p class="mt-8 text-center text-[14px] text-[#4B5563] md:hidden">
-					Can't find what you're looking for? <a
-						href="#contact"
-						class="font-medium text-[#1B5E3B] hover:underline">contact our team</a
-					>
-				</p>
-			</div>
-		</section>
+		<FaqSection {faqs} />
 
 		<!-- ═══════════════════════════════════════════════════════════ -->
 		<!-- CTA                                                        -->
