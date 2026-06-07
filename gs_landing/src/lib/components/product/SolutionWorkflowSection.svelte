@@ -1,4 +1,21 @@
 <script lang="ts">
+	/**
+	 * Solution + Workflow section extracted from the homepage.
+	 * Two-column layout: left side has tagline, headline, paragraph(s), optional CTA;
+	 * right side shows a dark card with a numbered workflow steps mockup.
+	 *
+	 * Props:
+	 *   tagText            - Small green kicker label above the headline (default: 'The solution')
+	 *   headline           - Main h2 heading (required)
+	 *   paragraph          - First large paragraph (required)
+	 *   paragraph2         - Optional second smaller paragraph
+	 *   ctaText + ctaHref  - Optional rounded-rect CTA link below the text
+	 *   cardHeaderTag      - Small label inside the mockup card (default: 'Today')
+	 *   cardHeaderTitle    - Title inside the mockup card (required)
+	 *   steps              - Array of workflow steps {label, meta} shown in numbered rows
+	 *   features           - Optional 4-column feature grid below the main columns
+	 *   showBackgroundImages - Show landscape photos behind the dark card (homepage only)
+	 */
 	let {
 		tagText = 'The solution',
 		headline,

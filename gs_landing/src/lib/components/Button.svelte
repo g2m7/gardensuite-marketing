@@ -1,4 +1,18 @@
 <script lang="ts">
+	/**
+	 * Canonical button component extracted from the homepage hero.
+	 * Matches the exact homepage CTA styling - use inside <ButtonGroup> for the standard layout.
+	 *
+	 * Props:
+	 *   href      - Target URL (required)
+	 *   label     - Button text (required)
+	 *   variant   - 'primary' (green), 'secondary' (white outline), 'secondary-dark' (dark bg)
+	 *   size      - 'sm' (nav), 'md' (hero default), 'lg' (CTA band)
+	 *   showIcon  - Adds a chevron arrow (primary only, default false)
+	 *   target    - e.g. '_blank' for external links
+	 *   class     - Extra Tailwind classes (merged last, so e.g. 'hidden md:flex' works)
+	 *   onclick   - Click handler (e.g. close mobile nav)
+	 */
 	let {
 		href,
 		label,
@@ -19,8 +33,10 @@
 		onclick?: (e: MouseEvent) => void;
 	} = $props();
 
+	// Base classes copied exactly from the homepage hero anchor tags.
+	// Do not change without verifying visual parity against the homepage.
 	const base =
-		'inline-flex items-center justify-center rounded-full transition duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 active:scale-[0.97]';
+		'flex w-full items-center justify-center rounded-full transition duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 active:scale-[0.97] sm:w-auto';
 
 	const variants = {
 		primary:
@@ -32,9 +48,9 @@
 	};
 
 	const sizes = {
-		sm: 'h-10 px-6 text-[15px] leading-none font-medium gap-2',
+		sm: 'h-10 px-6 text-[14px] leading-none font-semibold gap-2',
 		md: 'px-6 py-4 text-sm font-medium gap-2',
-		lg: 'px-8 py-3.5 text-sm font-medium gap-2'
+		lg: 'px-8 py-3.5 text-sm font-semibold gap-2'
 	};
 
 	let classes = $derived(`${base} ${variants[variant]} ${sizes[size]} ${className}`);
