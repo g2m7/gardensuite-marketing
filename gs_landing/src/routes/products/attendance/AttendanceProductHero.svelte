@@ -1,6 +1,6 @@
 <!--
   Attendance product hero section.
-  Two-column layout: text left, phone mockup right with a dashboard image layered behind it.
+  Two-column layout: text left, overlapping phone + dashboard mockup right.
   No CTA button here - the page has CTAs in the hero video section above and the CTA band below.
 -->
 <section
@@ -76,23 +76,31 @@
         </ul>
       </div>
 
-      <!-- Phone mockup column with dashboard behind -->
+      <!-- Overlapping phone + dashboard mockup -->
       <div class="flex justify-center">
-        <div class="relative">
-          <!-- Dashboard image layered behind the phone -->
-          <div class="absolute -top-6 -left-16 z-0 w-[320px] opacity-30 md:-left-24 md:w-[400px]">
+        <div class="relative h-[420px] w-full max-w-[580px] md:h-[480px]">
+          <!-- Background dashboard screen (behind and to the right) -->
+          <div
+            class="absolute top-12 right-0 z-0 w-[78%] overflow-hidden rounded-2xl border border-[#E4E4E7] bg-white shadow-[0_20px_60px_rgba(0,0,0,0.06)]"
+          >
             <img
-              src="/dashboard.png"
-              alt="GardenSuite dashboard preview"
-              width="960"
-              height="640"
+              src="/mis-dashboard.png"
+              alt="GardenSuite web dashboard"
+              width="1400"
+              height="900"
               loading="lazy"
-              class="h-auto w-full rounded-xl shadow-2xl"
+              class="h-auto w-full object-cover"
             />
           </div>
 
-          <div class="device-frame-phone relative z-10 w-[220px] md:w-[260px]">
-            <div class="device-frame-phone-inner aspect-[9/19.5]">
+          <!-- Phone frame in front (left side, overlapping the dashboard) -->
+          <div
+            class="absolute top-0 left-[5%] z-10 w-[200px] rounded-[2.5rem] border-[5px] border-[#f0f0f0] bg-[#f0f0f0] shadow-[0_25px_70px_rgba(0,0,0,0.18)] md:left-[6%] md:w-[230px]"
+          >
+            <!-- Notch -->
+            <div class="absolute top-0 left-1/2 z-20 h-5 w-20 -translate-x-1/2 rounded-b-xl bg-[#f0f0f0]"></div>
+            <!-- Screen -->
+            <div class="aspect-[9/19.5] overflow-hidden rounded-[2rem] bg-white">
               <img
                 src="/screenshots/workflow_avd/00_home_entry_points.png"
                 alt="GardenSuite face app home screen"
