@@ -77,11 +77,11 @@
       </div>
 
       <!-- Overlapping phone + dashboard mockup -->
-      <div class="flex justify-center">
-        <div class="relative h-[500px] w-full max-w-[640px] md:h-[560px] lg:h-[600px]">
-          <!-- Background dashboard screen (behind and to the right) -->
+      <div class="flex justify-center lg:justify-end">
+        <div class="relative w-full max-w-[720px]">
+          <!-- Dashboard screen behind (positioned to the right) -->
           <div
-            class="absolute top-14 right-0 z-0 w-[82%] overflow-hidden rounded-2xl border border-[#E4E4E7] bg-white shadow-[0_20px_60px_rgba(0,0,0,0.06)]"
+            class="absolute top-12 left-[32%] z-0 w-[72%] overflow-hidden rounded-2xl border border-[#E4E4E7] bg-white shadow-[0_20px_60px_rgba(0,0,0,0.06)]"
           >
             <img
               src="/mis-dashboard.png"
@@ -93,12 +93,12 @@
             />
           </div>
 
-          <!-- Phone frame in front (left side, overlapping the dashboard) -->
+          <!-- Phone frame in front -->
           <div
-            class="absolute top-0 left-[4%] z-10 w-[250px] rounded-[2.5rem] border-[5px] border-[#f0f0f0] bg-[#f0f0f0] shadow-[0_25px_70px_rgba(0,0,0,0.18)] md:left-[6%] md:w-[290px] lg:w-[310px]"
+            class="relative z-10 w-[280px] rounded-[2.5rem] border-[6px] border-[#eaeaea] bg-[#eaeaea] shadow-[0_30px_80px_rgba(0,0,0,0.15)] md:w-[340px] lg:w-[380px]"
           >
             <!-- Notch -->
-            <div class="absolute top-0 left-1/2 z-20 h-5 w-20 -translate-x-1/2 rounded-b-xl bg-[#f0f0f0]"></div>
+            <div class="absolute top-0 left-1/2 z-20 h-6 w-24 -translate-x-1/2 rounded-b-2xl bg-[#eaeaea]"></div>
             <!-- Screen -->
             <div class="aspect-[9/19.5] overflow-hidden rounded-[2rem] bg-white">
               <img
