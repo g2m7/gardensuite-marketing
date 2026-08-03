@@ -98,8 +98,8 @@ The API:
 1. Validates email format
 2. Calls Brevo `/v3/contacts` API
 3. Creates/updates contact with attributes
-4. Tags contact appropriately
-5. Adds to configured list (if BREVO_LIST_ID set)
+4. Records consent, source, campaign, and GardenSuite labels as contact attributes
+5. Adds the contact to list `17` only when explicit email consent is recorded
 
 ### Environment Variables
 
@@ -107,9 +107,9 @@ Required in `.env`:
 
 ```
 BREVO_API_KEY=your-api-key
-BREVO_LIST_ID=your-list-id
-BREVO_SENDER_EMAIL=noreply@gardensuite.in
-BREVO_SENDER_NAME="GardenSuite"
+BREVO_LIST_ID=17
+BREVO_SENDER_EMAIL=sarbani@sarbaa.com
+BREVO_SENDER_NAME="Sarbani Associates"
 ```
 
 ## Current Placement
@@ -129,10 +129,9 @@ The LeadCapture component is placed on:
 **Tag**: `homepage-lead`  
 **Source**: `homepage`
 
-### 3. WhatsApp Share Page (planned)
+### 3. Legacy WhatsApp Share URL
 
-**URL**: `/w/face-weight-499`  
-**Add form for direct lead capture from WhatsApp shares**
+`/w/face-weight-499` is kept only as a compatibility redirect. It no longer advertises Rs. 499. New WhatsApp messages should use the attendance product page only after the contact shows interest.
 
 ## Form Fields
 

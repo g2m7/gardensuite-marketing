@@ -8,6 +8,7 @@
 	import SolutionWorkflowSection from '$lib/components/product/SolutionWorkflowSection.svelte';
 	import Button from '$lib/components/Button.svelte';
 	import ButtonGroup from '$lib/components/ButtonGroup.svelte';
+	import { trackEvent } from '$lib/analytics';
 	import {
 		organizationSchema,
 		websiteSchema,
@@ -143,6 +144,10 @@
 	let formEmail = $state('');
 	let formGarden = $state('');
 	let formMessage = $state('');
+	let formWebsite = $state('');
+	let formContactConsent = $state(false);
+	let formEmailMarketingConsent = $state(false);
+	let formWhatsappMarketingConsent = $state(false);
 	let contactSubmitStatus = $state<'idle' | 'sending' | 'success' | 'error'>('idle');
 	let contactSubmitMessage = $state('');
 
@@ -175,7 +180,13 @@
 					phone: formPhone,
 					email: formEmail,
 					garden: formGarden,
-					message: formMessage
+					message: formMessage,
+					website: formWebsite,
+					source: 'homepage-contact',
+					campaign: 'website-enquiry',
+					contactConsent: formContactConsent,
+					emailMarketingConsent: formEmailMarketingConsent,
+					whatsappMarketingConsent: formWhatsappMarketingConsent
 				})
 			});
 
@@ -188,6 +199,7 @@
 			contactSubmitStatus = 'success';
 			contactSubmitMessage = result.message || 'Enquiry sent. We will contact you soon.';
 			formMessage = '';
+			trackEvent('generate_lead', { form_name: 'homepage_contact', source: 'homepage' });
 		} catch (error) {
 			contactSubmitStatus = 'error';
 			contactSubmitMessage =
@@ -221,7 +233,7 @@
 		},
 		{
 			q: 'What does it cost?',
-			a: 'Cost depends on your garden size and selected modules. We explain pricing clearly after understanding your requirement. Demo, setup, and training are free.'
+			a: 'Annual software plans start from Rs. 10,000. Scale, on-site training, and travel are quoted separately. The first demo and remote onboarding for Nano and Small plans are free.'
 		}
 	];
 
@@ -1295,6 +1307,38 @@
 								rows="3"
 								class="w-full resize-none rounded-lg border border-[#D1D5DB] bg-white px-4 py-3 text-[14px] text-[#111827] placeholder-[#9CA3AF] transition outline-none focus:border-[#1B5E3B] focus:ring-2 focus:ring-[#1B5E3B]/15"
 							></textarea>
+							<input
+								class="hidden"
+								tabindex="-1"
+								autocomplete="off"
+								aria-hidden="true"
+								bind:value={formWebsite}
+							/>
+							<label class="flex items-start gap-3 text-[12px] leading-[1.5] text-[#52525B]">
+								<input
+									type="checkbox"
+									required
+									bind:checked={formContactConsent}
+									class="mt-0.5 h-4 w-4 shrink-0 accent-[#1B5E3B]"
+								/>
+								<span>Sarbani Associates may use these details to reply to my enquiry.</span>
+							</label>
+							<label class="flex items-start gap-3 text-[12px] leading-[1.5] text-[#52525B]">
+								<input
+									type="checkbox"
+									bind:checked={formEmailMarketingConsent}
+									class="mt-0.5 h-4 w-4 shrink-0 accent-[#1B5E3B]"
+								/>
+								<span>Email me occasional GardenSuite product updates. Optional.</span>
+							</label>
+							<label class="flex items-start gap-3 text-[12px] leading-[1.5] text-[#52525B]">
+								<input
+									type="checkbox"
+									bind:checked={formWhatsappMarketingConsent}
+									class="mt-0.5 h-4 w-4 shrink-0 accent-[#1B5E3B]"
+								/>
+								<span>Contact me on WhatsApp about GardenSuite. Optional.</span>
+							</label>
 							<div class="mt-1 flex flex-col gap-2.5">
 								<button
 									type="submit"
@@ -1345,7 +1389,7 @@
 							{/if}
 						</form>
 						<p class="mt-4 text-center text-[12px] text-[#9CA3AF]">
-							By submitting, you agree to our <a
+							Your details are handled under our <a
 								href="/terms"
 								class="text-[#6B7280] underline transition hover:text-[#1B5E3B]">Terms</a
 							>

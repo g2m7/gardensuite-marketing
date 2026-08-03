@@ -160,12 +160,12 @@ function Draw-SquareCreative {
   $headline.Dispose()
 
   Draw-RoundedRect $g 68 240 944 176 30 "#073B28"
-  $price = New-Font 118 "Bold"
-  Draw-Text $g "Rs. 499" $price "#FFFFFF" 112 274 540 120
-  $price.Dispose()
-  $month = New-Font 58 "Bold"
-  Draw-Text $g "/month*" $month "#FFFFFF" 670 308 260 70
-  $month.Dispose()
+  $offline = New-Font 82 "Bold"
+  Draw-Text $g "Works offline" $offline "#FFFFFF" 112 274 760 100
+  $offline.Dispose()
+  $context = New-Font 34 "Bold"
+  Draw-Text $g "at the garden" $context "#FFFFFF" 680 336 260 50
+  $context.Dispose()
 
   Draw-CroppedImage $g $fieldScale 68 470 944 540 36
 

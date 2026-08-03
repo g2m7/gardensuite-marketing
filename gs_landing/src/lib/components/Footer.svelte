@@ -100,9 +100,11 @@
 		></div>
 
 		<div class="flex flex-wrap items-center justify-between gap-4">
-			<span class="text-[13px] text-[#71717A]"
-				>&copy; {new Date().getFullYear()} Sarbani Associates. All rights reserved.</span
-			>
+			<div class="flex flex-wrap items-center gap-4 text-[13px] text-[#71717A]">
+				<span>&copy; {new Date().getFullYear()} Sarbani Associates. All rights reserved.</span>
+				<a href="/privacy" class="underline hover:text-[#1B5E3B]">Privacy</a>
+				<a href="/terms" class="underline hover:text-[#1B5E3B]">Terms</a>
+			</div>
 			<span
 				class="inline-flex items-center gap-2 rounded-full border border-[#E4E4E7] bg-[#FAFAF7] px-3 py-1"
 			>

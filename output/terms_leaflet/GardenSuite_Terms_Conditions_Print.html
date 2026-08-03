@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GARDEN SUITE ERP - TERMS &amp; CONDITIONS (Quotation Valid upto 23-Jun-26)</title>
+  <style>
+    :root {
+      --ink: #17212b;
+      --muted: #5b6875;
+      --blue: #2e75b6;
+      --blue-dark: #1f4e78;
+      --blue-soft: #eaf3fa;
+      --blue-pale: #f4f8fc;
+      --line: #c8d1d9;
+      --green: #e2f0d9;
+      --green-ink: #456b2d;
+      --orange: #fce4d6;
+      --orange-ink: #833c00;
+      --red: #c00000;
+      --red-soft: #fde9e9;
+      --cream: #fff5cf;
+    }
+
+    * { box-sizing: border-box; }
+    html { color: var(--ink); background: #e8edf1; }
+    body {
+      width: 210mm;
+      margin: 18px auto;
+      padding: 13mm 13mm 16mm;
+      background: #fff;
+      font-family: Aptos, "Segoe UI", Arial, sans-serif;
+      font-size: 9.25pt;
+      line-height: 1.36;
+      box-shadow: 0 12px 38px rgba(22, 35, 48, .16);
+    }
+
+    .print-control {
+      position: fixed;
+      top: 18px;
+      right: 20px;
+      z-index: 5;
+      border: 0;
+      border-radius: 5px;
+      padding: 10px 16px;
+      color: #fff;
+      background: var(--blue-dark);
+      font: 600 10pt Aptos, "Segoe UI", sans-serif;
+      cursor: pointer;
+      box-shadow: 0 5px 16px rgba(0,0,0,.18);
+    }
+
+    .page-intro { margin-bottom: 5mm; }
+    .brand-block {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      border-bottom: 1.3mm solid var(--blue-dark);
+      padding-bottom: 3mm;
+      margin-bottom: 4mm;
+    }
+    .company {
+      margin: 0;
+      color: var(--blue-dark);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 19pt;
+      font-weight: 700;
+      letter-spacing: .015em;
+    }
+    .address { margin: 0 0 .8mm; color: var(--muted); font-size: 8.5pt; }
+    .title-block {
+      color: #fff;
+      background: var(--blue-dark);
+      padding: 6mm 7mm 5.5mm;
+    }
+    .document-type {
+      margin: 0 0 1.5mm;
+      font-size: 7.7pt;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: #d9e9f5;
+    }
+    h1 {
+      margin: 0;
+      max-width: 175mm;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 17.5pt;
+      line-height: 1.14;
+      font-weight: 700;
+    }
+    .title-block > p:last-child { margin: 2.7mm 0 0; color: #dcebf6; font-size: 8.5pt; }
+
+    .document-section { margin: 0 0 4mm; }
+    .section-heading {
+      margin: 0;
+      padding: 2.2mm 3.2mm;
+      color: #fff;
+      background: var(--blue);
+      font-size: 10.4pt;
+      line-height: 1.2;
+      font-weight: 700;
+      break-after: avoid;
+    }
+    .subsection-heading {
+      margin: 0;
+      padding: 2.1mm 3.2mm;
+      color: var(--blue-dark);
+      background: #d9eaf7;
+      border: 1px solid var(--line);
+      border-bottom: 0;
+      font-size: 9.7pt;
+      line-height: 1.2;
+      break-after: avoid;
+    }
+    .section-intro {
+      margin: 0;
+      padding: 3mm 3.2mm;
+      color: #365a75;
+      background: var(--blue-soft);
+      border: 1px solid var(--line);
+      border-top: 0;
+    }
+    .requirements .section-intro + .subsection-heading { margin-top: 3mm; }
+
+    .terms-table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      break-inside: auto;
+    }
+    .terms-table tr { break-inside: avoid; break-after: auto; }
+    .terms-table th,
+    .terms-table td {
+      border: 1px solid var(--line);
+      padding: 2.15mm 3mm;
+      vertical-align: top;
+      text-align: left;
+    }
+    .terms-table th {
+      width: 28%;
+      color: var(--blue-dark);
+      background: var(--blue-pale);
+      font-weight: 700;
+    }
+    .terms-table tr:nth-child(even) td { background: #f8fafb; }
+    .terms-table tr.emphasis td { color: var(--red); font-weight: 700; background: var(--red-soft); }
+    .terms-table tr.caution th,
+    .terms-table tr.caution td { color: var(--orange-ink); background: var(--orange); }
+    .terms-table tr.caution td { font-weight: 700; }
+    .terms-table tr.positive th,
+    .terms-table tr.positive td { background: var(--green); }
+    .terms-table tr.positive td { color: var(--green-ink); font-weight: 700; }
+
+    .note {
+      margin: 0;
+      padding: 2.1mm 3.2mm;
+      color: #68737d;
+      background: #fafafa;
+      border: 1px solid var(--line);
+      border-top: 0;
+      font-size: 8pt;
+      font-style: italic;
+    }
+    .note.critical {
+      padding: 3.3mm 3.4mm;
+      color: var(--red);
+      background: var(--red-soft);
+      border-left: 1.3mm solid var(--red);
+      font-weight: 800;
+      font-style: normal;
+      line-height: 1.42;
+    }
+    .note.warning { color: var(--orange-ink); background: var(--cream); font-weight: 600; }
+    .travel-section .section-heading { background: var(--blue-dark); }
+
+    .two-column-block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4mm;
+      break-inside: avoid;
+    }
+    .two-column-block .terms-table th { width: 39%; }
+
+    .numbered-terms {
+      margin: 0;
+      padding: 2mm 3mm 2mm 10mm;
+      border: 1px solid var(--line);
+      background: #fff;
+    }
+    .numbered-terms li { padding: 1.15mm 1mm; }
+    .numbered-terms li + li { border-top: 1px solid #e1e6ea; }
+
+    .bank-section .section-heading { background: #527d3a; }
+    .bank-section .terms-table th,
+    .bank-section .terms-table td { background: var(--green); }
+
+    .continuation { margin-top: 0; }
+    .closing-mark {
+      display: flex;
+      align-items: center;
+      gap: 4mm;
+      margin-top: 9mm;
+      color: var(--blue-dark);
+      break-inside: avoid;
+    }
+    .closing-mark span { width: 16mm; height: 1.2mm; background: var(--blue); }
+    .closing-mark p { margin: 0; font-size: 8.5pt; line-height: 1.3; }
+
+    .keep { break-inside: avoid; }
+    .page-start { break-before: page; }
+
+    @page { size: A4 portrait; margin: 13mm 12mm 17mm; }
+    @media print {
+      html { background: #fff; }
+      body {
+        width: auto;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+        font-size: 8.8pt;
+      }
+      .print-control { display: none !important; }
+      .document-section { margin-bottom: 3.4mm; }
+      .page-intro { margin-bottom: 4mm; }
+    }
+
+    @media screen and (max-width: 820px) {
+      body { width: 100%; margin: 0; padding: 22px 16px 36px; box-shadow: none; }
+      .brand-block { display: block; }
+      .address { margin-top: 8px; }
+      .two-column-block { grid-template-columns: 1fr; }
+      .print-control { position: static; display: block; margin: 0 0 16px auto; }
+    }
+  </style>
+</head>
+<body>
+  <button class="print-control" type="button" onclick="window.print()">Print / Save PDF</button>
+  <main>
+  <div class="page-intro">
+    <div class="brand-block">
+      <p class="company">SARBANI ASSOCIATES</p>
+      <p class="address">Hospital More, Bagdogra, Darjeeling, Pin - 734014</p>
+    </div>
+    <div class="title-block">
+      <p class="document-type">Official terms document</p>
+      <h1>GARDEN SUITE ERP - TERMS &amp; CONDITIONS (Quotation Valid upto 23-Jun-26)</h1>
+      <p>These terms apply to all Garden Suite ERP subscriptions including No Cloud, Cloud Lite, Cloud Plus Payroll, and Cloud Pro Operations plans.</p>
+    </div>
+  </div>
+
+  <section class="document-section compact keep"><h2 class="section-heading">1.  Training Charges</h2><table class="terms-table"><tbody><tr class=""><th>Online Training &amp; Implementation</th><td>Included in the active subscription and delivered by video call, phone, WhatsApp, email or remote desktop access.</td></tr><tr class="caution"><th>Exceptional On-Site Service</th><td>₹1,000 per day. Not included in standard service. Prior written approval is required, and all travel and stay costs are extra.</td></tr></tbody></table><p class="note ">* All regular training, implementation, support, updates and service are provided online and off-site.</p></section>
+
+  <section class="document-section travel-section keep"><h2 class="section-heading">2.  IMPORTANT - Exceptional On-Site Visit: Air Travel &amp; Accommodation</h2><table class="terms-table"><tbody><tr class=""><th>Standard Service Mode</th><td>All regular service is delivered online and off-site. No routine garden visit or local on-site support is included.</td></tr><tr class="caution"><th>Exceptional On-Site Service</th><td>₹1,000 per day, excluding travel and stay. A physical visit will be considered only when mutually agreed in writing, subject to staff availability and advance payment.</td></tr></tbody></table><p class="note critical">IMPORTANT - CLIENT-BORNE AIR TRAVEL &amp; ACCOMMODATION: The customer must arrange or reimburse 100% of actual return airfare, airport and local transport, suitable hotel accommodation, boarding and meals for the visiting Sarbani Associates team. These expenses are separate from all software, subscription, training, implementation and service charges.</p></section>
+
+  <div class="two-column-block">
+    <section class="document-section compact keep"><h2 class="section-heading">3.  Annual Maintenance Charges (AMC)</h2><table class="terms-table"><tbody><tr class=""><th>Garden Suite ERP</th><td>NIL - Included in active subscription</td></tr><tr class=""><th>Face Application</th><td>NIL - Included in active subscription</td></tr><tr class=""><th>Cloud Application</th><td>NIL - Included in active subscription</td></tr></tbody></table><p class="note ">* AMC is valid only while the subscription is active and payments are current.</p></section>
+    <section class="document-section compact keep"><h2 class="section-heading">4.  Warranty</h2><table class="terms-table"><tbody><tr class=""><th>BLE Scale / Hardware</th><td>1 year from date of purchase - excludes battery and adapter.</td></tr><tr class=""><th>App &amp; Software</th><td>Warranty is co-terminus with the active paid subscription period.</td></tr></tbody></table><p class="note ">* Hardware warranty covers manufacturing defects only. Physical damage, misuse, or power-related issues are excluded.</p></section>
+  </div>
+
+  <section class="document-section page-start"><h2 class="section-heading">5.  Payment Terms</h2><table class="terms-table"><tbody><tr class=""><th>BLE Scale / Hardware</th><td>100% advance payment with Work Order.</td></tr><tr class=""><th>App &amp; Software - Monthly</th><td>Full month amount to be paid in advance on or before billing date.</td></tr><tr class=""><th>App &amp; Software - Yearly</th><td>1st time 50% as advance balance 50% after 1st wages payment generation. Annual Maintenance amount to be paid 100% in advance.</td></tr><tr class=""><th>Monthly Price Lock</th><td>Subscription price is locked and guaranteed for 5 years from activation date. Price increase after that period will be done, primarily due to inflation adjustmrent &amp; raised operational cost. Cloud Server cost is outside this lock and may change with 1 months notice, as and when cloud charges are hiked by our cloud service provider.</td></tr><tr class=""><th>Grace Period</th><td>7 days from billing due date for subscription payment &amp; 15 days after due date of Annual Maintenance</td></tr></tbody></table></section>
+
+  <section class="document-section compact keep"><h2 class="section-heading">6.  Non-Payment &amp; Reactivation</h2><table class="terms-table"><tbody><tr class="emphasis"><th>Subscription Deactivation</th><td>If payment is not received within the 7-day grace period, the subscription will be deactivated without further notice.</td></tr><tr class="emphasis"><th>Reactivation Charge</th><td>₹3,000 &amp; is payable in full before reactivation. This charges is applicable to the entire system as a whole. For AMC payments also, the service will be stopped</td></tr></tbody></table><p class="note ">* Sarbani Associates reserves the right to permanently terminate accounts with repeated non-payment history.</p></section>
+
+  <section class="document-section compact keep"><h2 class="section-heading">7.  Additional Discount</h2><table class="terms-table"><tbody><tr class="positive"><th>1-Year Advance Payment</th><td>1 month free (equivalent to 8.33% effective discount) - applicable on full annual advance payment.</td></tr></tbody></table><p class="note ">* This discount is in addition to standard multi-garden incremental discounts. Both benefits can be applied together.</p></section>
+
+  <section class="document-section compact"><h2 class="section-heading">8.  App &amp; Software Modification Charges</h2><table class="terms-table"><tbody><tr class=""><th>Service Delivery Mode</th><td>Completely online and off-site. Support is provided through phone, WhatsApp, email, video call and remote desktop access. No routine on-site service is included.</td></tr><tr class="positive"><th>Minor Modifications</th><td>NIL - included in subscription.</td></tr><tr class="emphasis"><th>Major Modifications</th><td>Chargeable - scope and cost to be agreed in writing before commencement.</td></tr><tr class="positive"><th>Face App Updates</th><td>NIL - all updates included in active subscription.</td></tr><tr class="positive"><th>Cloud App Updates</th><td>NIL - all updates included in active subscription.</td></tr></tbody></table><p class="note ">* Major modifications are defined as functional changes outside the original product specification. A written change request is required.</p></section>
+
+  <section class="document-section compact keep"><h2 class="section-heading">9.  General Terms</h2><ol class="numbered-terms"><li>Subscription pricing is based on app users, gardens, and selected modules as per the agreed quotation.</li><li>Any changes to the number of users or gardens must be communicated in writing and will be adjusted in the next billing cycle.</li><li>Sarbani Associates shall not be liable for downtime caused by internet failure, power outage, or customer-side hardware failure.</li><li>All disputes shall be subject to jurisdiction of courts in Siliguri, West Bengal.</li><li>These terms are subject to change with 30 days written notice to the customer.</li></ol></section>
+
+  <section class="document-section bank-section compact keep"><h2 class="section-heading">10.  Bank Details</h2><table class="terms-table"><tbody><tr class="positive"><th>Account Name</th><td>SARBANI ASSOCIATES</td></tr><tr class="positive"><th>Bank</th><td>CANARA BANK, BAGDOGRA BRANCH</td></tr><tr class="positive"><th>Account Number</th><td>97263070000470</td></tr><tr class="positive"><th>IFSC Code</th><td>CNRB0019726</td></tr><tr class="positive"><th>Account Type</th><td>Current Account</td></tr><tr class="positive"><th>Payment Ref</th><td>Please use Quotation Number as payment reference.</td></tr></tbody></table></section>
+
+  <section class="document-section page-start requirements"><h2 class="section-heading">11.  System &amp; Hardware Requirements</h2><p class="section-intro">The following hardware and software specifications are mandatory for Garden Suite ERP to function correctly. Hardware is to be arranged and maintained entirely by the customer. Sarbani Associates will not be responsible for any issues arising from non-compliant hardware or software environments.</p><h3 class="subsection-heading">A.  Desktop / Workstation Requirements</h3><table class="terms-table"><tbody><tr class=""><th>Processor</th><td>Latest generation Intel Core i3 equivalent or above (Intel / AMD). Desktop preferred over laptop for operational stability.</td></tr><tr class=""><th>RAM</th><td>Minimum 8 GB RAM. 16 GB recommended for multi-user or payroll-intensive use.</td></tr><tr class="emphasis"><th>Storage</th><td>Minimum 512 GB SSD (Solid State Drive). Hard disk drives (HDD) are NOT acceptable due to performance and reliability concerns.</td></tr><tr class=""><th>Operating System</th><td>Windows - latest version, fully up to date with all security patches applied. Outdated Windows versions will not be supported.</td></tr><tr class=""><th>Browser</th><td>Brave Browser - pre-installed and set as the default browser for Garden Suite ERP web access.</td></tr><tr class="emphasis"><th>Office Suite</th><td>Microsoft Excel and Microsoft Access - pre-installed (non-negotiable). Required for reporting, data export, and local operations.</td></tr><tr class=""><th>Antivirus</th><td>Windows Defender (built-in) only. No third-party antivirus software to be installed. Third-party antivirus may interfere with application performance and data integrity.</td></tr><tr class=""><th>Form Factor</th><td>Desktop PC strongly preferred over laptop. Laptops introduce instability risks in field environments. Laptop use is at customer's discretion and risk.</td></tr></tbody></table></section>
+
+  <section class="document-section requirements continuation">
+    <h3 class="subsection-heading">B.  Mobile Device Requirements (Face Application)</h3>
+    <table class="terms-table"><tbody><tr class=""><th>Chipset</th><td>MediaTek Dimensity 6300 / Qualcomm Snapdragon 4 Gen 2 or above. Lower-spec chipsets will result in degraded face-recognition performance.</td></tr><tr class=""><th>RAM</th><td>Minimum 8 GB RAM. Required for stable face recognition and data sync operations.</td></tr><tr class=""><th>App Version</th><td>Always run the latest version of Garden Suite Face App. Outdated app versions will not be supported.</td></tr><tr class=""><th>OS</th><td>Latest stable Android version as applicable to device. Keep OS updated for security and compatibility.</td></tr><tr class=""><th>Storage</th><td>Minimum 64 GB internal storage recommended to accommodate app data, logs, and offline sync buffers.</td></tr><tr class=""><th>Camera</th><td>Front Camera - minimum 30 MP, with good image quality and sensitivity</td></tr><tr class=""><th>Connectivity</th><td>Stable Wi-Fi or mobile data (4G/5G) required for sync. Offline mode available but sync must be completed daily.</td></tr></tbody></table>
+  </section>
+
+  <section class="document-section requirements security-section page-start">
+    <h3 class="subsection-heading">C.  Software &amp; Security Policy</h3>
+    <table class="terms-table"><tbody><tr class=""><th>Hardware Ownership</th><td>All hardware is to be provided and maintained by the customer. Sarbani Associates has no obligation to repair, replace, or support customer hardware.</td></tr><tr class="emphasis"><th>Pre-installed Software Issues</th><td>Issues arising from software not supplied or authorised by Sarbani Associates will not be entertained or supported.</td></tr><tr class="caution"><th>New Software Installation</th><td>Installation of any new software on workstations used for Garden Suite ERP must be done in consultation with and approval from Sarbani Associates, due to data security and application integrity reasons.</td></tr><tr class="emphasis"><th>Liability Waiver - Unauthorised Software</th><td>If any unauthorised software is installed without prior approval, Sarbani Associates will not be liable for any data tampering, theft, corruption, or loss arising thereof.</td></tr><tr class="caution"><th>Third-Party Antivirus</th><td>Installation of third-party antivirus software is strictly discouraged. Windows Defender (built-in) is sufficient and recommended. Any data issues arising from third-party security tools are not covered under warranty or support.</td></tr><tr class="emphasis"><th>User Responsibility</th><td>The customer is responsible for ensuring that all workstations and mobile devices used with Garden Suite ERP comply with these specifications. Non-compliance voids any support or warranty obligations on the part of Sarbani Associates.</td></tr></tbody></table>
+    <p class="note warning">* Sarbani Associates reserves the right to suspend support if customer hardware or software environment is found to be non-compliant with these specifications.</p>
+  </section>
+
+  <section class="document-section support-section"><h2 class="section-heading">13. Support, Service Levels &amp; Implementation</h2><table class="terms-table"><tbody><tr class=""><th>13. Online Support Process</th><td>All support is delivered online and off-site. Requests may be raised by phone, WhatsApp, email or designated remote support channels and will be addressed according to severity and business impact.</td></tr><tr class=""><th>Response Time</th><td>Critical: within 4 business hours. High: within 1 business day. Medium: within 2 business days. Low: within 3 business days.</td></tr><tr class=""><th>Addressing Critical Failures</th><td>Critical failures affecting payroll, attendance, data access or core operations will receive highest priority for remote diagnosis and escalation.</td></tr><tr class=""><th>Data Backup &amp; Retrieval</th><td>Cloud plans include routine backups. Data retrieval requests may require up to 3 business days depending on data volume and complexity. Customers are encouraged to maintain local exports where applicable.</td></tr><tr class=""><th>Customization Time</th><td>Customization timelines will be provided after requirement analysis and depend on scope, complexity, and resource availability.</td></tr><tr class=""><th>Implementation Time</th><td>Implementation, configuration, data review and user training are carried out online and off-site. Timelines depend on module count, data migration, infrastructure readiness and customer availability. A remote project schedule will be shared before commencement.</td></tr></tbody></table></section>
+
+  <div class="closing-mark">
+    <span></span>
+    <p>GardenSuite ERP<br><strong>Sarbani Associates</strong></p>
+  </div>
+</main>
+</body>
+</html>

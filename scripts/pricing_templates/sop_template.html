@@ -1,0 +1,1543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GardenSuite GS Face - Training Manual</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <style>
+    @page { size: A4 landscape; margin: 0; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      /* Typography Colors from typography.md */
+      --text-primary: #111111;
+      --text-secondary: #52525B;
+      --text-muted: #71717A;
+      --text-subtle: #3F3F46;
+      --text-accent: #1B5E3B;
+      --text-hero-subtitle: #666666;
+      --text-dark-btn: #0A0A0A;
+      --text-quiet-muted: #A1A1AA;
+      
+      --pure-white: #ffffff;
+      --white-secondary: rgba(255, 255, 255, 0.7);
+      --white-muted: rgba(255, 255, 255, 0.4);
+
+      /* Accent Brand Colors */
+      --green-deep: #1a3a15;
+      --green-primary: #234b1d;
+      --green-accent: #1b5e3b;
+      --green-bright: #40916c;
+      --green-light: #74c69d;
+      --green-wash: #f0f7f0;
+
+      --gray-400: #86868b;
+      --gray-200: #d2d2d7;
+      --gray-100: #f5f5f7;
+
+      --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+      --font-display: "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
+    }
+
+    html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+    body {
+      font-family: var(--font-sans);
+      background: #e8e8ed;
+      color: var(--text-secondary);
+      font-size: 14px;
+      line-height: 1.6;
+      padding-top: 42px;
+    }
+
+    /* ── Toolbar (screen only) ────────────────────────── */
+    .toolbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: center; gap: 12px;
+      padding: 10px 16px; background: rgba(0,0,0,0.92);
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+      color: var(--gray-400); font-size: 12px; font-weight: 500;
+    }
+    .toolbar button {
+      background: var(--green-primary); color: var(--pure-white);
+      border: none; padding: 6px 14px; border-radius: 14px;
+      font-size: 10pt; font-weight: 500; font-family: inherit; cursor: pointer;
+    }
+    .toolbar button:hover { transform: scale(1.02); }
+
+    /* ── Page Shell (A4 Landscape) ────────────────────── */
+    .page {
+      width: 297mm; height: 210mm; margin: 6mm auto;
+      background: var(--pure-white); overflow: hidden; position: relative;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 8px 40px rgba(0,0,0,0.16);
+      border-radius: 2px;
+    }
+    .page--dark { background: #0a0a0a; color: var(--pure-white); }
+    .bg-green-deep { background: var(--green-deep) !important; }
+
+    /* ── Reusable Layout ──────────────────────────────── */
+    .content { height: 100%; display: flex; flex-direction: column; }
+    .hdr { display: flex; align-items: center; justify-content: space-between; padding: 6mm 12mm 4mm; }
+    .brand {
+      display: flex; align-items: center; gap: 2.5mm;
+      font-family: var(--font-display); font-weight: 600; font-size: 10pt;
+      letter-spacing: -0.03em; color: var(--text-primary);
+    }
+    .brand--light { color: var(--pure-white); }
+    .brand img { height: 5.5mm; width: auto; }
+    .tag { font-size: 11px; font-weight: 600; color: var(--text-muted); letter-spacing: 0.04em; }
+    .tag--light { color: var(--white-muted); }
+    .ftr {
+      margin-top: auto; padding: 4mm 12mm 6mm; display: flex; justify-content: space-between;
+      font-size: 11px; color: var(--text-muted); font-weight: 600; letter-spacing: 0.04em;
+    }
+    .ftr--light { color: var(--white-muted); }
+
+    /* ── Shared typography ─────────────────────────────── */
+    .eyebrow {
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-accent);
+    }
+    .eyebrow--light { color: var(--green-light); }
+    .headline {
+      font-family: var(--font-display);
+      font-size: 32px; /* Balanced landscape H2 */
+      font-weight: 600;
+      line-height: 1.1;
+      letter-spacing: -0.04em;
+      color: var(--text-primary);
+      text-wrap: balance;
+    }
+    .headline--light { color: var(--pure-white); }
+    .headline--xl {
+      font-size: 3.5rem;
+      font-weight: 500;
+      letter-spacing: -0.05em;
+      line-height: 0.9;
+    }
+    .lead {
+      font-family: var(--font-sans);
+      font-size: 15px; /* Compact for landscape height */
+      font-weight: 400;
+      line-height: 1.5;
+      letter-spacing: -0.01em;
+      color: var(--text-secondary);
+    }
+    .lead--light { color: var(--white-secondary); }
+
+    .stat-big {
+      font-family: var(--font-display);
+      font-size: 36px;
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      line-height: 1;
+    }
+    .stat-label {
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--text-muted);
+      margin-top: 1mm;
+    }
+
+    /* ── Side-by-Side Presentation Layout ───────────────── */
+    .split-layout {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 10mm;
+      flex: 1;
+      align-items: center;
+      padding: 0 12mm 4mm;
+      text-align: left;
+      overflow: hidden;
+    }
+    .split-col-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .split-col-right {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* ── Vertical Step List (for split layout) ─────────── */
+    .step-list {
+      display: flex;
+      flex-direction: column;
+      gap: 3.5mm;
+      margin-top: 5mm;
+      width: 100%;
+    }
+    .step-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 3mm;
+    }
+    .step-num {
+      flex-shrink: 0;
+      width: 6.5mm;
+      height: 6.5mm;
+      border-radius: 50%;
+      background: var(--green-wash);
+      color: var(--green-primary);
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .page--dark .step-num {
+      background: rgba(116,198,157,0.15);
+      color: var(--green-light);
+    }
+    .step-text {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5mm;
+    }
+    .step-text strong {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-primary);
+      letter-spacing: -0.01em;
+    }
+    .step-text span {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.4;
+    }
+    .page--dark .step-text strong { color: var(--pure-white); }
+    .page--dark .step-text span { color: var(--white-secondary); }
+
+    /* ── Wide Flow Layout (for multi-mockup pages) ─────── */
+    .flow-layout {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+      padding: 0 12mm 4mm;
+      text-align: center;
+    }
+    .flow-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      width: 100%;
+      margin: 4mm 0 5mm;
+    }
+    .flow-arrow {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0 4mm;
+      flex-shrink: 0;
+    }
+    .flow-arrow i {
+      font-size: 20pt;
+      color: var(--green-primary);
+    }
+    .flow-arrow .flow-label {
+      font-family: var(--font-sans);
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--text-muted);
+      margin-top: 0.5mm;
+    }
+    .page--dark .flow-arrow i { color: var(--green-light); }
+    .page--dark .flow-arrow .flow-label { color: var(--white-muted); }
+
+    /* Horizontal Step Strip (for flow layout) ────────── */
+    .steps-strip {
+      display: flex;
+      gap: 6mm;
+      align-items: flex-start;
+      justify-content: center;
+      width: 100%;
+      max-width: 260mm;
+    }
+    .step-card {
+      flex: 1;
+      display: flex;
+      align-items: flex-start;
+      gap: 3mm;
+      text-align: left;
+    }
+    .step-card-text {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5mm;
+    }
+    .step-card-text strong {
+      font-family: var(--font-sans);
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      color: var(--text-primary);
+    }
+    .step-card-text span {
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 1.4;
+      color: var(--text-secondary);
+    }
+    .page--dark .step-card-text strong { color: var(--pure-white); }
+    .page--dark .step-card-text span { color: var(--white-secondary); }
+
+    /* ── Visual Mockup Frames ─────────────────────────── */
+    .hero-frame {
+      border-radius: 4mm;
+      background: linear-gradient(145deg, #0d1f0a, #1a3a15);
+      padding: 3mm;
+      width: 100%;
+      position: relative;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    }
+    .hero-frame img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 2mm;
+    }
+    .hero-frame--mobile { max-width: 50mm; }
+    .hero-frame--browser {
+      max-width: 116mm;
+      background: #1a1a1a;
+      border: 1px solid #333;
+      padding: 0;
+    }
+    .hero-frame--browser img {
+      border-bottom-left-radius: 4mm;
+      border-bottom-right-radius: 4mm;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+    .browser-bar {
+      height: 6mm;
+      background: #2a2a2a;
+      display: flex;
+      align-items: center;
+      padding: 0 3mm;
+      gap: 1.5mm;
+      border-bottom: 1px solid #1a1a1a;
+      border-top-left-radius: 4mm;
+      border-top-right-radius: 4mm;
+    }
+    .browser-dot {
+      width: 1.8mm;
+      height: 1.8mm;
+      border-radius: 50%;
+      background: #ff5f56;
+    }
+    .browser-dot:nth-child(2) { background: #ffbd2e; }
+    .browser-dot:nth-child(3) { background: #27c93f; }
+    .browser-url {
+      margin-left: auto;
+      margin-right: auto;
+      width: 50mm;
+      height: 4mm;
+      background: #1a1a1a;
+      border-radius: 1mm;
+      font-size: 7px;
+      color: #666;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: monospace;
+    }
+
+    .screen-badge {
+      position: absolute;
+      top: -2mm;
+      left: -2mm;
+      z-index: 2;
+      width: 8mm;
+      height: 8mm;
+      border-radius: 50%;
+      background: var(--green-primary);
+      color: var(--pure-white);
+      font-family: var(--font-display);
+      font-size: 11pt;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    }
+    .page--dark .screen-badge {
+      background: var(--green-light);
+      color: var(--green-deep);
+    }
+
+    /* ── Overall Flow Roadmap Grid (2 Columns) ─────────── */
+    .roadmap-grid-2col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3.5mm 12mm;
+      width: 100%;
+      max-width: 260mm;
+      margin-top: 4mm;
+      position: relative;
+    }
+    .roadmap-node-wrapper {
+      display: flex;
+      align-items: center;
+      position: relative;
+      width: 100%;
+    }
+    .roadmap-node {
+      flex: 1;
+      background: var(--gray-100);
+      border-radius: 3mm;
+      padding: 3mm 4.5mm;
+      display: flex;
+      align-items: center;
+      gap: 3mm;
+      text-align: left;
+      border: 1px solid var(--gray-200);
+    }
+    .roadmap-node-num {
+      flex-shrink: 0;
+      width: 6.5mm;
+      height: 6.5mm;
+      border-radius: 50%;
+      background: var(--green-primary);
+      color: var(--pure-white);
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 11px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .roadmap-node i {
+      font-size: 13pt;
+      color: var(--green-primary);
+      flex-shrink: 0;
+    }
+    .roadmap-node span {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+    .roadmap-node .roadmap-node-where {
+      margin-left: auto;
+      font-family: var(--font-sans);
+      font-size: 9px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--text-muted);
+      background: var(--pure-white);
+      padding: 0.5mm 2mm;
+      border-radius: 1mm;
+      border: 1px solid var(--gray-200);
+    }
+    .roadmap-horizontal-arrow {
+      position: absolute;
+      right: -8mm;
+      z-index: 5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--green-primary);
+    }
+    .roadmap-horizontal-arrow i {
+      font-size: 14pt;
+    }
+
+    /* ── Tables (Checklist) ───────────────────────────── */
+    table.checklist-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1mm;
+      margin-bottom: 1mm;
+    }
+    table.checklist-table th {
+      background-color: var(--green-primary);
+      color: var(--pure-white);
+      font-family: var(--font-display);
+      font-weight: 600;
+      text-align: left;
+      padding: 2mm 3mm;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    table.checklist-table td {
+      padding: 2mm 3mm;
+      border-bottom: 1px solid var(--gray-200);
+      font-size: 12px;
+      font-family: var(--font-sans);
+      color: var(--text-secondary);
+    }
+    table.checklist-table tr:nth-child(even) {
+      background-color: var(--gray-100);
+    }
+    table.checklist-table td strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+    .table-check-square {
+      width: 4mm;
+      height: 4mm;
+      border: 1px solid var(--gray-400);
+      background: var(--pure-white);
+      display: inline-block;
+      border-radius: 0.8mm;
+    }
+
+    /* ── Sign-off Form ────────────────────────────────── */
+    .sign-off-section {
+      margin-top: 3mm;
+      border-top: 1px dashed var(--gray-200);
+      padding-top: 3mm;
+      width: 100%;
+    }
+    .sign-off-grid {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 3mm;
+      gap: 6mm;
+    }
+    .sign-off-col {
+      flex: 1;
+    }
+    .sign-off-field {
+      margin-bottom: 3.5mm;
+      border-bottom: 1px solid var(--gray-200);
+      padding-bottom: 1.2mm;
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+    }
+    .sign-off-label {
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+    .sign-off-value {
+      color: var(--text-muted);
+      font-style: italic;
+    }
+    .sign-off-line {
+      margin-top: 8mm;
+      border-top: 1px solid var(--text-primary);
+      padding-top: 2mm;
+      text-align: center;
+      font-weight: 600;
+      color: var(--text-primary);
+      font-size: 13px;
+      line-height: 1.4;
+    }
+
+    /* ── Placeholders ─────────────────────────────────── */
+    .placeholder {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 110mm;
+      width: 100%;
+      max-width: 116mm;
+      border: 1px dashed var(--gray-200);
+      border-radius: 4mm;
+      background: var(--gray-100);
+      color: var(--text-muted);
+      font-size: 14px;
+      font-weight: 400;
+      gap: 3mm;
+      position: relative;
+    }
+    .placeholder i { font-size: 28pt; opacity: 0.5; }
+    .page--dark .placeholder {
+      border-color: rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.04);
+      color: var(--white-muted);
+    }
+
+    /* ── Cover & Roadmap ──────────────────────────────── */
+    .cover {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 14mm;
+    }
+    .cover-stats {
+      display: flex;
+      gap: 12mm;
+      justify-content: center;
+      margin-top: 8mm;
+    }
+
+    @media print {
+      html, body { background: #fff; margin: 0; padding: 0; }
+      .toolbar { display: none !important; }
+      .page {
+        margin: 0; box-shadow: none; border-radius: 0;
+        width: 297mm; height: 210mm;
+        overflow: hidden;
+        page-break-after: always;
+        page-break-inside: avoid;
+        break-after: page;
+        break-inside: avoid;
+      }
+      .page:last-child {
+        page-break-after: avoid;
+        break-after: avoid;
+      }
+      .page--dark { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .bg-green-deep { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Toolbar -->
+  <div class="toolbar">
+    <span>GS Face - Training Manual (Landscape)</span>
+    <span style="font-size: 10px; color: var(--gray-400);">Export: <code style="background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 4px;">Ctrl+P > Save as PDF</code></span>
+    <button onclick="window.print()">Download PDF</button>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- PAGE 1: COVER                                       -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <section class="page">
+    <div class="content">
+      <div class="hdr">
+        <div class="brand"><img src="../../sales_flyer/favicon.png" alt="GardenSuite" />GardenSuite</div>
+        <div class="tag">Training Manual v1.0</div>
+      </div>
+
+      <div class="cover">
+        <span class="eyebrow" style="margin-bottom: 4mm; display: block;">Standard Operating Procedure</span>
+        <h1 class="headline headline--xl" style="max-width: 220mm; margin-bottom: 4mm;">GS Face &amp; Dashboard<br/>Training Manual</h1>
+        <p class="lead" style="max-width: 180mm; margin-bottom: 8mm;">
+          Step-by-step guide for setting up and operating the GS Face Attendance System and Web Dashboard.
+        </p>
+
+        <div class="cover-stats">
+          <div style="text-align: center;">
+            <div class="stat-big" style="color: var(--green-primary);">9</div>
+            <div class="stat-label">Modules</div>
+          </div>
+          <div style="text-align: center;">
+            <div class="stat-big" style="color: var(--green-primary);">2</div>
+            <div class="stat-label">Platforms</div>
+          </div>
+          <div style="text-align: center;">
+            <div class="stat-big" style="color: var(--green-primary);">&lt;1hr</div>
+            <div class="stat-label">Training Time</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ftr">
+        <span>Sarbani Associates, Bagdogra, Siliguri</span>
+        <span>&copy; 2026 Sarbani Associates</span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- PAGE 2: OVERALL FLOW DIAGRAM                        -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <section class="page">
+    <div class="content">
+      <div class="hdr">
+        <div class="brand"><img src="../../sales_flyer/favicon.png" alt="GardenSuite" />GardenSuite</div>
+        <div class="tag">01 / 12 - Overview</div>
+      </div>
+
+      <div class="flow-layout" style="justify-content: flex-start; padding-top: 2mm;">
+        <span class="eyebrow" style="display: block; margin-bottom: 2mm;">Complete Workflow</span>
+        <h2 class="headline" style="font-size: 26px; margin-bottom: 1mm;">Follow These 9 Steps</h2>
+        <p class="lead" style="max-width: 200mm; margin-bottom: 4mm;">
+          Start at Step 1 on the Dashboard. End at Step 9. Each step builds on the previous one.
+        </p>
+
+        <div class="roadmap-grid-2col">
+          <!-- Row 1 -->
+          <div class="roadmap-node-wrapper">
+            <div class="roadmap-node">
+              <div class="roadmap-node-num">1</div>
+              <i class="ph-duotone ph-gear"></i>
+              <span>Master Data Setup</span>
+              <div class="roadmap-node-where">Dashboard</div>
+            </div>
+            <div class="roadmap-horizontal-arrow"><i class="ph-bold ph-arrow-right"></i></div>
+          </div>
+          <div class="roadmap-node-wrapper">
+            <div class="roadmap-node">
+              <div class="roadmap-node-num">2</div>
+              <i class="ph-duotone ph-arrows-clockwise"></i>
+              <span>Sync to Phone</span>
+              <div class="roadmap-node-where">App</div>
+            </div>
+          </div>
+
+          <!-- Row 2 -->
+          <div class="roadmap-node-wrapper">
+            <div class="roadmap-node">
+              <div class="roadmap-node-num">3</div>
+              <i class="ph-duotone ph-user-circle-plus"></i>
+              <span>Enroll Faces</span>
+              <div class="roadmap-node-where">App</div>
+            </div>
+            <div class="roadmap-horizontal-arrow"><i class="ph-bold ph-arrow-right"></i></div>
+          </div>
+          <div class="roadmap-node-wrapper">
+            <div class="roadmap-node">
+              <div class="roadmap-node-num">4</div>
+              <i class="ph-duotone ph-sliders-horizontal"></i>
+              <span>Check App Settings</span>
+              <div class="roadmap-node-where">App</div>
+            </div>
+          </div>
+
+          <!-- Row 3 -->
+          <div class="roadmap-node-wrapper">
+            <div class="roadmap-node">
+              <div class="roadmap-node-num">5</div>
+              <i class="ph-duotone ph-scan"></i>
+              <span>Mark Harvest</span>
+              <div class="roadmap-node-where">App</div>
+            </div>
+            <div class="roadmap-horizontal-arrow"><i class="ph-bold ph-arrow-right"></i></div>
+          </div>
+          <div class="roadmap-node-wrapper">
+            <div class="roadmap-node">
+              <div class="roadmap-node-num">6</div>
+              <i class="ph-duotone ph-scan"></i>
+              <span>Mark Punch</span>
+              <div class="roadmap-node-where">App</div>
+            </div>
+          </div>
+
+          <!-- Row 4 -->
+          <div class="roadmap-node-wrapper">
+            <div class="roadmap-node">
+              <div class="roadmap-node-num">7</div>
+              <i class="ph-duotone ph-cloud-arrow-up"></i>
+              <span>Sync to Cloud</span>
+              <div class="roadmap-node-where">App</div>
+            </div>
+            <div class="roadmap-horizontal-arrow"><i class="ph-bold ph-arrow-right"></i></div>
+          </div>
+          <div class="roadmap-node-wrapper">
+            <div class="roadmap-node">
+              <div class="roadmap-node-num">8</div>
+              <i class="ph-duotone ph-table"></i>
+              <span>Verify Synced Logs</span>
+              <div class="roadmap-node-where">Dashboard</div>
+            </div>
+          </div>
+
+          <!-- Row 5 -->
+          <div class="roadmap-node-wrapper">
+            <div class="roadmap-node">
+              <div class="roadmap-node-num">9</div>
+              <i class="ph-duotone ph-file-arrow-down"></i>
+              <span>Export Reports</span>
+              <div class="roadmap-node-where">Dashboard</div>
+            </div>
+          </div>
+          <div></div>
+        </div>
+      </div>
+
+      <div class="ftr">
+        <span>GS Face - Training Manual</span>
+        <span>01</span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- PAGE 3: STEP 1 - MASTER DATA (LIGHT)                -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <section class="page">
+    <div class="content">
+      <div class="hdr">
+        <div class="brand"><img src="../../sales_flyer/favicon.png" alt="GardenSuite" />GardenSuite</div>
+        <div class="tag">02 / 12 - Master Data</div>
+      </div>
+
+      <div class="split-layout">
+        <div class="split-col-left">
+          <span class="eyebrow">Step 1 of 9 - Dashboard</span>
+          <h2 class="headline" style="margin-bottom: 3mm;">Configure Master Data</h2>
+          <p class="lead" style="margin-bottom: 4mm;">
+            Configure your worker profile database, garden sections, and activity work codes on the Web Dashboard before opening the mobile app.
+          </p>
+
+          <div class="step-list">
+            <div class="step-item">
+              <div class="step-num">1</div>
+              <div class="step-text">
+                <strong>Add Workers</strong>
+                <span>Enter worker details, PF/ESI codes, and assign divisions on the Dashboard.</span>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">2</div>
+              <div class="step-text">
+                <strong>Define Work Codes</strong>
+                <span>Set up agricultural activities like Plucking, Weeding, or Factory task codes.</span>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">3</div>
+              <div class="step-text">
+                <strong>Add Section Map</strong>
+                <span>Enter physical block divisions to map plucking weights accurately.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="split-col-right">
+          <div class="hero-frame hero-frame--browser">
+            <div class="browser-bar">
+              <div class="browser-dot"></div>
+              <div class="browser-dot"></div>
+              <div class="browser-dot"></div>
+              <div class="browser-url">mis.gardensuite.in/settings</div>
+            </div>
+            <div class="screen-badge">1</div>
+            <img src="assets/desktop-settings-config.png" alt="Dashboard settings configuration" />
+          </div>
+        </div>
+      </div>
+
+      <div class="ftr">
+        <span>GS Face - Training Manual</span>
+        <span>02</span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- PAGE 4: STEP 2 - SYNC SETTINGS (LIGHT)              -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <section class="page">
+    <div class="content">
+      <div class="hdr">
+        <div class="brand"><img src="../../sales_flyer/favicon.png" alt="GardenSuite" />GardenSuite</div>
+        <div class="tag">03 / 12 - Sync Settings</div>
+      </div>
+
+      <div class="split-layout">
+        <div class="split-col-left">
+          <span class="eyebrow">Step 2 of 9 - Mobile App</span>
+          <h2 class="headline" style="margin-bottom: 3mm;">Sync Data to Phone</h2>
+          <p class="lead" style="margin-bottom: 4mm;">
+            Download workers, divisions, and active work codes from the cloud database to the mobile device. This syncs the offline app database.
+          </p>
+
+          <div class="step-list">
+            <div class="step-item">
+              <div class="step-num">1</div>
+              <div class="step-text">
+                <strong>Open App Settings</strong>
+                <span>Tap the gear icon on the main app dashboard.</span>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">2</div>
+              <div class="step-text">
+                <strong>Verify Server URL</strong>
+                <span>Ensure the correct garden server domain is set (provided by Sarbani Associates).</span>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">3</div>
+              <div class="step-text">
+                <strong>Tap "Sync Now"</strong>
+                <span>Downloads the latest employee profiles and settings to the phone's offline database.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="split-col-right">
+          <div class="hero-frame hero-frame--mobile">
+            <div class="screen-badge">2</div>
+            <img src="assets/32_settings_sync_status.png" alt="Sync settings screen" />
+          </div>
+        </div>
+      </div>
+
+      <div class="ftr">
+        <span>GS Face - Training Manual</span>
+        <span>03</span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- PAGE 5: STEP 3 - FACE ENROLLMENT (DARK)             -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <section class="page page--dark">
+    <div class="content">
+      <div class="hdr">
+        <div class="brand brand--light"><img src="../../sales_flyer/icon-white.svg" alt="GardenSuite" />GardenSuite</div>
+        <div class="tag tag--light">04 / 12 - Face Enrollment</div>
+      </div>
+
+      <div class="flow-layout">
+        <span class="eyebrow eyebrow--light" style="margin-bottom: 2mm;">Step 3 of 9 - Mobile App</span>
+        <h2 class="headline headline--light headline--md" style="margin-bottom: 1mm;">Enroll Worker Faces</h2>
+        <p class="lead lead--light" style="margin-bottom: 2mm; max-width: 220mm;">
+          Register worker biometric profiles. Follow three steps: select worker name, capture face in good lighting, and review and save.
+        </p>
+
+        <!-- 3 screenshots with arrows between them -->
+        <div class="flow-row">
+          <div class="hero-frame hero-frame--mobile" style="max-width: 44mm;">
+            <div class="screen-badge">1</div>
+            <img src="assets/22_enrollment_worker_ready.png" alt="Select worker" />
+          </div>
+
+          <div class="flow-arrow">
+            <i class="ph-bold ph-arrow-right"></i>
+          </div>
+
+          <div class="hero-frame hero-frame--mobile" style="max-width: 44mm;">
+            <div class="screen-badge">2</div>
+            <img src="assets/23_enrollment_capture.png" alt="Capture face" />
+          </div>
+
+          <div class="flow-arrow">
+            <i class="ph-bold ph-arrow-right"></i>
+          </div>
+
+          <div class="hero-frame hero-frame--mobile" style="max-width: 44mm;">
+            <div class="screen-badge">3</div>
+            <img src="assets/24_enrollment_review.png" alt="Review and save" />
+          </div>
+        </div>
+
+        <!-- Step descriptions below -->
+        <div class="steps-strip">
+          <div class="step-card">
+            <div class="step-num">1</div>
+            <div class="step-card-text">
+              <strong>Select Worker Name</strong>
+              <span>Search by code/name or scroll active master database.</span>
+            </div>
+          </div>
+          <div class="step-card">
+            <div class="step-num">2</div>
+            <div class="step-card-text">
+              <strong>Biometric Capture</strong>
+              <span>Look straight into camera in bright daylight. Avoid shadows.</span>
+            </div>
+          </div>
+          <div class="step-card">
+            <div class="step-num">3</div>
+            <div class="step-card-text">
+              <strong>Review &amp; Save</strong>
+              <span>Check image quality, verify details, and tap Save Profile.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ftr ftr--light">
+        <span>GS Face - Training Manual</span>
+        <span>04</span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- PAGE 6: STEP 4 - APP SETTINGS (LIGHT)               -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <section class="page">
+    <div class="content">
+      <div class="hdr">
+        <div class="brand"><img src="../../sales_flyer/favicon.png" alt="GardenSuite" />GardenSuite</div>
+        <div class="tag">05 / 12 - App Settings</div>
+      </div>
+
+      <div class="split-layout">
+        <div class="split-col-left">
+          <span class="eyebrow">Step 4 of 9 - Mobile App</span>
+          <h2 class="headline" style="margin-bottom: 3mm;">App Configuration</h2>
+          <p class="lead" style="margin-bottom: 4mm;">
+            Biometric thresholds, active camera selection, and database import/export options are pre-configured. Do not adjust these values without support.
+          </p>
+
+          <div class="step-list">
+            <div class="step-item">
+              <div class="step-num">1</div>
+              <div class="step-text">
+                <strong>Recognition Threshold</strong>
+                <span>Set to locked brand-safe values (0.75-0.80) to optimize recognition accuracy and speed.</span>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">2</div>
+              <div class="step-text">
+                <strong>Camera Selection</strong>
+                <span>Toggle between front and rear cameras depending on your weighing setup.</span>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">!</div>
+              <div class="step-text">
+                <strong>Biometric Data Backup</strong>
+                <span>Backup face databases offline. Do not change default database locations.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="split-col-right">
+          <div class="hero-frame hero-frame--mobile">
+            <div class="screen-badge">4</div>
+            <img src="assets/28_settings_main.png" alt="App settings screen" />
+          </div>
+        </div>
+      </div>
+
+      <div class="ftr">
+        <span>GS Face - Training Manual</span>
+        <span>05</span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- PAGE 7: STEP 5 - HARVEST ATTENDANCE (DARK)          -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <section class="page page--dark">
+    <div class="content">
+      <div class="hdr">
+        <div class="brand brand--light"><img src="../../sales_flyer/icon-white.svg" alt="GardenSuite" />GardenSuite</div>
+        <div class="tag tag--light">06 / 12 - Harvest Attendance</div>
+      </div>
+
+      <div class="flow-layout">
+        <span class="eyebrow eyebrow--light" style="margin-bottom: 2mm;">Step 5 of 9 - Mobile App</span>
+        <h2 class="headline headline--light headline--md" style="margin-bottom: 1mm;">Mark Harvest Attendance</h2>
+        <p class="lead lead--light" style="margin-bottom: 2mm; max-width: 220mm;">
+          Link plucking weights to verified worker faces. The offline smart weighing system registers weight directly against the scanned biometric profile.
+        </p>
+
+        <div class="flow-row">
+          <div class="hero-frame hero-frame--mobile" style="max-width: 46mm;">
+            <div class="screen-badge">1</div>
+            <img src="assets/14_attendance_capture.png" alt="Scan worker face" />
+          </div>
+
+          <div class="flow-arrow">
+            <i class="ph-bold ph-arrow-right"></i>
+          </div>
+
+          <div class="hero-frame hero-frame--mobile" style="max-width: 46mm;">
+            <div class="screen-badge">2</div>
+            <img src="assets/15_attendance_result_matched.png" alt="Match and weight registered" />
+          </div>
+        </div>
+
+        <div class="steps-strip">
+          <div class="step-card">
+            <div class="step-num">1</div>
+            <div class="step-card-text">
+              <strong>Scan Face</strong>
+              <span>Position the device camera towards the plucker. Recognition is on-device and instantaneous.</span>
+            </div>
+          </div>
+          <div class="step-card">
+            <div class="step-num">2</div>
+            <div class="step-card-text">
+              <strong>Weigh &amp; Save</strong>
+              <span>Verify name on screen. Plucking weight downloads automatically from the scale. Tap Save.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ftr ftr--light">
+        <span>GS Face - Training Manual</span>
+        <span>06</span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- PAGE 8: STEP 6 - PUNCH ATTENDANCE (DARK)            -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <section class="page page--dark">
+    <div class="content">
+      <div class="hdr">
+        <div class="brand brand--light"><img src="../../sales_flyer/icon-white.svg" alt="GardenSuite" />GardenSuite</div>
+        <div class="tag tag--light">07 / 12 - Punch Attendance</div>
+      </div>
+
+      <div class="flow-layout">
+        <span class="eyebrow eyebrow--light" style="margin-bottom: 2mm;">Step 6 of 9 - Mobile App</span>
+        <h2 class="headline headline--light headline--md" style="margin-bottom: 1mm;">Mark Punch Attendance</h2>
+        <p class="lead lead--light" style="margin-bottom: 2mm; max-width: 220mm;">
+          Mark biometric hazira (clock-in/clock-out events) for general workers, garden staff, and tea factory personnel.
+        </p>
+
+        <div class="flow-row">
+          <div class="hero-frame hero-frame--mobile" style="max-width: 46mm;">
+            <div class="screen-badge">1</div>
+            <img src="assets/16_punch_capture.png" alt="Punch scan" />
+          </div>
+
+          <div class="flow-arrow">
+            <i class="ph-bold ph-arrow-right"></i>
+          </div>
+
+          <div class="hero-frame hero-frame--mobile" style="max-width: 46mm;">
+            <div class="screen-badge">2</div>
+            <img src="assets/17_punch_result_clock_in.png" alt="Punch registered successfully" />
+          </div>
+        </div>
+
+        <div class="steps-strip">
+          <div class="step-card">
+            <div class="step-num">1</div>
+            <div class="step-card-text">
+              <strong>Biometric Verification</strong>
+              <span>Position worker face inside camera guidelines. Face matching takes less than 1 second.</span>
+            </div>
+          </div>
+          <div class="step-card">
+            <div class="step-num">2</div>
+            <div class="step-card-text">
+              <strong>Punch Confirmed</strong>
+              <span>Audible confirmation sounds. The system logs the exact timestamp and division instantly.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ftr ftr--light">
+        <span>GS Face - Training Manual</span>
+        <span>07</span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- PAGE 9: STEP 7 - ATTENDANCE SYNC (DARK)             -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <section class="page page--dark">
+    <div class="content">
+      <div class="hdr">
+        <div class="brand brand--light"><img src="../../sales_flyer/icon-white.svg" alt="GardenSuite" />GardenSuite</div>
+        <div class="tag tag--light">08 / 12 - Sync Attendance</div>
+      </div>
+
+      <div class="flow-layout">
+        <span class="eyebrow eyebrow--light" style="margin-bottom: 2mm;">Step 7 of 9 - Mobile App</span>
+        <h2 class="headline headline--light headline--md" style="margin-bottom: 1mm;">Sync Attendance Data</h2>
+        <p class="lead lead--light" style="margin-bottom: 2mm; max-width: 220mm;">
+          Attendance data is automatically synced to the cloud. You only need to trigger a manual sync if records are late or connection was lost.
+        </p>
+
+        <div class="flow-row">
+          <div class="hero-frame hero-frame--mobile" style="max-width: 46mm;">
+            <div class="screen-badge">1</div>
+            <img src="assets/10_active_session_empty.png" alt="Offline log overview" />
+          </div>
+
+          <div class="flow-arrow">
+            <div class="flow-label" style="margin-bottom: 1.5mm; color: var(--green-light);">Auto Sync</div>
+            <i class="ph-bold ph-arrows-clockwise" style="color: var(--green-light);"></i>
+          </div>
+
+          <div class="hero-frame hero-frame--mobile" style="max-width: 46mm;">
+            <div class="screen-badge">2</div>
+            <img src="assets/32_settings_sync_status.png" alt="Sync to cloud settings panel" />
+          </div>
+        </div>
+
+        <div class="steps-strip">
+          <div class="step-card">
+            <div class="step-num">1</div>
+            <div class="step-card-text">
+              <strong>Automatic Upload</strong>
+              <span>The app automatically syncs all punches and weights to the Dashboard when internet is active.</span>
+            </div>
+          </div>
+          <div class="step-card">
+            <div class="step-num">2</div>
+            <div class="step-card-text">
+              <strong>Sync Only If Late</strong>
+              <span>If data is delayed or connection was weak, open Settings and tap "Sync Now" to force a manual sync.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ftr ftr--light">
+        <span>GS Face - Training Manual</span>
+        <span>08</span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- PAGE 10: STEP 8 - VERIFY ATTENDANCE (LIGHT)         -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <section class="page">
+    <div class="content">
+      <div class="hdr">
+        <div class="brand"><img src="../../sales_flyer/favicon.png" alt="GardenSuite" />GardenSuite</div>
+        <div class="tag">09 / 12 - Verify Attendance</div>
+      </div>
+
+      <div class="split-layout">
+        <div class="split-col-left">
+          <span class="eyebrow">Step 8 of 9 - Dashboard</span>
+          <h2 class="headline" style="margin-bottom: 3mm;">Verify Synced Attendance</h2>
+          <p class="lead" style="margin-bottom: 4mm;">
+            Open the cloud dashboard to audit synced logs. Verify names, departments, divisions, and plucking weights against physical field books.
+          </p>
+
+          <div class="step-list">
+            <div class="step-item">
+              <div class="step-num">1</div>
+              <div class="step-text">
+                <strong>Load Attendance Panel</strong>
+                <span>Open the Daily Attendance Audit page in your web browser.</span>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">2</div>
+              <div class="step-text">
+                <strong>Filter Date &amp; Shift</strong>
+                <span>Select the correct date and shift division to load synced worker records.</span>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">3</div>
+              <div class="step-text">
+                <strong>Audit Logs</strong>
+                <span>Review biometric punch times and linked plucking weights. Flag or adjust anomalies.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="split-col-right">
+          <div class="hero-frame hero-frame--browser">
+            <div class="browser-bar">
+              <div class="browser-dot"></div>
+              <div class="browser-dot"></div>
+              <div class="browser-dot"></div>
+              <div class="browser-url">mis.gardensuite.in/attendance</div>
+            </div>
+            <div class="screen-badge">8</div>
+            <img src="assets/desktop-attendance.png" alt="Dashboard daily attendance verification" />
+          </div>
+        </div>
+      </div>
+
+      <div class="ftr">
+        <span>GS Face - Training Manual</span>
+        <span>09</span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- PAGE 11: STEP 9 - EXPORT REPORTS (DARK)             -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <section class="page page--dark">
+    <div class="content">
+      <div class="hdr">
+        <div class="brand brand--light"><img src="../../sales_flyer/icon-white.svg" alt="GardenSuite" />GardenSuite</div>
+        <div class="tag tag--light">10 / 12 - Export Reports</div>
+      </div>
+
+      <div class="split-layout">
+        <div class="split-col-left">
+          <span class="eyebrow eyebrow--light">Step 9 of 9 - Dashboard</span>
+          <h2 class="headline headline--light" style="margin-bottom: 3mm;">Export Daily Reports</h2>
+          <p class="lead lead--light" style="margin-bottom: 4mm;">
+            Download daily muster sheets, Kamjari reports, plucking summary spreadsheets, and raw audit logs directly into Excel for payroll processing.
+          </p>
+
+          <div class="step-list">
+            <div class="step-item">
+              <div class="step-num">1</div>
+              <div class="step-text">
+                <strong>Navigate to Reports</strong>
+                <span>Open the Reports tab on the cloud Dashboard navigation panel.</span>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">2</div>
+              <div class="step-text">
+                <strong>Select Report Template</strong>
+                <span>Choose from Daily Kamjari, Plucking weighing summary, or raw biometric logs.</span>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">3</div>
+              <div class="step-text">
+                <strong>Export to Excel</strong>
+                <span>Click Export. The system compiles clean Excel sheets ready for payroll import.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="split-col-right">
+          <div class="hero-frame hero-frame--browser" style="background: #1e1e1e;">
+            <div class="browser-bar" style="background: #2b2b2b;">
+              <div class="browser-dot"></div>
+              <div class="browser-dot"></div>
+              <div class="browser-dot"></div>
+              <div class="browser-url">mis.gardensuite.in/reports</div>
+            </div>
+            <div class="screen-badge">9</div>
+            <img src="assets/desktop-reports.png" alt="Dashboard reports panel" />
+          </div>
+        </div>
+      </div>
+
+      <div class="ftr ftr--light">
+        <span>GS Face - Training Manual</span>
+        <span>10</span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- PAGE 12: USER ACCEPTANCE CHECKLIST (LIGHT)          -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <section class="page">
+    <div class="content">
+      <div class="hdr">
+        <div class="brand"><img src="../../sales_flyer/favicon.png" alt="GardenSuite" />GardenSuite</div>
+        <div class="tag">11 / 12 - User Acceptance</div>
+      </div>
+
+      <div class="split-layout" style="grid-template-columns: 0.9fr 1.11fr; gap: 8mm;">
+        <div class="split-col-left" style="justify-content: flex-start; padding-top: 2mm;">
+          <span class="eyebrow">Final Review</span>
+          <h2 class="headline" style="margin-bottom: 3mm; font-size: 28px;">User Acceptance Checklist</h2>
+          <p class="lead" style="margin-bottom: 4mm; font-size: 14px; line-height: 1.5;">
+            This checklist represents the official handoff agreement between the implementing team of <strong>Sarbani Associates</strong> and the client tea estate. 
+          </p>
+          <p class="lead" style="font-size: 13.5px; line-height: 1.5; color: var(--text-muted);">
+            Please review and tick each checkbox only when the designated garden staff can perform the task independently.
+          </p>
+          
+          <div style="margin-top: 6mm; border-left: 3px solid var(--green-accent); padding-left: 4mm;">
+            <strong style="font-size: 13.5px; color: var(--text-primary); display: block; margin-bottom: 1.5mm;">Implementation Note</strong>
+            <span style="font-size: 12.5px; color: var(--text-secondary); line-height: 1.4; display: block;">
+              Biometric face profiles and weighing logs are stored in encrypted databases on the local devices, ensuring complete confidentiality.
+            </span>
+          </div>
+        </div>
+
+        <div class="split-col-right" style="align-items: flex-start; justify-content: flex-start; padding-top: 2mm;">
+          <table class="checklist-table">
+            <thead>
+              <tr>
+                <th style="width: 30%;">Module</th>
+                <th style="width: 58%;">Operational Capability Description</th>
+                <th style="width: 12%; text-align: center;">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Employee Master</strong></td>
+                <td>Add, edit, and disable workers on the web dashboard.</td>
+                <td style="text-align: center;"><div class="table-check-square"></div></td>
+              </tr>
+              <tr>
+                <td><strong>Work Code Master</strong></td>
+                <td>Create and manage agricultural activities (Plucking, Weeding, etc.).</td>
+                <td style="text-align: center;"><div class="table-check-square"></div></td>
+              </tr>
+              <tr>
+                <td><strong>Section Master</strong></td>
+                <td>Map physical estate blocks and divisions on the dashboard.</td>
+                <td style="text-align: center;"><div class="table-check-square"></div></td>
+              </tr>
+              <tr>
+                <td><strong>Master Data Sync</strong></td>
+                <td>Sync newly added workers and sections to the offline mobile device.</td>
+                <td style="text-align: center;"><div class="table-check-square"></div></td>
+              </tr>
+              <tr>
+                <td><strong>Face Enrollment</strong></td>
+                <td>Register worker faces with correct lighting and framing.</td>
+                <td style="text-align: center;"><div class="table-check-square"></div></td>
+              </tr>
+              <tr>
+                <td><strong>Harvest Attendance</strong></td>
+                <td>Capture plucking weight linked with leaf weighing and face check.</td>
+                <td style="text-align: center;"><div class="table-check-square"></div></td>
+              </tr>
+              <tr>
+                <td><strong>Punch Attendance</strong></td>
+                <td>Capture standard clock-in/out events for staff and factory.</td>
+                <td style="text-align: center;"><div class="table-check-square"></div></td>
+              </tr>
+              <tr>
+                <td><strong>Attendance Sync</strong></td>
+                <td>Understand that attendance syncs automatically, and how to trigger manual sync if late.</td>
+                <td style="text-align: center;"><div class="table-check-square"></div></td>
+              </tr>
+              <tr>
+                <td><strong>Dashboard Audit</strong></td>
+                <td>View and audit daily synced attendance logs in the browser.</td>
+                <td style="text-align: center;"><div class="table-check-square"></div></td>
+              </tr>
+              <tr>
+                <td><strong>Report Export</strong></td>
+                <td>Export Daily Kamjari/Muster sheets to Excel.</td>
+                <td style="text-align: center;"><div class="table-check-square"></div></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="ftr">
+        <span>GS Face - Training Manual</span>
+        <span>11</span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- PAGE 13: TRAINING SIGN-OFF PAGE (LIGHT)             -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <section class="page">
+    <div class="content">
+      <div class="hdr">
+        <div class="brand"><img src="../../sales_flyer/favicon.png" alt="GardenSuite" />GardenSuite</div>
+        <div class="tag">12 / 12 - Training Sign-off</div>
+      </div>
+
+      <div class="split-layout" style="grid-template-columns: 0.95fr 1.05fr; gap: 12mm; flex: 1;">
+        <div class="split-col-left" style="justify-content: space-between; height: 100%; padding: 4mm 0 10mm 0;">
+          <div>
+            <span class="eyebrow">Sign-off</span>
+            <h2 class="headline" style="margin-bottom: 5mm; font-size: 32px; line-height: 1.2;">Training &amp; Acceptance Sign-off</h2>
+            <p class="lead" style="font-size: 15px; line-height: 1.6; margin-bottom: 6mm;">
+              By signing this document, both parties acknowledge that the step-by-step training for the <strong>GardenSuite GS Face Attendance System &amp; Dashboard</strong> has been successfully completed. 
+            </p>
+            <p class="lead" style="font-size: 14px; line-height: 1.6; color: var(--text-muted);">
+              The designated estate operators have demonstrated independent proficiency in all operational modules listed in the User Acceptance Checklist.
+            </p>
+          </div>
+
+          <div style="font-size: 13px; color: var(--text-muted); line-height: 1.6; border-top: 1px solid var(--gray-200); padding-top: 6mm;">
+            <strong>Sarbani Associates</strong><br>
+            Bagdogra, Siliguri, West Bengal, India<br>
+            Email: info@gardensuite.in | Website: www.gardensuite.in<br>
+            <span style="font-size: 11px; margin-top: 2mm; display: block; color: var(--text-muted);">&copy; 2026 Sarbani Associates. Proprietary and Confidential.</span>
+          </div>
+        </div>
+
+        <div class="split-col-right" style="flex-direction: column; align-items: stretch; justify-content: space-between; height: 100%; padding: 4mm 0 10mm 0;">
+          <div class="sign-off-section" style="border-top: none; margin-top: 0; padding-top: 0; width: 100%;">
+            <div class="sign-off-grid" style="gap: 10mm;">
+              <div class="sign-off-col">
+                <div class="sign-off-field" style="margin-bottom: 8mm; padding-bottom: 2.5mm; font-size: 14.5px;">
+                  <span class="sign-off-label">Tea Garden Name:</span>
+                  <span class="sign-off-value" style="font-size: 14.5px; letter-spacing: 1px;">____________________</span>
+                </div>
+                <div class="sign-off-field" style="margin-bottom: 8mm; padding-bottom: 2.5mm; font-size: 14.5px;">
+                  <span class="sign-off-label">Training Date:</span>
+                  <span class="sign-off-value" style="font-size: 14.5px; letter-spacing: 1px;">___ / ___ / 2026</span>
+                </div>
+                <div class="sign-off-field" style="margin-bottom: 0; border-bottom: none; padding-bottom: 2.5mm; font-size: 14.5px;">
+                  <span class="sign-off-label">Trainer Name:</span>
+                  <span class="sign-off-value" style="font-size: 14.5px; letter-spacing: 1px;">____________________</span>
+                </div>
+              </div>
+
+              <div class="sign-off-col">
+                <div class="sign-off-field" style="margin-bottom: 8mm; padding-bottom: 2.5mm; font-size: 14.5px;">
+                  <span class="sign-off-label">Client Representative:</span>
+                  <span class="sign-off-value" style="font-size: 14.5px; letter-spacing: 1px;">____________________</span>
+                </div>
+                <div class="sign-off-field" style="margin-bottom: 8mm; padding-bottom: 2.5mm; font-size: 14.5px;">
+                  <span class="sign-off-label">Designation:</span>
+                  <span class="sign-off-value" style="font-size: 14.5px; letter-spacing: 1px;">____________________</span>
+                </div>
+                <div class="sign-off-field" style="margin-bottom: 0; border-bottom: none; padding-bottom: 2.5mm; font-size: 14.5px;">
+                  <span class="sign-off-label">Contact Number:</span>
+                  <span class="sign-off-value" style="font-size: 14.5px; letter-spacing: 1px;">____________________</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="sign-off-grid" style="margin-top: auto; gap: 10mm; width: 100%;">
+            <div class="sign-off-col">
+              <div class="sign-off-line" style="margin-top: 22mm; padding-top: 3mm; font-size: 14px;">
+                Trainer Signature<br>
+                <span style="font-size: 12px; font-weight: 400; color: var(--text-muted);">Sarbani Associates Representative</span>
+              </div>
+            </div>
+            <div class="sign-off-col">
+              <div class="sign-off-line" style="margin-top: 22mm; padding-top: 3mm; font-size: 14px;">
+                Client Signature &amp; Stamp<br>
+                <span style="font-size: 12px; font-weight: 400; color: var(--text-muted);">Authorized Estate Representative</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ftr">
+        <span>GS Face - Training Manual</span>
+        <span>12</span>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

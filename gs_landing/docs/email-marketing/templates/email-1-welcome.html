@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Your attendance problem is solved</title>
+		<title>Your attendance and weighing guide</title>
 		<style>
 			body {
 				margin: 0;
@@ -104,39 +104,34 @@
 			</div>
 
 			<div class="content">
-				<p>Hi {{ contact.FIRSTNAME | default: "there" }},</p>
+				<p>Hello {{ contact.FIRSTNAME | default: "there" }},</p>
 
-				<p>
-					Welcome. You are one step closer to fixing your garden's attendance and weighing problem.
-				</p>
+				<p>Thank you for requesting the GardenSuite attendance and weighing guide.</p>
 
-				<p>
-					GardenSuite's face attendance + wireless scale combo is already running at 20+ tea estates
-					across Assam, Dooars, Terai and Darjeeling.
-				</p>
-
-				<p><strong>Here is what you get:</strong></p>
+				<p><strong>The field flow is simple:</strong></p>
 				<ul>
-					<li>Face recognition attendance - no cards, no fingerprints, no proxy punching</li>
-					<li>Wireless scale - plucking weight links directly to the worker's face</li>
-					<li>Full offline mode - works even without internet</li>
-					<li>Cloud dashboard - see everything from your phone</li>
+					<li>The supervisor checks the worker by face before hazira is saved.</li>
+					<li>The Bluetooth scale sends leaf weight to the same worker record.</li>
+					<li>The app works offline and syncs when internet returns.</li>
+					<li>The office can use the same records for payroll and daily reports.</li>
 				</ul>
+
+				<p>GardenSuite is built and supported by Sarbani Associates, Bagdogra, Siliguri.</p>
 
 				<div class="cta">
 					<a
-						href="https://gardensuite.in/#contact?utm_source=email&utm_medium=automation&utm_campaign=attendance_nurture&utm_content=email_1"
-						>Book a 15-minute demo call</a
+						href="https://gardensuite.in/brochures/GardenSuite_Face_Attendance_Smart_Weighing_Brochure.pdf?utm_source=email&utm_medium=automation&utm_campaign=attendance_nurture&utm_content=email_1"
+						>Open the attendance guide</a
 					>
 				</div>
 
-				<p>Best,<br />Team Sarbani Associates<br />Bagdogra, Siliguri</p>
+				<p>Regards,<br />Sarbani Associates<br />Bagdogra, Siliguri</p>
 			</div>
 
 			<div class="footer">
 				<p><strong>Sarbani Associates</strong></p>
 				<p>Bagdogra, Siliguri</p>
-				<p>WhatsApp: [ADD NUMBER] | Email: sarbaniassociates@gmail.com</p>
+				<p>WhatsApp: +91 97341 01330 | Email: sarbaniassociates@gmail.com</p>
 				<p style="margin-top: 12px; font-size: 12px">
 					<a href="{{ unsubscribe }}">Unsubscribe</a> |
 					<a href="https://gardensuite.in">Visit Website</a>

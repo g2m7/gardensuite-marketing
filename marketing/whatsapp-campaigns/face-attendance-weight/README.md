@@ -1,21 +1,24 @@
 # GardenSuite WhatsApp Campaign - Face Attendance + Smart Weighing
 
-This pack is for cold WhatsApp outreach to tea garden owners, managers, and senior staff.
+This pack is for reviewed, one-to-one WhatsApp outreach to tea garden owners, managers, and senior staff.
 
 Goal: get the first click to the GardenSuite attendance product page, then move interested contacts to a short WhatsApp demo.
 
 ## Files
 
 - `messages.md` - ready-to-send WhatsApp copy
-- `make-whatsapp-assets.ps1` - renders the image creatives from existing GardenSuite graphics
-- `whatsapp-face-weight-square.jpg` - 1080x1080 image for normal WhatsApp sharing
-- `whatsapp-face-weight-status.jpg` - 1080x1920 image for WhatsApp Status
+- `make-whatsapp-assets.ps1` - creates the current workflow images without a price claim
+- `whatsapp-face-weight-square.jpg` - current square workflow image
+- `whatsapp-face-weight-status.jpg` - current status workflow image
+- `archive-do-not-send/` - earlier Rs. 499 images, retained only for history
 
 ## Main Send Order
 
-1. Send the primary message from `messages.md` with link preview enabled.
-2. Send `whatsapp-face-weight-square.jpg` only if the contact engages, or if you want a second touch.
-3. Send the follow-up message once after 2 days.
+1. Select no more than 5 approved contacts from the daily queue.
+2. For a new contact, send the permission-first message without a link.
+3. Send the product link only after the contact replies or where an existing relationship is recorded.
+4. Do not send another message when the first one receives no reply.
+5. Record replies, STOP requests, and demo interest on the same day.
 
 ## Asset Source
 
@@ -26,4 +29,4 @@ The image creative uses existing graphics from:
 
 ## CTA Link
 
-`https://gardensuite.in/products/attendance?utm_source=whatsapp&utm_medium=direct&utm_campaign=face_weight_demo&utm_content=price_v2`
+`https://gardensuite.in/products/attendance?utm_source=whatsapp&utm_medium=direct&utm_campaign=face_weight_demo&utm_content=workflow`

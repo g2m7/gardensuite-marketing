@@ -10,6 +10,7 @@
 	import SolutionWorkflowSection from '$lib/components/product/SolutionWorkflowSection.svelte';
 	import Button from '$lib/components/Button.svelte';
 	import ButtonGroup from '$lib/components/ButtonGroup.svelte';
+	import LeadCapture from '$lib/components/LeadCapture.svelte';
 
 	// Shared layout components
 	import ProductTrustRow from '$lib/components/product/ProductTrustRow.svelte';
@@ -239,6 +240,15 @@
 			headline="Sarbani Associates sets it up with your staff."
 			paragraph="GardenSuite is not handed over as a self-service app. The Sarbani team visits, installs, trains, and supports the garden."
 			steps={rollout}
+		/>
+
+		<LeadCapture
+			title="Get the face attendance and weighing guide"
+			subtitle="See how worker face, hazira, leaf weight, offline capture, and payroll records stay linked."
+			buttonText="Email me the guide"
+			tag="attendance-page"
+			source="attendance-page"
+			campaign="attendance-guide"
 		/>
 
 		<FaqSection

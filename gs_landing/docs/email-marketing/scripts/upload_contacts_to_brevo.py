@@ -1,187 +1,158 @@
-import requests
-import json
+# /// script
+# requires-python = ">=3.11"
+# dependencies = [
+#   "openpyxl>=3.1",
+#   "requests>=2.32",
+# ]
+# ///
+
+"""Safely import owner-approved website opt-ins into Brevo.
+
+The script is a dry run unless both --execute and the confirmation phrase are
+provided. It reads only the "Email Review" sheet from the reviewed workbook.
+"""
+
+from __future__ import annotations
+
+import argparse
 import os
+import re
+import sys
 import time
+from datetime import date
 from pathlib import Path
 
-# Configuration - UPDATE THESE
-BREVO_API_KEY = os.getenv("BREVO_API_KEY", "YOUR_API_KEY_HERE")
-LIST_ID = os.getenv("BREVO_LIST_ID", "YOUR_LIST_ID_HERE")
+import requests
+from openpyxl import load_workbook
 
-# Contact sources
-CONTACT_FILES = [
-    "/Users/g2m7/projects/scripts/extract_garden/data/tea_estate_contacts_v2.xlsx",
-    "/Users/g2m7/projects/scripts/extract_garden/data/tea_estate_contacts.xlsx",
-    "/Users/g2m7/projects/scripts/extract_garden/data/Tea Estates.xlsx",
-    "/Users/g2m7/projects/scripts/extract_garden/data/Tea Estates number required.xlsx",
-    "/Users/g2m7/projects/scripts/extract_garden/data/email assam.dooars teaestate.xlsx",
-    "/Users/g2m7/projects/scripts/extract_garden/data/Grower_Details_Report_TINSUKIA_pdf823(1).xlsx",
-    "/Users/g2m7/projects/scripts/extract_garden/data/test_gardens.csv",
-]
 
-def create_or_update_contact(email, name="", phone="", garden="", location="", source=""):
-    """Add a single contact to Brevo"""
-    
-    url = "https://api.brevo.com/v3/contacts"
-    
-    headers = {
-        "accept": "application/json",
-        "api-key": BREVO_API_KEY,
-        "content-type": "application/json"
-    }
-    
-    attributes = {}
-    if name:
-        attributes["FIRSTNAME"] = name
-    if phone:
-        attributes["PHONE"] = phone
-    if garden:
-        attributes["GARDEN"] = garden
-    if location:
-        attributes["LOCATION"] = location
-    if source:
-        attributes["SOURCE"] = source
-    
+API_URL = "https://api.brevo.com/v3/contacts"
+CONFIRMATION = "I_HAVE_REVIEWED_PERMISSION"
+DEFAULT_FILE = Path(__file__).resolve().parents[4] / "outputs" / "gardensuite_outreach_ready_20260802" / "GardenSuite_Outreach_Ready_20260802.xlsx"
+
+
+def text(value: object) -> str:
+    return "" if value is None else str(value).strip()
+
+
+def valid_email(value: str) -> bool:
+    return bool(re.fullmatch(r"[^\s@]+@[^\s@]+\.[^\s@]+", value))
+
+
+def approved_contacts(path: Path) -> tuple[list[dict[str, str]], list[str]]:
+    workbook = load_workbook(path, read_only=True, data_only=True)
+    if "Email Review" not in workbook.sheetnames:
+        raise ValueError('Workbook must contain an "Email Review" sheet.')
+
+    rows = workbook["Email Review"].iter_rows(values_only=True)
+    headers = [text(value) for value in next(rows)]
+    required = {"Estate Name", "Email", "Consent Evidence", "Owner Approval", "Brevo Action", "Sources"}
+    missing = required.difference(headers)
+    if missing:
+        raise ValueError(f"Email Review is missing columns: {', '.join(sorted(missing))}")
+
+    contacts: list[dict[str, str]] = []
+    skipped: list[str] = []
+    for values in rows:
+        row = {headers[index]: text(value) for index, value in enumerate(values)}
+        email = row["Email"].lower()
+        estate = row["Estate Name"] or email
+        if row["Owner Approval"].lower() != "approved":
+            continue
+        if row["Brevo Action"].lower() not in {"add", "import", "subscribe"}:
+            skipped.append(f"{estate}: Brevo Action must be Add, Import, or Subscribe")
+            continue
+        consent = row["Consent Evidence"]
+        if not consent or consent.lower() in {"not recorded", "none", "unknown", "no"}:
+            skipped.append(f"{estate}: explicit email consent is not recorded")
+            continue
+        if not valid_email(email):
+            skipped.append(f"{estate}: invalid email")
+            continue
+        contacts.append(
+            {
+                "email": email,
+                "garden": estate,
+                "consent": consent,
+                "source": row["Sources"][:200],
+            }
+        )
+    workbook.close()
+    return contacts, skipped
+
+
+def upload(contact: dict[str, str], api_key: str, list_id: int) -> tuple[bool, str]:
     payload = {
-        "email": email,
-        "attributes": attributes,
+        "email": contact["email"],
+        "attributes": {
+            "GARDEN": contact["garden"],
+            "CAMPAIGN": "attendance_nurture",
+            "EMAIL_CONSENT": True,
+            "CONSENT_DATE": date.today().isoformat(),
+            "CONSENT_SOURCE": contact["source"],
+            "LEGAL_BASIS": contact["consent"],
+            "GARDENSUITE_TAGS": "gardensuite,attendance-page,reviewed-import",
+        },
+        "listIds": [list_id],
         "updateEnabled": True,
-        "tags": ["gardensuite", "import-2026", "tea-estate"],
     }
-    
-    if LIST_ID and LIST_ID != "YOUR_LIST_ID_HERE":
-        payload["listIds"] = [int(LIST_ID)]
-    
-    try:
-        response = requests.post(url, headers=headers, json=payload)
-        
-        if response.status_code == 204:
-            return {"success": True, "message": "Created"}
-        elif response.status_code == 400:
-            data = response.json()
-            if data.get("code") == "duplicate_parameter":
-                return {"success": True, "message": "Already exists"}
-            return {"success": False, "message": f"Error: {data}"}
-        else:
-            return {"success": False, "message": f"HTTP {response.status_code}"}
-            
-    except Exception as e:
-        return {"success": False, "message": str(e)}
+    response = requests.post(
+        API_URL,
+        headers={"accept": "application/json", "api-key": api_key, "content-type": "application/json"},
+        json=payload,
+        timeout=30,
+    )
+    if response.status_code in {201, 204}:
+        return True, "created or updated"
+    return False, f"HTTP {response.status_code}: {response.text[:300]}"
 
 
-def upload_from_excel(filepath):
-    """Read Excel and upload contacts to Brevo"""
-    
-    # You need to install openpyxl: pip install openpyxl pandas
-    try:
-        import pandas as pd
-    except ImportError:
-        print("Please install pandas and openpyxl:")
-        print("pip install pandas openpyxl")
-        return
-    
-    print(f"\nProcessing: {filepath}")
-    
-    try:
-        df = pd.read_excel(filepath)
-        print(f"Found {len(df)} rows")
-        print(f"Columns: {list(df.columns)}")
-        
-        success_count = 0
-        error_count = 0
-        
-        rows = df.to_dict('records')
-        
-        for idx, row in enumerate(rows):
-            # Try to find email column
-            email = None
-            for col in df.columns:
-                if 'email' in col.lower() or 'e-mail' in col.lower():
-                    val = str(row[col]).strip()
-                    if val and val != 'nan' and '@' in val:
-                        email = val
-                        break
-            
-            if not email:
-                continue
-            
-            # Try to find name
-            name = ""
-            for col in df.columns:
-                if 'name' in col.lower() and 'garden' not in col.lower():
-                    val = str(row[col]).strip()
-                    if val and val != 'nan':
-                        name = val
-                        break
-            
-            # Try to find phone
-            phone = ""
-            for col in df.columns:
-                if 'phone' in col.lower() or 'mobile' in col.lower() or 'contact' in col.lower():
-                    val = str(row[col]).strip()
-                    if val and val != 'nan':
-                        phone = val
-                        break
-            
-            # Try to find garden name
-            garden = ""
-            for col in df.columns:
-                if 'estate' in col.lower() or 'garden' in col.lower():
-                    val = str(row[col]).strip()
-                    if val and val != 'nan':
-                        garden = val
-                        break
-            
-            result = create_or_update_contact(
-                email=email,
-                name=name,
-                phone=phone,
-                garden=garden,
-                source=Path(filepath).name
-            )
-            
-            if result["success"]:
-                success_count += 1
-            else:
-                error_count += 1
-            
-            # Rate limiting - be nice to Brevo API
-            time.sleep(0.5)
-            
-            # Progress
-            row_num = int(idx) + 1
-            if row_num % 10 == 0:
-                print(f"  Processed {row_num}/{len(df)} | Success: {success_count} | Errors: {error_count}")
-        
-        print(f"Done! Success: {success_count} | Errors: {error_count}")
-        
-    except Exception as e:
-        print(f"Error processing file: {e}")
+def arguments() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description="Dry-run or import approved GardenSuite email opt-ins.")
+    parser.add_argument("--file", type=Path, default=DEFAULT_FILE, help="Reviewed outreach workbook.")
+    parser.add_argument("--execute", action="store_true", help="Perform the Brevo API writes.")
+    parser.add_argument("--confirm", default="", help=f"Required with --execute: {CONFIRMATION}")
+    return parser.parse_args()
 
 
-def main():
-    print("="*60)
-    print("GardenSuite Brevo Contact Upload")
-    print("="*60)
-    print(f"API Key: {'Set' if BREVO_API_KEY != 'YOUR_API_KEY_HERE' else 'NOT SET'}")
-    print(f"List ID: {'Set' if LIST_ID != 'YOUR_LIST_ID_HERE' else 'NOT SET'}")
-    print()
-    
-    if BREVO_API_KEY == "YOUR_API_KEY_HERE":
-        print("ERROR: Please set BREVO_API_KEY environment variable")
-        return
-    
-    # Process each file
-    for filepath in CONTACT_FILES:
-        if os.path.exists(filepath):
-            upload_from_excel(filepath)
-        else:
-            print(f"File not found: {filepath}")
-    
-    print("\n" + "="*60)
-    print("Upload complete!")
-    print("="*60)
+def main() -> int:
+    args = arguments()
+    if not args.file.is_file():
+        print(f"ERROR: Workbook not found: {args.file}")
+        return 2
+
+    contacts, skipped = approved_contacts(args.file)
+    print(f"Workbook: {args.file}")
+    print(f"Approved contacts eligible for automated email: {len(contacts)}")
+    print(f"Approved rows rejected by safety checks: {len(skipped)}")
+    for reason in skipped[:10]:
+        print(f"  SKIP: {reason}")
+
+    if not args.execute:
+        print("DRY RUN ONLY. No Brevo contact was changed.")
+        return 0
+    if args.confirm != CONFIRMATION:
+        print(f"ERROR: --execute also requires --confirm {CONFIRMATION}")
+        return 2
+    if not contacts:
+        print("Nothing to import.")
+        return 0
+
+    api_key = os.getenv("BREVO_API_KEY", "").strip()
+    list_value = os.getenv("BREVO_LIST_ID", "").strip()
+    if not api_key or not list_value.isdigit():
+        print("ERROR: BREVO_API_KEY and numeric BREVO_LIST_ID must be set.")
+        return 2
+
+    successes = 0
+    for contact in contacts:
+        ok, message = upload(contact, api_key, int(list_value))
+        print(f"{'OK' if ok else 'ERROR'} {contact['email']}: {message}")
+        successes += int(ok)
+        time.sleep(0.25)
+    print(f"Imported {successes} of {len(contacts)} approved contacts.")
+    return 0 if successes == len(contacts) else 1
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

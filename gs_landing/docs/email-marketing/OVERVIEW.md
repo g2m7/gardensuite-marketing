@@ -10,9 +10,9 @@ We have a lead nurture email sequence that triggers when someone downloads the a
 
 1. **Core Product**: Face attendance + wireless scale combo
 2. **Main USP**: Price (cheaper than traditional biometric systems)
-3. **Speed**: 3-day installation
+3. **Rollout**: On-site workflow review, setup, testing, training, and support
 4. **Trust**: 20+ existing tea garden clients across Assam, Dooars, Terai, Darjeeling
-5. **Low Barrier**: Monthly billing, 30-day refund, local support
+5. **Clear Terms**: Annual or quarterly payment, one-year minimum, and local support
 
 ## How It Works
 
@@ -31,7 +31,7 @@ Enters: name, email, phone, garden name
 POST /api/subscribe  -->  Brevo API
     |
     v
-Contact added to Brevo list with tags: ["brochure-download", "gardensuite", "attendance-page"]
+Contact added to Brevo list with recorded consent and campaign attributes
     |
     v
 Brevo Automation triggers: 7-email nurture sequence
@@ -53,27 +53,18 @@ Sequence goal: Book demo call or request installation
 1. **Day 0** - Welcome + product overview
 2. **Day 2** - Problem deep-dive (proxy punching, paper registers)
 3. **Day 4** - Price advantage vs competitors
-4. **Day 6** - Fast 3-day installation
-5. **Day 8** - Social proof (Rheabari T.E. case study)
-6. **Day 10** - No risk guarantee
+4. **Day 6** - Rollout process
+5. **Day 8** - Region-level proof and confidentiality
+6. **Day 10** - Support and confirmed commercial terms
 7. **Day 12** - Final CTA
 
 ## Contact Database
 
-We have 916+ tea estate contacts from multiple sources:
+The merged source contains 834 lead rows. The review found 118 valid Indian phone numbers and 134 valid email addresses. No row is approved for outreach automatically.
 
-| Source                            | Count   | Key Data                                 |
-| --------------------------------- | ------- | ---------------------------------------- |
-| tea_estate_contacts_v2.xlsx       | 222     | Estate name, phone, email, address, maps |
-| tea_estate_contacts.xlsx          | 173     | Estate name, phone, alternative numbers  |
-| Tea Estates.xlsx                  | 174     | Estate names, areas                      |
-| Tea Estates number required.xlsx  | 84      | Estate names + phone numbers             |
-| email assam.dooars teaestate.xlsx | 149     | Email addresses                          |
-| Grower_Details_Report_TINSUKIA    | 106     | Grower name, garden name, location       |
-| test_gardens.csv                  | 8       | Estate name, phone, manager              |
-| **TOTAL**                         | **916** |                                          |
+**Source**: `marketing/whatsapp-campaigns/face-attendance-weight/GS_Leads_Consolidated_20260802.xlsx`
 
-**Location**: `/Users/g2m7/projects/scripts/extract_garden/data/`
+**Reviewed workbook**: `outputs/gardensuite_outreach_ready_20260802/GardenSuite_Outreach_Ready_20260802.xlsx`
 
 ## Metrics to Track
 
@@ -106,8 +97,7 @@ We have 916+ tea estate contacts from multiple sources:
 
 - **Company**: Sarbani Associates
 - **Location**: Bagdogra, Siliguri
-- **Phone**: [ADD PHONE]
-- **WhatsApp**: [ADD WHATSAPP]
+- **Phone / WhatsApp**: +91 97341 01330
 - **Email**: sarbaniassociates@gmail.com
 
 ## When to Update This Documentation
@@ -121,5 +111,5 @@ We have 916+ tea estate contacts from multiple sources:
 
 ---
 
-**Last Updated**: 2026-05-25  
+**Last Updated**: 2026-08-02
 **Maintained by**: Sarbani Associates / GardenSuite Team

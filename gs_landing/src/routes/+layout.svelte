@@ -3,6 +3,7 @@
 	import { page } from '$app/stores';
 	import GlobalNav from '$lib/components/GlobalNav.svelte';
 	import Footer from '$lib/components/Footer.svelte';
+	import Analytics from '$lib/components/Analytics.svelte';
 
 	let { children } = $props();
 
@@ -18,3 +19,4 @@
 </div>
 
 <Footer />
+<Analytics />

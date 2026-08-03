@@ -56,12 +56,12 @@ Copy each email from `docs/email-marketing/EMAIL_SEQUENCES.md`:
 
 **Email 4** (+2 days):
 
-- Subject: "Up and running in 3 days"
+- Subject: "How GardenSuite is set up"
 - Paste Email 4 copy
 
 **Email 5** (+2 days):
 
-- Subject: "How Rheabari T.E. saved 20 hours every week"
+- Subject: "Built for tea garden field work"
 - Paste Email 5 copy
 
 **Email 6** (+2 days):

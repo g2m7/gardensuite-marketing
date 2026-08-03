@@ -13,15 +13,15 @@ Focused on Face Attendance & Smart Weighing product offering.
 ## Email Structure
 
 Recommended subject: `Face scan to Kamjari ready`
-Recommended preheader: `No loose chits. No proxy attendance. Daily Kamjari is ready faster.`
+Recommended preheader: `Fewer loose chits. Helps check proxy attendance. Daily Kamjari is ready faster.`
 
 1. **Eyebrow** - "Face Attendance & Smart Weighing"
 2. **Headline** - "Scan face. Capture weight. Prepare Kamjari."
-3. **Subhead** - "No loose chits. No proxy attendance. GardenSuite links each worker with verified leaf weight, so daily Kamjari is ready faster."
+3. **Subhead** - "Fewer loose chits. Helps check proxy attendance. GardenSuite links each worker with verified leaf weight, so daily Kamjari is ready faster."
 4. **Hero CTA** - Learn More + Contact Us
 5. **Sneak Peek** - Side-by-side app screenshots (face liveness + active weighing session)
 6. **3 Key Points** - Face check, Scale capture, Works offline
-7. **Pricing** - "Starts from Rs. 499 onwards"
+7. **Pricing** - "Annual software plans start at Rs. 10,000"
 8. **Final CTA** - Dark block with "See How It Works" + "Contact Us"
 9. **Sign-off** - Sarbani Associates contact details
 

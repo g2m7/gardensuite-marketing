@@ -30,11 +30,11 @@ GardenSuite is a tea garden management ERP by Sarbani Associates. We are running
 
 1. **Proxy punching stops** with face recognition
 2. **Price is lower** than traditional biometric systems
-3. **3-day installation** - no IT team needed
+3. **Planned rollout** - timing depends on garden size, devices, records, and staff availability
 4. **20+ tea gardens** already using it
 5. **Local support** from Sarbani Associates in Bagdogra/Siliguri
-6. **Monthly billing** - no long contract
-7. **30-day refund** guarantee
+6. **Annual software plan** - payable annually or quarterly, with a one-year minimum
+7. **Clear written terms** - no blanket refund promise
 
 ### What NOT to Say
 
@@ -75,28 +75,22 @@ email-sequence-attendance-scale.md  # Root level email sequence (legacy backup)
 
 ### Components You CANNOT Modify Without Approval
 
-- Landing page structure (already works)
-- Contact form API behavior
-- Brevo tag names (breaks automation)
+- Landing page structure outside the approved lead capture areas
+- Consent fields or contact storage behaviour
+- Brevo attributes, list ID, or automation rules
 
 ### Places to Add Lead Capture
 
 1. `/products/attendance` - ALREADY DONE
 2. Homepage (`/+page.svelte`) - APPROVED to add
-3. `/w/face-weight-499` - APPROVED to add
+3. The legacy `/w/face-weight-499` route redirects to the attendance page. Do not advertise Rs. 499.
 4. Other product pages - Ask first
 
 ## Brevo Configuration
 
-### Tag Names (NEVER CHANGE THESE)
+### Contact attributes
 
-- `gardensuite` - All GardenSuite contacts
-- `brochure-download` - Downloaded brochure
-- `attendance-page` - From attendance product page
-- `import-2026` - Bulk imported contacts
-- `tea-estate` - Tea estate contact
-- `demo-booked` - Booked a demo
-- `customer` - Active customer
+Use `GARDENSUITE_TAGS` for labels and preserve the consent attributes listed in `BREVO_SETUP.md`. The Brevo contact API does not use a top-level `tags` field for this workflow.
 
 ### List Name (NEVER CHANGE)
 
@@ -105,7 +99,7 @@ email-sequence-attendance-scale.md  # Root level email sequence (legacy backup)
 ### API Variables (from `.env`)
 
 - `BREVO_API_KEY` - API key
-- `BREVO_LIST_ID` - List ID
+- `BREVO_LIST_ID` - List ID `17`
 - `BREVO_SENDER_EMAIL` - Sender email
 - `BREVO_SENDER_NAME` - Sender name
 
@@ -116,9 +110,9 @@ email-sequence-attendance-scale.md  # Root level email sequence (legacy backup)
 1. Day 0: Welcome + product overview
 2. Day 2: Problem deep-dive
 3. Day 4: Price advantage
-4. Day 6: Fast installation
-5. Day 8: Social proof (Rheabari T.E.)
-6. Day 10: No risk guarantee
+4. Day 6: Rollout process
+5. Day 8: Region-level proof and confidentiality
+6. Day 10: Support and confirmed commercial terms
 7. Day 12: Final CTA
 
 ### Timing Rules
@@ -137,23 +131,17 @@ email-sequence-attendance-scale.md  # Root level email sequence (legacy backup)
 
 ## Contact Database Rules
 
-### Source Files Location
+### Source of truth
 
-`/Users/g2m7/projects/scripts/extract_garden/data/`
-
-### Main Files (in priority order)
-
-1. `tea_estate_contacts_v2.xlsx` - Best data (222 rows)
-2. `tea_estate_contacts.xlsx` - Phone numbers (173 rows)
-3. `email assam.dooars teaestate.xlsx` - Emails (149 rows)
-4. `Tea Estates.xlsx` - Names (174 rows)
+`marketing/whatsapp-campaigns/face-attendance-weight/GS_Leads_Consolidated_20260802.xlsx`
 
 ### Upload Process
 
-1. Clean data in Excel
-2. Export as CSV with columns: email, name, phone, garden, location
-3. Import to Brevo with tags
-4. Document what was uploaded in CONTACT_DATABASE.md
+1. Work from the reviewed workbook named in `CONTACT_DATABASE.md`.
+2. Record explicit consent evidence and owner approval.
+3. Run the safe importer in dry-run mode.
+4. Import only rows accepted by the script's safety checks.
+5. Record what was uploaded in `CONTACT_DATABASE.md`.
 
 ## Before Making Changes
 

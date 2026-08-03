@@ -1,175 +1,103 @@
 # Brevo Setup Guide
 
-## Overview
+## Current status
 
-We use Brevo (formerly Sendinblue) for email marketing automation. This guide explains how to configure the automation workflow.
+The Brevo account has the following inactive campaign setup:
 
-## Prerequisites
+- Folder: `GardenSuite Marketing` - ID `16`
+- List: `Tea Garden Leads` - ID `17`
+- Verified sender: `Sarbani Associates <sarbani@sarbaa.com>`
+- Draft templates: IDs `11` to `17`
 
-1. Brevo account (free tier: 300 emails/day)
-2. API key configured in `.env` file
-3. Contact list created
+Do not activate the sequence or import the consolidated lead file directly. The list is only for website opt-ins or contacts with explicit, recorded email consent.
 
-## Step 1: Create Contact List
+## Environment settings
 
-1. Go to Brevo Dashboard > Contacts > Lists
-2. Click "Create a list"
-3. Name: "Tea Garden Leads"
-4. Save and note the **List ID** (shown in URL or list details)
-
-## Step 2: Configure API Key
-
-Add to your `.env` file:
-
-```
-BREVO_API_KEY=your-api-key-here
-BREVO_LIST_ID=your-list-id-here
-BREVO_SENDER_EMAIL=noreply@gardensuite.in
-BREVO_SENDER_NAME="GardenSuite"
+```env
+BREVO_API_KEY=your-api-key
+BREVO_LIST_ID=17
+BREVO_SENDER_EMAIL=sarbani@sarbaa.com
+BREVO_SENDER_NAME="Sarbani Associates"
 ```
 
-## Step 3: Create Automation Workflow
+## Contact attributes
 
-### Setup
+The account contains these GardenSuite attributes:
 
-1. Go to Brevo Dashboard > Automations > Create an automation
-2. Choose: "A contact is added to a list" (or "Contact details updated")
-3. Select list: "Tea Garden Leads"
+- `GARDEN`
+- `LOCATION`
+- `CAMPAIGN`
+- `CONTACT_CONSENT`
+- `EMAIL_CONSENT`
+- `WHATSAPP_CONSENT`
+- `CONSENT_DATE`
+- `CONSENT_SOURCE`
+- `LEGAL_BASIS`
+- `GARDENSUITE_TAGS`
 
-### Add Filter (Optional but Recommended)
+## Automation workflow to create in Brevo
 
-Add condition: Contact has tag "brochure-download" OR "gardensuite"
+1. Create an automation triggered when a contact joins list `Tea Garden Leads`.
+2. Add a filter requiring `EMAIL_CONSENT` to equal `true`.
+3. Use the seven templates below with a two-day delay between emails.
+4. Exit the contact after a reply, demo booking, unsubscribe, or hard bounce.
+5. Test the complete workflow with an address owned by Sarbani Associates.
+6. Verify mobile layout, links, reply handling, and unsubscribe handling.
+7. Activate only after the test contact exits correctly.
 
-## Step 4: Build the Email Sequence
+| Day | Template ID | Template name |
+| --- | ---: | --- |
+| 0 | 11 | GardenSuite Nurture 01 - Guide |
+| 2 | 12 | GardenSuite Nurture 02 - Record Problem |
+| 4 | 13 | GardenSuite Nurture 03 - Clear Pricing |
+| 6 | 14 | GardenSuite Nurture 04 - Rollout |
+| 8 | 15 | GardenSuite Nurture 05 - Practical Proof |
+| 10 | 16 | GardenSuite Nurture 06 - Support Terms |
+| 12 | 17 | GardenSuite Nurture 07 - Final Demo |
 
-Add these emails with 2-day delays between each:
+The approved copy is in `EMAIL_SEQUENCES.md` and `templates/`.
 
-### Email 1: Welcome (Immediate)
+## Contact import safety
 
-**Subject**: Your attendance problem is solved - here is how  
-**From**: GardenSuite <noreply@gardensuite.in>  
-**Reply-to**: sarbaniassociates@gmail.com
+Use the reviewed workbook. Set `Owner Approval` to `Approved`, add real consent evidence, and set `Brevo Action` to `Add`, `Import`, or `Subscribe`.
 
-Copy from `../EMAIL_SEQUENCES.md` - Email 1
+Run a dry check first:
 
-### Email 2: The Problem (Day 2)
-
-**Subject**: The hidden cost of manual attendance
-
-Copy from `../EMAIL_SEQUENCES.md` - Email 2
-
-### Email 3: Price Advantage (Day 4)
-
-**Subject**: Why pay more for less?
-
-Copy from `../EMAIL_SEQUENCES.md` - Email 3
-
-### Email 4: Fast Implementation (Day 6)
-
-**Subject**: Up and running in 3 days
-
-Copy from `../EMAIL_SEQUENCES.md` - Email 4
-
-### Email 5: Social Proof (Day 8)
-
-**Subject**: How Rheabari T.E. saved 20 hours every week
-
-Copy from `../EMAIL_SEQUENCES.md` - Email 5
-
-### Email 6: No Risk (Day 10)
-
-**Subject**: No risk. No long contract. Cancel anytime.
-
-Copy from `../EMAIL_SEQUENCES.md` - Email 6
-
-### Email 7: Final CTA (Day 12)
-
-**Subject**: Ready to fix attendance and weighing?
-
-Copy from `../EMAIL_SEQUENCES.md` - Email 7
-
-## Step 5: Set Exit Conditions
-
-Contacts exit the sequence when they:
-
-- Click "Book Demo" link
-- Reply to any email
-- Are added to "Demo Booked" list
-
-## Step 6: Test the Workflow
-
-1. Add a test email to the list
-2. Check if emails send correctly
-3. Verify unsubscribe links work
-4. Check mobile rendering
-
-## Step 7: Upload Contacts
-
-1. Import contacts from Excel (see CONTACT_DATABASE.md)
-2. Tag them appropriately
-3. Add to "Tea Garden Leads" list
-4. Automation will start immediately
-
-## Tracking Links
-
-Use these UTM parameters in all email links:
-
-```
-?utm_source=email&utm_medium=automation&utm_campaign=attendance_nurture&utm_content=email_[NUMBER]
+```powershell
+uv run gs_landing/docs/email-marketing/scripts/upload_contacts_to_brevo.py
 ```
 
-Example for Email 3:
+The script performs no writes unless both safety flags are supplied:
 
+```powershell
+uv run gs_landing/docs/email-marketing/scripts/upload_contacts_to_brevo.py --execute --confirm I_HAVE_REVIEWED_PERMISSION
 ```
-https://gardensuite.in/products/attendance?utm_source=email&utm_medium=automation&utm_campaign=attendance_nurture&utm_content=email_3
+
+Do not use the importer for cold directory addresses. Send any justified one-to-one business email manually and record the outcome in the workbook.
+
+## Tracking links
+
+Use this pattern:
+
+```text
+https://gardensuite.in/products/attendance?utm_source=email&utm_medium=automation&utm_campaign=attendance_nurture&utm_content=email_1
 ```
-
-## Brevo Templates
-
-Create these templates in Brevo for reuse:
-
-1. **GardenSuite Welcome** - Email 1
-2. **Problem Deep Dive** - Email 2
-3. **Price Advantage** - Email 3
-4. **Fast Setup** - Email 4
-5. **Social Proof** - Email 5
-6. **Risk Reversal** - Email 6
-7. **Final CTA** - Email 7
 
 ## Monitoring
 
-Check weekly:
+Check after each pilot batch:
 
-- Open rates per email
-- Click rates per email
-- Unsubscribe rate
-- Demo bookings from email
-- Bounce rate
+- delivery and hard bounces
+- replies and demo requests
+- unsubscribe requests
+- spam complaints
+- correct suppression of contacts who opted out
 
-## Troubleshooting
-
-| Problem                 | Solution                                             |
-| ----------------------- | ---------------------------------------------------- |
-| Emails not sending      | Check API key, list ID, sender email verification    |
-| Low open rates          | Test subject lines, check spam folder, verify sender |
-| High bounce rate        | Clean email list, remove invalid addresses           |
-| Contacts not triggering | Check tag filters, list assignment                   |
-
-## Cost
-
-Brevo free tier:
-
-- 300 emails/day
-- Unlimited contacts
-- Basic automation
-
-Upgrade if you need:
-
-- More than 300 emails/day
-- Advanced segmentation
-- A/B testing
+Pause the campaign if a hard bounce, complaint, or unexpected automation behaviour appears during the first pilot.
 
 ## Support
 
-Brevo Help: https://help.brevo.com  
-API Docs: https://developers.brevo.com
+- Brevo Help: https://help.brevo.com
+- Brevo API: https://developers.brevo.com
+
+Maintained by Sarbani Associates.

@@ -1,12 +1,9 @@
 import { json, type RequestHandler } from '@sveltejs/kit';
 import { env } from '$env/dynamic/private';
+import { cleanText as clean, saveLeadToBrevo } from '$lib/server/brevo';
 
 const DEFAULT_TO = 'sarbaniassociates@gmail.com';
 const DEFAULT_SENDER_NAME = 'GardenSuite';
-
-function clean(value: unknown): string {
-	return typeof value === 'string' ? value.trim().slice(0, 1000) : '';
-}
 
 function escapeHtml(value: string): string {
 	return value
@@ -23,6 +20,9 @@ export const POST: RequestHandler = async ({ request }) => {
 	if (!data || typeof data !== 'object') {
 		return json({ message: 'Please fill the form and try again.' }, { status: 400 });
 	}
+	if (clean(data.website)) {
+		return json({ message: 'Enquiry sent. We will contact you soon.' });
+	}
 
 	const need = clean(data.need) || 'GardenSuite enquiry';
 	const name = clean(data.name);
@@ -30,6 +30,11 @@ export const POST: RequestHandler = async ({ request }) => {
 	const email = clean(data.email);
 	const garden = clean(data.garden);
 	const message = clean(data.message);
+	const source = clean(data.source) || 'homepage-contact';
+	const campaign = clean(data.campaign) || 'website-enquiry';
+	const contactConsent = data.contactConsent === true;
+	const emailMarketingConsent = data.emailMarketingConsent === true;
+	const whatsappMarketingConsent = data.whatsappMarketingConsent === true;
 
 	if (!name) {
 		return json({ message: 'Please enter your name.' }, { status: 400 });
@@ -37,6 +42,12 @@ export const POST: RequestHandler = async ({ request }) => {
 
 	if (!phone && !email) {
 		return json({ message: 'Please enter a phone number or email address.' }, { status: 400 });
+	}
+	if (!contactConsent) {
+		return json(
+			{ message: 'Please confirm that Sarbani Associates may reply to this enquiry.' },
+			{ status: 400 }
+		);
 	}
 
 	const brevoApiKey = env.BREVO_API_KEY;
@@ -60,7 +71,11 @@ export const POST: RequestHandler = async ({ request }) => {
 		phone ? `Phone: ${phone}` : '',
 		email ? `Email: ${email}` : '',
 		garden ? `Garden: ${garden}` : '',
-		message ? `Message: ${message}` : ''
+		message ? `Message: ${message}` : '',
+		`Source: ${source}`,
+		`Campaign: ${campaign}`,
+		`Email updates: ${emailMarketingConsent ? 'Yes' : 'No'}`,
+		`WhatsApp updates: ${whatsappMarketingConsent ? 'Yes' : 'No'}`
 	].filter(Boolean);
 
 	const htmlRows = lines
@@ -69,6 +84,27 @@ export const POST: RequestHandler = async ({ request }) => {
 			return `<tr><td style="padding:8px 12px;font-weight:700;border-bottom:1px solid #e5e7eb;">${escapeHtml(label)}</td><td style="padding:8px 12px;border-bottom:1px solid #e5e7eb;">${escapeHtml(rest.join(':').trim())}</td></tr>`;
 		})
 		.join('');
+
+	let leadSaved = false;
+	try {
+		await saveLeadToBrevo({
+			email,
+			name,
+			phone,
+			garden,
+			source,
+			campaign,
+			tags: ['gardensuite', source],
+			consent: {
+				contact: true,
+				emailMarketing: emailMarketingConsent,
+				whatsappMarketing: whatsappMarketingConsent
+			}
+		});
+		leadSaved = true;
+	} catch (error) {
+		console.error('Brevo contact save failed:', error);
+	}
 
 	try {
 		const response = await fetch('https://api.brevo.com/v3/smtp/email', {
@@ -108,6 +144,9 @@ export const POST: RequestHandler = async ({ request }) => {
 		return json({ message: 'Enquiry sent. We will contact you soon.' });
 	} catch (error) {
 		console.error('Contact form email failed:', error);
+		if (leadSaved) {
+			return json({ message: 'Enquiry saved. We will contact you soon.' });
+		}
 		return json(
 			{ message: 'Could not send the enquiry right now. Please use WhatsApp for now.' },
 			{ status: 502 }

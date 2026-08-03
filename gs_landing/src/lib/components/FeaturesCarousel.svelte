@@ -7,7 +7,7 @@
 	const features = [
 		{
 			title: 'Face attendance',
-			desc: 'that stops proxy punching. Worker identity verified by face scan on mobile before hazira is marked. Works offline.',
+			desc: 'that helps stop proxy attendance. Worker identity is checked by face scan before hazira is marked. Works offline.',
 			image: '/img/home/face-attendance.png',
 			imageWebp: '/img/home/face-attendance-800.webp',
 			href: '/products/attendance',
@@ -24,7 +24,7 @@
 		},
 		{
 			title: 'Smart weighing',
-			desc: 'that links leaf weight to verified workers. Wireless scale sends weight directly to the phone. No register, no errors.',
+			desc: 'that links leaf weight to verified workers. The wireless scale sends weight directly to the phone and reduces repeated entry.',
 			image: '/img/home/smart-weighing.png',
 			imageWebp: '/img/home/smart-weighing-800.webp',
 			href: '#features',

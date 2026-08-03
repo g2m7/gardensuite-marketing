@@ -10,7 +10,9 @@ const pages = [
 	{ path: '/products/mis', priority: '0.9', changefreq: 'monthly', lastmod: '2026-06-03' },
 	{ path: '/products/payroll', priority: '0.9', changefreq: 'monthly', lastmod: '2026-06-03' },
 	{ path: '/products/factory', priority: '0.9', changefreq: 'monthly', lastmod: '2026-06-03' },
-	{ path: '/products/stores', priority: '0.9', changefreq: 'monthly', lastmod: '2026-06-03' }
+	{ path: '/products/stores', priority: '0.9', changefreq: 'monthly', lastmod: '2026-06-03' },
+	{ path: '/privacy', priority: '0.3', changefreq: 'yearly', lastmod: '2026-08-02' },
+	{ path: '/terms', priority: '0.3', changefreq: 'yearly', lastmod: '2026-08-02' }
 ];
 
 export const GET: RequestHandler = () => {
