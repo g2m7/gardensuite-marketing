@@ -67,6 +67,16 @@ That means:
 - no heavy glassmorphism
 - no oversized pill treatments everywhere
 
+### Shadows
+
+- heavy shadows are prohibited
+- prefer borders and surface contrast before adding a shadow
+- use neutral black shadows only
+- maximum shadow: `0 12px 30px rgba(0,0,0,0.10)`
+- card shadow: `0 6px 18px rgba(0,0,0,0.06)`
+- elevated screenshot or overlay: `0 10px 28px rgba(0,0,0,0.10)`
+- do not use `shadow-lg`, `shadow-xl`, `shadow-2xl`, colored glows, or dramatic hover elevation
+
 ### Navigation
 
 - keep minimal

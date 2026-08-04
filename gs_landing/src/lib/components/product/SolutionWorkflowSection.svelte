@@ -91,7 +91,7 @@
 			</div>
 
 			<div
-				class="relative overflow-hidden rounded-2xl border border-[#0F2E0C]/15 bg-[#0B1712] p-4 shadow-[0_30px_90px_rgba(15,46,12,0.18)] md:p-5"
+				class="relative overflow-hidden rounded-2xl border border-[#0F2E0C]/15 bg-[#0B1712] p-4 shadow-[0_10px_28px_rgba(0,0,0,0.10)] md:p-5"
 			>
 				{#if showBackgroundImages}
 					<picture>
@@ -122,31 +122,23 @@
 						/>
 					</picture>
 				{:else}
-					<div
-						class="dot-grid absolute inset-0 z-0 opacity-10 rounded-xl"
-					></div>
+					<div class="dot-grid absolute inset-0 z-0 rounded-xl opacity-10"></div>
 				{/if}
 
 				<div
 					class="relative z-10 rounded-xl border border-white/15 bg-white/[0.04] p-6 backdrop-blur-sm md:p-8"
 				>
 					<div
-						class="mx-auto max-w-[420px] rounded-3xl border border-white/30 bg-white/95 p-5 shadow-[0_20px_60px_rgba(0,0,0,0.18)] md:p-6"
+						class="mx-auto max-w-[420px] rounded-3xl border border-white/30 bg-white/95 p-5 shadow-[0_10px_28px_rgba(0,0,0,0.10)] md:p-6"
 					>
-						<div
-							class="mb-5 flex items-center justify-between border-b border-[#E4E4E7] pb-4"
-						>
+						<div class="mb-5 flex items-center justify-between border-b border-[#E4E4E7] pb-4">
 							<div>
 								{#if cardHeaderTag}
-									<div
-										class="text-[13px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase"
-									>
+									<div class="text-[13px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase">
 										{cardHeaderTag}
 									</div>
 								{/if}
-								<div
-									class="mt-1 text-[22px] font-semibold tracking-[-0.02em] text-[#111111]"
-								>
+								<div class="mt-1 text-[22px] font-semibold tracking-[-0.02em] text-[#111111]">
 									{cardHeaderTitle}
 								</div>
 							</div>

@@ -20,37 +20,37 @@
 	const rollout = [
 		{
 			step: '01',
-			title: 'Day 1: Process mapping',
-			desc: 'Confirm the attendance, weighing and office flow.'
+			title: 'Map your process',
+			desc: 'Confirm attendance and weighing.'
 		},
 		{
 			step: '02',
-			title: 'Day 2: Staff training',
-			desc: 'Prepare devices and train field and office staff.'
+			title: 'Train your staff',
+			desc: 'Prepare devices and staff.'
 		},
 		{
 			step: '03',
-			title: 'Day 3: Live operations support',
-			desc: 'Stay with the team as regular field work begins.'
+			title: 'Start field work',
+			desc: 'Support the first live day.'
 		}
 	];
 
 	const attendanceFaqs = [
 		{
-			q: 'Will it work without internet?',
-			a: 'Yes. The field app saves records locally and syncs when a connection is available.'
+			q: 'Works without internet?',
+			a: 'Yes. Records save offline and sync later.'
 		},
 		{
 			q: 'Does it help stop proxy attendance?',
-			a: 'Face verification and liveness checks help confirm the worker before saving attendance.'
+			a: 'Face and liveness checks verify the worker.'
 		},
 		{
-			q: 'What if the scale cannot connect?',
-			a: 'Supported fallback options keep field work moving. The exact setup is confirmed during rollout.'
+			q: 'What if the scale disconnects?',
+			a: 'Fallback options keep work moving. We confirm them during setup.'
 		},
 		{
-			q: 'Can we see our own workflow?',
-			a: "Yes. The demo can focus on your garden's attendance, plucking and office process."
+			q: 'Can you show our workflow?',
+			a: 'Yes. The demo follows your garden process.'
 		}
 	];
 
@@ -110,16 +110,16 @@
 				{ value: 'On-site', label: 'Setup and staff training' }
 			]}
 			showOfflineBadge={false}
-			footnote="Built and supported by Sarbani Associates, Bagdogra, Siliguri. Many estates keep software details private, so we share region-level experience."
+			footnote="Built by Sarbani Associates. Estate software details stay private."
 		/>
 
 		<AttendanceWorkflow />
 		<AttendanceProductProof />
 
 		<ProductRollout
-			tagText="Supported rollout"
-			headline="Your team is not left to set it up alone."
-			paragraph="Sarbani Associates maps the process, sets up devices and trains field and office staff at the garden."
+			tagText=""
+			headline="We set it up with your team."
+			paragraph="Sarbani Associates sets up devices and trains staff on site."
 			steps={rollout}
 			actionHref={emailHref}
 			actionLabel="Email Us"
@@ -127,22 +127,23 @@
 		/>
 
 		<FaqSection
-			heading="What buyers ask first."
-			subheading="Short answers about field use and rollout."
+			heading="Common questions."
+			subheading=""
+			contactNote=""
 			contactHref="/#contact"
-			categoryLabel="Face Attendance & Smart Weighing"
+			categoryLabel=""
 			faqs={attendanceFaqs}
 			onOpen={trackFaq}
 		/>
 
 		<ProductCta
-			tagText="See the working flow"
-			headline="Bring one garden workflow to the demo."
-			paragraph="We will show how worker verification, leaf weight, offline capture and office review fit together."
+			tagText=""
+			headline="See your workflow in the demo."
+			paragraph="See face, weight and office review working together."
 			demoHref="/#contact"
 			secondaryHref={emailHref}
-			supportNote="Many estates keep software details private. We respect confidentiality and share region-level experience."
-			expectationLine="Reply within 1 working day. Demo scheduling comes from the Sarbani team."
+			supportNote=""
+			expectationLine="Reply within 1 working day."
 			buyers={[]}
 			onPrimaryClick={trackFinalDemo}
 			onSecondaryClick={trackFinalEmail}

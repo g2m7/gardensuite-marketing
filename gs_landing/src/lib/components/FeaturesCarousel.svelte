@@ -189,7 +189,7 @@
 						<!-- Floating UI overlay cards -->
 						{#if feature.overlay.type === 'status'}
 							<div
-								class="absolute bottom-6 left-6 z-10 w-[240px] rounded-xl border border-white/60 bg-white/95 p-4 shadow-[0_8px_32px_rgba(0,0,0,0.08)] backdrop-blur-md sm:w-[260px]"
+								class="absolute bottom-6 left-6 z-10 w-[240px] rounded-xl border border-white/60 bg-white/95 p-4 shadow-[0_6px_18px_rgba(0,0,0,0.06)] backdrop-blur-md sm:w-[260px]"
 							>
 								<div class="mb-2 flex items-center gap-2">
 									<div
@@ -218,7 +218,7 @@
 							</div>
 						{:else if feature.overlay.type === 'weight'}
 							<div
-								class="absolute right-6 bottom-6 z-10 w-[200px] rounded-xl border border-white/60 bg-white/95 p-5 text-center shadow-[0_8px_32px_rgba(0,0,0,0.08)] backdrop-blur-md"
+								class="absolute right-6 bottom-6 z-10 w-[200px] rounded-xl border border-white/60 bg-white/95 p-5 text-center shadow-[0_6px_18px_rgba(0,0,0,0.06)] backdrop-blur-md"
 							>
 								<div class="text-[11px] font-semibold tracking-[0.04em] text-[#71717A] uppercase">
 									Leaf Weight
@@ -243,7 +243,7 @@
 							</div>
 						{:else if feature.overlay.type === 'payroll'}
 							<div
-								class="absolute right-6 bottom-6 z-10 w-[220px] rounded-xl border border-white/60 bg-white/95 p-4 shadow-[0_8px_32px_rgba(0,0,0,0.08)] backdrop-blur-md"
+								class="absolute right-6 bottom-6 z-10 w-[220px] rounded-xl border border-white/60 bg-white/95 p-4 shadow-[0_6px_18px_rgba(0,0,0,0.06)] backdrop-blur-md"
 							>
 								<div
 									class="mb-2 text-[12px] font-semibold tracking-[0.04em] text-[#71717A] uppercase"
@@ -264,7 +264,7 @@
 							</div>
 						{:else if feature.overlay.type === 'dashboard'}
 							<div
-								class="absolute top-16 right-6 z-10 rounded-xl border border-[#FDE68A] bg-[#FEF9C3]/95 p-4 shadow-[0_8px_32px_rgba(0,0,0,0.06)] backdrop-blur-sm"
+								class="absolute top-16 right-6 z-10 rounded-xl border border-[#FDE68A] bg-[#FEF9C3]/95 p-4 shadow-[0_6px_18px_rgba(0,0,0,0.06)] backdrop-blur-sm"
 							>
 								<div class="mb-2 flex items-center justify-between gap-6">
 									<span class="text-[13px] font-semibold text-[#92400E]">Today's Numbers</span>

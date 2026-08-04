@@ -47,9 +47,7 @@
 			</div>
 
 			<!-- Right: Comparison table -->
-			<div
-				class="grid grid-cols-[1.4fr_1fr_1fr] overflow-hidden rounded-2xl ring-1 ring-white/10"
-			>
+			<div class="grid grid-cols-[1.4fr_1fr_1fr] overflow-hidden rounded-2xl ring-1 ring-white/10">
 				<!-- Features Column -->
 				<div class="bg-[#1A1F1C]">
 					<div
@@ -69,17 +67,13 @@
 				<!-- Paper Way -->
 				<div class="border-l border-white/[0.06]">
 					<div class="flex h-14 items-center justify-center bg-[#DC2626]/10 px-3">
-						<span class="text-[12px] font-bold tracking-[0.02em] text-[#FCA5A5]"
-							>{paperLabel}</span
-						>
+						<span class="text-[12px] font-bold tracking-[0.02em] text-[#FCA5A5]">{paperLabel}</span>
 					</div>
 					{#each paperResults as hasFeature}
-						<div
-							class="flex h-12 items-center justify-center border-t border-white/[0.06]"
-						>
+						<div class="flex h-12 items-center justify-center border-t border-white/[0.06]">
 							<span
 								class="flex h-5 w-5 items-center justify-center rounded-full {hasFeature
-									? 'bg-[#1B5E3B] text-white shadow-[0_0_8px_rgba(27,94,59,0.4)]'
+									? 'bg-[#1B5E3B] text-white shadow-none'
 									: 'bg-[#DC2626]/20 text-[#FCA5A5]'}"
 							>
 								{#if hasFeature}
@@ -109,24 +103,18 @@
 
 				<!-- GardenSuite (highlighted) -->
 				<div class="relative">
-					<div
-						class="absolute inset-0 rounded-r-2xl bg-[#1B5E3B]/20 shadow-[0_0_60px_rgba(27,94,59,0.12)]"
-					></div>
+					<div class="absolute inset-0 rounded-r-2xl bg-[#1B5E3B]/20 shadow-none"></div>
 					<div class="relative z-10">
 						<div
 							class="flex h-14 items-center justify-center border-b border-[#1B5E3B]/40 bg-[#1B5E3B]/30 px-3"
 						>
-							<span class="text-[12px] font-bold tracking-[0.02em] text-[#4ADE80]"
-								>{gsLabel}</span
-							>
+							<span class="text-[12px] font-bold tracking-[0.02em] text-[#4ADE80]">{gsLabel}</span>
 						</div>
 						{#each gsResults as hasFeature}
-							<div
-								class="flex h-12 items-center justify-center border-t border-white/[0.06]"
-							>
+							<div class="flex h-12 items-center justify-center border-t border-white/[0.06]">
 								<span
 									class="flex h-5 w-5 items-center justify-center rounded-full {hasFeature
-										? 'bg-[#1B5E3B] text-white shadow-[0_0_8px_rgba(27,94,59,0.4)]'
+										? 'bg-[#1B5E3B] text-white shadow-none'
 										: 'bg-[#DC2626]/20 text-[#FCA5A5]'}"
 								>
 									{#if hasFeature}

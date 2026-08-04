@@ -32,10 +32,18 @@
 	];
 
 	const rollout = [
-		{ step: '1', title: 'Site Visit', desc: 'Sarbani team visits your garden to understand your workflow.' },
+		{
+			step: '1',
+			title: 'Site Visit',
+			desc: 'Sarbani team visits your garden to understand your workflow.'
+		},
 		{ step: '2', title: 'On-site Setup', desc: 'Software installed and configured at the garden.' },
 		{ step: '3', title: 'Staff Training', desc: 'Hands-on training for office and field staff.' },
-		{ step: '4', title: 'Go-Live Support', desc: 'Support stays on-site until your team is confident.' }
+		{
+			step: '4',
+			title: 'Go-Live Support',
+			desc: 'Support stays on-site until your team is confident.'
+		}
 	];
 </script>
 
@@ -46,7 +54,8 @@
 	schema={[
 		softwareSchema({
 			name: 'GardenSuite Automated Payroll',
-			description: 'Automated payroll software for tea gardens. Calculates wages, PF, ESI, bonus, hazira, tikka, and doubling from face attendance and weighing data.',
+			description:
+				'Automated payroll software for tea gardens. Calculates wages, PF, ESI, bonus, hazira, tikka, and doubling from face attendance and weighing data.',
 			os: 'Windows'
 		}),
 		breadcrumbSchema([
@@ -66,14 +75,20 @@
 			{demoHref}
 		>
 			<!-- Hero mockup element inside the slot -->
-			<div class="relative mx-auto mt-16 w-full max-w-[960px] rounded-[28px] border border-white/60 bg-[#DDEFE4] p-5 shadow-[0_24px_62px_rgba(15,46,12,0.1)] md:p-8 lg:p-10">
-				<div class="absolute inset-0 z-0 bg-gradient-to-b from-[#F8FAF8] to-[#E8F3ED] opacity-90 rounded-[28px]"></div>
-				<div class="dot-grid-light absolute inset-0 z-0 opacity-40 rounded-[28px]"></div>
-				
+			<div
+				class="relative mx-auto mt-16 w-full max-w-[960px] rounded-[28px] border border-white/60 bg-[#DDEFE4] p-5 shadow-[0_8px_24px_rgba(0,0,0,0.08)] md:p-8 lg:p-10"
+			>
+				<div
+					class="absolute inset-0 z-0 rounded-[28px] bg-gradient-to-b from-[#F8FAF8] to-[#E8F3ED] opacity-90"
+				></div>
+				<div class="dot-grid-light absolute inset-0 z-0 rounded-[28px] opacity-40"></div>
+
 				<div class="relative z-10 grid items-center gap-8 md:grid-cols-2">
 					<!-- Month Summary Card -->
 					<div class="flex justify-center">
-						<div class="flex w-full max-w-[380px] flex-col gap-4 rounded-[24px] border border-white/85 bg-white/95 p-6 shadow-[0_14px_34px_rgba(15,23,42,0.06)] md:p-8">
+						<div
+							class="flex w-full max-w-[380px] flex-col gap-4 rounded-[24px] border border-white/85 bg-white/95 p-6 shadow-[0_6px_18px_rgba(0,0,0,0.06)] md:p-8"
+						>
 							<span class="text-[13px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase"
 								>Month Summary</span
 							>
@@ -91,11 +106,14 @@
 							</div>
 						</div>
 					</div>
-					
+
 					<!-- Deduction Breakdown Card -->
 					<div class="flex justify-center">
-						<div class="flex w-full max-w-[380px] flex-col gap-3 rounded-[24px] border border-white/85 bg-white/95 p-6 shadow-[0_14px_34px_rgba(15,23,42,0.06)] md:p-8">
-							<span class="mb-2 text-[13px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase"
+						<div
+							class="flex w-full max-w-[380px] flex-col gap-3 rounded-[24px] border border-white/85 bg-white/95 p-6 shadow-[0_6px_18px_rgba(0,0,0,0.06)] md:p-8"
+						>
+							<span
+								class="mb-2 text-[13px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase"
 								>Deduction Breakdown</span
 							>
 							{#each [{ label: 'Provident Fund (PF)', value: '12%', note: 'Employer + Employee' }, { label: 'ESI', value: '1.75%', note: 'Employee share' }, { label: 'Hazira / Tikka', value: 'Auto', note: 'Per local rate' }, { label: 'Bonus / Incentive', value: 'Auto', note: 'Extra leaf rates' }, { label: 'Advance / Loan', value: 'Tracked', note: 'Deducted monthly' }] as row}
@@ -104,7 +122,10 @@
 										<span class="text-[14px] font-medium text-[#111111]">{row.label}</span>
 										<span class="block text-[12px] text-[#71717A]">{row.note}</span>
 									</div>
-									<span class="shrink-0 rounded-full bg-[#1B5E3B]/10 px-2.5 py-0.5 text-[12px] font-semibold text-[#1B5E3B]">{row.value}</span>
+									<span
+										class="shrink-0 rounded-full bg-[#1B5E3B]/10 px-2.5 py-0.5 text-[12px] font-semibold text-[#1B5E3B]"
+										>{row.value}</span
+									>
 								</div>
 							{/each}
 						</div>
@@ -113,7 +134,7 @@
 			</div>
 		</ProductHero>
 
-		<ProductTrustRow 
+		<ProductTrustRow
 			stats={[
 				{ value: '20+', label: 'Tea Estates' },
 				{ value: '7', label: 'Regions' },
@@ -130,7 +151,9 @@
 		/>
 
 		<!-- Story 1: Auto Data Pull -->
-		<section class="reveal-on-scroll relative w-full bg-[#FAFAF7] border-b border-[#E4E4E7] py-24 md:py-32">
+		<section
+			class="reveal-on-scroll relative w-full border-b border-[#E4E4E7] bg-[#FAFAF7] py-24 md:py-32"
+		>
 			<div
 				class="mx-auto grid max-w-[1344px] items-center gap-12 px-6 md:grid-cols-2 md:gap-16 md:px-12"
 			>
@@ -173,7 +196,7 @@
 
 				<div class="relative flex justify-center">
 					<div
-						class="flex w-full max-w-[400px] flex-col gap-4 rounded-[24px] border border-[#E4E4E7] bg-white p-8 shadow-[0_20px_60px_rgba(0,0,0,0.06)]"
+						class="flex w-full max-w-[400px] flex-col gap-4 rounded-[24px] border border-[#E4E4E7] bg-white p-8 shadow-[0_6px_18px_rgba(0,0,0,0.06)]"
 					>
 						<span class="text-[13px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase"
 							>Month Summary</span
@@ -196,13 +219,15 @@
 		</section>
 
 		<!-- Story 2: Tea-Industry Deductions -->
-		<section class="reveal-on-scroll relative w-full bg-white border-b border-[#E4E4E7] py-24 md:py-32">
+		<section
+			class="reveal-on-scroll relative w-full border-b border-[#E4E4E7] bg-white py-24 md:py-32"
+		>
 			<div
 				class="mx-auto grid max-w-[1344px] items-center gap-12 px-6 md:grid-cols-2 md:gap-16 md:px-12"
 			>
 				<div class="relative flex justify-center md:order-2">
 					<div
-						class="flex w-full max-w-[400px] flex-col gap-3 rounded-[24px] border border-[#E4E4E7] bg-white p-8 shadow-[0_20px_60px_rgba(0,0,0,0.06)]"
+						class="flex w-full max-w-[400px] flex-col gap-3 rounded-[24px] border border-[#E4E4E7] bg-white p-8 shadow-[0_6px_18px_rgba(0,0,0,0.06)]"
 					>
 						<span class="mb-2 text-[13px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase"
 							>Deduction Breakdown</span
@@ -262,7 +287,9 @@
 		</section>
 
 		<!-- Story 3: Payslip Generation -->
-		<section class="reveal-on-scroll relative w-full bg-[#FAFAF7] border-b border-[#E4E4E7] py-24 md:py-32">
+		<section
+			class="reveal-on-scroll relative w-full border-b border-[#E4E4E7] bg-[#FAFAF7] py-24 md:py-32"
+		>
 			<div
 				class="mx-auto grid max-w-[1344px] items-center gap-12 px-6 md:grid-cols-2 md:gap-16 md:px-12"
 			>
@@ -305,7 +332,7 @@
 
 				<div class="relative flex justify-center">
 					<div
-						class="flex w-full max-w-[400px] flex-col gap-4 rounded-[24px] border border-[#E4E4E7] bg-white p-8 shadow-[0_20px_60px_rgba(0,0,0,0.06)]"
+						class="flex w-full max-w-[400px] flex-col gap-4 rounded-[24px] border border-[#E4E4E7] bg-white p-8 shadow-[0_6px_18px_rgba(0,0,0,0.06)]"
 					>
 						<div class="flex items-center justify-between">
 							<span class="text-[13px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase"

@@ -22,7 +22,7 @@
 	{onclick}
 	class="group relative overflow-hidden {mode === 'solid'
 		? 'rounded-2xl border border-[#E4E4E7] bg-white shadow-[0_12px_30px_rgba(0,0,0,0.05)]'
-		: 'rounded-[28px] border border-white/70 bg-[#DDEFE4] p-4 shadow-[0_18px_50px_rgba(15,46,12,0.12)] md:p-5'} transition-all duration-300 {onclick
+		: 'rounded-[28px] border border-white/70 bg-[#DDEFE4] p-4 shadow-[0_8px_24px_rgba(0,0,0,0.08)] md:p-5'} transition-all duration-300 {onclick
 		? 'cursor-zoom-in'
 		: ''} {className}"
 >
@@ -64,7 +64,7 @@
 	<div
 		class="relative z-10 {mode === 'solid'
 			? 'bg-white'
-			: 'rounded-[22px] border border-white/65 bg-white/[0.08] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.65)] backdrop-blur-md md:p-8 lg:p-10'} {innerClass}"
+			: 'rounded-[22px] border border-white/65 bg-white/[0.08] p-5 shadow-none backdrop-blur-md md:p-8 lg:p-10'} {innerClass}"
 	>
 		{@render children()}
 	</div>

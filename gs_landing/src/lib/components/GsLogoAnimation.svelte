@@ -138,8 +138,7 @@
 		width: 100%;
 		height: 100%;
 		display: block;
-		/* Add a subtle drop shadow to match the brand pack, but slightly reduced for inline navbar use */
-		filter: drop-shadow(0 6px 12px rgba(35, 75, 29, 0.08));
+		filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.08));
 	}
 
 	.gs-group {

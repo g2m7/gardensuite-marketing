@@ -44,8 +44,10 @@
 			if (!target) return;
 			const href = target instanceof HTMLAnchorElement ? target.href : '';
 			if (href.includes('wa.me/')) trackEvent('whatsapp_click', { page_path: location.pathname });
-			else if (href.startsWith('mailto:')) trackEvent('email_click', { page_path: location.pathname });
-			else if (href.includes('#contact')) trackEvent('contact_cta_click', { page_path: location.pathname });
+			else if (href.startsWith('mailto:'))
+				trackEvent('email_click', { page_path: location.pathname });
+			else if (href.includes('#contact'))
+				trackEvent('contact_cta_click', { page_path: location.pathname });
 		};
 		document.addEventListener('click', clickHandler);
 		return () => document.removeEventListener('click', clickHandler);
@@ -54,7 +56,7 @@
 
 {#if measurementId && preference === null}
 	<div
-		class="fixed right-4 bottom-4 left-4 z-[100] border border-[#D4D4D8] bg-white p-5 shadow-[0_12px_40px_rgba(0,0,0,0.14)] sm:right-6 sm:left-auto sm:max-w-[440px]"
+		class="fixed right-4 bottom-4 left-4 z-[100] border border-[#D4D4D8] bg-white p-5 shadow-[0_8px_24px_rgba(0,0,0,0.10)] sm:right-6 sm:left-auto sm:max-w-[440px]"
 		role="dialog"
 		aria-label="Analytics choice"
 	>

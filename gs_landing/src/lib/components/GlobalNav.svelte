@@ -124,7 +124,7 @@
 	<!-- Skip Link -->
 	<a
 		href="#main-content"
-		class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:rounded-lg focus:bg-[#1B5E3B] focus:px-4 focus:py-2 focus:text-white focus:shadow-lg"
+		class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:rounded-lg focus:bg-[#1B5E3B] focus:px-4 focus:py-2 focus:text-white focus:shadow-[0_4px_12px_rgba(0,0,0,0.08)]"
 	>
 		Skip to main content
 	</a>
@@ -161,7 +161,7 @@
 		<div
 			id="mobile-navigation-panel"
 			bind:this={mobileMenuPanel}
-			class="fixed inset-x-0 top-0 z-[58] flex flex-col bg-white/95 px-6 pt-20 pb-8 shadow-[0_20px_60px_rgba(0,0,0,0.1)] backdrop-blur-xl md:hidden"
+			class="fixed inset-x-0 top-0 z-[58] flex flex-col bg-white/95 px-6 pt-20 pb-8 shadow-[0_10px_28px_rgba(0,0,0,0.10)] backdrop-blur-xl md:hidden"
 			style="overscroll-behavior: contain;"
 			role="dialog"
 			tabindex="-1"

@@ -39,12 +39,10 @@
 		'flex w-full items-center justify-center rounded-full transition duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 active:scale-[0.97] sm:w-auto';
 
 	const variants = {
-		primary:
-			'bg-[#1B5E3B] text-white shadow-[0_4px_20px_rgba(27,94,59,0.25)] hover:bg-[#144723]',
+		primary: 'bg-[#1B5E3B] text-white shadow-[0_4px_12px_rgba(0,0,0,0.10)] hover:bg-[#144723]',
 		secondary:
 			'border border-[#E4E4E7] bg-white text-[#0A0A0A] shadow-[0_1px_3px_rgba(0,0,0,0.04)] hover:border-[#D4D4D8] hover:bg-[#FAFAF7]',
-		'secondary-dark':
-			'border border-[#333333] bg-transparent text-white hover:bg-[#1A1A1A]'
+		'secondary-dark': 'border border-[#333333] bg-transparent text-white hover:bg-[#1A1A1A]'
 	};
 
 	const sizes = {

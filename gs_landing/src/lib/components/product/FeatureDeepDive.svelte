@@ -76,10 +76,10 @@
 				<div class="relative flex items-center justify-center gap-6">
 					<!-- Primary Screenshot -->
 					<div
-						class="relative rounded-[28px] border border-[#E4E4E7] bg-[#F8FAF8] p-6 shadow-[0_16px_48px_rgba(0,0,0,0.06)] md:p-8"
+						class="relative rounded-[28px] border border-[#E4E4E7] bg-[#F8FAF8] p-6 shadow-[0_6px_18px_rgba(0,0,0,0.06)] md:p-8"
 					>
 						<div
-							class="device-frame-phone w-[160px] shadow-[0_20px_60px_rgba(0,0,0,0.18)] md:w-[200px]"
+							class="device-frame-phone w-[160px] shadow-[0_10px_28px_rgba(0,0,0,0.10)] md:w-[200px]"
 						>
 							<div class="device-frame-phone-inner aspect-[9/19.5]">
 								<img
@@ -97,10 +97,10 @@
 					<!-- Secondary Screenshot (optional, slightly offset) -->
 					{#if secondaryScreenshot}
 						<div
-							class="relative hidden -translate-y-6 rounded-[28px] border border-[#E4E4E7] bg-[#F8FAF8] p-5 shadow-[0_12px_36px_rgba(0,0,0,0.04)] md:block md:p-6"
+							class="relative hidden -translate-y-6 rounded-[28px] border border-[#E4E4E7] bg-[#F8FAF8] p-5 shadow-[0_6px_18px_rgba(0,0,0,0.06)] md:block md:p-6"
 						>
 							<div
-								class="device-frame-phone w-[130px] shadow-[0_15px_45px_rgba(0,0,0,0.12)] md:w-[150px]"
+								class="device-frame-phone w-[130px] shadow-[0_8px_24px_rgba(0,0,0,0.08)] md:w-[150px]"
 							>
 								<div class="device-frame-phone-inner aspect-[9/19.5]">
 									<img

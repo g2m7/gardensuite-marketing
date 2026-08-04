@@ -160,7 +160,7 @@
 							webp={config.heroImageWebp}
 							alt={config.heroImageAlt}
 							eager
-							class="w-[220px] shadow-[0_28px_72px_rgba(0,0,0,0.2)] md:w-[270px]"
+							class="w-[220px] shadow-[0_10px_28px_rgba(0,0,0,0.10)] md:w-[270px]"
 						/>
 						<p
 							class="absolute right-5 bottom-5 text-[11px] font-semibold tracking-[0.08em] text-green-deep uppercase"
@@ -239,10 +239,10 @@
 					<div class={config.slug === 'offline-sync' ? 'lg:order-2' : ''}>
 						{#if config.proofImageType === 'browser'}
 							<div
-								class="overflow-hidden rounded-2xl border border-border bg-surface p-4 shadow-[0_18px_50px_rgba(0,0,0,0.07)] md:p-6"
+								class="overflow-hidden rounded-2xl border border-border bg-surface p-4 shadow-[0_6px_18px_rgba(0,0,0,0.06)] md:p-6"
 							>
 								<div
-									class="overflow-hidden rounded-xl border border-border bg-white shadow-[0_20px_50px_rgba(0,0,0,0.1)]"
+									class="overflow-hidden rounded-xl border border-border bg-white shadow-[0_10px_28px_rgba(0,0,0,0.10)]"
 								>
 									<div
 										class="flex h-8 items-center gap-1.5 border-b border-border bg-[#F4F4F5] px-3"
@@ -273,7 +273,7 @@
 									png={config.proofImagePng}
 									webp={config.proofImageWebp}
 									alt={config.proofImageAlt}
-									class="w-[210px] shadow-[0_26px_68px_rgba(0,0,0,0.2)] md:w-[250px]"
+									class="w-[210px] shadow-[0_10px_28px_rgba(0,0,0,0.10)] md:w-[250px]"
 								/>
 							</div>
 						{/if}

@@ -32,10 +32,18 @@
 	];
 
 	const rollout = [
-		{ step: '1', title: 'Site Visit', desc: 'Sarbani team visits your garden to understand your workflow.' },
+		{
+			step: '1',
+			title: 'Site Visit',
+			desc: 'Sarbani team visits your garden to understand your workflow.'
+		},
 		{ step: '2', title: 'On-site Setup', desc: 'Software installed and configured at the garden.' },
 		{ step: '3', title: 'Staff Training', desc: 'Hands-on training for office and field staff.' },
-		{ step: '4', title: 'Go-Live Support', desc: 'Support stays on-site until your team is confident.' }
+		{
+			step: '4',
+			title: 'Go-Live Support',
+			desc: 'Support stays on-site until your team is confident.'
+		}
 	];
 </script>
 
@@ -46,7 +54,8 @@
 	schema={[
 		softwareSchema({
 			name: 'GardenSuite Store Management',
-			description: 'Store and inventory management software for tea gardens. Tracks purchase orders, issue to sections, stock levels, and cost allocation.',
+			description:
+				'Store and inventory management software for tea gardens. Tracks purchase orders, issue to sections, stock levels, and cost allocation.',
 			os: 'Windows'
 		}),
 		breadcrumbSchema([
@@ -66,36 +75,54 @@
 			{demoHref}
 		>
 			<!-- Hero mockup element inside the slot -->
-			<div class="relative mx-auto mt-16 w-full max-w-[960px] rounded-[28px] border border-white/60 bg-[#DDEFE4] p-5 shadow-[0_24px_62px_rgba(15,46,12,0.1)] md:p-8 lg:p-10">
-				<div class="absolute inset-0 z-0 bg-gradient-to-b from-[#F8FAF8] to-[#E8F3ED] opacity-90 rounded-[28px]"></div>
-				<div class="dot-grid-light absolute inset-0 z-0 opacity-40 rounded-[28px]"></div>
-				
+			<div
+				class="relative mx-auto mt-16 w-full max-w-[960px] rounded-[28px] border border-white/60 bg-[#DDEFE4] p-5 shadow-[0_8px_24px_rgba(0,0,0,0.08)] md:p-8 lg:p-10"
+			>
+				<div
+					class="absolute inset-0 z-0 rounded-[28px] bg-gradient-to-b from-[#F8FAF8] to-[#E8F3ED] opacity-90"
+				></div>
+				<div class="dot-grid-light absolute inset-0 z-0 rounded-[28px] opacity-40"></div>
+
 				<div class="relative z-10 grid items-center gap-8 md:grid-cols-2">
 					<!-- Stock Levels Card -->
 					<div class="flex justify-center">
-						<div class="flex w-full max-w-[380px] flex-col gap-4 rounded-[24px] border border-white/85 bg-white/95 p-6 shadow-[0_14px_34px_rgba(15,23,42,0.06)] md:p-8">
+						<div
+							class="flex w-full max-w-[380px] flex-col gap-4 rounded-[24px] border border-white/85 bg-white/95 p-6 shadow-[0_6px_18px_rgba(0,0,0,0.06)] md:p-8"
+						>
 							<span class="text-[13px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase"
 								>Stock Levels</span
 							>
 							{#each [{ label: 'NPK Fertilizer', value: '2,450 kg', status: 'ok' }, { label: 'Diesel', value: '1,200 L', status: 'ok' }, { label: 'Pruning Shears', value: '18 pcs', status: 'low' }, { label: 'Tea Chests', value: '340 pcs', status: 'ok' }] as row}
 								<div class="flex items-center justify-between border-t border-[#F0F0F0] py-2.5">
 									<div class="flex items-center gap-2.5">
-										<div class="h-2.5 w-2.5 rounded-full {row.status === 'low' ? 'bg-[#D97706]' : 'bg-[#1B5E3B]'}"></div>
+										<div
+											class="h-2.5 w-2.5 rounded-full {row.status === 'low'
+												? 'bg-[#D97706]'
+												: 'bg-[#1B5E3B]'}"
+										></div>
 										<span class="text-[14px] text-[#71717A]">{row.label}</span>
 									</div>
-									<span class="text-[14px] font-semibold text-[#3F3F46] tabular-nums">{row.value}</span>
+									<span class="text-[14px] font-semibold text-[#3F3F46] tabular-nums"
+										>{row.value}</span
+									>
 								</div>
 							{/each}
-							<div class="flex items-center gap-2 rounded-xl border border-[#D97706]/20 bg-[#D97706]/5 px-4 py-2.5">
+							<div
+								class="flex items-center gap-2 rounded-xl border border-[#D97706]/20 bg-[#D97706]/5 px-4 py-2.5"
+							>
 								<div class="h-2 w-2 rounded-full bg-[#D97706]"></div>
-								<span class="text-[13px] font-medium text-[#92400E]">1 item below reorder level</span>
+								<span class="text-[13px] font-medium text-[#92400E]"
+									>1 item below reorder level</span
+								>
 							</div>
 						</div>
 					</div>
-					
+
 					<!-- Recent Issues Card -->
 					<div class="flex justify-center">
-						<div class="flex w-full max-w-[380px] flex-col gap-4 rounded-[24px] border border-white/85 bg-white/95 p-6 shadow-[0_14px_34px_rgba(15,23,42,0.06)] md:p-8">
+						<div
+							class="flex w-full max-w-[380px] flex-col gap-4 rounded-[24px] border border-white/85 bg-white/95 p-6 shadow-[0_6px_18px_rgba(0,0,0,0.06)] md:p-8"
+						>
 							<span class="text-[13px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase"
 								>Recent Issues</span
 							>
@@ -114,7 +141,7 @@
 			</div>
 		</ProductHero>
 
-		<ProductTrustRow 
+		<ProductTrustRow
 			stats={[
 				{ value: '20+', label: 'Tea Estates' },
 				{ value: '7', label: 'Regions' },
@@ -131,7 +158,9 @@
 		/>
 
 		<!-- Story 1: Purchase Orders -->
-		<section class="reveal-on-scroll relative w-full bg-[#FAFAF7] border-b border-[#E4E4E7] py-24 md:py-32">
+		<section
+			class="reveal-on-scroll relative w-full border-b border-[#E4E4E7] bg-[#FAFAF7] py-24 md:py-32"
+		>
 			<div
 				class="mx-auto grid max-w-[1344px] items-center gap-12 px-6 md:grid-cols-2 md:gap-16 md:px-12"
 			>
@@ -174,7 +203,7 @@
 
 				<div class="relative flex justify-center">
 					<div
-						class="flex w-full max-w-[400px] flex-col gap-4 rounded-[24px] border border-[#E4E4E7] bg-white p-8 shadow-[0_20px_60px_rgba(0,0,0,0.06)]"
+						class="flex w-full max-w-[400px] flex-col gap-4 rounded-[24px] border border-[#E4E4E7] bg-white p-8 shadow-[0_6px_18px_rgba(0,0,0,0.06)]"
 					>
 						<span class="text-[13px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase"
 							>Stock Levels</span
@@ -206,13 +235,15 @@
 		</section>
 
 		<!-- Story 2: Issue & Allocation -->
-		<section class="reveal-on-scroll relative w-full bg-white border-b border-[#E4E4E7] py-24 md:py-32">
+		<section
+			class="reveal-on-scroll relative w-full border-b border-[#E4E4E7] bg-white py-24 md:py-32"
+		>
 			<div
 				class="mx-auto grid max-w-[1344px] items-center gap-12 px-6 md:grid-cols-2 md:gap-16 md:px-12"
 			>
 				<div class="relative flex justify-center md:order-2">
 					<div
-						class="flex w-full max-w-[400px] flex-col gap-4 rounded-[24px] border border-[#E4E4E7] bg-white p-8 shadow-[0_20px_60px_rgba(0,0,0,0.06)]"
+						class="flex w-full max-w-[400px] flex-col gap-4 rounded-[24px] border border-[#E4E4E7] bg-white p-8 shadow-[0_6px_18px_rgba(0,0,0,0.06)]"
 					>
 						<span class="text-[13px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase"
 							>Recent Issues</span

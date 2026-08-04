@@ -15,7 +15,7 @@
 
 {#snippet BrowserFrame(src: string, alt: string, x = '50%', y = '0%', scale = 1)}
 	<div
-		class="relative w-full overflow-hidden rounded-2xl border border-white/70 bg-white shadow-[0_14px_34px_rgba(15,23,42,0.12)]"
+		class="relative w-full overflow-hidden rounded-2xl border border-white/70 bg-white shadow-[0_8px_24px_rgba(0,0,0,0.08)]"
 	>
 		<div class="flex h-7 items-center gap-1.5 border-b border-[#E4E4E7] bg-[#F4F4F5] px-3">
 			<span class="h-2.5 w-2.5 rounded-full bg-[#FF5F57]"></span>
@@ -37,7 +37,7 @@
 
 {#snippet PhoneFrame(src: string, alt: string, x = '50%', y = '0%', scale = 1)}
 	<div
-		class="relative overflow-hidden rounded-[1.55rem] border-[5px] border-[#111111] bg-[#111111] shadow-[0_18px_44px_rgba(15,23,42,0.22)]"
+		class="relative overflow-hidden rounded-[1.55rem] border-[5px] border-[#111111] bg-[#111111] shadow-[0_10px_28px_rgba(0,0,0,0.10)]"
 	>
 		<div
 			class="absolute top-1 left-1/2 z-10 h-3 w-16 -translate-x-1/2 rounded-b-xl bg-[#111111]"
@@ -70,7 +70,7 @@
 
 {#snippet ReportFallback(kind: 'stores' | 'factory')}
 	<div
-		class="w-full max-w-[390px] overflow-hidden rounded-xl border border-[#D4D4D8] bg-white shadow-[0_18px_45px_rgba(15,23,42,0.14)]"
+		class="w-full max-w-[390px] overflow-hidden rounded-xl border border-[#D4D4D8] bg-white shadow-[0_8px_24px_rgba(0,0,0,0.08)]"
 	>
 		<div class="flex h-7 items-center gap-1.5 border-b border-[#E4E4E7] bg-[#F4F4F5] px-3">
 			<span class="h-2.5 w-2.5 rounded-full bg-[#FF5F57]"></span>
@@ -181,7 +181,7 @@
 			)}
 		</div>
 		<div
-			class="absolute bottom-10 left-[24%] z-20 w-[50%] rounded-xl border border-[#D4D4D8] bg-white/96 p-3 shadow-[0_12px_28px_rgba(15,23,42,0.14)] backdrop-blur"
+			class="absolute bottom-10 left-[24%] z-20 w-[50%] rounded-xl border border-[#D4D4D8] bg-white/96 p-3 shadow-[0_8px_24px_rgba(0,0,0,0.08)] backdrop-blur"
 		>
 			<div class="flex items-center justify-between gap-3">
 				<div>
@@ -192,9 +192,7 @@
 						Verified + 35 kg
 					</div>
 				</div>
-				<div
-					class="h-2.5 w-2.5 rounded-full bg-[#22C55E] shadow-[0_0_0_4px_rgba(34,197,94,0.12)]"
-				></div>
+				<div class="h-2.5 w-2.5 rounded-full bg-[#22C55E] shadow-none"></div>
 			</div>
 		</div>
 	</div>

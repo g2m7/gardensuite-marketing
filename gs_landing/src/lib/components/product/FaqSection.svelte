@@ -41,20 +41,26 @@
 				>
 					{heading}
 				</h2>
-				<p class="mt-5 text-[17px] leading-[1.6] text-[#374151]">{subheading}</p>
-				<p class="mt-6 hidden text-[16px] text-[#4B5563] md:block">
-					{contactNote} <br />
-					<a
-						href={contactHref}
-						class="mt-2 inline-block font-medium text-green-deep hover:underline"
-						>contact our team</a
-					>
-				</p>
+				{#if subheading}
+					<p class="mt-5 text-[17px] leading-[1.6] text-[#374151]">{subheading}</p>
+				{/if}
+				{#if contactNote}
+					<p class="mt-6 hidden text-[16px] text-[#4B5563] md:block">
+						{contactNote} <br />
+						<a
+							href={contactHref}
+							class="mt-2 inline-block font-medium text-green-deep hover:underline"
+							>contact our team</a
+						>
+					</p>
+				{/if}
 			</div>
 
 			<!-- Right panel: accordion -->
 			<div class="space-y-4 p-6 md:col-span-3 md:p-10 lg:p-12">
-				<h3 class="text-[20px] font-semibold text-heading md:pl-6">{categoryLabel}</h3>
+				{#if categoryLabel}
+					<h3 class="text-[20px] font-semibold text-heading md:pl-6">{categoryLabel}</h3>
+				{/if}
 				<div class="space-y-0">
 					{#each faqs as faq, i}
 						{@const isOpen = openFaq === i}
@@ -112,9 +118,13 @@
 				</div>
 			</div>
 		</div>
-		<p class="mt-6 text-center text-[14px] text-[#4B5563] md:hidden">
-			{contactNote}
-			<a href={contactHref} class="font-medium text-green-deep hover:underline">contact our team</a>
-		</p>
+		{#if contactNote}
+			<p class="mt-6 text-center text-[14px] text-[#4B5563] md:hidden">
+				{contactNote}
+				<a href={contactHref} class="font-medium text-green-deep hover:underline"
+					>contact our team</a
+				>
+			</p>
+		{/if}
 	</div>
 </section>

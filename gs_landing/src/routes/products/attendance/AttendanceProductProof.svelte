@@ -27,13 +27,13 @@
 
 	const connectedLinks = [
 		{
-			label: 'Tea garden payroll software',
+			label: 'Tea garden payroll',
 			href: '/products/payroll',
 			key: 'payroll',
 			icon: 'payroll' as const
 		},
 		{
-			label: 'Daily MIS dashboard',
+			label: 'Daily report',
 			href: '/products/mis',
 			key: 'mis',
 			icon: 'mis' as const
@@ -42,12 +42,12 @@
 
 	const linkGroups = [
 		{
-			heading: 'Explore attendance products',
+			heading: 'Attendance products',
 			ariaLabel: 'Attendance detail pages',
 			links: attendanceLinks
 		},
 		{
-			heading: 'Connected GardenSuite products',
+			heading: 'Connected products',
 			ariaLabel: 'Connected GardenSuite products',
 			links: connectedLinks
 		}
@@ -73,17 +73,12 @@
 >
 	<div class="mx-auto max-w-[1344px] px-6 md:px-12">
 		<div class="mb-10 max-w-[720px] md:mb-14">
-			<span
-				class="mb-4 inline-block text-[13px] font-semibold tracking-[0.08em] text-green-deep uppercase"
-			>
-				Field to office
-			</span>
 			<h2
 				id="attendance-proof-heading"
 				class="text-[36px] leading-[1.08] font-semibold tracking-[-0.04em] text-heading md:text-[44px] lg:text-[52px]"
 				style="text-wrap: balance"
 			>
-				Two working surfaces. One connected record.
+				Field and office stay connected.
 			</h2>
 		</div>
 
@@ -94,7 +89,7 @@
 						GS Face in the field
 					</h3>
 					<p class="mt-3 max-w-[52ch] text-[15px] leading-[1.6] text-text-secondary">
-						Attendance, punch work and harvest weight, with offline saving and practical fallbacks.
+						Attendance and leaf weight work offline.
 					</p>
 				</div>
 				<div
@@ -104,13 +99,13 @@
 						png="/screenshots/11_attendance_active_session.png"
 						webp="/screenshots/11_attendance_active_session.webp"
 						alt="GardenSuite active attendance session with field work context"
-						class="w-[150px] -rotate-2 shadow-[0_18px_48px_rgba(0,0,0,0.17)] md:w-[180px]"
+						class="w-[150px] -rotate-2 shadow-[0_10px_28px_rgba(0,0,0,0.10)] md:w-[180px]"
 					/>
 					<PhoneScreenshot
 						png="/screenshots/05_harvest_active_records.png"
 						webp="/screenshots/05_harvest_active_records.webp"
 						alt="GardenSuite active harvest session with connected scale and saved worker records"
-						class="mt-8 w-[150px] rotate-2 shadow-[0_18px_48px_rgba(0,0,0,0.17)] md:w-[180px]"
+						class="mt-8 w-[150px] rotate-2 shadow-[0_10px_28px_rgba(0,0,0,0.10)] md:w-[180px]"
 					/>
 				</div>
 			</ProductCardFrame>
@@ -118,17 +113,17 @@
 			<ProductCardFrame mode="solid" innerClass="p-0">
 				<div class="p-7 md:p-8">
 					<h3 class="text-[22px] font-semibold tracking-[-0.02em] text-heading">
-						GardenSuite MIS in the office
+						Daily report in the office
 					</h3>
 					<p class="mt-3 max-w-[52ch] text-[15px] leading-[1.6] text-text-secondary">
-						Summaries, raw records, sessions, locations and sync status for office review.
+						Review records, sessions and sync status.
 					</p>
 				</div>
 				<div
 					class="mx-4 mb-4 flex h-[320px] items-center overflow-hidden rounded-xl border border-border bg-surface p-4 md:mx-5 md:mb-5 md:h-[380px] md:p-6"
 				>
 					<div
-						class="w-full overflow-hidden rounded-xl border border-border bg-white shadow-[0_18px_48px_rgba(0,0,0,0.1)]"
+						class="w-full overflow-hidden rounded-xl border border-border bg-white shadow-[0_10px_28px_rgba(0,0,0,0.10)]"
 					>
 						<div
 							class="flex h-8 items-center gap-1.5 border-b border-border bg-[#F4F4F5] px-3"
@@ -169,7 +164,7 @@
 								onclick={() => trackRelatedProduct(link.key)}
 							>
 								<span
-									class="flex h-14 w-14 shrink-0 items-center justify-center text-green-deep drop-shadow-[0_2px_3px_rgba(27,94,59,0.18)] transition-transform duration-200 ease-out group-hover:-translate-y-0.5"
+									class="flex h-14 w-14 shrink-0 items-center justify-center text-green-deep drop-shadow-[0_1px_2px_rgba(0,0,0,0.10)] transition-transform duration-200 ease-out group-hover:-translate-y-0.5"
 								>
 									<AttendanceLinkIcon name={link.icon} />
 								</span>

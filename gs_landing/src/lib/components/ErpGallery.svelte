@@ -199,11 +199,11 @@
 			>
 				<!-- Frosted glass outer frame -->
 				<div
-					class="relative overflow-hidden rounded-2xl border border-white/[0.12] bg-white/[0.04] p-3 shadow-[0_20px_60px_rgba(0,0,0,0.3)] backdrop-blur-sm transition-transform duration-300 group-hover:scale-[1.02] md:p-4"
+					class="relative overflow-hidden rounded-2xl border border-white/[0.12] bg-white/[0.04] p-3 shadow-[0_10px_28px_rgba(0,0,0,0.10)] backdrop-blur-sm transition-transform duration-300 group-hover:scale-[1.02] md:p-4"
 				>
 					<!-- Inner elevated card with screenshot -->
 					<div
-						class="relative overflow-hidden rounded-xl border border-white/20 bg-white shadow-[0_8px_32px_rgba(0,0,0,0.15)]"
+						class="relative overflow-hidden rounded-xl border border-white/20 bg-white shadow-[0_8px_24px_rgba(0,0,0,0.10)]"
 					>
 						<div class="relative aspect-[16/10] w-full overflow-hidden bg-[#F4F4F5]">
 							<img
@@ -219,7 +219,7 @@
 								class="pointer-events-none absolute inset-0 flex items-center justify-center bg-black/0 transition-colors duration-200 group-hover:bg-black/15"
 							>
 								<div
-									class="flex h-10 w-10 items-center justify-center rounded-full bg-white/90 opacity-0 shadow-lg transition-opacity duration-200 group-hover:opacity-100"
+									class="flex h-10 w-10 items-center justify-center rounded-full bg-white/90 opacity-0 shadow-[0_4px_12px_rgba(0,0,0,0.08)] transition-opacity duration-200 group-hover:opacity-100"
 								>
 									<svg
 										class="h-5 w-5 text-[#111111]"

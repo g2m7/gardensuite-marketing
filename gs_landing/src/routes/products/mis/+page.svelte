@@ -32,10 +32,18 @@
 	];
 
 	const rollout = [
-		{ step: '1', title: 'Site Visit', desc: 'Sarbani team visits your garden to understand your workflow.' },
+		{
+			step: '1',
+			title: 'Site Visit',
+			desc: 'Sarbani team visits your garden to understand your workflow.'
+		},
 		{ step: '2', title: 'On-site Setup', desc: 'Software installed and configured at the garden.' },
 		{ step: '3', title: 'Staff Training', desc: 'Hands-on training for office and field staff.' },
-		{ step: '4', title: 'Go-Live Support', desc: 'Support stays on-site until your team is confident.' }
+		{
+			step: '4',
+			title: 'Go-Live Support',
+			desc: 'Support stays on-site until your team is confident.'
+		}
 	];
 </script>
 
@@ -46,7 +54,8 @@
 	schema={[
 		softwareSchema({
 			name: 'GardenSuite Daily MIS Report',
-			description: 'Daily Report (MIS Dashboard) for tea gardens. Monitor plucking, production, labour, and factory numbers from phone, tablet, or laptop.',
+			description:
+				'Daily Report (MIS Dashboard) for tea gardens. Monitor plucking, production, labour, and factory numbers from phone, tablet, or laptop.',
 			os: 'Web, Windows, Android'
 		}),
 		breadcrumbSchema([
@@ -66,22 +75,38 @@
 			{demoHref}
 		>
 			<!-- Hero mockup element inside the slot -->
-			<div class="relative mx-auto mt-16 w-full max-w-[960px] rounded-[28px] border border-white/60 bg-[#DDEFE4] p-5 shadow-[0_24px_62px_rgba(15,46,12,0.1)] md:p-8">
-				<div class="absolute inset-0 z-0 bg-gradient-to-b from-[#F8FAF8] to-[#E8F3ED] opacity-90 rounded-[28px]"></div>
-				<div class="dot-grid-light absolute inset-0 z-0 opacity-40 rounded-[28px]"></div>
-				
-				<div class="relative z-10 overflow-hidden rounded-2xl border border-[#E4E4E7] bg-[#1a1a1a] shadow-[0_20px_80px_rgba(0,0,0,0.15)]">
+			<div
+				class="relative mx-auto mt-16 w-full max-w-[960px] rounded-[28px] border border-white/60 bg-[#DDEFE4] p-5 shadow-[0_8px_24px_rgba(0,0,0,0.08)] md:p-8"
+			>
+				<div
+					class="absolute inset-0 z-0 rounded-[28px] bg-gradient-to-b from-[#F8FAF8] to-[#E8F3ED] opacity-90"
+				></div>
+				<div class="dot-grid-light absolute inset-0 z-0 rounded-[28px] opacity-40"></div>
+
+				<div
+					class="relative z-10 overflow-hidden rounded-2xl border border-[#E4E4E7] bg-[#1a1a1a] shadow-[0_10px_28px_rgba(0,0,0,0.10)]"
+				>
 					<!-- Browser titlebar mockup -->
-					<div class="flex items-center gap-2 border-b border-white/[0.06] bg-[#1a1a1a] px-4 py-2.5">
+					<div
+						class="flex items-center gap-2 border-b border-white/[0.06] bg-[#1a1a1a] px-4 py-2.5"
+					>
 						<div class="flex gap-1.5">
 							<div class="h-2.5 w-2.5 rounded-full bg-[#FF5F57]"></div>
 							<div class="h-2.5 w-2.5 rounded-full bg-[#FEBC2E]"></div>
 							<div class="h-2.5 w-2.5 rounded-full bg-[#28C840]"></div>
 						</div>
 						<div class="flex flex-1 justify-center">
-							<div class="flex min-w-[240px] items-center gap-1.5 rounded-md bg-white/[0.06] px-3 py-1">
+							<div
+								class="flex min-w-[240px] items-center gap-1.5 rounded-md bg-white/[0.06] px-3 py-1"
+							>
 								<svg width="10" height="10" viewBox="0 0 12 12" fill="none" aria-hidden="true">
-									<path d="M2 6h8M6 2v8" stroke="white" stroke-opacity="0.3" stroke-width="1.2" stroke-linecap="round"/>
+									<path
+										d="M2 6h8M6 2v8"
+										stroke="white"
+										stroke-opacity="0.3"
+										stroke-width="1.2"
+										stroke-linecap="round"
+									/>
 								</svg>
 								<span class="text-[11px] text-white/30">gardensuite.in/dashboard</span>
 							</div>
@@ -100,7 +125,7 @@
 			</div>
 		</ProductHero>
 
-		<ProductTrustRow 
+		<ProductTrustRow
 			stats={[
 				{ value: '20+', label: 'Tea Estates' },
 				{ value: '7', label: 'Regions' },
@@ -117,7 +142,9 @@
 		/>
 
 		<!-- Story 1: One Dashboard -->
-		<section class="reveal-on-scroll relative w-full bg-[#FAFAF7] border-b border-[#E4E4E7] py-24 md:py-32">
+		<section
+			class="reveal-on-scroll relative w-full border-b border-[#E4E4E7] bg-[#FAFAF7] py-24 md:py-32"
+		>
 			<div class="mx-auto max-w-[1344px] px-6 md:px-12">
 				<div class="mb-14 text-center">
 					<span
@@ -139,7 +166,7 @@
 				<div class="grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-8">
 					{#each [{ title: 'Plucking & Leaf Intake', desc: 'Section-wise green leaf weights, worker count, and per-worker yield. Compare day over day and week over week.', icon: 'leaf' }, { title: 'Factory Production', desc: 'Made tea output, grade-wise breakdown, manufacturing cost, and withering-to-drying status. Live batch tracking.', icon: 'factory' }, { title: 'Labour & Payroll', desc: 'Attendance summary, wage breakdown, overtime, and advance positions. Know your daily and monthly labour cost.', icon: 'labour' }] as item}
 						<div
-							class="rounded-[24px] border border-white/70 bg-white p-6 shadow-[0_12px_36px_rgba(0,0,0,0.04)] hover:shadow-card-hover hover:border-[#E4E4E7] transition-all duration-300 md:p-8"
+							class="rounded-[24px] border border-white/70 bg-white p-6 shadow-[0_6px_18px_rgba(0,0,0,0.06)] transition-all duration-300 hover:border-[#E4E4E7] hover:shadow-card-hover md:p-8"
 						>
 							<div
 								class="mb-5 flex h-12 w-12 items-center justify-center rounded-[18px] bg-[#1B5E3B]/10 text-[#1B5E3B]"
@@ -197,7 +224,9 @@
 		</section>
 
 		<!-- Story 2: Access Anywhere -->
-		<section class="reveal-on-scroll relative w-full bg-white border-b border-[#E4E4E7] py-24 md:py-32">
+		<section
+			class="reveal-on-scroll relative w-full border-b border-[#E4E4E7] bg-white py-24 md:py-32"
+		>
 			<div
 				class="mx-auto grid max-w-[1344px] items-center gap-12 px-6 md:grid-cols-2 md:gap-16 md:px-12"
 			>
@@ -240,7 +269,7 @@
 
 				<div class="relative flex justify-center">
 					<div
-						class="w-full max-w-[500px] overflow-hidden rounded-[20px] border border-[#E4E4E7] bg-[#1a1a1a] shadow-[0_30px_100px_rgba(0,0,0,0.18)]"
+						class="w-full max-w-[500px] overflow-hidden rounded-[20px] border border-[#E4E4E7] bg-[#1a1a1a] shadow-[0_10px_28px_rgba(0,0,0,0.10)]"
 					>
 						<div class="flex items-center gap-2 border-b border-white/[0.06] px-4 py-2.5">
 							<div class="flex gap-1.5">

@@ -39,7 +39,9 @@
 				{/if}
 				<h2
 					id="rollout-heading"
-					class="mt-3 text-[32px] leading-[1.08] font-semibold tracking-[-0.04em] text-heading md:text-[44px]"
+					class="{tagText
+						? 'mt-3 '
+						: ''}text-[32px] leading-[1.08] font-semibold tracking-[-0.04em] text-heading md:text-[44px]"
 					style="text-wrap: balance"
 				>
 					{headline}
@@ -95,7 +97,7 @@
 
 				{#if outcomeTitle && outcomeItems.length}
 					<div
-						class="mt-6 rounded-lg border border-[#DDE5DC] bg-white p-5 shadow-[0_18px_50px_rgba(0,0,0,0.06)] md:p-6"
+						class="mt-6 rounded-lg border border-[#DDE5DC] bg-white p-5 shadow-[0_6px_18px_rgba(0,0,0,0.06)] md:p-6"
 					>
 						<h3 class="text-[18px] font-semibold tracking-[-0.01em] text-heading">
 							{outcomeTitle}

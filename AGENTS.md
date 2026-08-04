@@ -53,6 +53,10 @@ Jalpaiguri: Himalayan Agro Plantation
 - NO pill-shaped badges or kickers (rounded-full colored background labels). Use plain uppercase text kickers only (`text-[13px] font-semibold tracking-[0.08em] uppercase`).
 - NO glassmorphism (backdrop-blur, bg-white/opacity overlays, frosted glass effects). Use solid opaque backgrounds only.
 - NO colored glow effects (ring-1 ring-[color]/opacity, shadow with color, gradient glow divs behind elements). Use neutral shadows only (rgba black).
+- NO heavy shadows. Prefer borders and surface contrast first. Shadows may only provide subtle separation.
+- Maximum shadow: `0 12px 30px rgba(0,0,0,0.10)`. Do not use `shadow-lg`, `shadow-xl`, `shadow-2xl`, blur radii above 30px, opacity above 0.10, or dramatic hover elevation.
+- Use these shadow levels: small `0 1px 3px rgba(0,0,0,0.04)`, card `0 6px 18px rgba(0,0,0,0.06)`, elevated `0 10px 28px rgba(0,0,0,0.10)`.
+- Icon drop-shadows must stay at or below `0 2px 4px rgba(0,0,0,0.10)`.
 
 ## Reference Docs (Read Before Making Changes)
 

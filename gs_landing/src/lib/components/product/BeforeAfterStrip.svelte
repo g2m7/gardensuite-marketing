@@ -97,7 +97,7 @@
 					<!-- Arrow -->
 					<div class="flex items-center justify-center">
 						<div
-							class="flex h-8 w-8 items-center justify-center rounded-full bg-[#1B5E3B] text-white shadow-[0_4px_12px_rgba(27,94,59,0.2)]"
+							class="flex h-8 w-8 items-center justify-center rounded-full bg-[#1B5E3B] text-white shadow-[0_2px_8px_rgba(0,0,0,0.08)]"
 						>
 							<!-- Right arrow (desktop) -->
 							<svg

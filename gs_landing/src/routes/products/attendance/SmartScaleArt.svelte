@@ -10,9 +10,15 @@
 	</desc>
 
 	<defs>
-		<filter id="scale-shadow" x="-25%" y="-20%" width="150%" height="150%" color-interpolation-filters="sRGB">
-			<feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#0F172A" flood-opacity="0.16" />
-			<feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#0F172A" flood-opacity="0.08" />
+		<filter
+			id="scale-shadow"
+			x="-25%"
+			y="-20%"
+			width="150%"
+			height="150%"
+			color-interpolation-filters="sRGB"
+		>
+			<feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#0F172A" flood-opacity="0.10" />
 		</filter>
 		<linearGradient id="steel" x1="70" y1="0" x2="190" y2="0" gradientUnits="userSpaceOnUse">
 			<stop stop-color="#D8DDD9" />
@@ -22,18 +28,28 @@
 	</defs>
 
 	<g fill="none" stroke-linecap="round" stroke-linejoin="round">
-		<path
-			d="M130 18C105 18 91 35 91 58C91 76 104 89 123 93"
-			stroke="#151715"
-			stroke-width="12"
-		/>
+		<path d="M130 18C105 18 91 35 91 58C91 76 104 89 123 93" stroke="#151715" stroke-width="12" />
 		<path
 			d="M130 18C155 18 169 35 169 58C169 76 156 89 137 93"
 			stroke="#151715"
 			stroke-width="12"
 		/>
-		<path d="M120 93H140L136 121H124L120 93Z" fill="url(#steel)" stroke="#767F78" stroke-width="2" />
-		<rect x="106" y="114" width="48" height="20" rx="10" fill="url(#steel)" stroke="#767F78" stroke-width="2" />
+		<path
+			d="M120 93H140L136 121H124L120 93Z"
+			fill="url(#steel)"
+			stroke="#767F78"
+			stroke-width="2"
+		/>
+		<rect
+			x="106"
+			y="114"
+			width="48"
+			height="20"
+			rx="10"
+			fill="url(#steel)"
+			stroke="#767F78"
+			stroke-width="2"
+		/>
 
 		<g filter="url(#scale-shadow)">
 			<path
@@ -117,8 +133,21 @@
 			</text>
 		</g>
 
-		<rect x="122" y="337" width="16" height="54" rx="8" fill="url(#steel)" stroke="#767F78" stroke-width="2" />
-		<path d="M130 392C111 392 100 405 100 420C100 435 112 448 130 448" stroke="#151715" stroke-width="10" />
+		<rect
+			x="122"
+			y="337"
+			width="16"
+			height="54"
+			rx="8"
+			fill="url(#steel)"
+			stroke="#767F78"
+			stroke-width="2"
+		/>
+		<path
+			d="M130 392C111 392 100 405 100 420C100 435 112 448 130 448"
+			stroke="#151715"
+			stroke-width="10"
+		/>
 		<path d="M130 392C149 392 160 405 160 420" stroke="#151715" stroke-width="10" />
 		<path d="M160 420C160 434 151 445 136 448" stroke="#151715" stroke-width="10" />
 		<path d="M108 452C123 469 146 469 161 452" stroke="#AEB7B0" stroke-width="4" />

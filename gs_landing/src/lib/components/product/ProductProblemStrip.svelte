@@ -40,7 +40,7 @@
 			{#each problems as item}
 				<div class="flex gap-5">
 					<div
-						class="relative mt-1 shrink-0 text-[#DC2626] drop-shadow-[0_2px_4px_rgba(220,38,38,0.2)]"
+						class="relative mt-1 shrink-0 text-[#DC2626] drop-shadow-[0_1px_2px_rgba(0,0,0,0.10)]"
 					>
 						<svg
 							width="28"
@@ -65,8 +65,7 @@
 								stroke="#DC2626"
 								stroke-width="3"
 								stroke-linecap="round"
-								stroke-linejoin="round"
-								><path d="M18 6 6 18M6 6l12 12" /></svg
+								stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12" /></svg
 							>
 						</span>
 					</div>

@@ -132,7 +132,6 @@
 		ready = true;
 	});
 
-
 	// ─── Contact Form ───
 	const WA_NUMBER = '919734101330';
 	const ENQUIRY_EMAIL = 'sarbaniassociates@gmail.com';
@@ -298,7 +297,8 @@
 		websiteSchema(),
 		softwareSchema({
 			name: 'GardenSuite',
-			description: 'Complete ERP software for tea gardens covering face attendance, smart weighing, payroll, factory production, stores, and daily MIS reporting.',
+			description:
+				'Complete ERP software for tea gardens covering face attendance, smart weighing, payroll, factory production, stores, and daily MIS reporting.',
 			featureList: [
 				'Face recognition attendance',
 				'Bluetooth smart weighing scale',
@@ -402,7 +402,7 @@
 					class="hero-mockup absolute top-[20%] left-1/2 z-10 w-[90%] max-w-[1344px] -translate-x-1/2 md:top-[11%]"
 				>
 					<div
-						class="hero-mockup-inner relative overflow-hidden rounded-xl border border-white/40 bg-[#1a1a1a] shadow-[0_30px_100px_rgba(0,0,0,0.18)] md:rounded-2xl"
+						class="hero-mockup-inner relative overflow-hidden rounded-xl border border-white/40 bg-[#1a1a1a] shadow-[0_10px_28px_rgba(0,0,0,0.10)] md:rounded-2xl"
 					>
 						<div
 							class="flex items-center gap-2 border-b border-white/[0.06] bg-[#1a1a1a] px-4 py-2.5"
@@ -479,7 +479,7 @@
 						<img
 							src="/cloud-border.png"
 							alt=""
-							class="hero-cloud-border absolute inset-x-0 bottom-0 z-10 w-full h-[180px] md:h-[220px] lg:h-[260px] translate-y-[10%] brightness-[1.15] saturate-0"
+							class="hero-cloud-border absolute inset-x-0 bottom-0 z-10 h-[180px] w-full translate-y-[10%] brightness-[1.15] saturate-0 md:h-[220px] lg:h-[260px]"
 							width="1800"
 							height="411"
 							loading="eager"
@@ -569,7 +569,7 @@
 					{#each [{ title: 'Registers get lost or delayed', desc: 'Muster rolls, weight chits, and stock notes vanish or arrive late. Decisions wait because data is incomplete.', icon: 'register' }, { title: 'Proxy attendance and inflated weight', desc: 'Without verified identity and linked weighing, you may pay for workers who did not report and leaf that was not plucked.', icon: 'proxy' }, { title: 'Monthly payroll takes too long', desc: 'Manual hazira, PF, ESI, and bonus calculations across large teams increase errors, delay payout, and trigger avoidable disputes.', icon: 'payroll' }] as item}
 						<div class="flex gap-5">
 							<div
-								class="relative mt-1 shrink-0 text-[#DC2626] drop-shadow-[0_2px_4px_rgba(220,38,38,0.2)]"
+								class="relative mt-1 shrink-0 text-[#DC2626] drop-shadow-[0_1px_2px_rgba(0,0,0,0.10)]"
 							>
 								{#if item.icon === 'register'}
 									<svg
@@ -662,7 +662,10 @@
 			]}
 			features={[
 				{ title: 'Offline first', desc: 'Works at the garden without internet.' },
-				{ title: 'Connected data', desc: 'Attendance, weight, payroll, factory, and stores in one flow.' },
+				{
+					title: 'Connected data',
+					desc: 'Attendance, weight, payroll, factory, and stores in one flow.'
+				},
 				{ title: 'Less leakage', desc: 'Reduces proxy attendance and inflated weights.' },
 				{ title: 'Sarbani support', desc: 'Setup and training by the local team.' }
 			]}
@@ -701,7 +704,7 @@
 					{#if product.featured}
 						<a
 							href={product.href}
-							class="group/product relative mb-6 block overflow-hidden rounded-[28px] border border-white/70 bg-[#DDEFE4] p-4 shadow-[0_18px_50px_rgba(15,46,12,0.12)] transition-all duration-300 hover:shadow-[0_24px_62px_rgba(15,46,12,0.16)] md:mb-8 md:p-5"
+							class="group/product relative mb-6 block overflow-hidden rounded-[28px] border border-white/70 bg-[#DDEFE4] p-4 shadow-[0_8px_24px_rgba(0,0,0,0.08)] transition-all duration-300 hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)] md:mb-8 md:p-5"
 						>
 							<picture>
 								<source srcset="/hero-sky.webp" type="image/webp" />
@@ -733,7 +736,7 @@
 							<div class="absolute inset-0 z-[2] bg-white/[0.08]"></div>
 
 							<div
-								class="relative z-10 rounded-[22px] border border-white/65 bg-white/[0.08] shadow-[inset_0_1px_0_rgba(255,255,255,0.65)]"
+								class="relative z-10 rounded-[22px] border border-white/65 bg-white/[0.08] shadow-none"
 							>
 								<div class="grid grid-cols-1 gap-5 p-4 md:grid-cols-[1fr_1fr] md:p-5 lg:p-6">
 									<div
@@ -741,7 +744,7 @@
 									>
 										<div class="absolute top-5 left-5 z-30 md:top-6 md:left-6">
 											<span
-												class="rounded-full border border-white/80 bg-white/95 px-3.5 py-1.5 text-[11px] font-semibold tracking-[0.05em] text-[#1B5E3B] uppercase shadow-[0_8px_18px_rgba(15,46,12,0.10)] backdrop-blur"
+												class="rounded-full border border-white/80 bg-white/95 px-3.5 py-1.5 text-[11px] font-semibold tracking-[0.05em] text-[#1B5E3B] uppercase shadow-[0_4px_12px_rgba(0,0,0,0.06)] backdrop-blur"
 											>
 												{product.badge}
 											</span>
@@ -752,7 +755,7 @@
 									</div>
 									<div class="flex items-center justify-center p-1 md:p-4 lg:p-6">
 										<div
-											class="w-full rounded-[20px] bg-white/96 px-7 py-8 shadow-[0_14px_34px_rgba(15,23,42,0.10)] ring-1 ring-white/70 md:px-10 md:py-11 lg:px-12 lg:py-12"
+											class="w-full rounded-[20px] bg-white/96 px-7 py-8 shadow-[0_8px_24px_rgba(0,0,0,0.08)] ring-1 ring-white/70 md:px-10 md:py-11 lg:px-12 lg:py-12"
 										>
 											<h3
 												class="text-[22px] font-semibold tracking-normal text-[#111111] lg:text-[26px]"
@@ -797,7 +800,7 @@
 						{#if !product.featured}
 							<a
 								href={product.href}
-								class="group/product relative block min-h-[520px] overflow-hidden rounded-[28px] border border-white/70 bg-[#DDEFE4] p-4 shadow-[0_18px_50px_rgba(15,46,12,0.12)] transition-all duration-300 hover:shadow-[0_24px_62px_rgba(15,46,12,0.16)] md:min-h-[560px] md:p-5"
+								class="group/product relative block min-h-[520px] overflow-hidden rounded-[28px] border border-white/70 bg-[#DDEFE4] p-4 shadow-[0_8px_24px_rgba(0,0,0,0.08)] transition-all duration-300 hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)] md:min-h-[560px] md:p-5"
 							>
 								<picture>
 									<source srcset="/hero-sky.webp" type="image/webp" />
@@ -829,11 +832,11 @@
 								<div class="absolute inset-0 z-[2] bg-white/[0.08]"></div>
 
 								<div
-									class="relative z-10 h-full min-h-[488px] overflow-hidden rounded-[22px] border border-white/65 bg-white/[0.16] shadow-[inset_0_1px_0_rgba(255,255,255,0.65)] backdrop-blur-[6px] md:min-h-[520px]"
+									class="relative z-10 h-full min-h-[488px] overflow-hidden rounded-[22px] border border-white/65 bg-white/[0.16] shadow-none backdrop-blur-[6px] md:min-h-[520px]"
 								>
 									<div class="absolute top-4 left-4 z-30 md:top-5 md:left-5">
 										<span
-											class="rounded-full border border-white/80 bg-white/95 px-3.5 py-1.5 text-[11px] font-semibold tracking-[0.05em] text-[#1B5E3B] uppercase shadow-[0_8px_18px_rgba(15,46,12,0.10)] backdrop-blur"
+											class="rounded-full border border-white/80 bg-white/95 px-3.5 py-1.5 text-[11px] font-semibold tracking-[0.05em] text-[#1B5E3B] uppercase shadow-[0_4px_12px_rgba(0,0,0,0.06)] backdrop-blur"
 										>
 											{product.badge}
 										</span>
@@ -846,7 +849,7 @@
 									</div>
 
 									<div
-										class="absolute inset-x-0 bottom-0 z-20 flex min-h-[188px] flex-col justify-between rounded-b-[22px] bg-white px-6 pt-7 pb-6 shadow-[0_-12px_32px_rgba(15,23,42,0.08)] md:px-8 md:pt-8 md:pb-7"
+										class="absolute inset-x-0 bottom-0 z-20 flex min-h-[188px] flex-col justify-between rounded-b-[22px] bg-white px-6 pt-7 pb-6 shadow-[0_-6px_18px_rgba(0,0,0,0.06)] md:px-8 md:pt-8 md:pb-7"
 									>
 										<div>
 											<h3 class="text-[20px] font-semibold tracking-normal text-[#111111]">
@@ -881,7 +884,16 @@
 			kicker="Comparison"
 			headline="Paper way vs GardenSuite"
 			paragraph="Stop relying on muster rolls, paper chits, and phone-call reporting. One connected system for your whole tea estate."
-			features={['Face scan attendance', 'Smart wireless scale', 'Auto-calculated payroll', 'Connected factory data', 'Live store balances', 'Cloud daily reports', 'Offline at the garden', 'On-site setup & training']}
+			features={[
+				'Face scan attendance',
+				'Smart wireless scale',
+				'Auto-calculated payroll',
+				'Connected factory data',
+				'Live store balances',
+				'Cloud daily reports',
+				'Offline at the garden',
+				'On-site setup & training'
+			]}
 			paperResults={[false, false, false, false, false, false, false, false]}
 			gsResults={[true, true, true, true, true, true, true, true]}
 		/>
@@ -1088,7 +1100,7 @@
 						<div
 							class="group flex gap-5 rounded-2xl p-4 transition-all duration-500 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:-translate-y-1 hover:bg-white/60"
 						>
-							<div class="mt-1 shrink-0 text-[#1B5E3B] drop-shadow-[0_2px_4px_rgba(27,94,59,0.25)]">
+							<div class="mt-1 shrink-0 text-[#1B5E3B] drop-shadow-[0_1px_2px_rgba(0,0,0,0.10)]">
 								{#if item.icon === 'payroll'}
 									<svg
 										width="28"
@@ -1411,7 +1423,7 @@
 	>
 		{#if contactPanelOpen}
 			<div
-				class="absolute right-0 bottom-0 w-[min(calc(100vw-2.5rem),360px)] overflow-hidden rounded-3xl bg-[#141A16] pb-16 shadow-[0_24px_80px_rgba(0,0,0,0.45)]"
+				class="absolute right-0 bottom-0 w-[min(calc(100vw-2.5rem),360px)] overflow-hidden rounded-3xl bg-[#141A16] pb-16 shadow-[0_10px_28px_rgba(0,0,0,0.10)]"
 				transition:fly={{ y: 16, duration: 220, easing: (t: number) => 1 - Math.pow(1 - t, 4) }}
 			>
 				<div class="p-5 pb-3">
@@ -1509,7 +1521,7 @@
 			type="button"
 			class="group relative z-10 flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-[#141A16] text-white transition-all duration-200 focus:outline-none focus-visible:ring-4 focus-visible:ring-white/15 active:scale-[0.97] {contactPanelOpen
 				? 'shadow-none'
-				: 'shadow-[0_16px_44px_rgba(0,0,0,0.35)] hover:bg-[#1a2420]'}"
+				: 'shadow-[0_8px_24px_rgba(0,0,0,0.10)] hover:bg-[#1a2420]'}"
 			aria-label={contactPanelOpen ? 'Close contact options' : 'Open contact options'}
 			aria-expanded={contactPanelOpen}
 			onclick={() => (contactPanelOpen = !contactPanelOpen)}
@@ -1561,7 +1573,6 @@
 </div>
 
 <style>
-
 	:global(.reveal-on-scroll) {
 		opacity: 0;
 		transform: translateY(24px);

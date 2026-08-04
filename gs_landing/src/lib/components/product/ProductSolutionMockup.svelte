@@ -21,7 +21,7 @@
 	aria-labelledby="solution-heading"
 >
 	<div
-		class="mx-auto grid max-w-[1344px] gap-12 px-6 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20 md:px-12"
+		class="mx-auto grid max-w-[1344px] gap-12 px-6 md:px-12 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20"
 	>
 		<div class="max-w-xl">
 			{#if tagText}
@@ -42,11 +42,15 @@
 			</p>
 		</div>
 		<div
-			class="relative overflow-hidden rounded-2xl border border-[#0F2E0C]/15 bg-[#0B1712] p-4 shadow-[0_30px_90px_rgba(15,46,12,0.18)] md:p-5"
+			class="relative overflow-hidden rounded-2xl border border-[#0F2E0C]/15 bg-[#0B1712] p-4 shadow-[0_10px_28px_rgba(0,0,0,0.10)] md:p-5"
 		>
-			<div class="dot-grid absolute inset-0 z-0 opacity-10 rounded-xl"></div>
-			<div class="relative z-10 rounded-xl border border-white/15 bg-white/[0.04] p-5 backdrop-blur-sm md:p-8">
-				<div class="mx-auto max-w-[420px] rounded-3xl border border-white/30 bg-white/95 p-5 shadow-[0_20px_60px_rgba(0,0,0,0.18)] md:p-6">
+			<div class="dot-grid absolute inset-0 z-0 rounded-xl opacity-10"></div>
+			<div
+				class="relative z-10 rounded-xl border border-white/15 bg-white/[0.04] p-5 backdrop-blur-sm md:p-8"
+			>
+				<div
+					class="mx-auto max-w-[420px] rounded-3xl border border-white/30 bg-white/95 p-5 shadow-[0_10px_28px_rgba(0,0,0,0.10)] md:p-6"
+				>
 					<div class="mb-5 flex items-center justify-between border-b border-[#E4E4E7] pb-4">
 						<div>
 							{#if cardHeaderTag}
@@ -58,16 +62,28 @@
 								{cardHeaderTitle}
 							</div>
 						</div>
-						<div class="flex h-10 w-10 items-center justify-center rounded-full bg-[#1B5E3B] text-white">
+						<div
+							class="flex h-10 w-10 items-center justify-center rounded-full bg-[#1B5E3B] text-white"
+						>
 							<svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-								<path d="M4 10.5 8 14l8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+								<path
+									d="M4 10.5 8 14l8-8"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
 							</svg>
 						</div>
 					</div>
 					<div class="space-y-3">
 						{#each steps as row, i}
-							<div class="flex items-center gap-3 rounded-2xl border border-[#E4E4E7] bg-[#FAFAF7] px-4 py-3">
-								<div class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#1B5E3B]/10 text-[12px] font-semibold text-[#1B5E3B]">
+							<div
+								class="flex items-center gap-3 rounded-2xl border border-[#E4E4E7] bg-[#FAFAF7] px-4 py-3"
+							>
+								<div
+									class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#1B5E3B]/10 text-[12px] font-semibold text-[#1B5E3B]"
+								>
 									{i + 1}
 								</div>
 								<div class="min-w-0 flex-1">

@@ -8,7 +8,7 @@
 
 ## 1. Theme & Philosophy
 
-**Light, warm, grounded.** White canvas with warm-tinted neutrals and a single committed brand green. Apple-inspired restraint: generous whitespace, large typography, layered depth through shadow and parallax. No dark mode. The design feels like daylight on a tea garden.
+**Light, warm, grounded.** White canvas with warm-tinted neutrals and a single committed brand green. Apple-inspired restraint: generous whitespace, large typography, and subtle depth through borders, imagery, and restrained motion. No dark mode. The design feels like daylight on a tea garden.
 
 ---
 
@@ -220,40 +220,22 @@ The homepage uses `rgba()` and `/opacity` notation extensively:
 
 ## 6. Shadow System
 
-### 6.1 Elevation Levels
+Heavy shadows are prohibited. Prefer borders and surface contrast before adding elevation. All shadows use neutral black and must stay at or below `0 12px 30px rgba(0,0,0,0.10)`.
 
 | Name | Value | Usage |
 |---|---|---|
-| Subtle | `0_1px_3px_rgba(0,0,0,0.04)` | Secondary CTA button |
-| Card | `0_2px_10px_rgba(0,0,0,0.05)` | Solution secondary CTA |
-| Card hover | `0_2px_12px_rgba(0,0,0,0.04)` | FAQ open state |
-| Nav CTA | `0_2px_8px_rgba(27,94,59,0.25)` | Desktop nav "Book Free Demo" |
-| Primary CTA | `0_4px_20px_rgba(27,94,59,0.25)` | Hero primary CTA |
-| Product card | `0_18px_50px_rgba(15,46,12,0.12)` | Product card resting |
-| Product card hover | `0_24px_62px_rgba(15,46,12,0.16)` | Product card hover |
-| Solution card | `0_30px_90px_rgba(15,46,12,0.18)` | Solution visual container |
-| Hero mockup | `0_30px_100px_rgba(0,0,0,0.18)` | Dashboard browser frame |
-| Phone card | `0_20px_60px_rgba(0,0,0,0.18)` | Solution phone UI card |
-| Content card | `0_14px_34px_rgba(15,23,42,0.10)` | Product white content area |
-| Product badge | `0_8px_18px_rgba(15,46,12,0.10)` | "Attendance & Weighing" badge |
-| Bottom card | `0_-12px_32px_rgba(15,23,42,0.08)` | Product card bottom panel (upward shadow) |
-| Contact panel | `0_24px_80px_rgba(0,0,0,0.45)` | FAB contact popup |
-| FAB | `0_16px_44px_rgba(0,0,0,0.35)` | Floating action button |
-| Mobile nav | `0_20px_60px_rgba(0,0,0,0.1)` | Mobile nav sheet |
-| Green glow | `0_0_8px_rgba(27,94,59,0.4)` | GardenSuite comparison checkmark |
-| Comparison column | `0_0_60px_rgba(27,94,59,0.12)` | GardenSuite column glow |
-| Status dot glow | `0_0_0_4px_rgba(34,197,94,0.12)` | Green status indicator ring |
+| Small | `0_1px_3px_rgba(0,0,0,0.04)` | Secondary buttons and tiny controls |
+| Card | `0_6px_18px_rgba(0,0,0,0.06)` | Cards and quiet overlays |
+| Elevated | `0_10px_28px_rgba(0,0,0,0.10)` | Device frames, dialogs, and large screenshots |
 
-### 6.2 Inset Shadows
+Do not use `shadow-lg`, `shadow-xl`, `shadow-2xl`, colored shadows, glow shadows, blur radii above 30px, or opacity above 0.10.
 
-- `inset_0_1px_0_rgba(255,255,255,0.65)` - Product card inner frame top highlight
-
-### 6.3 CSS Utility Shadows (layout.css)
+### 6.1 CSS Utility Shadows (layout.css)
 
 ```css
-shadow-soft:   0 12px 30px rgba(74, 157, 53, 0.15)
-shadow-card:   0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.02)
-shadow-card-hover: 0 12px 40px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.04)
+shadow-soft:       0 6px 18px rgba(0,0,0,0.06)
+shadow-card:       0 1px 3px rgba(0,0,0,0.04)
+shadow-card-hover: 0 8px 24px rgba(0,0,0,0.08)
 ```
 
 ---
@@ -279,7 +261,7 @@ shadow-card-hover: 0 12px 40px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.04)
 **Primary CTA (Hero)**:
 ```
 rounded-full bg-[#1B5E3B] px-6 py-4
-shadow-[0_4px_20px_rgba(27,94,59,0.25)]
+shadow-[0_4px_12px_rgba(0,0,0,0.10)]
 hover:bg-[#144723]
 active:scale-[0.97]
 focus-visible:ring-2 ring-[#1B5E3B]/30
@@ -342,7 +324,7 @@ Color varies by context:
 **Featured (full-width)**:
 - Outer: `rounded-[28px] border-white/70 bg-[#DDEFE4] p-4 md:p-5`
 - Layered backgrounds: sky image + landscape image with gradient masks
-- Inner frame: `rounded-[22px] border-white/65 bg-white/[0.08] shadow inset highlight`
+- Inner frame: `rounded-[22px] border-white/65 bg-white/[0.08]`
 - 2-column grid: preview + white content card
 - Content card: `rounded-[20px] bg-white/96 px-7 py-8 shadow ring-1 ring-white/70`
 - "Learn more" link: `text-[#1B5E3B]` with gap animation on group hover
@@ -360,7 +342,7 @@ Color varies by context:
 ```
 rounded-full border border-white/80 bg-white/95 px-3.5 py-1.5
 text-[11px] font-semibold tracking-[0.05em] text-[#1B5E3B] uppercase
-shadow-[0_8px_18px_rgba(15,46,12,0.10)] backdrop-blur
+shadow-[0_4px_12px_rgba(0,0,0,0.06)] backdrop-blur
 ```
 
 ### 7.7 FAQ Accordion
@@ -392,7 +374,7 @@ shadow-[0_8px_18px_rgba(15,46,12,0.10)] backdrop-blur
 - GardenSuite column bg: `bg-[#1B5E3B]/20`
 - Row height: `h-12`, border `white/[0.06]`
 - X icon: `h-5 w-5 rounded-full bg-[#DC2626]/20 text-[#FCA5A5]`
-- Check icon: `h-5 w-5 rounded-full bg-[#1B5E3B] text-white shadow glow`
+- Check icon: `h-5 w-5 rounded-full bg-[#1B5E3B] text-white`
 
 ### 7.10 Bento Grid (Proof Section)
 
@@ -407,7 +389,7 @@ shadow-[0_8px_18px_rgba(15,46,12,0.10)] backdrop-blur
 
 - Hover lift: `hover:-translate-y-1 hover:bg-white/60`
 - Transition: `duration-500 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]`
-- Icon: `28px` stroke icons, `text-[#1B5E3B] drop-shadow-[0_2px_4px_rgba(27,94,59,0.25)]`
+- Icon: `28px` stroke icons, `text-[#1B5E3B] drop-shadow-[0_1px_2px_rgba(0,0,0,0.10)]`
 - Layout: `flex gap-5 rounded-2xl p-4`
 
 ### 7.12 Contact / CTA Section
@@ -441,7 +423,7 @@ shadow-[0_8px_18px_rgba(15,46,12,0.10)] backdrop-blur
 
 ```
 rounded-2xl border border-white/70 bg-white
-shadow-[0_14px_34px_rgba(15,23,42,0.12)]
+shadow-[0_8px_24px_rgba(0,0,0,0.08)]
 ```
 - Title bar: `h-7 bg-[#F4F4F5] border-b border-[#E4E4E7]`
 - Traffic lights: `h-2.5 w-2.5 rounded-full` in `#FF5F57`, `#FEBC2E`, `#28C840`
@@ -451,7 +433,7 @@ shadow-[0_14px_34px_rgba(15,23,42,0.12)]
 
 ```
 rounded-[1.55rem] border-[5px] border-[#111111] bg-[#111111]
-shadow-[0_18px_44px_rgba(15,23,42,0.22)]
+shadow-[0_10px_28px_rgba(0,0,0,0.10)]
 ```
 - Notch: `h-3 w-16 rounded-b-xl bg-[#111111]`
 - Screen: `aspect-[9/19] rounded-[1.2rem]`
@@ -460,7 +442,7 @@ shadow-[0_18px_44px_rgba(15,23,42,0.22)]
 
 ```
 rounded-xl md:rounded-2xl border border-white/40 bg-[#1a1a1a]
-shadow-[0_30px_100px_rgba(0,0,0,0.18)]
+shadow-[0_10px_28px_rgba(0,0,0,0.10)]
 ```
 - Chrome bar: `gap-2 border-b border-white/[0.06] bg-[#1a1a1a] px-4 py-2.5`
 - Traffic lights: `h-2.5 w-2.5` in `#FF5F57`, `#FEBC2E`, `#28C840`
@@ -488,8 +470,8 @@ All icons are **inline SVGs** - no icon library used.
 
 ### 8.2 Icon Colors
 
-- Problem icons: `text-[#DC2626]` with `drop-shadow-[0_2px_4px_rgba(220,38,38,0.2)]`
-- Differentiator icons: `text-[#1B5E3B]` with `drop-shadow-[0_2px_4px_rgba(27,94,59,0.25)]`
+- Problem icons: `text-[#DC2626]` with `drop-shadow-[0_1px_2px_rgba(0,0,0,0.10)]`
+- Differentiator icons: `text-[#1B5E3B]` with `drop-shadow-[0_1px_2px_rgba(0,0,0,0.10)]`
 - Proof bento icons: `stroke="#A1A1AA"` and `stroke="#6366F1"` (dual tone)
 
 ### 8.3 Icon Treatment

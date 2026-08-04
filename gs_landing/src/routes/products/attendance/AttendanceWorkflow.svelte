@@ -4,24 +4,24 @@
 	const steps = [
 		{
 			number: '01',
-			title: 'Verify the worker',
-			description: 'GS Face checks the worker before the record is saved.',
+			title: 'Verify worker',
+			description: 'Verify the worker before saving.',
 			png: '/screenshots/13_attendance_result_matched.png',
 			webp: '/screenshots/13_attendance_result_matched.webp',
 			alt: 'Matched worker result in the GardenSuite Face app'
 		},
 		{
 			number: '02',
-			title: 'Capture the work',
-			description: 'Save attendance or take leaf weight from the connected scale.',
+			title: 'Record work',
+			description: 'Save attendance or scale weight.',
 			png: '/screenshots/10_harvest_result_scale_connected_save.png',
 			webp: '/screenshots/10_harvest_result_scale_connected_save.webp',
 			alt: 'Connected scale result saved with the worker in GardenSuite Face'
 		},
 		{
 			number: '03',
-			title: 'Review in the office',
-			description: 'Offline records sync for checking, finalization and estate use.',
+			title: 'Review in office',
+			description: 'Sync records for office review.',
 			png: '/screenshots/27_sync_status.png',
 			webp: '/screenshots/27_sync_status.webp',
 			alt: 'GardenSuite sync status showing uploaded and pending field records'
@@ -41,19 +41,14 @@
 				class="text-[36px] leading-[1.08] font-semibold tracking-[-0.04em] text-heading md:text-[44px] lg:text-[52px]"
 				style="text-wrap: balance"
 			>
-				Face, work and weight stay together.
+				One worker. One linked record.
 			</h2>
-			<p
-				class="mx-auto mt-5 max-w-[620px] text-[16px] leading-[1.65] text-text-secondary md:text-[17px]"
-			>
-				Paper separates identity, attendance and leaf weight. Three clear steps keep them together.
-			</p>
 		</div>
 
 		<div class="grid gap-5 md:grid-cols-3">
 			{#each steps as item}
 				<article
-					class="overflow-hidden rounded-2xl border border-border bg-white shadow-[0_12px_36px_rgba(0,0,0,0.05)]"
+					class="overflow-hidden rounded-2xl border border-border bg-white shadow-[0_6px_18px_rgba(0,0,0,0.06)]"
 				>
 					<div
 						class="relative flex h-[230px] items-start justify-center overflow-hidden border-b border-brand-100 bg-brand-50 pt-6 md:h-[270px] md:pt-8"
@@ -62,7 +57,7 @@
 							png={item.png}
 							webp={item.webp}
 							alt={item.alt}
-							class="w-[150px] shadow-[0_18px_48px_rgba(0,0,0,0.18)] md:w-[174px]"
+							class="w-[150px] shadow-[0_10px_28px_rgba(0,0,0,0.10)] md:w-[174px]"
 						/>
 					</div>
 					<div class="p-6 md:p-7">

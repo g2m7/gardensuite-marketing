@@ -84,7 +84,7 @@
 			<div class="grid gap-4">
 				{#each buyers as item}
 					<div
-						class="relative rounded-lg border border-border bg-[#FAFAF8] p-6 shadow-sm transition-shadow duration-300 hover:shadow-md"
+						class="relative rounded-lg border border-border bg-[#FAFAF8] p-6 shadow-sm transition-shadow duration-300 hover:shadow-[0_6px_18px_rgba(0,0,0,0.06)]"
 					>
 						<svg
 							class="absolute top-4 right-4 h-8 w-8 text-[#C8DDB8] opacity-50"
