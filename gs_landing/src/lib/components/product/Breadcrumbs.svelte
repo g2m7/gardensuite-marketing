@@ -8,11 +8,26 @@
 	} = $props();
 </script>
 
+{#if items.length > 3}
+	<nav aria-label="Breadcrumb" class="mb-6 flex text-[13px] font-medium sm:hidden">
+		<a
+			href={items[items.length - 2].path}
+			class="inline-flex min-h-11 items-center gap-2 {dark
+				? 'text-white/80 hover:text-white'
+				: 'text-green-deep'}"
+		>
+			<span aria-hidden="true">&#8592;</span>
+			Back to {items[items.length - 2].name}
+		</a>
+		<span class="sr-only" aria-current="page">{items[items.length - 1].name}</span>
+	</nav>
+{/if}
+
 <nav
 	aria-label="Breadcrumb"
-	class="mb-6 flex items-center gap-2 text-[13px] font-medium {dark
-		? 'text-white/60'
-		: 'text-[#71717A]'}"
+	class="mb-6 {items.length > 3
+		? 'hidden sm:flex'
+		: 'flex'} items-center gap-2 text-[13px] font-medium {dark ? 'text-white/60' : 'text-muted'}"
 >
 	{#each items as item, i}
 		{#if i > 0}
@@ -34,13 +49,15 @@
 			</svg>
 		{/if}
 		{#if i === items.length - 1}
-			<span class="{dark ? 'text-white' : 'text-[#1B5E3B]'} font-semibold" aria-current="page">
+			<span class="{dark ? 'text-white' : 'text-green-deep'} font-semibold" aria-current="page">
 				{item.name}
 			</span>
 		{:else}
 			<a
 				href={item.path}
-				class="transition-colors duration-150 {dark ? 'hover:text-white' : 'hover:text-[#1B5E3B]'}"
+				class="inline-flex min-h-11 items-center transition-colors duration-150 {dark
+					? 'hover:text-white'
+					: 'hover:text-green-deep'}"
 			>
 				{item.name}
 			</a>

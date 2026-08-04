@@ -2,239 +2,208 @@
 	import { onMount } from 'svelte';
 
 	let sectionRef: HTMLElement | null = $state(null);
-	let activeStep = $state(0);
-	let isMobile = $state(true);
+	let scrollerRef: HTMLDivElement | null = $state(null);
+	let trackRef: HTMLDivElement | null = $state(null);
 
 	const steps = [
 		{
 			step: '1',
-			title: 'Open the field app',
-			desc: 'The supervisor starts from the GardenSuite app home and chooses the harvest workflow for the day.',
+			title: 'Open app',
+			desc: 'Choose Harvest from the field app.',
 			image: '/screenshots/workflow_avd/00_home_entry_points.png',
 			alt: 'GardenSuite app home screen with harvest workflow entry points',
-			kicker: 'Harvest workflow'
+			kicker: 'Harvest workflow',
+			zoom: 1.55,
+			focus: 'center 18%'
 		},
 		{
 			step: '2',
-			title: 'Start the field session',
-			desc: 'Select the garden, section, activity, deduction, and task weight before plucking starts.',
+			title: 'Start session',
+			desc: 'Select garden, section, and task.',
 			image: '/screenshots/workflow_avd/01_harvest_start_session_ready.png',
 			alt: 'GardenSuite harvest start session screen ready for field setup',
-			kicker: 'Session ready'
+			kicker: 'Session ready',
+			zoom: 1.5,
+			focus: 'center 20%'
 		},
 		{
 			step: '3',
-			title: 'Record leaf weights',
-			desc: 'Each worker record is saved in the active session, with leaf weight and daily totals visible to the supervisor.',
+			title: 'Record weights',
+			desc: 'Save worker leaf weight in the session.',
 			image: '/screenshots/workflow_avd/05_harvest_active_records.png',
 			alt: 'GardenSuite active harvest session showing saved worker leaf weight records',
-			kicker: 'Active session'
+			kicker: 'Active session',
+			zoom: 1.6,
+			focus: 'center 72%'
 		},
 		{
 			step: '4',
-			title: 'Review the harvest list',
-			desc: 'The supervisor can open the reports area and check the day\'s harvest sessions before sending data to the office.',
+			title: 'Review list',
+			desc: 'Check the day\'s harvest sessions.',
 			image: '/screenshots/workflow_avd/18_reports_harvest_list.png',
 			alt: 'GardenSuite reports screen showing harvest session list',
-			kicker: 'Daily harvest list'
+			kicker: 'Daily harvest list',
+			zoom: 1.45,
+			focus: 'center 42%'
 		},
 		{
 			step: '5',
-			title: 'Check session details',
-			desc: 'Open a session to review worker-wise leaf weight, totals, and saved records before payroll uses the data.',
+			title: 'Check details',
+			desc: 'Review worker-wise kg and totals.',
 			image: '/screenshots/workflow_avd/20_reports_session_detail.png',
 			alt: 'GardenSuite harvest session detail report with worker records and totals',
-			kicker: 'Session detail'
+			kicker: 'Session detail',
+			zoom: 1.5,
+			focus: 'center 34%'
 		},
 		{
 			step: '6',
-			title: 'Sync to the office',
-			desc: 'Saved records upload when network is available, ready for payroll, reports, and office checking.',
+			title: 'Sync office',
+			desc: 'Upload saved records when network returns.',
 			image: '/screenshots/workflow_avd/27_sync_status.png',
 			alt: 'GardenSuite sync status screen showing saved records uploaded to the office',
-			kicker: 'Office sync'
+			kicker: 'Office sync',
+			zoom: 1.45,
+			focus: 'center 22%'
 		}
 	];
 
 	onMount(() => {
-		const checkMobile = () => {
-			isMobile = window.innerWidth < 1024;
-		};
-
 		const handleScroll = () => {
-			if (isMobile || !sectionRef) return;
+			if (!sectionRef || !scrollerRef || !trackRef) return;
+			if (window.innerWidth < 1024) return;
 			const rect = sectionRef.getBoundingClientRect();
 			const totalScroll = rect.height - window.innerHeight;
 			if (totalScroll <= 0) return;
 
 			const progress = Math.min(Math.max(-rect.top / totalScroll, 0), 1);
-			const index = Math.min(Math.floor(progress * steps.length), steps.length - 1);
-			activeStep = index;
+			const containerLeft = scrollerRef.getBoundingClientRect().left;
+			const maxTranslate = Math.max(trackRef.scrollWidth - window.innerWidth + containerLeft, 0);
+			trackRef.style.transform = `translate3d(${-progress * maxTranslate}px, 0, 0)`;
 		};
 
-		window.addEventListener('resize', checkMobile);
-		window.addEventListener('scroll', handleScroll, { passive: true });
+		const handleResize = () => {
+			if (!trackRef) return;
+			if (window.innerWidth < 1024) {
+				trackRef.style.transform = '';
+				return;
+			}
+			handleScroll();
+		};
 
-		checkMobile();
+		let frame = 0;
+		const updateFrame = () => {
+			handleScroll();
+			frame = window.requestAnimationFrame(updateFrame);
+		};
+
+		window.addEventListener('scroll', handleScroll, { passive: true });
+		window.addEventListener('resize', handleResize);
+
 		handleScroll();
+		frame = window.requestAnimationFrame(updateFrame);
 
 		return () => {
-			window.removeEventListener('resize', checkMobile);
 			window.removeEventListener('scroll', handleScroll);
+			window.removeEventListener('resize', handleResize);
+			window.cancelAnimationFrame(frame);
 		};
 	});
-
-	const handleStepClick = (index: number) => {
-		if (isMobile) {
-			activeStep = index;
-			return;
-		}
-		if (!sectionRef) return;
-		const rect = sectionRef.getBoundingClientRect();
-		const containerScrollTop = window.scrollY + rect.top;
-		const totalScroll = rect.height - window.innerHeight;
-		const targetScrollY = containerScrollTop + ((index + 0.3) / steps.length) * totalScroll;
-		window.scrollTo({ top: targetScrollY, behavior: 'smooth' });
-	};
 </script>
 
 <section
 	bind:this={sectionRef}
-	class="relative w-full border-b border-[#E4E4E7] bg-white lg:h-[420vh]"
+	class="relative w-full border-b border-[#E4E4E7] bg-white py-20 md:py-28 lg:h-[500vh] lg:py-0"
 	aria-labelledby="workflow-heading"
 >
-	<!-- Sticky viewport: pins on desktop, flows on mobile -->
-	<div class="relative w-full px-6 py-20 md:px-12 md:py-28 lg:sticky lg:top-0 lg:flex lg:h-screen lg:items-center lg:overflow-hidden lg:py-0">
-		<div class="mx-auto w-full max-w-[1344px]">
-
-			<!-- Section header -->
-			<div class="mb-12 max-w-[560px] lg:mb-0 lg:hidden">
-				<span class="mb-3 inline-block text-[13px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase lg:mb-4">
-					Process Flow
-				</span>
-				<h2
-					id="workflow-heading"
-					class="text-[28px] leading-[1.08] font-semibold tracking-[-0.04em] text-[#111111] md:text-[36px]"
-					style="text-wrap: balance"
-				>
-					From field app to office sync in six steps.
-				</h2>
-				<p class="mt-4 text-[16px] leading-[1.65] text-[#374151] md:text-[17px]">
-					The field flow stays simple for supervisors. Start the harvest session, save worker records, review the day's work, and sync to the office.
-				</p>
-			</div>
-
-			<!-- Main grid: steps left, phone right -->
-			<div class="grid items-center gap-10 lg:grid-cols-[1fr_1.1fr] lg:gap-20">
-				<!-- Left: scrollable step list -->
-				<div>
-					<!-- Desktop-only header above steps -->
-					<div class="mb-10 hidden max-w-[480px] lg:block">
-						<span class="mb-3 inline-block text-[13px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase lg:mb-4">
+	<div class="lg:sticky lg:top-0 lg:flex lg:h-screen lg:items-center lg:overflow-hidden">
+		<div class="mx-auto w-full max-w-[1344px] px-6 md:px-12">
+			<div class="grid min-h-[calc(100vh-150px)] content-center gap-10 lg:gap-14">
+				<div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+					<div class="max-w-[620px]">
+						<span class="mb-4 inline-block text-[13px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase">
 							Process Flow
 						</span>
-						<p
-							class="text-[34px] leading-[1.08] font-semibold tracking-[-0.04em] text-[#111111] md:text-[44px]"
+						<h2
+							id="workflow-heading"
+							class="text-[34px] leading-[1.02] font-semibold tracking-[-0.04em] text-[#111111] md:text-[46px] lg:text-[56px]"
 							style="text-wrap: balance"
-							aria-hidden="true"
 						>
-							From field app to office sync in six steps.
-						</p>
-						<p class="mt-4 text-[16px] leading-[1.65] text-[#374151] md:text-[17px]">
-							The field flow stays simple for supervisors. Start the harvest session, save worker records, review the day's work, and sync to the office.
-						</p>
+							Field app to office.
+						</h2>
 					</div>
 
-					<div class="grid gap-3">
+					<div class="hidden items-center gap-2 md:flex" aria-hidden="true">
 						{#each steps as item, i}
-							<!-- svelte-ignore a11y_click_events_have_key_events -->
-							<div
-								role="button"
-								tabindex="0"
-								class="group cursor-pointer rounded-2xl border p-5 text-left transition-all duration-500 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]
-								{activeStep === i
-									? 'bg-white border-[#E4E4E7] shadow-[0_2px_12px_rgba(0,0,0,0.06)]'
-									: 'bg-transparent border-transparent hover:bg-[#FAFAF7] hover:border-[#E4E4E7]/60'}"
-								onclick={() => handleStepClick(i)}
-								onkeydown={(e) => {
-									if (e.key === 'Enter' || e.key === ' ') {
-										handleStepClick(i);
-										e.preventDefault();
-									}
-								}}
-							>
-								<div class="flex items-center gap-4">
-									<!-- Step number pill -->
-									<span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-[13px] font-semibold transition-colors duration-300
-										{activeStep === i
-											? 'bg-[#1B5E3B] text-white'
-											: 'bg-[#F1F1F1] text-[#71717A]'}">
-										{item.step}
-									</span>
-									<h3 class="text-[16px] font-semibold tracking-[-0.02em] transition-colors duration-300 md:text-[17px]
-										{activeStep === i ? 'text-[#111111]' : 'text-[#71717A]'}">
-										{item.title}
-									</h3>
-								</div>
-
-								{#if activeStep === i}
-									<div class="mt-3 animate-fade-in pl-12">
-										<p class="text-[14px] leading-[1.6] text-[#4B5563]">{item.desc}</p>
-									</div>
-
-									<!-- Mobile: show screenshot inline -->
-									<div class="mt-5 flex justify-center lg:hidden">
-										<div class="device-frame-phone w-[180px]">
-											<div class="device-frame-phone-inner aspect-[9/19.5]">
-												<img
-													src={item.image}
-													alt={item.alt}
-													width="412"
-													height="915"
-													class="h-full w-full object-cover object-top"
-													loading="lazy"
-												/>
-											</div>
-										</div>
-									</div>
-								{/if}
-							</div>
+							<div class="h-1.5 w-4 rounded-full bg-[#D8DED9]"></div>
 						{/each}
 					</div>
 				</div>
 
-				<!-- Right: sticky phone mockup (desktop only) -->
-				<div class="hidden lg:flex lg:items-center lg:justify-center">
-					<div class="relative">
-
-						<div class="relative">
-							{#each steps as item, i}
-								<div
-									class="device-frame-phone w-[260px] transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] xl:w-[280px]
-									{activeStep === i
-										? 'opacity-100 scale-100'
-										: 'opacity-0 scale-95 absolute inset-0 pointer-events-none'}"
-								>
-									<div class="device-frame-phone-inner aspect-[9/19.5]">
+				<div bind:this={scrollerRef} class="overflow-x-auto lg:overflow-visible">
+					<div
+						bind:this={trackRef}
+						class="workflow-track flex w-max gap-8 pr-[calc(50vw-140px)] md:gap-12 md:pr-[calc(50vw-180px)] lg:gap-16 lg:pr-[calc(50vw-200px)]"
+					>
+						{#each steps as item}
+							<article class="workflow-slide w-[280px] shrink-0 md:w-[360px] lg:w-[400px]">
+								<div class="relative flex h-[330px] items-center justify-center overflow-hidden rounded-lg border border-[#E4E4E7] bg-[#F8FAF8] md:h-[360px] lg:h-[380px]">
+									<picture>
+										<source srcset="/hero-sky.webp" type="image/webp" />
 										<img
-											src={item.image}
-											alt={item.alt}
-											width="412"
-											height="915"
-											class="h-full w-full object-cover object-top"
-											loading={i === 0 ? 'eager' : 'lazy'}
+											src="/hero-sky.png"
+											alt=""
+											class="absolute inset-0 z-0 h-full w-full object-cover brightness-[1.12]"
+											width="1024"
+											height="1024"
+											loading="lazy"
 										/>
+									</picture>
+									<picture>
+										<source
+											srcset="/bg-960.webp 960w, /bg-1920.webp 1920w"
+											sizes="(min-width: 1024px) 460px, 80vw"
+											type="image/webp"
+										/>
+										<img
+											src="/bg.png"
+											alt=""
+											class="absolute inset-x-0 bottom-0 z-[1] h-[54%] w-full object-cover object-top brightness-[1.12]"
+											style="mask-image: linear-gradient(to bottom, transparent 0%, black 28%); -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 28%);"
+											width="960"
+											height="538"
+											loading="lazy"
+										/>
+									</picture>
+
+									<div class="device-frame-phone relative z-10 w-[142px] md:w-[160px] lg:w-[168px]">
+										<div class="device-frame-phone-inner aspect-[9/19.5]">
+											<img
+												src={item.image}
+												alt={item.alt}
+												width="412"
+												height="915"
+												class="h-full w-full object-cover"
+												style="transform: scale({item.zoom}); transform-origin: {item.focus};"
+												loading={item.step === '1' ? 'eager' : 'lazy'}
+											/>
+										</div>
 									</div>
 								</div>
-							{/each}
 
-							<!-- Kicker label below phone -->
-							<div class="mt-5 text-center">
-								<span class="inline-flex rounded-full border border-[#E4E4E7] bg-[#FAFAF7] px-3 py-1 text-[11px] font-semibold tracking-[0.04em] text-[#374151] transition-all duration-500">
-									{steps[activeStep].kicker}
-								</span>
-							</div>
-						</div>
+								<div class="mt-5">
+									<div class="text-[13px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase">
+										{item.step.padStart(2, '0')} / {item.kicker}
+									</div>
+									<h3 class="mt-3 text-[28px] leading-[1.08] font-semibold tracking-[-0.04em] text-[#111111] md:text-[32px]">
+										{item.title}
+									</h3>
+									<p class="mt-2 max-w-[300px] text-[15px] leading-[1.55] text-[#4B5563]">
+										{item.desc}
+									</p>
+								</div>
+							</article>
+						{/each}
 					</div>
 				</div>
 			</div>
@@ -243,18 +212,9 @@
 </section>
 
 <style>
-	@keyframes fade-in {
-		0% {
-			opacity: 0;
-			transform: translateY(4px);
+	@media (prefers-reduced-motion: reduce) {
+		.workflow-track {
+			transition: none;
 		}
-		100% {
-			opacity: 1;
-			transform: translateY(0);
-		}
-	}
-
-	.animate-fade-in {
-		animation: fade-in 0.3s ease-out forwards;
 	}
 </style>

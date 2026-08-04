@@ -4,6 +4,12 @@
  */
 export function initScrollReveal() {
 	const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+	const elements = Array.from(document.querySelectorAll<HTMLElement>('.reveal-on-scroll'));
+
+	if (prefersReduced) {
+		elements.forEach((el) => el.classList.add('is-visible'));
+		return () => {};
+	}
 
 	const observer = new IntersectionObserver(
 		(entries) => {
@@ -17,12 +23,9 @@ export function initScrollReveal() {
 		{ threshold: 0.15 }
 	);
 
-	document.querySelectorAll('.reveal-on-scroll').forEach((el) => {
-		if (prefersReduced) {
-			el.classList.add('is-visible');
-		} else {
-			observer.observe(el);
-		}
+	elements.forEach((el) => {
+		el.classList.add('reveal-ready');
+		observer.observe(el);
 	});
 
 	return () => observer.disconnect();

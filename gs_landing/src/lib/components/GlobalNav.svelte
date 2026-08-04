@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { tick } from 'svelte';
 	import GsLogoAnimation from '$lib/components/GsLogoAnimation.svelte';
 	import Button from '$lib/components/Button.svelte';
 
@@ -8,6 +9,8 @@
 	let productsOpen = $state(false);
 	let mobileProductsOpen = $state(false);
 	let navProgress = $state(0);
+	let mobileMenuTrigger = $state<HTMLButtonElement>();
+	let mobileMenuPanel = $state<HTMLElement>();
 
 	// When darkHero is true and nav bg is still transparent, use light text
 	// But NOT when mobile nav sheet is open (it has a white bg)
@@ -15,10 +18,24 @@
 
 	const demoHref = '/#contact';
 
+	async function openMobileNav() {
+		mobileNavOpen = true;
+		await tick();
+		mobileMenuPanel?.querySelector<HTMLElement>('button, a[href]')?.focus();
+	}
+
+	async function closeMobileNav(restoreFocus = true) {
+		mobileNavOpen = false;
+		mobileProductsOpen = false;
+		if (restoreFocus) {
+			await tick();
+			mobileMenuTrigger?.focus();
+		}
+	}
+
 	function toggleMobileNav() {
-		mobileNavOpen = !mobileNavOpen;
-		if (!mobileNavOpen) mobileProductsOpen = false;
-		document.body.style.overflow = mobileNavOpen ? 'hidden' : '';
+		if (mobileNavOpen) closeMobileNav();
+		else openMobileNav();
 	}
 
 	function toggleProducts() {
@@ -30,7 +47,34 @@
 	}
 
 	function handleProductsKeydown(e: KeyboardEvent) {
-		if (e.key === 'Escape') closeProducts();
+		if (e.key !== 'Escape') return;
+		closeProducts();
+		if (mobileNavOpen) {
+			e.preventDefault();
+			closeMobileNav();
+		}
+	}
+
+	function handleMobilePanelKeydown(e: KeyboardEvent) {
+		if (e.key !== 'Tab' || !mobileMenuPanel) return;
+
+		const focusable = Array.from(
+			mobileMenuPanel.querySelectorAll<HTMLElement>(
+				'button:not([disabled]), a[href], [tabindex="0"]'
+			)
+		).filter((element) => element.offsetParent !== null);
+
+		if (!focusable.length) return;
+		const first = focusable[0];
+		const last = focusable[focusable.length - 1];
+
+		if (e.shiftKey && document.activeElement === first) {
+			e.preventDefault();
+			last.focus();
+		} else if (!e.shiftKey && document.activeElement === last) {
+			e.preventDefault();
+			first.focus();
+		}
 	}
 
 	function handleClickOutside(e: MouseEvent) {
@@ -53,6 +97,17 @@
 
 		return () => {
 			window.removeEventListener('scroll', handler);
+		};
+	});
+
+	$effect(() => {
+		document.body.style.overflow = mobileNavOpen ? 'hidden' : '';
+		const coveredSurfaces = document.querySelectorAll<HTMLElement>('#main-content, footer');
+		coveredSurfaces.forEach((element) => (element.inert = mobileNavOpen));
+
+		return () => {
+			document.body.style.overflow = '';
+			coveredSurfaces.forEach((element) => (element.inert = false));
 		};
 	});
 
@@ -83,7 +138,9 @@
 		<a href="/" class="flex items-center gap-2" aria-label="GardenSuite Home">
 			<GsLogoAnimation class="h-7 w-auto shrink-0" />
 			<span
-				class="text-[18px] leading-[22px] font-medium tracking-[-0.01em] transition-colors duration-300 {lightText ? 'text-white' : 'text-[#0A0A0A]'}"
+				class="text-[18px] leading-[22px] font-medium tracking-[-0.01em] transition-colors duration-300 {lightText
+					? 'text-white'
+					: 'text-[#0A0A0A]'}"
 			>
 				GardenSuite
 			</span>
@@ -99,11 +156,18 @@
 		<!-- svelte-ignore a11y_no_static_element_interactions -->
 		<div
 			class="fixed inset-0 z-[55] bg-black/20 backdrop-blur-sm md:hidden"
-			onclick={toggleMobileNav}
+			onclick={() => closeMobileNav()}
 		></div>
 		<div
+			id="mobile-navigation-panel"
+			bind:this={mobileMenuPanel}
 			class="fixed inset-x-0 top-0 z-[58] flex flex-col bg-white/95 px-6 pt-20 pb-8 shadow-[0_20px_60px_rgba(0,0,0,0.1)] backdrop-blur-xl md:hidden"
 			style="overscroll-behavior: contain;"
+			role="dialog"
+			tabindex="-1"
+			aria-modal="true"
+			aria-label="Site navigation"
+			onkeydown={handleMobilePanelKeydown}
 		>
 			<nav class="flex flex-col gap-1" aria-label="Mobile navigation">
 				<button
@@ -117,9 +181,7 @@
 						height="16"
 						viewBox="0 0 16 16"
 						fill="none"
-						class="transition-transform duration-200 {mobileProductsOpen
-							? 'rotate-180'
-							: ''}"
+						class="transition-transform duration-200 {mobileProductsOpen ? 'rotate-180' : ''}"
 						aria-hidden="true"
 						><path
 							d="M4 6l4 4 4-4"
@@ -190,9 +252,15 @@
 {#snippet desktopLinks()}
 	<div class="hidden items-center gap-1 md:flex">
 		<!-- Products Dropdown -->
-		<div role="presentation" class="products-dropdown-container relative" onkeydown={handleProductsKeydown}>
+		<div
+			role="presentation"
+			class="products-dropdown-container relative"
+			onkeydown={handleProductsKeydown}
+		>
 			<button
-				class="inline-flex h-10 items-center justify-center rounded-full px-4 text-[14px] font-semibold transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 {lightText ? 'text-white/90 hover:bg-white/10 hover:text-white' : 'text-[#18181B] hover:bg-[#0000000A] hover:text-[#0A0A0A]'}"
+				class="inline-flex h-10 items-center justify-center rounded-full px-4 text-[14px] font-semibold transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 {lightText
+					? 'text-white/90 hover:bg-white/10 hover:text-white'
+					: 'text-[#18181B] hover:bg-[#0000000A] hover:text-[#0A0A0A]'}"
 				aria-label="Products menu"
 				aria-expanded={productsOpen}
 				aria-haspopup="true"
@@ -239,12 +307,10 @@
 						/></svg
 					>
 					<div class="mt-4">
-						<span
-							class="block text-base leading-tight font-medium text-[#1A5C2E]"
+						<span class="block text-base leading-tight font-medium text-[#1A5C2E]"
 							>GardenSuite<br />V3</span
 						>
-						<span
-							class="mt-1.5 block text-xs leading-relaxed text-[#1A5C2E]/80"
+						<span class="mt-1.5 block text-xs leading-relaxed text-[#1A5C2E]/80"
 							>One simple system for tea gardens.</span
 						>
 					</div>
@@ -260,7 +326,7 @@
 							Face Attendance &amp; Smart Weighing
 						</div>
 						<div class="mt-1 text-xs leading-relaxed text-[#71717A]">
-							Stop proxy attendance and stolen weights.
+							Helps reduce proxy attendance and links leaf weight to the worker.
 						</div></a
 					>
 					<a
@@ -320,13 +386,15 @@
 		</div>
 		<a
 			href="/#features"
-			class="inline-flex h-10 items-center justify-center rounded-full px-4 text-[14px] font-semibold transition-colors duration-300 {lightText ? 'text-white/90 hover:bg-white/10 hover:text-white' : 'text-[#18181B] hover:bg-[#0000000A] hover:text-[#0A0A0A]'}"
-			>Features</a
+			class="inline-flex h-10 items-center justify-center rounded-full px-4 text-[14px] font-semibold transition-colors duration-300 {lightText
+				? 'text-white/90 hover:bg-white/10 hover:text-white'
+				: 'text-[#18181B] hover:bg-[#0000000A] hover:text-[#0A0A0A]'}">Features</a
 		>
 		<a
 			href="/#about"
-			class="inline-flex h-10 items-center justify-center rounded-full px-4 text-[14px] font-semibold transition-colors duration-300 {lightText ? 'text-white/90 hover:bg-white/10 hover:text-white' : 'text-[#18181B] hover:bg-[#0000000A] hover:text-[#0A0A0A]'}"
-			>About</a
+			class="inline-flex h-10 items-center justify-center rounded-full px-4 text-[14px] font-semibold transition-colors duration-300 {lightText
+				? 'text-white/90 hover:bg-white/10 hover:text-white'
+				: 'text-[#18181B] hover:bg-[#0000000A] hover:text-[#0A0A0A]'}">About</a
 		>
 	</div>
 {/snippet}
@@ -335,8 +403,9 @@
 	<div class="flex items-center gap-2">
 		<a
 			href="/#contact"
-			class="mr-4 hidden h-10 items-center rounded-md px-2 text-[14px] font-semibold transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 md:inline-flex {lightText ? 'text-white/90 hover:text-white' : 'text-[#18181B] hover:text-[#0A0A0A]'}"
-			>Contact</a
+			class="mr-4 hidden h-10 items-center rounded-md px-2 text-[14px] font-semibold transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 md:inline-flex {lightText
+				? 'text-white/90 hover:text-white'
+				: 'text-[#18181B] hover:text-[#0A0A0A]'}">Contact</a
 		>
 		<Button
 			href={demoHref}
@@ -350,18 +419,17 @@
 
 {#snippet mobileHamburger()}
 	<button
-		class="flex h-10 w-10 items-center justify-center rounded-full transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 md:hidden {lightText ? 'text-white hover:bg-white/10' : 'text-[#0A0A0A] hover:bg-[#0000000A]'}"
+		bind:this={mobileMenuTrigger}
+		class="flex h-11 w-11 items-center justify-center rounded-full transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 md:hidden {lightText
+			? 'text-white hover:bg-white/10'
+			: 'text-[#0A0A0A] hover:bg-[#0000000A]'}"
 		aria-label={mobileNavOpen ? 'Close menu' : 'Open menu'}
 		aria-expanded={mobileNavOpen}
+		aria-controls="mobile-navigation-panel"
 		onclick={toggleMobileNav}
 	>
 		{#if mobileNavOpen}
-			<svg
-				width="20"
-				height="20"
-				viewBox="0 0 20 20"
-				fill="none"
-				aria-hidden="true"
+			<svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"
 				><path
 					d="M5 5l10 10M15 5L5 15"
 					stroke="currentColor"
@@ -370,12 +438,7 @@
 				/></svg
 			>
 		{:else}
-			<svg
-				width="20"
-				height="20"
-				viewBox="0 0 20 20"
-				fill="none"
-				aria-hidden="true"
+			<svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"
 				><path
 					d="M3 6h14M3 10h14M3 14h14"
 					stroke="currentColor"

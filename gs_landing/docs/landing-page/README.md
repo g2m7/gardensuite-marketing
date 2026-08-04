@@ -2,6 +2,13 @@
 
 This is the current source of truth for the GardenSuite homepage direction.
 
+## Current Planning Documents
+
+- `internal-site-map.md` - current hierarchy, navigation, future attendance routes, and internal linking rules
+- `attendance-build-plan.md` - approved attendance hub implementation plan
+- `attendance-content-distribution.md` - detailed feature content destinations
+- `attendance-content-plan.md` - source feature synthesis and page content direction
+
 It replaces the earlier mix of:
 
 - inspiration notes

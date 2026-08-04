@@ -105,16 +105,6 @@
 				<a href="/privacy" class="underline hover:text-[#1B5E3B]">Privacy</a>
 				<a href="/terms" class="underline hover:text-[#1B5E3B]">Terms</a>
 			</div>
-			<span
-				class="inline-flex items-center gap-2 rounded-full border border-[#E4E4E7] bg-[#FAFAF7] px-3 py-1"
-			>
-				<span class="relative flex h-2 w-2">
-					<span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#1B5E3B]/30"
-					></span>
-					<span class="relative inline-flex h-2 w-2 rounded-full bg-[#1B5E3B]"></span>
-				</span>
-				<span class="text-[12px] font-medium text-[#52525B]">All Systems Online</span>
-			</span>
 		</div>
 	</div>
 

@@ -1,0 +1,1160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="data:," />
+    <title>GardenSuite Attendance - Short Product Page Wireframe</title>
+    <meta
+      name="description"
+      content="A standalone Tailark-led wireframe for the GardenSuite attendance and smart weighing product page."
+    />
+    <style>
+      :root {
+        --canvas: #ffffff;
+        --surface: #fafaf7;
+        --ink: #0a0a0a;
+        --text: #52525b;
+        --muted: #71717a;
+        --border: #e4e4e7;
+        --border-strong: #d4d4d8;
+        --green: #3d7d2c;
+        --green-dark: #2b6321;
+        --green-soft: #f1f6eb;
+        --max: 1240px;
+        --font:
+          Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        background: var(--canvas);
+        color: var(--ink);
+        font-family: var(--font);
+        -webkit-font-smoothing: antialiased;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      button,
+      summary,
+      a {
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-weight: 550;
+        letter-spacing: -0.045em;
+        text-wrap: balance;
+      }
+
+      .skip-link {
+        position: fixed;
+        top: 12px;
+        left: 12px;
+        z-index: 100;
+        transform: translateY(-160%);
+        background: var(--ink);
+        color: white;
+        padding: 12px 16px;
+        border-radius: 8px;
+        font-weight: 700;
+      }
+
+      .skip-link:focus {
+        transform: translateY(0);
+      }
+
+      .wireframe-note {
+        border-bottom: 1px solid var(--border);
+        background: var(--green-soft);
+        color: var(--green-dark);
+        padding: 9px 20px;
+        font-size: 11px;
+        font-weight: 750;
+        letter-spacing: 0.08em;
+        line-height: 1.4;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      .shell {
+        width: min(calc(100% - 48px), var(--max));
+        margin-inline: auto;
+      }
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        border-bottom: 1px solid var(--border);
+        background: var(--canvas);
+      }
+
+      .nav {
+        display: flex;
+        min-height: 72px;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: -0.03em;
+      }
+
+      .brand-mark {
+        width: 16px;
+        height: 22px;
+        border-radius: 75% 15% 70% 15%;
+        background: var(--green);
+        transform: rotate(12deg);
+      }
+
+      .nav-links,
+      .actions {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .nav-links a {
+        padding: 12px;
+        font-size: 14px;
+        font-weight: 650;
+      }
+
+      .button {
+        display: inline-flex;
+        min-height: 48px;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid transparent;
+        border-radius: 999px;
+        padding: 0 22px;
+        font-size: 15px;
+        font-weight: 750;
+        transition:
+          background 160ms ease-out,
+          border-color 160ms ease-out,
+          transform 120ms ease-out;
+      }
+
+      .button:active {
+        transform: scale(0.98);
+      }
+
+      .button-primary {
+        background: var(--green);
+        color: white;
+      }
+
+      .button-primary:hover {
+        background: var(--green-dark);
+      }
+
+      .button-secondary {
+        border-color: var(--border-strong);
+        background: white;
+      }
+
+      .button-secondary:hover {
+        border-color: var(--green);
+        background: var(--green-soft);
+      }
+
+      /* Tailark features/five: concise copy with one dominant product proof frame. */
+      .hero {
+        padding: clamp(72px, 9vw, 124px) 0 0;
+        overflow: hidden;
+      }
+
+      .hero-copy {
+        max-width: 920px;
+        margin: 0 auto clamp(48px, 7vw, 80px);
+        text-align: center;
+      }
+
+      .kicker {
+        margin-bottom: 18px;
+        color: var(--green-dark);
+        font-size: 13px;
+        font-weight: 750;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        max-width: 900px;
+        margin-bottom: 24px;
+        font-size: clamp(3rem, 7vw, 5.8rem);
+        line-height: 0.98;
+      }
+
+      .hero-copy > p:not(.kicker) {
+        max-width: 700px;
+        margin: 0 auto 30px;
+        color: var(--text);
+        font-size: clamp(1.05rem, 2vw, 1.24rem);
+        line-height: 1.65;
+      }
+
+      .hero-copy .actions {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .hero-trust {
+        margin-top: 20px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .proof-frame {
+        position: relative;
+        min-height: 480px;
+        border: 1px solid var(--border);
+        border-bottom: 0;
+        border-radius: 20px 20px 0 0;
+        background: var(--surface);
+        overflow: hidden;
+      }
+
+      .media-placeholder {
+        display: grid;
+        place-items: center;
+        border: 1px dashed #a1a1aa;
+        background: white;
+        color: var(--muted);
+        text-align: center;
+      }
+
+      .media-placeholder strong {
+        display: block;
+        margin-bottom: 8px;
+        color: var(--ink);
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .media-placeholder span {
+        display: block;
+        max-width: 38ch;
+        font-size: 13px;
+        line-height: 1.55;
+      }
+
+      .hero-desktop {
+        position: absolute;
+        left: 7%;
+        top: 58px;
+        width: 76%;
+        height: 360px;
+        border-radius: 16px;
+        box-shadow: 0 18px 50px rgba(0, 0, 0, 0.08);
+      }
+
+      .hero-phone {
+        position: absolute;
+        right: 6%;
+        bottom: -42px;
+        width: min(24%, 245px);
+        height: 360px;
+        border: 8px solid #27272a;
+        border-radius: 34px;
+        box-shadow: 0 18px 50px rgba(0, 0, 0, 0.12);
+      }
+
+      /* Tailark stats/one: one compact proof line, no standalone section copy. */
+      .proof-strip {
+        border-block: 1px solid var(--border);
+        background: var(--surface);
+      }
+
+      .proof-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .proof-item {
+        padding: 30px 28px;
+        border-right: 1px solid var(--border);
+      }
+
+      .proof-item:last-child {
+        border-right: 0;
+      }
+
+      .proof-value {
+        display: block;
+        margin-bottom: 4px;
+        color: var(--green-dark);
+        font-size: clamp(1.6rem, 3vw, 2.3rem);
+        font-weight: 650;
+        letter-spacing: -0.05em;
+      }
+
+      .proof-label,
+      .proof-footnote {
+        color: var(--text);
+        font-size: 14px;
+        line-height: 1.55;
+      }
+
+      .proof-footnote {
+        margin: 0;
+        padding: 15px 28px;
+        border-top: 1px solid var(--border);
+        text-align: center;
+      }
+
+      .section {
+        padding: clamp(80px, 9vw, 120px) 0;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .section-soft {
+        background: var(--surface);
+      }
+
+      .section-heading {
+        max-width: 700px;
+        margin-bottom: clamp(44px, 6vw, 68px);
+      }
+
+      .section-heading.center {
+        margin-inline: auto;
+        text-align: center;
+      }
+
+      h2 {
+        margin-bottom: 18px;
+        font-size: clamp(2.25rem, 5vw, 4rem);
+        line-height: 1.03;
+      }
+
+      .section-heading p:not(.kicker) {
+        margin-bottom: 0;
+        color: var(--text);
+        font-size: 17px;
+        line-height: 1.65;
+      }
+
+      /* Tailark how-it-works/six: exactly three steps. */
+      .workflow-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        overflow: hidden;
+      }
+
+      .workflow-step {
+        position: relative;
+        min-height: 330px;
+        padding: 34px;
+        border-right: 1px solid var(--border);
+        background: white;
+      }
+
+      .workflow-step:last-child {
+        border-right: 0;
+      }
+
+      .step-number {
+        display: block;
+        margin-bottom: 72px;
+        color: var(--green);
+        font-size: 14px;
+        font-weight: 750;
+      }
+
+      .workflow-step h3 {
+        margin-bottom: 12px;
+        font-size: 24px;
+      }
+
+      .workflow-step p {
+        margin: 0;
+        color: var(--text);
+        font-size: 15px;
+        line-height: 1.6;
+      }
+
+      .flow-arrow {
+        position: absolute;
+        right: -13px;
+        top: 50%;
+        z-index: 2;
+        display: grid;
+        width: 26px;
+        height: 26px;
+        place-items: center;
+        border: 1px solid var(--border);
+        border-radius: 50%;
+        background: white;
+        color: var(--green);
+      }
+
+      /* Tailark carousel/four: two real product surfaces, shown as proof slots. */
+      .product-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+      }
+
+      .product-panel {
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        background: white;
+        overflow: hidden;
+      }
+
+      .product-copy {
+        padding: 34px 34px 26px;
+      }
+
+      .product-copy h3 {
+        margin-bottom: 10px;
+        font-size: 26px;
+      }
+
+      .product-copy p {
+        margin: 0;
+        color: var(--text);
+        font-size: 15px;
+        line-height: 1.6;
+      }
+
+      .product-media {
+        height: 360px;
+        margin: 0 18px 18px;
+        border-radius: 10px;
+      }
+
+      /* Tailark features/four: compact routing, not a feature inventory. */
+      .capability-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        border-top: 1px solid var(--border);
+        border-left: 1px solid var(--border);
+      }
+
+      .capability {
+        min-height: 240px;
+        padding: 30px;
+        border-right: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+        background: white;
+      }
+
+      .capability h3 {
+        margin-bottom: 10px;
+        font-size: 20px;
+      }
+
+      .capability p {
+        margin-bottom: 22px;
+        color: var(--text);
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .text-link {
+        color: var(--green-dark);
+        font-size: 14px;
+        font-weight: 750;
+      }
+
+      .text-link:hover {
+        text-decoration: underline;
+        text-underline-offset: 4px;
+      }
+
+      /* Existing ProductRollout plus Tailark contact split. */
+      .rollout-grid {
+        display: grid;
+        grid-template-columns: 0.9fr 1.1fr;
+        gap: clamp(50px, 8vw, 110px);
+        align-items: center;
+      }
+
+      .rollout-copy p:not(.kicker) {
+        margin-bottom: 28px;
+        color: var(--text);
+        font-size: 17px;
+        line-height: 1.65;
+      }
+
+      .rollout-steps {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        border-top: 1px solid var(--border);
+      }
+
+      .rollout-steps li {
+        display: grid;
+        grid-template-columns: 42px 1fr;
+        gap: 16px;
+        padding: 22px 0;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .rollout-steps span {
+        color: var(--green);
+        font-weight: 750;
+      }
+
+      .rollout-steps strong {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 16px;
+      }
+
+      .rollout-steps p {
+        margin: 0;
+        color: var(--text);
+        font-size: 14px;
+        line-height: 1.55;
+      }
+
+      /* Existing FaqSection plus Tailark faqs/one. */
+      .faq-layout {
+        display: grid;
+        grid-template-columns: 0.75fr 1.25fr;
+        gap: clamp(48px, 8vw, 110px);
+      }
+
+      .faq-list {
+        border-top: 1px solid var(--border);
+      }
+
+      details {
+        border-bottom: 1px solid var(--border);
+      }
+
+      summary {
+        position: relative;
+        padding: 23px 38px 23px 0;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 700;
+        list-style: none;
+      }
+
+      summary::-webkit-details-marker {
+        display: none;
+      }
+
+      summary::after {
+        content: "+";
+        position: absolute;
+        right: 4px;
+        top: 20px;
+        color: var(--green);
+        font-size: 22px;
+        font-weight: 450;
+      }
+
+      details[open] summary::after {
+        content: "−";
+      }
+
+      details p {
+        margin: -5px 46px 22px 0;
+        color: var(--text);
+        font-size: 14px;
+        line-height: 1.65;
+      }
+
+      /* Existing ProductCta plus Tailark call-to-action/two. */
+      .cta-wrap {
+        padding: clamp(70px, 9vw, 110px) 0;
+        background: var(--surface);
+      }
+
+      .cta {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        min-height: 360px;
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        background: white;
+        overflow: hidden;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+      }
+
+      .cta-copy {
+        padding: clamp(42px, 6vw, 74px);
+      }
+
+      .cta-copy h2 {
+        max-width: 650px;
+        font-size: clamp(2.3rem, 5vw, 4rem);
+      }
+
+      .cta-copy p:not(.kicker) {
+        max-width: 580px;
+        margin-bottom: 28px;
+        color: var(--text);
+        line-height: 1.65;
+      }
+
+      .cta-media {
+        margin: 34px 34px 34px 0;
+        border-radius: 10px;
+      }
+
+      .footer {
+        border-top: 1px solid var(--border);
+        padding: 34px 0;
+      }
+
+      .footer-inner {
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.6;
+      }
+
+      @media (max-width: 900px) {
+        .nav-links {
+          display: none;
+        }
+
+        .proof-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .proof-item:nth-child(2n) {
+          border-right: 0;
+        }
+
+        .proof-item:nth-child(-n + 2) {
+          border-bottom: 1px solid var(--border);
+        }
+
+        .workflow-grid,
+        .product-grid,
+        .rollout-grid,
+        .faq-layout,
+        .cta {
+          grid-template-columns: 1fr;
+        }
+
+        .workflow-step {
+          min-height: 0;
+          border-right: 0;
+          border-bottom: 1px solid var(--border);
+        }
+
+        .workflow-step:last-child {
+          border-bottom: 0;
+        }
+
+        .step-number {
+          margin-bottom: 44px;
+        }
+
+        .flow-arrow {
+          right: 50%;
+          top: auto;
+          bottom: -13px;
+          transform: translateX(50%) rotate(90deg);
+        }
+
+        .capability-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .cta-media {
+          height: 280px;
+          margin: 0 34px 34px;
+        }
+      }
+
+      @media (max-width: 620px) {
+        .shell {
+          width: min(calc(100% - 32px), var(--max));
+        }
+
+        .nav {
+          min-height: 64px;
+        }
+
+        .nav > .button {
+          min-height: 42px;
+          padding: 0 15px;
+          font-size: 13px;
+        }
+
+        .hero {
+          padding-top: 66px;
+        }
+
+        h1 {
+          font-size: clamp(2.7rem, 14vw, 4rem);
+        }
+
+        .proof-frame {
+          min-height: 410px;
+        }
+
+        .hero-desktop {
+          left: 18px;
+          top: 34px;
+          width: calc(100% - 36px);
+          height: 270px;
+        }
+
+        .hero-phone {
+          right: 28px;
+          width: 150px;
+          height: 260px;
+        }
+
+        .proof-grid,
+        .capability-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .proof-item,
+        .proof-item:nth-child(2n) {
+          border-right: 0;
+          border-bottom: 1px solid var(--border);
+        }
+
+        .proof-item:last-child {
+          border-bottom: 0;
+        }
+
+        .product-copy,
+        .workflow-step,
+        .capability {
+          padding: 26px;
+        }
+
+        .product-media {
+          height: 300px;
+        }
+
+        .faq-layout {
+          gap: 18px;
+        }
+
+        .cta-copy {
+          padding: 36px 26px;
+        }
+
+        .cta-media {
+          height: 230px;
+          margin: 0 18px 18px;
+        }
+
+        .footer-inner {
+          flex-direction: column;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+
+        .button {
+          transition: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="wireframe-note">
+      Standalone wireframe · Tailark-led · no changes to the live site
+    </div>
+
+    <header class="site-header">
+      <div class="shell nav">
+        <a class="brand" href="#" aria-label="GardenSuite home">
+          <span class="brand-mark" aria-hidden="true"></span>
+          GardenSuite
+        </a>
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="#workflow">How it works</a>
+          <a href="#product">Product</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+        <a
+          class="button button-primary"
+          href="mailto:info@gardensuite.in?subject=GardenSuite%20Attendance%20Demo"
+          >Book Free Demo</a
+        >
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="shell">
+          <div class="hero-copy">
+            <p class="kicker">Tea garden attendance and smart weighing</p>
+            <h1>
+              Tea garden attendance. Verify the worker. Link the leaf weight.
+            </h1>
+            <p>
+              Face attendance and Bluetooth weighing work together in the field.
+              Records save offline and reach the office when internet returns.
+            </p>
+            <div class="actions">
+              <a
+                class="button button-primary"
+                href="mailto:info@gardensuite.in?subject=GardenSuite%20Attendance%20Demo"
+                >Book Free Demo</a
+              >
+              <a class="button button-secondary" href="#workflow"
+                >See how it works</a
+              >
+            </div>
+            <div class="hero-trust">
+              Built and supported by Sarbani Associates for tea garden field
+              work.
+            </div>
+          </div>
+
+          <div class="proof-frame" aria-label="Required product media">
+            <div class="media-placeholder hero-desktop">
+              <div>
+                <strong>Real media required</strong>
+                <span
+                  >Sanitized GardenSuite MIS attendance or sync screen. Use a
+                  real capture only.</span
+                >
+              </div>
+            </div>
+            <div class="media-placeholder hero-phone">
+              <div>
+                <strong>Real media required</strong>
+                <span>GS Face result screen with approved demo data.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="proof-strip" aria-label="GardenSuite proof">
+        <div class="shell proof-grid">
+          <div class="proof-item">
+            <span class="proof-value">20+</span>
+            <span class="proof-label">Tea estates</span>
+          </div>
+          <div class="proof-item">
+            <span class="proof-value">7</span>
+            <span class="proof-label">Tea-growing regions</span>
+          </div>
+          <div class="proof-item">
+            <span class="proof-value">Since 2000</span>
+            <span class="proof-label">Tea garden software</span>
+          </div>
+          <div class="proof-item">
+            <span class="proof-value">On-site</span>
+            <span class="proof-label">Setup and staff training</span>
+          </div>
+        </div>
+        <p class="shell proof-footnote">
+          Built and supported by Sarbani Associates, Bagdogra, Siliguri. Estate
+          names are shared during demos to respect client privacy.
+        </p>
+      </section>
+
+      <section class="section" id="workflow">
+        <div class="shell">
+          <div class="section-heading center">
+            <p class="kicker">One field flow</p>
+            <h2>Face, work and weight stay together.</h2>
+            <p>
+              Paper separates identity, attendance and leaf weight. Three clear
+              steps keep them together.
+            </p>
+          </div>
+
+          <div class="workflow-grid">
+            <article class="workflow-step">
+              <span class="step-number">01</span>
+              <h3>Verify the worker</h3>
+              <p>GS Face checks the worker before the record is saved.</p>
+              <span class="flow-arrow" aria-hidden="true">→</span>
+            </article>
+            <article class="workflow-step">
+              <span class="step-number">02</span>
+              <h3>Capture the work</h3>
+              <p>
+                Save attendance or take leaf weight from the connected scale.
+              </p>
+              <span class="flow-arrow" aria-hidden="true">→</span>
+            </article>
+            <article class="workflow-step">
+              <span class="step-number">03</span>
+              <h3>Review in the office</h3>
+              <p>
+                Offline records sync for checking, finalization and estate use.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-soft" id="product">
+        <div class="shell">
+          <div class="section-heading">
+            <p class="kicker">Field to office</p>
+            <h2>Two working surfaces. One connected record.</h2>
+          </div>
+
+          <div class="product-grid">
+            <article class="product-panel">
+              <div class="product-copy">
+                <h3>GS Face in the field</h3>
+                <p>
+                  Attendance, punch work and harvest weight, with offline saving
+                  and practical fallbacks.
+                </p>
+              </div>
+              <div class="media-placeholder product-media">
+                <div>
+                  <strong>Real media required</strong>
+                  <span
+                    >Approved GS Face workflow capture. No invented
+                    interface.</span
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article class="product-panel">
+              <div class="product-copy">
+                <h3>GardenSuite MIS in the office</h3>
+                <p>
+                  Summaries, raw records, sessions, locations and sync status
+                  for office review.
+                </p>
+              </div>
+              <div class="media-placeholder product-media">
+                <div>
+                  <strong>Real media required</strong>
+                  <span
+                    >Approved web dashboard capture with sanitized data.</span
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="shell">
+          <div class="section-heading">
+            <p class="kicker">Built for garden work</p>
+            <h2>Start with the part you need to understand.</h2>
+          </div>
+
+          <div class="capability-grid">
+            <article class="capability">
+              <h3>Face attendance</h3>
+              <p>
+                Worker verification, normal hazira, punch records and overtime.
+              </p>
+              <a class="text-link" href="#distribution-note"
+                >Future detail page →</a
+              >
+            </article>
+            <article class="capability">
+              <h3>Smart weighing</h3>
+              <p>
+                Bluetooth leaf weight linked to the verified worker and session.
+              </p>
+              <a class="text-link" href="#distribution-note"
+                >Future detail page →</a
+              >
+            </article>
+            <article class="capability">
+              <h3>Offline and sync</h3>
+              <p>
+                Local saving in weak-network areas, with visible sync status.
+              </p>
+              <a class="text-link" href="#distribution-note"
+                >Future detail page →</a
+              >
+            </article>
+            <article class="capability">
+              <h3>Office review</h3>
+              <p>
+                Check records and prepare trusted data for the estate workflow.
+              </p>
+              <a class="text-link" href="#distribution-note"
+                >Future detail page →</a
+              >
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-soft">
+        <div class="shell rollout-grid">
+          <div class="rollout-copy">
+            <p class="kicker">Supported rollout</p>
+            <h2>Your team is not left to set it up alone.</h2>
+            <p>
+              Sarbani Associates maps the process, sets up devices and trains
+              field and office staff at the garden.
+            </p>
+            <a
+              class="button button-secondary"
+              href="mailto:info@gardensuite.in?subject=GardenSuite%20Attendance%20Question"
+              >Email Us</a
+            >
+          </div>
+          <ol class="rollout-steps">
+            <li>
+              <span>01</span>
+              <div>
+                <strong>Day 1: Process mapping</strong>
+                <p>Confirm the attendance, weighing and office flow.</p>
+              </div>
+            </li>
+            <li>
+              <span>02</span>
+              <div>
+                <strong>Day 2: Staff training</strong>
+                <p>Prepare devices and train field and office staff.</p>
+              </div>
+            </li>
+            <li>
+              <span>03</span>
+              <div>
+                <strong>Day 3: Live operations support</strong>
+                <p>Stay with the team as regular field work begins.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section" id="faq">
+        <div class="shell faq-layout">
+          <div>
+            <p class="kicker">Common questions</p>
+            <h2>What buyers ask first.</h2>
+          </div>
+          <div class="faq-list">
+            <details open>
+              <summary>Will it work without internet?</summary>
+              <p>
+                Yes. The field app saves records locally and syncs when a
+                connection is available.
+              </p>
+            </details>
+            <details>
+              <summary>Does it help stop proxy attendance?</summary>
+              <p>
+                Face verification and liveness checks help confirm the worker
+                before saving attendance.
+              </p>
+            </details>
+            <details>
+              <summary>What if the scale cannot connect?</summary>
+              <p>
+                Supported fallback options keep field work moving. The exact
+                setup is confirmed during rollout.
+              </p>
+            </details>
+            <details>
+              <summary>Can we see our own workflow?</summary>
+              <p>
+                Yes. The demo can focus on your garden's attendance, plucking
+                and office process.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-wrap" id="distribution-note">
+        <div class="shell cta">
+          <div class="cta-copy">
+            <p class="kicker">See the working flow</p>
+            <h2>Bring one garden workflow to the demo.</h2>
+            <p>
+              We will show how worker verification, leaf weight, offline capture
+              and office review fit together.
+            </p>
+            <div class="actions">
+              <a
+                class="button button-primary"
+                href="mailto:info@gardensuite.in?subject=GardenSuite%20Attendance%20Demo"
+                >Book Free Demo</a
+              >
+              <a
+                class="button button-secondary"
+                href="mailto:info@gardensuite.in"
+                >Email Us</a
+              >
+            </div>
+          </div>
+          <div class="media-placeholder cta-media">
+            <div>
+              <strong>Optional real media</strong>
+              <span
+                >On-site setup or training photograph with written
+                approval.</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="shell footer-inner">
+        <div>
+          <strong>GardenSuite</strong><br />Complete tea garden management
+          software
+        </div>
+        <div>
+          Built and supported by Sarbani Associates · Bagdogra, Siliguri
+        </div>
+        <div>© 2026 Sarbani Associates</div>
+      </div>
+    </footer>
+  </body>
+</html>

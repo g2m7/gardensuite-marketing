@@ -10,14 +10,19 @@ Use it with:
 
 ## Current Site Structure
 
-The current public site has 6 indexable pages:
+The current public site has 11 indexable pages:
 
 - `/` - homepage
 - `/products/attendance` - Face Attendance & Smart Weighing
+- `/products/attendance/face-attendance` - Face Attendance for Tea Gardens
+- `/products/attendance/smart-weighing` - Smart Weighing for Tea Gardens
+- `/products/attendance/offline-sync` - Offline Attendance and Office Sync
 - `/products/payroll` - Automated Payroll
 - `/products/factory` - Factory Production
 - `/products/stores` - Store Management
 - `/products/mis` - Daily Report (MIS Dashboard)
+- `/privacy` - Privacy Policy
+- `/terms` - Website Terms
 
 Do not plan SEO around old 20+ page maps unless those pages are actually built.
 
@@ -46,14 +51,17 @@ Still to verify before launch:
 
 Use keywords naturally. Clarity is more important than stuffing.
 
-| Page                   | Primary Keyword                      | Support Keywords                                                                       |
-| ---------------------- | ------------------------------------ | -------------------------------------------------------------------------------------- |
-| `/`                    | tea garden ERP software              | tea garden software, tea estate management system, tea garden management software      |
-| `/products/attendance` | tea garden attendance system         | face attendance tea garden, smart weighing tea garden, biometric attendance tea estate |
-| `/products/payroll`    | tea garden payroll software          | tea estate wage calculation, hazira calculation software, PF ESI payroll tea garden    |
-| `/products/factory`    | tea factory production software      | made tea production tracking, manufacturing cost per kg tea                            |
-| `/products/stores`     | tea garden store management software | tea estate inventory software, fertilizer stock tracking                               |
-| `/products/mis`        | tea garden MIS dashboard             | tea estate daily report, tea garden online dashboard                                   |
+| Page                                   | Primary Keyword                      | Support Keywords                                                                       |
+| -------------------------------------- | ------------------------------------ | -------------------------------------------------------------------------------------- |
+| `/`                                    | tea garden ERP software              | tea garden software, tea estate management system, tea garden management software      |
+| `/products/attendance`                 | tea garden attendance system         | face attendance tea garden, smart weighing tea garden, biometric attendance tea estate |
+| `/products/attendance/face-attendance` | face attendance for tea gardens      | tea garden biometric attendance, hazira face attendance, punch attendance tea garden   |
+| `/products/attendance/smart-weighing`  | smart weighing for tea gardens       | Bluetooth leaf weighing, tea garden wireless scale, linked plucking weight             |
+| `/products/attendance/offline-sync`    | offline tea garden attendance        | attendance sync tea garden, office attendance review, offline field attendance         |
+| `/products/payroll`                    | tea garden payroll software          | tea estate wage calculation, hazira calculation software, PF ESI payroll tea garden    |
+| `/products/factory`                    | tea factory production software      | made tea production tracking, manufacturing cost per kg tea                            |
+| `/products/stores`                     | tea garden store management software | tea estate inventory software, fertilizer stock tracking                               |
+| `/products/mis`                        | tea garden MIS dashboard             | tea estate daily report, tea garden online dashboard                                   |
 
 ## Title Rules
 

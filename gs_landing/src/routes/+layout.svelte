@@ -8,7 +8,7 @@
 	let { children } = $props();
 
 	// Pages with dark hero sections need light nav text at scroll top
-	const darkHeroRoutes = ['/products/attendance'];
+	const darkHeroRoutes: string[] = [];
 	let darkHero = $derived(darkHeroRoutes.includes($page.url.pathname));
 </script>
 

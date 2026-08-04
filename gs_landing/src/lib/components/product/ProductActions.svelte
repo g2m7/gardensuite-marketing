@@ -6,18 +6,33 @@
 		primaryHref = '/#contact',
 		primaryLabel = 'Book Free Demo',
 		secondaryHref = '',
-		secondaryLabel = 'Email Us'
+		secondaryLabel = 'Email Us',
+		onPrimaryClick,
+		onSecondaryClick
 	}: {
 		primaryHref?: string;
 		primaryLabel?: string;
 		secondaryHref?: string;
 		secondaryLabel?: string;
+		onPrimaryClick?: (event: MouseEvent) => void;
+		onSecondaryClick?: (event: MouseEvent) => void;
 	} = $props();
 </script>
 
 <ButtonGroup>
-	<Button href={primaryHref} label={primaryLabel} variant="primary" showIcon />
+	<Button
+		href={primaryHref}
+		label={primaryLabel}
+		variant="primary"
+		showIcon
+		onclick={onPrimaryClick}
+	/>
 	{#if secondaryHref}
-		<Button href={secondaryHref} label={secondaryLabel} variant="secondary" />
+		<Button
+			href={secondaryHref}
+			label={secondaryLabel}
+			variant="secondary"
+			onclick={onSecondaryClick}
+		/>
 	{/if}
 </ButtonGroup>

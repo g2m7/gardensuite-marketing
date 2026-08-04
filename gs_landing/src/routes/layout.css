@@ -28,7 +28,10 @@
 	--color-canvas: #ffffff;
 	--color-text-primary: #0a0a0a;
 	--color-text-secondary: #52525b;
+	--color-text-tertiary: #3f3f46;
 	--color-text-inverse: #ffffff;
+	--color-heading: #111111;
+	--color-border-strong: #d4d4d8;
 
 	--color-green-deep: #1b5e3b;
 	--color-green-dark: #1a5c2e;

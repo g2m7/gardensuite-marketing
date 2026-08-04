@@ -6,7 +6,25 @@ const SITE_URL = 'https://gardensuite.in';
 
 const pages = [
 	{ path: '/', priority: '1.0', changefreq: 'weekly', lastmod: '2026-06-03' },
-	{ path: '/products/attendance', priority: '0.9', changefreq: 'monthly', lastmod: '2026-06-03' },
+	{ path: '/products/attendance', priority: '0.9', changefreq: 'monthly', lastmod: '2026-08-04' },
+	{
+		path: '/products/attendance/face-attendance',
+		priority: '0.8',
+		changefreq: 'monthly',
+		lastmod: '2026-08-04'
+	},
+	{
+		path: '/products/attendance/smart-weighing',
+		priority: '0.8',
+		changefreq: 'monthly',
+		lastmod: '2026-08-04'
+	},
+	{
+		path: '/products/attendance/offline-sync',
+		priority: '0.8',
+		changefreq: 'monthly',
+		lastmod: '2026-08-04'
+	},
 	{ path: '/products/mis', priority: '0.9', changefreq: 'monthly', lastmod: '2026-06-03' },
 	{ path: '/products/payroll', priority: '0.9', changefreq: 'monthly', lastmod: '2026-06-03' },
 	{ path: '/products/factory', priority: '0.9', changefreq: 'monthly', lastmod: '2026-06-03' },

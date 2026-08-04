@@ -6,3 +6,12 @@
 .playwright-mcp/
 .wa-check-browser-profile/
 backup_*/
+
+# Local agent skills and tool state
+.agents/
+.antigravitycli/
+.factory/
+.impeccable/
+.pi/
+skills/
+skills-lock.json
