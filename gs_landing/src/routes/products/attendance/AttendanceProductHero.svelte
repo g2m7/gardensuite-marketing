@@ -57,14 +57,14 @@
 
 			<div
 				class="relative flex min-h-[560px] w-full items-center justify-center sm:min-h-[680px] md:min-h-[720px] xl:ml-auto xl:min-h-[760px] xl:max-w-[450px]"
-				aria-label="GardenSuite Face screen linking a worker to scale weight"
+				aria-label="GardenSuite Face scanning a worker for attendance"
 			>
 				<div class="hero-phone-enter absolute inset-0 flex items-center justify-center">
 					<div class="hero-phone-float">
 						<PhoneScreenshot
-							png="/screenshots/10_harvest_result_scale_connected_save.png"
-							webp="/screenshots/10_harvest_result_scale_connected_save.webp"
-							alt="GardenSuite smart weighing result linking scale weight to a verified worker"
+							png="/screenshots/12_attendance_capture_capturing.png"
+							webp="/screenshots/12_attendance_capture_capturing.webp"
+							alt="GardenSuite Face scanning a tea garden worker for attendance"
 							eager
 							class="w-[228px] shadow-[0_10px_28px_rgba(0,0,0,0.10)] sm:w-[280px] md:w-[300px] xl:w-[320px]"
 						/>
