@@ -50,7 +50,7 @@ pip3 install weasyprint jinja2
 
 ## Output Location
 
-All PDFs saved to `generated_offers/` as:
+All PDFs are saved to the ignored `deliverables/generated/offers/` directory as:
 `GardenSuite_Offer_{ClientName}_{YYYYMMDD}.pdf`
 
 ## Files

@@ -14,6 +14,7 @@ GardenSuite is a complete tea garden management ERP software, built and maintain
 ## Target Audience
 
 Tea garden managers, estate owners, and senior staff across:
+
 - Assam, Dooars, Terai, Darjeeling, Coochbehar, Uttar Dinajpur, Jalpaiguri
 
 Language must be **simple and accessible** - not all users are fluent in English. Professional but easy to understand.
@@ -76,27 +77,32 @@ Before auditing or improving copy, design, SEO, or UX, read the relevant docs in
 - Bun runtime
 - Hosted on Vercel (planned)
 
-## Email Marketing
+## Outreach and Lead Operations
 
-We are actively running email marketing for the Attendance + Smart Weighing solution.  
-**CRITICAL**: Any agent working on email marketing MUST read `gs_landing/docs/email-marketing/AGENT_INSTRUCTIONS.md` before making changes.
+**CRITICAL**: The only current authority for lead structure, outreach strategy, campaign status, or outreach blockers is:
 
-### Documentation Location
-`gs_landing/docs/email-marketing/` contains:
-- OVERVIEW.md - Strategy and goals
-- AGENT_INSTRUCTIONS.md - Rules for agents
-- CONTACT_DATABASE.md - Contact sources
-- BREVO_SETUP.md - Brevo automation setup
-- EMAIL_SEQUENCES.md - Email copy
-- LANDING_PAGE_INTEGRATION.md - Website forms
+`marketing/outreach/CURRENT_STRATEGY.md`
 
-### Contact Database
-916+ tea estate contacts located at: `/Users/g2m7/projects/scripts/extract_garden/data/`
+Read that file before auditing, planning, changing, or resuming any outreach work.
 
-### Lead Capture
-- Component: `gs_landing/src/lib/components/LeadCapture.svelte`
-- API: `gs_landing/src/routes/api/subscribe/+server.ts`
-- Brevo integration for contact management
+The following materials are retained as historical implementation records and are **not current strategy**:
+
+- `marketing/archive/brevo-email-marketing/`
+- `marketing/archive/whatsapp-face-attendance-weight/RESUME_SENDING.md`
+- `marketing/archive/whatsapp-face-attendance-weight/messages.md`
+- `marketing/archive/outreach-review-20260802/`
+- `marketing/archive/email-sequence-attendance-scale.md`
+
+Do not infer current blockers, campaign readiness, consent state, channel strategy, lead stages, or sending rules from those files. Do not reactivate their Brevo automation, WhatsApp queue, import scripts, or lead-capture funnel unless the user explicitly adopts that legacy workflow again.
+
+The current lead model is estate-account based, not a flat list of independent contact rows. Snapshot counts are not strategy and must not be treated as current operating status.
+
+If `CURRENT_STRATEGY.md` says a decision is not recorded, do not fill the gap from legacy files. State what is missing and ask for the current decision. When repository files disagree, the precedence is:
+
+1. The user's latest explicit direction
+2. `marketing/outreach/CURRENT_STRATEGY.md`
+3. Current production code and current system state
+4. Historical outreach files, for background only
 
 ## SEO Rules (Mandatory for Every Page)
 

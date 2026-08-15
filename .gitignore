@@ -1,4 +1,5 @@
 .DS_Store
+**/.DS_Store
 **/node_modules/
 .claude/
 *.zip
@@ -6,6 +7,19 @@
 .playwright-mcp/
 .wa-check-browser-profile/
 backup_*/
+
+# Local review output and generated deliverables
+/.artifacts/
+/.codex/
+/deliverables/*
+!/deliverables/README.md
+/tmp/
+/output/
+/outputs/
+/generated_offers/
+/screenshots/
+/scrnsht/
+*.inspect.ndjson
 
 # Local agent skills and tool state
 .agents/

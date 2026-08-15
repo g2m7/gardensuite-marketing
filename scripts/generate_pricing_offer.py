@@ -148,8 +148,8 @@ def generate_proposal(config):
     html_content = template.render(**data)
     
     # Generate PDF
-    output_dir = Path(__file__).parent.parent / "generated_offers"
-    output_dir.mkdir(exist_ok=True)
+    output_dir = Path(__file__).parent.parent / "deliverables" / "generated" / "offers"
+    output_dir.mkdir(parents=True, exist_ok=True)
     
     safe_name = "".join(c for c in config.get("client_name", "proposal") if c.isalnum() or c in " _-").strip()
     output_path = output_dir / f"GardenSuite_Offer_{safe_name}_{today.strftime('%Y%m%d')}.pdf"

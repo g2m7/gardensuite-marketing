@@ -327,7 +327,7 @@ No media placeholder may remain on the production route.
 - Lazy-load every below-fold image.
 - Alt text must explain the real screen and its buyer relevance.
 
-The old ERP monitor artwork in `scrnsht/erp_images/attendance.webp` is not suitable as proof of the current web product. Do not use it for M2 or M4.
+The archived ERP monitor artwork is not suitable as proof of the current web product. Do not use it for M2 or M4.
 
 ## 8. Information architecture and distribution
 

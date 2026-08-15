@@ -71,7 +71,7 @@ def setup_assets():
         else:
             print(f"WARNING: Source screenshot not found: {src_path}")
             # Try to find a fallback image in the project
-            fallback_in_project = PROJECT_DIR / "screenshots" / src_path.name
+            fallback_in_project = PROJECT_DIR / "assets" / "source" / "product-screenshots" / src_path.name
             if fallback_in_project.exists():
                 print(f"Using project fallback for: {src_path.name}")
                 shutil.copy2(fallback_in_project, dest_path)
@@ -84,7 +84,7 @@ def setup_assets():
 def generate_pdf():
     """Compile the HTML template using WeasyPrint into a premium PDF."""
     html_template_path = TEMPLATES_DIR / "sop_template.html"
-    output_dir = PROJECT_DIR / "generated_offers"
+    output_dir = PROJECT_DIR / "deliverables" / "generated" / "offers"
     output_dir.mkdir(parents=True, exist_ok=True)
     output_pdf_path = output_dir / "GardenSuite_GS_Face_SOP_Training_Manual.pdf"
     

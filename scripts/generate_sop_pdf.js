@@ -64,7 +64,7 @@ function setupAssets() {
 async function compilePDF() {
     console.log('--- Compiling SOP PDF via Playwright ---');
     const htmlPath = path.join(templatesDir, 'sop_template.html');
-    const outputDir = path.join(projectDir, 'generated_offers');
+    const outputDir = path.join(projectDir, 'deliverables', 'generated', 'offers');
     const outputPath = path.join(outputDir, 'GardenSuite_GS_Face_SOP_Training_Manual.pdf');
 
     if (!fs.existsSync(htmlPath)) {

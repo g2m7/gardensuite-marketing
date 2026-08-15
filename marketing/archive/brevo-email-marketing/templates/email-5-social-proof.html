@@ -1,0 +1,163 @@
+<!doctype html>
+<!-- DEPRECATED: Retired email template. Read marketing/outreach/CURRENT_STRATEGY.md. -->
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Built for tea garden field work</title>
+		<style>
+			body {
+				margin: 0;
+				padding: 0;
+				font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+				background: #f5f5f7;
+			}
+			.container {
+				max-width: 600px;
+				margin: 0 auto;
+				background: white;
+			}
+			.header {
+				background: #234b1d;
+				padding: 32px 24px;
+				text-align: center;
+			}
+			.header h1 {
+				color: white;
+				font-size: 24px;
+				margin: 0;
+				font-weight: 700;
+			}
+			.header p {
+				color: rgba(255, 255, 255, 0.8);
+				margin: 8px 0 0;
+				font-size: 14px;
+			}
+			.content {
+				padding: 32px 24px;
+			}
+			.content h2 {
+				color: #1a3a15;
+				font-size: 22px;
+				margin: 0 0 16px;
+				font-weight: 700;
+			}
+			.content p {
+				color: #424245;
+				font-size: 16px;
+				line-height: 1.6;
+				margin: 0 0 16px;
+			}
+			.quote {
+				background: #f0f7f0;
+				border-left: 4px solid #234b1d;
+				padding: 16px 20px;
+				margin: 20px 0;
+				font-style: italic;
+			}
+			.results {
+				background: #f8f7f3;
+				padding: 16px 20px;
+				border-radius: 8px;
+				margin: 20px 0;
+			}
+			.results h4 {
+				color: #1a3a15;
+				margin: 0 0 8px;
+			}
+			.results ul {
+				margin: 0;
+				padding-left: 20px;
+				color: #424245;
+			}
+			.cta {
+				text-align: center;
+				margin: 24px 0;
+			}
+			.cta a {
+				display: inline-block;
+				background: #234b1d;
+				color: white;
+				padding: 14px 28px;
+				border-radius: 8px;
+				text-decoration: none;
+				font-weight: 600;
+				font-size: 16px;
+			}
+			.footer {
+				background: #f5f5f7;
+				padding: 24px;
+				text-align: center;
+				border-top: 1px solid #e5e7eb;
+			}
+			.footer p {
+				color: #86868b;
+				font-size: 13px;
+				margin: 0 0 8px;
+			}
+			.footer a {
+				color: #234b1d;
+				text-decoration: none;
+			}
+			@media (max-width: 600px) {
+				.content {
+					padding: 24px 16px;
+				}
+				.header {
+					padding: 24px 16px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="header">
+				<h1>GardenSuite</h1>
+				<p>Tea Garden Management Software by Sarbani Associates</p>
+			</div>
+
+			<div class="content">
+				<p>Hello {{ contact.FIRSTNAME | default: "there" }},</p>
+
+				<p>GardenSuite has been used by 20+ tea estates across tea-growing regions.</p>
+				<ul>
+					<li>Assam</li>
+					<li>Dooars and Terai</li>
+					<li>Darjeeling, Coochbehar, Uttar Dinajpur, and Jalpaiguri</li>
+				</ul>
+
+				<p>Many estates keep their internal software details private. We respect that confidentiality.</p>
+
+				<div class="results">
+					<h4>What you can check in a demo:</h4>
+					<ul>
+						<li>Face check before attendance is saved</li>
+						<li>Leaf weight linked to the same worker</li>
+						<li>Offline field work when mobile internet is weak</li>
+						<li>Synced records ready for office reports and payroll</li>
+					</ul>
+				</div>
+
+				<p>Setup and support come from Sarbani Associates, Bagdogra, Siliguri.</p>
+
+				<div class="cta">
+					<a
+						href="https://gardensuite.in/#contact?utm_source=email&utm_medium=automation&utm_campaign=attendance_nurture&utm_content=email_5"
+						>See the workflow in a demo</a
+					>
+				</div>
+
+				<p>Best,<br />Sarbani Associates</p>
+			</div>
+
+			<div class="footer">
+				<p><strong>Sarbani Associates</strong></p>
+				<p>Bagdogra, Siliguri</p>
+				<p style="margin-top: 12px; font-size: 12px">
+					<a href="{{ unsubscribe }}">Unsubscribe</a> |
+					<a href="https://gardensuite.in">Visit Website</a>
+				</p>
+			</div>
+		</div>
+	</body>
+</html>

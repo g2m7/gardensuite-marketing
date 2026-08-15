@@ -3,7 +3,7 @@
 ## Project Structure
 
 - `/gs_landing/` - SvelteKit + Tailwind v4 + TypeScript (bun)
-- `/brand_pack/` - Brand guidelines, logos, design tokens, CSS reference
+- `/assets/brand/` - Brand guidelines, logos, design tokens, CSS reference
 - `/` - Strategy docs (SEO, requirements, content briefs)
 
 ## Quick Start
@@ -26,17 +26,17 @@ bun run build
 
 ## Brand Design Tokens
 
-### Colors (from brand_pack tokens)
+### Colors (from assets/brand tokens)
 
-| Token | Hex | Usage |
-|-------|-----|-------|
+| Token       | Hex       | Usage                        |
+| ----------- | --------- | ---------------------------- |
 | `brand-600` | `#3D7D2C` | Primary, CTAs, brand anchors |
-| `brand-700` | `#2B6321` | Hover states |
-| `brand-50` | `#F1F6EB` | Light accent bg |
-| `charcoal` | `#0A0A0A` | Body text |
-| `ink` | `#18181B` | Secondary text |
-| `surface` | `#FAFAF7` | Subtle backgrounds |
-| `border` | `#E4E4E7` | Borders |
+| `brand-700` | `#2B6321` | Hover states                 |
+| `brand-50`  | `#F1F6EB` | Light accent bg              |
+| `charcoal`  | `#0A0A0A` | Body text                    |
+| `ink`       | `#18181B` | Secondary text               |
+| `surface`   | `#FAFAF7` | Subtle backgrounds           |
+| `border`    | `#E4E4E7` | Borders                      |
 
 ### Typography
 
@@ -81,7 +81,17 @@ Before making changes, read the relevant docs in `gs_landing/docs/landing-page/`
 
 See AGENTS.md for the full SEO checklist, performance rules, copy safety rules, and new page checklist.
 
-## Content Needed (See CONTENTS-NEEDED.md)
+## Outreach and Lead Operations
+
+For any lead structure, outreach strategy, campaign-status, or outreach-blocker work, read:
+
+`marketing/outreach/CURRENT_STRATEGY.md`
+
+That is the only current outreach authority. The files under `marketing/archive/` are deprecated history. Do not revive or diagnose the current operation from them.
+
+If the current strategy file says a decision is not recorded, ask for the current decision. Do not substitute a more detailed historical workflow.
+
+## Content Needed (See docs/website/CONTENTS-NEEDED.md)
 
 - Product information (all modules)
 - Client testimonials (5-10)
