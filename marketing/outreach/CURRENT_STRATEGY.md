@@ -1,9 +1,120 @@
 # GardenSuite Current Outreach Authority
 
 Status: CURRENT
-Strategy version: 2026-08-05-snov-smtp-pilot
+Strategy version: 2026-08-30-dibrugarh-tinsukia-mid-tier-pilot
 Owner: Sarbani Associates
-Last updated: 2026-08-05
+Last updated: 2026-08-30
+
+## 2026-08-30 automation decision
+
+The owner asked to automate the preparation, warm-up and scheduled campaign work and reaffirmed acceptance of the previously documented provider-enforcement risk. This newer direction replaces the manual-only warm-up decision.
+
+- Snov.io automated warm-up was started for `kaushik@getgardensuite.in` on 2026-08-30, then paused the same day at the owner's request after unexpected warm-up email volume. It must not be resumed without a new explicit owner instruction.
+- The saved configuration is a conservative progressive ramp: start at 2 messages per day, increase by 2 per sending day, and cap warm-up at 8 messages per day. This configuration is currently paused.
+- Pause Snov.io warm-up before the first prospect batch on 2026-09-08 so warm-up and campaign traffic do not compete for the mailbox's 15-message daily ceiling.
+- Use Snov.io Campaigns to automate the approved day 0, day 5 and day 12 sequence after the 20-account allowlist, message copy and campaign settings are approved.
+- Use the daily Codex heartbeat `GardenSuite September outbound` to research, qualify, deduplicate and prepare the Snov.io import. It may not send messages or activate a campaign.
+- Keep a human gate for the final account allowlist, campaign activation, replies, complaints and social posting.
+
+The provider-policy risk remains documented. Automation authorization does not mean Spacemail has approved the activity.
+
+## 2026-08-30 launch deadline
+
+The owner set 2026-09-08 as the date to start sending prospect emails. This is a start date, not a requirement to send all 20 messages on one day.
+
+Use a staged first-send schedule, provided each recipient has passed every account, contact, verification and suppression check:
+
+- 2026-09-08: 3 new prospects
+- 2026-09-09: 3 new prospects
+- 2026-09-10: 4 new prospects
+- 2026-09-11: 5 new prospects
+- 2026-09-14: the remaining 5 prospects
+
+Do not fill a daily quota with an unqualified estate or an unverified address. Keep the mailbox below 15 total outgoing messages per day, including replies and follow-ups. Pause the campaign on any hard bounce, spam complaint, provider warning, or repeated Spam-folder placement.
+
+## 2026-08-30 pilot geography, estate profile and sender decisions
+
+The owner replaced the earlier West Bengal and Assam split with a narrower first-pilot market:
+
+- Select all 20 pilot estates from Dibrugarh district and Tinsukia district in Assam only.
+- Prefer mid-tier estates whose operating scale is roughly 250 workers. Worker count is now a more useful fit signal than selecting the largest estates.
+- Continue to prefer independently managed estates, one-estate companies and small family groups.
+- Do not restore estates previously rejected for being very large, prominent, corporate, a current GardenSuite client, suppressed, or already in an active sales discussion merely because they are inside the two target districts.
+- A candidate without a verified worker count may remain in research, but it cannot be preferred solely because its acreage or public profile is large.
+- Keep the existing 50-hectare minimum unless the owner explicitly replaces it.
+
+The owner also confirmed that `kaushik@getgardensuite.in` is a full mailbox, not an alias.
+
+A live DNS check on 2026-08-30 confirmed that Spacemail MX, SPF, DKIM and DMARC records are present for `getgardensuite.in`.
+
+Later on 2026-08-30, the owner confirmed that the mailbox sends successfully, the test message reached the Gmail inbox, SPF, DKIM and DMARC passed in the delivered message, and the Snov.io connection and setup completed successfully. The warm-up start gate is therefore passed. This does not approve prospect outreach or the superseded estate list.
+
+Snov.io warm-up was activated on 2026-08-30 with a 30% reply rate, AI-generated warm-up content, the `GardenSuite warm-up IST` schedule, Asia/Calcutta time zone, Monday to Friday from 9:00 AM to 6:00 PM, a starting volume of 2, a daily increase of 2 and a daily goal of 8. It was then paused at the owner's request. Snov.io reported `Paused`, protection off and no next email scheduled after the change.
+
+The owner chose not to make written Spacemail permission a launch dependency and accepts the provider-enforcement risk. This is an owner risk decision, not evidence that Spacemail permits the activity. The owner's later automation direction authorizes Snov.io automated warm-up despite that documented risk. Snov.io may also be used for address verification and the small campaign after the remaining readiness checks pass.
+
+## 2026-08-17 legacy-software qualification correction
+
+The owner confirmed that an estate must not be excluded merely because it has an existing or older tea software system. A dated, poorly supported, incomplete or disconnected installation can be a strong replacement opportunity for GardenSuite.
+
+Apply these rules:
+
+- Treat evidence of old software as a replacement signal, not a disqualifier.
+- Keep the estate in research and determine which modules are actually used, when the system was last upgraded, whether attendance and weighing are connected, how support works, and what the users still do manually.
+- Do not claim that a competitor system is dusty, outdated or unsatisfactory unless the estate confirms it or a reliable current source proves it.
+- Lower priority only when there is evidence of a recent implementation that the estate actively uses and is satisfied with, or when contract timing makes a near-term change unrealistic.
+- Current GardenSuite clients, suppressed accounts, active negotiations assigned elsewhere and accounts failing the size or group rules remain excluded as already recorded.
+- Restore Boloma Tea Estate as a competitive-replacement research candidate. Its public Teapac listing is evidence for a tailored qualification conversation, not grounds for rejection.
+
+## 2026-08-17 email discovery and account-fit correction
+
+Repository inspection confirmed that the local prospecting skill contains documentation for Apollo, Hunter, Snov and Truelist, but this project does not contain the referenced runnable integrations. The old outreach scripts only analyze or consolidate local lead data. Public business-source research is therefore the current email-discovery method until a supported enrichment connector is installed or Snov.io is used manually.
+
+The current research results are recorded in `snov-pilot-getgardensuite-20260816/EMAIL_DISCOVERY_RESULTS_20260817.csv`.
+
+Important account changes:
+
+- Boloma Tea Estate has public evidence of Teapac use. Keep it as a competitive-replacement research candidate and verify the system's present use, age, modules and support experience.
+- Hold Korangani Tea Estate because it operates as a prominent packaged tea brand and does not match the owner's preferred pilot profile.
+- Hold Tirual Tea Estate, Diksam Tea Estate and Ethelwold Tea Estate until their wider connected tea-company networks and ownership are resolved against the small independent-account rule.
+- Exclude Dinjoye Tea Estate from the first pilot because current company-network evidence shows a larger connected tea and investment group.
+- Keep Devendra Tea Estate and Kamarband Tea Estate as phone-first research accounts because no reliable public email was found. Do not invent or pattern-guess an address.
+
+The presence of an MX record is not mailbox verification. No found address is send-ready until Snov.io returns `Valid`, the estate-email association is confirmed, and all suppression and owner-approval checks pass.
+
+## 2026-08-16 pilot account selection correction
+
+The owner rejected a pilot biased toward the most popular and largest tea estates. Those accounts are more likely to have an established ERP or a similar attendance solution, longer procurement cycles, and higher switching resistance.
+
+The 20 accounts in `snov-pilot-getgardensuite-20260816` are therefore **superseded as the pilot sending list**. They remain research records only and must not be imported or contacted as the approved pilot.
+
+Replacement selection must:
+
+- keep the confirmed 50-hectare minimum
+- prefer independently managed estates and one-estate or small family groups
+- prefer roughly 50 to 250 hectares under tea; allow a larger estate only when independent ownership and a clear reason to test are verified
+- exclude famous destination or premium retail tea brands where brand prominence makes the account behave like a large enterprise
+- exclude public companies and large multi-estate corporate groups
+- exclude current GardenSuite clients, suppressed accounts, and accounts already in an active sales negotiation
+- look for evidence of manual, fragmented, dated, or unconnected attendance and weighing workflows; absence of a website alone is not evidence
+- record any public evidence of an existing ERP, biometric attendance system, or recent software implementation and separately classify the account; do not exclude it merely for having software
+- retain source URLs and verification dates for estate size, ownership, management contact, and technology evidence
+
+Build a broader candidate pool before selecting the replacement 20. The final list remains research-only until every account and contact passes the existing qualification and sending gates.
+
+## 2026-08-16 sender implementation update
+
+The owner supplied `getgardensuite.in` as the new outreach domain and `kaushik@getgardensuite.in` as the sender address. This newer direction replaces the earlier assumption that the pilot would send from `gardensuite.in`.
+
+Verified on 2026-08-16:
+
+- `getgardensuite.in` was registered on 2026-08-09.
+- Spacemail MX, SPF, DKIM, and autodiscover records are present.
+- DMARC is not present.
+- Both HTTP and HTTPS redirect to `https://gardensuite.in`.
+- On 2026-08-30, the owner confirmed that `kaushik@getgardensuite.in` is a full mailbox.
+
+Snov.io can technically connect to the Spacemail account through SMTP and IMAP. Spacemail's current acceptable-use policy prohibits automated warm-up networks and unsolicited mass email. The owner chose on 2026-08-30 to proceed without making written provider permission a dependency, later requested automation, and accepts the provider-enforcement risk. Snov.io automated warm-up is therefore authorized under the conservative cap recorded above. Contact verification, suppression and owner approval remain mandatory before prospect sending.
 
 ## Purpose
 
@@ -29,13 +140,17 @@ The August 2 V2 snapshot consolidated 2,167 raw rows into 834 estate accounts. T
 
 The replacement outreach playbook is **partially recorded** below from the owner's 2026-08-05 direction. Confirmed decisions are current. Proposed operating defaults are not approved for sending until the owner accepts or changes them.
 
-The current implementation plan is [`docs/plans/outreach-restart/README.md`](../../docs/plans/outreach-restart/README.md). That plan is subordinate to this strategy file and does not authorize sending.
+The active execution plan is [`ACTION_PLAN_2026-09-08.md`](ACTION_PLAN_2026-09-08.md). It converts this strategy into dated work, but remains subordinate to this strategy file and does not waive any launch gate.
+
+The older [`docs/plans/outreach-restart/README.md`](../../docs/plans/outreach-restart/README.md) is retained as an implementation reference. It is not the active September schedule and does not authorize sending.
 
 ### Confirmed decisions
 
-- **Geography:** West Bengal and Assam only.
+- **Geography:** Dibrugarh district and Tinsukia district in Assam only for the first 20-estate pilot.
 - **Estate size:** 50 hectares or more.
+- **Preferred operating profile:** Mid-tier estates around 250 workers. Do not bias selection toward the largest or most famous estates.
 - **Exclusions:** Exclude big corporate groups. The operational definition or named exclusion list is still required.
+- **Confirmed current-client exclusions:** Harishpur Tea Estate and Bagrodia Plantations & Industries are existing GardenSuite customers. Do not include either account, any spelling variant, division, or linked contact in prospecting or cold outreach.
 - **Target roles:** Founders and owners through directors, general managers, estate managers, and garden managers.
 - **Channel order:** Email first, then WhatsApp. LinkedIn may be tested later but is not required for the first pilot.
 - **Pilot sending tool:** Use Snov.io Campaigns for the 20-estate cold-email pilot. Its renewable Trial plan supports 100 recipients, one warm-up slot, automated follow-ups, and custom SMTP/IMAP connections. It can send through the existing domain mailbox without Google Workspace. Keep Brevo only for contacts who have opted in to marketing. Hunter is not selected because its free plan does not support the required custom SMTP/IMAP mailbox.
@@ -104,7 +219,7 @@ The exact tool is still undecided. A controlled workbook is sufficient for the f
 
 #### Pilot and decision criteria
 
-- Pilot size: 20 qualified estate accounts, aiming for 10 in West Bengal and 10 in Assam when enough verified accounts are available.
+- Pilot size: 20 qualified estate accounts, all from Dibrugarh or Tinsukia district.
 - Start with one primary contact per estate. Add a second suitable contact only after the first sequence ends without a reply and the account is not suppressed.
 - Pilot success gate: at least 2 positive, relevant replies or at least 1 qualified demo from the 20 accounts, with no suppression failure.
 - Pause and fix data or sending setup on any hard bounce in the 20-account pilot, if more than 10% of sampled accounts fail the size/ownership/role checks, if any suppressed contact is messaged, or if a spam complaint is received.
@@ -116,16 +231,17 @@ The August 2 V2 snapshot cannot apply the confirmed targeting rules by itself. I
 
 Before a pilot list can be approved, candidate estates need current enrichment and manual verification for:
 
-1. West Bengal or Assam location
+1. Dibrugarh or Tinsukia district location
 2. 50-hectare minimum
-3. ownership group and corporate exclusion
-4. named contact and qualifying role
-5. current contact point and source
-6. suppression status
+3. worker count or a reliable operating-scale proxy, with preference near 250 workers
+4. ownership group and corporate exclusion
+5. named contact and qualifying role
+6. current contact point and source
+7. suppression status
 
 The phrase "big corporate groups" also needs either a precise rule or a named exclusion list so that qualification is consistent.
 
-The `gardensuite.in` domain points email to `mail.gardensuite.in`. A DNS check on 2026-08-05 found no SPF record and no DMARC record at the domain. Mailbox login, SMTP/IMAP ports, TLS, DKIM, and live Snov.io connection are not yet verified. These sender checks block external sending. Website enquiry email may continue using Brevo because that is separate from cold outreach.
+The earlier `gardensuite.in` sender findings are no longer launch blockers because the owner selected `kaushik@getgardensuite.in`. On 2026-08-30 the owner confirmed successful Gmail inbox placement, SPF/DKIM/DMARC pass and a working Snov.io connection for that mailbox. Website enquiry email may continue using Brevo because it is separate from cold outreach.
 
 For any decision not confirmed or approved above, agents must not infer or reconstruct the current strategy from retired campaign materials. In particular, do not assume any of the following are current:
 
@@ -168,11 +284,11 @@ Current status:
 3. Pipeline stages and stage owner - **proposed**; named owners and owner approval are missing.
 4. Outreach channels and their order - **confirmed**; the proposed WhatsApp permission gate still needs approval and LinkedIn remains optional.
 5. Message or offer by segment - **confirmed at offer level**; the actual approved email copy is missing.
-6. Sending cadence and follow-up rules - **proposed**; owner approval is missing.
+6. Sending cadence and follow-up rules - **partially confirmed**; the 2026-09-08 staged launch schedule is confirmed, while the day 0, 5 and 12 follow-up cadence still needs explicit approval.
 7. System of record for activity and outcomes - **proposed**; the exact account tracker or CRM is missing. Snov.io is selected for the pilot automation, but the SMTP/IMAP mailbox and activity-sync process still need verification.
 8. Suppression, opt-out, and do-not-contact handling - **proposed**; implementation and pre-send verification are missing.
 9. Pilot size and success or stop criteria - **proposed**; owner approval is missing.
-10. Current live-system access - **full access required**; systems, credentials, and working access still need verification.
+10. Current live-system access - **sender access confirmed by owner** for the mailbox and Snov.io; access to the final account tracker and its update process still needs verification.
 
 Operational sending remains blocked until proposed items are approved, the data is enriched and verified, a canonical tracker exists, suppression checks are implemented, message copy is approved, and live sending access is tested without activating a campaign.
 

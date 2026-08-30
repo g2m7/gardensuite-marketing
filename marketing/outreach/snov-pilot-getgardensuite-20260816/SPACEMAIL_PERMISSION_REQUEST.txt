@@ -1,0 +1,25 @@
+Subject: Permission to connect one Spacemail mailbox to Snov.io
+
+Hello Spacemail Support,
+
+We use kaushik@getgardensuite.in for GardenSuite, a product of Sarbani Associates.
+
+Can we connect the mailbox to Snov.io through Spacemail SMTP and IMAP and use it for individually addressed, low-volume B2B outreach?
+
+Our proposed controls are:
+
+- no automated warm-up network
+- no purchased or scraped bulk list
+- maximum 5 new recipients per day for a 20-estate pilot
+- maximum 15 total messages per day including follow-ups
+- one recipient per email
+- only verified business contacts
+- clear reply-to-stop instruction and immediate suppression
+- no attachments, images, open tracking, or click tracking
+- prompt pause on any hard bounce or complaint
+
+Please confirm in writing whether this use is permitted under the current Spacemail Acceptable Use Policy. If it is not permitted, please tell us which Spacemail use is allowed and whether a different Spaceship service is required.
+
+Regards,
+Kaushik Majumder
+Sarbani Associates

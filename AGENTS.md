@@ -85,6 +85,28 @@ Before auditing or improving copy, design, SEO, or UX, read the relevant docs in
 
 Read that file before auditing, planning, changing, or resuming any outreach work.
 
+For the active September 2026 pilot, also read:
+
+- `marketing/outreach/ACTION_PLAN_2026-09-08.md` - dated execution schedule, launch gate, email batches, Facebook group workflow, and LinkedIn workflow
+- `product.md` - plain product, audience, offer, proof, objection, and messaging source
+- `.agents/product-marketing.md` - versioned marketing context used by marketing skills
+
+### Stable Outreach Operating Rules
+
+- The active email pilot starts on 2026-09-08 and contains 20 estate accounts from Dibrugarh and Tinsukia districts only.
+- Prefer independently managed mid-tier estates with roughly 250 workers and at least 50 hectares. Do not bias the list toward the largest or most famous estates.
+- Keep previously rejected estates rejected unless a documented new fact changes the reason. Exclude current clients, suppressed accounts, active sales discussions, public companies, and large multi-estate groups.
+- Treat existing or older software as a qualification topic, not an automatic rejection.
+- Use one named owner, director, general manager, estate manager, or garden manager per estate for the first sequence.
+- Send only to email addresses that Snov.io reports as `Valid` and that pass estate-association and suppression checks.
+- Use `kaushik@getgardensuite.in` through Snov.io Campaigns for the pilot. The owner explicitly authorized Snov.io automated warm-up on 2026-08-30 despite the documented provider risk. Cap warm-up at 8 messages per day and pause it before prospect sending starts on 2026-09-08.
+- The `GardenSuite September outbound` heartbeat and `scripts/outreach/pilot_pipeline.mjs` may automate research, qualification, validation and Snov import preparation. They must not send, publish, or activate a live campaign.
+- Do not attach brochures, images, videos, or long documents to the first cold email.
+- Facebook and LinkedIn group activity must be human, relevant, group-specific, and useful. Read group rules, do not paste duplicate promotional posts, and ask before moving a public discussion into a private sales message.
+- Do not claim that members of a third-party Facebook group can be selected directly as a paid ad audience. Recheck official platform documentation before giving current paid-targeting advice.
+- LinkedIn Member Groups targeting and audience minimums are time-sensitive platform facts. Verify them against official LinkedIn documentation before campaign setup.
+- Record every qualified social profile and outreach touch against the estate account in the canonical tracker. A `Do Not Contact` decision overrides every channel.
+
 The following materials are retained as historical implementation records and are **not current strategy**:
 
 - `marketing/archive/brevo-email-marketing/`
@@ -103,6 +125,14 @@ If `CURRENT_STRATEGY.md` says a decision is not recorded, do not fill the gap fr
 2. `marketing/outreach/CURRENT_STRATEGY.md`
 3. Current production code and current system state
 4. Historical outreach files, for background only
+
+Product and messaging precedence is:
+
+1. The user's latest explicit product direction
+2. `product.md`
+3. `.agents/product-marketing.md`
+4. `docs/product/PRODUCT.md` and current production behavior for technical detail
+5. Landing-page copy guides for channel-specific wording
 
 ## SEO Rules (Mandatory for Every Page)
 
