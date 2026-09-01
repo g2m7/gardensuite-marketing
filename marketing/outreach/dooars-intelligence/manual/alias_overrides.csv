@@ -1,0 +1,12 @@
+garden_id,alias,action,alias_type,source_url,confidence,notes
+gs-dooars-denguajhar,Danguajhar,add,current_company_spelling,https://goodricketea.com/pages/our-gardens,high,Current Goodricke spelling.
+gs-dooars-lessriver,Leesh River,add,current_company_spelling,https://goodricketea.com/pages/our-gardens,high,Current Goodricke spelling. Prevents a duplicate Tea Board directory record.
+gs-dooars-meenglass,Meenglas,add,current_company_spelling,https://goodricketea.com/pages/our-gardens,high,Current Goodricke spelling.
+gs-dooars-malnuddy,Malnady,add,source_spelling,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,medium,Tea Board directory spelling linked for review.
+gs-dooars-newglenceco,New Glenco,add,source_spelling,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,medium,Tea Board directory spelling linked for review.
+gs-dooars-zurantee,Zurrantee,add,source_spelling,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,high,Tea Board directory spelling variant.
+gs-dooars-bhatkowa,Bhatkawa,add,source_spelling,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,high,Tea Board directory spelling variant.
+gs-dooars-manabarie,Manabari,add,news_spelling,https://www.millenniumpost.in/bengal/tea-industry-reacts-to-centres-misleading-data-on-closed-gardens-599358,medium,Local newspaper spelling variant.
+gs-dooars-bamandanga-tondoo,Bamandanga,add,news_spelling,https://www.millenniumpost.in/bengal/tea-industry-reacts-to-centres-misleading-data-on-closed-gardens-599358,medium,Local newspaper short form. Review whether it always means Bamandanga Tondoo.
+gs-dooars-choonabhuti,Choonabhutti,add,current_company_spelling,https://www.andrewyule.com/westbengal_garden.php,high,Current Andrew Yule spelling.
+gs-dooars-karballa,Karbala,add,current_company_spelling,https://www.andrewyule.com/group_business.php,high,Current Andrew Yule spelling variant.

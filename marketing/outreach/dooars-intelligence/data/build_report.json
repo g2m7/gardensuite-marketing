@@ -1,0 +1,23 @@
+{
+  "generated_at": "2026-09-01T21:00:42.701Z",
+  "atlas_names": 128,
+  "atlas_profiles": 47,
+  "directory_rows": 164,
+  "registered_planter_rows": 218,
+  "canonical_gardens": 168,
+  "aliases": 893,
+  "companies": 135,
+  "company_links": 211,
+  "evidence_rows": 46,
+  "contacts": 5,
+  "historical_contact_hints": 152,
+  "active_export_rows": 26,
+  "review_queue_rows": 201,
+  "statuses": {
+    "active_confirmed": 19,
+    "unknown": 136,
+    "likely_active": 7,
+    "temporarily_closed": 6
+  },
+  "warning": "Historical sources do not prove current operation or ownership. Contact remains the final confirmation."
+}

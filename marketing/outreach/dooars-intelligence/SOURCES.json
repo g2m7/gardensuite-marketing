@@ -1,0 +1,170 @@
+{
+  "schema_version": 1,
+  "default_request_delay_ms": 1500,
+  "sources": [
+    {
+      "source_id": "tea-board-wb-directory-2013",
+      "name": "Tea Board West Bengal Tea Directory",
+      "url": "https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf",
+      "kind": "pdf",
+      "parser": "tea-board-west-bengal-directory",
+      "published_date": "2013-03-18",
+      "authority": "official",
+      "use": "Historical garden registration, area, owner, CEO and contact baseline",
+      "current_status_evidence": false
+    },
+    {
+      "source_id": "tea-gis-jalpaiguri-atlas-2015",
+      "name": "Tea Garden Atlas, Jalpaiguri District",
+      "url": "https://bhuvan-app1.nrsc.gov.in/tea/teaPortal/PDF/Jalpaiguri.pdf",
+      "kind": "pdf",
+      "parser": "tea-gis-jalpaiguri-atlas",
+      "published_date": "2015-10-01",
+      "authority": "official",
+      "use": "Canonical 128-garden Dooars seed, spelling aliases, location, area and company clues",
+      "current_status_evidence": false
+    },
+    {
+      "source_id": "tea-board-registered-planters-2019",
+      "name": "Tea Board notice to registered tea planters",
+      "url": "https://teaboard.gov.in/pdf/Final_Notice_to_all_registered_tea_planters_pdf2724.pdf",
+      "kind": "pdf",
+      "parser": "tea-board-registered-planters",
+      "published_date": "2019-01-01",
+      "authority": "official",
+      "use": "Registration-number and spelling cross-check",
+      "current_status_evidence": false
+    },
+    {
+      "source_id": "tea-gis-portal",
+      "name": "Tea GIS-MIS portal",
+      "url": "https://bhuvan-app1.nrsc.gov.in/tea/teaPortal/tea.php",
+      "kind": "html",
+      "parser": "metadata-only",
+      "published_date": "",
+      "authority": "official",
+      "use": "Portal availability and publication-link monitoring",
+      "current_status_evidence": false,
+      "browser_fallback": true
+    },
+    {
+      "source_id": "commerce-lok-sabha-closed-gardens-2025",
+      "name": "Lok Sabha answer on closed tea gardens",
+      "url": "https://sansad.in/getFile/loksabhaquestions/annex/184/AU2834_RhlaJE.pdf?source=pqals",
+      "kind": "pdf",
+      "parser": "metadata-only",
+      "published_date": "2025-03-18",
+      "authority": "official",
+      "use": "Current official closure cross-check for West Bengal tea gardens",
+      "current_status_evidence": true
+    },
+    {
+      "source_id": "goodricke-current-dooars-gardens",
+      "name": "Goodricke current garden list",
+      "url": "https://goodricketea.com/pages/our-gardens",
+      "kind": "html",
+      "parser": "metadata-only",
+      "published_date": "",
+      "authority": "company",
+      "use": "Current company claim for its 12 Dooars gardens",
+      "current_status_evidence": true,
+      "browser_fallback": true
+    },
+    {
+      "source_id": "goodricke-current-company-contact",
+      "name": "Goodricke company contact page",
+      "url": "https://www.goodricke.com/contact-us",
+      "kind": "html",
+      "parser": "metadata-only",
+      "published_date": "",
+      "authority": "company",
+      "use": "Current head-office business contact",
+      "current_status_evidence": false,
+      "browser_fallback": true
+    },
+    {
+      "source_id": "indong-current-overview",
+      "name": "Indong Tea Company current overview",
+      "url": "https://indongteaco.com/overview.html",
+      "kind": "html",
+      "parser": "metadata-only",
+      "published_date": "",
+      "authority": "company",
+      "use": "Current company, estate and promoter relationship",
+      "current_status_evidence": true,
+      "browser_fallback": true
+    },
+    {
+      "source_id": "indong-current-contact",
+      "name": "Indong Tea Company contact page",
+      "url": "https://www.indongteaco.com/contact-us.html",
+      "kind": "html",
+      "parser": "metadata-only",
+      "published_date": "",
+      "authority": "company",
+      "use": "Current company and estate business contacts",
+      "current_status_evidence": true,
+      "browser_fallback": true
+    },
+    {
+      "source_id": "millennium-post-closed-gardens-2025",
+      "name": "Tea industry response to closed-garden figures",
+      "url": "https://www.millenniumpost.in/bengal/tea-industry-reacts-to-centres-misleading-data-on-closed-gardens-599358",
+      "kind": "html",
+      "parser": "metadata-only",
+      "published_date": "2025-02-18",
+      "authority": "news",
+      "use": "Local reopening and operating-status leads attributed to industry and state sources",
+      "current_status_evidence": true,
+      "browser_fallback": true
+    },
+    {
+      "source_id": "andrew-yule-current-west-bengal-gardens",
+      "name": "Andrew Yule current West Bengal garden list",
+      "url": "https://www.andrewyule.com/westbengal_garden.php",
+      "kind": "html",
+      "parser": "metadata-only",
+      "published_date": "",
+      "authority": "company",
+      "use": "Current company operation and four Dooars garden relationships",
+      "current_status_evidence": true,
+      "browser_fallback": true
+    },
+    {
+      "source_id": "andrew-yule-current-contact",
+      "name": "Andrew Yule company contact page",
+      "url": "https://www.andrewyule.com/contact.php",
+      "kind": "html",
+      "parser": "metadata-only",
+      "published_date": "",
+      "authority": "company",
+      "use": "Current tea-division business contact",
+      "current_status_evidence": false,
+      "browser_fallback": true
+    },
+    {
+      "source_id": "mcleod-russel-current-india-gardens",
+      "name": "McLeod Russel current India garden list",
+      "url": "https://www.mcleodrussel.com/business/india.aspx",
+      "kind": "html",
+      "parser": "metadata-only",
+      "published_date": "",
+      "authority": "company",
+      "use": "Current company operation and two Alipurduar garden relationships",
+      "current_status_evidence": true,
+      "browser_fallback": true
+    },
+    {
+      "source_id": "mcleod-russel-current-operations",
+      "name": "McLeod Russel current operations and contacts",
+      "url": "https://www.mcleodrussel.com/business/our-operations.aspx",
+      "kind": "html",
+      "parser": "metadata-only",
+      "published_date": "",
+      "authority": "company",
+      "use": "Current company contact and operating-office details",
+      "current_status_evidence": false,
+      "browser_fallback": true
+    }
+  ]
+}
