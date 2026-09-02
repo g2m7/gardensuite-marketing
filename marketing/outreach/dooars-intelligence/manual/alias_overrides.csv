@@ -5,8 +5,25 @@ gs-dooars-meenglass,Meenglas,add,current_company_spelling,https://goodricketea.c
 gs-dooars-malnuddy,Malnady,add,source_spelling,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,medium,Tea Board directory spelling linked for review.
 gs-dooars-newglenceco,New Glenco,add,source_spelling,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,medium,Tea Board directory spelling linked for review.
 gs-dooars-zurantee,Zurrantee,add,source_spelling,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,high,Tea Board directory spelling variant.
+gs-dooars-zurantee,Zurrantee Tea,add,source_spelling,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,high,Tea Board directory spelling variant.
 gs-dooars-bhatkowa,Bhatkawa,add,source_spelling,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,high,Tea Board directory spelling variant.
 gs-dooars-manabarie,Manabari,add,news_spelling,https://www.millenniumpost.in/bengal/tea-industry-reacts-to-centres-misleading-data-on-closed-gardens-599358,medium,Local newspaper spelling variant.
 gs-dooars-bamandanga-tondoo,Bamandanga,add,news_spelling,https://www.millenniumpost.in/bengal/tea-industry-reacts-to-centres-misleading-data-on-closed-gardens-599358,medium,Local newspaper short form. Review whether it always means Bamandanga Tondoo.
 gs-dooars-choonabhuti,Choonabhutti,add,current_company_spelling,https://www.andrewyule.com/westbengal_garden.php,high,Current Andrew Yule spelling.
 gs-dooars-karballa,Karbala,add,current_company_spelling,https://www.andrewyule.com/group_business.php,high,Current Andrew Yule spelling variant.
+gs-dooars-washabarie,Washabarietea,add,source_spelling,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,high,Tea Board directory concatenated spelling.
+gs-dooars-washabarie,Washabarietea Estate,add,source_spelling,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,high,Tea Board directory spelling variant.
+gs-dooars-garganda,Garganda Tae Estate,add,source_spelling,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,high,Tea Board directory spelling with typo.
+gs-dooars-chinchula,Merico,add,historical_operator_spelling,https://teaboard.gov.in/pdf/Final_Notice_to_all_registered_tea_planters_pdf2724.pdf,high,Planters notice links registration 2531 to Chinchula.
+gs-dooars-chinchula,Merico Tea Estate,add,historical_operator_spelling,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,high,Tea Board directory registration 2531.
+gs-dooars-damdim,Dam Dim,add,current_company_spelling,https://www.amalgamatedplantations.co.in,high,Current APPL spelling variant.
+gs-dooars-nowera-nuddy,Nowera Nuddy,add,current_company_spelling,https://www.amalgamatedplantations.co.in,high,Current APPL spelling variant.
+gs-dooars-nowera-nuddy,Neora Nuddy,add,source_spelling,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,high,Tea Board directory spelling variant.
+gs-dooars-gairkhata,Gairkhata,add,current_company_spelling,https://www.gillandersarbuthnot.com,high,Current Gillanders spelling.
+gs-dooars-baintgoorie,Baintgoorie,add,current_company_spelling,https://www.dianatea.in,high,Current Diana Tea spelling.
+gs-dooars-goodhope,Good Hope,add,current_company_spelling,https://www.dianatea.in,high,Current Diana Tea spelling.
+gs-dooars-rydak,Rydak,add,current_company_spelling,https://www.rydaksyndicate.com,high,Current Rydak spelling.
+gs-dooars-kartick,Kartick,add,current_company_spelling,https://www.rydaksyndicate.com,high,Current Rydak spelling.
+gs-dooars-baradighi,Baradighi,add,current_company_spelling,https://www.rydaksyndicate.com,high,Current Rydak spelling.
+gs-dooars-kalabari,Kalabari,add,current_company_spelling,https://www.rydaksyndicate.com,high,Current Rydak spelling.
+gs-dooars-haldibari,Huldibari,add,source_spelling,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,high,Tea Board directory spelling variant.

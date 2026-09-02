@@ -1,2 +1,9 @@
 garden_id,canonical_name,current_status,status_confidence,status_checked_date,district_current,subdivision_or_block,tea_board_registration,current_company_legal_name,current_owner_confidence,contact_confirmed_active,notes
 gs-dooars-dheklapara,Dheklapara,,,,Alipurduar,,,,,no,Added from the 2025 Lok Sabha answer because it is absent from the atlas and parsed directory.
+gs-dooars-rheabari,Rheabari,active_confirmed,high,2026-09-02,Jalpaiguri,Banarhat,,,high,yes,Existing GardenSuite client - excluded from cold outreach campaigns.
+gs-dooars-mogalkata,Mogulkata,active_confirmed,high,2026-09-02,Jalpaiguri,Nagrakata,,,high,yes,Existing GardenSuite client - excluded from cold outreach campaigns.
+gs-dooars-rahimpur,Rahimpur,active_confirmed,high,2026-09-02,Jalpaiguri,Dhupguri,,,high,yes,Existing GardenSuite client - excluded from cold outreach campaigns.
+gs-dooars-debpara,Debpara,active_confirmed,high,2026-09-02,Jalpaiguri,Banarhat,,,high,yes,Existing GardenSuite client - excluded from cold outreach campaigns.
+gs-dooars-kurti,Kurti,active_confirmed,high,2026-09-02,Jalpaiguri,Nagrakata,,,high,yes,Existing GardenSuite client - excluded from cold outreach campaigns.
+gs-dooars-looksun,Looksan,active_confirmed,high,2026-09-02,Jalpaiguri,Nagrakata,,,high,yes,Existing GardenSuite client - excluded from cold outreach campaigns.
+gs-dooars-subhasini,Subhasini,active_confirmed,high,2026-09-02,Alipurduar,Kalchini,,,high,yes,Existing GardenSuite client - excluded from cold outreach campaigns.

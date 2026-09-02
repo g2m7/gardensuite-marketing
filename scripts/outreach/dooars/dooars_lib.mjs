@@ -36,6 +36,12 @@ const DOOARS_SUBDIVISIONS = new Set([
   "ALIPURDUAR",
 ]);
 
+const LARGE_GROUP_PARENTS = new Set([
+  "camellia plc",
+  "government of india",
+  "williamson magor group",
+]);
+
 export const HEADERS = {
   gardens: [
     "garden_id",
@@ -55,6 +61,8 @@ export const HEADERS = {
     "last_material_event_date",
     "contact_confirmed_active",
     "research_state",
+    "prospect_eligibility",
+    "exclusion_reason",
     "source_ids",
     "notes",
   ],
@@ -214,13 +222,36 @@ export function normalizeGardenName(value) {
     .toLowerCase()
     .replace(/&/g, " and ")
     .replace(/teagarden/g, "tea garden")
+    .replace(/teaestate/g, "tea estate")
+    .replace(/(\w+)tea(estate|garden)?/g, "$1")
     .replace(/dooars/g, "duars")
-    .replace(/\btea\s*(estate|garden)\b/g, " ")
+    .replace(/\btea\s*(estate|garden|gardens)\b/g, " ")
     .replace(/\b(t\s*\.?\s*e|t\s*\.?\s*g)\b/g, " ")
+    .replace(/\b(tea|tae)\b/g, " ")
     .replace(/\b(garden|estate)\b/g, " ")
     .replace(/[^a-z0-9]+/g, " ")
     .trim()
     .replace(/\s+/g, " ");
+}
+
+export function cleanGardenCanonicalName(name) {
+  const text = String(name ?? "")
+    .replace(/\*+$/g, "")
+    .replace(/\b(T\s*\.?\s*E\s*\.?|T\s*\.?\s*G\s*\.?|TEA\s+(?:ESTATE|GARDEN|GARDENS))\b/gi, " ")
+    .replace(/\b(?:TEA\s+)?CO(?:\.|\b)\s*(?:\(P\)\s*LTD|\(PVT\)\s*LTD|PVT\s*LTD|LTD|LIMITED)?\b/gi, " ")
+    .replace(/\b(?:AGRO\s+INDUSTRIES|PLANTATION|PLANTATIONS)\b/gi, " ")
+    .replace(/\(\s*(?:P|PVT)\s*\)/gi, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+  return titleCase(text);
+}
+
+export function normalizeRegistration(value) {
+  return String(value ?? "")
+    .toUpperCase()
+    .replace(/^(P|RC|NC|B|C|M|E|A|J)[-/\s]*(?=\d)/i, "")
+    .replace(/[^A-Z0-9]/g, "")
+    .replace(/^0+/, "");
 }
 
 export function normalizeCompanyName(value) {
@@ -659,6 +690,8 @@ export async function buildRegistry({ sourceTexts }) {
       last_material_event_date: "",
       contact_confirmed_active: "no",
       research_state: "needs_current_evidence",
+      prospect_eligibility: "unclassified",
+      exclusion_reason: "",
       source_ids: atlasSource,
       notes: "Official atlas seed. Historical presence does not prove current operation.",
     };
@@ -716,7 +749,17 @@ export async function buildRegistry({ sourceTexts }) {
   for (const row of directoryRows.filter((item) => item.in_dooars_scope === "yes")) {
     const matched = matchGarden(row.name, gardens, aliases);
     if (matched && matched.score >= 0.82) continue;
-    const canonicalName = titleCase(row.name);
+    if (
+      row.registration &&
+      gardens.some(
+        (g) =>
+          g.tea_board_registration &&
+          normalizeRegistration(g.tea_board_registration) === normalizeRegistration(row.registration),
+      )
+    ) {
+      continue;
+    }
+    const canonicalName = cleanGardenCanonicalName(row.name);
     const garden = {
       garden_id: uniqueId("gs-dooars", canonicalName, gardenIds),
       canonical_name: canonicalName,
@@ -734,31 +777,35 @@ export async function buildRegistry({ sourceTexts }) {
       current_owner_confidence: "unknown",
       last_material_event_date: "",
       contact_confirmed_active: "no",
-      research_state: "needs_identity_review",
+      research_state: "needs_current_evidence",
+      prospect_eligibility: "unclassified",
+      exclusion_reason: "",
       source_ids: directorySource,
-      notes:
-        "Tea Board directory seed absent from or not safely matched to the atlas. Review identity before merging.",
+      notes: "Tea Board directory Dooars seed.",
     };
     gardens.push(garden);
     addAlias(garden.garden_id, canonicalName, "source", directorySource, "high", "yes");
+    addAlias(garden.garden_id, titleCase(row.name), "source", directorySource, "high", "yes");
     for (const alias of generateSafeAliases(canonicalName)) {
       addAlias(garden.garden_id, alias, "generated_search", "generated", "medium", "no");
     }
-    review.push({
-      review_id: `identity-${garden.garden_id}`,
-      review_type: "identity_resolution",
-      garden_id: garden.garden_id,
-      candidate_id: `directory-${row.serial}`,
-      source_id: directorySource,
-      source_name: row.name,
-      candidate_name: matched?.garden.canonical_name ?? "",
-      match_score: matched?.score ?? 0,
-      reason: "Directory record was retained for coverage but still needs duplicate and identity review.",
-      source_url:
-        "https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf",
-      created_date: today(),
-      status: "open",
-    });
+    if (matched && matched.score >= 0.5) {
+      review.push({
+        review_id: `identity-${garden.garden_id}`,
+        review_type: "identity_resolution",
+        garden_id: garden.garden_id,
+        candidate_id: `directory-${row.serial}`,
+        source_id: directorySource,
+        source_name: row.name,
+        candidate_name: matched?.garden.canonical_name ?? "",
+        match_score: matched?.score ?? 0,
+        reason: "Directory record was retained for coverage but still needs duplicate and identity review.",
+        source_url:
+          "https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf",
+        created_date: today(),
+        status: "open",
+      });
+    }
   }
 
   const companies = [];
@@ -793,6 +840,50 @@ export async function buildRegistry({ sourceTexts }) {
     companiesByKey.set(key, company);
     return company;
   };
+
+  const manualCompanies = await readCsvIfPresent(resolve(manualDir, "company_overrides.csv"));
+  for (const item of manualCompanies) {
+    const key = normalizeCompanyName(item.legal_name);
+    let company = companiesByKey.get(key);
+    if (!company) {
+      if (item.company_id) companyIds.add(item.company_id);
+      company = {
+        company_id: item.company_id || companyIdFor(item.legal_name, companyIds),
+        legal_name: titleCase(item.legal_name),
+        normalized_name: key,
+        cin: item.cin || "",
+        company_status: item.company_status || "unverified",
+        website: item.website || "",
+        domain: item.domain || "",
+        registered_office: item.registered_office || "",
+        parent_group: item.parent_group || "",
+        public_company: item.public_company || "unknown",
+        source_ids: item.source_url || "manual",
+        verified_date: item.verified_date || "",
+        notes: item.notes || "Reviewed manual company override.",
+      };
+      companies.push(company);
+      companiesByKey.set(key, company);
+    } else {
+      for (const field of [
+        "company_id",
+        "legal_name",
+        "cin",
+        "company_status",
+        "website",
+        "domain",
+        "registered_office",
+        "parent_group",
+        "public_company",
+        "verified_date",
+        "notes",
+      ]) {
+        if (item[field]) company[field] = item[field];
+      }
+      addUniqueSource(company, item.source_url || "manual");
+    }
+  }
+
   const addLink = (garden, company, relationship, sourceId, verifiedDate, confidence, notes) => {
     if (!garden || !company) return;
     const key = `${garden.garden_id}|${company.company_id}|${relationship}|${sourceId}`;
@@ -920,7 +1011,7 @@ export async function buildRegistry({ sourceTexts }) {
     } else if (
       row.registration &&
       garden.tea_board_registration &&
-      normalizeGardenName(row.registration) !== normalizeGardenName(garden.tea_board_registration)
+      normalizeRegistration(row.registration) !== normalizeRegistration(garden.tea_board_registration)
     ) {
       review.push({
         review_id: `registration-${garden.garden_id}`,
@@ -938,32 +1029,6 @@ export async function buildRegistry({ sourceTexts }) {
       });
     }
     if (!garden.district_current) garden.district_current = titleCase(row.district);
-  }
-
-  const manualCompanies = await readCsvIfPresent(resolve(manualDir, "company_overrides.csv"));
-  for (const item of manualCompanies) {
-    const key = normalizeCompanyName(item.legal_name);
-    let company = companiesByKey.get(key);
-    if (!company) {
-      company = ensureCompany(item.legal_name, item.source_url || "manual", item.verified_date);
-    }
-    if (!company) continue;
-    for (const field of [
-      "company_id",
-      "legal_name",
-      "cin",
-      "company_status",
-      "website",
-      "domain",
-      "registered_office",
-      "parent_group",
-      "public_company",
-      "verified_date",
-      "notes",
-    ]) {
-      if (item[field]) company[field] = item[field];
-    }
-    addUniqueSource(company, item.source_url || "manual");
   }
 
   const manualEvidence = await readCsvIfPresent(resolve(manualDir, "evidence.csv"));
@@ -1016,6 +1081,8 @@ export async function buildRegistry({ sourceTexts }) {
         last_material_event_date: "",
         contact_confirmed_active: "no",
         research_state: "needs_current_evidence",
+        prospect_eligibility: "unclassified",
+        exclusion_reason: "",
         source_ids: "manual",
         notes: "Reviewed manual seed.",
       };
@@ -1067,6 +1134,28 @@ export async function buildRegistry({ sourceTexts }) {
     if (!garden.current_company_id && currentLinks[0]) {
       garden.current_company_id = currentLinks[0].company_id;
       garden.current_owner_confidence = currentLinks[0].confidence;
+    }
+    const currentCompany = companies.find(
+      (company) => company.company_id === garden.current_company_id,
+    );
+    const parentGroup = normalizeCompanyName(currentCompany?.parent_group ?? "");
+    const largeGroup = Boolean(
+      currentCompany &&
+        (currentCompany.public_company === "yes" || LARGE_GROUP_PARENTS.has(parentGroup)),
+    );
+    const existingClient = /Existing GardenSuite client/i.test(garden.notes ?? "");
+    if (existingClient) {
+      garden.prospect_eligibility = "excluded_current_client";
+      garden.exclusion_reason = "Current GardenSuite client";
+    } else if (largeGroup) {
+      garden.prospect_eligibility = "excluded_large_group";
+      garden.exclusion_reason = "Public company or large multi-estate group";
+    } else if (ACTIVE_STATUSES.has(garden.current_status)) {
+      garden.prospect_eligibility = "target_candidate";
+      garden.exclusion_reason = "";
+    } else {
+      garden.prospect_eligibility = "not_active";
+      garden.exclusion_reason = "Not currently in an active status";
     }
     garden.research_state = ACTIVE_STATUSES.has(garden.current_status)
       ? garden.current_company_id
@@ -1126,7 +1215,11 @@ export async function buildRegistry({ sourceTexts }) {
     });
   }
 
-  const activeEstates = gardens.filter((garden) => ACTIVE_STATUSES.has(garden.current_status));
+  const activeEstates = gardens.filter(
+    (garden) =>
+      ACTIVE_STATUSES.has(garden.current_status) &&
+      garden.prospect_eligibility === "target_candidate",
+  );
   const searchQueries = [];
   for (const garden of gardens) {
     const sourceAliases = aliases
@@ -1226,8 +1319,11 @@ export async function writeRegistry(registry) {
 
 export function buildReport(registry) {
   const statuses = {};
+  const prospectEligibility = {};
   for (const garden of registry.gardens) {
     statuses[garden.current_status] = (statuses[garden.current_status] ?? 0) + 1;
+    prospectEligibility[garden.prospect_eligibility] =
+      (prospectEligibility[garden.prospect_eligibility] ?? 0) + 1;
   }
   return {
     generated_at: new Date().toISOString(),
@@ -1242,6 +1338,7 @@ export function buildReport(registry) {
     active_export_rows: registry.activeEstates.length,
     review_queue_rows: registry.review.length,
     statuses,
+    prospect_eligibility: prospectEligibility,
     warning:
       "Historical sources do not prove current operation or ownership. Contact remains the final confirmation.",
   };

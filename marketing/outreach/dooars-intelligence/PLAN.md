@@ -50,6 +50,7 @@ The system is designed to produce a useful research pool, not a false promise of
 
 - Resolve the legal company and parent group.
 - Record CIN, company status, registered office, website and domain where publicly verified.
+- Mark public companies and large multi-estate groups as research-only, not target accounts.
 - Target owner, director, managing director, general manager, estate manager and garden manager roles.
 - Keep only public business contacts with source URL and verification date.
 - Treat Snov `Valid`, suppression clearance and owner approval as separate downstream gates.
@@ -76,17 +77,19 @@ The system is designed to produce a useful research pool, not a false promise of
 - Collect public government pages slowly and retain retrieval dates and hashes.
 - Do not promote an email to send-ready without external verification and suppression checks.
 - Do not infer that a closed garden, historical owner or old phone number is current.
+- Do not treat a current active garden as an outreach target when it is an existing client or belongs to an excluded large group.
 
 ## Version 1 snapshot
 
 Built on 2 September 2026:
 
-- 168 garden identity records from the union of official and reviewed sources
-- 893 aliases and spelling variants
-- 135 company records and 211 dated garden-company links
-- 26 estates in the active research export: 19 confirmed active and 7 likely active
+- 163 garden identity records from the union of official and reviewed sources
+- 880 aliases and spelling variants
+- 139 company records and 223 dated garden-company links
+- 11 outreach-eligible active estates after client and large-group exclusions
+- 38 confirmed-active and 8 likely-active records before eligibility filtering
 - 6 estates held out as temporarily closed pending a newer check
-- 152 historical contact hints preserved for reverification
-- 201 open review items, mainly identity matching and missing current evidence
+- 151 historical contact hints preserved for reverification
+- 147 open review items, mainly identity matching and missing current evidence
 
-These are working research counts, not a claim that Dooars has exactly 168 distinct active estates. Duplicate resolution and current-status research remain deliberate parts of the process.
+These are working research counts, not a claim that Dooars has exactly 163 distinct active estates. Duplicate resolution and current-status research remain deliberate parts of the process.

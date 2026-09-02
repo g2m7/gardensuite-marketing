@@ -1,23 +1,29 @@
 {
-  "generated_at": "2026-09-01T21:00:42.701Z",
+  "generated_at": "2026-09-02T12:13:01.037Z",
   "atlas_names": 128,
   "atlas_profiles": 47,
   "directory_rows": 164,
   "registered_planter_rows": 218,
-  "canonical_gardens": 168,
-  "aliases": 893,
-  "companies": 135,
-  "company_links": 211,
-  "evidence_rows": 46,
-  "contacts": 5,
-  "historical_contact_hints": 152,
-  "active_export_rows": 26,
-  "review_queue_rows": 201,
+  "canonical_gardens": 163,
+  "aliases": 880,
+  "companies": 139,
+  "company_links": 223,
+  "evidence_rows": 74,
+  "contacts": 10,
+  "historical_contact_hints": 151,
+  "active_export_rows": 11,
+  "review_queue_rows": 147,
   "statuses": {
-    "active_confirmed": 19,
-    "unknown": 136,
-    "likely_active": 7,
+    "active_confirmed": 38,
+    "unknown": 111,
+    "likely_active": 8,
     "temporarily_closed": 6
+  },
+  "prospect_eligibility": {
+    "excluded_large_group": 28,
+    "not_active": 117,
+    "target_candidate": 11,
+    "excluded_current_client": 7
   },
   "warning": "Historical sources do not prove current operation or ownership. Contact remains the final confirmation."
 }

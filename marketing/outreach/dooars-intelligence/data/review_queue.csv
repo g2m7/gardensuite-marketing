@@ -1,202 +1,148 @@
 review_id,review_type,garden_id,candidate_id,source_id,source_name,candidate_name,match_score,reason,source_url,created_date,status
-identity-gs-dooars-chhaophali,identity_resolution,gs-dooars-chhaophali,directory-7,tea-board-wb-directory-2013,CHHAOPHALI TEA ESTATE,Chalouni,0.4,Directory record was retained for coverage but still needs duplicate and identity review.,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,2026-09-01,open
-identity-gs-dooars-chulsa,identity_resolution,gs-dooars-chulsa,directory-8,tea-board-wb-directory-2013,CHULSA TEA ESTATE,Chinchula,0.4694,Directory record was retained for coverage but still needs duplicate and identity review.,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,2026-09-01,open
-identity-gs-dooars-dagapur,identity_resolution,gs-dooars-dagapur,directory-9,tea-board-wb-directory-2013,DAGAPUR,Anandapur,0.5825,Directory record was retained for coverage but still needs duplicate and identity review.,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,2026-09-01,open
-identity-gs-dooars-nagaisuree,identity_resolution,gs-dooars-nagaisuree,directory-24,tea-board-wb-directory-2013,NAGAISUREE,Dagapur,0.455,Directory record was retained for coverage but still needs duplicate and identity review.,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,2026-09-01,open
-identity-gs-dooars-ranicherra,identity_resolution,gs-dooars-ranicherra,directory-31,tea-board-wb-directory-2013,RANICHERRA TEA ESTATE,Chuniajhora,0.35,Directory record was retained for coverage but still needs duplicate and identity review.,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,2026-09-01,open
-identity-gs-dooars-rungamuttee,identity_resolution,gs-dooars-rungamuttee,directory-32,tea-board-wb-directory-2013,RUNGAMUTTEE TEA ESTATE,Zurantee,0.3559,Directory record was retained for coverage but still needs duplicate and identity review.,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,2026-09-01,open
-identity-gs-dooars-washabarietea,identity_resolution,gs-dooars-washabarietea,directory-36,tea-board-wb-directory-2013,WASHABARIETEA ESTATE,Washabarie,0.8088,Directory record was retained for coverage but still needs duplicate and identity review.,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,2026-09-01,open
-identity-gs-dooars-zurrantee-tea,identity_resolution,gs-dooars-zurrantee-tea,directory-37,tea-board-wb-directory-2013,ZURRANTEE TEA,Zurantee,0.7517,Directory record was retained for coverage but still needs duplicate and identity review.,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,2026-09-01,open
-identity-gs-dooars-joypur,identity_resolution,gs-dooars-joypur,directory-41,tea-board-wb-directory-2013,JOYPUR,Raipur,0.455,Directory record was retained for coverage but still needs duplicate and identity review.,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,2026-09-01,open
-identity-gs-dooars-konpakri-agro-industries-p,identity_resolution,gs-dooars-konpakri-agro-industries-p,directory-43,tea-board-wb-directory-2013,KONPAKRI AGRO INDUSTRIES (P),Bagrakote,0.2257,Directory record was retained for coverage but still needs duplicate and identity review.,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,2026-09-01,open
-identity-gs-dooars-nandan,identity_resolution,gs-dooars-nandan,directory-44,tea-board-wb-directory-2013,NANDAN TEA ESTATE,Anandapur,0.6328,Directory record was retained for coverage but still needs duplicate and identity review.,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,2026-09-01,open
-identity-gs-dooars-nepati-valley,identity_resolution,gs-dooars-nepati-valley,directory-45,tea-board-wb-directory-2013,NEPATI VALLEY TEA ESTATE,Karala Valley,0.5315,Directory record was retained for coverage but still needs duplicate and identity review.,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,2026-09-01,open
-identity-gs-dooars-parbati-and-gouranga,identity_resolution,gs-dooars-parbati-and-gouranga,directory-46,tea-board-wb-directory-2013,PARBATI T.E AND GOURANGA,Bamandanga Tondoo,0.3917,Directory record was retained for coverage but still needs duplicate and identity review.,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,2026-09-01,open
-identity-gs-dooars-chamurchi,identity_resolution,gs-dooars-chamurchi,directory-54,tea-board-wb-directory-2013,CHAMURCHI TEA ESTATE,Chalouni,0.373,Directory record was retained for coverage but still needs duplicate and identity review.,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,2026-09-01,open
-identity-gs-dooars-chengmari,identity_resolution,gs-dooars-chengmari,directory-55,tea-board-wb-directory-2013,CHENGMARI,Rheabari,0.4856,Directory record was retained for coverage but still needs duplicate and identity review.,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,2026-09-01,open
-identity-gs-dooars-diana,identity_resolution,gs-dooars-diana,directory-59,tea-board-wb-directory-2013,DIANA TEA ESTATE,Dima,0.4586,Directory record was retained for coverage but still needs duplicate and identity review.,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,2026-09-01,open
-identity-gs-dooars-ghatia,identity_resolution,gs-dooars-ghatia,directory-60,tea-board-wb-directory-2013,GHATIA TEA ESTATE,Singhania,0.5132,Directory record was retained for coverage but still needs duplicate and identity review.,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,2026-09-01,open
-identity-gs-dooars-hilla,identity_resolution,gs-dooars-hilla,directory-61,tea-board-wb-directory-2013,HILLA,Chinchula,0.4081,Directory record was retained for coverage but still needs duplicate and identity review.,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,2026-09-01,open
-identity-gs-dooars-katalguri,identity_resolution,gs-dooars-katalguri,directory-66,tea-board-wb-directory-2013,KATALGURI TEA ESTATE,Kathaldhura,0.55,Directory record was retained for coverage but still needs duplicate and identity review.,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,2026-09-01,open
-identity-gs-dooars-nya-sylee,identity_resolution,gs-dooars-nya-sylee,directory-76,tea-board-wb-directory-2013,NYA SYLEE,Sylee,0.6187,Directory record was retained for coverage but still needs duplicate and identity review.,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,2026-09-01,open
-identity-gs-dooars-red-bank,identity_resolution,gs-dooars-red-bank,directory-77,tea-board-wb-directory-2013,RED BANK,New Lands,0.2838,Directory record was retained for coverage but still needs duplicate and identity review.,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,2026-09-01,open
-identity-gs-dooars-surendra-nagar,identity_resolution,gs-dooars-surendra-nagar,directory-79,tea-board-wb-directory-2013,SURENDRA NAGAR,Gandrapara,0.4543,Directory record was retained for coverage but still needs duplicate and identity review.,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,2026-09-01,open
-identity-gs-dooars-atiabari,identity_resolution,gs-dooars-atiabari,directory-162,tea-board-wb-directory-2013,ATIABARI TEA ESTATE,Batabari,0.7587,Directory record was retained for coverage but still needs duplicate and identity review.,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,2026-09-01,open
-identity-gs-dooars-kalchini,identity_resolution,gs-dooars-kalchini,directory-171,tea-board-wb-directory-2013,KALCHINI T E,Kalabari,0.4036,Directory record was retained for coverage but still needs duplicate and identity review.,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,2026-09-01,open
-identity-gs-dooars-merico,identity_resolution,gs-dooars-merico,directory-174,tea-board-wb-directory-2013,MERICO TEA ESTATE,Lessriver,0.3218,Directory record was retained for coverage but still needs duplicate and identity review.,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,2026-09-01,open
-identity-gs-dooars-rajahbhat,identity_resolution,gs-dooars-rajahbhat,directory-175,tea-board-wb-directory-2013,RAJAHBHAT TEA ESTATE,Raja,0.4899,Directory record was retained for coverage but still needs duplicate and identity review.,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,2026-09-01,open
-identity-gs-dooars-buds,identity_resolution,gs-dooars-buds,directory-216,tea-board-wb-directory-2013,BUDS TEA ESTATE,Malnuddy,0.2275,Directory record was retained for coverage but still needs duplicate and identity review.,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,2026-09-01,open
-identity-gs-dooars-sonar-bangla-tea-co-p-ltd,identity_resolution,gs-dooars-sonar-bangla-tea-co-p-ltd,directory-219,tea-board-wb-directory-2013,SONAR BANGLA TEA CO (P) LTD,Bamandanga Tondoo,0.285,Directory record was retained for coverage but still needs duplicate and identity review.,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,2026-09-01,open
-identity-gs-dooars-trisakti,identity_resolution,gs-dooars-trisakti,directory-220,tea-board-wb-directory-2013,TRISAKTI TEA ESTATE,Tasati,0.4938,Directory record was retained for coverage but still needs duplicate and identity review.,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,2026-09-01,open
-identity-gs-dooars-bundapani,identity_resolution,gs-dooars-bundapani,directory-256,tea-board-wb-directory-2013,BUNDAPANI TEA GARDEN,Gandrapara,0.5,Directory record was retained for coverage but still needs duplicate and identity review.,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,2026-09-01,open
-identity-gs-dooars-dahuk-valley,identity_resolution,gs-dooars-dahuk-valley,directory-257,tea-board-wb-directory-2013,DAHUK VALLEY TEA ESTATE,Karala Valley,0.541,Directory record was retained for coverage but still needs duplicate and identity review.,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,2026-09-01,open
-identity-gs-dooars-garganda-tae,identity_resolution,gs-dooars-garganda-tae,directory-261,tea-board-wb-directory-2013,GARGANDA TAE ESTATE,Garganda,0.7033,Directory record was retained for coverage but still needs duplicate and identity review.,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,2026-09-01,open
-identity-gs-dooars-makrapara,identity_resolution,gs-dooars-makrapara,directory-264,tea-board-wb-directory-2013,MAKRAPARA TEA ESTATE,Gandrapara,0.625,Directory record was retained for coverage but still needs duplicate and identity review.,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,2026-09-01,open
-identity-gs-dooars-mohua,identity_resolution,gs-dooars-mohua,directory-265,tea-board-wb-directory-2013,MOHUA,Mathura,0.4043,Directory record was retained for coverage but still needs duplicate and identity review.,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,2026-09-01,open
-identity-gs-dooars-ramjhora,identity_resolution,gs-dooars-ramjhora,directory-267,tea-board-wb-directory-2013,RAMJHORA TEA ESTATE,Nimtijhora,0.57,Directory record was retained for coverage but still needs duplicate and identity review.,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,2026-09-01,open
-identity-gs-dooars-dalmore,identity_resolution,gs-dooars-dalmore,directory-273,tea-board-wb-directory-2013,DALMORE TEA ESTATE,Dalgaon,0.3857,Directory record was retained for coverage but still needs duplicate and identity review.,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,2026-09-01,open
-identity-gs-dooars-dalsingpara,identity_resolution,gs-dooars-dalsingpara,directory-274,tea-board-wb-directory-2013,DALSINGPARA,Tulsipara,0.6,Directory record was retained for coverage but still needs duplicate and identity review.,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,2026-09-01,open
-identity-gs-dooars-kadambini,identity_resolution,gs-dooars-kadambini,directory-275,tea-board-wb-directory-2013,KADAMBINI TEA ESTATE,Kalchini T E,0.4856,Directory record was retained for coverage but still needs duplicate and identity review.,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,2026-09-01,open
-identity-gs-dooars-raimatang,identity_resolution,gs-dooars-raimatang,directory-286,tea-board-wb-directory-2013,RAIMATANG TEA ESTATE,Rahimabad,0.4743,Directory record was retained for coverage but still needs duplicate and identity review.,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,2026-09-01,open
-directory-221-baruapara,scope_and_match,gs-dooars-chuapara,directory-221,tea-board-wb-directory-2013,BARUAPARA TEA ESTATE,Chuapara,0.6881,Directory record needs geographic scope review.,,2026-09-01,open
-directory-222-bhandapur,scope_and_match,gs-dooars-anandapur,directory-222,tea-board-wb-directory-2013,BHANDAPUR TEA ESTATE,Anandapur,0.7878,Directory record needs geographic scope review.,,2026-09-01,open
-directory-224-bhardeshwar-tea-plantation,scope_and_match,gs-dooars-sonar-bangla-tea-co-p-ltd,directory-224,tea-board-wb-directory-2013,BHARDESHWAR TEA PLANTATION,Sonar Bangla Tea Co (P) LTD,0.3032,Directory record needs geographic scope review.,,2026-09-01,open
-directory-225-bhasani,scope_and_match,gs-dooars-subhasini,directory-225,tea-board-wb-directory-2013,BHASANI TEA ESTATE,Subhasini,0.6238,Directory record needs geographic scope review.,,2026-09-01,open
-directory-226-gadra,scope_and_match,gs-dooars-gandrapara,directory-226,tea-board-wb-directory-2013,GADRA TEA ESTATE,Gandrapara,0.5,Directory record needs geographic scope review.,,2026-09-01,open
-directory-227-harinagar,scope_and_match,gs-dooars-binaguri,directory-227,tea-board-wb-directory-2013,HARINAGAR TEA ESTATE,Binaguri,0.5016,Directory record needs geographic scope review.,,2026-09-01,open
-directory-228-hiralal,scope_and_match,gs-dooars-hilla,directory-228,tea-board-wb-directory-2013,HIRALAL TEA GARDEN,Hilla,0.5143,Directory record needs geographic scope review.,,2026-09-01,open
-directory-229-jagat-bandhu,scope_and_match,gs-dooars-garganda,directory-229,tea-board-wb-directory-2013,JAGAT BANDHU TEA ESTATE,Garganda,0.3583,Directory record needs geographic scope review.,,2026-09-01,open
-directory-230-janaki-gosai,scope_and_match,gs-dooars-sankos,directory-230,tea-board-wb-directory-2013,JANAKI GOSAI TEA ESTATE,Sankos,0.3683,Directory record needs geographic scope review.,,2026-09-01,open
-directory-231-runggoti,scope_and_match,gs-dooars-rungamuttee,directory-231,tea-board-wb-directory-2013,RUNGGOTI TEA GARDEN,Rungamuttee Tea Estate,0.4088,Directory record needs geographic scope review.,,2026-09-01,open
-directory-232-shaaktimann,scope_and_match,gs-dooars-ghatia,directory-232,tea-board-wb-directory-2013,SHAAKTIMANN TEA ESTATE,Ghatia Tea Estate,0.37,Directory record needs geographic scope review.,,2026-09-01,open
-directory-234-shyamal-bag,scope_and_match,gs-dooars-uttarsalbari,directory-234,tea-board-wb-directory-2013,SHYAMAL BAG TEA ESTATE,Uttarsalbari,0.293,Directory record needs geographic scope review.,,2026-09-01,open
-registration-gs-dooars-mohua,registration_conflict,gs-dooars-mohua,1052,tea-board-registered-planters-2019,NC-2666,3090,1,Tea Board sources show different registration values.,,2026-09-01,open
-registration-gs-dooars-torsa,registration_conflict,gs-dooars-torsa,1056,tea-board-registered-planters-2019,2614,65,1,Tea Board sources show different registration values.,,2026-09-01,open
-registration-gs-dooars-nya-sylee,registration_conflict,gs-dooars-nya-sylee,1210,tea-board-registered-planters-2019,C-60,RC-31,1,Tea Board sources show different registration values.,,2026-09-01,open
-registration-gs-dooars-toonbarie,registration_conflict,gs-dooars-toonbarie,1231,tea-board-registered-planters-2019,28,2120,1,Tea Board sources show different registration values.,,2026-09-01,open
-registration-gs-dooars-sarugaon,registration_conflict,gs-dooars-sarugaon,1234,tea-board-registered-planters-2019,2328,2318,1,Tea Board sources show different registration values.,,2026-09-01,open
-registration-gs-dooars-nepuchapur,registration_conflict,gs-dooars-nepuchapur,1253,tea-board-registered-planters-2019,5,05,1,Tea Board sources show different registration values.,,2026-09-01,open
-registration-gs-dooars-jaldacca-altadanga,registration_conflict,gs-dooars-jaldacca-altadanga,1261,tea-board-registered-planters-2019,562,15,1,Tea Board sources show different registration values.,,2026-09-01,open
-registration-gs-dooars-damdim,registration_conflict,gs-dooars-damdim,1277,tea-board-registered-planters-2019,A-2,A2,1,Tea Board sources show different registration values.,,2026-09-01,open
-registration-gs-dooars-bagrakote,registration_conflict,gs-dooars-bagrakote,1283,tea-board-registered-planters-2019,2355,B-2625,1,Tea Board sources show different registration values.,,2026-09-01,open
-registration-gs-dooars-amarpur,registration_conflict,gs-dooars-amarpur,1287,tea-board-registered-planters-2019,2811(UNIT-I & II),2810/2811,1,Tea Board sources show different registration values.,,2026-09-01,open
-registration-gs-dooars-ambari,registration_conflict,gs-dooars-ambari,1288,tea-board-registered-planters-2019,381,P-1,1,Tea Board sources show different registration values.,,2026-09-01,open
-registration-gs-dooars-anandapur,registration_conflict,gs-dooars-anandapur,1289,tea-board-registered-planters-2019,P-52,52,1,Tea Board sources show different registration values.,,2026-09-01,open
-registration-gs-dooars-karballa,registration_conflict,gs-dooars-karballa,1307,tea-board-registered-planters-2019,2768,M(19)2768,1,Tea Board sources show different registration values.,,2026-09-01,open
-registration-gs-dooars-jogesh-chandra,registration_conflict,gs-dooars-jogesh-chandra,1328,tea-board-registered-planters-2019,139/JL/X,148,1,Tea Board sources show different registration values.,,2026-09-01,open
-activity-gs-dooars-amarpur,activity_evidence,gs-dooars-amarpur,,,Amarpur,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-ambari,activity_evidence,gs-dooars-ambari,,,Ambari,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-anandapur,activity_evidence,gs-dooars-anandapur,,,Anandapur,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-bagrakote,activity_evidence,gs-dooars-bagrakote,,,Bagrakote,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-baintgoorie,activity_evidence,gs-dooars-baintgoorie,,,Baintgoorie,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-baradighi,activity_evidence,gs-dooars-baradighi,,,Baradighi,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-batabari,activity_evidence,gs-dooars-batabari,,,Batabari,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-beech,activity_evidence,gs-dooars-beech,,,Beech,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-bhandiguri,activity_evidence,gs-dooars-bhandiguri,,,Bhandiguri,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-bharnobari,activity_evidence,gs-dooars-bharnobari,,,Bharnobari,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-bhatkowa,activity_evidence,gs-dooars-bhatkowa,,,Bhatkowa,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-bhatpara,activity_evidence,gs-dooars-bhatpara,,,Bhatpara,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-bhogotpore,activity_evidence,gs-dooars-bhogotpore,,,Bhogotpore,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-binaguri,activity_evidence,gs-dooars-binaguri,,,Binaguri,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-birpara,activity_evidence,gs-dooars-birpara,,,Birpara,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-carron,activity_evidence,gs-dooars-carron,,,Carron,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-chinchula,activity_evidence,gs-dooars-chinchula,,,Chinchula,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-chuapara,activity_evidence,gs-dooars-chuapara,,,Chuapara,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-chuniajhora,activity_evidence,gs-dooars-chuniajhora,,,Chuniajhora,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-dalgaon,activity_evidence,gs-dooars-dalgaon,,,Dalgaon,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-damdim,activity_evidence,gs-dooars-damdim,,,Damdim,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-debipur,activity_evidence,gs-dooars-debipur,,,Debipur,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-debpara,activity_evidence,gs-dooars-debpara,,,Debpara,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-demdima,activity_evidence,gs-dooars-demdima,,,Demdima,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-dharanipur,activity_evidence,gs-dooars-dharanipur,,,Dharanipur,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-dhowlajhora,activity_evidence,gs-dooars-dhowlajhora,,,Dhowlajhora,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-dima,activity_evidence,gs-dooars-dima,,,Dima,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-dumchipara,activity_evidence,gs-dooars-dumchipara,,,Dumchipara,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-ellenbarie,activity_evidence,gs-dooars-ellenbarie,,,Ellenbarie,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-engo,activity_evidence,gs-dooars-engo,,,Engo,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-ethelbarie,activity_evidence,gs-dooars-ethelbarie,,,Ethelbarie,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-gairkhata,activity_evidence,gs-dooars-gairkhata,,,Gairkhata,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-garganda,activity_evidence,gs-dooars-garganda,,,Garganda,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-goodhope,activity_evidence,gs-dooars-goodhope,,,Goodhope,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-gopalpur,activity_evidence,gs-dooars-gopalpur,,,Gopalpur,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-gopimohan,activity_evidence,gs-dooars-gopimohan,,,Gopimohan,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-gurjangjhora,activity_evidence,gs-dooars-gurjangjhora,,,Gurjangjhora,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-haldibari,activity_evidence,gs-dooars-haldibari,,,Haldibari,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-hantapara,activity_evidence,gs-dooars-hantapara,,,Hantapara,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-jadabpur,activity_evidence,gs-dooars-jadabpur,,,Jadabpur,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-jainti,activity_evidence,gs-dooars-jainti,,,Jainti,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-jaldacca-altadanga,activity_evidence,gs-dooars-jaldacca-altadanga,,,Jaldacca Altadanga,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-jalpara,activity_evidence,gs-dooars-jalpara,,,Jalpara,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-jogesh-chandra,activity_evidence,gs-dooars-jogesh-chandra,,,Jogesh Chandra,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-joybirpara,activity_evidence,gs-dooars-joybirpara,,,Joybirpara,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-kailashpur,activity_evidence,gs-dooars-kailashpur,,,Kailashpur,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-kalabari,activity_evidence,gs-dooars-kalabari,,,Kalabari,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-karala-valley,activity_evidence,gs-dooars-karala-valley,,,Karala Valley,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-kartick,activity_evidence,gs-dooars-kartick,,,Kartick,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-kathaldhura,activity_evidence,gs-dooars-kathaldhura,,,Kathaldhura,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-killcott,activity_evidence,gs-dooars-killcott,,,Killcott,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-kohinoor,activity_evidence,gs-dooars-kohinoor,,,Kohinoor,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-kurti,activity_evidence,gs-dooars-kurti,,,Kurti,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-lakhikanta,activity_evidence,gs-dooars-lakhikanta,,,Lakhikanta,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-looksun,activity_evidence,gs-dooars-looksun,,,Looksun,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-madhu,activity_evidence,gs-dooars-madhu,,,Madhu,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-majherdabri,activity_evidence,gs-dooars-majherdabri,,,Majherdabri,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-malnuddy,activity_evidence,gs-dooars-malnuddy,,,Malnuddy,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-matelli,activity_evidence,gs-dooars-matelli,,,Matelli,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-mechapara,activity_evidence,gs-dooars-mechapara,,,Mechapara,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-mogalkata,activity_evidence,gs-dooars-mogalkata,,,Mogalkata,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-moraghat,activity_evidence,gs-dooars-moraghat,,,Moraghat,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-mujnai,activity_evidence,gs-dooars-mujnai,,,Mujnai,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-nagrakata,activity_evidence,gs-dooars-nagrakata,,,Nagrakata,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-nangdala,activity_evidence,gs-dooars-nangdala,,,Nangdala,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-nedam,activity_evidence,gs-dooars-nedam,,,Nedam,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-nepuchapur,activity_evidence,gs-dooars-nepuchapur,,,Nepuchapur,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-new-lands,activity_evidence,gs-dooars-new-lands,,,New Lands,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-newglenceco,activity_evidence,gs-dooars-newglenceco,,,Newglenceco,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-nimtijhora,activity_evidence,gs-dooars-nimtijhora,,,Nimtijhora,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-nowera-nuddy,activity_evidence,gs-dooars-nowera-nuddy,,,Nowera Nuddy,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-oodlabari,activity_evidence,gs-dooars-oodlabari,,,Oodlabari,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-palashbari,activity_evidence,gs-dooars-palashbari,,,Palashbari,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-patkapara,activity_evidence,gs-dooars-patkapara,,,Patkapara,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-phaskowa,activity_evidence,gs-dooars-phaskowa,,,Phaskowa,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-putharjhora,activity_evidence,gs-dooars-putharjhora,,,Putharjhora,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-radharani,activity_evidence,gs-dooars-radharani,,,Radharani,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-raghuutkarsh,activity_evidence,gs-dooars-raghuutkarsh,,,Raghuutkarsh,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-rahimabad,activity_evidence,gs-dooars-rahimabad,,,Rahimabad,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-rahimpur,activity_evidence,gs-dooars-rahimpur,,,Rahimpur,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-raja,activity_evidence,gs-dooars-raja,,,Raja,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-rheabari,activity_evidence,gs-dooars-rheabari,,,Rheabari,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-rydak,activity_evidence,gs-dooars-rydak,,,Rydak,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-saraswatipur,activity_evidence,gs-dooars-saraswatipur,,,Saraswatipur,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-sarugaon,activity_evidence,gs-dooars-sarugaon,,,Sarugaon,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-satali,activity_evidence,gs-dooars-satali,,,Satali,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-shikarpur,activity_evidence,gs-dooars-shikarpur,,,Shikarpur,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-singhania,activity_evidence,gs-dooars-singhania,,,Singhania,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-soongachi,activity_evidence,gs-dooars-soongachi,,,Soongachi,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-srinathpur,activity_evidence,gs-dooars-srinathpur,,,Srinathpur,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-subhasini,activity_evidence,gs-dooars-subhasini,,,Subhasini,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-sylee,activity_evidence,gs-dooars-sylee,,,Sylee,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-tasati,activity_evidence,gs-dooars-tasati,,,Tasati,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-telepara,activity_evidence,gs-dooars-telepara,,,Telepara,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-toonbarie,activity_evidence,gs-dooars-toonbarie,,,Toonbarie,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-torsa,activity_evidence,gs-dooars-torsa,,,Torsa,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-totapara,activity_evidence,gs-dooars-totapara,,,Totapara,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-tulsipara,activity_evidence,gs-dooars-tulsipara,,,Tulsipara,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-turturi,activity_evidence,gs-dooars-turturi,,,Turturi,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-uttarsalbari,activity_evidence,gs-dooars-uttarsalbari,,,Uttarsalbari,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-washabarie,activity_evidence,gs-dooars-washabarie,,,Washabarie,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-yongtong,activity_evidence,gs-dooars-yongtong,,,Yongtong,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-zurantee,activity_evidence,gs-dooars-zurantee,,,Zurantee,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-chhaophali,activity_evidence,gs-dooars-chhaophali,,,Chhaophali Tea Estate,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-dagapur,activity_evidence,gs-dooars-dagapur,,,Dagapur,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-nagaisuree,activity_evidence,gs-dooars-nagaisuree,,,Nagaisuree,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-ranicherra,activity_evidence,gs-dooars-ranicherra,,,Ranicherra Tea Estate,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-rungamuttee,activity_evidence,gs-dooars-rungamuttee,,,Rungamuttee Tea Estate,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-washabarietea,activity_evidence,gs-dooars-washabarietea,,,Washabarietea Estate,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-zurrantee-tea,activity_evidence,gs-dooars-zurrantee-tea,,,Zurrantee Tea,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-joypur,activity_evidence,gs-dooars-joypur,,,Joypur,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-konpakri-agro-industries-p,activity_evidence,gs-dooars-konpakri-agro-industries-p,,,Konpakri Agro Industries (P),,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-nandan,activity_evidence,gs-dooars-nandan,,,Nandan Tea Estate,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-nepati-valley,activity_evidence,gs-dooars-nepati-valley,,,Nepati Valley Tea Estate,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-parbati-and-gouranga,activity_evidence,gs-dooars-parbati-and-gouranga,,,Parbati T.E And Gouranga,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-chamurchi,activity_evidence,gs-dooars-chamurchi,,,Chamurchi Tea Estate,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-chengmari,activity_evidence,gs-dooars-chengmari,,,Chengmari,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-diana,activity_evidence,gs-dooars-diana,,,Diana Tea Estate,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-ghatia,activity_evidence,gs-dooars-ghatia,,,Ghatia Tea Estate,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-hilla,activity_evidence,gs-dooars-hilla,,,Hilla,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-katalguri,activity_evidence,gs-dooars-katalguri,,,Katalguri Tea Estate,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-nya-sylee,activity_evidence,gs-dooars-nya-sylee,,,Nya Sylee,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-red-bank,activity_evidence,gs-dooars-red-bank,,,Red Bank,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-surendra-nagar,activity_evidence,gs-dooars-surendra-nagar,,,Surendra Nagar,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-atiabari,activity_evidence,gs-dooars-atiabari,,,Atiabari Tea Estate,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-merico,activity_evidence,gs-dooars-merico,,,Merico Tea Estate,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-rajahbhat,activity_evidence,gs-dooars-rajahbhat,,,Rajahbhat Tea Estate,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-buds,activity_evidence,gs-dooars-buds,,,Buds Tea Estate,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-sonar-bangla-tea-co-p-ltd,activity_evidence,gs-dooars-sonar-bangla-tea-co-p-ltd,,,Sonar Bangla Tea Co (P) LTD,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-trisakti,activity_evidence,gs-dooars-trisakti,,,Trisakti Tea Estate,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-bundapani,activity_evidence,gs-dooars-bundapani,,,Bundapani Tea Garden,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-dahuk-valley,activity_evidence,gs-dooars-dahuk-valley,,,Dahuk Valley Tea Estate,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-garganda-tae,activity_evidence,gs-dooars-garganda-tae,,,Garganda Tae Estate,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-makrapara,activity_evidence,gs-dooars-makrapara,,,Makrapara Tea Estate,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-mohua,activity_evidence,gs-dooars-mohua,,,Mohua,,,No recent evidence supports active or inactive status.,,2026-09-01,open
-activity-gs-dooars-kadambini,activity_evidence,gs-dooars-kadambini,,,Kadambini Tea Estate,,,No recent evidence supports active or inactive status.,,2026-09-01,open
+identity-gs-dooars-dagapur,identity_resolution,gs-dooars-dagapur,directory-9,tea-board-wb-directory-2013,DAGAPUR,Anandapur,0.5825,Directory record was retained for coverage but still needs duplicate and identity review.,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,2026-09-02,open
+identity-gs-dooars-nandan,identity_resolution,gs-dooars-nandan,directory-44,tea-board-wb-directory-2013,NANDAN TEA ESTATE,Anandapur,0.6328,Directory record was retained for coverage but still needs duplicate and identity review.,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,2026-09-02,open
+identity-gs-dooars-nepati-valley,identity_resolution,gs-dooars-nepati-valley,directory-45,tea-board-wb-directory-2013,NEPATI VALLEY TEA ESTATE,Karala Valley,0.5315,Directory record was retained for coverage but still needs duplicate and identity review.,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,2026-09-02,open
+identity-gs-dooars-ghatia,identity_resolution,gs-dooars-ghatia,directory-60,tea-board-wb-directory-2013,GHATIA TEA ESTATE,Singhania,0.5132,Directory record was retained for coverage but still needs duplicate and identity review.,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,2026-09-02,open
+identity-gs-dooars-katalguri,identity_resolution,gs-dooars-katalguri,directory-66,tea-board-wb-directory-2013,KATALGURI TEA ESTATE,Kathaldhura,0.55,Directory record was retained for coverage but still needs duplicate and identity review.,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,2026-09-02,open
+identity-gs-dooars-nya-sylee,identity_resolution,gs-dooars-nya-sylee,directory-76,tea-board-wb-directory-2013,NYA SYLEE,Sylee,0.6187,Directory record was retained for coverage but still needs duplicate and identity review.,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,2026-09-02,open
+identity-gs-dooars-atiabari,identity_resolution,gs-dooars-atiabari,directory-162,tea-board-wb-directory-2013,ATIABARI TEA ESTATE,Batabari,0.7587,Directory record was retained for coverage but still needs duplicate and identity review.,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,2026-09-02,open
+identity-gs-dooars-bundapani,identity_resolution,gs-dooars-bundapani,directory-256,tea-board-wb-directory-2013,BUNDAPANI TEA GARDEN,Gandrapara,0.5,Directory record was retained for coverage but still needs duplicate and identity review.,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,2026-09-02,open
+identity-gs-dooars-dahuk-valley,identity_resolution,gs-dooars-dahuk-valley,directory-257,tea-board-wb-directory-2013,DAHUK VALLEY TEA ESTATE,Karala Valley,0.541,Directory record was retained for coverage but still needs duplicate and identity review.,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,2026-09-02,open
+identity-gs-dooars-makrapara,identity_resolution,gs-dooars-makrapara,directory-264,tea-board-wb-directory-2013,MAKRAPARA TEA ESTATE,Gandrapara,0.625,Directory record was retained for coverage but still needs duplicate and identity review.,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,2026-09-02,open
+identity-gs-dooars-ramjhora,identity_resolution,gs-dooars-ramjhora,directory-267,tea-board-wb-directory-2013,RAMJHORA TEA ESTATE,Nimtijhora,0.57,Directory record was retained for coverage but still needs duplicate and identity review.,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,2026-09-02,open
+identity-gs-dooars-dalsingpara,identity_resolution,gs-dooars-dalsingpara,directory-274,tea-board-wb-directory-2013,DALSINGPARA,Tulsipara,0.6,Directory record was retained for coverage but still needs duplicate and identity review.,https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf,2026-09-02,open
+directory-59-diana,unmatched_dooars_directory,gs-dooars-dima,directory-59,tea-board-wb-directory-2013,DIANA TEA ESTATE,Dima,0.4586,Dooars directory record is absent from or ambiguous against the 128-garden atlas seed.,,2026-09-02,open
+directory-221-baruapara,scope_and_match,gs-dooars-chuapara,directory-221,tea-board-wb-directory-2013,BARUAPARA TEA ESTATE,Chuapara,0.6881,Directory record needs geographic scope review.,,2026-09-02,open
+directory-222-bhandapur,scope_and_match,gs-dooars-anandapur,directory-222,tea-board-wb-directory-2013,BHANDAPUR TEA ESTATE,Anandapur,0.7878,Directory record needs geographic scope review.,,2026-09-02,open
+directory-224-bhardeshwar-plantation,scope_and_match,gs-dooars-hantapara,directory-224,tea-board-wb-directory-2013,BHARDESHWAR TEA PLANTATION,Hantapara,0.2845,Directory record needs geographic scope review.,,2026-09-02,open
+directory-225-bhasani,scope_and_match,gs-dooars-subhasini,directory-225,tea-board-wb-directory-2013,BHASANI TEA ESTATE,Subhasini,0.6238,Directory record needs geographic scope review.,,2026-09-02,open
+directory-226-gadra,scope_and_match,gs-dooars-gandrapara,directory-226,tea-board-wb-directory-2013,GADRA TEA ESTATE,Gandrapara,0.5,Directory record needs geographic scope review.,,2026-09-02,open
+directory-227-harinagar,scope_and_match,gs-dooars-binaguri,directory-227,tea-board-wb-directory-2013,HARINAGAR TEA ESTATE,Binaguri,0.5016,Directory record needs geographic scope review.,,2026-09-02,open
+directory-228-hiralal,scope_and_match,gs-dooars-hilla,directory-228,tea-board-wb-directory-2013,HIRALAL TEA GARDEN,Hilla,0.5143,Directory record needs geographic scope review.,,2026-09-02,open
+directory-229-jagat-bandhu,scope_and_match,gs-dooars-garganda,directory-229,tea-board-wb-directory-2013,JAGAT BANDHU TEA ESTATE,Garganda,0.3583,Directory record needs geographic scope review.,,2026-09-02,open
+directory-230-janaki-gosai,scope_and_match,gs-dooars-sankos,directory-230,tea-board-wb-directory-2013,JANAKI GOSAI TEA ESTATE,Sankos,0.3683,Directory record needs geographic scope review.,,2026-09-02,open
+directory-231-runggoti,scope_and_match,gs-dooars-rungamuttee,directory-231,tea-board-wb-directory-2013,RUNGGOTI TEA GARDEN,Rungamuttee,0.4088,Directory record needs geographic scope review.,,2026-09-02,open
+directory-232-shaaktimann,scope_and_match,gs-dooars-ghatia,directory-232,tea-board-wb-directory-2013,SHAAKTIMANN TEA ESTATE,Ghatia,0.37,Directory record needs geographic scope review.,,2026-09-02,open
+directory-234-shyamal-bag,scope_and_match,gs-dooars-uttarsalbari,directory-234,tea-board-wb-directory-2013,SHYAMAL BAG TEA ESTATE,Uttarsalbari,0.293,Directory record needs geographic scope review.,,2026-09-02,open
+registration-gs-dooars-mohua,registration_conflict,gs-dooars-mohua,1052,tea-board-registered-planters-2019,NC-2666,3090,1,Tea Board sources show different registration values.,,2026-09-02,open
+registration-gs-dooars-torsa,registration_conflict,gs-dooars-torsa,1056,tea-board-registered-planters-2019,2614,65,1,Tea Board sources show different registration values.,,2026-09-02,open
+registration-gs-dooars-nya-sylee,registration_conflict,gs-dooars-nya-sylee,1210,tea-board-registered-planters-2019,C-60,RC-31,1,Tea Board sources show different registration values.,,2026-09-02,open
+registration-gs-dooars-toonbarie,registration_conflict,gs-dooars-toonbarie,1231,tea-board-registered-planters-2019,28,2120,1,Tea Board sources show different registration values.,,2026-09-02,open
+registration-gs-dooars-sarugaon,registration_conflict,gs-dooars-sarugaon,1234,tea-board-registered-planters-2019,2328,2318,1,Tea Board sources show different registration values.,,2026-09-02,open
+registration-gs-dooars-jaldacca-altadanga,registration_conflict,gs-dooars-jaldacca-altadanga,1261,tea-board-registered-planters-2019,562,15,1,Tea Board sources show different registration values.,,2026-09-02,open
+registration-gs-dooars-bagrakote,registration_conflict,gs-dooars-bagrakote,1283,tea-board-registered-planters-2019,2355,B-2625,1,Tea Board sources show different registration values.,,2026-09-02,open
+registration-gs-dooars-amarpur,registration_conflict,gs-dooars-amarpur,1287,tea-board-registered-planters-2019,2811(UNIT-I & II),2810/2811,1,Tea Board sources show different registration values.,,2026-09-02,open
+registration-gs-dooars-ambari,registration_conflict,gs-dooars-ambari,1288,tea-board-registered-planters-2019,381,P-1,1,Tea Board sources show different registration values.,,2026-09-02,open
+registration-gs-dooars-karballa,registration_conflict,gs-dooars-karballa,1307,tea-board-registered-planters-2019,2768,M(19)2768,1,Tea Board sources show different registration values.,,2026-09-02,open
+registration-gs-dooars-jogesh-chandra,registration_conflict,gs-dooars-jogesh-chandra,1328,tea-board-registered-planters-2019,139/JL/X,148,1,Tea Board sources show different registration values.,,2026-09-02,open
+activity-gs-dooars-amarpur,activity_evidence,gs-dooars-amarpur,,,Amarpur,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-ambari,activity_evidence,gs-dooars-ambari,,,Ambari,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-anandapur,activity_evidence,gs-dooars-anandapur,,,Anandapur,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-bagrakote,activity_evidence,gs-dooars-bagrakote,,,Bagrakote,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-batabari,activity_evidence,gs-dooars-batabari,,,Batabari,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-beech,activity_evidence,gs-dooars-beech,,,Beech,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-bhandiguri,activity_evidence,gs-dooars-bhandiguri,,,Bhandiguri,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-bharnobari,activity_evidence,gs-dooars-bharnobari,,,Bharnobari,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-bhatkowa,activity_evidence,gs-dooars-bhatkowa,,,Bhatkowa,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-bhatpara,activity_evidence,gs-dooars-bhatpara,,,Bhatpara,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-bhogotpore,activity_evidence,gs-dooars-bhogotpore,,,Bhogotpore,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-binaguri,activity_evidence,gs-dooars-binaguri,,,Binaguri,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-birpara,activity_evidence,gs-dooars-birpara,,,Birpara,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-carron,activity_evidence,gs-dooars-carron,,,Carron,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-chinchula,activity_evidence,gs-dooars-chinchula,,,Chinchula,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-chuapara,activity_evidence,gs-dooars-chuapara,,,Chuapara,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-chuniajhora,activity_evidence,gs-dooars-chuniajhora,,,Chuniajhora,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-dalgaon,activity_evidence,gs-dooars-dalgaon,,,Dalgaon,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-debipur,activity_evidence,gs-dooars-debipur,,,Debipur,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-demdima,activity_evidence,gs-dooars-demdima,,,Demdima,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-dharanipur,activity_evidence,gs-dooars-dharanipur,,,Dharanipur,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-dhowlajhora,activity_evidence,gs-dooars-dhowlajhora,,,Dhowlajhora,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-dima,activity_evidence,gs-dooars-dima,,,Dima,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-dumchipara,activity_evidence,gs-dooars-dumchipara,,,Dumchipara,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-ellenbarie,activity_evidence,gs-dooars-ellenbarie,,,Ellenbarie,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-engo,activity_evidence,gs-dooars-engo,,,Engo,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-ethelbarie,activity_evidence,gs-dooars-ethelbarie,,,Ethelbarie,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-garganda,activity_evidence,gs-dooars-garganda,,,Garganda,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-gopalpur,activity_evidence,gs-dooars-gopalpur,,,Gopalpur,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-gopimohan,activity_evidence,gs-dooars-gopimohan,,,Gopimohan,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-gurjangjhora,activity_evidence,gs-dooars-gurjangjhora,,,Gurjangjhora,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-haldibari,activity_evidence,gs-dooars-haldibari,,,Haldibari,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-hantapara,activity_evidence,gs-dooars-hantapara,,,Hantapara,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-jadabpur,activity_evidence,gs-dooars-jadabpur,,,Jadabpur,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-jainti,activity_evidence,gs-dooars-jainti,,,Jainti,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-jaldacca-altadanga,activity_evidence,gs-dooars-jaldacca-altadanga,,,Jaldacca Altadanga,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-jalpara,activity_evidence,gs-dooars-jalpara,,,Jalpara,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-jogesh-chandra,activity_evidence,gs-dooars-jogesh-chandra,,,Jogesh Chandra,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-joybirpara,activity_evidence,gs-dooars-joybirpara,,,Joybirpara,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-kailashpur,activity_evidence,gs-dooars-kailashpur,,,Kailashpur,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-karala-valley,activity_evidence,gs-dooars-karala-valley,,,Karala Valley,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-kathaldhura,activity_evidence,gs-dooars-kathaldhura,,,Kathaldhura,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-killcott,activity_evidence,gs-dooars-killcott,,,Killcott,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-kohinoor,activity_evidence,gs-dooars-kohinoor,,,Kohinoor,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-lakhikanta,activity_evidence,gs-dooars-lakhikanta,,,Lakhikanta,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-madhu,activity_evidence,gs-dooars-madhu,,,Madhu,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-majherdabri,activity_evidence,gs-dooars-majherdabri,,,Majherdabri,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-malnuddy,activity_evidence,gs-dooars-malnuddy,,,Malnuddy,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-matelli,activity_evidence,gs-dooars-matelli,,,Matelli,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-mechapara,activity_evidence,gs-dooars-mechapara,,,Mechapara,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-moraghat,activity_evidence,gs-dooars-moraghat,,,Moraghat,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-mujnai,activity_evidence,gs-dooars-mujnai,,,Mujnai,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-nagrakata,activity_evidence,gs-dooars-nagrakata,,,Nagrakata,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-nangdala,activity_evidence,gs-dooars-nangdala,,,Nangdala,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-nedam,activity_evidence,gs-dooars-nedam,,,Nedam,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-nepuchapur,activity_evidence,gs-dooars-nepuchapur,,,Nepuchapur,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-new-lands,activity_evidence,gs-dooars-new-lands,,,New Lands,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-newglenceco,activity_evidence,gs-dooars-newglenceco,,,Newglenceco,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-nimtijhora,activity_evidence,gs-dooars-nimtijhora,,,Nimtijhora,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-oodlabari,activity_evidence,gs-dooars-oodlabari,,,Oodlabari,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-palashbari,activity_evidence,gs-dooars-palashbari,,,Palashbari,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-patkapara,activity_evidence,gs-dooars-patkapara,,,Patkapara,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-phaskowa,activity_evidence,gs-dooars-phaskowa,,,Phaskowa,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-putharjhora,activity_evidence,gs-dooars-putharjhora,,,Putharjhora,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-radharani,activity_evidence,gs-dooars-radharani,,,Radharani,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-raghuutkarsh,activity_evidence,gs-dooars-raghuutkarsh,,,Raghuutkarsh,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-rahimabad,activity_evidence,gs-dooars-rahimabad,,,Rahimabad,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-raja,activity_evidence,gs-dooars-raja,,,Raja,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-saraswatipur,activity_evidence,gs-dooars-saraswatipur,,,Saraswatipur,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-sarugaon,activity_evidence,gs-dooars-sarugaon,,,Sarugaon,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-satali,activity_evidence,gs-dooars-satali,,,Satali,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-shikarpur,activity_evidence,gs-dooars-shikarpur,,,Shikarpur,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-singhania,activity_evidence,gs-dooars-singhania,,,Singhania,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-soongachi,activity_evidence,gs-dooars-soongachi,,,Soongachi,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-srinathpur,activity_evidence,gs-dooars-srinathpur,,,Srinathpur,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-tasati,activity_evidence,gs-dooars-tasati,,,Tasati,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-telepara,activity_evidence,gs-dooars-telepara,,,Telepara,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-toonbarie,activity_evidence,gs-dooars-toonbarie,,,Toonbarie,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-totapara,activity_evidence,gs-dooars-totapara,,,Totapara,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-tulsipara,activity_evidence,gs-dooars-tulsipara,,,Tulsipara,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-turturi,activity_evidence,gs-dooars-turturi,,,Turturi,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-uttarsalbari,activity_evidence,gs-dooars-uttarsalbari,,,Uttarsalbari,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-washabarie,activity_evidence,gs-dooars-washabarie,,,Washabarie,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-yongtong,activity_evidence,gs-dooars-yongtong,,,Yongtong,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-zurantee,activity_evidence,gs-dooars-zurantee,,,Zurantee,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-chhaophali,activity_evidence,gs-dooars-chhaophali,,,Chhaophali,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-dagapur,activity_evidence,gs-dooars-dagapur,,,Dagapur,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-nagaisuree,activity_evidence,gs-dooars-nagaisuree,,,Nagaisuree,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-ranicherra,activity_evidence,gs-dooars-ranicherra,,,Ranicherra,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-joypur,activity_evidence,gs-dooars-joypur,,,Joypur,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-konpakri,activity_evidence,gs-dooars-konpakri,,,Konpakri,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-nandan,activity_evidence,gs-dooars-nandan,,,Nandan,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-nepati-valley,activity_evidence,gs-dooars-nepati-valley,,,Nepati Valley,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-parbati-and-gouranga,activity_evidence,gs-dooars-parbati-and-gouranga,,,Parbati And Gouranga,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-chamurchi,activity_evidence,gs-dooars-chamurchi,,,Chamurchi,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-chengmari,activity_evidence,gs-dooars-chengmari,,,Chengmari,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-ghatia,activity_evidence,gs-dooars-ghatia,,,Ghatia,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-hilla,activity_evidence,gs-dooars-hilla,,,Hilla,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-katalguri,activity_evidence,gs-dooars-katalguri,,,Katalguri,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-red-bank,activity_evidence,gs-dooars-red-bank,,,Red Bank,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-surendra-nagar,activity_evidence,gs-dooars-surendra-nagar,,,Surendra Nagar,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-atiabari,activity_evidence,gs-dooars-atiabari,,,Atiabari,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-rajahbhat,activity_evidence,gs-dooars-rajahbhat,,,Rajahbhat,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-buds,activity_evidence,gs-dooars-buds,,,Buds,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-sonar-bangla,activity_evidence,gs-dooars-sonar-bangla,,,Sonar Bangla,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-trisakti,activity_evidence,gs-dooars-trisakti,,,Trisakti,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-bundapani,activity_evidence,gs-dooars-bundapani,,,Bundapani,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-dahuk-valley,activity_evidence,gs-dooars-dahuk-valley,,,Dahuk Valley,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-makrapara,activity_evidence,gs-dooars-makrapara,,,Makrapara,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-mohua,activity_evidence,gs-dooars-mohua,,,Mohua,,,No recent evidence supports active or inactive status.,,2026-09-02,open
+activity-gs-dooars-kadambini,activity_evidence,gs-dooars-kadambini,,,Kadambini,,,No recent evidence supports active or inactive status.,,2026-09-02,open

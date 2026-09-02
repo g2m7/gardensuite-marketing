@@ -165,6 +165,90 @@
       "use": "Current company contact and operating-office details",
       "current_status_evidence": false,
       "browser_fallback": true
+    },
+    {
+      "source_id": "diana-tea-current-gardens",
+      "name": "Diana Tea Company current Dooars garden list",
+      "url": "https://www.dianatea.in/our-gardens.php",
+      "kind": "html",
+      "parser": "metadata-only",
+      "published_date": "",
+      "authority": "company",
+      "use": "Current company operation and three Dooars garden relationships",
+      "current_status_evidence": true,
+      "browser_fallback": true
+    },
+    {
+      "source_id": "diana-tea-current-contact",
+      "name": "Diana Tea Company contact page",
+      "url": "https://www.dianatea.in/contact-us.php",
+      "kind": "html",
+      "parser": "metadata-only",
+      "published_date": "",
+      "authority": "company",
+      "use": "Current head-office corporate contact",
+      "current_status_evidence": false,
+      "browser_fallback": true
+    },
+    {
+      "source_id": "gillanders-current-tea-division",
+      "name": "Gillanders Arbuthnot tea division overview",
+      "url": "https://www.gillandersarbuthnot.com/tea-division/",
+      "kind": "html",
+      "parser": "metadata-only",
+      "published_date": "",
+      "authority": "company",
+      "use": "Current company operation and Gairkhata tea garden relationship",
+      "current_status_evidence": true,
+      "browser_fallback": true
+    },
+    {
+      "source_id": "rydak-current-tea-estates",
+      "name": "Rydak Syndicate tea estates list",
+      "url": "https://www.rydaksyndicate.com/tea-estates/",
+      "kind": "html",
+      "parser": "metadata-only",
+      "published_date": "",
+      "authority": "company",
+      "use": "Current company operation and four Dooars garden relationships",
+      "current_status_evidence": true,
+      "browser_fallback": true
+    },
+    {
+      "source_id": "octavius-current-overview",
+      "name": "Octavius Tea current overview",
+      "url": "https://www.octavius.in",
+      "kind": "html",
+      "parser": "metadata-only",
+      "published_date": "",
+      "authority": "company",
+      "use": "Current company operation and Nya Sylee / Sylee relationships",
+      "current_status_evidence": true,
+      "browser_fallback": true
+    },
+    {
+      "source_id": "appl-current-overview",
+      "name": "APPL current overview",
+      "url": "https://www.amalgamatedplantations.co.in",
+      "kind": "html",
+      "parser": "metadata-only",
+      "published_date": "",
+      "authority": "company",
+      "use": "Current company operation and Damdim / Rungamuttee / Nowera Nuddy relationships",
+      "current_status_evidence": true,
+      "browser_fallback": true
+    },
+    {
+      "source_id": "millennium-post-reopened-alipurduar-2025",
+      "name": "Reopening of 4 tea gardens in Alipurduar",
+      "url": "https://www.millenniumpost.in/bengal/ahead-of-cms-visit-4-tea-gardens-reopened-in-alipurduar-595304",
+      "kind": "html",
+      "parser": "metadata-only",
+      "published_date": "2025-01-20",
+      "authority": "news",
+      "use": "Local reopening reports for Torsa, Kalchini, Raimatang, and Dalmore",
+      "current_status_evidence": true,
+      "browser_fallback": true
     }
   ]
 }

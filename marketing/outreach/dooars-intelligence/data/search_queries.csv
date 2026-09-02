@@ -23,10 +23,10 @@ gs-dooars-bagrakote,Bagrakote,Bagracote Tea Garden,"""Bagracote Tea Garden"" own
 gs-dooars-bagrakote,Bagrakote,Bagracote Tea Garden,"""Bagracote Tea Garden"" reopened production factory active Dooars",high
 gs-dooars-bagrakote,Bagrakote,Bagracote Tea Garden,"""Bagracote Tea Garden"" new management director manager Dooars",high
 gs-dooars-bagrakote,Bagrakote,Bagracote Tea Garden,"""Bagracote Tea Garden"" closed suspended workers Dooars",high
-gs-dooars-baintgoorie,Baintgoorie,Baintgoorie,"""Baintgoorie"" owner company acquisition sale lease Dooars",high
-gs-dooars-baintgoorie,Baintgoorie,Baintgoorie,"""Baintgoorie"" reopened production factory active Dooars",high
-gs-dooars-baintgoorie,Baintgoorie,Baintgoorie,"""Baintgoorie"" new management director manager Dooars",high
-gs-dooars-baintgoorie,Baintgoorie,Baintgoorie,"""Baintgoorie"" closed suspended workers Dooars",high
+gs-dooars-baintgoorie,Baintgoorie,Baintgoorie,"""Baintgoorie"" owner company acquisition sale lease Dooars",normal
+gs-dooars-baintgoorie,Baintgoorie,Baintgoorie,"""Baintgoorie"" reopened production factory active Dooars",normal
+gs-dooars-baintgoorie,Baintgoorie,Baintgoorie,"""Baintgoorie"" new management director manager Dooars",normal
+gs-dooars-baintgoorie,Baintgoorie,Baintgoorie,"""Baintgoorie"" closed suspended workers Dooars",normal
 gs-dooars-bamandanga-tondoo,Bamandanga Tondoo,Bamandanga Tondoo,"""Bamandanga Tondoo"" owner company acquisition sale lease Dooars",normal
 gs-dooars-bamandanga-tondoo,Bamandanga Tondoo,Bamandanga Tondoo,"""Bamandanga Tondoo"" reopened production factory active Dooars",normal
 gs-dooars-bamandanga-tondoo,Bamandanga Tondoo,Bamandanga Tondoo,"""Bamandanga Tondoo"" new management director manager Dooars",normal
@@ -43,14 +43,14 @@ gs-dooars-banarhat,Banarhat,Banarhat,"""Banarhat"" owner company acquisition sal
 gs-dooars-banarhat,Banarhat,Banarhat,"""Banarhat"" reopened production factory active Dooars",normal
 gs-dooars-banarhat,Banarhat,Banarhat,"""Banarhat"" new management director manager Dooars",normal
 gs-dooars-banarhat,Banarhat,Banarhat,"""Banarhat"" closed suspended workers Dooars",normal
-gs-dooars-baradighi,Baradighi,Baradighi,"""Baradighi"" owner company acquisition sale lease Dooars",high
-gs-dooars-baradighi,Baradighi,Baradighi,"""Baradighi"" reopened production factory active Dooars",high
-gs-dooars-baradighi,Baradighi,Baradighi,"""Baradighi"" new management director manager Dooars",high
-gs-dooars-baradighi,Baradighi,Baradighi,"""Baradighi"" closed suspended workers Dooars",high
-gs-dooars-baradighi,Baradighi,Baradighi T.E,"""Baradighi T.E"" owner company acquisition sale lease Dooars",high
-gs-dooars-baradighi,Baradighi,Baradighi T.E,"""Baradighi T.E"" reopened production factory active Dooars",high
-gs-dooars-baradighi,Baradighi,Baradighi T.E,"""Baradighi T.E"" new management director manager Dooars",high
-gs-dooars-baradighi,Baradighi,Baradighi T.E,"""Baradighi T.E"" closed suspended workers Dooars",high
+gs-dooars-baradighi,Baradighi,Baradighi,"""Baradighi"" owner company acquisition sale lease Dooars",normal
+gs-dooars-baradighi,Baradighi,Baradighi,"""Baradighi"" reopened production factory active Dooars",normal
+gs-dooars-baradighi,Baradighi,Baradighi,"""Baradighi"" new management director manager Dooars",normal
+gs-dooars-baradighi,Baradighi,Baradighi,"""Baradighi"" closed suspended workers Dooars",normal
+gs-dooars-baradighi,Baradighi,Baradighi T.E,"""Baradighi T.E"" owner company acquisition sale lease Dooars",normal
+gs-dooars-baradighi,Baradighi,Baradighi T.E,"""Baradighi T.E"" reopened production factory active Dooars",normal
+gs-dooars-baradighi,Baradighi,Baradighi T.E,"""Baradighi T.E"" new management director manager Dooars",normal
+gs-dooars-baradighi,Baradighi,Baradighi T.E,"""Baradighi T.E"" closed suspended workers Dooars",normal
 gs-dooars-batabari,Batabari,Batabari,"""Batabari"" owner company acquisition sale lease Dooars",high
 gs-dooars-batabari,Batabari,Batabari,"""Batabari"" reopened production factory active Dooars",high
 gs-dooars-batabari,Batabari,Batabari,"""Batabari"" new management director manager Dooars",high
@@ -119,6 +119,14 @@ gs-dooars-chinchula,Chinchula,Chinchula,"""Chinchula"" owner company acquisition
 gs-dooars-chinchula,Chinchula,Chinchula,"""Chinchula"" reopened production factory active Dooars",high
 gs-dooars-chinchula,Chinchula,Chinchula,"""Chinchula"" new management director manager Dooars",high
 gs-dooars-chinchula,Chinchula,Chinchula,"""Chinchula"" closed suspended workers Dooars",high
+gs-dooars-chinchula,Chinchula,Merico,"""Merico"" owner company acquisition sale lease Dooars",high
+gs-dooars-chinchula,Chinchula,Merico,"""Merico"" reopened production factory active Dooars",high
+gs-dooars-chinchula,Chinchula,Merico,"""Merico"" new management director manager Dooars",high
+gs-dooars-chinchula,Chinchula,Merico,"""Merico"" closed suspended workers Dooars",high
+gs-dooars-chinchula,Chinchula,Merico Tea Estate,"""Merico Tea Estate"" owner company acquisition sale lease Dooars",high
+gs-dooars-chinchula,Chinchula,Merico Tea Estate,"""Merico Tea Estate"" reopened production factory active Dooars",high
+gs-dooars-chinchula,Chinchula,Merico Tea Estate,"""Merico Tea Estate"" new management director manager Dooars",high
+gs-dooars-chinchula,Chinchula,Merico Tea Estate,"""Merico Tea Estate"" closed suspended workers Dooars",high
 gs-dooars-chinchula,Chinchula,Estate(Chinchula Tea Estate),"""Estate(Chinchula Tea Estate)"" owner company acquisition sale lease Dooars",high
 gs-dooars-chinchula,Chinchula,Estate(Chinchula Tea Estate),"""Estate(Chinchula Tea Estate)"" reopened production factory active Dooars",high
 gs-dooars-chinchula,Chinchula,Estate(Chinchula Tea Estate),"""Estate(Chinchula Tea Estate)"" new management director manager Dooars",high
@@ -147,26 +155,26 @@ gs-dooars-dalgaon,Dalgaon,Dalgaon,"""Dalgaon"" owner company acquisition sale le
 gs-dooars-dalgaon,Dalgaon,Dalgaon,"""Dalgaon"" reopened production factory active Dooars",high
 gs-dooars-dalgaon,Dalgaon,Dalgaon,"""Dalgaon"" new management director manager Dooars",high
 gs-dooars-dalgaon,Dalgaon,Dalgaon,"""Dalgaon"" closed suspended workers Dooars",high
-gs-dooars-damdim,Damdim,Damdim,"""Damdim"" owner company acquisition sale lease Dooars",high
-gs-dooars-damdim,Damdim,Damdim,"""Damdim"" reopened production factory active Dooars",high
-gs-dooars-damdim,Damdim,Damdim,"""Damdim"" new management director manager Dooars",high
-gs-dooars-damdim,Damdim,Damdim,"""Damdim"" closed suspended workers Dooars",high
-gs-dooars-damdim,Damdim,Dam Dim,"""Dam Dim"" owner company acquisition sale lease Dooars",high
-gs-dooars-damdim,Damdim,Dam Dim,"""Dam Dim"" reopened production factory active Dooars",high
-gs-dooars-damdim,Damdim,Dam Dim,"""Dam Dim"" new management director manager Dooars",high
-gs-dooars-damdim,Damdim,Dam Dim,"""Dam Dim"" closed suspended workers Dooars",high
-gs-dooars-damdim,Damdim,Dam Dim Tea Estate,"""Dam Dim Tea Estate"" owner company acquisition sale lease Dooars",high
-gs-dooars-damdim,Damdim,Dam Dim Tea Estate,"""Dam Dim Tea Estate"" reopened production factory active Dooars",high
-gs-dooars-damdim,Damdim,Dam Dim Tea Estate,"""Dam Dim Tea Estate"" new management director manager Dooars",high
-gs-dooars-damdim,Damdim,Dam Dim Tea Estate,"""Dam Dim Tea Estate"" closed suspended workers Dooars",high
+gs-dooars-damdim,Damdim,Damdim,"""Damdim"" owner company acquisition sale lease Dooars",normal
+gs-dooars-damdim,Damdim,Damdim,"""Damdim"" reopened production factory active Dooars",normal
+gs-dooars-damdim,Damdim,Damdim,"""Damdim"" new management director manager Dooars",normal
+gs-dooars-damdim,Damdim,Damdim,"""Damdim"" closed suspended workers Dooars",normal
+gs-dooars-damdim,Damdim,Dam Dim,"""Dam Dim"" owner company acquisition sale lease Dooars",normal
+gs-dooars-damdim,Damdim,Dam Dim,"""Dam Dim"" reopened production factory active Dooars",normal
+gs-dooars-damdim,Damdim,Dam Dim,"""Dam Dim"" new management director manager Dooars",normal
+gs-dooars-damdim,Damdim,Dam Dim,"""Dam Dim"" closed suspended workers Dooars",normal
+gs-dooars-damdim,Damdim,Dam Dim Tea Estate,"""Dam Dim Tea Estate"" owner company acquisition sale lease Dooars",normal
+gs-dooars-damdim,Damdim,Dam Dim Tea Estate,"""Dam Dim Tea Estate"" reopened production factory active Dooars",normal
+gs-dooars-damdim,Damdim,Dam Dim Tea Estate,"""Dam Dim Tea Estate"" new management director manager Dooars",normal
+gs-dooars-damdim,Damdim,Dam Dim Tea Estate,"""Dam Dim Tea Estate"" closed suspended workers Dooars",normal
 gs-dooars-debipur,Debipur,Debipur,"""Debipur"" owner company acquisition sale lease Dooars",high
 gs-dooars-debipur,Debipur,Debipur,"""Debipur"" reopened production factory active Dooars",high
 gs-dooars-debipur,Debipur,Debipur,"""Debipur"" new management director manager Dooars",high
 gs-dooars-debipur,Debipur,Debipur,"""Debipur"" closed suspended workers Dooars",high
-gs-dooars-debpara,Debpara,Debpara,"""Debpara"" owner company acquisition sale lease Dooars",high
-gs-dooars-debpara,Debpara,Debpara,"""Debpara"" reopened production factory active Dooars",high
-gs-dooars-debpara,Debpara,Debpara,"""Debpara"" new management director manager Dooars",high
-gs-dooars-debpara,Debpara,Debpara,"""Debpara"" closed suspended workers Dooars",high
+gs-dooars-debpara,Debpara,Debpara,"""Debpara"" owner company acquisition sale lease Dooars",normal
+gs-dooars-debpara,Debpara,Debpara,"""Debpara"" reopened production factory active Dooars",normal
+gs-dooars-debpara,Debpara,Debpara,"""Debpara"" new management director manager Dooars",normal
+gs-dooars-debpara,Debpara,Debpara,"""Debpara"" closed suspended workers Dooars",normal
 gs-dooars-demdima,Demdima,Demdima,"""Demdima"" owner company acquisition sale lease Dooars",high
 gs-dooars-demdima,Demdima,Demdima,"""Demdima"" reopened production factory active Dooars",high
 gs-dooars-demdima,Demdima,Demdima,"""Demdima"" new management director manager Dooars",high
@@ -219,10 +227,10 @@ gs-dooars-ethelbarie,Ethelbarie,Ethelbari,"""Ethelbari"" owner company acquisiti
 gs-dooars-ethelbarie,Ethelbarie,Ethelbari,"""Ethelbari"" reopened production factory active Dooars",high
 gs-dooars-ethelbarie,Ethelbarie,Ethelbari,"""Ethelbari"" new management director manager Dooars",high
 gs-dooars-ethelbarie,Ethelbarie,Ethelbari,"""Ethelbari"" closed suspended workers Dooars",high
-gs-dooars-gairkhata,Gairkhata,Gairkhata,"""Gairkhata"" owner company acquisition sale lease Dooars",high
-gs-dooars-gairkhata,Gairkhata,Gairkhata,"""Gairkhata"" reopened production factory active Dooars",high
-gs-dooars-gairkhata,Gairkhata,Gairkhata,"""Gairkhata"" new management director manager Dooars",high
-gs-dooars-gairkhata,Gairkhata,Gairkhata,"""Gairkhata"" closed suspended workers Dooars",high
+gs-dooars-gairkhata,Gairkhata,Gairkhata,"""Gairkhata"" owner company acquisition sale lease Dooars",normal
+gs-dooars-gairkhata,Gairkhata,Gairkhata,"""Gairkhata"" reopened production factory active Dooars",normal
+gs-dooars-gairkhata,Gairkhata,Gairkhata,"""Gairkhata"" new management director manager Dooars",normal
+gs-dooars-gairkhata,Gairkhata,Gairkhata,"""Gairkhata"" closed suspended workers Dooars",normal
 gs-dooars-gandrapara,Gandrapara,Gandrapara,"""Gandrapara"" owner company acquisition sale lease Dooars",normal
 gs-dooars-gandrapara,Gandrapara,Gandrapara,"""Gandrapara"" reopened production factory active Dooars",normal
 gs-dooars-gandrapara,Gandrapara,Gandrapara,"""Gandrapara"" new management director manager Dooars",normal
@@ -231,14 +239,22 @@ gs-dooars-garganda,Garganda,Garganda,"""Garganda"" owner company acquisition sal
 gs-dooars-garganda,Garganda,Garganda,"""Garganda"" reopened production factory active Dooars",high
 gs-dooars-garganda,Garganda,Garganda,"""Garganda"" new management director manager Dooars",high
 gs-dooars-garganda,Garganda,Garganda,"""Garganda"" closed suspended workers Dooars",high
-gs-dooars-goodhope,Goodhope,Goodhope,"""Goodhope"" owner company acquisition sale lease Dooars",high
-gs-dooars-goodhope,Goodhope,Goodhope,"""Goodhope"" reopened production factory active Dooars",high
-gs-dooars-goodhope,Goodhope,Goodhope,"""Goodhope"" new management director manager Dooars",high
-gs-dooars-goodhope,Goodhope,Goodhope,"""Goodhope"" closed suspended workers Dooars",high
-gs-dooars-goodhope,Goodhope,Good Hope Tea Estate,"""Good Hope Tea Estate"" owner company acquisition sale lease Dooars",high
-gs-dooars-goodhope,Goodhope,Good Hope Tea Estate,"""Good Hope Tea Estate"" reopened production factory active Dooars",high
-gs-dooars-goodhope,Goodhope,Good Hope Tea Estate,"""Good Hope Tea Estate"" new management director manager Dooars",high
-gs-dooars-goodhope,Goodhope,Good Hope Tea Estate,"""Good Hope Tea Estate"" closed suspended workers Dooars",high
+gs-dooars-garganda,Garganda,Garganda Tae Estate,"""Garganda Tae Estate"" owner company acquisition sale lease Dooars",high
+gs-dooars-garganda,Garganda,Garganda Tae Estate,"""Garganda Tae Estate"" reopened production factory active Dooars",high
+gs-dooars-garganda,Garganda,Garganda Tae Estate,"""Garganda Tae Estate"" new management director manager Dooars",high
+gs-dooars-garganda,Garganda,Garganda Tae Estate,"""Garganda Tae Estate"" closed suspended workers Dooars",high
+gs-dooars-goodhope,Goodhope,Goodhope,"""Goodhope"" owner company acquisition sale lease Dooars",normal
+gs-dooars-goodhope,Goodhope,Goodhope,"""Goodhope"" reopened production factory active Dooars",normal
+gs-dooars-goodhope,Goodhope,Goodhope,"""Goodhope"" new management director manager Dooars",normal
+gs-dooars-goodhope,Goodhope,Goodhope,"""Goodhope"" closed suspended workers Dooars",normal
+gs-dooars-goodhope,Goodhope,Good Hope,"""Good Hope"" owner company acquisition sale lease Dooars",normal
+gs-dooars-goodhope,Goodhope,Good Hope,"""Good Hope"" reopened production factory active Dooars",normal
+gs-dooars-goodhope,Goodhope,Good Hope,"""Good Hope"" new management director manager Dooars",normal
+gs-dooars-goodhope,Goodhope,Good Hope,"""Good Hope"" closed suspended workers Dooars",normal
+gs-dooars-goodhope,Goodhope,Good Hope Tea Estate,"""Good Hope Tea Estate"" owner company acquisition sale lease Dooars",normal
+gs-dooars-goodhope,Goodhope,Good Hope Tea Estate,"""Good Hope Tea Estate"" reopened production factory active Dooars",normal
+gs-dooars-goodhope,Goodhope,Good Hope Tea Estate,"""Good Hope Tea Estate"" new management director manager Dooars",normal
+gs-dooars-goodhope,Goodhope,Good Hope Tea Estate,"""Good Hope Tea Estate"" closed suspended workers Dooars",normal
 gs-dooars-gopalpur,Gopalpur,Gopalpur,"""Gopalpur"" owner company acquisition sale lease Dooars",high
 gs-dooars-gopalpur,Gopalpur,Gopalpur,"""Gopalpur"" reopened production factory active Dooars",high
 gs-dooars-gopalpur,Gopalpur,Gopalpur,"""Gopalpur"" new management director manager Dooars",high
@@ -255,6 +271,10 @@ gs-dooars-haldibari,Haldibari,Haldibari,"""Haldibari"" owner company acquisition
 gs-dooars-haldibari,Haldibari,Haldibari,"""Haldibari"" reopened production factory active Dooars",high
 gs-dooars-haldibari,Haldibari,Haldibari,"""Haldibari"" new management director manager Dooars",high
 gs-dooars-haldibari,Haldibari,Haldibari,"""Haldibari"" closed suspended workers Dooars",high
+gs-dooars-haldibari,Haldibari,Huldibari,"""Huldibari"" owner company acquisition sale lease Dooars",high
+gs-dooars-haldibari,Haldibari,Huldibari,"""Huldibari"" reopened production factory active Dooars",high
+gs-dooars-haldibari,Haldibari,Huldibari,"""Huldibari"" new management director manager Dooars",high
+gs-dooars-haldibari,Haldibari,Huldibari,"""Huldibari"" closed suspended workers Dooars",high
 gs-dooars-haldibari,Haldibari,Huldibari Tea Garden,"""Huldibari Tea Garden"" owner company acquisition sale lease Dooars",high
 gs-dooars-haldibari,Haldibari,Huldibari Tea Garden,"""Huldibari Tea Garden"" reopened production factory active Dooars",high
 gs-dooars-haldibari,Haldibari,Huldibari Tea Garden,"""Huldibari Tea Garden"" new management director manager Dooars",high
@@ -307,10 +327,10 @@ gs-dooars-kailashpur,Kailashpur,Kailashpur,"""Kailashpur"" owner company acquisi
 gs-dooars-kailashpur,Kailashpur,Kailashpur,"""Kailashpur"" reopened production factory active Dooars",high
 gs-dooars-kailashpur,Kailashpur,Kailashpur,"""Kailashpur"" new management director manager Dooars",high
 gs-dooars-kailashpur,Kailashpur,Kailashpur,"""Kailashpur"" closed suspended workers Dooars",high
-gs-dooars-kalabari,Kalabari,Kalabari,"""Kalabari"" owner company acquisition sale lease Dooars",high
-gs-dooars-kalabari,Kalabari,Kalabari,"""Kalabari"" reopened production factory active Dooars",high
-gs-dooars-kalabari,Kalabari,Kalabari,"""Kalabari"" new management director manager Dooars",high
-gs-dooars-kalabari,Kalabari,Kalabari,"""Kalabari"" closed suspended workers Dooars",high
+gs-dooars-kalabari,Kalabari,Kalabari,"""Kalabari"" owner company acquisition sale lease Dooars",normal
+gs-dooars-kalabari,Kalabari,Kalabari,"""Kalabari"" reopened production factory active Dooars",normal
+gs-dooars-kalabari,Kalabari,Kalabari,"""Kalabari"" new management director manager Dooars",normal
+gs-dooars-kalabari,Kalabari,Kalabari,"""Kalabari"" closed suspended workers Dooars",normal
 gs-dooars-karala-valley,Karala Valley,Karala Valley,"""Karala Valley"" owner company acquisition sale lease Dooars",high
 gs-dooars-karala-valley,Karala Valley,Karala Valley,"""Karala Valley"" reopened production factory active Dooars",high
 gs-dooars-karala-valley,Karala Valley,Karala Valley,"""Karala Valley"" new management director manager Dooars",high
@@ -327,10 +347,10 @@ gs-dooars-karballa,Karballa,Karbala Tea Estate,"""Karbala Tea Estate"" owner com
 gs-dooars-karballa,Karballa,Karbala Tea Estate,"""Karbala Tea Estate"" reopened production factory active Dooars",normal
 gs-dooars-karballa,Karballa,Karbala Tea Estate,"""Karbala Tea Estate"" new management director manager Dooars",normal
 gs-dooars-karballa,Karballa,Karbala Tea Estate,"""Karbala Tea Estate"" closed suspended workers Dooars",normal
-gs-dooars-kartick,Kartick,Kartick,"""Kartick"" owner company acquisition sale lease Dooars",high
-gs-dooars-kartick,Kartick,Kartick,"""Kartick"" reopened production factory active Dooars",high
-gs-dooars-kartick,Kartick,Kartick,"""Kartick"" new management director manager Dooars",high
-gs-dooars-kartick,Kartick,Kartick,"""Kartick"" closed suspended workers Dooars",high
+gs-dooars-kartick,Kartick,Kartick,"""Kartick"" owner company acquisition sale lease Dooars",normal
+gs-dooars-kartick,Kartick,Kartick,"""Kartick"" reopened production factory active Dooars",normal
+gs-dooars-kartick,Kartick,Kartick,"""Kartick"" new management director manager Dooars",normal
+gs-dooars-kartick,Kartick,Kartick,"""Kartick"" closed suspended workers Dooars",normal
 gs-dooars-kathaldhura,Kathaldhura,Kathaldhura,"""Kathaldhura"" owner company acquisition sale lease Dooars",high
 gs-dooars-kathaldhura,Kathaldhura,Kathaldhura,"""Kathaldhura"" reopened production factory active Dooars",high
 gs-dooars-kathaldhura,Kathaldhura,Kathaldhura,"""Kathaldhura"" new management director manager Dooars",high
@@ -351,10 +371,10 @@ gs-dooars-kumlai,Kumlai,Kumlai,"""Kumlai"" owner company acquisition sale lease 
 gs-dooars-kumlai,Kumlai,Kumlai,"""Kumlai"" reopened production factory active Dooars",normal
 gs-dooars-kumlai,Kumlai,Kumlai,"""Kumlai"" new management director manager Dooars",normal
 gs-dooars-kumlai,Kumlai,Kumlai,"""Kumlai"" closed suspended workers Dooars",normal
-gs-dooars-kurti,Kurti,Kurti,"""Kurti"" owner company acquisition sale lease Dooars",high
-gs-dooars-kurti,Kurti,Kurti,"""Kurti"" reopened production factory active Dooars",high
-gs-dooars-kurti,Kurti,Kurti,"""Kurti"" new management director manager Dooars",high
-gs-dooars-kurti,Kurti,Kurti,"""Kurti"" closed suspended workers Dooars",high
+gs-dooars-kurti,Kurti,Kurti,"""Kurti"" owner company acquisition sale lease Dooars",normal
+gs-dooars-kurti,Kurti,Kurti,"""Kurti"" reopened production factory active Dooars",normal
+gs-dooars-kurti,Kurti,Kurti,"""Kurti"" new management director manager Dooars",normal
+gs-dooars-kurti,Kurti,Kurti,"""Kurti"" closed suspended workers Dooars",normal
 gs-dooars-lakhikanta,Lakhikanta,Lakhikanta,"""Lakhikanta"" owner company acquisition sale lease Dooars",high
 gs-dooars-lakhikanta,Lakhikanta,Lakhikanta,"""Lakhikanta"" reopened production factory active Dooars",high
 gs-dooars-lakhikanta,Lakhikanta,Lakhikanta,"""Lakhikanta"" new management director manager Dooars",high
@@ -383,10 +403,10 @@ gs-dooars-lessriver,Lessriver,Leesh River Tea Garden,"""Leesh River Tea Garden""
 gs-dooars-lessriver,Lessriver,Leesh River Tea Garden,"""Leesh River Tea Garden"" reopened production factory active Dooars",normal
 gs-dooars-lessriver,Lessriver,Leesh River Tea Garden,"""Leesh River Tea Garden"" new management director manager Dooars",normal
 gs-dooars-lessriver,Lessriver,Leesh River Tea Garden,"""Leesh River Tea Garden"" closed suspended workers Dooars",normal
-gs-dooars-looksun,Looksun,Looksun,"""Looksun"" owner company acquisition sale lease Dooars",high
-gs-dooars-looksun,Looksun,Looksun,"""Looksun"" reopened production factory active Dooars",high
-gs-dooars-looksun,Looksun,Looksun,"""Looksun"" new management director manager Dooars",high
-gs-dooars-looksun,Looksun,Looksun,"""Looksun"" closed suspended workers Dooars",high
+gs-dooars-looksun,Looksan,Looksun,"""Looksun"" owner company acquisition sale lease Dooars",normal
+gs-dooars-looksun,Looksan,Looksun,"""Looksun"" reopened production factory active Dooars",normal
+gs-dooars-looksun,Looksan,Looksun,"""Looksun"" new management director manager Dooars",normal
+gs-dooars-looksun,Looksan,Looksun,"""Looksun"" closed suspended workers Dooars",normal
 gs-dooars-madhu,Madhu,Madhu,"""Madhu"" owner company acquisition sale lease Dooars",high
 gs-dooars-madhu,Madhu,Madhu,"""Madhu"" reopened production factory active Dooars",high
 gs-dooars-madhu,Madhu,Madhu,"""Madhu"" new management director manager Dooars",high
@@ -447,14 +467,14 @@ gs-dooars-meenglass,Meenglass,Meenglas Tea Garden,"""Meenglas Tea Garden"" owner
 gs-dooars-meenglass,Meenglass,Meenglas Tea Garden,"""Meenglas Tea Garden"" reopened production factory active Dooars",normal
 gs-dooars-meenglass,Meenglass,Meenglas Tea Garden,"""Meenglas Tea Garden"" new management director manager Dooars",normal
 gs-dooars-meenglass,Meenglass,Meenglas Tea Garden,"""Meenglas Tea Garden"" closed suspended workers Dooars",normal
-gs-dooars-mogalkata,Mogalkata,Mogalkata,"""Mogalkata"" owner company acquisition sale lease Dooars",high
-gs-dooars-mogalkata,Mogalkata,Mogalkata,"""Mogalkata"" reopened production factory active Dooars",high
-gs-dooars-mogalkata,Mogalkata,Mogalkata,"""Mogalkata"" new management director manager Dooars",high
-gs-dooars-mogalkata,Mogalkata,Mogalkata,"""Mogalkata"" closed suspended workers Dooars",high
-gs-dooars-mogalkata,Mogalkata,Mogulkata Tea Estate,"""Mogulkata Tea Estate"" owner company acquisition sale lease Dooars",high
-gs-dooars-mogalkata,Mogalkata,Mogulkata Tea Estate,"""Mogulkata Tea Estate"" reopened production factory active Dooars",high
-gs-dooars-mogalkata,Mogalkata,Mogulkata Tea Estate,"""Mogulkata Tea Estate"" new management director manager Dooars",high
-gs-dooars-mogalkata,Mogalkata,Mogulkata Tea Estate,"""Mogulkata Tea Estate"" closed suspended workers Dooars",high
+gs-dooars-mogalkata,Mogulkata,Mogalkata,"""Mogalkata"" owner company acquisition sale lease Dooars",normal
+gs-dooars-mogalkata,Mogulkata,Mogalkata,"""Mogalkata"" reopened production factory active Dooars",normal
+gs-dooars-mogalkata,Mogulkata,Mogalkata,"""Mogalkata"" new management director manager Dooars",normal
+gs-dooars-mogalkata,Mogulkata,Mogalkata,"""Mogalkata"" closed suspended workers Dooars",normal
+gs-dooars-mogalkata,Mogulkata,Mogulkata Tea Estate,"""Mogulkata Tea Estate"" owner company acquisition sale lease Dooars",normal
+gs-dooars-mogalkata,Mogulkata,Mogulkata Tea Estate,"""Mogulkata Tea Estate"" reopened production factory active Dooars",normal
+gs-dooars-mogalkata,Mogulkata,Mogulkata Tea Estate,"""Mogulkata Tea Estate"" new management director manager Dooars",normal
+gs-dooars-mogalkata,Mogulkata,Mogulkata Tea Estate,"""Mogulkata Tea Estate"" closed suspended workers Dooars",normal
 gs-dooars-moraghat,Moraghat,Moraghat,"""Moraghat"" owner company acquisition sale lease Dooars",high
 gs-dooars-moraghat,Moraghat,Moraghat,"""Moraghat"" reopened production factory active Dooars",high
 gs-dooars-moraghat,Moraghat,Moraghat,"""Moraghat"" new management director manager Dooars",high
@@ -507,10 +527,14 @@ gs-dooars-nimtijhora,Nimtijhora,Nimtijhora,"""Nimtijhora"" owner company acquisi
 gs-dooars-nimtijhora,Nimtijhora,Nimtijhora,"""Nimtijhora"" reopened production factory active Dooars",high
 gs-dooars-nimtijhora,Nimtijhora,Nimtijhora,"""Nimtijhora"" new management director manager Dooars",high
 gs-dooars-nimtijhora,Nimtijhora,Nimtijhora,"""Nimtijhora"" closed suspended workers Dooars",high
-gs-dooars-nowera-nuddy,Nowera Nuddy,Nowera Nuddy,"""Nowera Nuddy"" owner company acquisition sale lease Dooars",high
-gs-dooars-nowera-nuddy,Nowera Nuddy,Nowera Nuddy,"""Nowera Nuddy"" reopened production factory active Dooars",high
-gs-dooars-nowera-nuddy,Nowera Nuddy,Nowera Nuddy,"""Nowera Nuddy"" new management director manager Dooars",high
-gs-dooars-nowera-nuddy,Nowera Nuddy,Nowera Nuddy,"""Nowera Nuddy"" closed suspended workers Dooars",high
+gs-dooars-nowera-nuddy,Nowera Nuddy,Nowera Nuddy,"""Nowera Nuddy"" owner company acquisition sale lease Dooars",normal
+gs-dooars-nowera-nuddy,Nowera Nuddy,Nowera Nuddy,"""Nowera Nuddy"" reopened production factory active Dooars",normal
+gs-dooars-nowera-nuddy,Nowera Nuddy,Nowera Nuddy,"""Nowera Nuddy"" new management director manager Dooars",normal
+gs-dooars-nowera-nuddy,Nowera Nuddy,Nowera Nuddy,"""Nowera Nuddy"" closed suspended workers Dooars",normal
+gs-dooars-nowera-nuddy,Nowera Nuddy,Neora Nuddy,"""Neora Nuddy"" owner company acquisition sale lease Dooars",normal
+gs-dooars-nowera-nuddy,Nowera Nuddy,Neora Nuddy,"""Neora Nuddy"" reopened production factory active Dooars",normal
+gs-dooars-nowera-nuddy,Nowera Nuddy,Neora Nuddy,"""Neora Nuddy"" new management director manager Dooars",normal
+gs-dooars-nowera-nuddy,Nowera Nuddy,Neora Nuddy,"""Neora Nuddy"" closed suspended workers Dooars",normal
 gs-dooars-oodlabari,Oodlabari,Oodlabari,"""Oodlabari"" owner company acquisition sale lease Dooars",high
 gs-dooars-oodlabari,Oodlabari,Oodlabari,"""Oodlabari"" reopened production factory active Dooars",high
 gs-dooars-oodlabari,Oodlabari,Oodlabari,"""Oodlabari"" new management director manager Dooars",high
@@ -547,10 +571,10 @@ gs-dooars-rahimabad,Rahimabad,Rahimabad,"""Rahimabad"" owner company acquisition
 gs-dooars-rahimabad,Rahimabad,Rahimabad,"""Rahimabad"" reopened production factory active Dooars",high
 gs-dooars-rahimabad,Rahimabad,Rahimabad,"""Rahimabad"" new management director manager Dooars",high
 gs-dooars-rahimabad,Rahimabad,Rahimabad,"""Rahimabad"" closed suspended workers Dooars",high
-gs-dooars-rahimpur,Rahimpur,Rahimpur,"""Rahimpur"" owner company acquisition sale lease Dooars",high
-gs-dooars-rahimpur,Rahimpur,Rahimpur,"""Rahimpur"" reopened production factory active Dooars",high
-gs-dooars-rahimpur,Rahimpur,Rahimpur,"""Rahimpur"" new management director manager Dooars",high
-gs-dooars-rahimpur,Rahimpur,Rahimpur,"""Rahimpur"" closed suspended workers Dooars",high
+gs-dooars-rahimpur,Rahimpur,Rahimpur,"""Rahimpur"" owner company acquisition sale lease Dooars",normal
+gs-dooars-rahimpur,Rahimpur,Rahimpur,"""Rahimpur"" reopened production factory active Dooars",normal
+gs-dooars-rahimpur,Rahimpur,Rahimpur,"""Rahimpur"" new management director manager Dooars",normal
+gs-dooars-rahimpur,Rahimpur,Rahimpur,"""Rahimpur"" closed suspended workers Dooars",normal
 gs-dooars-raipur,Raipur,Raipur,"""Raipur"" owner company acquisition sale lease Dooars",normal
 gs-dooars-raipur,Raipur,Raipur,"""Raipur"" reopened production factory active Dooars",normal
 gs-dooars-raipur,Raipur,Raipur,"""Raipur"" new management director manager Dooars",normal
@@ -559,14 +583,14 @@ gs-dooars-raja,Raja,Raja,"""Raja"" owner company acquisition sale lease Dooars",
 gs-dooars-raja,Raja,Raja,"""Raja"" reopened production factory active Dooars",high
 gs-dooars-raja,Raja,Raja,"""Raja"" new management director manager Dooars",high
 gs-dooars-raja,Raja,Raja,"""Raja"" closed suspended workers Dooars",high
-gs-dooars-rheabari,Rheabari,Rheabari,"""Rheabari"" owner company acquisition sale lease Dooars",high
-gs-dooars-rheabari,Rheabari,Rheabari,"""Rheabari"" reopened production factory active Dooars",high
-gs-dooars-rheabari,Rheabari,Rheabari,"""Rheabari"" new management director manager Dooars",high
-gs-dooars-rheabari,Rheabari,Rheabari,"""Rheabari"" closed suspended workers Dooars",high
-gs-dooars-rydak,Rydak,Rydak,"""Rydak"" owner company acquisition sale lease Dooars",high
-gs-dooars-rydak,Rydak,Rydak,"""Rydak"" reopened production factory active Dooars",high
-gs-dooars-rydak,Rydak,Rydak,"""Rydak"" new management director manager Dooars",high
-gs-dooars-rydak,Rydak,Rydak,"""Rydak"" closed suspended workers Dooars",high
+gs-dooars-rheabari,Rheabari,Rheabari,"""Rheabari"" owner company acquisition sale lease Dooars",normal
+gs-dooars-rheabari,Rheabari,Rheabari,"""Rheabari"" reopened production factory active Dooars",normal
+gs-dooars-rheabari,Rheabari,Rheabari,"""Rheabari"" new management director manager Dooars",normal
+gs-dooars-rheabari,Rheabari,Rheabari,"""Rheabari"" closed suspended workers Dooars",normal
+gs-dooars-rydak,Rydak,Rydak,"""Rydak"" owner company acquisition sale lease Dooars",normal
+gs-dooars-rydak,Rydak,Rydak,"""Rydak"" reopened production factory active Dooars",normal
+gs-dooars-rydak,Rydak,Rydak,"""Rydak"" new management director manager Dooars",normal
+gs-dooars-rydak,Rydak,Rydak,"""Rydak"" closed suspended workers Dooars",normal
 gs-dooars-samsing,Samsing,Samsing,"""Samsing"" owner company acquisition sale lease Dooars",normal
 gs-dooars-samsing,Samsing,Samsing,"""Samsing"" reopened production factory active Dooars",normal
 gs-dooars-samsing,Samsing,Samsing,"""Samsing"" new management director manager Dooars",normal
@@ -615,14 +639,14 @@ gs-dooars-srinathpur,Srinathpur,Srinathpur,"""Srinathpur"" owner company acquisi
 gs-dooars-srinathpur,Srinathpur,Srinathpur,"""Srinathpur"" reopened production factory active Dooars",high
 gs-dooars-srinathpur,Srinathpur,Srinathpur,"""Srinathpur"" new management director manager Dooars",high
 gs-dooars-srinathpur,Srinathpur,Srinathpur,"""Srinathpur"" closed suspended workers Dooars",high
-gs-dooars-subhasini,Subhasini,Subhasini,"""Subhasini"" owner company acquisition sale lease Dooars",high
-gs-dooars-subhasini,Subhasini,Subhasini,"""Subhasini"" reopened production factory active Dooars",high
-gs-dooars-subhasini,Subhasini,Subhasini,"""Subhasini"" new management director manager Dooars",high
-gs-dooars-subhasini,Subhasini,Subhasini,"""Subhasini"" closed suspended workers Dooars",high
-gs-dooars-sylee,Sylee,Sylee,"""Sylee"" owner company acquisition sale lease Dooars",high
-gs-dooars-sylee,Sylee,Sylee,"""Sylee"" reopened production factory active Dooars",high
-gs-dooars-sylee,Sylee,Sylee,"""Sylee"" new management director manager Dooars",high
-gs-dooars-sylee,Sylee,Sylee,"""Sylee"" closed suspended workers Dooars",high
+gs-dooars-subhasini,Subhasini,Subhasini,"""Subhasini"" owner company acquisition sale lease Dooars",normal
+gs-dooars-subhasini,Subhasini,Subhasini,"""Subhasini"" reopened production factory active Dooars",normal
+gs-dooars-subhasini,Subhasini,Subhasini,"""Subhasini"" new management director manager Dooars",normal
+gs-dooars-subhasini,Subhasini,Subhasini,"""Subhasini"" closed suspended workers Dooars",normal
+gs-dooars-sylee,Sylee,Sylee,"""Sylee"" owner company acquisition sale lease Dooars",normal
+gs-dooars-sylee,Sylee,Sylee,"""Sylee"" reopened production factory active Dooars",normal
+gs-dooars-sylee,Sylee,Sylee,"""Sylee"" new management director manager Dooars",normal
+gs-dooars-sylee,Sylee,Sylee,"""Sylee"" closed suspended workers Dooars",normal
 gs-dooars-tasati,Tasati,Tasati,"""Tasati"" owner company acquisition sale lease Dooars",high
 gs-dooars-tasati,Tasati,Tasati,"""Tasati"" reopened production factory active Dooars",high
 gs-dooars-tasati,Tasati,Tasati,"""Tasati"" new management director manager Dooars",high
@@ -639,18 +663,18 @@ gs-dooars-toonbarie,Toonbarie,Toonbarrie Tea Estate,"""Toonbarrie Tea Estate"" o
 gs-dooars-toonbarie,Toonbarie,Toonbarrie Tea Estate,"""Toonbarrie Tea Estate"" reopened production factory active Dooars",high
 gs-dooars-toonbarie,Toonbarie,Toonbarrie Tea Estate,"""Toonbarrie Tea Estate"" new management director manager Dooars",high
 gs-dooars-toonbarie,Toonbarie,Toonbarrie Tea Estate,"""Toonbarrie Tea Estate"" closed suspended workers Dooars",high
-gs-dooars-torsa,Torsa,Torsa,"""Torsa"" owner company acquisition sale lease Dooars",high
-gs-dooars-torsa,Torsa,Torsa,"""Torsa"" reopened production factory active Dooars",high
-gs-dooars-torsa,Torsa,Torsa,"""Torsa"" new management director manager Dooars",high
-gs-dooars-torsa,Torsa,Torsa,"""Torsa"" closed suspended workers Dooars",high
-gs-dooars-torsa,Torsa,Toorsa,"""Toorsa"" owner company acquisition sale lease Dooars",high
-gs-dooars-torsa,Torsa,Toorsa,"""Toorsa"" reopened production factory active Dooars",high
-gs-dooars-torsa,Torsa,Toorsa,"""Toorsa"" new management director manager Dooars",high
-gs-dooars-torsa,Torsa,Toorsa,"""Toorsa"" closed suspended workers Dooars",high
-gs-dooars-torsa,Torsa,Toorsa Tea Estate,"""Toorsa Tea Estate"" owner company acquisition sale lease Dooars",high
-gs-dooars-torsa,Torsa,Toorsa Tea Estate,"""Toorsa Tea Estate"" reopened production factory active Dooars",high
-gs-dooars-torsa,Torsa,Toorsa Tea Estate,"""Toorsa Tea Estate"" new management director manager Dooars",high
-gs-dooars-torsa,Torsa,Toorsa Tea Estate,"""Toorsa Tea Estate"" closed suspended workers Dooars",high
+gs-dooars-torsa,Torsa,Torsa,"""Torsa"" owner company acquisition sale lease Dooars",normal
+gs-dooars-torsa,Torsa,Torsa,"""Torsa"" reopened production factory active Dooars",normal
+gs-dooars-torsa,Torsa,Torsa,"""Torsa"" new management director manager Dooars",normal
+gs-dooars-torsa,Torsa,Torsa,"""Torsa"" closed suspended workers Dooars",normal
+gs-dooars-torsa,Torsa,Toorsa,"""Toorsa"" owner company acquisition sale lease Dooars",normal
+gs-dooars-torsa,Torsa,Toorsa,"""Toorsa"" reopened production factory active Dooars",normal
+gs-dooars-torsa,Torsa,Toorsa,"""Toorsa"" new management director manager Dooars",normal
+gs-dooars-torsa,Torsa,Toorsa,"""Toorsa"" closed suspended workers Dooars",normal
+gs-dooars-torsa,Torsa,Toorsa Tea Estate,"""Toorsa Tea Estate"" owner company acquisition sale lease Dooars",normal
+gs-dooars-torsa,Torsa,Toorsa Tea Estate,"""Toorsa Tea Estate"" reopened production factory active Dooars",normal
+gs-dooars-torsa,Torsa,Toorsa Tea Estate,"""Toorsa Tea Estate"" new management director manager Dooars",normal
+gs-dooars-torsa,Torsa,Toorsa Tea Estate,"""Toorsa Tea Estate"" closed suspended workers Dooars",normal
 gs-dooars-totapara,Totapara,Totapara,"""Totapara"" owner company acquisition sale lease Dooars",high
 gs-dooars-totapara,Totapara,Totapara,"""Totapara"" reopened production factory active Dooars",high
 gs-dooars-totapara,Totapara,Totapara,"""Totapara"" new management director manager Dooars",high
@@ -671,6 +695,14 @@ gs-dooars-washabarie,Washabarie,Washabarie,"""Washabarie"" owner company acquisi
 gs-dooars-washabarie,Washabarie,Washabarie,"""Washabarie"" reopened production factory active Dooars",high
 gs-dooars-washabarie,Washabarie,Washabarie,"""Washabarie"" new management director manager Dooars",high
 gs-dooars-washabarie,Washabarie,Washabarie,"""Washabarie"" closed suspended workers Dooars",high
+gs-dooars-washabarie,Washabarie,Washabarietea,"""Washabarietea"" owner company acquisition sale lease Dooars",high
+gs-dooars-washabarie,Washabarie,Washabarietea,"""Washabarietea"" reopened production factory active Dooars",high
+gs-dooars-washabarie,Washabarie,Washabarietea,"""Washabarietea"" new management director manager Dooars",high
+gs-dooars-washabarie,Washabarie,Washabarietea,"""Washabarietea"" closed suspended workers Dooars",high
+gs-dooars-washabarie,Washabarie,Washabarietea Estate,"""Washabarietea Estate"" owner company acquisition sale lease Dooars",high
+gs-dooars-washabarie,Washabarie,Washabarietea Estate,"""Washabarietea Estate"" reopened production factory active Dooars",high
+gs-dooars-washabarie,Washabarie,Washabarietea Estate,"""Washabarietea Estate"" new management director manager Dooars",high
+gs-dooars-washabarie,Washabarie,Washabarietea Estate,"""Washabarietea Estate"" closed suspended workers Dooars",high
 gs-dooars-yongtong,Yongtong,Yongtong,"""Yongtong"" owner company acquisition sale lease Dooars",high
 gs-dooars-yongtong,Yongtong,Yongtong,"""Yongtong"" reopened production factory active Dooars",high
 gs-dooars-yongtong,Yongtong,Yongtong,"""Yongtong"" new management director manager Dooars",high
@@ -687,18 +719,30 @@ gs-dooars-zurantee,Zurantee,Zurrantee,"""Zurrantee"" owner company acquisition s
 gs-dooars-zurantee,Zurantee,Zurrantee,"""Zurrantee"" reopened production factory active Dooars",high
 gs-dooars-zurantee,Zurantee,Zurrantee,"""Zurrantee"" new management director manager Dooars",high
 gs-dooars-zurantee,Zurantee,Zurrantee,"""Zurrantee"" closed suspended workers Dooars",high
-gs-dooars-chhaophali,Chhaophali Tea Estate,Chhaophali Tea Estate,"""Chhaophali Tea Estate"" owner company acquisition sale lease Dooars",high
-gs-dooars-chhaophali,Chhaophali Tea Estate,Chhaophali Tea Estate,"""Chhaophali Tea Estate"" reopened production factory active Dooars",high
-gs-dooars-chhaophali,Chhaophali Tea Estate,Chhaophali Tea Estate,"""Chhaophali Tea Estate"" new management director manager Dooars",high
-gs-dooars-chhaophali,Chhaophali Tea Estate,Chhaophali Tea Estate,"""Chhaophali Tea Estate"" closed suspended workers Dooars",high
-gs-dooars-chhaophali,Chhaophali Tea Estate,Chhaoaphali TE,"""Chhaoaphali TE"" owner company acquisition sale lease Dooars",high
-gs-dooars-chhaophali,Chhaophali Tea Estate,Chhaoaphali TE,"""Chhaoaphali TE"" reopened production factory active Dooars",high
-gs-dooars-chhaophali,Chhaophali Tea Estate,Chhaoaphali TE,"""Chhaoaphali TE"" new management director manager Dooars",high
-gs-dooars-chhaophali,Chhaophali Tea Estate,Chhaoaphali TE,"""Chhaoaphali TE"" closed suspended workers Dooars",high
-gs-dooars-chulsa,Chulsa Tea Estate,Chulsa Tea Estate,"""Chulsa Tea Estate"" owner company acquisition sale lease Dooars",normal
-gs-dooars-chulsa,Chulsa Tea Estate,Chulsa Tea Estate,"""Chulsa Tea Estate"" reopened production factory active Dooars",normal
-gs-dooars-chulsa,Chulsa Tea Estate,Chulsa Tea Estate,"""Chulsa Tea Estate"" new management director manager Dooars",normal
-gs-dooars-chulsa,Chulsa Tea Estate,Chulsa Tea Estate,"""Chulsa Tea Estate"" closed suspended workers Dooars",normal
+gs-dooars-zurantee,Zurantee,Zurrantee Tea,"""Zurrantee Tea"" owner company acquisition sale lease Dooars",high
+gs-dooars-zurantee,Zurantee,Zurrantee Tea,"""Zurrantee Tea"" reopened production factory active Dooars",high
+gs-dooars-zurantee,Zurantee,Zurrantee Tea,"""Zurrantee Tea"" new management director manager Dooars",high
+gs-dooars-zurantee,Zurantee,Zurrantee Tea,"""Zurrantee Tea"" closed suspended workers Dooars",high
+gs-dooars-chhaophali,Chhaophali,Chhaophali,"""Chhaophali"" owner company acquisition sale lease Dooars",high
+gs-dooars-chhaophali,Chhaophali,Chhaophali,"""Chhaophali"" reopened production factory active Dooars",high
+gs-dooars-chhaophali,Chhaophali,Chhaophali,"""Chhaophali"" new management director manager Dooars",high
+gs-dooars-chhaophali,Chhaophali,Chhaophali,"""Chhaophali"" closed suspended workers Dooars",high
+gs-dooars-chhaophali,Chhaophali,Chhaophali Tea Estate,"""Chhaophali Tea Estate"" owner company acquisition sale lease Dooars",high
+gs-dooars-chhaophali,Chhaophali,Chhaophali Tea Estate,"""Chhaophali Tea Estate"" reopened production factory active Dooars",high
+gs-dooars-chhaophali,Chhaophali,Chhaophali Tea Estate,"""Chhaophali Tea Estate"" new management director manager Dooars",high
+gs-dooars-chhaophali,Chhaophali,Chhaophali Tea Estate,"""Chhaophali Tea Estate"" closed suspended workers Dooars",high
+gs-dooars-chhaophali,Chhaophali,Chhaoaphali TE,"""Chhaoaphali TE"" owner company acquisition sale lease Dooars",high
+gs-dooars-chhaophali,Chhaophali,Chhaoaphali TE,"""Chhaoaphali TE"" reopened production factory active Dooars",high
+gs-dooars-chhaophali,Chhaophali,Chhaoaphali TE,"""Chhaoaphali TE"" new management director manager Dooars",high
+gs-dooars-chhaophali,Chhaophali,Chhaoaphali TE,"""Chhaoaphali TE"" closed suspended workers Dooars",high
+gs-dooars-chulsa,Chulsa,Chulsa,"""Chulsa"" owner company acquisition sale lease Dooars",normal
+gs-dooars-chulsa,Chulsa,Chulsa,"""Chulsa"" reopened production factory active Dooars",normal
+gs-dooars-chulsa,Chulsa,Chulsa,"""Chulsa"" new management director manager Dooars",normal
+gs-dooars-chulsa,Chulsa,Chulsa,"""Chulsa"" closed suspended workers Dooars",normal
+gs-dooars-chulsa,Chulsa,Chulsa Tea Estate,"""Chulsa Tea Estate"" owner company acquisition sale lease Dooars",normal
+gs-dooars-chulsa,Chulsa,Chulsa Tea Estate,"""Chulsa Tea Estate"" reopened production factory active Dooars",normal
+gs-dooars-chulsa,Chulsa,Chulsa Tea Estate,"""Chulsa Tea Estate"" new management director manager Dooars",normal
+gs-dooars-chulsa,Chulsa,Chulsa Tea Estate,"""Chulsa Tea Estate"" closed suspended workers Dooars",normal
 gs-dooars-dagapur,Dagapur,Dagapur,"""Dagapur"" owner company acquisition sale lease Dooars",high
 gs-dooars-dagapur,Dagapur,Dagapur,"""Dagapur"" reopened production factory active Dooars",high
 gs-dooars-dagapur,Dagapur,Dagapur,"""Dagapur"" new management director manager Dooars",high
@@ -707,74 +751,98 @@ gs-dooars-nagaisuree,Nagaisuree,Nagaisuree,"""Nagaisuree"" owner company acquisi
 gs-dooars-nagaisuree,Nagaisuree,Nagaisuree,"""Nagaisuree"" reopened production factory active Dooars",high
 gs-dooars-nagaisuree,Nagaisuree,Nagaisuree,"""Nagaisuree"" new management director manager Dooars",high
 gs-dooars-nagaisuree,Nagaisuree,Nagaisuree,"""Nagaisuree"" closed suspended workers Dooars",high
-gs-dooars-ranicherra,Ranicherra Tea Estate,Ranicherra Tea Estate,"""Ranicherra Tea Estate"" owner company acquisition sale lease Dooars",high
-gs-dooars-ranicherra,Ranicherra Tea Estate,Ranicherra Tea Estate,"""Ranicherra Tea Estate"" reopened production factory active Dooars",high
-gs-dooars-ranicherra,Ranicherra Tea Estate,Ranicherra Tea Estate,"""Ranicherra Tea Estate"" new management director manager Dooars",high
-gs-dooars-ranicherra,Ranicherra Tea Estate,Ranicherra Tea Estate,"""Ranicherra Tea Estate"" closed suspended workers Dooars",high
-gs-dooars-rungamuttee,Rungamuttee Tea Estate,Rungamuttee Tea Estate,"""Rungamuttee Tea Estate"" owner company acquisition sale lease Dooars",high
-gs-dooars-rungamuttee,Rungamuttee Tea Estate,Rungamuttee Tea Estate,"""Rungamuttee Tea Estate"" reopened production factory active Dooars",high
-gs-dooars-rungamuttee,Rungamuttee Tea Estate,Rungamuttee Tea Estate,"""Rungamuttee Tea Estate"" new management director manager Dooars",high
-gs-dooars-rungamuttee,Rungamuttee Tea Estate,Rungamuttee Tea Estate,"""Rungamuttee Tea Estate"" closed suspended workers Dooars",high
-gs-dooars-washabarietea,Washabarietea Estate,Washabarietea Estate,"""Washabarietea Estate"" owner company acquisition sale lease Dooars",high
-gs-dooars-washabarietea,Washabarietea Estate,Washabarietea Estate,"""Washabarietea Estate"" reopened production factory active Dooars",high
-gs-dooars-washabarietea,Washabarietea Estate,Washabarietea Estate,"""Washabarietea Estate"" new management director manager Dooars",high
-gs-dooars-washabarietea,Washabarietea Estate,Washabarietea Estate,"""Washabarietea Estate"" closed suspended workers Dooars",high
-gs-dooars-zurrantee-tea,Zurrantee Tea,Zurrantee Tea,"""Zurrantee Tea"" owner company acquisition sale lease Dooars",high
-gs-dooars-zurrantee-tea,Zurrantee Tea,Zurrantee Tea,"""Zurrantee Tea"" reopened production factory active Dooars",high
-gs-dooars-zurrantee-tea,Zurrantee Tea,Zurrantee Tea,"""Zurrantee Tea"" new management director manager Dooars",high
-gs-dooars-zurrantee-tea,Zurrantee Tea,Zurrantee Tea,"""Zurrantee Tea"" closed suspended workers Dooars",high
+gs-dooars-ranicherra,Ranicherra,Ranicherra,"""Ranicherra"" owner company acquisition sale lease Dooars",high
+gs-dooars-ranicherra,Ranicherra,Ranicherra,"""Ranicherra"" reopened production factory active Dooars",high
+gs-dooars-ranicherra,Ranicherra,Ranicherra,"""Ranicherra"" new management director manager Dooars",high
+gs-dooars-ranicherra,Ranicherra,Ranicherra,"""Ranicherra"" closed suspended workers Dooars",high
+gs-dooars-ranicherra,Ranicherra,Ranicherra Tea Estate,"""Ranicherra Tea Estate"" owner company acquisition sale lease Dooars",high
+gs-dooars-ranicherra,Ranicherra,Ranicherra Tea Estate,"""Ranicherra Tea Estate"" reopened production factory active Dooars",high
+gs-dooars-ranicherra,Ranicherra,Ranicherra Tea Estate,"""Ranicherra Tea Estate"" new management director manager Dooars",high
+gs-dooars-ranicherra,Ranicherra,Ranicherra Tea Estate,"""Ranicherra Tea Estate"" closed suspended workers Dooars",high
+gs-dooars-rungamuttee,Rungamuttee,Rungamuttee,"""Rungamuttee"" owner company acquisition sale lease Dooars",normal
+gs-dooars-rungamuttee,Rungamuttee,Rungamuttee,"""Rungamuttee"" reopened production factory active Dooars",normal
+gs-dooars-rungamuttee,Rungamuttee,Rungamuttee,"""Rungamuttee"" new management director manager Dooars",normal
+gs-dooars-rungamuttee,Rungamuttee,Rungamuttee,"""Rungamuttee"" closed suspended workers Dooars",normal
+gs-dooars-rungamuttee,Rungamuttee,Rungamuttee Tea Estate,"""Rungamuttee Tea Estate"" owner company acquisition sale lease Dooars",normal
+gs-dooars-rungamuttee,Rungamuttee,Rungamuttee Tea Estate,"""Rungamuttee Tea Estate"" reopened production factory active Dooars",normal
+gs-dooars-rungamuttee,Rungamuttee,Rungamuttee Tea Estate,"""Rungamuttee Tea Estate"" new management director manager Dooars",normal
+gs-dooars-rungamuttee,Rungamuttee,Rungamuttee Tea Estate,"""Rungamuttee Tea Estate"" closed suspended workers Dooars",normal
 gs-dooars-joypur,Joypur,Joypur,"""Joypur"" owner company acquisition sale lease Dooars",high
 gs-dooars-joypur,Joypur,Joypur,"""Joypur"" reopened production factory active Dooars",high
 gs-dooars-joypur,Joypur,Joypur,"""Joypur"" new management director manager Dooars",high
 gs-dooars-joypur,Joypur,Joypur,"""Joypur"" closed suspended workers Dooars",high
-gs-dooars-konpakri-agro-industries-p,Konpakri Agro Industries (P),Konpakri Agro Industries (P),"""Konpakri Agro Industries (P)"" owner company acquisition sale lease Dooars",high
-gs-dooars-konpakri-agro-industries-p,Konpakri Agro Industries (P),Konpakri Agro Industries (P),"""Konpakri Agro Industries (P)"" reopened production factory active Dooars",high
-gs-dooars-konpakri-agro-industries-p,Konpakri Agro Industries (P),Konpakri Agro Industries (P),"""Konpakri Agro Industries (P)"" new management director manager Dooars",high
-gs-dooars-konpakri-agro-industries-p,Konpakri Agro Industries (P),Konpakri Agro Industries (P),"""Konpakri Agro Industries (P)"" closed suspended workers Dooars",high
-gs-dooars-konpakri-agro-industries-p,Konpakri Agro Industries (P),Konpakri Agro Industries P LTD,"""Konpakri Agro Industries P LTD"" owner company acquisition sale lease Dooars",high
-gs-dooars-konpakri-agro-industries-p,Konpakri Agro Industries (P),Konpakri Agro Industries P LTD,"""Konpakri Agro Industries P LTD"" reopened production factory active Dooars",high
-gs-dooars-konpakri-agro-industries-p,Konpakri Agro Industries (P),Konpakri Agro Industries P LTD,"""Konpakri Agro Industries P LTD"" new management director manager Dooars",high
-gs-dooars-konpakri-agro-industries-p,Konpakri Agro Industries (P),Konpakri Agro Industries P LTD,"""Konpakri Agro Industries P LTD"" closed suspended workers Dooars",high
-gs-dooars-nandan,Nandan Tea Estate,Nandan Tea Estate,"""Nandan Tea Estate"" owner company acquisition sale lease Dooars",high
-gs-dooars-nandan,Nandan Tea Estate,Nandan Tea Estate,"""Nandan Tea Estate"" reopened production factory active Dooars",high
-gs-dooars-nandan,Nandan Tea Estate,Nandan Tea Estate,"""Nandan Tea Estate"" new management director manager Dooars",high
-gs-dooars-nandan,Nandan Tea Estate,Nandan Tea Estate,"""Nandan Tea Estate"" closed suspended workers Dooars",high
-gs-dooars-nepati-valley,Nepati Valley Tea Estate,Nepati Valley Tea Estate,"""Nepati Valley Tea Estate"" owner company acquisition sale lease Dooars",high
-gs-dooars-nepati-valley,Nepati Valley Tea Estate,Nepati Valley Tea Estate,"""Nepati Valley Tea Estate"" reopened production factory active Dooars",high
-gs-dooars-nepati-valley,Nepati Valley Tea Estate,Nepati Valley Tea Estate,"""Nepati Valley Tea Estate"" new management director manager Dooars",high
-gs-dooars-nepati-valley,Nepati Valley Tea Estate,Nepati Valley Tea Estate,"""Nepati Valley Tea Estate"" closed suspended workers Dooars",high
-gs-dooars-parbati-and-gouranga,Parbati T.E And Gouranga,Parbati T.E And Gouranga,"""Parbati T.E And Gouranga"" owner company acquisition sale lease Dooars",high
-gs-dooars-parbati-and-gouranga,Parbati T.E And Gouranga,Parbati T.E And Gouranga,"""Parbati T.E And Gouranga"" reopened production factory active Dooars",high
-gs-dooars-parbati-and-gouranga,Parbati T.E And Gouranga,Parbati T.E And Gouranga,"""Parbati T.E And Gouranga"" new management director manager Dooars",high
-gs-dooars-parbati-and-gouranga,Parbati T.E And Gouranga,Parbati T.E And Gouranga,"""Parbati T.E And Gouranga"" closed suspended workers Dooars",high
-gs-dooars-chamurchi,Chamurchi Tea Estate,Chamurchi Tea Estate,"""Chamurchi Tea Estate"" owner company acquisition sale lease Dooars",high
-gs-dooars-chamurchi,Chamurchi Tea Estate,Chamurchi Tea Estate,"""Chamurchi Tea Estate"" reopened production factory active Dooars",high
-gs-dooars-chamurchi,Chamurchi Tea Estate,Chamurchi Tea Estate,"""Chamurchi Tea Estate"" new management director manager Dooars",high
-gs-dooars-chamurchi,Chamurchi Tea Estate,Chamurchi Tea Estate,"""Chamurchi Tea Estate"" closed suspended workers Dooars",high
+gs-dooars-konpakri,Konpakri,Konpakri,"""Konpakri"" owner company acquisition sale lease Dooars",high
+gs-dooars-konpakri,Konpakri,Konpakri,"""Konpakri"" reopened production factory active Dooars",high
+gs-dooars-konpakri,Konpakri,Konpakri,"""Konpakri"" new management director manager Dooars",high
+gs-dooars-konpakri,Konpakri,Konpakri,"""Konpakri"" closed suspended workers Dooars",high
+gs-dooars-konpakri,Konpakri,Konpakri Agro Industries (P),"""Konpakri Agro Industries (P)"" owner company acquisition sale lease Dooars",high
+gs-dooars-konpakri,Konpakri,Konpakri Agro Industries (P),"""Konpakri Agro Industries (P)"" reopened production factory active Dooars",high
+gs-dooars-konpakri,Konpakri,Konpakri Agro Industries (P),"""Konpakri Agro Industries (P)"" new management director manager Dooars",high
+gs-dooars-konpakri,Konpakri,Konpakri Agro Industries (P),"""Konpakri Agro Industries (P)"" closed suspended workers Dooars",high
+gs-dooars-konpakri,Konpakri,Konpakri Agro Industries P LTD,"""Konpakri Agro Industries P LTD"" owner company acquisition sale lease Dooars",high
+gs-dooars-konpakri,Konpakri,Konpakri Agro Industries P LTD,"""Konpakri Agro Industries P LTD"" reopened production factory active Dooars",high
+gs-dooars-konpakri,Konpakri,Konpakri Agro Industries P LTD,"""Konpakri Agro Industries P LTD"" new management director manager Dooars",high
+gs-dooars-konpakri,Konpakri,Konpakri Agro Industries P LTD,"""Konpakri Agro Industries P LTD"" closed suspended workers Dooars",high
+gs-dooars-nandan,Nandan,Nandan,"""Nandan"" owner company acquisition sale lease Dooars",high
+gs-dooars-nandan,Nandan,Nandan,"""Nandan"" reopened production factory active Dooars",high
+gs-dooars-nandan,Nandan,Nandan,"""Nandan"" new management director manager Dooars",high
+gs-dooars-nandan,Nandan,Nandan,"""Nandan"" closed suspended workers Dooars",high
+gs-dooars-nandan,Nandan,Nandan Tea Estate,"""Nandan Tea Estate"" owner company acquisition sale lease Dooars",high
+gs-dooars-nandan,Nandan,Nandan Tea Estate,"""Nandan Tea Estate"" reopened production factory active Dooars",high
+gs-dooars-nandan,Nandan,Nandan Tea Estate,"""Nandan Tea Estate"" new management director manager Dooars",high
+gs-dooars-nandan,Nandan,Nandan Tea Estate,"""Nandan Tea Estate"" closed suspended workers Dooars",high
+gs-dooars-nepati-valley,Nepati Valley,Nepati Valley,"""Nepati Valley"" owner company acquisition sale lease Dooars",high
+gs-dooars-nepati-valley,Nepati Valley,Nepati Valley,"""Nepati Valley"" reopened production factory active Dooars",high
+gs-dooars-nepati-valley,Nepati Valley,Nepati Valley,"""Nepati Valley"" new management director manager Dooars",high
+gs-dooars-nepati-valley,Nepati Valley,Nepati Valley,"""Nepati Valley"" closed suspended workers Dooars",high
+gs-dooars-nepati-valley,Nepati Valley,Nepati Valley Tea Estate,"""Nepati Valley Tea Estate"" owner company acquisition sale lease Dooars",high
+gs-dooars-nepati-valley,Nepati Valley,Nepati Valley Tea Estate,"""Nepati Valley Tea Estate"" reopened production factory active Dooars",high
+gs-dooars-nepati-valley,Nepati Valley,Nepati Valley Tea Estate,"""Nepati Valley Tea Estate"" new management director manager Dooars",high
+gs-dooars-nepati-valley,Nepati Valley,Nepati Valley Tea Estate,"""Nepati Valley Tea Estate"" closed suspended workers Dooars",high
+gs-dooars-parbati-and-gouranga,Parbati And Gouranga,Parbati And Gouranga,"""Parbati And Gouranga"" owner company acquisition sale lease Dooars",high
+gs-dooars-parbati-and-gouranga,Parbati And Gouranga,Parbati And Gouranga,"""Parbati And Gouranga"" reopened production factory active Dooars",high
+gs-dooars-parbati-and-gouranga,Parbati And Gouranga,Parbati And Gouranga,"""Parbati And Gouranga"" new management director manager Dooars",high
+gs-dooars-parbati-and-gouranga,Parbati And Gouranga,Parbati And Gouranga,"""Parbati And Gouranga"" closed suspended workers Dooars",high
+gs-dooars-parbati-and-gouranga,Parbati And Gouranga,Parbati T.E And Gouranga,"""Parbati T.E And Gouranga"" owner company acquisition sale lease Dooars",high
+gs-dooars-parbati-and-gouranga,Parbati And Gouranga,Parbati T.E And Gouranga,"""Parbati T.E And Gouranga"" reopened production factory active Dooars",high
+gs-dooars-parbati-and-gouranga,Parbati And Gouranga,Parbati T.E And Gouranga,"""Parbati T.E And Gouranga"" new management director manager Dooars",high
+gs-dooars-parbati-and-gouranga,Parbati And Gouranga,Parbati T.E And Gouranga,"""Parbati T.E And Gouranga"" closed suspended workers Dooars",high
+gs-dooars-chamurchi,Chamurchi,Chamurchi,"""Chamurchi"" owner company acquisition sale lease Dooars",high
+gs-dooars-chamurchi,Chamurchi,Chamurchi,"""Chamurchi"" reopened production factory active Dooars",high
+gs-dooars-chamurchi,Chamurchi,Chamurchi,"""Chamurchi"" new management director manager Dooars",high
+gs-dooars-chamurchi,Chamurchi,Chamurchi,"""Chamurchi"" closed suspended workers Dooars",high
+gs-dooars-chamurchi,Chamurchi,Chamurchi Tea Estate,"""Chamurchi Tea Estate"" owner company acquisition sale lease Dooars",high
+gs-dooars-chamurchi,Chamurchi,Chamurchi Tea Estate,"""Chamurchi Tea Estate"" reopened production factory active Dooars",high
+gs-dooars-chamurchi,Chamurchi,Chamurchi Tea Estate,"""Chamurchi Tea Estate"" new management director manager Dooars",high
+gs-dooars-chamurchi,Chamurchi,Chamurchi Tea Estate,"""Chamurchi Tea Estate"" closed suspended workers Dooars",high
 gs-dooars-chengmari,Chengmari,Chengmari,"""Chengmari"" owner company acquisition sale lease Dooars",high
 gs-dooars-chengmari,Chengmari,Chengmari,"""Chengmari"" reopened production factory active Dooars",high
 gs-dooars-chengmari,Chengmari,Chengmari,"""Chengmari"" new management director manager Dooars",high
 gs-dooars-chengmari,Chengmari,Chengmari,"""Chengmari"" closed suspended workers Dooars",high
-gs-dooars-diana,Diana Tea Estate,Diana Tea Estate,"""Diana Tea Estate"" owner company acquisition sale lease Dooars",high
-gs-dooars-diana,Diana Tea Estate,Diana Tea Estate,"""Diana Tea Estate"" reopened production factory active Dooars",high
-gs-dooars-diana,Diana Tea Estate,Diana Tea Estate,"""Diana Tea Estate"" new management director manager Dooars",high
-gs-dooars-diana,Diana Tea Estate,Diana Tea Estate,"""Diana Tea Estate"" closed suspended workers Dooars",high
-gs-dooars-ghatia,Ghatia Tea Estate,Ghatia Tea Estate,"""Ghatia Tea Estate"" owner company acquisition sale lease Dooars",high
-gs-dooars-ghatia,Ghatia Tea Estate,Ghatia Tea Estate,"""Ghatia Tea Estate"" reopened production factory active Dooars",high
-gs-dooars-ghatia,Ghatia Tea Estate,Ghatia Tea Estate,"""Ghatia Tea Estate"" new management director manager Dooars",high
-gs-dooars-ghatia,Ghatia Tea Estate,Ghatia Tea Estate,"""Ghatia Tea Estate"" closed suspended workers Dooars",high
+gs-dooars-ghatia,Ghatia,Ghatia,"""Ghatia"" owner company acquisition sale lease Dooars",high
+gs-dooars-ghatia,Ghatia,Ghatia,"""Ghatia"" reopened production factory active Dooars",high
+gs-dooars-ghatia,Ghatia,Ghatia,"""Ghatia"" new management director manager Dooars",high
+gs-dooars-ghatia,Ghatia,Ghatia,"""Ghatia"" closed suspended workers Dooars",high
+gs-dooars-ghatia,Ghatia,Ghatia Tea Estate,"""Ghatia Tea Estate"" owner company acquisition sale lease Dooars",high
+gs-dooars-ghatia,Ghatia,Ghatia Tea Estate,"""Ghatia Tea Estate"" reopened production factory active Dooars",high
+gs-dooars-ghatia,Ghatia,Ghatia Tea Estate,"""Ghatia Tea Estate"" new management director manager Dooars",high
+gs-dooars-ghatia,Ghatia,Ghatia Tea Estate,"""Ghatia Tea Estate"" closed suspended workers Dooars",high
 gs-dooars-hilla,Hilla,Hilla,"""Hilla"" owner company acquisition sale lease Dooars",high
 gs-dooars-hilla,Hilla,Hilla,"""Hilla"" reopened production factory active Dooars",high
 gs-dooars-hilla,Hilla,Hilla,"""Hilla"" new management director manager Dooars",high
 gs-dooars-hilla,Hilla,Hilla,"""Hilla"" closed suspended workers Dooars",high
-gs-dooars-katalguri,Katalguri Tea Estate,Katalguri Tea Estate,"""Katalguri Tea Estate"" owner company acquisition sale lease Dooars",high
-gs-dooars-katalguri,Katalguri Tea Estate,Katalguri Tea Estate,"""Katalguri Tea Estate"" reopened production factory active Dooars",high
-gs-dooars-katalguri,Katalguri Tea Estate,Katalguri Tea Estate,"""Katalguri Tea Estate"" new management director manager Dooars",high
-gs-dooars-katalguri,Katalguri Tea Estate,Katalguri Tea Estate,"""Katalguri Tea Estate"" closed suspended workers Dooars",high
-gs-dooars-nya-sylee,Nya Sylee,Nya Sylee,"""Nya Sylee"" owner company acquisition sale lease Dooars",high
-gs-dooars-nya-sylee,Nya Sylee,Nya Sylee,"""Nya Sylee"" reopened production factory active Dooars",high
-gs-dooars-nya-sylee,Nya Sylee,Nya Sylee,"""Nya Sylee"" new management director manager Dooars",high
-gs-dooars-nya-sylee,Nya Sylee,Nya Sylee,"""Nya Sylee"" closed suspended workers Dooars",high
+gs-dooars-katalguri,Katalguri,Katalguri,"""Katalguri"" owner company acquisition sale lease Dooars",high
+gs-dooars-katalguri,Katalguri,Katalguri,"""Katalguri"" reopened production factory active Dooars",high
+gs-dooars-katalguri,Katalguri,Katalguri,"""Katalguri"" new management director manager Dooars",high
+gs-dooars-katalguri,Katalguri,Katalguri,"""Katalguri"" closed suspended workers Dooars",high
+gs-dooars-katalguri,Katalguri,Katalguri Tea Estate,"""Katalguri Tea Estate"" owner company acquisition sale lease Dooars",high
+gs-dooars-katalguri,Katalguri,Katalguri Tea Estate,"""Katalguri Tea Estate"" reopened production factory active Dooars",high
+gs-dooars-katalguri,Katalguri,Katalguri Tea Estate,"""Katalguri Tea Estate"" new management director manager Dooars",high
+gs-dooars-katalguri,Katalguri,Katalguri Tea Estate,"""Katalguri Tea Estate"" closed suspended workers Dooars",high
+gs-dooars-nya-sylee,Nya Sylee,Nya Sylee,"""Nya Sylee"" owner company acquisition sale lease Dooars",normal
+gs-dooars-nya-sylee,Nya Sylee,Nya Sylee,"""Nya Sylee"" reopened production factory active Dooars",normal
+gs-dooars-nya-sylee,Nya Sylee,Nya Sylee,"""Nya Sylee"" new management director manager Dooars",normal
+gs-dooars-nya-sylee,Nya Sylee,Nya Sylee,"""Nya Sylee"" closed suspended workers Dooars",normal
 gs-dooars-red-bank,Red Bank,Red Bank,"""Red Bank"" owner company acquisition sale lease Dooars",high
 gs-dooars-red-bank,Red Bank,Red Bank,"""Red Bank"" reopened production factory active Dooars",high
 gs-dooars-red-bank,Red Bank,Red Bank,"""Red Bank"" new management director manager Dooars",high
@@ -791,74 +859,118 @@ gs-dooars-surendra-nagar,Surendra Nagar,Surendranagar,"""Surendranagar"" owner c
 gs-dooars-surendra-nagar,Surendra Nagar,Surendranagar,"""Surendranagar"" reopened production factory active Dooars",high
 gs-dooars-surendra-nagar,Surendra Nagar,Surendranagar,"""Surendranagar"" new management director manager Dooars",high
 gs-dooars-surendra-nagar,Surendra Nagar,Surendranagar,"""Surendranagar"" closed suspended workers Dooars",high
-gs-dooars-atiabari,Atiabari Tea Estate,Atiabari Tea Estate,"""Atiabari Tea Estate"" owner company acquisition sale lease Dooars",high
-gs-dooars-atiabari,Atiabari Tea Estate,Atiabari Tea Estate,"""Atiabari Tea Estate"" reopened production factory active Dooars",high
-gs-dooars-atiabari,Atiabari Tea Estate,Atiabari Tea Estate,"""Atiabari Tea Estate"" new management director manager Dooars",high
-gs-dooars-atiabari,Atiabari Tea Estate,Atiabari Tea Estate,"""Atiabari Tea Estate"" closed suspended workers Dooars",high
-gs-dooars-kalchini,Kalchini T E,Kalchini T E,"""Kalchini T E"" owner company acquisition sale lease Dooars",normal
-gs-dooars-kalchini,Kalchini T E,Kalchini T E,"""Kalchini T E"" reopened production factory active Dooars",normal
-gs-dooars-kalchini,Kalchini T E,Kalchini T E,"""Kalchini T E"" new management director manager Dooars",normal
-gs-dooars-kalchini,Kalchini T E,Kalchini T E,"""Kalchini T E"" closed suspended workers Dooars",normal
-gs-dooars-merico,Merico Tea Estate,Merico Tea Estate,"""Merico Tea Estate"" owner company acquisition sale lease Dooars",high
-gs-dooars-merico,Merico Tea Estate,Merico Tea Estate,"""Merico Tea Estate"" reopened production factory active Dooars",high
-gs-dooars-merico,Merico Tea Estate,Merico Tea Estate,"""Merico Tea Estate"" new management director manager Dooars",high
-gs-dooars-merico,Merico Tea Estate,Merico Tea Estate,"""Merico Tea Estate"" closed suspended workers Dooars",high
-gs-dooars-rajahbhat,Rajahbhat Tea Estate,Rajahbhat Tea Estate,"""Rajahbhat Tea Estate"" owner company acquisition sale lease Dooars",high
-gs-dooars-rajahbhat,Rajahbhat Tea Estate,Rajahbhat Tea Estate,"""Rajahbhat Tea Estate"" reopened production factory active Dooars",high
-gs-dooars-rajahbhat,Rajahbhat Tea Estate,Rajahbhat Tea Estate,"""Rajahbhat Tea Estate"" new management director manager Dooars",high
-gs-dooars-rajahbhat,Rajahbhat Tea Estate,Rajahbhat Tea Estate,"""Rajahbhat Tea Estate"" closed suspended workers Dooars",high
-gs-dooars-buds,Buds Tea Estate,Buds Tea Estate,"""Buds Tea Estate"" owner company acquisition sale lease Dooars",high
-gs-dooars-buds,Buds Tea Estate,Buds Tea Estate,"""Buds Tea Estate"" reopened production factory active Dooars",high
-gs-dooars-buds,Buds Tea Estate,Buds Tea Estate,"""Buds Tea Estate"" new management director manager Dooars",high
-gs-dooars-buds,Buds Tea Estate,Buds Tea Estate,"""Buds Tea Estate"" closed suspended workers Dooars",high
-gs-dooars-sonar-bangla-tea-co-p-ltd,Sonar Bangla Tea Co (P) LTD,Sonar Bangla Tea Co (P) LTD,"""Sonar Bangla Tea Co (P) LTD"" owner company acquisition sale lease Dooars",high
-gs-dooars-sonar-bangla-tea-co-p-ltd,Sonar Bangla Tea Co (P) LTD,Sonar Bangla Tea Co (P) LTD,"""Sonar Bangla Tea Co (P) LTD"" reopened production factory active Dooars",high
-gs-dooars-sonar-bangla-tea-co-p-ltd,Sonar Bangla Tea Co (P) LTD,Sonar Bangla Tea Co (P) LTD,"""Sonar Bangla Tea Co (P) LTD"" new management director manager Dooars",high
-gs-dooars-sonar-bangla-tea-co-p-ltd,Sonar Bangla Tea Co (P) LTD,Sonar Bangla Tea Co (P) LTD,"""Sonar Bangla Tea Co (P) LTD"" closed suspended workers Dooars",high
-gs-dooars-trisakti,Trisakti Tea Estate,Trisakti Tea Estate,"""Trisakti Tea Estate"" owner company acquisition sale lease Dooars",high
-gs-dooars-trisakti,Trisakti Tea Estate,Trisakti Tea Estate,"""Trisakti Tea Estate"" reopened production factory active Dooars",high
-gs-dooars-trisakti,Trisakti Tea Estate,Trisakti Tea Estate,"""Trisakti Tea Estate"" new management director manager Dooars",high
-gs-dooars-trisakti,Trisakti Tea Estate,Trisakti Tea Estate,"""Trisakti Tea Estate"" closed suspended workers Dooars",high
-gs-dooars-bundapani,Bundapani Tea Garden,Bundapani Tea Garden,"""Bundapani Tea Garden"" owner company acquisition sale lease Dooars",high
-gs-dooars-bundapani,Bundapani Tea Garden,Bundapani Tea Garden,"""Bundapani Tea Garden"" reopened production factory active Dooars",high
-gs-dooars-bundapani,Bundapani Tea Garden,Bundapani Tea Garden,"""Bundapani Tea Garden"" new management director manager Dooars",high
-gs-dooars-bundapani,Bundapani Tea Garden,Bundapani Tea Garden,"""Bundapani Tea Garden"" closed suspended workers Dooars",high
-gs-dooars-dahuk-valley,Dahuk Valley Tea Estate,Dahuk Valley Tea Estate,"""Dahuk Valley Tea Estate"" owner company acquisition sale lease Dooars",high
-gs-dooars-dahuk-valley,Dahuk Valley Tea Estate,Dahuk Valley Tea Estate,"""Dahuk Valley Tea Estate"" reopened production factory active Dooars",high
-gs-dooars-dahuk-valley,Dahuk Valley Tea Estate,Dahuk Valley Tea Estate,"""Dahuk Valley Tea Estate"" new management director manager Dooars",high
-gs-dooars-dahuk-valley,Dahuk Valley Tea Estate,Dahuk Valley Tea Estate,"""Dahuk Valley Tea Estate"" closed suspended workers Dooars",high
-gs-dooars-garganda-tae,Garganda Tae Estate,Garganda Tae Estate,"""Garganda Tae Estate"" owner company acquisition sale lease Dooars",high
-gs-dooars-garganda-tae,Garganda Tae Estate,Garganda Tae Estate,"""Garganda Tae Estate"" reopened production factory active Dooars",high
-gs-dooars-garganda-tae,Garganda Tae Estate,Garganda Tae Estate,"""Garganda Tae Estate"" new management director manager Dooars",high
-gs-dooars-garganda-tae,Garganda Tae Estate,Garganda Tae Estate,"""Garganda Tae Estate"" closed suspended workers Dooars",high
-gs-dooars-makrapara,Makrapara Tea Estate,Makrapara Tea Estate,"""Makrapara Tea Estate"" owner company acquisition sale lease Dooars",high
-gs-dooars-makrapara,Makrapara Tea Estate,Makrapara Tea Estate,"""Makrapara Tea Estate"" reopened production factory active Dooars",high
-gs-dooars-makrapara,Makrapara Tea Estate,Makrapara Tea Estate,"""Makrapara Tea Estate"" new management director manager Dooars",high
-gs-dooars-makrapara,Makrapara Tea Estate,Makrapara Tea Estate,"""Makrapara Tea Estate"" closed suspended workers Dooars",high
+gs-dooars-atiabari,Atiabari,Atiabari,"""Atiabari"" owner company acquisition sale lease Dooars",high
+gs-dooars-atiabari,Atiabari,Atiabari,"""Atiabari"" reopened production factory active Dooars",high
+gs-dooars-atiabari,Atiabari,Atiabari,"""Atiabari"" new management director manager Dooars",high
+gs-dooars-atiabari,Atiabari,Atiabari,"""Atiabari"" closed suspended workers Dooars",high
+gs-dooars-atiabari,Atiabari,Atiabari Tea Estate,"""Atiabari Tea Estate"" owner company acquisition sale lease Dooars",high
+gs-dooars-atiabari,Atiabari,Atiabari Tea Estate,"""Atiabari Tea Estate"" reopened production factory active Dooars",high
+gs-dooars-atiabari,Atiabari,Atiabari Tea Estate,"""Atiabari Tea Estate"" new management director manager Dooars",high
+gs-dooars-atiabari,Atiabari,Atiabari Tea Estate,"""Atiabari Tea Estate"" closed suspended workers Dooars",high
+gs-dooars-kalchini,Kalchini,Kalchini,"""Kalchini"" owner company acquisition sale lease Dooars",normal
+gs-dooars-kalchini,Kalchini,Kalchini,"""Kalchini"" reopened production factory active Dooars",normal
+gs-dooars-kalchini,Kalchini,Kalchini,"""Kalchini"" new management director manager Dooars",normal
+gs-dooars-kalchini,Kalchini,Kalchini,"""Kalchini"" closed suspended workers Dooars",normal
+gs-dooars-kalchini,Kalchini,Kalchini T E,"""Kalchini T E"" owner company acquisition sale lease Dooars",normal
+gs-dooars-kalchini,Kalchini,Kalchini T E,"""Kalchini T E"" reopened production factory active Dooars",normal
+gs-dooars-kalchini,Kalchini,Kalchini T E,"""Kalchini T E"" new management director manager Dooars",normal
+gs-dooars-kalchini,Kalchini,Kalchini T E,"""Kalchini T E"" closed suspended workers Dooars",normal
+gs-dooars-rajahbhat,Rajahbhat,Rajahbhat,"""Rajahbhat"" owner company acquisition sale lease Dooars",high
+gs-dooars-rajahbhat,Rajahbhat,Rajahbhat,"""Rajahbhat"" reopened production factory active Dooars",high
+gs-dooars-rajahbhat,Rajahbhat,Rajahbhat,"""Rajahbhat"" new management director manager Dooars",high
+gs-dooars-rajahbhat,Rajahbhat,Rajahbhat,"""Rajahbhat"" closed suspended workers Dooars",high
+gs-dooars-rajahbhat,Rajahbhat,Rajahbhat Tea Estate,"""Rajahbhat Tea Estate"" owner company acquisition sale lease Dooars",high
+gs-dooars-rajahbhat,Rajahbhat,Rajahbhat Tea Estate,"""Rajahbhat Tea Estate"" reopened production factory active Dooars",high
+gs-dooars-rajahbhat,Rajahbhat,Rajahbhat Tea Estate,"""Rajahbhat Tea Estate"" new management director manager Dooars",high
+gs-dooars-rajahbhat,Rajahbhat,Rajahbhat Tea Estate,"""Rajahbhat Tea Estate"" closed suspended workers Dooars",high
+gs-dooars-buds,Buds,Buds,"""Buds"" owner company acquisition sale lease Dooars",high
+gs-dooars-buds,Buds,Buds,"""Buds"" reopened production factory active Dooars",high
+gs-dooars-buds,Buds,Buds,"""Buds"" new management director manager Dooars",high
+gs-dooars-buds,Buds,Buds,"""Buds"" closed suspended workers Dooars",high
+gs-dooars-buds,Buds,Buds Tea Estate,"""Buds Tea Estate"" owner company acquisition sale lease Dooars",high
+gs-dooars-buds,Buds,Buds Tea Estate,"""Buds Tea Estate"" reopened production factory active Dooars",high
+gs-dooars-buds,Buds,Buds Tea Estate,"""Buds Tea Estate"" new management director manager Dooars",high
+gs-dooars-buds,Buds,Buds Tea Estate,"""Buds Tea Estate"" closed suspended workers Dooars",high
+gs-dooars-sonar-bangla,Sonar Bangla,Sonar Bangla,"""Sonar Bangla"" owner company acquisition sale lease Dooars",high
+gs-dooars-sonar-bangla,Sonar Bangla,Sonar Bangla,"""Sonar Bangla"" reopened production factory active Dooars",high
+gs-dooars-sonar-bangla,Sonar Bangla,Sonar Bangla,"""Sonar Bangla"" new management director manager Dooars",high
+gs-dooars-sonar-bangla,Sonar Bangla,Sonar Bangla,"""Sonar Bangla"" closed suspended workers Dooars",high
+gs-dooars-sonar-bangla,Sonar Bangla,Sonar Bangla Tea Co (P) LTD,"""Sonar Bangla Tea Co (P) LTD"" owner company acquisition sale lease Dooars",high
+gs-dooars-sonar-bangla,Sonar Bangla,Sonar Bangla Tea Co (P) LTD,"""Sonar Bangla Tea Co (P) LTD"" reopened production factory active Dooars",high
+gs-dooars-sonar-bangla,Sonar Bangla,Sonar Bangla Tea Co (P) LTD,"""Sonar Bangla Tea Co (P) LTD"" new management director manager Dooars",high
+gs-dooars-sonar-bangla,Sonar Bangla,Sonar Bangla Tea Co (P) LTD,"""Sonar Bangla Tea Co (P) LTD"" closed suspended workers Dooars",high
+gs-dooars-trisakti,Trisakti,Trisakti,"""Trisakti"" owner company acquisition sale lease Dooars",high
+gs-dooars-trisakti,Trisakti,Trisakti,"""Trisakti"" reopened production factory active Dooars",high
+gs-dooars-trisakti,Trisakti,Trisakti,"""Trisakti"" new management director manager Dooars",high
+gs-dooars-trisakti,Trisakti,Trisakti,"""Trisakti"" closed suspended workers Dooars",high
+gs-dooars-trisakti,Trisakti,Trisakti Tea Estate,"""Trisakti Tea Estate"" owner company acquisition sale lease Dooars",high
+gs-dooars-trisakti,Trisakti,Trisakti Tea Estate,"""Trisakti Tea Estate"" reopened production factory active Dooars",high
+gs-dooars-trisakti,Trisakti,Trisakti Tea Estate,"""Trisakti Tea Estate"" new management director manager Dooars",high
+gs-dooars-trisakti,Trisakti,Trisakti Tea Estate,"""Trisakti Tea Estate"" closed suspended workers Dooars",high
+gs-dooars-bundapani,Bundapani,Bundapani,"""Bundapani"" owner company acquisition sale lease Dooars",high
+gs-dooars-bundapani,Bundapani,Bundapani,"""Bundapani"" reopened production factory active Dooars",high
+gs-dooars-bundapani,Bundapani,Bundapani,"""Bundapani"" new management director manager Dooars",high
+gs-dooars-bundapani,Bundapani,Bundapani,"""Bundapani"" closed suspended workers Dooars",high
+gs-dooars-bundapani,Bundapani,Bundapani Tea Garden,"""Bundapani Tea Garden"" owner company acquisition sale lease Dooars",high
+gs-dooars-bundapani,Bundapani,Bundapani Tea Garden,"""Bundapani Tea Garden"" reopened production factory active Dooars",high
+gs-dooars-bundapani,Bundapani,Bundapani Tea Garden,"""Bundapani Tea Garden"" new management director manager Dooars",high
+gs-dooars-bundapani,Bundapani,Bundapani Tea Garden,"""Bundapani Tea Garden"" closed suspended workers Dooars",high
+gs-dooars-dahuk-valley,Dahuk Valley,Dahuk Valley,"""Dahuk Valley"" owner company acquisition sale lease Dooars",high
+gs-dooars-dahuk-valley,Dahuk Valley,Dahuk Valley,"""Dahuk Valley"" reopened production factory active Dooars",high
+gs-dooars-dahuk-valley,Dahuk Valley,Dahuk Valley,"""Dahuk Valley"" new management director manager Dooars",high
+gs-dooars-dahuk-valley,Dahuk Valley,Dahuk Valley,"""Dahuk Valley"" closed suspended workers Dooars",high
+gs-dooars-dahuk-valley,Dahuk Valley,Dahuk Valley Tea Estate,"""Dahuk Valley Tea Estate"" owner company acquisition sale lease Dooars",high
+gs-dooars-dahuk-valley,Dahuk Valley,Dahuk Valley Tea Estate,"""Dahuk Valley Tea Estate"" reopened production factory active Dooars",high
+gs-dooars-dahuk-valley,Dahuk Valley,Dahuk Valley Tea Estate,"""Dahuk Valley Tea Estate"" new management director manager Dooars",high
+gs-dooars-dahuk-valley,Dahuk Valley,Dahuk Valley Tea Estate,"""Dahuk Valley Tea Estate"" closed suspended workers Dooars",high
+gs-dooars-makrapara,Makrapara,Makrapara,"""Makrapara"" owner company acquisition sale lease Dooars",high
+gs-dooars-makrapara,Makrapara,Makrapara,"""Makrapara"" reopened production factory active Dooars",high
+gs-dooars-makrapara,Makrapara,Makrapara,"""Makrapara"" new management director manager Dooars",high
+gs-dooars-makrapara,Makrapara,Makrapara,"""Makrapara"" closed suspended workers Dooars",high
+gs-dooars-makrapara,Makrapara,Makrapara Tea Estate,"""Makrapara Tea Estate"" owner company acquisition sale lease Dooars",high
+gs-dooars-makrapara,Makrapara,Makrapara Tea Estate,"""Makrapara Tea Estate"" reopened production factory active Dooars",high
+gs-dooars-makrapara,Makrapara,Makrapara Tea Estate,"""Makrapara Tea Estate"" new management director manager Dooars",high
+gs-dooars-makrapara,Makrapara,Makrapara Tea Estate,"""Makrapara Tea Estate"" closed suspended workers Dooars",high
 gs-dooars-mohua,Mohua,Mohua,"""Mohua"" owner company acquisition sale lease Dooars",high
 gs-dooars-mohua,Mohua,Mohua,"""Mohua"" reopened production factory active Dooars",high
 gs-dooars-mohua,Mohua,Mohua,"""Mohua"" new management director manager Dooars",high
 gs-dooars-mohua,Mohua,Mohua,"""Mohua"" closed suspended workers Dooars",high
-gs-dooars-ramjhora,Ramjhora Tea Estate,Ramjhora Tea Estate,"""Ramjhora Tea Estate"" owner company acquisition sale lease Dooars",normal
-gs-dooars-ramjhora,Ramjhora Tea Estate,Ramjhora Tea Estate,"""Ramjhora Tea Estate"" reopened production factory active Dooars",normal
-gs-dooars-ramjhora,Ramjhora Tea Estate,Ramjhora Tea Estate,"""Ramjhora Tea Estate"" new management director manager Dooars",normal
-gs-dooars-ramjhora,Ramjhora Tea Estate,Ramjhora Tea Estate,"""Ramjhora Tea Estate"" closed suspended workers Dooars",normal
-gs-dooars-dalmore,Dalmore Tea Estate,Dalmore Tea Estate,"""Dalmore Tea Estate"" owner company acquisition sale lease Dooars",normal
-gs-dooars-dalmore,Dalmore Tea Estate,Dalmore Tea Estate,"""Dalmore Tea Estate"" reopened production factory active Dooars",normal
-gs-dooars-dalmore,Dalmore Tea Estate,Dalmore Tea Estate,"""Dalmore Tea Estate"" new management director manager Dooars",normal
-gs-dooars-dalmore,Dalmore Tea Estate,Dalmore Tea Estate,"""Dalmore Tea Estate"" closed suspended workers Dooars",normal
+gs-dooars-ramjhora,Ramjhora,Ramjhora,"""Ramjhora"" owner company acquisition sale lease Dooars",normal
+gs-dooars-ramjhora,Ramjhora,Ramjhora,"""Ramjhora"" reopened production factory active Dooars",normal
+gs-dooars-ramjhora,Ramjhora,Ramjhora,"""Ramjhora"" new management director manager Dooars",normal
+gs-dooars-ramjhora,Ramjhora,Ramjhora,"""Ramjhora"" closed suspended workers Dooars",normal
+gs-dooars-ramjhora,Ramjhora,Ramjhora Tea Estate,"""Ramjhora Tea Estate"" owner company acquisition sale lease Dooars",normal
+gs-dooars-ramjhora,Ramjhora,Ramjhora Tea Estate,"""Ramjhora Tea Estate"" reopened production factory active Dooars",normal
+gs-dooars-ramjhora,Ramjhora,Ramjhora Tea Estate,"""Ramjhora Tea Estate"" new management director manager Dooars",normal
+gs-dooars-ramjhora,Ramjhora,Ramjhora Tea Estate,"""Ramjhora Tea Estate"" closed suspended workers Dooars",normal
+gs-dooars-dalmore,Dalmore,Dalmore,"""Dalmore"" owner company acquisition sale lease Dooars",normal
+gs-dooars-dalmore,Dalmore,Dalmore,"""Dalmore"" reopened production factory active Dooars",normal
+gs-dooars-dalmore,Dalmore,Dalmore,"""Dalmore"" new management director manager Dooars",normal
+gs-dooars-dalmore,Dalmore,Dalmore,"""Dalmore"" closed suspended workers Dooars",normal
+gs-dooars-dalmore,Dalmore,Dalmore Tea Estate,"""Dalmore Tea Estate"" owner company acquisition sale lease Dooars",normal
+gs-dooars-dalmore,Dalmore,Dalmore Tea Estate,"""Dalmore Tea Estate"" reopened production factory active Dooars",normal
+gs-dooars-dalmore,Dalmore,Dalmore Tea Estate,"""Dalmore Tea Estate"" new management director manager Dooars",normal
+gs-dooars-dalmore,Dalmore,Dalmore Tea Estate,"""Dalmore Tea Estate"" closed suspended workers Dooars",normal
 gs-dooars-dalsingpara,Dalsingpara,Dalsingpara,"""Dalsingpara"" owner company acquisition sale lease Dooars",normal
 gs-dooars-dalsingpara,Dalsingpara,Dalsingpara,"""Dalsingpara"" reopened production factory active Dooars",normal
 gs-dooars-dalsingpara,Dalsingpara,Dalsingpara,"""Dalsingpara"" new management director manager Dooars",normal
 gs-dooars-dalsingpara,Dalsingpara,Dalsingpara,"""Dalsingpara"" closed suspended workers Dooars",normal
-gs-dooars-kadambini,Kadambini Tea Estate,Kadambini Tea Estate,"""Kadambini Tea Estate"" owner company acquisition sale lease Dooars",high
-gs-dooars-kadambini,Kadambini Tea Estate,Kadambini Tea Estate,"""Kadambini Tea Estate"" reopened production factory active Dooars",high
-gs-dooars-kadambini,Kadambini Tea Estate,Kadambini Tea Estate,"""Kadambini Tea Estate"" new management director manager Dooars",high
-gs-dooars-kadambini,Kadambini Tea Estate,Kadambini Tea Estate,"""Kadambini Tea Estate"" closed suspended workers Dooars",high
-gs-dooars-raimatang,Raimatang Tea Estate,Raimatang Tea Estate,"""Raimatang Tea Estate"" owner company acquisition sale lease Dooars",normal
-gs-dooars-raimatang,Raimatang Tea Estate,Raimatang Tea Estate,"""Raimatang Tea Estate"" reopened production factory active Dooars",normal
-gs-dooars-raimatang,Raimatang Tea Estate,Raimatang Tea Estate,"""Raimatang Tea Estate"" new management director manager Dooars",normal
-gs-dooars-raimatang,Raimatang Tea Estate,Raimatang Tea Estate,"""Raimatang Tea Estate"" closed suspended workers Dooars",normal
+gs-dooars-kadambini,Kadambini,Kadambini,"""Kadambini"" owner company acquisition sale lease Dooars",high
+gs-dooars-kadambini,Kadambini,Kadambini,"""Kadambini"" reopened production factory active Dooars",high
+gs-dooars-kadambini,Kadambini,Kadambini,"""Kadambini"" new management director manager Dooars",high
+gs-dooars-kadambini,Kadambini,Kadambini,"""Kadambini"" closed suspended workers Dooars",high
+gs-dooars-kadambini,Kadambini,Kadambini Tea Estate,"""Kadambini Tea Estate"" owner company acquisition sale lease Dooars",high
+gs-dooars-kadambini,Kadambini,Kadambini Tea Estate,"""Kadambini Tea Estate"" reopened production factory active Dooars",high
+gs-dooars-kadambini,Kadambini,Kadambini Tea Estate,"""Kadambini Tea Estate"" new management director manager Dooars",high
+gs-dooars-kadambini,Kadambini,Kadambini Tea Estate,"""Kadambini Tea Estate"" closed suspended workers Dooars",high
+gs-dooars-raimatang,Raimatang,Raimatang,"""Raimatang"" owner company acquisition sale lease Dooars",normal
+gs-dooars-raimatang,Raimatang,Raimatang,"""Raimatang"" reopened production factory active Dooars",normal
+gs-dooars-raimatang,Raimatang,Raimatang,"""Raimatang"" new management director manager Dooars",normal
+gs-dooars-raimatang,Raimatang,Raimatang,"""Raimatang"" closed suspended workers Dooars",normal
+gs-dooars-raimatang,Raimatang,Raimatang Tea Estate,"""Raimatang Tea Estate"" owner company acquisition sale lease Dooars",normal
+gs-dooars-raimatang,Raimatang,Raimatang Tea Estate,"""Raimatang Tea Estate"" reopened production factory active Dooars",normal
+gs-dooars-raimatang,Raimatang,Raimatang Tea Estate,"""Raimatang Tea Estate"" new management director manager Dooars",normal
+gs-dooars-raimatang,Raimatang,Raimatang Tea Estate,"""Raimatang Tea Estate"" closed suspended workers Dooars",normal
 gs-dooars-dheklapara,Dheklapara,Dheklapara,"""Dheklapara"" owner company acquisition sale lease Dooars",normal
 gs-dooars-dheklapara,Dheklapara,Dheklapara,"""Dheklapara"" reopened production factory active Dooars",normal
 gs-dooars-dheklapara,Dheklapara,Dheklapara,"""Dheklapara"" new management director manager Dooars",normal

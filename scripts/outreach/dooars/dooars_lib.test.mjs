@@ -5,11 +5,13 @@ import test from "node:test";
 import {
   buildRegistry,
   cacheDir,
+  cleanGardenCanonicalName,
   extractAtlasGardenNames,
   loadCollectedSourceTexts,
   nameSimilarity,
   normalizeCompanyName,
   normalizeGardenName,
+  normalizeRegistration,
   parseCsv,
   toCsv,
   validateRegistry,
@@ -19,6 +21,24 @@ test("garden normalization removes common suffixes and spacing variants", () => 
   assert.equal(normalizeGardenName("Leesh River Tea Garden"), "leesh river");
   assert.equal(normalizeGardenName("MEENGLAS T.E."), "meenglas");
   assert.equal(normalizeGardenName("New Dooars Estate"), "new duars");
+  assert.equal(normalizeGardenName("Washabarietea Estate"), "washabarie");
+  assert.equal(normalizeGardenName("Zurrantee Tea"), "zurrantee");
+  assert.equal(normalizeGardenName("Garganda Tae Estate"), "garganda");
+});
+
+test("canonical garden name cleaning removes corporate and estate suffixes", () => {
+  assert.equal(cleanGardenCanonicalName("CHULSA TEA ESTATE"), "Chulsa");
+  assert.equal(cleanGardenCanonicalName("KALCHINI T E"), "Kalchini");
+  assert.equal(cleanGardenCanonicalName("SONAR BANGLA TEA CO (P) LTD"), "Sonar Bangla");
+  assert.equal(cleanGardenCanonicalName("KONPAKRI AGRO INDUSTRIES (P)"), "Konpakri");
+});
+
+test("registration normalization strips formatting prefixes and leading zeros", () => {
+  assert.equal(normalizeRegistration("P-2404"), "2404");
+  assert.equal(normalizeRegistration("RC-2531"), "2531");
+  assert.equal(normalizeRegistration("B-2631"), "2631");
+  assert.equal(normalizeRegistration("05"), "5");
+  assert.equal(normalizeRegistration("A-2"), "2");
 });
 
 test("company normalization joins common legal-name variants", () => {
@@ -59,6 +79,19 @@ test(
     assert.equal(
       registry.gardens.find((garden) => garden.garden_id === "gs-dooars-sonali")?.current_status,
       "temporarily_closed",
+    );
+    assert.equal(
+      registry.gardens.find((garden) => garden.garden_id === "gs-dooars-aibheel")
+        ?.prospect_eligibility,
+      "excluded_large_group",
+    );
+    assert.equal(
+      registry.activeEstates.some((garden) => garden.garden_id === "gs-dooars-aibheel"),
+      false,
+    );
+    assert.equal(
+      registry.activeEstates.some((garden) => garden.garden_id === "gs-dooars-bamandanga-tondoo"),
+      true,
     );
     assert.ok(registry.contactHints.length >= 100);
     assert.equal(validateRegistry(registry).valid, true);
