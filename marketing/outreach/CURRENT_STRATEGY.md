@@ -3,32 +3,41 @@
 Status: CURRENT
 Strategy version: 2026-08-30-dibrugarh-tinsukia-mid-tier-pilot
 Owner: Sarbani Associates
-Last updated: 2026-08-30
+Last updated: 2026-09-04
+
+## 2026-09-04 warm-up and launch update
+
+The owner explicitly asked to resume Snov.io automated warm-up, make it less aggressive, and move the first prospect-send date to 2026-09-10.
+
+- Snov.io warm-up for `kaushik@getgardensuite.in` was resumed on 2026-09-04.
+- The existing starting volume remains 2 messages because Snov.io locks it after campaign creation. The daily increase was reduced from 2 to 1 message and the daily goal was reduced from 8 to 4 messages. Reply rate remains at Snov.io's recommended 30%.
+- Pause Snov.io warm-up on 2026-09-09, before the first prospect batch on 2026-09-10, so warm-up and campaign traffic do not compete.
+- The revised staged first-send schedule is 3, 3, 4, 5 and 5 new prospects on 2026-09-10, 2026-09-11, 2026-09-14, 2026-09-15 and 2026-09-16 respectively. These are maximums, not quotas.
 
 ## 2026-08-30 automation decision
 
 The owner asked to automate the preparation, warm-up and scheduled campaign work and reaffirmed acceptance of the previously documented provider-enforcement risk. This newer direction replaces the manual-only warm-up decision.
 
 - Snov.io automated warm-up was started for `kaushik@getgardensuite.in` on 2026-08-30, then paused the same day at the owner's request after unexpected warm-up email volume. It must not be resumed without a new explicit owner instruction.
-- The saved configuration is a conservative progressive ramp: start at 2 messages per day, increase by 2 per sending day, and cap warm-up at 8 messages per day. This configuration is currently paused.
-- Pause Snov.io warm-up before the first prospect batch on 2026-09-08 so warm-up and campaign traffic do not compete for the mailbox's 15-message daily ceiling.
+- The 2026-08-30 saved configuration was a progressive ramp starting at 2 messages per day, increasing by 2 per sending day, and capped at 8 messages per day. The 2026-09-04 decision above replaces these volume settings and the paused status.
+- The 2026-09-04 decision above replaces the earlier 2026-09-08 warm-up pause and prospect launch dates.
 - Use Snov.io Campaigns to automate the approved day 0, day 5 and day 12 sequence after the 20-account allowlist, message copy and campaign settings are approved.
 - Use the daily Codex heartbeat `GardenSuite September outbound` to research, qualify, deduplicate and prepare the Snov.io import. It may not send messages or activate a campaign.
 - Keep a human gate for the final account allowlist, campaign activation, replies, complaints and social posting.
 
 The provider-policy risk remains documented. Automation authorization does not mean Spacemail has approved the activity.
 
-## 2026-08-30 launch deadline
+## 2026-09-04 launch deadline update
 
-The owner set 2026-09-08 as the date to start sending prospect emails. This is a start date, not a requirement to send all 20 messages on one day.
+The owner set 2026-09-10 as the revised date to start sending prospect emails. This is a start date, not a requirement to send all 20 messages on one day.
 
 Use a staged first-send schedule, provided each recipient has passed every account, contact, verification and suppression check:
 
-- 2026-09-08: 3 new prospects
-- 2026-09-09: 3 new prospects
-- 2026-09-10: 4 new prospects
-- 2026-09-11: 5 new prospects
-- 2026-09-14: the remaining 5 prospects
+- 2026-09-10: 3 new prospects
+- 2026-09-11: 3 new prospects
+- 2026-09-14: 4 new prospects
+- 2026-09-15: 5 new prospects
+- 2026-09-16: the remaining 5 prospects
 
 Do not fill a daily quota with an unqualified estate or an unverified address. Keep the mailbox below 15 total outgoing messages per day, including replies and follow-ups. Pause the campaign on any hard bounce, spam complaint, provider warning, or repeated Spam-folder placement.
 
@@ -136,6 +145,19 @@ The V2 consolidation introduced these structural rules:
 
 The August 2 V2 snapshot consolidated 2,167 raw rows into 834 estate accounts. Those numbers describe that snapshot only. They must not be repeated as current counts without rechecking the latest data.
 
+### Internal rejection and activity source
+
+For the September pilot, use `deliverables/legacy-outreach-data/GS_CRM_WhatsApp_Campaign_Tracker.xlsx` as the existing internal evidence source for prior rejections, prior messaging and active sales discussions. It is not the live campaign tracker, but its recorded account history must be reconciled automatically before selecting or researching a prospect. Do not ask the owner to recreate this clearance manually.
+
+- Treat an explicit `not interested`, `do not contact`, rejection or equivalent recorded outcome as a prior rejection.
+- Treat an open `Negotiation`, `call pending` or equivalent sales activity as an active sales discussion and exclude that account from this pilot.
+- Do not treat every `Hold` value as a rejection. Many holds in the workbook are data-quality holds, so the recorded reason must be read.
+- Treat a previous delivered message as prior-contact evidence. It requires outcome review, but is not automatically a rejection when no negative outcome is recorded.
+- Harishpur Tea Estate and Bagrodia Plantations & Industries remain confirmed current-client exclusions even if a workbook row is missing or ambiguous.
+- Record the matched workbook sheet and row in the pilot notes. Keep raw phone numbers and email addresses out of loop state and status summaries.
+
+Decision-maker discovery is an automated preparation task. The daily loop must search public business sources for one current owner, director, general manager, estate manager or garden manager per eligible estate, record the person's role, estate relationship, source URL and verification date, and then find a published business address or stage the person for Snov.io discovery and validation. The owner is not expected to find these contacts manually. Human review is reserved for final allowlist approval, message approval and campaign activation.
+
 ## Current outreach strategy
 
 The replacement outreach playbook is **partially recorded** below from the owner's 2026-08-05 direction. Confirmed decisions are current. Proposed operating defaults are not approved for sending until the owner accepts or changes them.
@@ -149,7 +171,7 @@ The older [`docs/plans/outreach-restart/README.md`](../../docs/plans/outreach-re
 - **Geography:** Dibrugarh district and Tinsukia district in Assam only for the first 20-estate pilot.
 - **Estate size:** 50 hectares or more.
 - **Preferred operating profile:** Mid-tier estates around 250 workers. Do not bias selection toward the largest or most famous estates.
-- **Exclusions:** Exclude big corporate groups. The operational definition or named exclusion list is still required.
+- **Exclusions:** Exclude public companies, large multi-estate groups, current clients, suppressed accounts, prior explicit rejections and accounts with active sales discussions. Reconcile recorded exclusions from the internal Excel tracker before public research. Do not treat a data-quality `Hold` as a rejection without reading its reason.
 - **Confirmed current-client exclusions:** Harishpur Tea Estate and Bagrodia Plantations & Industries are existing GardenSuite customers. Do not include either account, any spelling variant, division, or linked contact in prospecting or cold outreach.
 - **Target roles:** Founders and owners through directors, general managers, estate managers, and garden managers.
 - **Channel order:** Email first, then WhatsApp. LinkedIn may be tested later but is not required for the first pilot.
@@ -279,16 +301,16 @@ Agents must not:
 
 Current status:
 
-1. Target estate segments and exclusions - **partially confirmed**; the big-corporate exclusion rule or named list is missing.
-2. Account and contact qualification rules - **confirmed in principle**; current estate size, ownership, contact name, and role still need verification.
+1. Target estate segments and exclusions - **confirmed**; the internal Excel tracker supplies recorded rejection and activity history, while public-company and large-group fit is checked during research.
+2. Account and contact qualification rules - **confirmed in principle**; current estate size and ownership still need verification, while decision-maker discovery is assigned to the automated preparation loop.
 3. Pipeline stages and stage owner - **proposed**; named owners and owner approval are missing.
 4. Outreach channels and their order - **confirmed**; the proposed WhatsApp permission gate still needs approval and LinkedIn remains optional.
 5. Message or offer by segment - **confirmed at offer level**; the actual approved email copy is missing.
-6. Sending cadence and follow-up rules - **partially confirmed**; the 2026-09-08 staged launch schedule is confirmed, while the day 0, 5 and 12 follow-up cadence still needs explicit approval.
+6. Sending cadence and follow-up rules - **partially confirmed**; the 2026-09-10 staged launch schedule is confirmed, while the day 0, 5 and 12 follow-up cadence still needs explicit approval.
 7. System of record for activity and outcomes - **proposed**; the exact account tracker or CRM is missing. Snov.io is selected for the pilot automation, but the SMTP/IMAP mailbox and activity-sync process still need verification.
 8. Suppression, opt-out, and do-not-contact handling - **proposed**; implementation and pre-send verification are missing.
 9. Pilot size and success or stop criteria - **proposed**; owner approval is missing.
-10. Current live-system access - **sender access confirmed by owner** for the mailbox and Snov.io; access to the final account tracker and its update process still needs verification.
+10. Current live-system access - **sender access confirmed by owner** for the mailbox and Snov.io; the repository pilot CSV is the preparation tracker and the internal Excel tracker is available for automated history reconciliation.
 
 Operational sending remains blocked until proposed items are approved, the data is enriched and verified, a canonical tracker exists, suppression checks are implemented, message copy is approved, and live sending access is tested without activating a campaign.
 

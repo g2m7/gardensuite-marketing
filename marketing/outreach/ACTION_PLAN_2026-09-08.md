@@ -1,14 +1,14 @@
-# GardenSuite Outreach Action Plan - 8 September 2026 Launch
+# GardenSuite Outreach Action Plan - 10 September 2026 Launch
 
 Status: ACTIVE
 Accountable owner: Kaushik Majumder, Sarbani Associates
 Sender: `kaushik@getgardensuite.in`
 Campaign: `GS Attendance Trust Pilot - 2026-09`
-Last updated: 2026-08-30
+Last updated: 2026-09-04
 
 ## Outcome
 
-Start sending cold prospect emails on 2026-09-08. Complete the first-send stage for 20 qualified tea estates by 2026-09-14.
+Start sending cold prospect emails on 2026-09-10. Complete the first-send stage for 20 qualified tea estates by 2026-09-16.
 
 All 20 estates must be in Dibrugarh district or Tinsukia district. Prefer independently managed mid-tier estates with roughly 250 workers. Do not replace a difficult-to-research account with a famous or very large estate merely to fill the list.
 
@@ -23,11 +23,11 @@ This document converts the current strategy into daily work. If it conflicts wit
 | Mailbox | Ready | Sending works and a test reached Gmail Inbox |
 | Authentication | Ready | SPF, DKIM and DMARC passed in the delivered message |
 | Snov.io connection | Ready | SMTP/IMAP connection and setup are complete |
-| Warm-up | Paused | Paused on 2026-08-30 after unexpected email volume; do not resume without explicit owner instruction |
+| Warm-up | Active | Resumed on 2026-09-04 with a gentler progressive ramp: start 2, increase 1 per sending day, daily goal 4 |
 | Prospect list | Blocked | The rejected 20-estate list cannot be used; a replacement list is required |
 | Email copy | Awaiting approval | Three-email draft exists but is not approved for sending |
 | Tracking and suppression | Awaiting setup | One canonical account tracker and suppression check are required |
-| Prospect launch | Scheduled | First batch starts on 2026-09-08 after the launch gate passes |
+| Prospect launch | Scheduled | First batch starts on 2026-09-10 after the launch gate passes |
 
 The critical path is the prospect list, not the mailbox.
 
@@ -42,9 +42,9 @@ The critical path is the prospect list, not the mailbox.
 - Primary offer: face-verified hazira, offline field use, office review, installation, training, and support by Sarbani Associates.
 - Smart weighing may be mentioned when it fits the estate's workflow.
 - Sending platform: Snov.io Campaigns.
-- Warm-up: use Snov.io automated warm-up through 2026-09-07, starting at 2 messages per day and capped at 8 per day.
-- Pause automated warm-up before prospect sending begins on 2026-09-08.
-- Daily preparation: the `GardenSuite September outbound` Codex heartbeat runs at 12:00 Asia/Kolkata through 2026-09-14.
+- Warm-up: use Snov.io automated warm-up through 2026-09-09. The existing start remains 2 messages, with a 1-message daily increase and a 4-message daily goal.
+- Keep Snov.io warm-up reply rate at 30% and pause automated warm-up before prospect sending begins on 2026-09-10.
+- Daily preparation: the `GardenSuite September outbound` Codex heartbeat remains scheduled at 12:00 Asia/Kolkata through 2026-09-14.
 - First email: plain text, no attachment, no brochure, no image, no video, and no calendar link.
 - Every cold address must return `Valid` from Snov.io.
 
@@ -55,16 +55,16 @@ The critical path is the prospect list, not the mailbox.
 - [x] Sign in to Snov.io, test automated warm-up for `kaushik@getgardensuite.in`, and pause it after the owner's stop request.
 - [x] Configure a 2-message starting volume, 2-message daily increase, and 8-message daily maximum.
 - [ ] Build a research pool of at least 40 estates across Dibrugarh and Tinsukia.
-- [ ] Mark every previously rejected estate and the reason for rejection.
+- [x] Use the existing Excel tracker as the source for recorded rejections, prior messages and active sales discussions. The preparation loop performs this reconciliation automatically.
 - [ ] Remove Harishpur Tea Estate, Bagrodia Plantations & Industries, spelling variants, divisions, and linked contacts.
 - [ ] Record district, location, ownership, size source, worker-count source or operating-scale proxy, and source date.
 
 ### 2 to 4 September
 
 - [ ] Reduce the pool to 25 to 30 accounts that fit the pilot.
-- [ ] Find one qualifying decision-maker for each account.
-- [ ] Record the person's name, role, estate relationship, public source, and verification date.
-- [ ] Find the business email without pattern-guessing an address.
+- [ ] Automatically find one qualifying decision-maker for each account through the daily preparation loop.
+- [ ] Automatically record the person's name, role, estate relationship, public source, and verification date.
+- [ ] Automatically find a published business email or stage the verified person for Snov.io discovery without pattern-guessing an address.
 - [ ] Check that Snov.io warm-up is active and not reporting bounces, provider warnings, or Spam-folder problems.
 - [ ] Select 20 primary accounts and at least 5 backups by the end of 4 September.
 
@@ -87,27 +87,27 @@ The critical path is the prospect list, not the mailbox.
 - [ ] Test variables, reply detection, unsubscribe handling, and automatic exit on reply.
 - [ ] Send an internal end-to-end test through the campaign setup.
 
-### 7 September
+### 7 to 9 September
 
 - [ ] Complete one final controlled inbox and reply test.
-- [ ] Pause Snov.io automated warm-up before the first prospect batch.
+- [ ] Pause Snov.io automated warm-up on 9 September before the first prospect batch.
 - [ ] Check Gmail and Outlook placement where available.
 - [ ] Confirm SPF, DKIM and DMARC still pass.
 - [ ] Confirm that a reply reaches Spacemail and is detected by Snov.io.
 - [ ] Freeze the 20-account list and 5-account backup list.
 - [ ] Manually preview every first email for correct name and estate.
-- [ ] Confirm the first three recipients for 8 September.
+- [ ] Confirm the first three recipients for 10 September.
 - [ ] Record final owner approval in the tracker.
 
 ### First-send schedule
 
 | Date | Maximum new prospects | Cumulative total |
 |---|---:|---:|
-| 2026-09-08 | 3 | 3 |
-| 2026-09-09 | 3 | 6 |
-| 2026-09-10 | 4 | 10 |
-| 2026-09-11 | 5 | 15 |
-| 2026-09-14 | 5 | 20 |
+| 2026-09-10 | 3 | 3 |
+| 2026-09-11 | 3 | 6 |
+| 2026-09-14 | 4 | 10 |
+| 2026-09-15 | 5 | 15 |
+| 2026-09-16 | 5 | 20 |
 
 These are maximums, not quotas. Do not send to an unqualified account to fill a batch. Keep all outgoing messages, including replies and follow-ups, below 15 per day.
 
