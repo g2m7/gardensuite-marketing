@@ -1,3 +1,5 @@
+> Superseded for current execution on 2026-09-05. Use the [owner acquisition plan](../owner-acquisition/README.md) and CURRENT_STRATEGY.md. Historical checks below do not establish current launch blockers or authorize outreach.
+
 # GardenSuite Outreach Restart Plan
 
 **Version:** v1 draft  

@@ -29,6 +29,42 @@ const pages = [
 	{ path: '/products/payroll', priority: '0.9', changefreq: 'monthly', lastmod: '2026-06-03' },
 	{ path: '/products/factory', priority: '0.9', changefreq: 'monthly', lastmod: '2026-06-03' },
 	{ path: '/products/stores', priority: '0.9', changefreq: 'monthly', lastmod: '2026-06-03' },
+	{
+		path: '/tea-garden-software-assam',
+		priority: '0.85',
+		changefreq: 'weekly',
+		lastmod: '2026-09-06'
+	},
+	{
+		path: '/tea-garden-software-dooars-terai',
+		priority: '0.85',
+		changefreq: 'weekly',
+		lastmod: '2026-09-06'
+	},
+	{
+		path: '/tea-garden-software-darjeeling',
+		priority: '0.85',
+		changefreq: 'weekly',
+		lastmod: '2026-09-06'
+	},
+	{
+		path: '/guides/stop-proxy-attendance-tea-garden',
+		priority: '0.8',
+		changefreq: 'monthly',
+		lastmod: '2026-09-06'
+	},
+	{
+		path: '/guides/smart-leaf-weighing-tea-garden',
+		priority: '0.8',
+		changefreq: 'monthly',
+		lastmod: '2026-09-06'
+	},
+	{
+		path: '/tea-estate-glossary',
+		priority: '0.8',
+		changefreq: 'monthly',
+		lastmod: '2026-09-06'
+	},
 	{ path: '/privacy', priority: '0.3', changefreq: 'yearly', lastmod: '2026-08-02' },
 	{ path: '/terms', priority: '0.3', changefreq: 'yearly', lastmod: '2026-08-02' }
 ];

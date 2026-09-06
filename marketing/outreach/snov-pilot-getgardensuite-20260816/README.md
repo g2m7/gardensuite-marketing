@@ -1,3 +1,5 @@
+> Superseded for current execution on 2026-09-05. Use the [owner acquisition plan](../../../docs/plans/owner-acquisition/README.md) and CURRENT_STRATEGY.md. Historical checks below do not establish current launch blockers or authorize outreach.
+
 # GardenSuite Snov.io Pilot Package
 
 Status: LEAD LIST SUPERSEDED - DO NOT SEND

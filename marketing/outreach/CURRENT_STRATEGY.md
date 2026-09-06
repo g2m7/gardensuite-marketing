@@ -1,9 +1,51 @@
 # GardenSuite Current Outreach Authority
 
 Status: CURRENT
-Strategy version: 2026-08-30-dibrugarh-tinsukia-mid-tier-pilot
+Strategy version: 2026-09-05-live-campaign-authorization
 Owner: Sarbani Associates
-Last updated: 2026-09-04
+Last updated: 2026-09-05
+
+## 2026-09-05 live Snov campaign instruction
+
+The owner explicitly instructed: create the Snov campaign, send to actual prospects over time, start today, and use slight personalization with small wording differences. This authorizes recipient import, campaign configuration, activation and sending within the existing pilot qualification rules. It supersedes the September 10 start and the earlier statements that final copy or activation still need approval. Do not ask for the same sending approval again.
+
+- Start a cleared subset today, September 5, 2026. Today's Saturday evening sending is a one-time launch exception; later sending uses weekday business hours in Asia/Kolkata.
+- Pause warm-up before prospect sending. Snov was verified Paused with Protection off on September 5 at approximately 21:51 IST.
+- Keep light personalization: verified name and estate, plus short wording variations. No invented estate pain, savings, relationships or client references.
+- Preserve Valid-only verification, estate association, internal-history, current-client, active-sales and suppression checks. The request does not make an unqualified address eligible.
+- The preparation heartbeat and local pipeline still cannot send or activate campaigns. This task configures the live sequence directly in Snov.
+- See the dated launch record in `sep-2026-pilot/LAUNCH_2026-09-05.md` for actual recipients, settings and observed campaign status. Do not infer successful sending from this authorization alone.
+- Launch result: all three first emails were sent and delivered on 5 September with zero immediate bounces. The launch-only Saturday window was then removed. The active schedule is Monday to Friday, 09:00 to 18:00, Asia/Calcutta.
+
+## 2026-09-05 owner acquisition plan and email simplification
+
+The owner asked for a complete plan covering every discussed acquisition method, ordered by priority, with setup, goals, acceptance criteria and operating rules. The current detailed plan is [Owner acquisition](../../docs/plans/owner-acquisition/README.md). It supersedes the older outreach-restart implementation plan and the August Snov setup guide for preparation. This file remains the outreach authority.
+
+Confirmed product/channel direction from the owner:
+
+- Sell the mobile attendance and daily-report/MIS package first, with full ERP expansion later. Confirm independent operation and report inputs before making public package promises.
+- Customer referrals already produced a further estate sale. Usually one introduction is available; do not plan around two or more.
+- Long association marketing circulation failed. Association work is lower priority and limited to a concrete, short session/invitation test.
+- The owner reports resistance from some managers to independent checks. Prioritize owner/director acquisition and do not depend on a manager sponsor. Do not use allegations against managers in public copy.
+- Prepare the owner micro magnet and social acquisition path. Resource delivery and optional sales follow-up are separate requests; no private mobile number is required to view the result.
+- Continue the twenty-estate Dibrugarh/Tinsukia cold-email experiment alongside referrals and preparation of the social funnel. The wider geography for proactive social/referral expansion remains an open decision in the plan; do not silently expand the cold list.
+
+Revised planned email settings:
+
+- Up to four new approved estates on each of 10, 11, 14, 15 and 16 September 2026: twenty first emails over five working days. These are maxima, not quotas. This replaces the earlier 3/3/4/5/5 schedule.
+- A smaller authorized batch can start when its recipients are cleared. A complete twenty-account list and five backups are not prerequisites for the first batch. No failed recipient check is waived.
+- A reliable operating-scale proxy satisfies the existing worker-count/proxy rule. Do not require exact workforce proof when the rule already allows a proxy.
+- The approved message and executable settings are in [Cold email](../../docs/plans/owner-acquisition/02-cold-email/README.md). The owner approved and activated the first cleared subset on 5 September. The live copy leads with the attendance/report offer; a named nearby reference is optional after interest.
+- Draft cadence remains five days after the first email and seven days after the actual second email, subject to the Monday-Friday sending window. The full sequence may contain sixty emails and end on 28 September even though the first twenty finish on 16 September.
+- Recommended Snov automated cap is twelve per day, with three slots reserved within a fifteen-message total mailbox planning ceiling for manual replies. Reduce automated sending if more replies need attention. A new-prospect cap is separate from the total automated cap.
+- Use the [incident/resume procedure](../../docs/plans/owner-acquisition/02-cold-email/SETUP.md): inspect an isolated hard bounce before the next batch, suppress its address and resume after resolving the cause/checking the remaining batch. Repeated hard bounces, complaints, suppression failures, authentication failures or provider warnings trigger a broader pause. There is no automatic additional multi-week waiting period.
+- No new fixed domain-age or warm-up-score gate. The registered domain is already recorded as thirty-two days old on the planned start date. Authentication and actual delivery evidence matter; spacing cannot guarantee Inbox placement.
+
+Unchanged decisions: kaushik@getgardensuite.in through Snov.io; only Snov Valid and estate-associated addresses; current-client/rejection/negotiation/suppression checks; warm-up paused on 9 September before prospect sending. The owner's existing Spacemail policy-risk acceptance remains recorded. It is not provider permission and must not be reopened as a routine second approval gate.
+
+The earlier plan-only authorization has been superseded for this Snov pilot. Live Snov sending is authorized under the rules above. The preparation heartbeat and local pipeline remain unable to send or activate a campaign. New live capture, channel permissions, CRM destination, spending and public assets must meet the concrete setup/launch criteria in the linked plan.
+
+Where older paragraphs below conflict with this update on schedule, mandatory full-list readiness, role priority, channel priority, bounce recovery, or repeated provider approval, this update takes precedence. The dated action file is retained as a current navigation/launch summary, with its previous detailed checklist clearly labelled superseded.
 
 ## 2026-09-04 warm-up and launch update
 

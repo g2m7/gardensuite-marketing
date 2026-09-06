@@ -1,3 +1,41 @@
+# GardenSuite September launch summary
+
+Updated: 2026-09-05 | Accountable owner: Kaushik Majumder, Sarbani Associates
+
+The current complete execution specification is [Owner acquisition](../../docs/plans/owner-acquisition/README.md), under [CURRENT_STRATEGY.md](CURRENT_STRATEGY.md). The old filename is retained for existing links.
+
+## Live campaign update - 5 September 2026
+
+The owner authorized the first cleared Snov subset to start on 5 September 2026. Three Valid estate contacts were activated in campaign `3135559`, after warm-up was paused. The exact recipients, copy, schedule and observed results are recorded in [the launch record](sep-2026-pilot/LAUNCH_2026-09-05.md). This update supersedes the later start date and approval steps below where they conflict. All qualification, suppression and Valid-only rules still apply.
+
+## Revised planned email dates
+
+| Date | Maximum new estates | Cumulative |
+| --- | --- | --- |
+| 10 September 2026 | 4 | 4 |
+| 11 September 2026 | 4 | 8 |
+| 14 September 2026 | 4 | 12 |
+| 15 September 2026 | 4 | 16 |
+| 16 September 2026 | 4 | 20 |
+
+Pause the already-authorized Snov warm-up on 9 September. Do not activate a campaign merely because a planned date has arrived. Each recipient still needs current fit, association, Snov Valid, suppression clearance and final authorization.
+
+A cleared subset can launch without twenty finished records or five backups. Delayed preparation shifts dates forward; it does not increase the daily maximum. The full three-message sequence can continue through 28 September. [Exact setup, traffic table and incident handling](../../docs/plans/owner-acquisition/02-cold-email/SETUP.md).
+
+## Immediate work
+
+1. Finish associated business email discovery, validation and account checks for the first batch.
+2. Verify the standalone report scope and review the [new email draft](../../docs/plans/owner-acquisition/02-cold-email/SEQUENCE.md).
+3. Prepare the actual Snov configuration and one controlled reply-stop/authentication test.
+4. Present the final recipients, messages and settings as one launch packet.
+5. Continue referrals and validate the [owner micro magnet](../../docs/plans/owner-acquisition/03-owner-micro-magnet/README.md) with three owners.
+
+External sending, social publishing, live capture and spending were not performed by the planning task. Read current system state before reporting readiness.
+
+## Superseded detailed checklist retained below
+
+The following 4 September record is history. Its 3/3/4/5/5 schedule, full-list freeze dependency and unqualified whole-pilot bounce stop are superseded by the 5 September strategy and linked setup. Its checkbox state is not current operational truth.
+
 # GardenSuite Outreach Action Plan - 10 September 2026 Launch
 
 Status: ACTIVE

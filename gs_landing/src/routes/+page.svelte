@@ -14,7 +14,8 @@
 		websiteSchema,
 		softwareSchema,
 		faqSchema,
-		breadcrumbSchema
+		breadcrumbSchema,
+		siteNavigationElementSchema
 	} from '$lib/seo/schemas';
 
 	// ─── GSAP + ScrollTrigger ───
@@ -309,6 +310,14 @@
 				'Works offline at the garden'
 			]
 		}),
+		siteNavigationElementSchema([
+			{ name: 'Face Attendance & Smart Weighing', path: '/products/attendance' },
+			{ name: 'Automated Worker Payroll', path: '/products/payroll' },
+			{ name: 'Daily MIS Dashboard', path: '/products/mis' },
+			{ name: 'Factory Production System', path: '/products/factory' },
+			{ name: 'Store & Inventory Management', path: '/products/stores' },
+			{ name: 'Offline Garden Sync', path: '/products/attendance/offline-sync' }
+		]),
 		faqSchema([
 			{
 				q: 'Does GardenSuite work without internet?',

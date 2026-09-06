@@ -1,43 +1,58 @@
 # September 2026 Pilot Daily Status
 
-Last material run: 2026-09-04 (heartbeat triggered at 20:32:01 UTC on 2026-09-03 / 02:02:01 IST)
+Last material run: 2026-09-06 at 14:02 IST
 
-Last readiness check: 2026-09-04 (heartbeat triggered at 20:32:01 UTC on 2026-09-03 / 02:02:01 IST)
+Last readiness check: 2026-09-05 at 22:28 IST
 
 ## Counts
 
-- Candidates checked: 20
-- Fully eligible: 0
-- Blocked: 20 (incomplete research and approvals, not delivery failures)
-- Snov export rows: 0
+- Candidates checked: 25
+- Fully eligible: 3
+- Blocked: 22 because one or more account, contact, verification, suppression or approval gates remain open
+- Snov export rows: 3
+- Live Snov recipients: 3
+- First emails sent and delivered on 5 September: 3
+- Immediate hard bounces: 0
+
+## Live campaign
+
+- Campaign: `GardenSuite Assam attendance pilot - Sep 2026`
+- Snov campaign ID: `3135559`
+- Status: Active
+- Sender: `kaushik@getgardensuite.in`
+- Warm-up: Paused, Protection off
+- Mailbox cap: 12 emails per day
+- Sender delay: random 600 to 900 seconds
+- Schedule: Monday to Friday, 09:00 to 18:00, Asia/Kolkata
+- Sequence: initial email, five-day delay, follow-up, seven-day delay, final follow-up
+- Reply stop, Valid-only checks, DNC list and one-click unsubscribe are active
+
+The exact launch evidence and copy are in [LAUNCH_2026-09-05.md](LAUNCH_2026-09-05.md).
 
 ## Progress this run
 
-- Added six accounts for further qualification: Devendra, Longboi, Goneshbari, Satyanarayan, Padumani and Ananda Bag.
-- Added current regulator evidence and historical area evidence for seven existing accounts. Fifteen of twenty candidates now have hectare evidence.
-- Screened out Singlijan, Digulturrung, Nahortoli, Dehing and Raidang for large-estate or large-group fit. Boloma was held outside this pilot because current government evidence places it in Jorhat.
-- Preserved source URLs, retrieval date and evidence limits in `RESEARCH_2026-09-04.md`. No guessed people or email addresses were added.
-- Reconciled the current pool against the existing CRM/WhatsApp Excel tracker. Amulguri, Mothola and Longboi have open `Negotiation` or `call pending` history and must be replaced rather than cleared manually.
-- Pipeline tests: 3 passed. Check and export completed: 20 checked, 0 eligible, 20 blocked and 0 exported. The import remains header-only.
+- The owner explicitly authorized Snov campaign creation, activation and real prospect sending from 5 September 2026.
+- Paused Snov warm-up before the campaign was activated.
+- Verified Baghbari, Sadasiva and Satispur addresses as Valid in Snov. Each is publicly associated with the estate or operating company and has a named owner or director.
+- Held Ghooronia out because Snov returned `Unverifiable (Risky)`.
+- Created the cleared Snov list and added the three eligible contacts with verified first-name and estate variables.
+- Created and activated a three-email plain-text sequence with no attachments, open tracking or click tracking.
+- Confirmed the rendered first email for Baghbari and Sadasiva used the correct contact and estate names.
+- Confirmed all three live first emails sent and delivered on 5 September, with correct rendered name and estate variables and zero immediate bounces.
+- Removed the launch-only Saturday window and verified that campaign `3135559` now lists only Monday to Friday, 09:00 to 18:00, Asia/Calcutta.
+- Updated current strategy, the cold-email plan, the sequence and the dated launch record to match live state.
+- Pipeline check completed with 25 checked, 3 eligible and 22 blocked. The Snov import contains exactly those 3 eligible rows.
 
-## Readiness gaps
+## Remaining work
 
-- Fifteen of twenty research rows have hectare evidence, but most area figures are historical. None has verified workforce evidence near the preferred 250-worker profile.
-- Corporate review and independent buying authority remain unresolved for all twenty accounts.
-- Named decision-maker, business email, Snov `Valid` result and contact-estate association remain preparation work for the automated loop.
-- Internal history is available in the Excel tracker. Three current candidates have open sales activity and need automatic replacement. Suppression still requires a final pre-import check.
-- The candidate pool has reached twenty rows, but only seventeen remain viable after internal activity reconciliation. The final allowlist remains at zero before the 2026-09-10 start date.
+- Watch Unibox for replies and stop or suppress immediately when requested.
+- Continue research and validation for the remaining pilot accounts. Add no more than four newly cleared estates per working day.
+- Do not add an account until every row-level gate passes. A complete 20-account list is not required before another cleared subset is added.
 
-## Human decisions required
+## Current blocked-account pattern
 
-- Approve the final email copy and day 0, 5, and 12 cadence.
-- Approve each of the final 20 allowlisted accounts after evidence and Snov validation pass.
+Most blocked accounts still need a Valid estate-associated email, suppression result and owner approval. Several also need corporate group review, a usable operating-scale proxy, or a named qualifying contact. Longboi remains excluded from this pilot because it has an active sales discussion. Ghooronia remains held because its email is Risky.
 
-## Warm-up
+## Next operating action
 
-- Active in Snov.io as of 2026-09-04 under the owner's revised setting: start 2, increase by 1 per sending day, daily goal 4 and 30% reply rate.
-- Pause warm-up on 2026-09-09 before prospect sending begins on 2026-09-10.
-
-## Next automatic action
-
-Automatically replace Amulguri, Mothola and Longboi, then run decision-maker and public business-email discovery for every otherwise viable estate. Reconcile every candidate with the Excel history before doing new public research. Keep the import empty until every gate passes. The owner should receive only the final allowlist, copy/cadence approval and campaign activation decisions.
+Review replies and bounces before adding another cleared subset. Email 2 for the first three recipients is expected in the next allowed window on Friday, 11 September, because the five-day timer matures after Thursday's business-hours window. Email 3 is expected on Friday, 18 September unless a reply stops the sequence. Continue account research without relaxing the current-client, active-discussion, public-company, large-group, rejection, identity, estate-association, suppression or Snov Valid rules.

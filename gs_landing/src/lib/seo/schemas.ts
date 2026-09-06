@@ -20,9 +20,22 @@ export function organizationSchema() {
 		description:
 			'Sarbani Associates builds GardenSuite, a complete ERP software for tea gardens in India. Serving the tea industry since 2000.',
 		foundingDate: '2000',
+		sameAs: [
+			'https://www.linkedin.com/company/sarbani-associates',
+			'https://www.youtube.com/@gardensuite'
+		],
+		knowsAbout: [
+			'Tea Garden ERP',
+			'Tea Estate Management Software',
+			'Face Recognition Attendance for Tea Gardens',
+			'Smart Weighing Scales for Tea Pluckers',
+			'Tea Factory Production Tracking',
+			'Tea Estate Labor Payroll and PF Calculation'
+		],
 		address: {
 			'@type': 'PostalAddress',
 			addressLocality: 'Bagdogra, Siliguri',
+			addressRegion: 'West Bengal',
 			addressCountry: 'IN'
 		},
 		areaServed: [
@@ -48,7 +61,8 @@ export function websiteSchema() {
 		'@id': `${SITE_URL}/#website`,
 		url: SITE_URL,
 		name: 'GardenSuite',
-		publisher: { '@id': `${SITE_URL}/#organization` }
+		publisher: { '@id': `${SITE_URL}/#organization` },
+		inLanguage: 'en-IN'
 	};
 }
 
@@ -97,6 +111,56 @@ export function faqSchema(faqs: { q: string; a: string }[]) {
 				'@type': 'Answer',
 				text: faq.a
 			}
+		}))
+	};
+}
+
+export function articleSchema(opts: {
+	title: string;
+	description: string;
+	path: string;
+	datePublished: string;
+	dateModified?: string;
+	image?: string;
+}) {
+	return {
+		'@type': 'Article',
+		headline: opts.title,
+		description: opts.description,
+		url: `${SITE_URL}${opts.path}`,
+		mainEntityOfPage: {
+			'@type': 'WebPage',
+			'@id': `${SITE_URL}${opts.path}`
+		},
+		datePublished: opts.datePublished,
+		dateModified: opts.dateModified || opts.datePublished,
+		author: {
+			'@type': 'Organization',
+			name: ORG_NAME,
+			url: SITE_URL
+		},
+		publisher: {
+			'@id': `${SITE_URL}/#organization`
+		},
+		...(opts.image
+			? {
+					image: {
+						'@type': 'ImageObject',
+						url: opts.image.startsWith('http') ? opts.image : `${SITE_URL}${opts.image}`
+					}
+				}
+			: {})
+	};
+}
+
+export function siteNavigationElementSchema(items: { name: string; path: string }[]) {
+	return {
+		'@type': 'ItemList',
+		itemListElement: items.map((item, i) => ({
+			'@type': 'SiteNavigationElement',
+			position: i + 1,
+			name: item.name,
+			url: `${SITE_URL}${item.path}`
 		}))
 	};
 }

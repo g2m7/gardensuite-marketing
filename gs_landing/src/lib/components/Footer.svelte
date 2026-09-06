@@ -16,14 +16,14 @@
 				</p>
 			</div>
 
-			<div class="col-span-3 grid gap-6 sm:grid-cols-3">
+			<div class="col-span-3 grid gap-6 sm:grid-cols-4">
 				<div class="space-y-4 text-sm">
 					<span class="block text-[13px] font-semibold text-[#111111]">Products</span>
 					<div class="flex flex-col gap-3">
 						<a
 							href="/products/attendance"
 							class="text-[13px] text-[#52525B] transition-colors duration-150 hover:text-[#1B5E3B]"
-							>Face Attendance and Smart Weighing</a
+							>Face Attendance & Weighing</a
 						>
 						<a
 							href="/products/payroll"
@@ -49,22 +49,43 @@
 				</div>
 
 				<div class="space-y-4 text-sm">
-					<span class="block text-[13px] font-semibold text-[#111111]">Company</span>
+					<span class="block text-[13px] font-semibold text-[#111111]">Regions</span>
 					<div class="flex flex-col gap-3">
 						<a
-							href="/#about"
+							href="/tea-garden-software-assam"
 							class="text-[13px] text-[#52525B] transition-colors duration-150 hover:text-[#1B5E3B]"
-							>About</a
+							>Assam Tea Gardens</a
 						>
 						<a
-							href="/#features"
+							href="/tea-garden-software-dooars-terai"
 							class="text-[13px] text-[#52525B] transition-colors duration-150 hover:text-[#1B5E3B]"
-							>Features</a
+							>Dooars & Terai Estates</a
 						>
 						<a
-							href="/#faq-heading"
+							href="/tea-garden-software-darjeeling"
 							class="text-[13px] text-[#52525B] transition-colors duration-150 hover:text-[#1B5E3B]"
-							>FAQ</a
+							>Darjeeling Hill Estates</a
+						>
+					</div>
+				</div>
+
+				<div class="space-y-4 text-sm">
+					<span class="block text-[13px] font-semibold text-[#111111]">Guides & Resources</span>
+					<div class="flex flex-col gap-3">
+						<a
+							href="/guides/stop-proxy-attendance-tea-garden"
+							class="text-[13px] text-[#52525B] transition-colors duration-150 hover:text-[#1B5E3B]"
+							>Stop Proxy Attendance</a
+						>
+						<a
+							href="/guides/smart-leaf-weighing-tea-garden"
+							class="text-[13px] text-[#52525B] transition-colors duration-150 hover:text-[#1B5E3B]"
+							>Smart Leaf Weighing</a
+						>
+						<a
+							href="/tea-estate-glossary"
+							class="text-[13px] text-[#52525B] transition-colors duration-150 hover:text-[#1B5E3B]"
+							>Tea Operations Glossary</a
 						>
 					</div>
 				</div>
