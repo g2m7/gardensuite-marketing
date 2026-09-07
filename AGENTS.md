@@ -41,6 +41,7 @@ Jalpaiguri: Himalayan Agro Plantation
 
 ## Writing & Style Rules
 
+- **Mandatory skill: `no-ai-slop`** - Always use the `no-ai-slop` skill (`.agents/skills/no-ai-slop/SKILL.md`) whenever creating or modifying any text content across this project (website copy, marketing material, cold emails, social posts, docs). Strip throat-clearing openers, binary contrasts, faux insights, colon reveals, and corporate buzzwords. Keep writing human, direct, and concrete.
 - **NO em dashes.** Always use regular hyphens.
 - Simple, clear language. No jargon or big words.
 - Always mention parent company Sarbani Associates in footer and key sections.
@@ -166,6 +167,7 @@ Product and messaging precedence is:
 4. Prefer tea garden vocabulary: hazira, plucking, leaf weight, proxy attendance, PF, ESI, made tea, muster roll
 5. Generic-copy test: "Could this sentence appear on a random HR/ERP software homepage? If yes, rewrite."
 6. Reading level test: "Will a busy tea garden owner understand this in one reading?"
+7. Mandatory `no-ai-slop` skill: Run all text and copy through `.agents/skills/no-ai-slop/SKILL.md` to remove AI patterns, fluff, and robotic phrasing before finalizing.
 
 ## New Page Checklist
 
@@ -173,7 +175,7 @@ Complete ALL items before any new page goes live:
 
 1. SEO rules above - all 10 items verified
 2. Performance rules above - all 8 items verified
-3. Copy safety rules above - all 6 items verified
+3. Copy safety rules above - all 7 items verified (including `no-ai-slop`)
 4. Page follows the product page formula: Hero - Problem - Workflow - Result - Rollout - CTA
 5. Sarbani Associates mentioned in at least one trust-building context
 6. Mobile-responsive layout tested at 375px and 768px
