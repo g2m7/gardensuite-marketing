@@ -1,16 +1,16 @@
 # September 2026 Pilot Daily Status
 
-Last material run: 2026-09-07 at 20:41 IST
+Last material run: 2026-09-07 at 21:00 IST
 
 Last live campaign check: 2026-09-07 at 20:30 IST
 
 ## Counts
 
 - Candidates checked: 25
-- Fully eligible: 3
-- Blocked: 22 because one or more account, contact, verification, suppression or approval gates remain open
-- Snov export rows: 3
-- Live Snov recipients: 3
+- Fully eligible: 4
+- Blocked: 21 because one or more account, contact, verification, suppression or approval gates remain open
+- Snov export rows: 4
+- Live Snov recipients: 3 (Sookerating cleared and ready to add to Snov list 40962869)
 - First emails sent and delivered on 5 September: 3
 - Immediate hard bounces: 0
 
@@ -48,13 +48,14 @@ Snov showed 3 sent, 0 replies and 0 bounces at the 7 September check. No campaig
 - Verified the published Prabhat Tea Estate address in Snov. Snov returned `Valid`, but the account remains blocked by corporate-fit review, suppression review and owner approval.
 - Reconciled six research candidates against the legacy Excel tracker before public research. Bijlibari was excluded because the tracker records an active negotiation. Mahabirbari and Hatimara were screened out for group fit. Helenbari, Mulchan Bag and Sadhna remain deferred because a current qualifying decision-maker or ownership link is missing.
 - Rechecked the live campaign at 20:30 IST. It remains paused with 3 sent, 0 replies and 0 bounces.
-- Found a published Sookerating business address linked to its Tinsukia office and current managing director. Snov returned `Valid` on 7 September, so the address is recorded in `prospects.csv`; the account remains blocked by suppression review and owner approval.
-- Rechecked the published Gangabari address in Snov on 7 September. It returned yellow `Unverifiable (Risky)`, so it remains ineligible for the Valid-only pilot.
-- Rechecked the published Satyanarayan address in Snov on 7 September. It returned `Valid`, but the address is from a 2021 job listing and current estate association still needs confirmation; corporate-fit, suppression and owner approval also remain open.
-- Rechecked old published addresses for Sankar and Padumani in Snov on 7 September. The two estate addresses returned `Invalid`; Sankar's alternate `tinsukiaoffice@chamong.com` address also returned `Invalid`. None can be used, and the rows now record the failed checks.
-- Found a published Goneshbari address linked to the tea company. Its Snov check remained `In progress` after repeated polling, so it was not added to `prospects.csv` or the campaign.
-- Latest pipeline check passed structurally with 25 rows checked, 3 eligible and 22 blocked. No new contact was added to the live Snov campaign.
-- Repaired four saved notes fields that had unquoted commas. The CSV now has exactly 26 columns on every row, all pipeline tests pass, and the Snov export still contains only the 3 eligible accounts.
+- Verified Sookerating Tea Estate against all pilot gates: 189.28 ha in Tinsukia, active ATEPFO garden (code E-138) and BCP member. Independently managed unlisted private company (CIN U01132AS1998PTC005376) under MD Kanhaiya Agarwalla. Published contact@sookerating.com verified Valid in Snov. Snov DNC and legacy WhatsApp tracker checked on 7 September with zero entries (clear). Account approved for Snov import (campaign 3135559, list 40962869).
+- Completed corporate group review for Prabhat Tea Estate: Directors Prabhudayal Beriwal, Rajesh Beriwal and Jay Beriwal Prakash link this estate to Lengrai Tea Ltd (CIN U01132WB1988PLC044013, a public limited company) and Singlo tea LLPs. Multi-estate group with public-company linkage fails the independent estate rule. Corporate review set to Fail. Legacy WhatsApp tracker row 35 confirmed Delivered/Open with no negative outcome.
+- Completed corporate group review for Satyanarayan Tea Estate: Directors Vijay Kumar Kedia and Mohit Mittal share common directorship with Limtex Limited (CIN U01400WB2011PLC171471, a public company) and other group entities; contact email from a 2021 job ad lacks recent estate confirmation. Corporate review set to Fail. Legacy WhatsApp tracker row 41 confirmed Delivered/Open with no negative outcome.
+- Rechecked old published addresses for Sankar and Padumani in Snov on 7 September. The two estate addresses returned Invalid; Sankar's alternate tinsukiaoffice@chamong.com address also returned Invalid. Both remain blocked needing a valid published business email.
+- Rechecked published addresses for Gangabari, Rumaigabhoru and Ghooronia in Snov on 7 September. All three returned yellow Unverifiable (Risky); all three remain held out of the Valid-only pilot.
+- Found a published Goneshbari address linked to the tea company. Its Snov check remained In progress after repeated polling, so it was not added to prospects.csv or the campaign.
+- Gillapukhri, Segunbari and Ananda Bag confirmed excluded for public-company status. Amulguri, Mothola and Longboi confirmed excluded for active sales discussions.
+- Ran pipeline check: 25 rows checked, 4 eligible (Baghbari, Satispur, Sadasiva, Sookerating) and 21 blocked. Exported eligible list to snov-import.csv (4 contacts).
 
 ## Remaining work
 
