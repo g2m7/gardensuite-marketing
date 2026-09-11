@@ -1,0 +1,65 @@
+Email,Status,Substatus,Confidence,Explanation,Email Provider,MX Record,Catch-All Domain,Secure Email Gateway,Disposable,Role Account,Free Email
+fulcrum.corp@gmail.com,safe,deliverable,98,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Gmail,alt4.gmail-smtp-in.l.google.com,FALSE,FALSE,FALSE,FALSE,TRUE
+mail@bengaltea.com,safe,deliverable,95,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Google Workspace,smtp.google.com,FALSE,FALSE,FALSE,FALSE,FALSE
+bhagatpur.tulsi@gmail.com,safe,deliverable,98,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Gmail,alt1.gmail-smtp-in.l.google.com,FALSE,FALSE,FALSE,FALSE,TRUE
+ap@ddptl.com,safe,deliverable,95,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Microsoft 365 / Outlook,ddptl-com.mail.protection.outlook.com,FALSE,TRUE,FALSE,FALSE,FALSE
+mail@menokatea.com,safe,deliverable,95,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Mailhostbox,us2.mx2.mailhostbox.com,FALSE,FALSE,FALSE,FALSE,FALSE
+accounts@mokalbaritea.in,safe,deliverable,95,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Microsoft 365 / Outlook,mokalbaritea-in.mail.protection.outlook.com,FALSE,TRUE,FALSE,TRUE,FALSE
+arun@gillandersarbuthnot.com,safe,deliverable,95,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Zoho Mail,mx.zoho.in,FALSE,TRUE,FALSE,FALSE,FALSE
+ankit.threeleavesindia@gmail.com,safe,deliverable,98,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Gmail,alt3.gmail-smtp-in.l.google.com,FALSE,FALSE,FALSE,FALSE,TRUE
+dherai@gillandersarbuthnot.com,safe,deliverable,95,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Zoho Mail,mx.zoho.in,FALSE,TRUE,FALSE,FALSE,FALSE
+dharni.joshi@amalgamated.in,safe,deliverable,95,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Microsoft 365 / Outlook,amalgamated-in.mail.protection.outlook.com,FALSE,TRUE,FALSE,FALSE,FALSE
+manager.office@nepuchapurtea.com,safe,deliverable,95,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Custom / Other,nepuchapurtea.com,FALSE,FALSE,FALSE,FALSE,FALSE
+noweranuddy.estate@amalgamated.in,safe,deliverable,95,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Microsoft 365 / Outlook,amalgamated-in.mail.protection.outlook.com,FALSE,TRUE,FALSE,FALSE,FALSE
+damdim.estate@amalgamated.in,safe,deliverable,95,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Microsoft 365 / Outlook,amalgamated-in.mail.protection.outlook.com,FALSE,TRUE,FALSE,FALSE,FALSE
+baintgoorietg@rediffmail.com,safe,deliverable,98,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Rediffmail,mx.rediffmail.rediff.akadns.net,FALSE,FALSE,FALSE,FALSE,TRUE
+ashishsinhassam@yahoo.co.in,safe,deliverable,98,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Yahoo,mx-apac.mail.gm0.yahoodns.net,FALSE,FALSE,FALSE,FALSE,TRUE
+oodlabariteaestate@hotmail.com,safe,deliverable,98,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Hotmail,hotmail-com.olc.protection.outlook.com,FALSE,TRUE,FALSE,FALSE,TRUE
+anandapurteaestate@gmail.com,safe,deliverable,98,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Gmail,gmail-smtp-in.l.google.com,FALSE,FALSE,FALSE,FALSE,TRUE
+rupi_rana@yahoo.co.in,safe,deliverable,98,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Yahoo,mx-apac.mail.gm0.yahoodns.net,FALSE,FALSE,FALSE,FALSE,TRUE
+soongachiteaestate@gmail.com,safe,deliverable,98,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Gmail,alt3.gmail-smtp-in.l.google.com,FALSE,FALSE,FALSE,FALSE,TRUE
+jogeschandratea@gmail.com,safe,deliverable,98,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Gmail,alt3.gmail-smtp-in.l.google.com,FALSE,FALSE,FALSE,FALSE,TRUE
+rungamuttee.estate@amalgamated.in,safe,deliverable,95,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Microsoft 365 / Outlook,amalgamated-in.mail.protection.outlook.com,FALSE,TRUE,FALSE,FALSE,FALSE
+washabarie@rediffmail.com,safe,deliverable,98,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Rediffmail,mx.rediffmail.rediff.akadns.net,FALSE,FALSE,FALSE,FALSE,TRUE
+damdim.pc@amalgamated.in,safe,deliverable,95,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Microsoft 365 / Outlook,amalgamated-in.mail.protection.outlook.com,FALSE,TRUE,FALSE,FALSE,FALSE
+toonbarieestate@yahoo.in,safe,deliverable,98,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Yahoo,mx-apac.mail.gm0.yahoodns.net,FALSE,FALSE,FALSE,FALSE,TRUE
+baradighitea@yahoo.com,safe,deliverable,98,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Yahoo,mta6.am0.yahoodns.net,FALSE,FALSE,FALSE,FALSE,TRUE
+blrai53@gmail.com,safe,deliverable,98,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Gmail,alt2.gmail-smtp-in.l.google.com,FALSE,FALSE,FALSE,FALSE,TRUE
+samsing.tg@gmail.com,safe,deliverable,98,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Gmail,alt1.gmail-smtp-in.l.google.com,FALSE,FALSE,FALSE,FALSE,TRUE
+zurrantee2012@gmail.com,safe,deliverable,98,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Gmail,alt1.gmail-smtp-in.l.google.com,FALSE,FALSE,FALSE,FALSE,TRUE
+batabari.estate@amalgamated.in,safe,deliverable,95,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Microsoft 365 / Outlook,amalgamated-in.mail.protection.outlook.com,FALSE,TRUE,FALSE,FALSE,FALSE
+mukulkantverma@gmail.com,safe,deliverable,98,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Gmail,alt1.gmail-smtp-in.l.google.com,FALSE,FALSE,FALSE,FALSE,TRUE
+brijeshr613@gmail.com,safe,deliverable,98,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Gmail,alt2.gmail-smtp-in.l.google.com,FALSE,FALSE,FALSE,FALSE,TRUE
+kallolparomita@gmail.com,safe,deliverable,98,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Gmail,alt4.gmail-smtp-in.l.google.com,FALSE,FALSE,FALSE,FALSE,TRUE
+manager@bamandangateagarden.com,invalid,no_mx_records,99,Domain has no email servers or does not exist. Do not send - your email will bounce.,None,,FALSE,FALSE,FALSE,TRUE,FALSE
+shyam.saha32@gmail.com,safe,deliverable,98,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Gmail,alt1.gmail-smtp-in.l.google.com,FALSE,FALSE,FALSE,FALSE,TRUE
+dianateaestate@gmail.com,safe,deliverable,98,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Gmail,gmail-smtp-in.l.google.com,FALSE,FALSE,FALSE,FALSE,TRUE
+yule.newdooars@gmail.com,safe,deliverable,98,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Gmail,alt1.gmail-smtp-in.l.google.com,FALSE,FALSE,FALSE,FALSE,TRUE
+ambarisepl@woodbriargroup.com,safe,deliverable,95,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Google Workspace,alt1.aspmx.l.google.com,FALSE,FALSE,FALSE,FALSE,FALSE
+htg.fact@gmail.com,safe,deliverable,98,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Gmail,gmail-smtp-in.l.google.com,FALSE,FALSE,FALSE,TRUE,TRUE
+tasatite12@gmail.com,safe,deliverable,98,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Gmail,alt3.gmail-smtp-in.l.google.com,FALSE,FALSE,FALSE,FALSE,TRUE
+kalabaribagan@gmail.com,safe,deliverable,98,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Gmail,alt2.gmail-smtp-in.l.google.com,FALSE,FALSE,FALSE,FALSE,TRUE
+ramjhoratea2010@gmail.com,safe,deliverable,98,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Gmail,alt4.gmail-smtp-in.l.google.com,FALSE,FALSE,FALSE,FALSE,TRUE
+viveksaran60@gmail.com,safe,deliverable,98,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Gmail,alt3.gmail-smtp-in.l.google.com,FALSE,FALSE,FALSE,FALSE,TRUE
+katalguriteagarden@gmail.com,safe,deliverable,98,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Gmail,gmail-smtp-in.l.google.com,FALSE,FALSE,FALSE,FALSE,TRUE
+kadambiniteaestate@gmail.com,safe,deliverable,98,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Gmail,alt3.gmail-smtp-in.l.google.com,FALSE,FALSE,FALSE,FALSE,TRUE
+dalmoreteaestate@gmail.com,safe,deliverable,98,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Gmail,alt1.gmail-smtp-in.l.google.com,FALSE,FALSE,FALSE,FALSE,TRUE
+lakshmikanta.tea@gmail.com,safe,deliverable,98,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Gmail,alt1.gmail-smtp-in.l.google.com,FALSE,FALSE,FALSE,FALSE,TRUE
+mujnaiteaestate@rediffmail.com,safe,deliverable,98,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Rediffmail,mx.rediffmail.rediff.akadns.net,FALSE,FALSE,FALSE,FALSE,TRUE
+managersinghania1918@gmail.com,safe,deliverable,98,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Gmail,alt2.gmail-smtp-in.l.google.com,FALSE,FALSE,FALSE,TRUE,TRUE
+pbte@hotmail.com,safe,deliverable,98,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Hotmail,hotmail-com.olc.protection.outlook.com,FALSE,TRUE,FALSE,FALSE,TRUE
+dipin.mehta@rediffmail.com,safe,deliverable,98,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Rediffmail,mx.rediffmail.rediff.akadns.net,FALSE,FALSE,FALSE,FALSE,TRUE
+dalsingparateaestate@gmail.com,safe,deliverable,98,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Gmail,alt3.gmail-smtp-in.l.google.com,FALSE,FALSE,FALSE,FALSE,TRUE
+kalchiniteaestate130@gmail.com,safe,deliverable,98,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Gmail,alt1.gmail-smtp-in.l.google.com,FALSE,FALSE,FALSE,FALSE,TRUE
+rb.garden@alom.in,safe,deliverable,95,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Google Workspace,alt2.aspmx.l.google.com,FALSE,FALSE,FALSE,FALSE,FALSE
+manager_bhatkawa@yahoo.com,safe,deliverable,98,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Yahoo,mta7.am0.yahoodns.net,FALSE,FALSE,FALSE,TRUE,TRUE
+patkaparateaestate@gmail.com,safe,deliverable,98,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Gmail,alt1.gmail-smtp-in.l.google.com,FALSE,FALSE,FALSE,FALSE,TRUE
+raimatangte2014@gmail.com,safe,deliverable,98,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Gmail,alt4.gmail-smtp-in.l.google.com,FALSE,FALSE,FALSE,FALSE,TRUE
+satali.tg@gmail.com,safe,deliverable,98,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Gmail,alt2.gmail-smtp-in.l.google.com,FALSE,FALSE,FALSE,FALSE,TRUE
+vishalmahindra24@gmail.com,safe,deliverable,98,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Gmail,alt1.gmail-smtp-in.l.google.com,FALSE,FALSE,FALSE,FALSE,TRUE
+uteradharani@gmail.com,safe,deliverable,98,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Gmail,alt1.gmail-smtp-in.l.google.com,FALSE,FALSE,FALSE,FALSE,TRUE
+atiabarimanager@gmail.com,safe,deliverable,98,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Gmail,alt4.gmail-smtp-in.l.google.com,FALSE,FALSE,FALSE,TRUE,TRUE
+toorsateagarden@gmail.com,safe,deliverable,98,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Gmail,alt2.gmail-smtp-in.l.google.com,FALSE,FALSE,FALSE,FALSE,TRUE
+chinchulatea.estate@gmail.com,safe,deliverable,98,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Gmail,alt4.gmail-smtp-in.l.google.com,FALSE,FALSE,FALSE,FALSE,TRUE
+newlandstea@gmail.com,safe,deliverable,98,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Gmail,alt3.gmail-smtp-in.l.google.com,FALSE,FALSE,FALSE,FALSE,TRUE
+rydakte@gmail.com,safe,deliverable,98,Safe to email. Mailbox domain has valid active MX records and accepts incoming mail.,Gmail,alt2.gmail-smtp-in.l.google.com,FALSE,FALSE,FALSE,FALSE,TRUE

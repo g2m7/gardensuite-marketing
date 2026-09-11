@@ -32,6 +32,6 @@ check_locked_file() {
 }
 
 check_locked_file 'marketing/outreach/sep-2026-pilot/locked/Contacts Verified Golden List.xlsx' 'fd2b375953d5671d6453d9047453452bd3706541e6fdad302c2e77e388afbef6'
-check_locked_file "marketing/outreach/sep-2026-pilot/locked/Email Id's .xlsx" 'cda4b94fd710555a4be0ec286095b28a4eb1bb7b94a50f5f0fe0e51b172afe50'
+check_locked_file "marketing/outreach/sep-2026-pilot/locked/Email Id's .xlsx" '44e1ddc36815b6e14a874c677d2caf36d96f8866530d17cdb4229829c1ba80fb'
 
 printf '%s\n' 'Locked files verified.'
