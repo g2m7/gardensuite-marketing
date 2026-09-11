@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="620" viewBox="0 0 900 620" role="img" aria-labelledby="title desc">
+  <title id="title">Face attendance and smart weigh workflow</title>
+  <desc id="desc">Worker face recognition and smart scale weight capture linked into one verified record.</desc>
+  <defs>
+    <linearGradient id="green" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#74c69d"/>
+      <stop offset="1" stop-color="#234b1d"/>
+    </linearGradient>
+    <filter id="shadow" x="-25%" y="-25%" width="150%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000000" flood-opacity=".16"/>
+    </filter>
+  </defs>
+  <rect width="900" height="620" rx="34" fill="#0a0a0a"/>
+  <path d="M70 493c96-75 184-100 264-75 86 27 136 102 230 95 77-5 166-66 267-183v220H70z" fill="#102510"/>
+  <g filter="url(#shadow)">
+    <rect x="92" y="107" width="196" height="360" rx="42" fill="#1d1d1f"/>
+    <rect x="113" y="144" width="154" height="274" rx="24" fill="#fbfbfd"/>
+    <circle cx="190" cy="264" r="54" fill="#e8f5ed"/>
+    <path d="M158 274c12 29 52 32 65 1" fill="none" stroke="#2d6a4f" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="169" cy="250" r="6" fill="#234b1d"/>
+    <circle cx="211" cy="250" r="6" fill="#234b1d"/>
+    <path d="M146 226c18-34 64-34 88 0" fill="none" stroke="#234b1d" stroke-width="8" stroke-linecap="round"/>
+    <path d="M138 318h104M150 348h80" stroke="#d2d2d7" stroke-width="12" stroke-linecap="round"/>
+    <rect x="156" y="380" width="68" height="14" rx="7" fill="#40916c"/>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="602" y="138" width="220" height="275" rx="32" fill="#f5f5f7"/>
+    <path d="M678 198h70M663 236h102" stroke="#424245" stroke-width="12" stroke-linecap="round"/>
+    <path d="M648 291h128" stroke="#2d6a4f" stroke-width="16" stroke-linecap="round"/>
+    <path d="M630 316h164l-24 64H654z" fill="#1d1d1f"/>
+    <path d="M678 413h68" stroke="#74c69d" stroke-width="14" stroke-linecap="round"/>
+    <path d="M711 138v-55" stroke="#74c69d" stroke-width="10" stroke-linecap="round"/>
+    <path d="M670 83h82" stroke="#74c69d" stroke-width="10" stroke-linecap="round"/>
+  </g>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M310 270h234" stroke="#74c69d" stroke-width="10"/>
+    <path d="M519 246l28 24-28 24" stroke="#74c69d" stroke-width="10"/>
+    <path d="M450 360c36 33 70 49 103 49" stroke="#2d6a4f" stroke-width="7"/>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="339" y="191" width="180" height="140" rx="30" fill="#ffffff"/>
+    <path d="M382 246h94M382 278h70" stroke="#d2d2d7" stroke-width="12" stroke-linecap="round"/>
+    <path d="M374 220l24 24 54-58" fill="none" stroke="url(#green)" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g fill="#fbfbfd" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="800">
+    <text x="122" y="516">Scan face</text>
+    <text x="381" y="516">Verified record</text>
+    <text x="640" y="516">Capture weight</text>
+  </g>
+</svg>

@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GardenSuite - Full Operations Brochure 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <style>
+    @page { size: A4 portrait; margin: 0; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --near-black: #0a0a0a;
+      --charcoal: #1d1d1f;
+      --gray-700: #424245;
+      --gray-500: #6e6e73;
+      --gray-400: #86868b;
+      --gray-200: #d2d2d7;
+      --gray-100: #f5f5f7;
+      --white: #fbfbfd;
+      --pure-white: #ffffff;
+      --green-deep: #1a3a15;
+      --green-primary: #234b1d;
+      --green-accent: #2d6a4f;
+      --green-bright: #40916c;
+      --green-light: #74c69d;
+      --green-wash: #f0f7f0;
+      --font: "Inter", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+      --font-display: "Inter", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    }
+
+    html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    body {
+      font-family: var(--font);
+      background: #e8e8ed;
+      color: var(--charcoal);
+      font-size: 9pt;
+      line-height: 1.5;
+      padding-top: 42px;
+    }
+
+    /* ── Screen Toolbar ──────────────────────────────── */
+    .toolbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      padding: 10px 16px;
+      background: rgba(0, 0, 0, 0.92);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      color: var(--gray-400);
+      font-size: 12px;
+      font-weight: 500;
+    }
+    .toolbar button, .toolbar a {
+      background: var(--white);
+      color: var(--charcoal);
+      border: none;
+      padding: 6px 14px;
+      border-radius: 14px;
+      font-size: 10pt;
+      font-weight: 600;
+      font-family: inherit;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .toolbar .btn-primary { background: var(--green-primary); color: var(--pure-white); }
+    .toolbar button:hover, .toolbar a:hover { transform: scale(1.02); }
+
+    /* ── Page Shell ──────────────────────────────────── */
+    .page {
+      width: 210mm;
+      height: 297mm;
+      margin: 6mm auto;
+      background: var(--pure-white);
+      overflow: hidden;
+      position: relative;
+      border: 0.3mm solid var(--gray-200);
+      border-radius: 2px;
+      page-break-after: always;
+      page-break-inside: avoid;
+    }
+    .page--dark { background: var(--near-black); color: var(--pure-white); }
+    .page--green { background: var(--green-deep); color: var(--pure-white); }
+    .content { height: 100%; display: flex; flex-direction: column; }
+
+    /* ── Running Header & Footer ─────────────────────── */
+    .hdr {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8mm 12mm 4mm;
+      flex-shrink: 0;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 3mm;
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 11pt;
+      color: var(--charcoal);
+    }
+    .brand--light { color: var(--pure-white); }
+    .brand img { width: 6.5mm; height: 6.5mm; object-fit: contain; border-radius: 1.5mm; }
+    .tag {
+      font-size: 8.5pt;
+      font-weight: 700;
+      color: var(--gray-400);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .tag--light { color: rgba(255,255,255,0.45); }
+
+    .ftr {
+      margin-top: auto;
+      padding: 4mm 12mm 8mm;
+      display: flex;
+      justify-content: space-between;
+      font-size: 8pt;
+      color: var(--gray-400);
+      flex-shrink: 0;
+    }
+    .ftr--light { color: rgba(255,255,255,0.4); }
+
+    /* ── Page Body & Typography ──────────────────────── */
+    .page-body {
+      flex: 1;
+      padding: 4mm 12mm 0;
+      display: flex;
+      flex-direction: column;
+      gap: 6.5mm;
+      justify-content: space-between;
+      overflow: hidden;
+    }
+
+    .intro-copy { display: flex; flex-direction: column; gap: 3mm; }
+    .eyebrow {
+      font-size: 9pt;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--green-accent);
+    }
+    .eyebrow--light { color: var(--green-light); }
+
+    .headline {
+      font-family: var(--font-display);
+      font-size: 30pt;
+      font-weight: 800;
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      color: var(--charcoal);
+      text-wrap: balance;
+    }
+    .headline--light { color: var(--pure-white); }
+    .headline--xl { font-size: 42pt; line-height: 0.98; }
+    .section-title { font-size: 28pt; line-height: 1.1; }
+    .tight-title { font-size: 26pt; line-height: 1.12; }
+
+    .lead {
+      font-size: 12pt;
+      font-weight: 400;
+      line-height: 1.55;
+      color: var(--gray-600);
+    }
+    .lead--light { color: rgba(255,255,255,0.78); }
+    .small-lead { font-size: 11pt; line-height: 1.5; }
+
+    /* ── Cover Page Layout ───────────────────────────── */
+    .cover {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      position: relative;
+      overflow: hidden;
+    }
+    .cover-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+    .cover-bg img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .cover-bg::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.25) 42%, rgba(0,0,0,0.95) 100%);
+    }
+    .cover-copy {
+      position: relative;
+      z-index: 2;
+      padding: 0 13mm 14mm;
+    }
+    .cover-copy .eyebrow { margin-bottom: 4mm; }
+    .cover-copy .headline { color: var(--pure-white); max-width: 178mm; margin-bottom: 4.5mm; }
+    .cover-copy .lead { color: rgba(255,255,255,0.85); max-width: 165mm; font-size: 13.5pt; line-height: 1.55; }
+
+    .stat-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 6mm;
+      margin-top: 9mm;
+      padding-top: 6mm;
+      border-top: 0.3mm solid rgba(255,255,255,0.2);
+    }
+    .stat strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 28pt;
+      line-height: 1;
+      font-weight: 900;
+      color: var(--pure-white);
+    }
+    .stat span {
+      display: block;
+      margin-top: 2mm;
+      font-size: 8pt;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: rgba(255,255,255,0.55);
+    }
+
+    /* ── Split Layouts ───────────────────────────────── */
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8mm;
+      align-items: center;
+    }
+    .split--wide { grid-template-columns: 1.12fr 0.88fr; }
+    .split--reverse { grid-template-columns: 0.88fr 1.12fr; }
+
+    /* ── Frames & Screenshots ────────────────────────── */
+    .visual-frame {
+      border-radius: 4.5mm;
+      overflow: hidden;
+      background: var(--gray-100);
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 0.3mm solid var(--gray-200);
+    }
+    .page--dark .visual-frame, .page--green .visual-frame {
+      background: rgba(255,255,255,0.04);
+      border: 0.3mm solid rgba(255,255,255,0.12);
+    }
+    .visual-frame img.main-crop {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .visual-frame--square {
+      width: 100%;
+      max-width: 95mm;
+      aspect-ratio: 1;
+      margin: 0 auto;
+    }
+    .visual-frame--short { aspect-ratio: 1.55; }
+    .visual-frame--wages {
+      aspect-ratio: 1.025;
+      width: 100%;
+      max-width: 95mm;
+      margin: 0 auto;
+      background: var(--gray-100);
+    }
+    .visual-frame--desktop {
+      aspect-ratio: 1.274;
+      width: 100%;
+      max-width: 95mm;
+      margin: 0 auto;
+      background: var(--gray-100);
+    }
+
+    /* Phone device frame for face attendance */
+    .visual-frame--phone {
+      width: 68mm;
+      height: 114mm;
+      border-radius: 6mm;
+      border: 0.35mm solid var(--gray-200);
+      background: var(--gray-100);
+      margin: 0 auto;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 4.5mm 3mm 3.5mm;
+    }
+    .visual-frame--phone::before {
+      content: "";
+      position: absolute;
+      top: 2.2mm;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 12mm;
+      height: 0.9mm;
+      background: rgba(0,0,0,0.18);
+      border-radius: 0.5mm;
+      z-index: 2;
+    }
+    .visual-frame--phone img.main-crop {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+      display: block;
+    }
+
+    /* Card screenshot frame for factory and stores */
+    .card-screenshot-frame {
+      position: relative;
+      margin-top: 3.5mm;
+      border-radius: 3mm;
+      overflow: hidden;
+      border: 0.3mm solid rgba(255,255,255,0.14);
+      background: #111;
+    }
+    .card-screenshot {
+      width: 100%;
+      height: 48mm;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+    }
+    .card-screenshot-frame .zoom-badge {
+      position: absolute;
+      bottom: 2.5mm;
+      right: 2.5mm;
+      background: #18181b;
+      border-color: rgba(255,255,255,0.22);
+      color: var(--pure-white);
+      padding: 2mm 3mm;
+      gap: 2.5mm;
+    }
+    .card-screenshot-frame .zoom-badge-thumb {
+      width: 10mm;
+      height: 10mm;
+    }
+
+    .zoom-badge {
+      position: absolute;
+      bottom: 3.5mm;
+      right: 3.5mm;
+      background: var(--pure-white);
+      border: 0.3mm solid var(--gray-200);
+      border-radius: 3mm;
+      padding: 3mm 4mm;
+      display: flex;
+      align-items: center;
+      gap: 3mm;
+    }
+    .page--dark .zoom-badge, .page--green .zoom-badge {
+      background: #18181b;
+      border-color: rgba(255,255,255,0.18);
+      color: var(--pure-white);
+    }
+    .zoom-badge-thumb {
+      width: 12mm;
+      height: 12mm;
+      border-radius: 2mm;
+      object-fit: cover;
+    }
+    .zoom-badge-title { font-size: 8.5pt; font-weight: 800; line-height: 1.25; }
+    .zoom-badge-sub { font-size: 7.5pt; color: var(--green-primary); font-weight: 700; line-height: 1.25; }
+    .page--dark .zoom-badge-sub, .page--green .zoom-badge-sub { color: var(--green-light); }
+
+    /* ── Feature Lists ───────────────────────────────── */
+    .feature-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 4mm;
+    }
+    .feature-list li {
+      display: flex;
+      gap: 3.5mm;
+      align-items: flex-start;
+      font-size: 10.2pt;
+      line-height: 1.5;
+      color: var(--gray-700);
+    }
+    .feature-list i {
+      flex: 0 0 auto;
+      font-size: 19pt;
+      color: var(--green-primary);
+      margin-top: 0.2mm;
+    }
+    .feature-list strong { color: var(--charcoal); font-weight: 800; }
+    .page--dark .feature-list li, .page--green .feature-list li { color: rgba(255,255,255,0.8); }
+    .page--dark .feature-list strong, .page--green .feature-list strong { color: var(--pure-white); }
+    .page--dark .feature-list i, .page--green .feature-list i { color: var(--green-light); }
+
+    /* ── Cards Grid ──────────────────────────────────── */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 5mm;
+    }
+    .cards--3 { grid-template-columns: repeat(3, 1fr); gap: 4.5mm; }
+    .card {
+      background: var(--gray-100);
+      border-radius: 4mm;
+      padding: 6.5mm 7mm;
+      border: 0.3mm solid var(--gray-200);
+    }
+    .card--dark {
+      background: rgba(255,255,255,0.045);
+      border: 0.3mm solid rgba(255,255,255,0.1);
+    }
+    .card i {
+      display: block;
+      font-size: 24pt;
+      color: var(--green-primary);
+      margin-bottom: 2.5mm;
+    }
+    .card--dark i { color: var(--green-light); }
+    .card h3 {
+      font-family: var(--font-display);
+      font-size: 13.5pt;
+      line-height: 1.22;
+      font-weight: 800;
+      color: var(--charcoal);
+      margin-bottom: 2mm;
+    }
+    .card--dark h3 { color: var(--pure-white); }
+    .card p {
+      font-size: 9.8pt;
+      line-height: 1.55;
+      color: var(--gray-600);
+    }
+    .card--dark p { color: rgba(255,255,255,0.72); }
+
+    /* ── Proof Strip ─────────────────────────────────── */
+    .proof-strip {
+      display: flex;
+      align-items: center;
+      gap: 6mm;
+      background: var(--gray-100);
+      border-radius: 4mm;
+      padding: 5.5mm 7mm;
+      border: 0.3mm solid var(--gray-200);
+    }
+    .proof-strip--dark {
+      background: rgba(255,255,255,0.045);
+      border: 0.3mm solid rgba(255,255,255,0.1);
+    }
+    .proof-stat { text-align: center; min-width: 26mm; }
+    .proof-stat strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 26pt;
+      font-weight: 900;
+      line-height: 1;
+      color: var(--green-primary);
+    }
+    .proof-stat span {
+      display: block;
+      margin-top: 1.5mm;
+      font-size: 7.5pt;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--gray-400);
+    }
+    .proof-strip--dark .proof-stat strong { color: var(--green-light); }
+    .proof-strip--dark .proof-stat span { color: rgba(255,255,255,0.45); }
+    .proof-divider { width: 0.3mm; height: 13mm; background: var(--gray-200); flex-shrink: 0; }
+    .proof-strip--dark .proof-divider { background: rgba(255,255,255,0.15); }
+    .proof-text { flex: 1; font-size: 9.8pt; line-height: 1.52; color: var(--gray-600); }
+    .proof-text strong { color: var(--charcoal); font-weight: 800; }
+    .proof-strip--dark .proof-text { color: rgba(255,255,255,0.75); }
+    .proof-strip--dark .proof-text strong { color: var(--pure-white); }
+
+    /* ── Workflow Pipeline ───────────────────────────── */
+    .workflow-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 3mm;
+    }
+    .wf-card {
+      background: rgba(255,255,255,0.05);
+      border: 0.3mm solid rgba(255,255,255,0.12);
+      border-radius: 3.5mm;
+      padding: 3.6mm 5.5mm;
+      display: flex;
+      align-items: center;
+      gap: 5mm;
+    }
+    .wf-num {
+      font-family: var(--font-display);
+      font-size: 22pt;
+      font-weight: 900;
+      color: var(--green-light);
+      line-height: 1;
+      min-width: 12mm;
+      text-align: center;
+    }
+    .wf-icon {
+      font-size: 22pt;
+      color: var(--green-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 11mm;
+    }
+    .wf-content {
+      flex: 1;
+    }
+    .wf-title {
+      font-family: var(--font-display);
+      font-size: 12.5pt;
+      font-weight: 800;
+      color: var(--pure-white);
+      margin-bottom: 1.5mm;
+      line-height: 1.2;
+    }
+    .wf-desc {
+      font-size: 9.8pt;
+      line-height: 1.5;
+      color: rgba(255,255,255,0.78);
+    }
+    .wf-meta {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 1.5mm;
+      min-width: 32mm;
+      text-align: right;
+    }
+    .wf-badge {
+      font-size: 8pt;
+      font-weight: 700;
+      color: rgba(255,255,255,0.9);
+      letter-spacing: 0.02em;
+    }
+    .wf-tag {
+      font-size: 7.5pt;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--green-light);
+    }
+
+    /* ── Timeline (legacy/compact) ───────────────────── */
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 2.2mm;
+    }
+    .step {
+      background: rgba(255,255,255,0.045);
+      border: 0.3mm solid rgba(255,255,255,0.08);
+      border-radius: 3mm;
+      padding: 4.5mm 3.5mm;
+      text-align: center;
+    }
+    .step strong {
+      display: block;
+      font-family: var(--font-display);
+      color: var(--green-light);
+      font-size: 16pt;
+      line-height: 1;
+      margin-bottom: 2mm;
+    }
+    .step h3 { color: var(--pure-white); font-size: 7.8pt; margin-bottom: 1.5mm; font-weight: 700; }
+    .step p { color: rgba(255,255,255,0.55); font-size: 6.4pt; line-height: 1.42; }
+
+    /* ── Client Grid ─────────────────────────────────── */
+    .client-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 3.5mm;
+    }
+    .client {
+      border-radius: 3.5mm;
+      background: var(--gray-100);
+      padding: 5mm;
+      border: 0.3mm solid var(--gray-200);
+    }
+    .client label {
+      display: block;
+      font-size: 8pt;
+      font-weight: 800;
+      color: var(--green-accent);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 1.5mm;
+    }
+    .client span { font-size: 9.2pt; line-height: 1.48; color: var(--gray-700); }
+
+    /* ── Contact Card ────────────────────────────────── */
+    .contact-card {
+      background: rgba(255,255,255,0.045);
+      border: 0.3mm solid rgba(255,255,255,0.1);
+      border-radius: 5mm;
+      padding: 11mm 12mm;
+      width: 100%;
+      max-width: 168mm;
+      margin: 0 auto;
+    }
+    .contact-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6mm;
+    }
+    .contact-item {
+      text-align: left;
+      border-left: 0.5mm solid rgba(116,198,157,0.8);
+      padding-left: 5mm;
+    }
+    .contact-item i {
+      display: block;
+      font-size: 28pt;
+      color: var(--green-light);
+      margin-bottom: 3mm;
+    }
+    .contact-item label {
+      display: block;
+      font-size: 8pt;
+      font-weight: 800;
+      color: rgba(255,255,255,0.5);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 1.5mm;
+    }
+    .contact-item span {
+      font-size: 13.5pt;
+      font-weight: 700;
+      color: var(--pure-white);
+      line-height: 1.35;
+    }
+
+    /* ── Print Media Optimization ────────────────────── */
+    @media print {
+      body { padding-top: 0 !important; background: #fff !important; }
+      .toolbar { display: none !important; }
+      .page {
+        margin: 0 !important;
+        border: none !important;
+        border-radius: 0 !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Screen Toolbar -->
+  <div class="toolbar">
+    <span>GardenSuite Operations - Executive Brochure</span>
+    <span style="font-size: 10px;">Print / Export: <code style="background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 4px;">Cmd+P &gt; Save as PDF</code></span>
+    <button class="btn-primary" onclick="window.print()">Download PDF</button>
+  </div>
+
+  <!-- ==========================================================================
+       PAGE 1: COVER
+       ========================================================================== -->
+  <section class="page page--dark">
+    <div class="content">
+      <div class="hdr">
+        <div class="brand brand--light">
+          <img src="assets/gardensuite-icon-white.svg" alt="" />
+          <span>GardenSuite</span>
+        </div>
+        <div class="tag tag--light">Full Operations Brochure - 2026</div>
+      </div>
+      <div class="cover">
+        <div class="cover-bg"><img src="assets/hero-tea-garden.png" alt="Tea garden landscape" /></div>
+        <div class="cover-copy">
+          <span class="eyebrow eyebrow--light">Built for tea gardens</span>
+          <h1 class="headline headline--xl">Complete operations system for tea garden management.</h1>
+          <p class="lead">Biometric face attendance, smart Bluetooth scale weighment, and complete offline estate accounting. From field leaf to office ledger.</p>
+          <div class="stat-row">
+            <div class="stat"><strong>25+</strong><span>Years in tea gardens</span></div>
+            <div class="stat"><strong>20+</strong><span>Estate clients</span></div>
+            <div class="stat"><strong>100%</strong><span>Offline field engine</span></div>
+            <div class="stat"><strong>Cloud</strong><span>MIS dashboard</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="ftr ftr--light">
+        <span>Built and maintained by Sarbani Associates</span>
+        <span>gardensuite.in</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PAGE 2: THE OPERATIONAL MOAT
+       ========================================================================== -->
+  <section class="page">
+    <div class="content">
+      <div class="hdr">
+        <div class="brand"><img src="assets/favicon.png" alt="" />GardenSuite</div>
+        <div class="tag">02 / 10 - The Moat</div>
+      </div>
+      <div class="page-body">
+        <div class="intro-copy">
+          <span class="eyebrow">Domain architecture</span>
+          <h2 class="headline section-title">Why generic software fails in tea gardens.</h2>
+          <p class="lead">Tea plantations operate in remote valleys with zero network and complex task math. Standard software breaks down in the field. GardenSuite is built from the bush up.</p>
+        </div>
+        <div class="cards">
+          <div class="card">
+            <i class="ph-duotone ph-wifi-slash"></i>
+            <h3>100% offline field resilience</h3>
+            <p>Deep tea sections in Dooars, Terai, and Assam have zero cellular coverage. SQLite on-device engine records all face scans and weighments locally with zero stalling. Data syncs in 60 seconds when back in range of office Wi-Fi.</p>
+          </div>
+          <div class="card">
+            <i class="ph-duotone ph-scan"></i>
+            <h3>Face biometrics coupled to weight</h3>
+            <p>Certified Bluetooth scale hook transmits gross and tare weight directly to the worker's verified face scan. Completely eliminates handwritten paper chits, delayed clerical transcription, and proxy plucker fraud.</p>
+          </div>
+          <div class="card">
+            <i class="ph-duotone ph-calculator"></i>
+            <h3>Native tea garden mathematics</h3>
+            <p>Built-in computation for daily task hazira (24 kg standard), over-plucking incentives (rate/kg), basket tare deductions, moisture water cuts, and statutory 12% garden PF without error-prone Excel sheets.</p>
+          </div>
+          <div class="card">
+            <i class="ph-duotone ph-map-pin"></i>
+            <h3>Direct on-ground Siliguri support</h3>
+            <p>We are based at Bagdogra and Siliguri, right beside the tea belts. Our hardware engineers visit your estate in person for scale pairing, biometric enrollment, calibration, and on-site boidar training.</p>
+          </div>
+        </div>
+        <div class="proof-strip">
+          <div class="proof-stat"><strong>One</strong><span>Moat</span></div>
+          <div class="proof-divider"></div>
+          <div class="proof-text"><strong>Engineered for tea plantation reality.</strong> Zero reliance on continuous cloud internet in the section, zero manual paper chits, and automatic estate compliance.</div>
+        </div>
+      </div>
+      <div class="ftr">
+        <span>The operational moat</span>
+        <span>&copy; 2026 Sarbani Associates</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PAGE 3: FIELD FACE ATTENDANCE
+       ========================================================================== -->
+  <section class="page">
+    <div class="content">
+      <div class="hdr">
+        <div class="brand"><img src="assets/favicon.png" alt="" />GardenSuite</div>
+        <div class="tag">03 / 10 - Face Attendance</div>
+      </div>
+      <div class="page-body">
+        <div class="split split--wide">
+          <div class="intro-copy">
+            <span class="eyebrow">Biometric verification</span>
+            <h2 class="headline section-title">Face attendance right in the section.</h2>
+            <p class="lead small-lead">Fast on-device face verification stops buddy punching and ghost workers. Works offline in morning mist, direct sun, or shade.</p>
+            <ul class="feature-list">
+              <li><i class="ph-duotone ph-lightning"></i><span><strong>Sub-2-second match</strong> - mathematical vector recognition runs locally on Android phones without cloud lag.</span></li>
+              <li><i class="ph-duotone ph-shield-check"></i><span><strong>Liveness check passed</strong> - verifies real worker presence and stops photo or proxy punching.</span></li>
+              <li><i class="ph-duotone ph-users-three"></i><span><strong>Section &amp; job allocation</strong> - assign pluckers to division, section, and specific work code instantly.</span></li>
+              <li><i class="ph-duotone ph-lock-key"></i><span><strong>Privacy &amp; encryption</strong> - only mathematical embeddings stored; no raw biometric photos saved.</span></li>
+            </ul>
+          </div>
+          <div class="visual-frame visual-frame--phone">
+            <img src="assets/clean_face_attendance.png" alt="Face Attendance Screen" class="main-crop" />
+          </div>
+        </div>
+        <div class="cards cards--3">
+          <div class="card">
+            <i class="ph-duotone ph-cpu"></i>
+            <h3>Offline vector engine</h3>
+            <p>Mathematical face embeddings match in under 2 seconds on standard Android phones with zero cellular signal.</p>
+          </div>
+          <div class="card">
+            <i class="ph-duotone ph-user-focus"></i>
+            <h3>Active liveness check</h3>
+            <p>Depth and motion verification confirms real worker presence, stopping printed photos or proxy buddy punching.</p>
+          </div>
+          <div class="card">
+            <i class="ph-duotone ph-tree-structure"></i>
+            <h3>Section muster allocation</h3>
+            <p>Assigns pluckers to division, section, kam, and boidar code right at 06:30 AM before picking up baskets.</p>
+          </div>
+        </div>
+        <div class="proof-strip">
+          <div class="proof-stat"><strong>2 Sec</strong><span>Speed</span></div>
+          <div class="proof-divider"></div>
+          <div class="proof-text"><strong>Instant morning muster roll.</strong> Workers are verified and allocated to their sections before picking up their baskets, eliminating paper rolls.</div>
+        </div>
+      </div>
+      <div class="ftr">
+        <span>Field face attendance</span>
+        <span>03</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PAGE 4: SMART BLUETOOTH WEIGHING
+       ========================================================================== -->
+  <section class="page page--dark">
+    <div class="content">
+      <div class="hdr">
+        <div class="brand brand--light"><img src="assets/gardensuite-icon-white.svg" alt="" />GardenSuite</div>
+        <div class="tag tag--light">04 / 10 - Smart Weighing</div>
+      </div>
+      <div class="page-body">
+        <div class="split split--reverse">
+          <div class="visual-frame visual-frame--square">
+            <img src="assets/scale_hardware.png" alt="Smart Scale Hardware" class="main-crop" />
+            <div class="zoom-badge">
+              <img src="assets/zoom_scale_reading.png" alt="Scale Reading" class="zoom-badge-thumb" />
+              <div>
+                <div class="zoom-badge-title">Anita Toppo (GT-0205)</div>
+                <div class="zoom-badge-sub">Net 22.1 kg (Gross 24.5 - Tare 2.4)</div>
+              </div>
+            </div>
+          </div>
+          <div class="intro-copy">
+            <span class="eyebrow eyebrow--light">Precision harvest</span>
+            <h2 class="headline headline--light section-title">Leaf weight linked directly to verified face.</h2>
+            <p class="lead lead--light small-lead">Plucking leaf weight transmits wirelessly from the hanging scale to the Android app. No handwritten chits or manual typing errors.</p>
+            <ul class="feature-list">
+              <li><i class="ph-duotone ph-scales"></i><span><strong>Wireless BLE 5.0 hook</strong> - weight locks automatically on the app screen in seconds.</span></li>
+              <li><i class="ph-duotone ph-scissors"></i><span><strong>Automatic tare deduction</strong> - preset bag weight and moisture allowance subtracted on the spot.</span></li>
+              <li><i class="ph-duotone ph-speaker-high"></i><span><strong>Worker day total</strong> - pluckers hear and verify their cumulative day plucking weight immediately.</span></li>
+              <li><i class="ph-duotone ph-receipt"></i><span><strong>Tamper-proof record</strong> - plucker face, timestamp, and net kilograms sealed atomically.</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="cards cards--3">
+          <div class="card card--dark">
+            <i class="ph-duotone ph-broadcast"></i>
+            <h3>BLE 5.0 wireless hook</h3>
+            <p>Transmits certified net leaf weight straight from the hanging scale to the supervisor phone in 1 second.</p>
+          </div>
+          <div class="card card--dark">
+            <i class="ph-duotone ph-scissors"></i>
+            <h3>Automatic tare &amp; water cut</h3>
+            <p>Preset bag tare (2.4 kg) and rainfall moisture allowance are subtracted on the spot without manual arithmetic.</p>
+          </div>
+          <div class="card card--dark">
+            <i class="ph-duotone ph-speaker-high"></i>
+            <h3>Voice day-total broadcast</h3>
+            <p>The Android app speaks the worker cumulative day plucking weight aloud for clear, dispute-free verification.</p>
+          </div>
+        </div>
+        <div class="proof-strip proof-strip--dark">
+          <div class="proof-stat"><strong>Zero</strong><span>Paper Chits</span></div>
+          <div class="proof-divider"></div>
+          <div class="proof-text"><strong>Direct scale-to-phone data capture.</strong> Stops leaf weight manipulation, handwritten chit errors, and delayed weighment transcription.</div>
+        </div>
+      </div>
+      <div class="ftr ftr--light">
+        <span>Smart Bluetooth weighing</span>
+        <span>04</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PAGE 5: DAILY WORKFLOW PIPELINE
+       ========================================================================== -->
+  <section class="page page--green">
+    <div class="content">
+      <div class="hdr">
+        <div class="brand brand--light"><img src="assets/gardensuite-icon-white.svg" alt="" />GardenSuite</div>
+        <div class="tag tag--light">05 / 10 - Daily Workflow</div>
+      </div>
+      <div class="page-body">
+        <div class="intro-copy">
+          <span class="eyebrow eyebrow--light">5-step operational cycle</span>
+          <h2 class="headline headline--light section-title">From morning muster to cloud MIS in 5 steps.</h2>
+          <p class="lead lead--light">A proven daily routine followed across 20+ tea estates in North Bengal and Assam.</p>
+        </div>
+        <div class="workflow-stack">
+          <div class="wf-card">
+            <div class="wf-num">01</div>
+            <div class="wf-icon"><i class="ph-duotone ph-scan"></i></div>
+            <div class="wf-content">
+              <div class="wf-title">Morning Hazira Verification</div>
+              <div class="wf-desc">Workers scan their face at field muster stations. Biometric match runs locally on Android phones in under 2 seconds. Section, muhuri, and task job codes are allocated immediately.</div>
+            </div>
+            <div class="wf-meta">
+              <span class="wf-badge">06:30 AM</span>
+              <span class="wf-tag">Zero Proxy</span>
+            </div>
+          </div>
+          <div class="wf-card">
+            <div class="wf-num">02</div>
+            <div class="wf-icon"><i class="ph-duotone ph-scales"></i></div>
+            <div class="wf-content">
+              <div class="wf-title">Smart Bluetooth Leaf Weighment</div>
+              <div class="wf-desc">Midday and evening leaf weighment at section collection points. Weight transmits wirelessly from hanging scale hook directly into the worker's open attendance record.</div>
+            </div>
+            <div class="wf-meta">
+              <span class="wf-badge">11:30 AM / 03:30 PM</span>
+              <span class="wf-tag">Direct BLE</span>
+            </div>
+          </div>
+          <div class="wf-card">
+            <div class="wf-num">03</div>
+            <div class="wf-icon"><i class="ph-duotone ph-wifi-high"></i></div>
+            <div class="wf-content">
+              <div class="wf-title">60-Second Estate Office Sync</div>
+              <div class="wf-desc">Supervisor brings mobile phone within range of the estate office local Wi-Fi. All face transactions and leaf weights transfer directly to the desktop database server in seconds.</div>
+            </div>
+            <div class="wf-meta">
+              <span class="wf-badge">05:00 PM</span>
+              <span class="wf-tag">Offline First</span>
+            </div>
+          </div>
+          <div class="wf-card">
+            <div class="wf-num">04</div>
+            <div class="wf-icon"><i class="ph-duotone ph-calculator"></i></div>
+            <div class="wf-content">
+              <div class="wf-title">Automated Kamjari &amp; Task Costing</div>
+              <div class="wf-desc">Garden office runs daily kamjari with one click. Daily plucking task (24 kg), over-plucking rates, bag tare deductions, and moisture allowances calculate automatically without clerical spreadsheets.</div>
+            </div>
+            <div class="wf-meta">
+              <span class="wf-badge">05:30 PM</span>
+              <span class="wf-tag">One-Click Run</span>
+            </div>
+          </div>
+          <div class="wf-card">
+            <div class="wf-num">05</div>
+            <div class="wf-icon"><i class="ph-duotone ph-chart-line-up"></i></div>
+            <div class="wf-content">
+              <div class="wf-title">Executive Cloud MIS &amp; Statutory Pay</div>
+              <div class="wf-desc">Daily harvest totals upload securely to the management cloud dashboard for owners and visiting agents. Fortnightly wages, PF ECR files, and pay slips are compiled ready for bank disbursement.</div>
+            </div>
+            <div class="wf-meta">
+              <span class="wf-badge">06:00 PM</span>
+              <span class="wf-tag">Management Cloud</span>
+            </div>
+          </div>
+        </div>
+        <div class="proof-strip proof-strip--dark">
+          <div class="proof-stat"><strong>5</strong><span>Steps</span></div>
+          <div class="proof-divider"></div>
+          <div class="proof-text"><strong>Complete operational transparency.</strong> Field leaf balances with factory gate intake before the evening shift ends, eliminating unexplained leaf shrinkage.</div>
+        </div>
+      </div>
+      <div class="ftr ftr--light">
+        <span>Field-to-office daily workflow</span>
+        <span>05</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PAGE 6: KAMJARI & PAYROLL
+       ========================================================================== -->
+  <section class="page">
+    <div class="content">
+      <div class="hdr">
+        <div class="brand"><img src="assets/favicon.png" alt="" />GardenSuite</div>
+        <div class="tag">06 / 10 - Kamjari &amp; Wages</div>
+      </div>
+      <div class="page-body">
+        <div class="split">
+          <div class="intro-copy">
+            <span class="eyebrow">Estate accounting</span>
+            <h2 class="headline tight-title">Daily kamjari and statutory<br />wages in minutes.</h2>
+            <p class="lead small-lead">One-click calculation for basic task hazira, over-plucking incentives, and garden payroll without clerical spreadsheets.</p>
+            <ul class="feature-list">
+              <li><i class="ph-duotone ph-chart-line-up"></i><span><strong>Audited estate figures</strong> - 870,535 kg green leaf, 32,435 mandays, ₹2.20 Cr wages processed.</span></li>
+              <li><i class="ph-duotone ph-currency-inr"></i><span><strong>Native task formulas</strong> - basic hazira (24 kg task) + over-plucking rates (₹4.50/kg) computed accurately.</span></li>
+              <li><i class="ph-duotone ph-bank"></i><span><strong>Statutory returns</strong> - fortnightly wages, 12% PF returns, ESI, bank pay sheets, and wage slips.</span></li>
+              <li><i class="ph-duotone ph-gauge"></i><span><strong>Productivity audit</strong> - average plucking yield (26.84 kg/day), rounds, and below-task worker lists.</span></li>
+            </ul>
+          </div>
+          <div class="visual-frame visual-frame--wages">
+            <img src="assets/clean_wages_overview.png" alt="Wages Overview" class="main-crop" />
+          </div>
+        </div>
+        <div class="cards cards--3">
+          <div class="card">
+            <i class="ph-duotone ph-calendar-check"></i>
+            <h3>Daily kamjari</h3>
+            <p>Daily deployment, mandays summary, plucking averages, and section-wise costing.</p>
+          </div>
+          <div class="card">
+            <i class="ph-duotone ph-money"></i>
+            <h3>Wages &amp; salary</h3>
+            <p>Fortnightly task wages, staff salary, payslips, carry-forward coins, and bank RTGS sheets.</p>
+          </div>
+          <div class="card">
+            <i class="ph-duotone ph-file-text"></i>
+            <h3>Statutory reports</h3>
+            <p>PF ECR returns, leave with wages, annual bonus, sick, maternity, and muster rolls.</p>
+          </div>
+        </div>
+        <div class="proof-strip">
+          <div class="proof-stat"><strong>₹2.20 Cr</strong><span>Wages Audited</span></div>
+          <div class="proof-divider"></div>
+          <div class="proof-text"><strong>Zero clerical calculation delay.</strong> Final fortnightly wages and statutory PF returns generated within 15 minutes of closing the muster period.</div>
+        </div>
+      </div>
+      <div class="ftr">
+        <span>Estate kamjari and payroll</span>
+        <span>06</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PAGE 7: FACTORY PRODUCTION & STORE INVENTORY
+       ========================================================================== -->
+  <section class="page page--dark">
+    <div class="content">
+      <div class="hdr">
+        <div class="brand brand--light"><img src="assets/gardensuite-icon-white.svg" alt="" />GardenSuite</div>
+        <div class="tag tag--light">07 / 10 - Factory &amp; Stores</div>
+      </div>
+      <div class="page-body">
+        <div class="intro-copy">
+          <span class="eyebrow eyebrow--light">Operations &amp; inventory</span>
+          <h2 class="headline headline--light section-title">Track factory leaf intake,<br />made tea outturn, and stores.</h2>
+          <p class="lead lead--light">Reconcile weighbridge green leaf with made tea outturn, and track section-wise inventory for fertilizers, fuels, and rations.</p>
+        </div>
+        <div class="cards">
+          <div class="card card--dark">
+            <i class="ph-duotone ph-factory"></i>
+            <h3>Factory &amp; despatch challans</h3>
+            <p>Gate weighbridge leaf intake reconciliation, CTC made tea outturn, grade-wise sorting (BOP, BP, OF, PD), packing sizes, GST invoices, and despatch challans.</p>
+            <div class="card-screenshot-frame">
+              <img src="assets/clean_factory_despatch.png" alt="Despatch Challan" class="card-screenshot" />
+              <div class="zoom-badge">
+                <img src="assets/zoom_despatch_item.png" alt="CTC Despatch Zoom" class="zoom-badge-thumb" />
+                <div>
+                  <div class="zoom-badge-title">CTC Despatch Challan</div>
+                  <div class="zoom-badge-sub">Grade BOP • Net 25.0 kg</div>
+                </div>
+              </div>
+            </div>
+            <ul class="feature-list" style="margin-top: 3.5mm; gap: 2.5mm;">
+              <li style="font-size: 8.8pt; color: rgba(255,255,255,0.78);"><i class="ph-duotone ph-scales" style="font-size: 15pt; color: var(--green-light);"></i><span><strong>Leaf reconciliation</strong> - gross, tare, and net weighbridge intake balanced against plucking collections.</span></li>
+              <li style="font-size: 8.8pt; color: rgba(255,255,255,0.78);"><i class="ph-duotone ph-package" style="font-size: 15pt; color: var(--green-light);"></i><span><strong>CTC made tea outturn</strong> - track recovery percentage across BOP, BP, OF, and PD grade assortments.</span></li>
+              <li style="font-size: 8.8pt; color: rgba(255,255,255,0.78);"><i class="ph-duotone ph-receipt" style="font-size: 15pt; color: var(--green-light);"></i><span><strong>GST despatch invoices</strong> - automated buyer sale challans, road transit forms, and audit registers.</span></li>
+            </ul>
+          </div>
+          <div class="card card--dark">
+            <i class="ph-duotone ph-warehouse"></i>
+            <h3>Store stock &amp; consumption</h3>
+            <p>Purchase register, supplier bills, and section-wise requisitions for fertilizers (Urea, MOP, DAP), fuel (HSD, Petrol), and weekly worker ration distribution.</p>
+            <div class="card-screenshot-frame">
+              <img src="assets/clean_store_stock.png" alt="Store Stock" class="card-screenshot" />
+              <div class="zoom-badge">
+                <img src="assets/zoom_store_items.png" alt="Store Items Zoom" class="zoom-badge-thumb" />
+                <div>
+                  <div class="zoom-badge-title">Section Requisitions</div>
+                  <div class="zoom-badge-sub">MOP, Urea, HSD Oil, Petrol</div>
+                </div>
+              </div>
+            </div>
+            <ul class="feature-list" style="margin-top: 3.5mm; gap: 2.5mm;">
+              <li style="font-size: 8.8pt; color: rgba(255,255,255,0.78);"><i class="ph-duotone ph-drop" style="font-size: 15pt; color: var(--green-light);"></i><span><strong>Fertilizers &amp; agrochemicals</strong> - section requisitions for Urea, MOP, DAP, and foliar sprays.</span></li>
+              <li style="font-size: 8.8pt; color: rgba(255,255,255,0.78);"><i class="ph-duotone ph-gas-pump" style="font-size: 15pt; color: var(--green-light);"></i><span><strong>Fuel &amp; genset registers</strong> - diesel (HSD) and petrol consumption logs for factory machinery and tractors.</span></li>
+              <li style="font-size: 8.8pt; color: rgba(255,255,255,0.78);"><i class="ph-duotone ph-bowl-food" style="font-size: 15pt; color: var(--green-light);"></i><span><strong>Worker ration distribution</strong> - weekly ration issues (wheat, rice, tea) with automatic wage deductions.</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="proof-strip proof-strip--dark">
+          <div class="proof-stat"><strong>100%</strong><span>Traceability</span></div>
+          <div class="proof-divider"></div>
+          <div class="proof-text"><strong>Full estate audit trail.</strong> Every kilogram of green leaf is reconciled from bush to weighbridge, withering, made tea packing, and GST despatch.</div>
+        </div>
+      </div>
+      <div class="ftr ftr--light">
+        <span>Factory production and store inventory</span>
+        <span>07</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PAGE 8: CLOUD MIS DASHBOARD
+       ========================================================================== -->
+  <section class="page">
+    <div class="content">
+      <div class="hdr">
+        <div class="brand"><img src="assets/favicon.png" alt="" />GardenSuite</div>
+        <div class="tag">08 / 10 - Cloud MIS</div>
+      </div>
+      <div class="page-body">
+        <div class="split">
+          <div class="intro-copy">
+            <span class="eyebrow">Executive visibility</span>
+            <h2 class="headline section-title">Estate figures on your phone,<br />anywhere in the world.</h2>
+            <p class="lead small-lead">Offline reliability at the garden office, with secure cloud viewing for directors, owners, and visiting agents.</p>
+            <ul class="feature-list">
+              <li><i class="ph-duotone ph-device-mobile"></i><span><strong>View from anywhere</strong> - access live daily harvest, labour, and factory data from phone, tablet, or laptop.</span></li>
+              <li><i class="ph-duotone ph-chart-polar"></i><span><strong>Executive metrics</strong> - season-to-date leaf harvest (1,036,294 kg), plucking averages, and yield per hectare.</span></li>
+              <li><i class="ph-duotone ph-buildings"></i><span><strong>Multi-garden overview</strong> - estate groups can compare performance across multiple gardens under one login.</span></li>
+              <li><i class="ph-duotone ph-shield-check"></i><span><strong>Local data sovereignty</strong> - garden office retains full offline master data; cloud receives read-only summaries.</span></li>
+            </ul>
+          </div>
+          <div class="visual-frame visual-frame--desktop">
+            <img src="assets/clean_dashboard_overview.png" alt="Cloud MIS Dashboard" class="main-crop" />
+          </div>
+        </div>
+        <div class="cards cards--3">
+          <div class="card">
+            <i class="ph-duotone ph-chart-line-up"></i>
+            <h3>Yield per hectare</h3>
+            <p>Compare section-wise green leaf productivity, plucking rounds, and bush health across your entire estate.</p>
+          </div>
+          <div class="card">
+            <i class="ph-duotone ph-buildings"></i>
+            <h3>Multi-garden view</h3>
+            <p>Company directors monitor multiple estates across Assam and Bengal under one centralized, secure management login.</p>
+          </div>
+          <div class="card">
+            <i class="ph-duotone ph-database"></i>
+            <h3>Data sovereignty</h3>
+            <p>The garden office maintains 100% offline master records; the cloud dashboard receives encrypted read-only summaries.</p>
+          </div>
+        </div>
+        <div class="proof-strip">
+          <div class="proof-stat"><strong>Daily</strong><span>MIS</span></div>
+          <div class="proof-divider"></div>
+          <div class="proof-text"><strong>Best of both worlds.</strong> Estate operations run 100% reliably on local office PC without internet dependencies, while management enjoys real-time cloud visibility.</div>
+        </div>
+      </div>
+      <div class="ftr">
+        <span>Cloud MIS dashboard</span>
+        <span>08</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PAGE 9: 4-PHASE ROLLOUT & HERITAGE
+       ========================================================================== -->
+  <section class="page">
+    <div class="content">
+      <div class="hdr">
+        <div class="brand"><img src="assets/favicon.png" alt="" />GardenSuite</div>
+        <div class="tag">09 / 10 - Rollout &amp; Heritage</div>
+      </div>
+      <div class="page-body">
+        <div class="intro-copy">
+          <span class="eyebrow">Proven implementation</span>
+          <h2 class="headline section-title">25+ years supporting tea estates across North Bengal &amp; Assam.</h2>
+          <p class="lead">Built and maintained by Sarbani Associates (Bagdogra, Siliguri). Serving 20+ tea estates since 2000.</p>
+        </div>
+        <div class="cards">
+          <div class="card">
+            <i class="ph-duotone ph-compass"></i>
+            <h3>Phase 1: Estate survey</h3>
+            <p>Review weighment points, muster locations, task wage formulations, and hardware requirements with management.</p>
+          </div>
+          <div class="card">
+            <i class="ph-duotone ph-desktop"></i>
+            <h3>Phase 2: Hardware setup</h3>
+            <p>Install local garden office server, pair certified Bluetooth hanging scales, and configure automated backups.</p>
+          </div>
+          <div class="card">
+            <i class="ph-duotone ph-user-focus"></i>
+            <h3>Phase 3: Worker enrollment</h3>
+            <p>Register plucker face vectors and employee codes on site. Calibrate scale bag deduction and moisture allowances.</p>
+          </div>
+          <div class="card">
+            <i class="ph-duotone ph-graduation-cap"></i>
+            <h3>Phase 4: Parallel run &amp; training</h3>
+            <p>On-ground coaching for supervisors, boidars, and clerks. Final daily kamjari produced within 7 days of installation.</p>
+          </div>
+        </div>
+        <div class="client-grid">
+          <div class="client"><label>Darjeeling</label><span>Simulbarie T.E., Longview T.E.</span></div>
+          <div class="client"><label>Dooars</label><span>Rheabari, Mogulkata, Rahimpur, Debpara, Kurti, Looksan, Subhasini</span></div>
+          <div class="client"><label>Assam</label><span>Choibari T.E., Chapar T.E., Doolahat T.E.</span></div>
+          <div class="client"><label>Terai</label><span>Atal, Thanjhora, Naxalbari, Pahargoomiah, Kamalpur</span></div>
+        </div>
+        <div class="proof-strip">
+          <div class="proof-stat"><strong>20+</strong><span>Estates</span></div>
+          <div class="proof-divider"></div>
+          <div class="proof-text"><strong>Local technical presence.</strong> Sarbani Associates team in Bagdogra and Siliguri is always within driving distance for on-ground visits. <em>Many estates keep software details private.</em></div>
+        </div>
+      </div>
+      <div class="ftr">
+        <span>Rollout methodology and heritage</span>
+        <span>09</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PAGE 10: CONTACT & DEMO
+       ========================================================================== -->
+  <section class="page page--dark">
+    <div class="content">
+      <div class="hdr">
+        <div class="brand brand--light"><img src="assets/gardensuite-icon-white.svg" alt="" />GardenSuite</div>
+        <div class="tag tag--light">10 / 10 - Contact</div>
+      </div>
+      <div class="page-body">
+        <div class="intro-copy" style="text-align: center; margin: 0 auto; max-width: 165mm;">
+          <span class="eyebrow eyebrow--light">Book an on-estate demo</span>
+          <h2 class="headline headline--light section-title" style="margin: 0 auto;">See face attendance and smart weighing live on your garden.</h2>
+          <p class="lead lead--light" style="margin: 0 auto; max-width: 145mm;">We bring the hardware to your estate, run a live section weighment demonstration with your own pluckers, and produce your daily kamjari report on site.</p>
+        </div>
+        <div class="cards cards--3">
+          <div class="card card--dark">
+            <i class="ph-duotone ph-truck"></i>
+            <h3>We bring the hardware</h3>
+            <p>Smart Bluetooth hanging scale hook, Android phones, and mobile field printer brought directly to your estate.</p>
+          </div>
+          <div class="card card--dark">
+            <i class="ph-duotone ph-users-three"></i>
+            <h3>Test with your pluckers</h3>
+            <p>Enroll 20 of your pluckers in 5 minutes and run a live weighment session right at your section weighment point.</p>
+          </div>
+          <div class="card card--dark">
+            <i class="ph-duotone ph-desktop"></i>
+            <h3>Instant estate kamjari</h3>
+            <p>Watch the trial weighments sync to the office computer and calculate into mandays and wages in under 15 minutes.</p>
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-row">
+            <div class="contact-item">
+              <i class="ph-duotone ph-phone-call"></i>
+              <label>Call / WhatsApp</label>
+              <span>+91 97341 01330</span>
+            </div>
+            <div class="contact-item">
+              <i class="ph-duotone ph-envelope-simple"></i>
+              <label>Email</label>
+              <span>sarbaniassociates@gmail.com</span>
+            </div>
+            <div class="contact-item">
+              <i class="ph-duotone ph-globe"></i>
+              <label>Website</label>
+              <span>gardensuite.in</span>
+            </div>
+          </div>
+          <div style="height: 0.3mm; background: rgba(255,255,255,0.08); margin: 6mm 0;"></div>
+          <p class="lead lead--light" style="font-size: 9.2pt; max-width: 145mm; margin: 0 auto; line-height: 1.45; text-align: center;">
+            Direct contact: <strong>Kaushik Majumder</strong> • Sarbani Associates, Bagdogra &amp; Siliguri, West Bengal.<br />
+            Serving tea estates across Assam, Dooars, Terai, Darjeeling, Coochbehar, Uttar Dinajpur, and Jalpaiguri.
+          </p>
+        </div>
+      </div>
+      <div class="ftr ftr--light">
+        <span>GardenSuite operations system by Sarbani Associates</span>
+        <span>&copy; 2026 Sarbani Associates</span>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
