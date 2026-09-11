@@ -1,14 +1,14 @@
 # September 2026 Pilot Daily Status
 
-Last material run: 2026-09-11 at 01:20 IST
+Last material run: 2026-09-11 at 23:51 IST
 
 Last live campaign check: 2026-09-08 at 17:31 IST
 
 ## Counts
 
-- Candidates checked: 32
+- Candidates checked: 34
 - Fully eligible: 9
-- Blocked: 23
+- Blocked: 25
 - Snov export rows: 9
 - External validation import: 20 matched addresses, 17 safe/deliverable and 3 invalid. The 17 safe/deliverable results are accepted for this pilot under the owner's 8 September decision.
 - Existing live Snov recipients: 3
@@ -82,6 +82,10 @@ The draft cannot send until its list is populated. The preparation loop did not 
 - Screened additional replacement candidates from public records. Helenbari needs current company-class confirmation. Bochapathar, Nandanban and Kailashpur share one buying centre with ownership complications. Khemani-linked estates overlap an active sales buying centre. Kayanibari is below the 50-hectare floor. Romai and Tarajan fail the public-company or large-group rule. Mankhowa remains a research candidate but has no verified published business email yet.
 - Recorded owner's 11 September Snov.io individual email verification results: Devendra (`bhagat_tsk@rediffmail.com`), Kaliapani (`svyas.jainex@gmail.com`), Chandmari (`aakashassociates22@gmail.com`), L. K. Tea (`realassamteaindustries@gmail.com`), and Udalguri (`theutegarden@rediffmail.com`) confirmed Valid (Green); Phukanbari and Ghograjan confirmed Valid (Green) in Snov but remain safely blocked by active CRM negotiations; Sarojini confirmed Unverifiable (Risky); Durgapur confirmed Invalid.
 - Updated `prospects.csv` with the Snov results. Ran test suite, pipeline check, and export. All 5 unit tests passed. Cleanly exported 9 eligible leads to `snov-import.csv` with verified personal names and estate variables.
+- Checked Khatangpani and Lankashi against the legacy Excel tracker. Exact-name searches returned no rejection or active-sales record for either account.
+- Added Khatangpani as a research account with a current named co-owner and 195.65-hectare scale evidence. It remains blocked because no published business email was found and buying authority is unclear among the HUF heirs.
+- Added Lankashi as a research account with a named director, a published company inbox and 182.64-hectare scale evidence. It remains blocked until the buying centre is cleared because a director also serves Longboi, which has an open sales negotiation.
+- Ran the five pipeline tests, check and export. The tracker now has 34 accounts, 9 eligible accounts and 25 blocked accounts. The Snov import still contains exactly 9 eligible rows. No contact was imported and no campaign setting was changed.
 
 ## Remaining work
 
@@ -91,8 +95,8 @@ The draft cannot send until its list is populated. The preparation loop did not 
 
 ## Current blocked-account pattern
 
-Most blocked accounts still need an accepted estate-associated email, suppression result and owner approval. Several also need corporate group review, a usable operating-scale proxy, or a named qualifying contact. Amulguri, Mothola, Longboi, Ghooronia, Phukanbari, Sarojini, Ghograjan and Durgapur are excluded because the legacy tracker records active sales work. The three externally invalid addresses remain blocked.
+Most blocked accounts still need an accepted estate-associated email, suppression result and owner approval. Several also need corporate group review, a usable operating-scale proxy, or a named qualifying contact. Amulguri, Mothola, Longboi, Ghooronia, Phukanbari, Sarojini, Ghograjan and Durgapur are excluded because the legacy tracker records active sales work. Lankashi is held for a possible overlap with Longboi's buying centre. The three externally invalid addresses remain blocked.
 
 ## Next operating action
 
-Do not import the earlier 13-row file. It was replaced by a corrected 9-row export after the Excel reconciliation found four open negotiations in the old allowlist. Continue automated research until 20 primary accounts and 5 backups pass every gate. Then ask for final allowlist, message, cadence and activation approval. Keep campaign `3135559` paused and draft list `40982250` empty until that approval.
+Do not import the earlier 13-row file. It was replaced by a corrected 9-row export after the Excel reconciliation found open negotiations in the old allowlist. Continue automated research for 11 more primary accounts and 5 backups. Keep campaign `3135559` paused and draft list `40982250` empty from this preparation loop. Any live operator must exclude the three accounts already sent on 5 September before staging a new batch.
