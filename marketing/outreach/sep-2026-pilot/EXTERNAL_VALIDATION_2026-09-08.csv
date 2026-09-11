@@ -1,0 +1,21 @@
+Email,Status,Substatus,Confidence,Explanation,Email Provider,MX Record,Catch-All Domain,Secure Email Gateway,Disposable,Role Account,Free Email
+ssdibrugarhho@gmail.com,safe,deliverable,99,Safe to email. The mailbox exists and is deliverable.,Gmail,gmail-smtp-in.l.google.com,FALSE,FALSE,FALSE,FALSE,TRUE
+contact@sookerating.com,safe,deliverable,98,Safe to email. The mailbox exists and is deliverable.,Google Workspace,aspmx.l.google.com,,FALSE,FALSE,TRUE,FALSE
+satispurteaestate@gmail.com,safe,deliverable,98,Safe to email. The mailbox exists and is deliverable.,Gmail,gmail-smtp-in.l.google.com,FALSE,FALSE,FALSE,FALSE,TRUE
+phukenbari@gmail.com,safe,deliverable,98,Safe to email. The mailbox exists and is deliverable.,Gmail,gmail-smtp-in.l.google.com,FALSE,FALSE,FALSE,FALSE,TRUE
+padumani@padumanigroup.com,invalid,no_mx_records,99,Domain has no email servers. Do not send - your email will bounce.,Other,,FALSE,FALSE,FALSE,FALSE,FALSE
+sankarte@chamong.com,invalid,mailbox_not_found,,Email address doesn't exist. Do not send - your email will bounce.,Other,mx.zoho.com,FALSE,FALSE,FALSE,FALSE,FALSE
+ghooroniacompany@yahoo.com,safe,deliverable,99,Safe to email. The mailbox exists and is deliverable.,Yahoo,mta5.am0.yahoodns.net,FALSE,FALSE,FALSE,FALSE,TRUE
+satyanarayanteaestate@gmail.com,safe,deliverable,98,Safe to email. The mailbox exists and is deliverable.,Gmail,gmail-smtp-in.l.google.com,FALSE,FALSE,FALSE,FALSE,TRUE
+sarojiniteaestate@yahoo.com,safe,deliverable,99,Safe to email. The mailbox exists and is deliverable.,Yahoo,mta5.am0.yahoodns.net,FALSE,FALSE,FALSE,FALSE,TRUE
+bhagat_tsk@rediffmail.com,safe,deliverable,99,Safe to email. The mailbox exists and is deliverable.,Other,mx.rediffmail.rediff.akadns.net,FALSE,FALSE,FALSE,FALSE,TRUE
+durgapurtea@mail.com,invalid,mailbox_not_found,,Email address doesn't exist. Do not send - your email will bounce.,Other,mx00.mail.com,FALSE,FALSE,FALSE,FALSE,TRUE
+gangabari@yahoo.com,safe,deliverable,99,Safe to email. The mailbox exists and is deliverable.,Yahoo,mta5.am0.yahoodns.net,FALSE,FALSE,FALSE,FALSE,TRUE
+suniltsk@yahoo.com,safe,deliverable,99,Safe to email. The mailbox exists and is deliverable.,Yahoo,mta5.am0.yahoodns.net,FALSE,FALSE,FALSE,FALSE,TRUE
+info@ghograjan.com,safe,deliverable,98,Safe to email. The mailbox exists and is deliverable.,Google Workspace,aspmx.l.google.com,,FALSE,FALSE,TRUE,FALSE
+realassamteaindustries@gmail.com,safe,deliverable,98,Safe to email. The mailbox exists and is deliverable.,Gmail,gmail-smtp-in.l.google.com,FALSE,FALSE,FALSE,FALSE,TRUE
+svyas.jainex@gmail.com,safe,deliverable,98,Safe to email. The mailbox exists and is deliverable.,Gmail,gmail-smtp-in.l.google.com,FALSE,FALSE,FALSE,FALSE,TRUE
+baghbariteaco@gmail.com,safe,deliverable,99,Safe to email. The mailbox exists and is deliverable.,Gmail,gmail-smtp-in.l.google.com,FALSE,FALSE,FALSE,FALSE,TRUE
+prabhatte2015@gmail.com,safe,deliverable,98,Safe to email. The mailbox exists and is deliverable.,Gmail,gmail-smtp-in.l.google.com,FALSE,FALSE,FALSE,FALSE,TRUE
+aakashassociates22@gmail.com,safe,deliverable,99,Safe to email. The mailbox exists and is deliverable.,Gmail,gmail-smtp-in.l.google.com,FALSE,FALSE,FALSE,FALSE,TRUE
+theutegarden@rediffmail.com,safe,deliverable,99,Safe to email. The mailbox exists and is deliverable.,Other,mx.rediffmail.rediff.akadns.net,FALSE,FALSE,FALSE,FALSE,TRUE

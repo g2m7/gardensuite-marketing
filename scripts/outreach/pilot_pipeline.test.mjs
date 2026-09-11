@@ -49,6 +49,35 @@ test("blocks wrong geography, invalid email and missing approval", () => {
   assert.match(result.blockers.join(" | "), /owner_approved/);
 });
 
+test("accepts a recent external safe result without Snov verification", () => {
+  const [result] = evaluateProspects([
+    {
+      ...validRow,
+      snov_status: "Not checked",
+      external_validation_status: "safe",
+      external_validation_substatus: "deliverable",
+      external_validation_date: "2026-09-08",
+      external_validation_source: "OrbiSearch bulk email validator",
+    },
+  ]);
+  assert.equal(result.eligible, true);
+  assert.deepEqual(result.blockers, []);
+});
+
+test("blocks an external invalid result even if Snov says Valid", () => {
+  const [result] = evaluateProspects([
+    {
+      ...validRow,
+      external_validation_status: "invalid",
+      external_validation_substatus: "mailbox_not_found",
+      external_validation_date: "2026-09-08",
+      external_validation_source: "OrbiSearch bulk email validator",
+    },
+  ]);
+  assert.equal(result.eligible, false);
+  assert.match(result.blockers.join(" | "), /external validation is Invalid/);
+});
+
 test("reports launch ready only at twenty eligible accounts", () => {
   const rows = Array.from({ length: 20 }, (_, index) => ({
     ...validRow,

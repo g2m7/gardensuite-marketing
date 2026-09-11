@@ -1,9 +1,20 @@
 # GardenSuite Current Outreach Authority
 
 Status: CURRENT
-Strategy version: 2026-09-05-live-campaign-authorization
+Strategy version: 2026-09-08-external-validation
 Owner: Sarbani Associates
-Last updated: 2026-09-05
+Last updated: 2026-09-08
+
+## 2026-09-08 external validation decision
+
+The owner replaced the Snov-only email verification gate for the September Assam pilot because Snov verification credits are limited. The owner-provided OrbiSearch results dated 2026-09-08 are now accepted as the campaign email-validation source for this pilot.
+
+- A matched address with external status `safe`, substatus `deliverable`, a recorded validation date and a recorded source is campaign-valid.
+- An address with external status `invalid` remains blocked and must not be sent.
+- Keep the actual `snov_status` value unchanged. Do not describe an OrbiSearch result as Snov verification. Snov remains available as an optional secondary check.
+- Estate association, district, size or scale evidence, corporate review, current-client check, active-sales check, prior-contact review, suppression check, approved decision-maker role, owner approval and campaign preview remain required.
+- The external result is dated and recorded in `prospects.csv` and `EXTERNAL_VALIDATION_2026-09-08.csv`. Re-verify before 90 days or sooner if a bounce occurs.
+- The campaign may use the external-valid rows after the local pipeline exports them and the live campaign is checked for duplicates, replies, bounces and provider warnings.
 
 ## 2026-09-05 live Snov campaign instruction
 
@@ -12,7 +23,7 @@ The owner explicitly instructed: create the Snov campaign, send to actual prospe
 - Start a cleared subset today, September 5, 2026. Today's Saturday evening sending is a one-time launch exception; later sending uses weekday business hours in Asia/Kolkata.
 - Pause warm-up before prospect sending. Snov was verified Paused with Protection off on September 5 at approximately 21:51 IST.
 - Keep light personalization: verified name and estate, plus short wording variations. No invented estate pain, savings, relationships or client references.
-- Preserve Valid-only verification, estate association, internal-history, current-client, active-sales and suppression checks. The request does not make an unqualified address eligible.
+- Preserve external safe/deliverable verification, estate association, internal-history, current-client, active-sales and suppression checks. The request does not make an unqualified address eligible.
 - The preparation heartbeat and local pipeline still cannot send or activate campaigns. This task configures the live sequence directly in Snov.
 - See the dated launch record in `sep-2026-pilot/LAUNCH_2026-09-05.md` for actual recipients, settings and observed campaign status. Do not infer successful sending from this authorization alone.
 - Launch result: all three first emails were sent and delivered on 5 September with zero immediate bounces. The launch-only Saturday window was then removed. The active schedule is Monday to Friday, 09:00 to 18:00, Asia/Calcutta.
@@ -41,7 +52,7 @@ Revised planned email settings:
 - Use the [incident/resume procedure](../../docs/plans/owner-acquisition/02-cold-email/SETUP.md): inspect an isolated hard bounce before the next batch, suppress its address and resume after resolving the cause/checking the remaining batch. Repeated hard bounces, complaints, suppression failures, authentication failures or provider warnings trigger a broader pause. There is no automatic additional multi-week waiting period.
 - No new fixed domain-age or warm-up-score gate. The registered domain is already recorded as thirty-two days old on the planned start date. Authentication and actual delivery evidence matter; spacing cannot guarantee Inbox placement.
 
-Unchanged decisions: kaushik@getgardensuite.in through Snov.io; only Snov Valid and estate-associated addresses; current-client/rejection/negotiation/suppression checks; warm-up paused on 9 September before prospect sending. The owner's existing Spacemail policy-risk acceptance remains recorded. It is not provider permission and must not be reopened as a routine second approval gate.
+Unchanged decisions: kaushik@getgardensuite.in through Snov.io; only externally safe/deliverable and estate-associated addresses; current-client/rejection/negotiation/suppression checks; warm-up paused on 9 September before prospect sending. The owner's existing Spacemail policy-risk acceptance remains recorded. It is not provider permission and must not be reopened as a routine second approval gate.
 
 The earlier plan-only authorization has been superseded for this Snov pilot. Live Snov sending is authorized under the rules above. The preparation heartbeat and local pipeline remain unable to send or activate a campaign. New live capture, channel permissions, CRM destination, spending and public assets must meet the concrete setup/launch criteria in the linked plan.
 
@@ -131,7 +142,7 @@ Important account changes:
 - Exclude Dinjoye Tea Estate from the first pilot because current company-network evidence shows a larger connected tea and investment group.
 - Keep Devendra Tea Estate and Kamarband Tea Estate as phone-first research accounts because no reliable public email was found. Do not invent or pattern-guess an address.
 
-The presence of an MX record is not mailbox verification. No found address is send-ready until Snov.io returns `Valid`, the estate-email association is confirmed, and all suppression and owner-approval checks pass.
+The presence of an MX record is not mailbox verification. No found address is send-ready until the recorded external validator returns `safe` and `deliverable` or Snov.io returns `Valid`, the estate-email association is confirmed, and all suppression and owner-approval checks pass.
 
 ## 2026-08-16 pilot account selection correction
 
@@ -165,7 +176,7 @@ Verified on 2026-08-16:
 - Both HTTP and HTTPS redirect to `https://gardensuite.in`.
 - On 2026-08-30, the owner confirmed that `kaushik@getgardensuite.in` is a full mailbox.
 
-Snov.io can technically connect to the Spacemail account through SMTP and IMAP. Spacemail's current acceptable-use policy prohibits automated warm-up networks and unsolicited mass email. The owner chose on 2026-08-30 to proceed without making written provider permission a dependency, later requested automation, and accepts the provider-enforcement risk. Snov.io automated warm-up is therefore authorized under the conservative cap recorded above. Contact verification, suppression and owner approval remain mandatory before prospect sending.
+Snov.io can technically connect to the Spacemail account through SMTP and IMAP. Spacemail's current acceptable-use policy prohibits automated warm-up networks and unsolicited mass email. The owner chose on 2026-08-30 to proceed without making written provider permission a dependency, later requested automation, and accepts the provider-enforcement risk. Snov.io automated warm-up is therefore authorized under the conservative cap recorded above. Contact validation, suppression and owner approval remain mandatory before prospect sending.
 
 ## Purpose
 

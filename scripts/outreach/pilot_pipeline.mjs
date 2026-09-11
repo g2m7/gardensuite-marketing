@@ -97,6 +97,15 @@ function isUrl(value) {
   return /^https?:\/\/\S+$/i.test(value);
 }
 
+function hasExternalValidation(row) {
+  return (
+    normalized(row.external_validation_status) === "safe" &&
+    normalized(row.external_validation_substatus) === "deliverable" &&
+    Boolean(row.external_validation_date) &&
+    Boolean(row.external_validation_source)
+  );
+}
+
 function validEmail(value) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
 }
@@ -158,8 +167,11 @@ export function evaluateProspects(rows) {
     if (!isYes(row.estate_relationship_confirmed)) {
       blockers.push("estate_relationship_confirmed must be Yes");
     }
-    if (normalized(row.snov_status) !== "valid") {
-      blockers.push("snov_status must be Valid");
+    const externalStatus = normalized(row.external_validation_status);
+    if (externalStatus === "invalid") {
+      blockers.push("external validation is Invalid");
+    } else if (normalized(row.snov_status) !== "valid" && !hasExternalValidation(row)) {
+      blockers.push("Snov Valid or external safe/deliverable validation is required");
     }
     if (!isNo(row.suppressed)) blockers.push("suppressed must be No");
     if (!isYes(row.owner_approved)) blockers.push("owner_approved must be Yes");

@@ -6,7 +6,11 @@ The current complete execution specification is [Owner acquisition](../../docs/p
 
 ## Live campaign update - 5 September 2026
 
-The owner authorized the first cleared Snov subset to start on 5 September 2026. Three Valid estate contacts were activated in campaign `3135559`, after warm-up was paused. The exact recipients, copy, schedule and observed results are recorded in [the launch record](sep-2026-pilot/LAUNCH_2026-09-05.md). This update supersedes the later start date and approval steps below where they conflict. All qualification, suppression and Valid-only rules still apply.
+## 8 September external validation update
+
+The owner replaced the Snov-only verification gate because Snov credits are limited. For this pilot, a matched OrbiSearch result dated 2026-09-08 with `safe` and `deliverable` is accepted as campaign-valid. The actual `snov_status` field remains unchanged and must not be rewritten to imply that Snov verified the address. External `invalid` results remain blocked. All estate, association, suppression, corporate-review, owner-approval and live-campaign safety checks still apply.
+
+The owner authorized the first cleared Snov subset to start on 5 September 2026. Three Valid estate contacts were activated in campaign `3135559`, after warm-up was paused. The exact recipients, copy, schedule and observed results are recorded in [the launch record](sep-2026-pilot/LAUNCH_2026-09-05.md). This update supersedes the later start date and approval steps below where they conflict. All qualification, suppression and external safe/deliverable rules still apply.
 
 ## Revised planned email dates
 
@@ -18,7 +22,7 @@ The owner authorized the first cleared Snov subset to start on 5 September 2026.
 | 15 September 2026 | 4 | 16 |
 | 16 September 2026 | 4 | 20 |
 
-Pause the already-authorized Snov warm-up on 9 September. Do not activate a campaign merely because a planned date has arrived. Each recipient still needs current fit, association, Snov Valid, suppression clearance and final authorization.
+Pause the already-authorized Snov warm-up on 9 September. Do not activate a campaign merely because a planned date has arrived. Each recipient still needs current fit, association, external safe/deliverable or Snov Valid status, suppression clearance and final authorization.
 
 A cleared subset can launch without twenty finished records or five backups. Delayed preparation shifts dates forward; it does not increase the daily maximum. The full three-message sequence can continue through 28 September. [Exact setup, traffic table and incident handling](../../docs/plans/owner-acquisition/02-cold-email/SETUP.md).
 
@@ -84,7 +88,7 @@ The critical path is the prospect list, not the mailbox.
 - Keep Snov.io warm-up reply rate at 30% and pause automated warm-up before prospect sending begins on 2026-09-10.
 - Daily preparation: the `GardenSuite September outbound` Codex heartbeat remains scheduled at 12:00 Asia/Kolkata through 2026-09-14.
 - First email: plain text, no attachment, no brochure, no image, no video, and no calendar link.
-- Every cold address must return `Valid` from Snov.io.
+- Every cold address must have a recorded external `safe` and `deliverable` result or return `Valid` from Snov.io.
 
 ## Work plan
 
@@ -108,8 +112,8 @@ The critical path is the prospect list, not the mailbox.
 
 ### 5 September
 
-- [ ] Run all candidate emails through Snov.io Email Verifier.
-- [ ] Keep only `Valid` addresses. Reject `Invalid`, `Unknown`, `Unverifiable`, and `Catch-all` for this pilot.
+- [ ] Run candidate emails through the approved external validator or Snov.io when credits are available.
+- [ ] Keep only external `safe` plus `deliverable` addresses or Snov `Valid` addresses. Reject external `invalid` results and hold `risky`, `unknown`, `catch-all` and other unresolved results.
 - [ ] Check every address, phone number, person, and estate against the master suppression register.
 - [ ] Confirm that each address is genuinely associated with the estate or named contact.
 - [ ] Replace failed rows from the approved backup pool.
@@ -161,7 +165,7 @@ A prospect may enter the campaign only when every item below is true:
 - [ ] Account was not previously rejected, or a documented new fact justifies reconsideration.
 - [ ] One named contact has an approved role.
 - [ ] Contact-estate relationship is supported by a current source.
-- [ ] Email is associated with the person or estate and Snov.io reports `Valid`.
+- [ ] Email is associated with the person or estate and has external `safe` plus `deliverable` validation or Snov.io reports `Valid`.
 - [ ] The exact address and linked account pass the suppression check.
 - [ ] First name and estate name render correctly in the campaign preview.
 - [ ] Approved copy, cadence, sender, and reply detection are active.

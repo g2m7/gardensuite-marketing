@@ -29,3 +29,7 @@ backup_*/
 .pi/
 skills/
 skills-lock.json
+__pycache__/
+*.pyc
+scratch/
+.~lock.*#

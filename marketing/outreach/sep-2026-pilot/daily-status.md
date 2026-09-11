@@ -1,16 +1,18 @@
 # September 2026 Pilot Daily Status
 
-Last material run: 2026-09-07 at 21:00 IST
+Last material run: 2026-09-11 at 01:20 IST
 
-Last live campaign check: 2026-09-07 at 20:30 IST
+Last live campaign check: 2026-09-08 at 17:31 IST
 
 ## Counts
 
-- Candidates checked: 25
-- Fully eligible: 4
-- Blocked: 21 because one or more account, contact, verification, suppression or approval gates remain open
-- Snov export rows: 4
-- Live Snov recipients: 3 (Sookerating cleared and ready to add to Snov list 40962869)
+- Candidates checked: 32
+- Fully eligible: 9
+- Blocked: 23
+- Snov export rows: 9
+- External validation import: 20 matched addresses, 17 safe/deliverable and 3 invalid. The 17 safe/deliverable results are accepted for this pilot under the owner's 8 September decision.
+- Existing live Snov recipients: 3
+- Staged Snov draft recipients: 0
 - First emails sent and delivered on 5 September: 3
 - Immediate hard bounces: 0
 
@@ -30,6 +32,15 @@ Last live campaign check: 2026-09-07 at 20:30 IST
 The exact launch evidence and copy are in [LAUNCH_2026-09-05.md](LAUNCH_2026-09-05.md).
 
 Snov showed 3 sent, 0 replies and 0 bounces at the 7 September check. No campaign setting was changed during the check. The pause prevents the scheduled follow-ups from running until the campaign is resumed.
+
+A second campaign draft now exists for the external-valid list:
+
+- Draft campaign ID: `3137800`
+- Prospect list ID: `40982250`
+- Draft status: Draft
+- List status: Empty, 0 prospects
+
+The draft cannot send until its list is populated. The preparation loop did not import contacts or activate either campaign.
 
 ## Recorded progress
 
@@ -56,17 +67,32 @@ Snov showed 3 sent, 0 replies and 0 bounces at the 7 September check. No campaig
 - Found a published Goneshbari address linked to the tea company. Its Snov check remained In progress after repeated polling, so it was not added to prospects.csv or the campaign.
 - Gillapukhri, Segunbari and Ananda Bag confirmed excluded for public-company status. Amulguri, Mothola and Longboi confirmed excluded for active sales discussions.
 - Ran pipeline check: 25 rows checked, 4 eligible (Baghbari, Satispur, Sadasiva, Sookerating) and 21 blocked. Exported eligible list to snov-import.csv (4 contacts).
+- Sourced and analyzed 63 mid-tier tea estates in Dibrugarh district (373 to 2000 Bigha / 50 to 260 ha) from the official revenue directory, cross-referenced with ATEPFO registries and legacy CRM records.
+- Discovered official MCA-registered business emails and passed corporate reviews for three near-ready accounts: Devendra (bhagat_tsk@rediffmail.com), Kaliapani (svyas.jainex@gmail.com), and Chandmari (aakashassociates22@gmail.com).
+- Confirmed single-proprietor and family partnership independence for Amulyabari (Pratul Kumar Phukan) and Pipratoli (Bishmile Industry / Aditya Vikram Agarwal), advancing both corporate reviews to Pass.
+- Researched, qualified, and added seven new candidate estates: Phukanbari (phukenbari@gmail.com, 154.23 ha), L. K. Tea (realassamteaindustries@gmail.com, 72.24 ha), Udalguri (theutegarden@rediffmail.com, 213.50 ha), Sarojini (sarojiniteaestate@yahoo.com, 133.87 ha), Ghograjan (info@ghograjan.com, 148.87 ha), Durgapur (durgapurtea@mail.com, 80.91 ha), and Brindaban (Kishore Agarwal, E-258).
+- Screened out six estates: Bipinbag (duplicate buying centre under Sudip Chandra Bagchi, already contacted via Satispur), Anandabari (Saharia Group), Duliabam (Amarawati Tea Co. / Halmari group), Santi (Dhunseri Tea conglomerate), Moud (Lohia / Chamong group), and Rukong (amalgamated / merged).
+- Ran pipeline check: 32 rows checked, 4 eligible and 28 blocked. 9 candidate accounts have passed corporate review and have valid official business emails, standing ready for Snov email verification. Exported snov-import.csv with exactly 4 cleared rows.
+- Imported the owner-provided OrbiSearch validation file on 2026-09-08. All 20 addresses matched prospect records: 17 were marked safe/deliverable and 3 invalid. Recorded the external result, substatus, confidence, date and source in `prospects.csv`; no `snov_status` value was changed.
+- Applied the owner's 8 September validation decision. The pipeline now accepts a dated OrbiSearch `safe` and `deliverable` result while keeping Snov and external validation as separate fields.
+- Ran the pipeline tests, check and export. All five tests passed. The tracker has 32 accounts, 13 eligible accounts and 19 blocked accounts. The Snov import contains exactly the 13 eligible rows.
+- Checked Snov at 17:31 IST. Campaign `3135559` remains paused with 3 sent, 0 replies and 0 bounces. Draft campaign `3137800` exists, but list `40982250` is empty.
+- Reconciled all candidate accounts against the legacy Excel tracker again, including spelling variants. Ghooronia, Phukanbari, Sarojini and Ghograjan each have an open `Negotiation` record. Durgapur has an open negotiation with a call pending. These five accounts are now marked as active sales discussions and cannot enter the cold-email allowlist.
+- Regenerated the pipeline after the correction. The tracker has 32 accounts, 9 eligible accounts and 23 blocked accounts. The Snov import contains exactly the 9 eligible rows. No contact was imported and no campaign setting was changed.
+- Screened additional replacement candidates from public records. Helenbari needs current company-class confirmation. Bochapathar, Nandanban and Kailashpur share one buying centre with ownership complications. Khemani-linked estates overlap an active sales buying centre. Kayanibari is below the 50-hectare floor. Romai and Tarajan fail the public-company or large-group rule. Mankhowa remains a research candidate but has no verified published business email yet.
+- Recorded owner's 11 September Snov.io individual email verification results: Devendra (`bhagat_tsk@rediffmail.com`), Kaliapani (`svyas.jainex@gmail.com`), Chandmari (`aakashassociates22@gmail.com`), L. K. Tea (`realassamteaindustries@gmail.com`), and Udalguri (`theutegarden@rediffmail.com`) confirmed Valid (Green); Phukanbari and Ghograjan confirmed Valid (Green) in Snov but remain safely blocked by active CRM negotiations; Sarojini confirmed Unverifiable (Risky); Durgapur confirmed Invalid.
+- Updated `prospects.csv` with the Snov results. Ran test suite, pipeline check, and export. All 5 unit tests passed. Cleanly exported 9 eligible leads to `snov-import.csv` with verified personal names and estate variables.
 
 ## Remaining work
 
 - Watch Unibox for replies and stop or suppress immediately when requested.
-- Continue research and validation for the remaining pilot accounts. Add no more than four newly cleared estates per working day.
-- Do not add an account until every row-level gate passes. A complete 20-account list is not required before another cleared subset is added.
+- Continue automated decision-maker and business-email research for 11 primary slots and 5 backup slots.
+- Do not add an account until every row-level gate passes.
 
 ## Current blocked-account pattern
 
-Most blocked accounts still need a Valid estate-associated email, suppression result and owner approval. Several also need corporate group review, a usable operating-scale proxy, or a named qualifying contact. Longboi remains excluded from this pilot because it has an active sales discussion. Ghooronia remains held because its email is Risky.
+Most blocked accounts still need an accepted estate-associated email, suppression result and owner approval. Several also need corporate group review, a usable operating-scale proxy, or a named qualifying contact. Amulguri, Mothola, Longboi, Ghooronia, Phukanbari, Sarojini, Ghograjan and Durgapur are excluded because the legacy tracker records active sales work. The three externally invalid addresses remain blocked.
 
 ## Next operating action
 
-The CSV now passes the structural check. Keep the campaign paused until the owner confirms that this is intentional. If the campaign is resumed, Email 2 for the first three recipients is expected in the next allowed window on Friday, 11 September, because the five-day timer matures after Thursday's business-hours window. Email 3 is expected on Friday, 18 September unless a reply stops the sequence. Review replies and bounces before adding another cleared subset. Continue account research without relaxing the current-client, active-discussion, public-company, large-group, rejection, identity, estate-association, suppression or Snov Valid rules.
+Do not import the earlier 13-row file. It was replaced by a corrected 9-row export after the Excel reconciliation found four open negotiations in the old allowlist. Continue automated research until 20 primary accounts and 5 backups pass every gate. Then ask for final allowlist, message, cadence and activation approval. Keep campaign `3135559` paused and draft list `40982250` empty until that approval.
