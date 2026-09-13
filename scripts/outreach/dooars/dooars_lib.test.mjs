@@ -93,6 +93,30 @@ test(
       registry.activeEstates.some((garden) => garden.garden_id === "gs-dooars-bamandanga-tondoo"),
       true,
     );
+    assert.equal(
+      registry.gardens.find((garden) => garden.garden_id === "gs-dooars-damdim")
+        ?.prospect_eligibility,
+      "excluded_large_group",
+    );
+    assert.equal(
+      registry.gardens.find((garden) => garden.garden_id === "gs-dooars-rungamuttee")
+        ?.prospect_eligibility,
+      "excluded_large_group",
+    );
+    assert.equal(
+      registry.gardens.find((garden) => garden.garden_id === "gs-dooars-nowera-nuddy")
+        ?.prospect_eligibility,
+      "excluded_large_group",
+    );
+    assert.ok(registry.siliguriEstates.length >= 20);
+    assert.ok(registry.siliguriEstates.every((row) => row.office_city === "Siliguri"));
+    const kalchiniSiliguri = registry.siliguriEstates.find(
+      (row) => row.garden_id === "gs-dooars-kalchini",
+    );
+    assert.ok(kalchiniSiliguri);
+    assert.match(kalchiniSiliguri.office_address, /Ashrampara/i);
+    assert.equal(kalchiniSiliguri.contact_person, "Roshanlal Agarwal");
+    assert.equal(kalchiniSiliguri.prospect_eligibility, "target_candidate");
     assert.ok(registry.contactHints.length >= 100);
     assert.equal(validateRegistry(registry).valid, true);
   },

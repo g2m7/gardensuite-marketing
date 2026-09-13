@@ -1,17 +1,18 @@
 {
-  "generated_at": "2026-09-02T12:13:01.037Z",
+  "generated_at": "2026-09-13T08:51:27.429Z",
   "atlas_names": 128,
   "atlas_profiles": 47,
   "directory_rows": 164,
   "registered_planter_rows": 218,
   "canonical_gardens": 163,
   "aliases": 880,
-  "companies": 139,
+  "companies": 142,
   "company_links": 223,
   "evidence_rows": 74,
-  "contacts": 10,
+  "contacts": 14,
   "historical_contact_hints": 151,
-  "active_export_rows": 11,
+  "active_export_rows": 8,
+  "siliguri_estates_rows": 26,
   "review_queue_rows": 147,
   "statuses": {
     "active_confirmed": 38,
@@ -20,9 +21,9 @@
     "temporarily_closed": 6
   },
   "prospect_eligibility": {
-    "excluded_large_group": 28,
+    "excluded_large_group": 31,
     "not_active": 117,
-    "target_candidate": 11,
+    "target_candidate": 8,
     "excluded_current_client": 7
   },
   "warning": "Historical sources do not prove current operation or ownership. Contact remains the final confirmation."

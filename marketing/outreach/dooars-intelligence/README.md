@@ -13,9 +13,11 @@ This is the long-term GardenSuite registry for established tea estates in the Do
 - `data/review_queue.csv` - unresolved matches and missing checks
 - `data/active_estates.csv` - only likely-active or confirmed-active estates
 - `data/active_estates.csv` also excludes current clients and large public or multi-estate groups
+- `data/siliguri_dooars_estates.csv` - Dooars estates mapped to verified Siliguri offices (address, city, phones, emails, contact persons)
 - `data/search_queries.csv` - garden and ownership-news query plan
 - `data/build_report.json` - coverage and quality counts
 - `imports/historical_contact_hints.csv` - old Tea Board contact clues that require reverification
+
 
 Generated files may be rebuilt. Manual decisions belong in `manual/` and are applied during every build.
 
@@ -39,13 +41,14 @@ node --test scripts/outreach/dooars/dooars_lib.test.mjs
 
 ## Current snapshot
 
-The first build contains 163 garden identity records, 880 aliases, 139 companies and 223 garden-company links. After the eligibility filter, the active research export contains 11 outreach-eligible estates. There are 38 confirmed-active and 8 likely-active records before exclusions. Six estates are held out as temporarily closed. There are 10 current public company contacts and 151 historical contact hints, but old hints are not promoted to current contacts without a new check.
+The registry contains 163 garden identity records, 880 aliases, 142 companies and 223 garden-company links. There are 38 confirmed-active and 8 likely-active records before exclusions. Six estates are held out as temporarily closed. After eligibility filtering (excluding current clients and large conglomerates), `active_estates.csv` contains 8 target candidates. Furthermore, 26 Dooars estates have been mapped to physical offices in Siliguri (`data/siliguri_dooars_estates.csv`), capturing office address, local contact phone, and email.
 
 The number 163 is a coverage pool, not a final count of distinct active estates. It combines the 128-name atlas with unmatched Dooars records from the Tea Board directory and newer reviewed records. Possible spelling duplicates stay visible in the review queue until resolved.
 
 ## Prospect eligibility filter
 
-The registry and the prospect list are intentionally different. Every garden can remain in `gardens.csv` for coverage and ownership research, while `active_estates.csv` is limited to `target_candidate` records. A garden is excluded when it is a current GardenSuite client, or when its current company is marked public or belongs to a configured large group such as Camellia Plc, Government of India, or Williamson Magor Group. The exclusion reason is written into `gardens.csv` so the decision is visible and reversible.
+The registry and the prospect list are intentionally different. Every garden can remain in `gardens.csv` for coverage and ownership research, while `active_estates.csv` is limited to `target_candidate` records. A garden is excluded when it is a current GardenSuite client, or when its current company is marked public or belongs to a configured large group such as Amalgamated Plantations (APPL / Tata), Camellia Plc, Government of India, or Williamson Magor Group. The exclusion reason is written into `gardens.csv` so the decision is visible and reversible.
+
 
 ## Status meaning
 

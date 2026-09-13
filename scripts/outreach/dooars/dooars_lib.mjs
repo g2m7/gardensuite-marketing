@@ -40,6 +40,11 @@ const LARGE_GROUP_PARENTS = new Set([
   "camellia plc",
   "government of india",
   "williamson magor group",
+  "tata consumer products appl",
+  "tata consumer products",
+  "amalgamated plantations",
+  "amalgamated plantations pvt ltd",
+  "amalgamated plantations private limited",
 ]);
 
 export const HEADERS = {
@@ -156,6 +161,25 @@ export const HEADERS = {
     "source_url",
     "created_date",
     "status",
+  ],
+  siliguri_estates: [
+    "garden_id",
+    "canonical_name",
+    "subdivision_or_block",
+    "district_current",
+    "current_status",
+    "tea_board_registration",
+    "tea_area_ha",
+    "company_name",
+    "office_city",
+    "office_address",
+    "contact_person",
+    "contact_phone",
+    "contact_email",
+    "prospect_eligibility",
+    "exclusion_reason",
+    "source_id",
+    "notes",
   ],
 };
 
@@ -510,11 +534,85 @@ export function extractTeaBoardDirectoryRows(text) {
         const lastIndex = afterStatus.indexOf(lastNumber) + lastNumber.length;
         ownerAndCeo = afterStatus.slice(lastIndex).trim();
       }
-      const ownerParts = ownerAndCeo.split(/\s{2,}/).filter(Boolean);
-      const gardenColumn = block.map((line) => line.slice(0, 46)).join("\n");
+      const ownerParts = ownerAndCeo.split(/\s{3,}/).filter(Boolean);
+      const gardenColumn = block.map((line) => line.slice(0, 55)).join("\n");
       const email = (gardenColumn.match(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/i) ?? [""])[0];
       const phoneLine = gardenColumn.split("\n").find((line) => /Tel\s*:/i.test(line)) ?? "";
       const phone = phoneLine.replace(/^.*?Tel\s*:/i, "").trim();
+
+      // Extract owner and CEO sublines from column positions
+      const ownerSublines = [];
+      const ceoSublines = [];
+      for (const l of block.slice(1)) {
+        const tail = l.slice(55);
+        if (!tail.trim()) continue;
+        const parts = tail.split(/\s{3,}/).map((p) => p.trim()).filter(Boolean);
+        if (parts.length >= 2) {
+          ownerSublines.push(parts[0]);
+          ceoSublines.push(parts[1]);
+        } else if (parts.length === 1) {
+          if (l.indexOf(parts[0]) >= 150) {
+            ceoSublines.push(parts[0]);
+          } else {
+            ownerSublines.push(parts[0]);
+          }
+        }
+      }
+
+      const cleanAddress = (raw) =>
+        raw
+          .split("\n")
+          .filter((l) => !/^(Tel|Fax|E-?Mail)\b/i.test(l.trim()))
+          .map((l) => l.replace(/^(Tel|Fax|E-?Mail)\s*:.*$/i, "").trim())
+          .filter(Boolean)
+          .join(", ");
+
+      const ownerText = [ownerParts[0] ?? "", ...ownerSublines].join("\n");
+      const ceoText = [ownerParts[1] ?? "", ...ceoSublines].join("\n");
+
+      const ownerAddress = cleanAddress(ownerText);
+      const ceoAddress = cleanAddress(ceoText);
+
+      const ownerPhones = (ownerText.match(/Tel\s*:\s*([0-9\s,-/]+)/gi) ?? [])
+        .map((p) => p.replace(/^Tel\s*:\s*/i, "").trim())
+        .filter(Boolean);
+      const ceoPhones = (ceoText.match(/Tel\s*:\s*([0-9\s,-/]+)/gi) ?? [])
+        .map((p) => p.replace(/^Tel\s*:\s*/i, "").trim())
+        .filter(Boolean);
+
+      const ownerEmails = ownerText.match(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/gi) ?? [];
+      const ceoEmails = ceoText.match(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/gi) ?? [];
+
+      const fullBlock = block.join("\n");
+      const isSiliguri =
+        /siliguri/i.test(ownerText) || /siliguri/i.test(ceoText) || /siliguri/i.test(fullBlock);
+
+      let officeCity = "";
+      let officeAddress = "";
+      let officePhone = "";
+      let officeEmail = "";
+      let officeContact = "";
+
+      if (/siliguri/i.test(ceoText)) {
+        officeCity = "Siliguri";
+        officeAddress = ceoAddress;
+        officePhone = ceoPhones[0] || ownerPhones[0] || "";
+        officeEmail = ceoEmails[0] || ownerEmails[0] || "";
+        officeContact = ownerParts[1] ?? "";
+      } else if (/siliguri/i.test(ownerText) || isSiliguri) {
+        officeCity = "Siliguri";
+        officeAddress = ownerAddress || ceoAddress;
+        officePhone = ownerPhones[0] || ceoPhones[0] || "";
+        officeEmail = ownerEmails[0] || ceoEmails[0] || "";
+        officeContact = ownerParts[1] || ownerParts[0] || "";
+      } else if (/kolkata/i.test(ownerText) || /kolkata/i.test(ceoText)) {
+        officeCity = "Kolkata";
+        officeAddress = ownerAddress;
+        officePhone = ownerPhones[0] || "";
+        officeEmail = ownerEmails[0] || "";
+        officeContact = ownerParts[0] || "";
+      }
+
       rows.push({
         serial,
         page: String(pageIndex + 1),
@@ -531,6 +629,18 @@ export function extractTeaBoardDirectoryRows(text) {
         historical_ceo: ownerParts[1] ?? "",
         garden_email: email,
         garden_phone: phone,
+        owner_address: ownerAddress,
+        ceo_address: ceoAddress,
+        owner_phone: ownerPhones.join("; "),
+        ceo_phone: ceoPhones.join("; "),
+        owner_email: ownerEmails.join("; "),
+        ceo_email: ceoEmails.join("; "),
+        is_siliguri_office: isSiliguri ? "yes" : "no",
+        office_city: officeCity,
+        office_address: officeAddress,
+        office_phone: officePhone,
+        office_email: officeEmail,
+        office_contact: officeContact,
       });
     }
   }
@@ -953,6 +1063,9 @@ export async function buildRegistry({ sourceTexts }) {
       if (!garden.tea_area_ha) garden.tea_area_ha = row.tea_area_ha;
       if (row.historical_owner) {
         const company = ensureCompany(row.historical_owner, directorySource, "2013-03-18");
+        if (company && !company.registered_office && row.office_address) {
+          company.registered_office = row.office_address;
+        }
         addLink(
           garden,
           company,
@@ -963,20 +1076,29 @@ export async function buildRegistry({ sourceTexts }) {
           `Tea Board directory row ${row.serial}. Historical owner only.`,
         );
       }
-      if (row.garden_email || row.garden_phone || row.historical_ceo) {
+      if (
+        row.garden_email ||
+        row.garden_phone ||
+        row.historical_ceo ||
+        row.office_phone ||
+        row.office_email
+      ) {
+        const isSiliguri = row.is_siliguri_office === "yes";
         contactHints.push({
           hint_id: `tea-board-directory-${row.serial}`,
           garden_id: garden.garden_id,
           canonical_name: garden.canonical_name,
-          historical_contact_name: row.historical_ceo,
-          historical_email: row.garden_email,
-          historical_phone: row.garden_phone,
+          historical_contact_name: row.office_contact || row.historical_ceo,
+          historical_email: row.office_email || row.garden_email,
+          historical_phone: row.office_phone || row.garden_phone,
           source_date: "2013-03-18",
           source_url:
             "https://www.teaboard.gov.in/pdf/notice/Tea%20Directory-West%20Bengal.pdf",
           match_score: matched.score,
           do_not_use_without_reverification: "yes",
-          notes: "Historical Tea Board directory clue. Confirm current role and validate contact before use.",
+          notes: isSiliguri
+            ? `Siliguri office: ${row.office_address}. Tel: ${row.office_phone || row.garden_phone}.`
+            : "Historical Tea Board directory clue. Confirm current role and validate contact before use.",
         });
       }
     } else {
@@ -1139,9 +1261,12 @@ export async function buildRegistry({ sourceTexts }) {
       (company) => company.company_id === garden.current_company_id,
     );
     const parentGroup = normalizeCompanyName(currentCompany?.parent_group ?? "");
+    const companyNameNorm = normalizeCompanyName(currentCompany?.legal_name ?? "");
     const largeGroup = Boolean(
       currentCompany &&
-        (currentCompany.public_company === "yes" || LARGE_GROUP_PARENTS.has(parentGroup)),
+        (currentCompany.public_company === "yes" ||
+          LARGE_GROUP_PARENTS.has(parentGroup) ||
+          LARGE_GROUP_PARENTS.has(companyNameNorm)),
     );
     const existingClient = /Existing GardenSuite client/i.test(garden.notes ?? "");
     if (existingClient) {
@@ -1220,6 +1345,103 @@ export async function buildRegistry({ sourceTexts }) {
       ACTIVE_STATUSES.has(garden.current_status) &&
       garden.prospect_eligibility === "target_candidate",
   );
+
+  const siliguriEstates = [];
+  const addedSiliguriGardenIds = new Set();
+
+  for (const garden of gardens) {
+    const matchedDirRow = directoryRows.find(
+      (r) =>
+        r.is_siliguri_office === "yes" &&
+        matchGarden(r.name, [garden], aliases)?.score >= 0.82,
+    );
+    const company = companies.find((c) => c.company_id === garden.current_company_id);
+    const isSiliguriCompany = /siliguri/i.test(company?.registered_office ?? "");
+    const contact = contacts.find(
+      (c) =>
+        c.garden_id === garden.garden_id ||
+        (garden.current_company_id && c.company_id === garden.current_company_id),
+    );
+    const isSiliguriContact =
+      /siliguri/i.test(contact?.notes ?? "") || /siliguri/i.test(contact?.source_url ?? "");
+
+    if (matchedDirRow || isSiliguriCompany || isSiliguriContact) {
+      addedSiliguriGardenIds.add(garden.garden_id);
+      const officeAddress =
+        company?.registered_office || matchedDirRow?.office_address || "";
+      const contactPerson =
+        contact?.name || matchedDirRow?.office_contact || matchedDirRow?.historical_ceo || "";
+      const contactPhone =
+        contact?.business_phone || matchedDirRow?.office_phone || "";
+      const contactEmail =
+        contact?.business_email || matchedDirRow?.office_email || "";
+
+      siliguriEstates.push({
+        garden_id: garden.garden_id,
+        canonical_name: garden.canonical_name,
+        subdivision_or_block: garden.subdivision_or_block,
+        district_current: garden.district_current,
+        current_status: garden.current_status,
+        tea_board_registration: garden.tea_board_registration,
+        tea_area_ha: garden.tea_area_ha,
+        company_name: company?.legal_name || matchedDirRow?.historical_owner || "",
+        office_city: "Siliguri",
+        office_address: officeAddress,
+        contact_person: contactPerson,
+        contact_phone: contactPhone,
+        contact_email: contactEmail,
+        prospect_eligibility: garden.prospect_eligibility,
+        exclusion_reason: garden.exclusion_reason,
+        source_id: matchedDirRow ? directorySource : garden.source_ids,
+        notes: matchedDirRow
+          ? `Siliguri office identified via Tea Board directory row ${matchedDirRow.serial}.`
+          : `Siliguri office identified via operating company records.`,
+      });
+    }
+  }
+
+  for (const row of directoryRows.filter((r) => r.is_siliguri_office === "yes")) {
+    const matched = matchGarden(row.name, gardens, aliases);
+    const garden = matched && matched.score >= 0.82 ? matched.garden : null;
+    if (garden && !addedSiliguriGardenIds.has(garden.garden_id)) {
+      addedSiliguriGardenIds.add(garden.garden_id);
+      const company = companies.find((c) => c.company_id === garden.current_company_id);
+      siliguriEstates.push({
+        garden_id: garden.garden_id,
+        canonical_name: garden.canonical_name,
+        subdivision_or_block: garden.subdivision_or_block || titleCase(row.subdivision),
+        district_current: garden.district_current || row.district,
+        current_status: garden.current_status,
+        tea_board_registration: garden.tea_board_registration || row.registration,
+        tea_area_ha: garden.tea_area_ha || row.tea_area_ha,
+        company_name: company?.legal_name || row.historical_owner,
+        office_city: "Siliguri",
+        office_address: company?.registered_office || row.office_address,
+        contact_person: row.office_contact || row.historical_ceo,
+        contact_phone: row.office_phone,
+        contact_email: row.office_email,
+        prospect_eligibility: garden.prospect_eligibility,
+        exclusion_reason: garden.exclusion_reason,
+        source_id: directorySource,
+        notes: `Siliguri office identified via Tea Board directory row ${row.serial}.`,
+      });
+    }
+  }
+
+  const eligibilityRank = {
+    target_candidate: 1,
+    not_active: 2,
+    excluded_current_client: 3,
+    excluded_large_group: 4,
+  };
+  siliguriEstates.sort((a, b) => {
+    const diff =
+      (eligibilityRank[a.prospect_eligibility] ?? 9) -
+      (eligibilityRank[b.prospect_eligibility] ?? 9);
+    if (diff !== 0) return diff;
+    return a.canonical_name.localeCompare(b.canonical_name);
+  });
+
   const searchQueries = [];
   for (const garden of gardens) {
     const sourceAliases = aliases
@@ -1255,6 +1477,7 @@ export async function buildRegistry({ sourceTexts }) {
     contactHints,
     review,
     activeEstates,
+    siliguriEstates,
     searchQueries,
     parserCounts: {
       atlas_names: atlasRows.length,
@@ -1302,6 +1525,10 @@ export async function writeRegistry(registry) {
       toCsv(HEADERS.gardens, registry.activeEstates),
     ),
     writeFile(
+      resolve(dataDir, "siliguri_dooars_estates.csv"),
+      toCsv(HEADERS.siliguri_estates, registry.siliguriEstates),
+    ),
+    writeFile(
       resolve(dataDir, "search_queries.csv"),
       toCsv(
         ["garden_id", "canonical_name", "alias", "query", "priority"],
@@ -1336,6 +1563,7 @@ export function buildReport(registry) {
     contacts: registry.contacts.length,
     historical_contact_hints: registry.contactHints.length,
     active_export_rows: registry.activeEstates.length,
+    siliguri_estates_rows: registry.siliguriEstates?.length ?? 0,
     review_queue_rows: registry.review.length,
     statuses,
     prospect_eligibility: prospectEligibility,
