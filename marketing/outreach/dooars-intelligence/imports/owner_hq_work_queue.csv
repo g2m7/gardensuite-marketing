@@ -1,0 +1,33 @@
+garden_id,garden,status,eligibility,owner_company,company_id,hq_city,hq_source,hq_address,owner_evidence,notes
+gs-dooars-bamandanga-tondoo,Bamandanga Tondoo,likely_active,target_candidate,,,,,,,No owner company known. Start from historical owner names or the Siliguri office route.
+gs-dooars-kumlai,Kumlai,likely_active,target_candidate,,,,,,,No owner company known. Start from historical owner names or the Siliguri office route.
+gs-dooars-samsing,Samsing,likely_active,target_candidate,,,,,,,No owner company known. Start from historical owner names or the Siliguri office route.
+gs-dooars-dheklapara,Dheklapara,temporarily_closed,not_active,,,,,,,No owner company known. Start from historical owner names or the Siliguri office route.
+gs-dooars-raipur,Raipur,temporarily_closed,not_active,Subrata Saha,gs-company-subrata-saha,,,,owner_reported_in_directory (historical_only),Historical owner only. Confirm the current owner company on MCA.
+gs-dooars-sonali,Sonali,temporarily_closed,not_active,Shri Rajhesh Jhunjhunwala,gs-company-shri-rajhesh-jhunjhunwala,,,,owner_reported_in_directory (historical_only),Historical owner only. Confirm the current owner company on MCA.
+gs-dooars-amarpur,Amarpur,unknown,not_active,Amarpur Tea Plantations LTD Alok Chamaria,gs-company-amarpur-plantations-ltd-alok-chamaria,,,,owner_reported_in_directory (historical_only),Historical owner only. Confirm the current owner company on MCA.
+gs-dooars-bhandiguri,Bhandiguri,unknown,not_active,Arun Kumar Mundra,gs-company-arun-kumar-mundra,,,,owner_reported_in_directory (historical_only),Historical owner only. Confirm the current owner company on MCA.
+gs-dooars-chuniajhora,Chuniajhora,unknown,not_active,,,,,,,No owner company known. Start from historical owner names or the Siliguri office route.
+gs-dooars-debipur,Debipur,unknown,not_active,,,,,,,No owner company known. Start from historical owner names or the Siliguri office route.
+gs-dooars-gopimohan,Gopimohan,unknown,not_active,Jahuri Durga Tea Co (P) LTD,gs-company-jahuri-durga-co-p-ltd,,,,owner_reported_in_directory (historical_only),Historical owner only. Confirm the current owner company on MCA.
+gs-dooars-jadabpur,Jadabpur,unknown,not_active,Jadabpur Tea Co LTD,gs-company-jadabpur-co-ltd,,,,owner_reported_in_directory (historical_only),Historical owner only. Confirm the current owner company on MCA.
+gs-dooars-jalpara,Jalpara,unknown,not_active,,,,,,,No owner company known. Start from historical owner names or the Siliguri office route.
+gs-dooars-joypur,Joypur,unknown,not_active,Sunny Valley Tea &,gs-company-sunny-valley-and,,,,owner_reported_in_directory (historical_only),Historical owner only. Confirm the current owner company on MCA.
+gs-dooars-kailashpur,Kailashpur,unknown,not_active,The Friends Tea Company Ltd. Mr. Ranjit Balow,gs-company-the-friends-company-ltd-mr-ranjit-balow,,,,owner_reported_in_directory (historical_only),Historical owner only. Confirm the current owner company on MCA.
+gs-dooars-kathaldhura,Kathaldhura,unknown,not_active,Kanchan Tree Plantations,gs-company-kanchan-tree-plantations,,,,owner_reported_in_directory (historical_only),Historical owner only. Confirm the current owner company on MCA.
+gs-dooars-konpakri,Konpakri,unknown,not_active,Konpakri Agro Indus. (P) LTD Purojit Bakshi Gupta,gs-company-konpakri-agro-indus-p-ltd-purojit-bakshi-gupta,,,,owner_reported_in_directory (historical_only),Historical owner only. Confirm the current owner company on MCA.
+gs-dooars-lakhikanta,Lakhikanta,unknown,not_active,Rungamati Tea Industries,gs-company-rungamati-industries,,,,owner_reported_in_directory (historical_only),Historical owner only. Confirm the current owner company on MCA.
+gs-dooars-makrapara,Makrapara,unknown,not_active,Anoop Tea Co (Pvt) LTD,gs-company-anoop-co-pvt-ltd,,,,owner_reported_in_directory (historical_only),Historical owner only. Confirm the current owner company on MCA.
+gs-dooars-mujnai,Mujnai,unknown,not_active,Anjuman Tea Co LTD,gs-company-anjuman-co-ltd,,,,owner_reported_in_directory (historical_only),Historical owner only. Confirm the current owner company on MCA.
+gs-dooars-nedam,Nedam,unknown,not_active,Northern Bengal Tea,gs-company-northern-bengal,,,,owner_reported_in_directory (historical_only),Historical owner only. Confirm the current owner company on MCA.
+gs-dooars-nepati-valley,Nepati Valley,unknown,not_active,Nepati Valley Tea Estate (P),gs-company-nepati-valley-p,,,,owner_reported_in_directory (historical_only),Historical owner only. Confirm the current owner company on MCA.
+gs-dooars-nimtijhora,Nimtijhora,unknown,not_active,Khayerbari Tea Co. Ltd.,gs-company-khayerbari-co-ltd,,,,owner_reported_in_directory (historical_only),Historical owner only. Confirm the current owner company on MCA.
+gs-dooars-raghuutkarsh,Raghuutkarsh,unknown,not_active,,,,,,,No owner company known. Start from historical owner names or the Siliguri office route.
+gs-dooars-ranicherra,Ranicherra,unknown,not_active,Ranicherra Tea Co.Ltd,gs-company-ranicherra-co-ltd,,,,owner_reported_in_directory (historical_only),Historical owner only. Confirm the current owner company on MCA.
+gs-dooars-sonar-bangla,Sonar Bangla,unknown,not_active,Sonar Bangla Tea Co (P) LTD,gs-company-sonar-bangla-co-p-ltd,,,,owner_reported_in_directory (historical_only),Historical owner only. Confirm the current owner company on MCA.
+gs-dooars-srinathpur,Srinathpur,unknown,not_active,,,,,,,No owner company known. Start from historical owner names or the Siliguri office route.
+gs-dooars-trisakti,Trisakti,unknown,not_active,Trisakti Tea Co (P) LTD,gs-company-trisakti-co-p-ltd,,,,owner_reported_in_directory (historical_only),Historical owner only. Confirm the current owner company on MCA.
+gs-dooars-turturi,Turturi,unknown,not_active,Alipurduar Tea Company LTD,gs-company-alipurduar-company-ltd,,,,owner_reported_in_directory (historical_only),Historical owner only. Confirm the current owner company on MCA.
+gs-dooars-uttarsalbari,Uttarsalbari,unknown,not_active,,,,,,,No owner company known. Start from historical owner names or the Siliguri office route.
+gs-dooars-yongtong,Yongtong,unknown,not_active,,,,,,,No owner company known. Start from historical owner names or the Siliguri office route.
+gs-dooars-zurantee,Zurantee,unknown,not_active,Shashank Prasad,gs-company-shashank-prasad,,,,owner_reported_in_directory (historical_only),Historical owner only. Confirm the current owner company on MCA.

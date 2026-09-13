@@ -135,6 +135,25 @@ Product and messaging precedence is:
 4. `docs/product/PRODUCT.md` and current production behavior for technical detail
 5. Landing-page copy guides for channel-specific wording
 
+## Dooars Estate Intelligence (Research Infrastructure)
+
+The Dooars research registry lives in `marketing/outreach/dooars-intelligence/` with its code in `scripts/outreach/dooars/`. It produces estate-account data (gardens, companies, links, evidence, contacts, review queue). It is research only. It never sends messages, imports contacts into Snov.io or activates a campaign. Full command and workflow docs: `marketing/outreach/dooars-intelligence/README.md`.
+
+### Data collection rules
+
+- Collect only public sources. No login bypass, paywall bypass, anti-bot evasion or non-public page access. The collector identifies itself and keeps a 1.5 second delay between requests.
+- MCA21 master data is the authoritative record for CIN, legal status, registered office and directors. The MCA portal is form-based: never script or bulk-submit against it. Get the data by manual portal lookups or a licensed provider (Tofler, Instafinancials), save it as `imports/mca-company-master.csv`, then run `collect` and `build`.
+- The contact crawler (`scripts/outreach/dooars/contact_crawler.mjs`) visits only domains listed in `imports/contact_crawl_targets.csv`, respects `robots.txt`, caps at five pages per domain and outputs hints marked `do_not_use_without_reverification: yes`. Targets must already be tied to a registry company. Never guess a domain.
+- Every crawler output row is a hint. Copy only verified public business contacts into `manual/contacts.csv` after reverification.
+
+### Data accuracy rules
+
+- Source precedence when records conflict: official (Tea Board, MCA, RTI) beats the company's own site, which beats directories, which beats news. Keep both claims in the evidence table with evidence IDs when sources disagree.
+- Two independent sources are required for ownership, hectares and corporate-exclusion decisions. A company confirming itself is one source, not two.
+- Field staleness: re-verify ownership at 90 days, operating status at 30 days, and contact emails at send time. An evidence row older than these limits cannot make an active-status or ownership decision alone.
+- Do not pattern-guess email addresses. An address is usable only after external `safe`/`deliverable` validation or Snov `Valid`, plus estate-association confirmation.
+- Write bounces, wrong-name reports and rejects back into the evidence trail so weak sources are visible. Every bad contact that slips through must lower trust in its source, not just the contact.
+
 ## SEO Rules (Mandatory for Every Page)
 
 1. Title: `Primary Keyword - Plain Benefit | GardenSuite` (50-65 chars)

@@ -249,6 +249,42 @@
       "use": "Local reopening reports for Torsa, Kalchini, Raimatang, and Dalmore",
       "current_status_evidence": true,
       "browser_fallback": true
+    },
+    {
+      "source_id": "mca-master-data-portal",
+      "name": "MCA21 company master data services",
+      "url": "https://www.mca.gov.in/content/mca/global/en/mca/master-data/MDS.html",
+      "kind": "html",
+      "parser": "metadata-only",
+      "published_date": "",
+      "authority": "official",
+      "use": "Official company master data portal. CIN, legal status, registered office and director evidence for Dooars tea companies. The portal is form-based, so bulk data is obtained by manual lookups or a licensed provider export, never by automated form submission.",
+      "current_status_evidence": false,
+      "browser_fallback": true
+    },
+    {
+      "source_id": "siliguri-tea-auction-committee",
+      "name": "Siliguri Tea Auction Committee",
+      "url": "https://www.siliguriteaauction.com/",
+      "kind": "html",
+      "parser": "metadata-only",
+      "published_date": "",
+      "authority": "industry",
+      "use": "Auction centre member and participant information. Buyer, seller and broker membership points to Siliguri city offices of Dooars gardens.",
+      "current_status_evidence": false,
+      "browser_fallback": true
+    },
+    {
+      "source_id": "mca-dooars-company-master",
+      "name": "MCA company master data export for Dooars tea companies",
+      "url": "https://www.mca.gov.in/content/mca/global/en/mca/master-data/MDS.html",
+      "kind": "manual",
+      "import_file": "mca-company-master.csv",
+      "parser": "mca-company-master",
+      "published_date": "",
+      "authority": "official",
+      "use": "Manual import. Look up each Dooars tea company on the MCA master data portal or buy the same fields from a licensed provider such as Tofler or Instafinancials. Save a CSV with cin, company name, status, registered office address, roc code and registration date as imports/mca-company-master.csv. One row per company. Never script form submission against the MCA portal.",
+      "current_status_evidence": false
     }
   ]
 }

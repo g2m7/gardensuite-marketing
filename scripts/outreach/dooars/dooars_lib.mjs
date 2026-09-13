@@ -36,7 +36,7 @@ const DOOARS_SUBDIVISIONS = new Set([
   "ALIPURDUAR",
 ]);
 
-const LARGE_GROUP_PARENTS = new Set([
+export const LARGE_GROUP_PARENTS = new Set([
   "camellia plc",
   "government of india",
   "williamson magor group",
@@ -194,7 +194,7 @@ export function toCsv(headers, rows) {
     .join("\n")}${rows.length ? "\n" : ""}`;
 }
 
-export function parseCsv(text) {
+export function parseCsv(text, delimiter = ",") {
   const rows = [];
   let row = [];
   let field = "";
@@ -212,7 +212,7 @@ export function parseCsv(text) {
       continue;
     }
     if (char === '"') quoted = true;
-    else if (char === ",") {
+    else if (char === delimiter) {
       row.push(field);
       field = "";
     } else if (char === "\n") {
@@ -680,6 +680,72 @@ export function extractRegisteredPlanterRows(text) {
   return rows;
 }
 
+// Parses a manually prepared MCA master data import for Dooars tea companies.
+// The data comes from the MCA master data portal or a licensed provider such as
+// Tofler or Instafinancials. Never script form submission against the MCA portal.
+// The parser accepts the common MCA and provider column spellings and tolerates
+// CSV or tab separated exports.
+const MCA_HEADER_PATTERNS = {
+  cin: /^(cin|corporate[\s_-]*identification[\s_-]*number)$/i,
+  legal_name: /^(company[\s_-]*name|llp[\s_-]*name|name[\s_-]*of[\s_-]*(the[\s_-]*)?company|name)$/i,
+  company_status: /(company[\s_-]*status|llp[\s_-]*status|^(master[\s_-]*)?status)$/i,
+  registered_office: /(registered[\s_-]*(office|address)|^address$)/i,
+  roc_code: /(roc([\s_-]*code)?|registrar[\s_-]*of[\s_-]*companies)$/i,
+  registration_date:
+    /(date[\s_-]*of[\s_-]*registration|registration[\s_-]*date|date[\s_-]*of[\s_-]*(incorporation|creation))/i,
+};
+
+// A CIN is 21 characters: L or U, five digits, two-letter state code, four
+// digits, three-letter class code and six trailing digits or characters.
+const CIN_PATTERN = /^[LU]\d{5}[A-Z]{2}\d{4}[A-Z0-9]{3}\d{6}$/;
+
+export function extractMcaCompanyRows(text) {
+  const rows = [];
+  if (!text || !String(text).trim()) return rows;
+  const raw = String(text);
+  const headerLine = raw.slice(0, raw.indexOf("\n") >= 0 ? raw.indexOf("\n") : raw.length);
+  const delimiter = (headerLine.match(/\t/g) ?? []).length > (headerLine.match(/,/g) ?? []).length
+    ? "\t"
+    : ",";
+  const parsed = parseCsv(raw, delimiter);
+  if (!parsed.length) return rows;
+  const headers = Object.keys(parsed[0]);
+  const mapping = {};
+  for (const header of headers) {
+    for (const [field, pattern] of Object.entries(MCA_HEADER_PATTERNS)) {
+      if (!mapping[field] && pattern.test(header.trim())) mapping[field] = header;
+    }
+  }
+  if (!mapping.legal_name && !mapping.cin) {
+    throw new Error(
+      "MCA import needs at least a company name or CIN column. Recognized headers: " +
+        headers.join(", "),
+    );
+  }
+  for (const item of parsed) {
+    const legalName = String(item[mapping.legal_name] ?? "").replace(/\s+/g, " ").trim();
+    const cin = String(item[mapping.cin] ?? "").toUpperCase().replace(/[^A-Z0-9]/g, "");
+    if (!legalName && !cin) continue;
+    const row = {
+      cin: mapping.cin ? cin : "",
+      cin_valid: cin && CIN_PATTERN.test(cin) ? "yes" : "no",
+      legal_name: legalName || cin,
+      company_status: mapping.company_status
+        ? String(item[mapping.company_status] ?? "").trim()
+        : "",
+      registered_office: mapping.registered_office
+        ? String(item[mapping.registered_office] ?? "").replace(/\s+/g, " ").trim()
+        : "",
+      roc_code: mapping.roc_code ? String(item[mapping.roc_code] ?? "").trim() : "",
+      registration_date: mapping.registration_date
+        ? String(item[mapping.registration_date] ?? "").trim()
+        : "",
+    };
+    if (row.legal_name || row.cin) rows.push(row);
+  }
+  return rows;
+}
+
 function bool(value) {
   return /^(yes|true|1)$/i.test(String(value ?? "").trim());
 }
@@ -991,6 +1057,67 @@ export async function buildRegistry({ sourceTexts }) {
         if (item[field]) company[field] = item[field];
       }
       addUniqueSource(company, item.source_url || "manual");
+    }
+  }
+
+  // MCA master data enrichment. MCA is the authoritative record for legal
+  // company status, CIN and registered office. Matching is conservative:
+  // a near-exact company name match fills missing fields. Anything else goes
+  // to the review queue instead of guessing a company or garden link.
+  const mcaSource = "mca-dooars-company-master";
+  const mcaRows = extractMcaCompanyRows(sourceTexts[mcaSource] ?? "");
+  for (const row of mcaRows) {
+    const key = normalizeCompanyName(row.legal_name);
+    let company = companiesByKey.get(key);
+    if (!company && key.length >= 4) {
+      let best = null;
+      for (const candidate of companies) {
+        const score = nameSimilarity(candidate.legal_name, row.legal_name);
+        if (!best || score > best.score) best = { candidate, score };
+      }
+      if (best && best.score >= 0.9) company = best.candidate;
+    }
+    if (company) {
+      if (!company.cin && row.cin_valid === "yes") company.cin = row.cin;
+      if (!company.registered_office && row.registered_office) {
+        company.registered_office = row.registered_office;
+      }
+      if (company.company_status === "unverified" && row.company_status) {
+        company.company_status = row.company_status;
+      }
+      addUniqueSource(company, mcaSource);
+      if (!company.verified_date) company.verified_date = today();
+      if (row.company_status && !/active/i.test(row.company_status)) {
+        review.push({
+          review_id: `mca-status-${company.company_id}`,
+          review_type: "mca_company_not_active",
+          garden_id: "",
+          candidate_id: company.company_id,
+          source_id: mcaSource,
+          source_name: row.legal_name,
+          candidate_name: row.company_status,
+          match_score: "",
+          reason: "MCA master data does not show an active company. Confirm status before any outreach.",
+          source_url: "https://www.mca.gov.in/content/mca/global/en/mca/master-data/MDS.html",
+          created_date: today(),
+          status: "open",
+        });
+      }
+    } else if (/tea|garden|plantation|estate/i.test(row.legal_name)) {
+      review.push({
+        review_id: `mca-unmatched-${slug(row.legal_name)}`,
+        review_type: "mca_unmatched_company",
+        garden_id: "",
+        candidate_id: row.cin || "",
+        source_id: mcaSource,
+        source_name: row.legal_name,
+        candidate_name: "",
+        match_score: "",
+        reason: "MCA company did not match a registry company. Check whether it owns a Dooars garden.",
+        source_url: "https://www.mca.gov.in/content/mca/global/en/mca/master-data/MDS.html",
+        created_date: today(),
+        status: "open",
+      });
     }
   }
 
@@ -1484,6 +1611,7 @@ export async function buildRegistry({ sourceTexts }) {
       atlas_profiles: profiles.length,
       directory_rows: directoryRows.length,
       registered_planter_rows: planterRows.length,
+      mca_company_rows: mcaRows.length,
     },
   };
 }
@@ -1725,64 +1853,83 @@ export async function collectSources({ force = false } = {}) {
     const rawPath = resolve(rawDir, `${source.source_id}.${extension}`);
     const textPath = resolve(textDir, `${source.source_id}.txt`);
     let collectionMethod = "cache";
-    if (force || !(await fileExists(rawPath))) {
-      try {
-        if (source.kind === "pdf") {
-          await downloadToPath(source.url, rawPath);
-          collectionMethod = "curl";
-        } else {
-          const result = await fetchBuffer(source.url);
-          await writeFile(rawPath, result.buffer);
-          collectionMethod = "http";
-        }
-      } catch (error) {
+    if (source.kind === "manual") {
+      const importPath = resolve(importsDir, source.import_file ?? "");
+      if (!(await fileExists(importPath))) {
+        manifest.push({
+          source_id: source.source_id,
+          url: source.url,
+          retrieved_at: new Date().toISOString(),
+          collection_method: "awaiting_import",
+          raw_path: importPath,
+          text_path: textPath,
+          sha256: "",
+          error: `Manual import file is not present yet: ${importPath}`,
+        });
+        continue;
+      }
+      await writeFile(textPath, await readFile(importPath, "utf8"));
+      collectionMethod = "manual_import";
+    } else {
+      if (force || !(await fileExists(rawPath))) {
         try {
-          if (!source.browser_fallback) throw error;
-          await writeFile(rawPath, await browserCollect(source.url));
-          collectionMethod = "playwright";
-        } catch (fallbackError) {
-          if (source.parser !== "metadata-only") throw fallbackError;
-          manifest.push({
-            source_id: source.source_id,
-            url: source.url,
-            retrieved_at: new Date().toISOString(),
-            collection_method: "failed",
-            raw_path: rawPath,
-            text_path: textPath,
-            sha256: "",
-            error: fallbackError.message,
-          });
-          await new Promise((resolvePromise) =>
-            setTimeout(resolvePromise, config.default_request_delay_ms ?? 1500),
-          );
-          continue;
+          if (source.kind === "pdf") {
+            await downloadToPath(source.url, rawPath);
+            collectionMethod = "curl";
+          } else {
+            const result = await fetchBuffer(source.url);
+            await writeFile(rawPath, result.buffer);
+            collectionMethod = "http";
+          }
+        } catch (error) {
+          try {
+            if (!source.browser_fallback) throw error;
+            await writeFile(rawPath, await browserCollect(source.url));
+            collectionMethod = "playwright";
+          } catch (fallbackError) {
+            if (source.parser !== "metadata-only") throw fallbackError;
+            manifest.push({
+              source_id: source.source_id,
+              url: source.url,
+              retrieved_at: new Date().toISOString(),
+              collection_method: "failed",
+              raw_path: rawPath,
+              text_path: textPath,
+              sha256: "",
+              error: fallbackError.message,
+            });
+            await new Promise((resolvePromise) =>
+              setTimeout(resolvePromise, config.default_request_delay_ms ?? 1500),
+            );
+            continue;
+          }
         }
       }
-    }
-    if (source.kind === "pdf") {
-      await run("pdftotext", ["-layout", rawPath, textPath]);
-    } else {
-      const html = await readFile(rawPath, "utf8");
-      await writeFile(
-        textPath,
-        html
-          .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, " ")
-          .replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, " ")
-          .replace(/<[^>]+>/g, " ")
-          .replace(/&nbsp;/g, " ")
-          .replace(/&amp;/g, "&")
-          .replace(/\s+/g, " ")
-          .trim(),
-      );
+      if (source.kind === "pdf") {
+        await run("pdftotext", ["-layout", rawPath, textPath]);
+      } else {
+        const html = await readFile(rawPath, "utf8");
+        await writeFile(
+          textPath,
+          html
+            .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, " ")
+            .replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, " ")
+            .replace(/<[^>]+>/g, " ")
+            .replace(/&nbsp;/g, " ")
+            .replace(/&amp;/g, "&")
+            .replace(/\s+/g, " ")
+            .trim(),
+        );
+      }
     }
     manifest.push({
       source_id: source.source_id,
       url: source.url,
       retrieved_at: new Date().toISOString(),
       collection_method: collectionMethod,
-      raw_path: rawPath,
+      raw_path: source.kind === "manual" ? resolve(importsDir, source.import_file ?? "") : rawPath,
       text_path: textPath,
-      sha256: await sha256(rawPath),
+      sha256: await sha256(source.kind === "manual" ? textPath : rawPath),
     });
     await new Promise((resolvePromise) =>
       setTimeout(resolvePromise, config.default_request_delay_ms ?? 1500),
@@ -1801,6 +1948,7 @@ export async function loadCollectedSourceTexts() {
   for (const source of config.sources) {
     if (source.parser === "metadata-only") continue;
     const path = resolve(cacheDir, "text", `${source.source_id}.txt`);
+    if (source.kind === "manual" && !(await fileExists(path))) continue;
     texts[source.source_id] = await readFile(path, "utf8");
   }
   return texts;
