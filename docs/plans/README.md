@@ -1,5 +1,9 @@
 # GardenSuite plans
 
+## Active plans
+
+- [SEO and PR domination](seo-pr-domination/README.md) - reach #1 and occupy multiple slots on six target SERPs for the attendance-led offering. Includes goal table, market and competitor state, our baseline, on-site and off-site workstreams, PR calendar, and a four-week order of attack.
+
 ## Current plan
 
 [Owner acquisition](owner-acquisition/README.md) is the complete plan for selling mobile attendance and daily reports first, then expanding into the full ERP. It includes every discussed channel in priority order, setup guides, acceptance criteria, goals, rules, draft messages, the owner micro magnet and tracking templates.
