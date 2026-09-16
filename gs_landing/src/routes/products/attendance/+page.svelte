@@ -11,6 +11,7 @@
 	import AttendanceProductHero from './AttendanceProductHero.svelte';
 	import AttendanceProductProof from './AttendanceProductProof.svelte';
 	import AttendanceWorkflow from './AttendanceWorkflow.svelte';
+	import WageLeakageCalculator from '$lib/components/product/WageLeakageCalculator.svelte';
 
 	onMount(() => initScrollReveal());
 
@@ -115,6 +116,7 @@
 
 		<AttendanceWorkflow />
 		<AttendanceProductProof />
+		<WageLeakageCalculator />
 
 		<ProductRollout
 			tagText=""

@@ -62,6 +62,7 @@ Use keywords naturally. Clarity is more important than stuffing.
 | `/products/factory`                    | tea factory production software      | made tea production tracking, manufacturing cost per kg tea                            |
 | `/products/stores`                     | tea garden store management software | tea estate inventory software, fertilizer stock tracking                               |
 | `/products/mis`                        | tea garden MIS dashboard             | tea estate daily report, tea garden online dashboard                                   |
+| `/erp-for-tea-industry`                | erp for tea industry                 | tea erp software, tea garden management system, accounting software for tea manufacturing |
 
 ## Title Rules
 

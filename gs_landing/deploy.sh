@@ -1,10 +1,14 @@
 #!/bin/bash
+set -e
+
 echo "Packaging gs_landing..."
-rm -f ../gs_landing_deploy.zip
-zip -r ../gs_landing_deploy.zip . -x "node_modules/*" -x ".svelte-kit/*" -x "build/*" -x ".git/*" -x ".DS_Store"
+LOCAL_ZIP="/tmp/gs_landing_deploy.zip"
+rm -f "$LOCAL_ZIP"
+zip -r "$LOCAL_ZIP" . -x "node_modules/*" -x ".svelte-kit/*" -x "build/*" -x ".git/*" -x ".DS_Store"
 
 echo "Uploading to VPS..."
-scp ../gs_landing_deploy.zip root@gardensuite.in:/tmp/gs_landing_deploy.zip
+scp "$LOCAL_ZIP" root@gardensuite.in:/tmp/gs_landing_deploy.zip
+rm -f "$LOCAL_ZIP"
 
 echo "Deploying on VPS..."
 ssh root@gardensuite.in << 'EOF'

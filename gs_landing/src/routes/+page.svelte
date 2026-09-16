@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
+	import { onMount, onDestroy } from 'svelte';
 	import { fly } from 'svelte/transition';
 	import ModulePreview from './ModulePreview.svelte';
 	import SeoHead from '$lib/seo/SeoHead.svelte';
@@ -18,8 +18,11 @@
 		siteNavigationElementSchema
 	} from '$lib/seo/schemas';
 
-	// ─── GSAP + ScrollTrigger ───
+	// ─── GSAP + ScrollTrigger + Lenis ───
 	let ready = $state(false);
+	let ctx: any = null;
+	let lenisInstance: any = null;
+	let tickerFn: any = null;
 
 	onMount(async () => {
 		const { gsap } = await import('gsap');
@@ -35,68 +38,72 @@
 			return;
 		}
 
-		// ── FAB: show after scrolling past hero ──
-		const heroEl = document.querySelector('.hero-parallax');
-		if (heroEl) {
-			ScrollTrigger.create({
-				trigger: heroEl,
-				start: 'bottom 80%',
-				onEnter: () => (fabVisible = true),
-				onLeaveBack: () => (fabVisible = false)
+		const heroSection = document.querySelector('.hero-parallax') as HTMLElement | null;
+		if (heroSection) {
+			// ── Lenis smooth scroll ──
+			lenisInstance = new Lenis({
+				lerp: 0.08,
+				wheelMultiplier: 0.9,
+				touchMultiplier: 1.6
 			});
+
+			lenisInstance.on('scroll', ScrollTrigger.update);
+			tickerFn = (time: number) => {
+				lenisInstance.raf(time * 1000);
+			};
+			gsap.ticker.add(tickerFn);
+			gsap.ticker.lagSmoothing(0);
+
+			// ── Scoped GSAP context for hero parallax and triggers ──
+			ctx = gsap.context(() => {
+				// FAB trigger: show after scrolling past hero
+				ScrollTrigger.create({
+					trigger: heroSection,
+					start: 'bottom 80%',
+					onEnter: () => (fabVisible = true),
+					onLeaveBack: () => (fabVisible = false)
+				});
+
+				const scrubCfg = {
+					trigger: heroSection,
+					start: 'top top',
+					end: 'bottom top',
+					scrub: 1.2
+				};
+				const aggEase = 'power4.inOut';
+
+				gsap.to('.hero-text-content', {
+					y: -98,
+					ease: aggEase,
+					scrollTrigger: { ...scrubCfg }
+				});
+
+				gsap.to('.hero-mockup', {
+					y: -150,
+					ease: 'power1.inOut',
+					scrollTrigger: { ...scrubCfg }
+				});
+
+				gsap.to('.hero-fg-group', {
+					y: -35,
+					ease: aggEase,
+					scrollTrigger: { ...scrubCfg }
+				});
+
+				gsap.to('.hero-bg-landscape', {
+					y: 30,
+					ease: aggEase,
+					scrollTrigger: { ...scrubCfg }
+				});
+
+				gsap.to('.hero-bottom-cover', {
+					height: 65,
+					ease: aggEase,
+					scrollTrigger: { ...scrubCfg }
+				});
+			}, heroSection);
 		} else {
 			fabVisible = true;
-		}
-
-		// ── Lenis smooth scroll ──
-		const lenis = new Lenis({
-			lerp: 0.06,
-			wheelMultiplier: 0.9,
-			touchMultiplier: 1.6
-		});
-
-		lenis.on('scroll', ScrollTrigger.update);
-		gsap.ticker.add((time) => {
-			lenis.raf(time * 1000);
-		});
-		gsap.ticker.lagSmoothing(0);
-
-		const scrubCfg = { trigger: '.hero-parallax', start: 'top top', end: 'bottom top', scrub: 1.5 };
-		const aggEase = 'power4.inOut';
-
-		// ── Hero entrance parallax ──
-		const heroSection = document.querySelector('.hero-parallax');
-		if (heroSection) {
-
-			gsap.to('.hero-text-content', {
-				y: -98,
-				ease: aggEase,
-				scrollTrigger: { ...scrubCfg }
-			});
-
-			gsap.to('.hero-mockup', {
-				y: -150,
-				ease: 'power1.inOut',
-				scrollTrigger: { ...scrubCfg }
-			});
-
-			gsap.to('.hero-fg-group', {
-				y: -35,
-				ease: aggEase,
-				scrollTrigger: { ...scrubCfg }
-			});
-
-			gsap.to('.hero-bg-landscape', {
-				y: 30,
-				ease: aggEase,
-				scrollTrigger: { ...scrubCfg }
-			});
-
-			gsap.to('.hero-bottom-cover', {
-				height: 65,
-				ease: aggEase,
-				scrollTrigger: { ...scrubCfg }
-			});
 		}
 
 		// ── Scroll-triggered entrance for sections ──
@@ -117,6 +124,16 @@
 		});
 
 		ready = true;
+	});
+
+	onDestroy(() => {
+		if (ctx) ctx.revert();
+		if (lenisInstance && tickerFn) {
+			import('gsap').then(({ gsap }) => {
+				gsap.ticker.remove(tickerFn);
+			});
+			lenisInstance.destroy();
+		}
 	});
 
 	// ─── Contact Form ───
@@ -336,7 +353,7 @@
 		<!-- HERO (unchanged)                                           -->
 		<!-- ═══════════════════════════════════════════════════════════ -->
 		<section class="hero-parallax relative w-full" aria-label="Hero">
-			<picture>
+			<picture class="hero-sky-wrapper pointer-events-none absolute inset-0 z-0 h-full w-full overflow-hidden">
 				<source srcset="/hero-sky.webp" type="image/webp" />
 				<img
 					src="/hero-sky.png"
@@ -375,7 +392,7 @@
 			<div
 				class="hero-visuals relative -mt-6 h-[540px] w-full overflow-visible md:-mt-4 md:h-[720px] lg:h-[840px]"
 			>
-				<picture>
+				<picture class="hero-bg-wrapper pointer-events-none absolute inset-0 z-[1] h-full w-full overflow-hidden">
 					<source srcset="/bg-960.webp 960w, /bg-1920.webp 1920w" sizes="100vw" type="image/webp" />
 					<img
 						src="/bg.png"
@@ -1568,42 +1585,84 @@
 </div>
 
 <style>
-	@keyframes hero-fade-up {
-		from {
+	/* ── Apple-Style Cinematic Hero Unfold (cinematic-scroll-storytelling) ── */
+	@keyframes hero-headline-unfold {
+		0% {
+			opacity: 0;
+			transform: translateY(24px);
+			filter: blur(8px);
+		}
+		100% {
+			opacity: 1;
+			transform: translateY(0);
+			filter: blur(0px);
+		}
+	}
+
+	@keyframes hero-fade-unfold {
+		0% {
 			opacity: 0;
 			transform: translateY(18px);
 		}
-		to {
+		100% {
 			opacity: 1;
 			transform: translateY(0);
 		}
 	}
 
-	@keyframes hero-mockup-fade-up {
-		from {
+	@keyframes hero-mockup-dock {
+		0% {
 			opacity: 0;
-			transform: translateY(24px) scale(0.985);
+			transform: translateY(34px) scale(0.982);
 		}
-		to {
+		100% {
 			opacity: 1;
 			transform: translateY(0) scale(1);
 		}
 	}
 
+	@keyframes hero-camera-drift {
+		0% {
+			transform: scale(1.04);
+		}
+		100% {
+			transform: scale(1);
+		}
+	}
+
+	@keyframes hero-sky-drift {
+		0% {
+			transform: scale(1.05);
+		}
+		100% {
+			transform: scale(1);
+		}
+	}
+
+	:global(.hero-sky-wrapper) {
+		animation: hero-sky-drift 1.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+		transform-origin: center 25%;
+	}
+
+	:global(.hero-bg-wrapper) {
+		animation: hero-camera-drift 1.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+		transform-origin: center 25%;
+	}
+
 	:global(.hero-h1) {
-		animation: hero-fade-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+		animation: hero-headline-unfold 0.75s cubic-bezier(0.16, 1, 0.3, 1) both;
 	}
 
 	:global(.hero-sub) {
-		animation: hero-fade-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.08s both;
+		animation: hero-fade-unfold 0.65s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
 	}
 
 	:global(.hero-cta) {
-		animation: hero-fade-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.16s both;
+		animation: hero-fade-unfold 0.55s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
 	}
 
 	:global(.hero-mockup-inner) {
-		animation: hero-mockup-fade-up 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.22s both;
+		animation: hero-mockup-dock 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.24s both;
 	}
 
 	:global(.reveal-on-scroll) {
@@ -1619,6 +1678,8 @@
 	}
 
 	@media (prefers-reduced-motion: reduce) {
+		:global(.hero-sky-wrapper),
+		:global(.hero-bg-wrapper),
 		:global(.hero-h1),
 		:global(.hero-sub),
 		:global(.hero-cta),
@@ -1626,6 +1687,7 @@
 			animation: none !important;
 			opacity: 1 !important;
 			transform: none !important;
+			filter: none !important;
 		}
 
 		:global(.reveal-on-scroll) {

@@ -30,6 +30,12 @@ const pages = [
 	{ path: '/products/factory', priority: '0.9', changefreq: 'monthly', lastmod: '2026-06-03' },
 	{ path: '/products/stores', priority: '0.9', changefreq: 'monthly', lastmod: '2026-06-03' },
 	{
+		path: '/erp-for-tea-industry',
+		priority: '0.9',
+		changefreq: 'weekly',
+		lastmod: '2026-09-17'
+	},
+	{
 		path: '/tea-garden-software-assam',
 		priority: '0.85',
 		changefreq: 'weekly',
@@ -58,6 +64,12 @@ const pages = [
 		priority: '0.8',
 		changefreq: 'monthly',
 		lastmod: '2026-09-06'
+	},
+	{
+		path: '/guides/how-tea-garden-hazira-is-calculated',
+		priority: '0.8',
+		changefreq: 'weekly',
+		lastmod: '2026-09-17'
 	},
 	{
 		path: '/tea-estate-glossary',
