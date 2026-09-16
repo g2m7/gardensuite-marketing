@@ -23,6 +23,13 @@
 			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
 			rel="stylesheet"
 		/>
+		<script>
+			try {
+				if (sessionStorage.getItem('gs_preloader_shown') === 'true') {
+					document.documentElement.classList.add('skip-preloader');
+				}
+			} catch (e) {}
+		</script>
 		%sveltekit.head%
 	</head>
 	<body data-sveltekit-preload-data="hover">

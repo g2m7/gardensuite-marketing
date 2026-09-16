@@ -8,6 +8,7 @@
 	import SolutionWorkflowSection from '$lib/components/product/SolutionWorkflowSection.svelte';
 	import Button from '$lib/components/Button.svelte';
 	import ButtonGroup from '$lib/components/ButtonGroup.svelte';
+	import CinematicPreloader from '$lib/components/CinematicPreloader.svelte';
 	import { trackEvent } from '$lib/analytics';
 	import {
 		organizationSchema,
@@ -348,6 +349,7 @@
 />
 
 <div class="flex min-h-screen w-full flex-col overflow-clip bg-white antialiased">
+	<CinematicPreloader />
 	<main id="main-content">
 		<!-- ═══════════════════════════════════════════════════════════ -->
 		<!-- HERO (unchanged)                                           -->
