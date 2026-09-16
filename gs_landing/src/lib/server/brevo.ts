@@ -28,7 +28,7 @@ export function validEmail(value: string): boolean {
 	return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
 }
 
-export function normalizeIndianPhone(value: string): string {
+function normalizeIndianPhone(value: string): string {
 	const digits = value.replace(/\D/g, '');
 	const local = digits.length === 12 && digits.startsWith('91') ? digits.slice(2) : digits;
 	return /^[6-9]\d{9}$/.test(local) ? `91${local}` : '';
@@ -59,7 +59,10 @@ export async function saveLeadToBrevo(lead: BrevoLead): Promise<void> {
 			lead.consent.emailMarketing || lead.consent.whatsappMarketing
 				? 'explicit-form-consent'
 				: 'enquiry-response-only',
-		GARDENSUITE_TAGS: lead.tags.map((tag) => cleanText(tag, 60)).filter(Boolean).join(',')
+		GARDENSUITE_TAGS: lead.tags
+			.map((tag) => cleanText(tag, 60))
+			.filter(Boolean)
+			.join(',')
 	};
 
 	if (phone) {
@@ -72,7 +75,8 @@ export async function saveLeadToBrevo(lead: BrevoLead): Promise<void> {
 	}
 
 	const listId = Number(env.BREVO_LIST_ID);
-	const listIds = lead.consent.emailMarketing && Number.isInteger(listId) && listId > 0 ? [listId] : undefined;
+	const listIds =
+		lead.consent.emailMarketing && Number.isInteger(listId) && listId > 0 ? [listId] : undefined;
 	const response = await fetch(`${BREVO_API_URL}/contacts`, {
 		method: 'POST',
 		headers: {
