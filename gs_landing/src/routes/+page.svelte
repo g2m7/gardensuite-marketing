@@ -64,23 +64,9 @@
 		const scrubCfg = { trigger: '.hero-parallax', start: 'top top', end: 'bottom top', scrub: 1.5 };
 		const aggEase = 'power4.inOut';
 
-		// ── Hero entrance ──
+		// ── Hero entrance parallax ──
 		const heroSection = document.querySelector('.hero-parallax');
 		if (heroSection) {
-			const heroTl = gsap.timeline({ defaults: { ease: 'power3.out' } });
-			heroTl
-				.from('.hero-h1', { opacity: 0, y: 50, duration: 0.9, delay: 0.2 })
-				.from('.hero-sub', { opacity: 0, y: 30, duration: 0.7 }, '-=0.5')
-				.from('.hero-cta', { opacity: 0, y: 24, duration: 0.6 }, '-=0.4');
-
-			gsap.from('.hero-mockup-inner', {
-				y: 60,
-				scale: 0.97,
-				opacity: 0,
-				duration: 1.2,
-				delay: 0.6,
-				ease: 'power2.out'
-			});
 
 			gsap.to('.hero-text-content', {
 				y: -98,
@@ -1582,6 +1568,44 @@
 </div>
 
 <style>
+	@keyframes hero-fade-up {
+		from {
+			opacity: 0;
+			transform: translateY(18px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	@keyframes hero-mockup-fade-up {
+		from {
+			opacity: 0;
+			transform: translateY(24px) scale(0.985);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0) scale(1);
+		}
+	}
+
+	:global(.hero-h1) {
+		animation: hero-fade-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+	}
+
+	:global(.hero-sub) {
+		animation: hero-fade-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.08s both;
+	}
+
+	:global(.hero-cta) {
+		animation: hero-fade-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.16s both;
+	}
+
+	:global(.hero-mockup-inner) {
+		animation: hero-mockup-fade-up 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.22s both;
+	}
+
 	:global(.reveal-on-scroll) {
 		opacity: 0;
 		transform: translateY(24px);
@@ -1595,6 +1619,15 @@
 	}
 
 	@media (prefers-reduced-motion: reduce) {
+		:global(.hero-h1),
+		:global(.hero-sub),
+		:global(.hero-cta),
+		:global(.hero-mockup-inner) {
+			animation: none !important;
+			opacity: 1 !important;
+			transform: none !important;
+		}
+
 		:global(.reveal-on-scroll) {
 			opacity: 1;
 			transform: none;
