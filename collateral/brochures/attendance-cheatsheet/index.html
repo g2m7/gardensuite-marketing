@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GardenSuite - Attendance &amp; Smart Scale Sales Cheatsheet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600&display=swap" rel="stylesheet" />
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --ink: #111111;
+      --body: #52525b;
+      --muted: #71717a;
+      --faint: #a1a1aa;
+      --rule: #e4e4e7;
+      --white: #ffffff;
+
+      --font: "Inter", system-ui, -apple-system, sans-serif;
+      --font-display: "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
+    }
+
+    html {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: var(--font);
+      background: #ececee;
+      color: var(--ink);
+      font-size: 10pt;
+      line-height: 1.6;
+      padding: 24px 0;
+    }
+
+    /* ── A4 page shell ──────────────────────────────── */
+    .page {
+      width: 210mm;
+      height: 297mm;
+      margin: 0 auto 16px;
+      background: var(--white);
+      border: 1px solid var(--rule);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      padding: 13mm 16mm 10mm;
+    }
+
+    @media print {
+      body { background: transparent; padding: 0; }
+      .page { margin: 0; border: none; page-break-after: always; }
+      .screen-toolbar { display: none !important; }
+    }
+
+    /* ── Screen-only toolbar ────────────────────────── */
+    .screen-toolbar {
+      width: 210mm;
+      margin: 0 auto 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #111111;
+      color: #a1a1aa;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-size: 12px;
+    }
+    .screen-toolbar strong { color: #ffffff; font-weight: 600; }
+    .screen-toolbar button {
+      background: #333333;
+      color: #ffffff;
+      border: none;
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    /* ── Header ─────────────────────────────────────── */
+    .page-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding-bottom: 4mm;
+      border-bottom: 1px solid var(--rule);
+      flex-shrink: 0;
+    }
+    .brand-title {
+      font-family: var(--font-display);
+      font-size: 14pt;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+    }
+    .brand-byline {
+      margin-left: 3mm;
+      font-size: 8.5pt;
+      font-weight: 400;
+      color: var(--muted);
+    }
+    .page-tag {
+      font-size: 8pt;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--faint);
+    }
+
+    /* ── Section label (plain, muted) ───────────────── */
+    .section-label {
+      font-size: 8.5pt;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--faint);
+      margin-bottom: 2.5mm;
+    }
+
+    /* ── Pitch block ────────────────────────────────── */
+    .pitch {
+      padding: 5.5mm 0 6mm;
+      border-bottom: 1px solid var(--rule);
+      flex-shrink: 0;
+    }
+    .pitch-quote {
+      font-size: 11.5pt;
+      font-weight: 500;
+      line-height: 1.55;
+      color: var(--ink);
+      max-width: 168mm;
+    }
+
+    /* ── Feature list: open rows, hairline rules only ── */
+    .features {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .feature-row {
+      display: grid;
+      grid-template-columns: 7mm 1fr;
+      column-gap: 2.5mm;
+      padding: 4.2mm 0;
+    }
+    .feature-row + .feature-row {
+      border-top: 1px solid var(--rule);
+    }
+    .feature-number {
+      font-size: 9.5pt;
+      font-weight: 400;
+      color: var(--faint);
+      line-height: 1.5;
+    }
+    .feature-heading {
+      font-family: var(--font-display);
+      font-size: 11pt;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      margin-bottom: 0.8mm;
+    }
+    .feature-desc {
+      font-size: 9.5pt;
+      color: var(--body);
+      line-height: 1.55;
+      max-width: 160mm;
+    }
+    .feature-desc strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    /* ── Footer ─────────────────────────────────────── */
+    .page-footer {
+      flex-shrink: 0;
+      display: flex;
+      justify-content: space-between;
+      padding-top: 3.5mm;
+      border-top: 1px solid var(--rule);
+      font-size: 8pt;
+      color: var(--faint);
+    }
+    .page-footer strong {
+      color: var(--body);
+      font-weight: 500;
+    }
+
+    /* ── Page 2: Q&A ────────────────────────────────── */
+    .qa-list {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .qa-item {
+      padding: 4.2mm 0;
+    }
+    .qa-item + .qa-item {
+      border-top: 1px solid var(--rule);
+    }
+    .qa-question {
+      display: grid;
+      grid-template-columns: 7mm 1fr;
+      column-gap: 2.5mm;
+      margin-bottom: 1.2mm;
+    }
+    .qa-q-num {
+      font-size: 9.5pt;
+      font-weight: 400;
+      color: var(--faint);
+      line-height: 1.5;
+    }
+    .qa-q-text {
+      font-family: var(--font-display);
+      font-size: 10.5pt;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      line-height: 1.4;
+      color: var(--ink);
+    }
+    .qa-answer {
+      margin-left: 9.5mm;
+      font-size: 9.5pt;
+      line-height: 1.55;
+      color: var(--body);
+      max-width: 158mm;
+    }
+    .qa-answer .say {
+      color: var(--faint);
+      font-weight: 400;
+    }
+
+    /* ── Trust line: plain text, no box ─────────────── */
+    .trust-line {
+      display: flex;
+      gap: 6mm;
+      padding-top: 3.5mm;
+      border-top: 1px solid var(--rule);
+      font-size: 9pt;
+      color: var(--muted);
+      flex-shrink: 0;
+    }
+    .trust-line strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    /* ── Demo ask: plain section, hairline only ─────── */
+    .demo-ask {
+      padding-top: 3mm;
+      margin-top: 3mm;
+      border-top: 1px solid var(--rule);
+      flex-shrink: 0;
+    }
+    .demo-text {
+      font-size: 10pt;
+      font-weight: 500;
+      line-height: 1.55;
+      color: var(--ink);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Screen toolbar (browser preview only) -->
+  <div class="screen-toolbar">
+    <div><strong>GardenSuite Sales Cheatsheet</strong> &bull; 2 pages, A4</div>
+    <button onclick="window.print()">Print / Save PDF</button>
+  </div>
+
+  <!-- PAGE 1: FEATURES -->
+  <div class="page" id="page-1">
+
+    <header class="page-header">
+      <div>
+        <span class="brand-title">GardenSuite</span>
+        <span class="brand-byline">Sarbani Associates &bull; Bagdogra</span>
+      </div>
+      <div class="page-tag">Core features &bull; Page 1 of 2</div>
+    </header>
+
+    <div class="pitch">
+      <div class="section-label">The 10-second pitch</div>
+      <div class="pitch-quote">
+        GardenSuite runs face attendance and plucking leaf weight on an Android phone, right in your field. It works fully offline with no SIM or internet, and syncs clean numbers to your office computer before payroll.
+      </div>
+    </div>
+
+    <div class="section-label" style="margin-top: 5.5mm;">What to say on calls and visits</div>
+
+    <div class="features">
+
+      <div class="feature-row">
+        <div class="feature-number">1</div>
+        <div>
+          <div class="feature-heading">Face attendance on an Android phone</div>
+          <div class="feature-desc">
+            At morning muster, the kamdar points the phone camera at the worker. The app matches the face in under 2 seconds. <strong>Helps stop proxy attendance, buddy punching, and ghost workers.</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="feature-row">
+        <div class="feature-number">2</div>
+        <div>
+          <div class="feature-heading">Smart Bluetooth scale for leaf weighing</div>
+          <div class="feature-desc">
+            A digital hanging scale links wirelessly to the supervisor's phone. When the leaf bag is hooked, the net weight saves straight to that worker's record. <strong>No handwriting errors, no fake weight slips, no weighing disputes.</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="feature-row">
+        <div class="feature-number">3</div>
+        <div>
+          <div class="feature-heading">Works fully offline in the garden</div>
+          <div class="feature-desc">
+            No internet, no Wi-Fi, no SIM card needed in field sections. Face checks and weights save on the phone itself. <strong>Remote sections never stop working.</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="feature-row">
+        <div class="feature-number">4</div>
+        <div>
+          <div class="feature-heading">One tap sync to the office computer</div>
+          <div class="feature-desc">
+            Back at the office, one tap uploads all field records. <strong>Saves 2 to 3 hours of re-typing numbers from wet paper registers every evening.</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="feature-row">
+        <div class="feature-number">5</div>
+        <div>
+          <div class="feature-heading">Office review screen before payroll</div>
+          <div class="feature-desc">
+            The head clerk checks every attendance, leaf weight, and remark on the desktop screen. <strong>Your garden stays in control and can fix mistakes before wages run.</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="feature-row">
+        <div class="feature-number">6</div>
+        <div>
+          <div class="feature-heading">Direct link to payroll, ticca, and muster roll</div>
+          <div class="feature-desc">
+            Approved hazira and leaf weights feed straight into wage calculations, ticca incentive, PF, and ESI. <strong>Cuts wage preparation from days to hours.</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="feature-row">
+        <div class="feature-number">7</div>
+        <div>
+          <div class="feature-heading">Daily MIS summary for owners</div>
+          <div class="feature-desc">
+            Owners and managers open a clean summary on any phone or laptop: today's turnout, total leaf plucked, and plucker averages. <strong>Stay updated even when traveling.</strong>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <footer class="page-footer">
+      <div>GardenSuite by <strong>Sarbani Associates</strong> &bull; Bagdogra, Siliguri</div>
+      <div>Internal sales reference &bull; Confidential</div>
+    </footer>
+  </div>
+
+  <!-- PAGE 2: OBJECTION HANDLING -->
+  <div class="page" id="page-2">
+
+    <header class="page-header">
+      <div>
+        <span class="brand-title">GardenSuite</span>
+        <span class="brand-byline">Sarbani Associates &bull; Bagdogra</span>
+      </div>
+      <div class="page-tag">Objection handling &bull; Page 2 of 2</div>
+    </header>
+
+    <div class="section-label" style="margin-top: 6mm; margin-bottom: 1mm;">Common questions and answers</div>
+
+    <div class="qa-list">
+
+      <div class="qa-item">
+        <div class="qa-question">
+          <span class="qa-q-num">Q1</span>
+          <span class="qa-q-text">Our garden sections have zero mobile network or Wi-Fi. How will it work?</span>
+        </div>
+        <div class="qa-answer">
+          <span class="say">Say this:</span> "It runs completely offline. The phone needs no internet and no SIM card in the field. Face checks and weights save on the phone and sync when the supervisor returns to the office."
+        </div>
+      </div>
+
+      <div class="qa-item">
+        <div class="qa-question">
+          <span class="qa-q-num">Q2</span>
+          <span class="qa-q-text">Can pluckers cheat by holding up a photograph or punching for friends?</span>
+        </div>
+        <div class="qa-answer">
+          <span class="say">Say this:</span> "No. The camera checks liveness using real depth and natural eye movement. Printed photos and phone screens are rejected. It helps stop proxy attendance."
+        </div>
+      </div>
+
+      <div class="qa-item">
+        <div class="qa-question">
+          <span class="qa-q-num">Q3</span>
+          <span class="qa-q-text">Why face attendance instead of thumb fingerprint scanners?</span>
+        </div>
+        <div class="qa-answer">
+          <span class="say">Say this:</span> "Pluckers have rough skin, wet fingers, and tea leaf stains. Thumb scanners fail constantly in tea gardens. Face attendance needs no touching at all."
+        </div>
+      </div>
+
+      <div class="qa-item">
+        <div class="qa-question">
+          <span class="qa-q-num">Q4</span>
+          <span class="qa-q-text">Can our older babus and field kamdars learn the app?</span>
+        </div>
+        <div class="qa-answer">
+          <span class="say">Say this:</span> "Yes. The app has large buttons and simple steps built for tea garden staff. Sarbani Associates comes to your garden and trains your team in person."
+        </div>
+      </div>
+
+      <div class="qa-item">
+        <div class="qa-question">
+          <span class="qa-q-num">Q5</span>
+          <span class="qa-q-text">We already use old software or paper books. Why change?</span>
+        </div>
+        <div class="qa-answer">
+          <span class="say">Say this:</span> "You don't have to change everything at once. Start with face attendance and smart weighing to stop leaf weight leaks, and we link the numbers into your existing payroll."
+        </div>
+      </div>
+
+      <div class="qa-item">
+        <div class="qa-question">
+          <span class="qa-q-num">Q6</span>
+          <span class="qa-q-text">What if a phone battery dies or the scale hook breaks?</span>
+        </div>
+        <div class="qa-answer">
+          <span class="say">Say this:</span> "Any spare Android phone works as backup immediately. The scales are rugged industrial units, and we provide local repair and replacement from Siliguri."
+        </div>
+      </div>
+
+    </div>
+
+    <div class="trust-line">
+      <div><strong>20+ tea estates</strong> across Assam, Dooars, Terai, Darjeeling</div>
+      <div><strong>20+ years in tea</strong> &bull; Sarbani Associates</div>
+      <div><strong>On-site training</strong> on your garden</div>
+    </div>
+
+    <div class="demo-ask">
+      <div class="section-label" style="margin-bottom: 1mm;">The goal of every call and visit</div>
+      <div class="demo-text">
+        "Can we bring the phone app and wireless scale to your garden for a 15-minute live demonstration this week?"
+      </div>
+    </div>
+
+    <footer class="page-footer" style="margin-top: 4mm;">
+      <div>GardenSuite by <strong>Sarbani Associates</strong> &bull; Bagdogra, Siliguri</div>
+      <div>Internal sales reference &bull; Confidential</div>
+    </footer>
+  </div>
+
+</body>
+</html>
