@@ -1,8 +1,8 @@
 # September 2026 Pilot Daily Status
 
-Last material run: 2026-09-11 at 23:51 IST
+Last material run: 2026-09-14 at 16:57 IST
 
-Last live campaign check: 2026-09-08 at 17:31 IST
+Last live campaign check: 2026-09-14 at 16:57 IST
 
 ## Counts
 
@@ -11,16 +11,18 @@ Last live campaign check: 2026-09-08 at 17:31 IST
 - Blocked: 25
 - Snov export rows: 9
 - External validation import: 20 matched addresses, 17 safe/deliverable and 3 invalid. The 17 safe/deliverable results are accepted for this pilot under the owner's 8 September decision.
-- Existing live Snov recipients: 3
+- Existing live Snov recipients: 9
 - Staged Snov draft recipients: 0
-- First emails sent and delivered on 5 September: 3
-- Immediate hard bounces: 0
+- First emails sent and delivered: 9
+- Second emails sent and delivered: 3
+- Total sent emails: 12
+- Recorded bounces: 0
 
 ## Live campaign
 
 - Campaign: `GardenSuite Assam attendance pilot - Sep 2026`
 - Snov campaign ID: `3135559`
-- Status: Paused
+- Status: Paused by the readiness loop on 14 September after Snov reported an IMAP authentication failure
 - Sender: `kaushik@getgardensuite.in`
 - Warm-up: Paused, Protection off
 - Mailbox cap: 12 emails per day
@@ -31,7 +33,9 @@ Last live campaign check: 2026-09-08 at 17:31 IST
 
 The exact launch evidence and copy are in [LAUNCH_2026-09-05.md](LAUNCH_2026-09-05.md).
 
-Snov showed 3 sent, 0 replies and 0 bounces at the 7 September check. No campaign setting was changed during the check. The pause prevents the scheduled follow-ups from running until the campaign is resumed.
+Snov showed 9 recipients contacted, 12 emails delivered and 0 bounces at the 14 September check. Snov also reported that reply detection is off because IMAP authentication failed. The displayed reply count is not reliable while IMAP is disconnected. The readiness loop paused the campaign so no further follow-ups run until the mailbox connection is repaired and checked.
+
+Snov's warm-up page separately shows the mailbox warm-up as Paused with Protection off and 0 of 3 messages sent today.
 
 A second campaign draft now exists for the external-valid list:
 
@@ -86,12 +90,17 @@ The draft cannot send until its list is populated. The preparation loop did not 
 - Added Khatangpani as a research account with a current named co-owner and 195.65-hectare scale evidence. It remains blocked because no published business email was found and buying authority is unclear among the HUF heirs.
 - Added Lankashi as a research account with a named director, a published company inbox and 182.64-hectare scale evidence. It remains blocked until the buying centre is cleared because a director also serves Longboi, which has an open sales negotiation.
 - Ran the five pipeline tests, check and export. The tracker now has 34 accounts, 9 eligible accounts and 25 blocked accounts. The Snov import still contains exactly 9 eligible rows. No contact was imported and no campaign setting was changed.
+- Reconciled all 34 candidate accounts against the legacy Excel tracker on 14 September. The recorded active negotiations and previous-delivery evidence remain carried forward. No new explicit rejection was found.
+- Checked live Snov status. Campaign `3135559` is connected to the 9 eligible accounts and has sent 12 emails: 9 first emails and 3 second emails. Snov reports 0 bounces.
+- Snov reported `AUTHENTICATIONFAILED` for IMAP. Reply detection and automatic stop-on-reply are off. The readiness loop paused campaign `3135559` at 16:57 IST. No recipient was added and no email was sent by the loop.
+- Confirmed that Snov warm-up remains paused with Protection off.
+- Deleted the scheduled readiness heartbeat after its final 14 September run. The campaign remains paused for manual IMAP repair and reply review.
 
 ## Remaining work
 
-- Watch Unibox for replies and stop or suppress immediately when requested.
-- Continue automated decision-maker and business-email research for 11 primary slots and 5 backup slots.
-- Do not add an account until every row-level gate passes.
+- Reconnect IMAP for the GardenSuite sender mailbox, run Snov's connection check, and confirm reply detection is active.
+- Check the mailbox directly for replies received while Snov could not sync them. Apply reply stops and suppressions before resuming.
+- Do not resume campaign `3135559` until both checks pass.
 
 ## Current blocked-account pattern
 
@@ -99,4 +108,4 @@ Most blocked accounts still need an accepted estate-associated email, suppressio
 
 ## Next operating action
 
-Do not import the earlier 13-row file. It was replaced by a corrected 9-row export after the Excel reconciliation found open negotiations in the old allowlist. Continue automated research for 11 more primary accounts and 5 backups. Keep campaign `3135559` paused and draft list `40982250` empty from this preparation loop. Any live operator must exclude the three accounts already sent on 5 September before staging a new batch.
+Do not import the current 9-row export. All 9 accounts are already recipients in campaign `3135559`. Repair the IMAP login, check the mailbox for replies, and confirm Snov reply detection before resuming the campaign. Keep both draft campaigns inactive.
