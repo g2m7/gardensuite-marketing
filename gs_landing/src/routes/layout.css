@@ -1,6 +1,6 @@
 @import 'tailwindcss';
 
-/* ─── Layout Design Tokens (inherits from app.css) ─── */
+/* ─── Layout Design Tokens (single source of truth; documented in docs/website/DESIGN.md) ─── */
 
 @theme {
 	/* Green scale */

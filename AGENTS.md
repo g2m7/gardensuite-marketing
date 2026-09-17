@@ -48,6 +48,12 @@ Jalpaiguri: Himalayan Agro Plantation
 
 ## Design Direction
 
+**Single design authority: `docs/website/DESIGN.md`** (extracted from the live homepage, matches `gs_landing/src/routes/layout.css`). Before creating or changing any page, route, or component, read `docs/website/DESIGN.md` and `gs_landing/AGENTS.md` (component inventory and new-page workflow). Read the full section in `gs_landing/docs/landing-page/styling.md` and `typography.md` for homepage context.
+
+**Global skill override:** Generic design skills (for example `frontend-design-ultimate`, `ui-ux-pro-max`, `landing-page`, `landing-page-design`) do not apply to this repository. They recommend fonts, glassmorphism, gradients, and shadows that this project bans. GardenSuite rules always win.
+
+Existing rules:
+
 - Apple-inspired landing page: clean, minimal, large typography, generous whitespace
 - Sales funnel structure: Hook -> Problem -> Solution -> Proof -> Desire -> Differentiator -> Features -> Trust -> FAQ -> CTA
 - Parent company branding: Sarbani Associates in copyright footer and trust-building sections
@@ -57,13 +63,16 @@ Jalpaiguri: Himalayan Agro Plantation
 - NO colored glow effects (ring-1 ring-[color]/opacity, shadow with color, gradient glow divs behind elements). Use neutral shadows only (rgba black).
 - NO heavy shadows. Prefer borders and surface contrast first. Shadows may only provide subtle separation.
 - Maximum shadow: `0 12px 30px rgba(0,0,0,0.10)`. Do not use `shadow-lg`, `shadow-xl`, `shadow-2xl`, blur radii above 30px, opacity above 0.10, or dramatic hover elevation.
-- Use these shadow levels: small `0 1px 3px rgba(0,0,0,0.04)`, card `0 6px 18px rgba(0,0,0,0.06)`, elevated `0 10px 28px rgba(0,0,0,0.10)`.
+- Use these shadow levels (utility names match `layout.css`): `shadow-card` `0 1px 3px rgba(0,0,0,0.04)`, `shadow-soft` `0 6px 18px rgba(0,0,0,0.06)`, `shadow-card-hover` `0 8px 24px rgba(0,0,0,0.08)`, elevated `0 10px 28px rgba(0,0,0,0.10)`.
 - Icon drop-shadows must stay at or below `0 2px 4px rgba(0,0,0,0.10)`.
 
 ## Reference Docs (Read Before Making Changes)
 
-Before auditing or improving copy, design, SEO, or UX, read the relevant docs in `gs_landing/docs/landing-page/`:
+Before creating, auditing, or improving any page, route, component, copy, design, SEO, or UX, read:
 
+1. `docs/website/DESIGN.md` - the design system: tokens, type scale, spacing, shadows, component patterns
+2. `gs_landing/AGENTS.md` - component inventory and new-page workflow
+3. The relevant docs in `gs_landing/docs/landing-page/`:
 - `seo.md` - keyword map, title pattern, meta rules, schema rules, copy safety
 - `all-pages-copy-guidelines.md` - brand voice, vocabulary, claim safety
 - `product-page-copy-guidelines.md` - page formula, per-module vocabulary

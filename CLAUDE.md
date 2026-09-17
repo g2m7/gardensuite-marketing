@@ -24,36 +24,25 @@ bun run build
 - TypeScript
 - Bun
 
-## Brand Design Tokens
+## Design System (Single Authority)
 
-### Colors (from assets/brand tokens)
+The design system source of truth is **`docs/website/DESIGN.md`** (682 lines, extracted from the live homepage). It matches the actual tokens in `gs_landing/src/routes/layout.css`. Before creating or changing any page, route, or component, read:
 
-| Token       | Hex       | Usage                        |
-| ----------- | --------- | ---------------------------- |
-| `brand-600` | `#3D7D2C` | Primary, CTAs, brand anchors |
-| `brand-700` | `#2B6321` | Hover states                 |
-| `brand-50`  | `#F1F6EB` | Light accent bg              |
-| `charcoal`  | `#0A0A0A` | Body text                    |
-| `ink`       | `#18181B` | Secondary text               |
-| `surface`   | `#FAFAF7` | Subtle backgrounds           |
-| `border`    | `#E4E4E7` | Borders                      |
+1. `docs/website/DESIGN.md` - tokens, type scale, spacing, shadows, component patterns
+2. `gs_landing/AGENTS.md` - component inventory and new-page workflow
 
-### Typography
+Do NOT copy token values from this file or from `assets/brand/` - those tables are marketing-facing and drift. Read the values from DESIGN.md.
 
-- **Font:** Inter (400, 500, 600, 700) via Google Fonts
-- **Feature settings:** `'cv02', 'cv03', 'cv04', 'cv11'`
-- **DO NOT** use `font-bold` - only `font-semibold` and `font-medium`
-- **DO NOT** add new heading sizes or change tracking values
-- Display headings: `-0.04em` to `-0.05em` tracking
+Key facts (verify against DESIGN.md before use):
 
-### Radius
+- **Primary accent:** green-deep `#1B5E3B` (CTAs, kickers, links). `brand-600 #3D7D2C` exists as a token but is rarely used.
+- **Fonts:** Inter for body, Plus Jakarta Sans for display headings (declared as `--font-display` in `layout.css`).
+- **NEVER** use `font-bold` - only `font-semibold` and `font-medium`.
+- **NEVER** use `backdrop-blur`, colored shadows, `shadow-lg`/`xl`/`2xl`, or pill-shaped kickers.
+- Radius scale: sm 8 / md 12 / lg 16 / xl 24. Do not invent new radii.
+- Shadow utilities (defined in `layout.css`): `shadow-card` `0 1px 3px rgba(0,0,0,0.04)`, `shadow-soft` `0 6px 18px rgba(0,0,0,0.06)`, `shadow-card-hover` `0 8px 24px rgba(0,0,0,0.08)`. Maximum: `0 12px 30px rgba(0,0,0,0.10)`.
 
-- sm: 8px / md: 12px / lg: 16px / xl: 24px
-
-### Shadows
-
-- `shadow-soft`: `0 12px 30px rgba(74,157,53,0.15)` - CTAs
-- `shadow-card`: `0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.02)` - Cards
+**Global skill override:** Generic design skills (for example `frontend-design-ultimate`, `ui-ux-pro-max`, `landing-page`, `landing-page-design`) do not apply to this repository. They recommend fonts, glassmorphism, gradients, and shadows that this project bans. GardenSuite rules in `docs/website/DESIGN.md` and `AGENTS.md` always win.
 
 ### Logo Assets (in gs_landing/static/)
 
@@ -69,17 +58,9 @@ bun run build
 - **Parent company: Sarbani Associates.** Mention in copyright footer and appropriate places (hero badge, CTA section, about areas).
 - **NO background circles/boxes behind icons.** Use color directly on the icon with a subtle drop-shadow only.
 
-## Reference Docs (Source of Truth)
+## Reference Docs
 
-Before making changes, read the relevant docs in `gs_landing/docs/landing-page/`:
-
-- `seo.md` - keyword map, title/meta rules, schema rules, copy safety
-- `all-pages-copy-guidelines.md` - brand voice, vocabulary, claim safety
-- `product-page-copy-guidelines.md` - page formula, per-module vocabulary
-- `styling.md` - visual direction, card usage, motion rules
-- `typography.md` - locked type system (DO NOT deviate)
-
-See AGENTS.md for the full SEO checklist, performance rules, copy safety rules, and new page checklist.
+Copy and SEO guidance lives in `gs_landing/docs/landing-page/` (see AGENTS.md for the full list and the SEO/performance/copy checklists). Design guidance lives in `docs/website/DESIGN.md`.
 
 ## Outreach and Lead Operations
 
