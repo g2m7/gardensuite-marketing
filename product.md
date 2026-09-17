@@ -8,9 +8,21 @@ Last updated: 2026-08-30
 
 This is the plain business description of GardenSuite. Use it for product understanding, sales preparation, marketing briefs, outreach, and content planning.
 
-For detailed technical behavior, use `docs/product/PRODUCT.md` and the product repositories. For current outreach decisions, use `marketing/outreach/CURRENT_STRATEGY.md`. For page copy rules, use the documents in `gs_landing/docs/landing-page/`.
+For detailed technical behavior, use `docs/product/PRODUCT.md` and the product repositories. For future strategic direction, roadmap, and the pivot to a Tea Operations Control System, use `docs/tea-operations-strategy/README.md`. For current outreach decisions, use `marketing/outreach/CURRENT_STRATEGY.md`. For page copy rules, use the documents in `gs_landing/docs/landing-page/`.
 
 Do not treat an outreach pilot limit as the full product market.
+
+## Strategic Direction: Tea Operations Control System
+
+GardenSuite is strategically evolving from an administrative tea ERP into a **Tea Operations Control System** (see full strategy in [`docs/tea-operations-strategy/README.md`](docs/tea-operations-strategy/README.md)).
+
+Instead of positioning software as generic digitization, the product focuses on four operational pillars:
+- **GardenSuite Control:** Stops leakage across wages (proxy attendance, unverified work), leaf weight (field dispatch to factory receipt discrepancies), and stores (fertiliser, fuel, spares).
+- **GardenSuite Workforce:** Solves labour shortages through daily labour allocation engines, urgency/timing models, and productivity intelligence (kg/worker-day, labour cost/kg).
+- **GardenSuite Command:** Removes repetitive clerical reporting and paperwork; manages operations by exception for owners and managers.
+- **GardenSuite Intelligence & Digital Leaf Passport:** Creates continuous batch lineage from worker and bush to made-tea lot and commercial realization.
+
+Commercial acquisition prioritizes the **Tea Loss Audit** and a **30-day shadow deployment** on a single division over large upfront ERP commitments. Future expansion targets Bought-Leaf Factories (BLF) and small-grower procurement networks.
 
 ## Product overview
 

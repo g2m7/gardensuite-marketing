@@ -11,6 +11,26 @@ GardenSuite is a complete tea garden management ERP software, built and maintain
 - **Offline ERP + Cloud dashboard** - Best of both worlds: full offline reliability at the garden, cloud viewing from anywhere
 - **MIS Web Dashboard** - Daily updates, viewable from any device (phone/tablet/laptop), cloud-based
 
+## Strategic Evolution: Tea Operations Control System
+
+GardenSuite is strategically pivoting from a conventional tea ERP into a **Tea Operations Control System** (detailed in `docs/tea-operations-strategy/README.md`).
+
+Rather than selling generic "ERP software", the system focuses on four operational pillars:
+
+1. **GardenSuite Control (Leakage):** Stop labour/wage leakage (proxy attendance, geofencing exceptions, contract labour discrepancy), leaf leakage (Bluetooth weighing, field dispatch vs factory receipt variance), and store/material leakage (fertiliser, fuel, spares consumption norms).
+2. **GardenSuite Workforce (Labour Scarcity):** Turn labour shortages into an allocation problem through daily labour allocation engines, urgency/timing models, and productivity intelligence (kg/worker-day, labour cost/kg) rather than simple attendance logging.
+3. **GardenSuite Command (Administrative Compression):** Record operational events once at source to automatically generate downstream reports; provide management by exception for owners and managers.
+4. **GardenSuite Intelligence & Digital Leaf Passport:** End-to-end lineage connecting plucker, section, green leaf weight, transit vehicle, factory batch, made-tea lot, and broker/auction realization.
+
+**Sales & Go-to-Market Model:**
+- Do not lead with "ERP" or broad digital transformation pitches.
+- Lead with the **Tea Loss Audit** (diagnostic using the estate's own records) and a **30-day shadow deployment** on a single division.
+- Land-and-expand commercial ladder starting with leakage control.
+- Future expansion: Bought-Leaf Factories (BLF) and small-grower procurement networks (accounting for 54.55% of Indian tea production).
+
+Full strategic blueprint: `docs/tea-operations-strategy/README.md`.
+
+
 ## Target Audience
 
 Tea garden managers, estate owners, and senior staff across:
@@ -80,6 +100,7 @@ Before creating, auditing, or improving any page, route, component, copy, design
 - `styling.md` - visual direction, card usage, motion rules
 - `typography.md` - locked type system (DO NOT deviate)
 - `copy.md` - section-level copy direction and generic-copy test
+4. `docs/tea-operations-strategy/README.md` - Strategy blueprint: transition from Tea ERP to Tea Operations Control System (global benchmarks, leakage control, labour planning, digital leaf passport, commercial model, roadmap)
 
 ## Tech Stack
 
@@ -139,10 +160,11 @@ If `CURRENT_STRATEGY.md` says a decision is not recorded, do not fill the gap fr
 Product and messaging precedence is:
 
 1. The user's latest explicit product direction
-2. `product.md`
-3. `.agents/product-marketing.md`
-4. `docs/product/PRODUCT.md` and current production behavior for technical detail
-5. Landing-page copy guides for channel-specific wording
+2. Strategic evolution & product vision: `docs/tea-operations-strategy/README.md`
+3. `product.md`
+4. `.agents/product-marketing.md`
+5. `docs/product/PRODUCT.md` and current production behavior for technical detail
+6. Landing-page copy guides for channel-specific wording
 
 ## Dooars Estate Intelligence (Research Infrastructure)
 
