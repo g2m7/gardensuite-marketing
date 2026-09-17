@@ -57,13 +57,13 @@ const pages = [
 		path: '/guides/stop-proxy-attendance-tea-garden',
 		priority: '0.8',
 		changefreq: 'monthly',
-		lastmod: '2026-09-06'
+		lastmod: '2026-09-17'
 	},
 	{
 		path: '/guides/smart-leaf-weighing-tea-garden',
 		priority: '0.8',
 		changefreq: 'monthly',
-		lastmod: '2026-09-06'
+		lastmod: '2026-09-17'
 	},
 	{
 		path: '/guides/how-tea-garden-hazira-is-calculated',
@@ -71,6 +71,61 @@ const pages = [
 		changefreq: 'weekly',
 		lastmod: '2026-09-17'
 	},
+	{
+		path: '/guides/how-face-attendance-works-tea-garden',
+		priority: '0.8',
+		changefreq: 'monthly',
+		lastmod: '2026-09-17'
+	},
+	{
+		path: '/guides/tea-garden-attendance-without-internet',
+		priority: '0.8',
+		changefreq: 'monthly',
+		lastmod: '2026-09-17'
+	},
+	{
+		path: '/guides/mobile-attendance-to-estate-office',
+		priority: '0.8',
+		changefreq: 'monthly',
+		lastmod: '2026-09-17'
+	},
+	{
+		path: '/guides/worker-face-enrollment-tea-garden',
+		priority: '0.8',
+		changefreq: 'monthly',
+		lastmod: '2026-09-17'
+	},
+	{
+		path: '/guides/attendance-rollout-checklist-tea-garden',
+		priority: '0.8',
+		changefreq: 'monthly',
+		lastmod: '2026-09-17'
+	},
+	{
+		path: '/guides/paper-register-to-face-attendance',
+		priority: '0.8',
+		changefreq: 'monthly',
+		lastmod: '2026-09-17'
+	},
+	{
+		path: '/guides/punch-attendance-split-shifts-overtime',
+		priority: '0.8',
+		changefreq: 'monthly',
+		lastmod: '2026-09-17'
+	},
+	{
+		path: '/guides/rainfall-deduction-fine-leaf-plucking',
+		priority: '0.8',
+		changefreq: 'monthly',
+		lastmod: '2026-09-17'
+	},
+	{
+		path: '/guides/daily-plucking-task-assignment',
+		priority: '0.8',
+		changefreq: 'monthly',
+		lastmod: '2026-09-17'
+	},
+	{ path: '/guides', priority: '0.7', changefreq: 'weekly', lastmod: '2026-09-17' },
 	{
 		path: '/tea-estate-glossary',
 		priority: '0.8',

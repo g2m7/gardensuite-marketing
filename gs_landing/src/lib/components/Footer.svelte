@@ -73,14 +73,19 @@
 					<span class="block text-[13px] font-semibold text-[#111111]">Guides & Resources</span>
 					<div class="flex flex-col gap-3">
 						<a
+							href="/guides"
+							class="text-[13px] text-[#52525B] transition-colors duration-150 hover:text-[#1B5E3B]"
+							>All Guides</a
+						>
+						<a
 							href="/guides/stop-proxy-attendance-tea-garden"
 							class="text-[13px] text-[#52525B] transition-colors duration-150 hover:text-[#1B5E3B]"
 							>Stop Proxy Attendance</a
 						>
 						<a
-							href="/guides/smart-leaf-weighing-tea-garden"
+							href="/guides/how-tea-garden-hazira-is-calculated"
 							class="text-[13px] text-[#52525B] transition-colors duration-150 hover:text-[#1B5E3B]"
-							>Smart Leaf Weighing</a
+							>Hazira Calculation</a
 						>
 						<a
 							href="/tea-estate-glossary"

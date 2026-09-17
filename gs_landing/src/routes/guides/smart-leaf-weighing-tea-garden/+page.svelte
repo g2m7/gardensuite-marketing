@@ -1,177 +1,166 @@
 <script lang="ts">
-	import SeoHead from '$lib/seo/SeoHead.svelte';
-	import { articleSchema, breadcrumbSchema, faqSchema } from '$lib/seo/schemas';
-	import Button from '$lib/components/Button.svelte';
-	import ButtonGroup from '$lib/components/ButtonGroup.svelte';
-	import FaqSection from '$lib/components/product/FaqSection.svelte';
+	import ArticleLayout from '$lib/components/article/ArticleLayout.svelte';
+	import MediaPlaceholder from '$lib/components/article/MediaPlaceholder.svelte';
 
 	const guideFaqs = [
 		{
 			q: 'How does the Bluetooth scale connect to the attendance tablet in the field?',
-			a: 'The wireless digital hanging scale pairs automatically over Bluetooth with the supervisor tablet. When a bag of green leaf is hooked to the scale, the stable weight reading transmits directly into the worker record with a single tap.'
+			a: 'The wireless hanging scale pairs with the supervisor tablet over Bluetooth. When a bag of green leaf is hooked to the scale, the stable weight reading transfers into the worker record with a single tap.'
 		},
 		{
-			q: 'Can the scale handle wet leaf and tare weight deductions automatically?',
-			a: 'Yes. The system automatically subtracts bag tare weight and applies configured rain or surface moisture deductions according to estate policy before recording net weight.'
+			q: 'Can the scale handle tare and wet leaf deductions automatically?',
+			a: 'Yes. The app subtracts the configured bag or basket tare and applies the estate rain or moisture deduction slabs before it records net weight.'
 		},
 		{
 			q: 'What prevents supervisors or pluckers from faking green leaf weights?',
-			a: 'The scale reading is transmitted digitally via Bluetooth rather than typed by hand. Because the weight is locked to the worker biometric face verification at the weighment station, manual inflation is prevented.'
+			a: 'The weight arrives digitally from the scale instead of being typed by hand, and the reading is locked to the verified worker record. A supervisor can still use manual weight entry as a fallback, and the office can see which records were captured which way.'
 		},
 		{
 			q: 'How does field plucking weight connect to factory intake?',
-			a: 'Total net green leaf recorded across all division weighing points is compiled into a digital dispatch challan that the tea factory babu matches against the factory weighbridge intake.'
+			a: 'Net leaf recorded across division weighing points is summarized for office review and export. The office can compare dispatched leaf against factory weighbridge intake, and the exact downstream connection is confirmed during setup.'
+		},
+		{
+			q: 'What happens if the scale or Bluetooth fails mid-day?',
+			a: 'The supervisor records weight manually for that session and keeps the line moving. The record is marked manual, so the office can review it with the rest of the day.'
 		}
 	];
 </script>
 
-<SeoHead
-	title="Smart Leaf Weighing & Bluetooth Scales for Tea Gardens | GardenSuite"
-	description="Guide to digital tea leaf weighing with Bluetooth scales linked to worker face attendance. Stop tare fraud and plucking disputes. By Sarbani Associates."
-	canonical="https://gardensuite.in/guides/smart-leaf-weighing-tea-garden"
+<ArticleLayout
+	title="Smart Leaf Weighing and Bluetooth Scales for Tea Gardens | GardenSuite"
+	metaDescription="Guide to tea leaf weighing with Bluetooth scales linked to worker face attendance. Stop tare disputes and plucking weight errors. By Sarbani Associates."
+	kicker="Plucking Operations Guide"
+	headline="Digital Leaf Weighing: Linking the Scale to the Worker"
+	lede="How tea estates remove handwritten weight slips, tare disputes, and plucking weight doubts by connecting a wireless scale to verified face attendance."
+	datePublished="2026-09-06"
+	dateModified="2026-09-17"
+	readTime={6}
+	answer="Smart leaf weighing in tea gardens connects a Bluetooth hanging scale to the field tablet. The worker is verified by face, the bag is hooked to the scale, and the stable reading transfers into that worker's record. The app subtracts bag tare and applies configured rain deductions, then saves the net weight against the worker and work session. No handwritten slips, and the weight cannot drift between the field and the office."
+	ctaHeadline="See the scale, the app, and the record together"
+	ctaParagraph="Sarbani Associates brings the scale and field app to your weighing shed for a live demonstration, calibrates the hardware, and trains your weighment staff on site."
+	related={[
+		{
+			label: 'Smart weighing for tea gardens',
+			href: '/products/attendance/smart-weighing',
+			note: 'Product detail: weight freeze, tare, rainfall slabs, fine leaf, and manual fallback.'
+		},
+		{
+			label: 'How Tea Garden Hazira is Calculated',
+			href: '/guides/how-tea-garden-hazira-is-calculated',
+			note: 'Where net leaf weight lands in over-kilo incentives and wage sheets.'
+		},
+		{
+			label: 'Rainfall deductions and fine leaf checks',
+			href: '/guides/rainfall-deduction-fine-leaf-plucking',
+			note: 'How wet leaf and quality rules are applied to plucking records.'
+		}
+	]}
+	faqs={guideFaqs}
+	bottomCtaHeadline="Put the scale and the worker on the same record"
+	bottomCtaParagraph="Book a free demo with your estate's task and deduction rules loaded. Sarbani Associates shows the full flow from morning muster to office review. Demo, on-site setup, and staff training are free."
 	breadcrumbs={[
 		{ name: 'Home', path: '/' },
-		{ name: 'Guides', path: '/#guides' },
+		{ name: 'Guides', path: '/guides' },
 		{ name: 'Smart Leaf Weighing in Tea Gardens', path: '/guides/smart-leaf-weighing-tea-garden' }
 	]}
-	schema={[
-		articleSchema({
-			title: 'Smart Leaf Weighing in Tea Gardens: Linking Bluetooth Scales to Digital Plucking Records',
-			description:
-				'A technical field guide for tea garden managers on linking wireless hanging scales directly to face attendance records for accurate plucking and payroll.',
-			path: '/guides/smart-leaf-weighing-tea-garden',
-			datePublished: '2026-09-06',
-			dateModified: '2026-09-06'
-		}),
-		breadcrumbSchema([
-			{ name: 'Home', path: '/' },
-			{ name: 'Guides', path: '/#guides' },
-			{ name: 'Smart Leaf Weighing in Tea Gardens', path: '/guides/smart-leaf-weighing-tea-garden' }
-		]),
-		faqSchema(guideFaqs)
-	]}
-/>
+>
+	{#snippet media()}
+		<MediaPlaceholder
+			type="image"
+			aspect="16 / 9"
+			internal
+			label="MEDIA PLACEHOLDER B: real connected-scale result screen with the weight frozen against a verified worker, sanitized demo data."
+			caption="A scale reading saved against a verified worker record. Added once an approved sanitized capture is ready."
+		/>
+	{/snippet}
 
-<!-- Guide Header -->
-<header class="border-b border-[#E4E4E7] bg-white pt-28 pb-16 md:pt-36 md:pb-20">
-	<div class="mx-auto max-w-3xl px-6 md:px-8">
-		<div class="inline-block rounded-full bg-[#1B5E3B]/10 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-[#1B5E3B]">
-			Plucking Operations Guide
-		</div>
-		<h1 class="mt-6 text-3xl font-bold tracking-tight text-[#111111] sm:text-4xl md:text-5xl">
-			Digital Leaf Weighing: Linking Bluetooth Scales to Plucker Records
-		</h1>
-		<p class="mt-4 text-base leading-relaxed text-[#52525B] sm:text-lg">
-			How tea estates eliminate manual weight cards, tare calculation disputes, and plucking fraud by
-			connecting wireless scales directly to verified face attendance.
-		</p>
-		<div class="mt-6 flex items-center gap-3 text-xs text-[#71717A]">
-			<span>By Sarbani Associates</span>
-			<span>•</span>
-			<span>Updated September 2026</span>
-			<span>•</span>
-			<span>6 min read</span>
-		</div>
-	</div>
-</header>
+	<h2 class="guide-h2">1. Where manual leaf weighment goes wrong</h2>
+	<p class="guide-p">
+		On most estates, plucking weight is taken twice a day at field weighing stations or collection
+		sheds. The flow is familiar: hang the bag, read the dial, write a slip, copy the slip into the
+		register at the office.
+	</p>
+	<p class="guide-p">Each hand in that chain adds risk:</p>
+	<ul class="guide-list">
+		<li>
+			<strong>Spring dial drift:</strong> mechanical balances go out of calibration and get read at an
+			angle in shed light.
+		</li>
+		<li>
+			<strong>Slip errors:</strong> rain, mud, and rushed handwriting create transcription errors when
+			weights are copied.
+		</li>
+		<li>
+			<strong>Tare arguments:</strong> wet leaf deductions and different basket weights cause friction
+			between pluckers and weighing staff.
+		</li>
+		<li>
+			<strong>Ghost weight:</strong> leaf recorded under a favoured worker ID inflates over-kilo incentives.
+		</li>
+	</ul>
+	<p class="guide-p">
+		By the time the office compiles payroll, the original reading has passed through four sets of
+		hands. Nobody can trace where a number changed.
+	</p>
 
-<!-- Article Content -->
-<article class="bg-white py-16">
-	<div class="mx-auto max-w-3xl px-6 text-[#27272A] md:px-8">
-		<!-- Direct Answer Box (AEO target) -->
-		<div class="rounded-2xl border-l-4 border-[#1B5E3B] bg-[#F4FBF7] p-6 text-base leading-relaxed text-[#1B5E3B]">
-			<p class="font-semibold text-[#111111]">Direct Summary:</p>
-			<p class="mt-1 text-[#27272A]">
-				Smart leaf weighing in tea gardens connects digital hanging scales to mobile tablets via Bluetooth.
-				When a worker presents their harvested green leaf bag, their identity is verified via facial
-				recognition. The scale transmits the weight reading directly to the tablet, automatically deducts
-				bag tare and configured wet leaf deductions, and saves the net plucking weight. This eliminates
-				handwritten plucking slips, stops weight tampering, and flows directly into daily wage and
-				incentive calculation.
+	<h2 class="guide-h2">2. How the smart weighing workflow works</h2>
+	<p class="guide-p">
+		Pair a rugged Bluetooth hanging scale with the field tablet and the reading never leaves the
+		record:
+	</p>
+	<div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
+		<div class="rounded-xl border border-border bg-white p-5 shadow-card">
+			<h3 class="text-[15px] font-semibold text-heading">1. Verified worker</h3>
+			<p class="mt-1 text-sm leading-relaxed text-text-secondary">
+				The plucker steps in front of the tablet. Face verification confirms identity and opens
+				their daily record.
 			</p>
 		</div>
-
-		<!-- Section 1 -->
-		<h2 class="mt-12 text-2xl font-bold text-[#111111]">1. The Vulnerability of Manual Leaf Weighment</h2>
-		<p class="mt-4 text-base leading-relaxed">
-			On most Indian tea estates across Assam, Dooars, and Terai, plucking weight is measured twice daily
-			(midday and late afternoon) at field weighing stations or collection sheds.
-		</p>
-		<p class="mt-4 text-base leading-relaxed">
-			Under manual operations, supervisors face multiple challenges:
-		</p>
-		<ul class="mt-3 list-disc space-y-2 pl-6 text-base leading-relaxed">
-			<li><strong>Spring dial inaccuracies:</strong> Mechanical spring balances drift over time or are misread from an angle in dim shedding light.</li>
-			<li><strong>Handwritten card errors:</strong> Raindrops, mud, and fast handwriting lead to transcription errors when copying weights to the master roll.</li>
-			<li><strong>Tare weight manipulation:</strong> Disagreements over wet leaf deductions or varying empty basket weights trigger friction between pluckers and babus.</li>
-			<li><strong>Ghost weight:</strong> Recording leaf weight under a favored worker ID to artificially increase their over-kilo plucking incentive pay.</li>
-		</ul>
-
-		<!-- Section 2 -->
-		<h2 class="mt-12 text-2xl font-bold text-[#111111]">2. The Smart Wireless Weighing Architecture</h2>
-		<p class="mt-4 text-base leading-relaxed">
-			By pairing a heavy-duty industrial Bluetooth hanging scale with an offline mobile tablet, the
-			weighment process becomes instantaneous and tamper-proof:
-		</p>
-		<div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
-			<div class="rounded-xl border border-[#E4E4E7] p-5">
-				<h3 class="font-semibold text-[#111111]">1. Verified Identity</h3>
-				<p class="mt-1 text-sm text-[#52525B]">
-					The plucker steps in front of the tablet camera. Facial verification confirms their identity and pulls up their daily record.
-				</p>
-			</div>
-			<div class="rounded-xl border border-[#E4E4E7] p-5">
-				<h3 class="font-semibold text-[#111111]">2. Instant Bluetooth Capture</h3>
-				<p class="mt-1 text-sm text-[#52525B]">
-					The bag is hooked to the digital scale. Stable gross weight transmits directly into the software over wireless Bluetooth.
-				</p>
-			</div>
-			<div class="rounded-xl border border-[#E4E4E7] p-5">
-				<h3 class="font-semibold text-[#111111]">3. Automatic Deductions</h3>
-				<p class="mt-1 text-sm text-[#52525B]">
-					Standard bag tare weight and rain allowance deductions are applied programmatically based on pre-set estate configurations.
-				</p>
-			</div>
-			<div class="rounded-xl border border-[#E4E4E7] p-5">
-				<h3 class="font-semibold text-[#111111]">4. Immediate Receipt & Sync</h3>
-				<p class="mt-1 text-sm text-[#52525B]">
-					Net weight is spoken or displayed to the worker, logged to the local database, and ready for end-of-day office sync.
-				</p>
-			</div>
-		</div>
-
-		<!-- Section 3 -->
-		<h2 class="mt-12 text-2xl font-bold text-[#111111]">3. Financial Benefits for Estate Management</h2>
-		<p class="mt-4 text-base leading-relaxed">
-			Accurate digital weighment directly protects tea estate profitability:
-		</p>
-		<ul class="mt-3 list-disc space-y-2 pl-6 text-base leading-relaxed">
-			<li>
-				<strong>Eliminating Plucking Incentive Fraud:</strong> Over-kilo plucking incentives (extra leaf harvested beyond the standard daily task) represent a significant portion of peak-season wage expenditure. Digital weighing ensures incentives are paid only for actual leaf harvested.
-			</li>
-			<li>
-				<strong>Precise Factory Reconciliation:</strong> Green leaf dispatched from garden sections matches the factory intake weighbridge within fractions of a percent, pinpointing in-transit shrinkage or unauthorized diversion.
-			</li>
-			<li>
-				<strong>Zero Evening Data Entry:</strong> Garden office clerks no longer spend 3 to 4 hours every evening typing handwritten weighment slips into spreadsheets.
-			</li>
-		</ul>
-
-		<!-- Product Callout -->
-		<div class="mt-12 rounded-2xl border border-[#1B5E3B]/20 bg-[#F4FBF7] p-8 text-center">
-			<h3 class="text-xl font-semibold text-[#111111]">
-				Equip Your Garden with GardenSuite Smart Scales
-			</h3>
-			<p class="mx-auto mt-2 max-w-xl text-sm text-[#52525B]">
-				GardenSuite integrates rugged Bluetooth digital hanging scales directly with our offline face attendance tablet. Complete hardware calibration and on-site training provided by Sarbani Associates.
+		<div class="rounded-xl border border-border bg-white p-5 shadow-card">
+			<h3 class="text-[15px] font-semibold text-heading">2. Bluetooth weight capture</h3>
+			<p class="mt-1 text-sm leading-relaxed text-text-secondary">
+				The bag is hooked to the scale. The stable gross weight transfers straight into the app over
+				wireless.
 			</p>
-			<ButtonGroup class="mt-6 justify-center">
-				<Button href="/products/attendance/smart-weighing" label="View Smart Weighing Details" variant="primary" />
-				<Button href="/#contact" label="Request Field Demonstration" variant="secondary" />
-			</ButtonGroup>
+		</div>
+		<div class="rounded-xl border border-border bg-white p-5 shadow-card">
+			<h3 class="text-[15px] font-semibold text-heading">3. Automatic deductions</h3>
+			<p class="mt-1 text-sm leading-relaxed text-text-secondary">
+				Configured bag tare and rain or moisture deduction slabs are applied before net weight is
+				saved.
+			</p>
+		</div>
+		<div class="rounded-xl border border-border bg-white p-5 shadow-card">
+			<h3 class="text-[15px] font-semibold text-heading">4. Saved record and sync</h3>
+			<p class="mt-1 text-sm leading-relaxed text-text-secondary">
+				Net weight is shown to the worker, saved on the device, and ready for end-of-day office
+				sync.
+			</p>
 		</div>
 	</div>
-</article>
+	<p class="guide-p">
+		The scale reading, the worker, the section, and the session stay linked in one record. If the
+		scale or Bluetooth fails, the supervisor records weight manually and the record is marked manual
+		for office review.
+	</p>
 
-<!-- FAQs Section -->
-<FaqSection faqs={guideFaqs} />
+	<h2 class="guide-h2">3. What the estate gains</h2>
+	<ul class="guide-list">
+		<li>
+			<strong>Incentives paid on actual leaf.</strong> Over-kilo plucking incentives are a large share
+			of peak-season wages. Digital weighing ties every extra kilo to a real, verified reading.
+		</li>
+		<li>
+			<strong>Clean factory reconciliation.</strong> Net leaf recorded at the divisions can be matched
+			against factory intake, so shrinkage or diversion is visible instead of guessed at.
+		</li>
+		<li>
+			<strong>Less evening data entry.</strong> Office clerks review synced records instead of typing
+			handwritten slips into spreadsheets.
+		</li>
+		<li>
+			<strong>Fewer weight disputes.</strong> Deduction slabs and tare are configured once, applied the
+			same way for every worker, and shown on the record.
+		</li>
+	</ul>
+</ArticleLayout>

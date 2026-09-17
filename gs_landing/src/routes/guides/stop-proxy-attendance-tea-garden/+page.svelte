@@ -1,9 +1,5 @@
 <script lang="ts">
-	import SeoHead from '$lib/seo/SeoHead.svelte';
-	import { articleSchema, breadcrumbSchema, faqSchema } from '$lib/seo/schemas';
-	import Button from '$lib/components/Button.svelte';
-	import ButtonGroup from '$lib/components/ButtonGroup.svelte';
-	import FaqSection from '$lib/components/product/FaqSection.svelte';
+	import ArticleLayout from '$lib/components/article/ArticleLayout.svelte';
 
 	const guideFaqs = [
 		{
@@ -12,190 +8,170 @@
 		},
 		{
 			q: 'How does offline face recognition help stop proxy hazira?',
-			a: 'The camera scans the worker facial geometry in under one second on a standard mobile tablet. Because it requires the live individual in front of the camera, colleagues cannot punch or sign on behalf of absent workers.'
+			a: 'The app verifies the worker by face on a tablet that works without internet. Because the check needs the live person in front of the camera, a colleague cannot mark attendance on behalf of an absent worker.'
 		},
 		{
 			q: 'What happens when there is no mobile network coverage at the plucking line?',
-			a: 'GardenSuite stores the facial verification templates and attendance logs directly on the tablet hardware. No internet connection is needed to verify workers. The records sync when the tablet connects to office Wi-Fi or cellular network later.'
+			a: 'GardenSuite stores the face templates and attendance records on the tablet itself. No internet is needed to verify a worker. Records sync when the tablet connects to office Wi-Fi or a mobile network later.'
 		},
 		{
 			q: 'Can supervisors alter attendance logs after roll-call?',
-			a: 'No. Each face punch records a tamper-proof timestamp and photo verification log. Estate managers and accountants can review the original timestamp in the garden office.'
+			a: 'Records carry their capture time, source, and device details, and the office can review status, remarks, and changes. If a correction is needed, it is made through permitted manual attendance and stays visible to the office.'
+		},
+		{
+			q: 'What happens when the camera or the app does not recognize a worker?',
+			a: 'The supervisor retries, and if the match stays ambiguous the app rejects it and offers a recorded manual attendance fallback. Workers with changed appearance can be re-enrolled on the device.'
 		}
 	];
 </script>
 
-<SeoHead
-	title="Stop Proxy Attendance in Tea Gardens - Estate Guide | GardenSuite"
-	description="Practical guide for tea garden managers on stopping proxy hazira and muster roll errors using offline face recognition. Built by Sarbani Associates."
-	canonical="https://gardensuite.in/guides/stop-proxy-attendance-tea-garden"
+<ArticleLayout
+	title="How to Stop Proxy Attendance in Tea Gardens - Estate Guide | GardenSuite"
+	metaDescription="Practical guide for tea garden managers on stopping proxy hazira and muster roll errors using offline face attendance. Built and supported by Sarbani Associates."
+	kicker="Field Operations Guide"
+	headline="How to Stop Proxy Attendance in Tea Gardens"
+	lede="A practical guide for estate managers, directors, and head clerks on moving from manual muster rolls to verified offline face attendance."
+	datePublished="2026-09-06"
+	dateModified="2026-09-17"
+	readTime={7}
+	answer="Proxy attendance in tea gardens happens when absent workers receive hazira through register marks made by colleagues, duplicate tokens, or ghost entries in the muster roll. The practical fix in remote sections is offline face attendance on a tablet: the app verifies the live worker by face, saves the record on the device without internet, links the worker to plucking weight at the scale, and syncs reviewed records to the estate office when connectivity returns."
+	ctaHeadline="See face attendance with your own muster practice"
+	ctaParagraph="Sarbani Associates runs GardenSuite on-site across Assam, Dooars, Terai, and Darjeeling. We configure devices around your sections and work codes, train your staff, and support the rollout."
+	related={[
+		{
+			label: 'Face attendance for tea gardens',
+			href: '/products/attendance/face-attendance',
+			note: 'How verification, liveness checks, and manual fallback work in the field app.'
+		},
+		{
+			label: 'How mobile attendance reaches the estate office',
+			href: '/guides/mobile-attendance-to-estate-office',
+			note: 'The full path from a field tablet to office review and payroll.'
+		},
+		{
+			label: 'Tea garden payroll software',
+			href: '/products/payroll',
+			note: 'How verified attendance and leaf weight feed wage calculation.'
+		}
+	]}
+	faqs={guideFaqs}
+	bottomCtaHeadline="Run verified muster at every section"
+	bottomCtaParagraph="Book a free demo. Sarbani Associates will show face attendance, smart weighing, and office review with your garden setup. Demo, on-site setup, and staff training are free."
 	breadcrumbs={[
 		{ name: 'Home', path: '/' },
-		{ name: 'Guides', path: '/#guides' },
-		{ name: 'Stop Proxy Attendance in Tea Gardens', path: '/guides/stop-proxy-attendance-tea-garden' }
+		{ name: 'Guides', path: '/guides' },
+		{
+			name: 'Stop Proxy Attendance in Tea Gardens',
+			path: '/guides/stop-proxy-attendance-tea-garden'
+		}
 	]}
-	schema={[
-		articleSchema({
-			title: 'How to Stop Proxy Attendance in Tea Gardens: A Practical Field Guide',
-			description:
-				'A complete field guide for tea estate managers and owners on eliminating proxy attendance and muster roll fraud using offline mobile face verification.',
-			path: '/guides/stop-proxy-attendance-tea-garden',
-			datePublished: '2026-09-06',
-			dateModified: '2026-09-06'
-		}),
-		breadcrumbSchema([
-			{ name: 'Home', path: '/' },
-			{ name: 'Guides', path: '/#guides' },
-			{ name: 'Stop Proxy Attendance in Tea Gardens', path: '/guides/stop-proxy-attendance-tea-garden' }
-		]),
-		faqSchema(guideFaqs)
-	]}
-/>
+>
+	<h2 class="guide-h2">1. The hidden cost of proxy attendance on tea estates</h2>
+	<p class="guide-p">
+		On most estates across Assam, Dooars, and Terai, morning muster still runs on paper. Pluckers
+		assemble before sunrise, and munshis or sirdars mark hazira in a physical register or hand out
+		metal tokens.
+	</p>
+	<p class="guide-p">Three problems repeat with this workflow:</p>
+	<ul class="guide-list">
+		<li>
+			<strong>Buddy punching:</strong> one worker answers roll-call or drops a token for an absent relative
+			or neighbour.
+		</li>
+		<li>
+			<strong>Muster roll gaps:</strong> marks in a ledger cannot be checked against the people actually
+			standing at the field line.
+		</li>
+		<li>
+			<strong>Ghost workers:</strong> wages continue for workers who have left the garden or are on unrecorded
+			leave.
+		</li>
+	</ul>
+	<p class="guide-p">
+		Every one of these ends in the same place: paid hazira for work that was not done, and a payroll
+		office that cannot prove who worked.
+	</p>
 
-<!-- Guide Header -->
-<header class="border-b border-[#E4E4E7] bg-white pt-28 pb-16 md:pt-36 md:pb-20">
-	<div class="mx-auto max-w-3xl px-6 md:px-8">
-		<div class="inline-block rounded-full bg-[#1B5E3B]/10 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-[#1B5E3B]">
-			Field Operations Guide
-		</div>
-		<h1 class="mt-6 text-3xl font-bold tracking-tight text-[#111111] sm:text-4xl md:text-5xl">
-			How to Stop Proxy Attendance in Tea Gardens
-		</h1>
-		<p class="mt-4 text-base leading-relaxed text-[#52525B] sm:text-lg">
-			A practical guide for estate managers, directors, and head clerks on moving away from manual
-			muster rolls to verified offline facial recognition.
-		</p>
-		<div class="mt-6 flex items-center gap-3 text-xs text-[#71717A]">
-			<span>By Sarbani Associates</span>
-			<span>•</span>
-			<span>Updated September 2026</span>
-			<span>•</span>
-			<span>7 min read</span>
-		</div>
-	</div>
-</header>
-
-<!-- Article Content -->
-<article class="bg-white py-16">
-	<div class="mx-auto max-w-3xl px-6 text-[#27272A] md:px-8">
-		<!-- Direct Answer Box (AEO / Featured Snippet target) -->
-		<div class="rounded-2xl border-l-4 border-[#1B5E3B] bg-[#F4FBF7] p-6 text-base leading-relaxed text-[#1B5E3B]">
-			<p class="font-semibold text-[#111111]">Direct Summary:</p>
-			<p class="mt-1 text-[#27272A]">
-				Proxy attendance in tea gardens occurs when absent workers receive daily hazira through manual
-				register manipulation, duplicate tokens, or colleagues calling roll-call on their behalf. To
-				prevent proxy attendance in remote tea plantations without reliable cellular coverage, estates
-				deploy rugged mobile tablets with offline facial recognition. Facial geometry verifies the worker
-				in under one second, links directly to plucking leaf scales, and syncs tamper-proof logs to the
-				central payroll office.
-			</p>
-		</div>
-
-		<!-- Section 1 -->
-		<h2 class="mt-12 text-2xl font-bold text-[#111111]">1. The Hidden Cost of Proxy Attendance on Tea Estates</h2>
-		<p class="mt-4 text-base leading-relaxed">
-			In typical tea plantations across Assam, Dooars, and Terai, morning muster involves hundreds of
-			pluckers assembling before sunrise across multiple out-garden divisions. Supervisors (munshis and
-			sirdars) rely on physical registers or metal tokens to record hazira.
-		</p>
-		<p class="mt-4 text-base leading-relaxed">
-			This manual workflow introduces three recurring vulnerabilities:
-		</p>
-		<ul class="mt-3 list-disc space-y-2 pl-6 text-base leading-relaxed">
-			<li><strong>Buddy punching:</strong> One worker answering or presenting tokens for an absent relative or neighbor.</li>
-			<li><strong>Muster roll discrepancies:</strong> Manual marks scribbled in ledger books that cannot be audited against physical attendance at the field lines.</li>
-			<li><strong>Ghost worker payments:</strong> Continued payroll disbursement for workers who have migrated, left the garden, or taken unauthorized leave.</li>
+	<h2 class="guide-h2">2. Why fingerprint machines fail in garden conditions</h2>
+	<p class="guide-p">
+		Many estates have already tried fingerprint devices and abandoned them within a season. The
+		reasons are built into field work:
+	</p>
+	<div class="guide-note">
+		<ul class="guide-list" style="margin-top: 0">
+			<li>
+				<strong>Sap and mud:</strong> plucking coats hands in leaf resin and soil, which blinds optical
+				sensors.
+			</li>
+			<li>
+				<strong>Worn fingerprints:</strong> years of manual labour flatten fingerprint ridges, so rejections
+				climb.
+			</li>
+			<li>
+				<strong>Queue delays:</strong> when a sensor fails a few times per worker, muster stretches and
+				plucking starts late.
+			</li>
 		</ul>
+	</div>
+	<p class="guide-p">
+		A device that rejects the honest worker and accepts the patient fraudster protects nobody.
+	</p>
 
-		<!-- Section 2 -->
-		<h2 class="mt-12 text-2xl font-bold text-[#111111]">2. Why Fingerprint Scanners Fail in Tea Garden Conditions</h2>
-		<p class="mt-4 text-base leading-relaxed">
-			Many tea estates have attempted to introduce traditional optical fingerprint biometric devices, only
-			to abandon them within months. The reasons are inherent to agricultural field work:
-		</p>
-		<div class="mt-6 rounded-xl border border-[#E4E4E7] bg-[#FAFAFA] p-6">
-			<ul class="space-y-4 text-sm text-[#52525B]">
-				<li>
-					<strong class="text-[#111111]">Sap and Mud Residue:</strong> Pluckers work with green leaf that coats hands in natural resin, soil, and moisture, blinding optical sensors.
-				</li>
-				<li>
-					<strong class="text-[#111111]">Worn Fingerprints:</strong> Decades of manual labor flatten fingerprint ridges, resulting in high false rejection rates.
-				</li>
-				<li>
-					<strong class="text-[#111111]">Queue Delays:</strong> When a sensor fails 3 or 4 times per worker, morning muster stretches from 15 minutes to over an hour, delaying plucking.
-				</li>
-			</ul>
-		</div>
+	<h2 class="guide-h2">3. The fix: offline face attendance on a tablet</h2>
+	<p class="guide-p">
+		Face recognition answers the conditions above because it needs the live person, not their
+		fingertip:
+	</p>
+	<ol class="guide-steps">
+		<li>
+			<strong>Glance and verify.</strong> The worker looks at the tablet camera. Face quality and liveness
+			checks run on the device, so sap and mud on hands do not matter.
+		</li>
+		<li>
+			<strong>Ambiguous matches are rejected.</strong> If the app is not confident, it asks for a retry
+			or the supervisor records manual attendance with a reason. Nothing is guessed.
+		</li>
+		<li>
+			<strong>Works without internet.</strong> Templates and records live on the tablet. Muster runs in
+			dead zones.
+		</li>
+		<li>
+			<strong>Links to weighing.</strong> The verified worker stays attached to the scale reading at weighment,
+			so attendance and leaf weight land in the same record.
+		</li>
+	</ol>
+	<p class="guide-p">Together these checks help stop proxy attendance without slowing the line.</p>
 
-		<!-- Section 3 -->
-		<h2 class="mt-12 text-2xl font-bold text-[#111111]">3. The Solution: Offline Mobile Face Recognition</h2>
-		<p class="mt-4 text-base leading-relaxed">
-			Modern computer vision solves these environmental constraints. By utilizing mobile tablets equipped
-			with dedicated offline facial recognition, tea gardens gain several practical advantages:
-		</p>
-		<ol class="mt-4 list-decimal space-y-3 pl-6 text-base leading-relaxed">
-			<li>
-				<strong>Hands-Free Scanning:</strong> Workers simply glance at the tablet screen. Plucking sap or mud on hands has zero impact on verification.
-			</li>
-			<li>
-				<strong>Speed:</strong> Verification takes less than one second per person, processing a line of 200 workers in under 10 minutes.
-			</li>
-			<li>
-				<strong>100% Offline Capability:</strong> Biometric facial templates reside locally on the hardware. Verification requires no active internet connection or SIM card.
-			</li>
-			<li>
-				<strong>Automatic Link to Weighing:</strong> Once verified, the worker ID is instantly passed to the digital plucking scale during midday and evening weighment.
-			</li>
-		</ol>
-
-		<!-- Section 4 -->
-		<h2 class="mt-12 text-2xl font-bold text-[#111111]">4. Implementation Checklist for Estate Managers</h2>
-		<p class="mt-4 text-base leading-relaxed">
-			When rolling out biometric face attendance on your estate, follow this 4-step sequence:
-		</p>
-		<div class="mt-6 space-y-4">
-			<div class="rounded-xl border border-[#E4E4E7] p-5">
-				<h3 class="font-semibold text-[#111111]">Step A: Worker Photo Enrolment</h3>
-				<p class="mt-1 text-sm text-[#52525B]">
-					Capture 2 clear reference photos per worker during weekly wage disbursement. Store records under their permanent estate worker ID and PF account number.
-				</p>
-			</div>
-			<div class="rounded-xl border border-[#E4E4E7] p-5">
-				<h3 class="font-semibold text-[#111111]">Step B: Division-Level Tablet Assignment</h3>
-				<p class="mt-1 text-sm text-[#52525B]">
-					Provide each section supervisor or munshi with a rugged tablet configured for their specific line list.
-				</p>
-			</div>
-			<div class="rounded-xl border border-[#E4E4E7] p-5">
-				<h3 class="font-semibold text-[#111111]">Step C: Parallel Roll-Call Run (1 Week)</h3>
-				<p class="mt-1 text-sm text-[#52525B]">
-					Run face attendance alongside manual registers for 5-7 days so sirdars become comfortable and workers understand the screen feedback.
-				</p>
-			</div>
-			<div class="rounded-xl border border-[#E4E4E7] p-5">
-				<h3 class="font-semibold text-[#111111]">Step D: Central Office Sync & Audit</h3>
-				<p class="mt-1 text-sm text-[#52525B]">
-					At the end of morning muster, sync tablets at the division office or main garden Wi-Fi. The head clerk verifies total attendance before field deployment.
-				</p>
-			</div>
-		</div>
-
-		<!-- Internal Link & Product Mention -->
-		<div class="mt-12 rounded-2xl border border-[#1B5E3B]/20 bg-[#F4FBF7] p-8 text-center">
-			<h3 class="text-xl font-semibold text-[#111111]">
-				Explore GardenSuite Face Attendance
-			</h3>
-			<p class="mx-auto mt-2 max-w-xl text-sm text-[#52525B]">
-				GardenSuite provides field-tested offline face recognition tablets engineered specifically for tea
-				plantations. Supported by Sarbani Associates with complete on-site setup and staff training.
+	<h2 class="guide-h2">4. Implementation checklist for estate managers</h2>
+	<p class="guide-p">When you roll out face attendance, keep the sequence simple:</p>
+	<div class="mt-6 space-y-4">
+		<div class="rounded-xl border border-border bg-white p-5 shadow-card">
+			<h3 class="text-[15px] font-semibold text-heading">Step A: worker enrollment</h3>
+			<p class="mt-1 text-sm leading-relaxed text-text-secondary">
+				Capture clear reference photos for each worker during wage disbursement or a quieter hour.
+				Save records under the permanent worker ID so muster, payroll, and PF records agree.
 			</p>
-			<ButtonGroup class="mt-6 justify-center">
-				<Button href="/products/attendance/face-attendance" label="See Face Attendance Features" variant="primary" />
-				<Button href="/#contact" label="Book On-Site Demo" variant="secondary" />
-			</ButtonGroup>
+		</div>
+		<div class="rounded-xl border border-border bg-white p-5 shadow-card">
+			<h3 class="text-[15px] font-semibold text-heading">Step B: division-level device setup</h3>
+			<p class="mt-1 text-sm leading-relaxed text-text-secondary">
+				Give each supervisor a tablet configured with the correct sections, work codes, and rules
+				for their lines.
+			</p>
+		</div>
+		<div class="rounded-xl border border-border bg-white p-5 shadow-card">
+			<h3 class="text-[15px] font-semibold text-heading">Step C: parallel roll-call run</h3>
+			<p class="mt-1 text-sm leading-relaxed text-text-secondary">
+				Run face attendance beside the paper register for about a week. Sirdars get comfortable, and
+				workers learn the screen feedback.
+			</p>
+		</div>
+		<div class="rounded-xl border border-border bg-white p-5 shadow-card">
+			<h3 class="text-[15px] font-semibold text-heading">Step D: office review and audit</h3>
+			<p class="mt-1 text-sm leading-relaxed text-text-secondary">
+				After muster, sync at the division office or main garden network. The head clerk reviews
+				summary, status, and exceptions before the day is finalized.
+			</p>
 		</div>
 	</div>
-</article>
-
-<!-- FAQs Section -->
-<FaqSection faqs={guideFaqs} />
+</ArticleLayout>

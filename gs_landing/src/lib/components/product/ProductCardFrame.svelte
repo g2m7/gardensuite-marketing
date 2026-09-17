@@ -3,12 +3,14 @@
 
 	let {
 		children,
+		media,
 		class: className = '',
 		innerClass = '',
 		onclick,
 		mode = 'scenic'
 	}: {
 		children: Snippet;
+		media?: Snippet;
 		class?: string;
 		innerClass?: string;
 		onclick?: (e: MouseEvent) => void;
@@ -21,11 +23,14 @@
 <div
 	{onclick}
 	class="group relative overflow-hidden {mode === 'solid'
-		? 'rounded-2xl border border-[#E4E4E7] bg-white shadow-[0_12px_30px_rgba(0,0,0,0.05)]'
+		? 'rounded-2xl border border-border bg-white shadow-[0_12px_30px_rgba(0,0,0,0.05)]'
 		: 'rounded-[28px] border border-white/70 bg-[#DDEFE4] p-4 shadow-[0_8px_24px_rgba(0,0,0,0.08)] md:p-5'} transition-all duration-300 {onclick
 		? 'cursor-zoom-in'
 		: ''} {className}"
 >
+	{#if media}
+		<div class="relative z-10">{@render media()}</div>
+	{/if}
 	{#if mode === 'scenic'}
 		<!-- Sky background layer -->
 		<picture>
