@@ -130,22 +130,24 @@
 />
 
 <!-- Header -->
-<header class="border-b border-border bg-white pt-28 pb-14 md:pt-36 md:pb-16">
-	<div class="mx-auto max-w-4xl px-6 md:px-8">
+<header class="border-b border-border bg-white pt-28 pb-16 md:pt-36 md:pb-20">
+	<div class="mx-auto max-w-[1344px] px-6 md:px-12">
 		<Breadcrumbs
 			items={[
 				{ name: 'Home', path: '/' },
 				{ name: 'Guides', path: '/guides' }
 			]}
 		/>
-		<p class="text-[13px] font-semibold tracking-[0.08em] text-green-deep uppercase">Guides</p>
+		<span class="mb-5 inline-block text-[13px] font-semibold tracking-[0.08em] text-green-deep uppercase">
+			Guides
+		</span>
 		<h1
-			class="mt-4 text-3xl leading-[1.08] font-semibold tracking-[-0.03em] text-heading sm:text-4xl md:text-[44px]"
+			class="font-display text-[2.5rem] leading-[1.0] font-medium tracking-[-0.05em] text-heading sm:text-[3.25rem] md:text-[3.75rem] lg:text-[4.25rem]"
 			style="text-wrap: balance"
 		>
 			Tea Garden Operations Guides
 		</h1>
-		<p class="mt-5 max-w-2xl text-[17px] leading-[1.6] text-text-secondary">
+		<p class="mt-6 max-w-2xl text-[18px] leading-[1.55] font-normal tracking-[-0.01em] text-text-secondary sm:text-[20px]">
 			Plain-language guides for estate owners, managers, and office staff. Written from tea garden
 			work, not software jargon. Built and supported by Sarbani Associates, Bagdogra, Siliguri.
 		</p>
@@ -153,37 +155,43 @@
 </header>
 
 <!-- Guide list -->
-<section class="bg-white py-14 md:py-16">
-	<div class="mx-auto max-w-4xl px-6 md:px-8">
-		<div class="grid gap-4">
+<section class="border-b border-border bg-white py-16 md:py-24">
+	<div class="mx-auto max-w-[1344px] px-6 md:px-12">
+		<div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
 			{#each guides as guide (guide.href)}
 				<a
 					href={guide.href}
-					class="group block rounded-2xl border border-border bg-white p-6 transition-colors hover:border-border-strong md:p-7"
+					class="group flex flex-col justify-between rounded-md border border-border bg-white p-6 shadow-card transition-all hover:border-border-strong hover:shadow-soft focus-visible:ring-2 focus-visible:ring-green-deep focus-visible:outline-none md:p-7"
 				>
-					<div class="flex flex-wrap items-center justify-between gap-2">
-						<p class="text-[13px] font-semibold tracking-[0.08em] text-green-deep uppercase">
-							{guide.kicker}
-						</p>
-						<p class="text-xs text-muted">{guide.readTime} min read</p>
+					<div>
+						<div class="flex flex-wrap items-center justify-between gap-2">
+							<p class="text-[13px] font-semibold tracking-[0.08em] text-green-deep uppercase">
+								{guide.kicker}
+							</p>
+							<p class="text-xs text-muted">{guide.readTime} min read</p>
+						</div>
+						<h2
+							class="mt-3 font-display text-[18px] font-semibold tracking-[-0.01em] text-heading transition-colors group-hover:text-green-deep md:text-[19px]"
+						>
+							{guide.title}
+						</h2>
+						<p class="mt-2.5 text-[14px] leading-[1.6] text-text-secondary">{guide.description}</p>
 					</div>
-					<h2
-						class="mt-3 text-xl font-semibold tracking-[-0.01em] text-heading group-hover:text-green-deep md:text-2xl"
-					>
-						{guide.title}
-					</h2>
-					<p class="mt-2 text-[16px] leading-[1.65] text-text-secondary">{guide.description}</p>
+					<div class="mt-6 flex items-center gap-1 text-[13px] font-semibold text-green-deep">
+						<span>Read guide</span>
+						<span aria-hidden="true" class="transition-transform group-hover:translate-x-0.5">→</span>
+					</div>
 				</a>
 			{/each}
 		</div>
 
 		<!-- Glossary link -->
-		<div class="mt-10 rounded-2xl border border-border bg-surface p-8 text-center">
-			<h2 class="text-xl font-semibold tracking-[-0.02em] text-heading md:text-2xl">
+		<div class="mt-16 mx-auto max-w-3xl rounded-md border border-border bg-surface p-8 text-center shadow-card">
+			<h2 class="font-display text-[22px] font-semibold tracking-[-0.02em] text-heading md:text-[26px]">
 				Looking for a term instead?
 			</h2>
-			<p class="mx-auto mt-2 max-w-xl text-[16px] leading-[1.65] text-text-secondary">
-				The <a href="/tea-estate-glossary" class="font-semibold text-green-deep hover:underline"
+			<p class="mx-auto mt-3 max-w-xl text-[16px] leading-[1.6] text-text-secondary">
+				The <a href="/tea-estate-glossary" class="font-semibold text-green-deep hover:underline focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-green-deep rounded-sm"
 					>tea estate glossary</a
 				> explains hazira, tikka, fine leaf, outturn, and other estate terms in one place.
 			</p>

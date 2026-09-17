@@ -33,12 +33,12 @@
 
 <figure class="w-full">
 	<div
-		class="relative overflow-hidden rounded-2xl border border-border bg-white shadow-card"
+		class="relative overflow-hidden rounded-md border border-border bg-white shadow-card"
 		style="aspect-ratio: {frameRatio};"
 	>
 		{#if hasAsset}
 			{#if type === 'video'}
-				<!-- Real capture: muted background-style loop, never user-controlled -->
+				<!-- Real capture: muted background-style loop -->
 				<video
 					{src}
 					{poster}
@@ -47,30 +47,37 @@
 					loop
 					playsinline
 					preload="metadata"
-					class="absolute inset-0 h-full w-full object-cover"
+					class="absolute inset-0 h-full w-full object-cover motion-reduce:hidden"
 				></video>
+				{#if poster}
+					<img
+						src={poster}
+						{alt}
+						class="absolute inset-0 hidden h-full w-full object-cover motion-reduce:block"
+					/>
+				{/if}
 			{:else}
 				<img
 					{src}
 					{alt}
-					{width}
-					{height}
+					width={width ?? 1280}
+					height={height ?? 720}
 					loading={eager ? 'eager' : 'lazy'}
 					class="absolute inset-0 h-full w-full object-cover"
 				/>
 			{/if}
 		{:else}
-			<!-- Placeholder frame. Sits in until an approved real capture replaces it. -->
+			<!-- Preview placeholder frame -->
 			<div
 				class="dot-grid-light absolute inset-0 flex flex-col items-center justify-center gap-2 p-6 text-center"
 			>
 				{#if type === 'video'}
 					<svg
-						width="22"
-						height="22"
+						width="24"
+						height="24"
 						viewBox="0 0 24 24"
 						fill="none"
-						class="text-subtle"
+						class="text-green-deep"
 						aria-hidden="true"
 					>
 						<rect
@@ -91,11 +98,11 @@
 					</svg>
 				{:else}
 					<svg
-						width="22"
-						height="22"
+						width="24"
+						height="24"
 						viewBox="0 0 24 24"
 						fill="none"
-						class="text-subtle"
+						class="text-green-deep"
 						aria-hidden="true"
 					>
 						<rect
@@ -118,16 +125,11 @@
 					</svg>
 				{/if}
 				<p class="mt-1 text-[13px] font-semibold tracking-[0.08em] text-green-deep uppercase">
-					{type} placeholder
+					{label || `${type} preview in preparation`}
 				</p>
-				{#if internal && label}
-					<p class="max-w-md text-[14px] leading-[1.6] text-muted">{label}</p>
-					<p class="text-[12px] text-subtle">
-						Awaiting approved capture. Never publish invented artwork.
-					</p>
-				{:else}
-					<p class="text-[14px] text-muted">Media coming soon</p>
-				{/if}
+				<p class="max-w-md text-[13px] leading-[1.6] text-muted">
+					Live field demonstration recording will be published here.
+				</p>
 			</div>
 		{/if}
 	</div>

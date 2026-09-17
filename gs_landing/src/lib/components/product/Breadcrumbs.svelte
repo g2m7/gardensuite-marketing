@@ -8,7 +8,7 @@
 	} = $props();
 </script>
 
-{#if items.length > 3}
+{#if items.length >= 3}
 	<nav aria-label="Breadcrumb" class="mb-6 flex text-[13px] font-medium sm:hidden">
 		<a
 			href={items[items.length - 2].path}
@@ -25,7 +25,7 @@
 
 <nav
 	aria-label="Breadcrumb"
-	class="mb-6 {items.length > 3
+	class="mb-6 {items.length >= 3
 		? 'hidden sm:flex'
 		: 'flex'} items-center gap-2 text-[13px] font-medium {dark ? 'text-white/60' : 'text-muted'}"
 >
