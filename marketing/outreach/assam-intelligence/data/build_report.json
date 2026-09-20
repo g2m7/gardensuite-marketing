@@ -1,0 +1,27 @@
+{
+  "total_master_records": 736,
+  "organized_estates": 669,
+  "standalone_blfs": 67,
+  "eligible_prospect_targets": 593,
+  "conglomerate_excluded": 76,
+  "review_queue_items": 574,
+  "verified_contacts": 23,
+  "region_distribution": {
+    "Upper Assam": 510,
+    "Central Assam": 96,
+    "Barak Valley": 96,
+    "Lower Assam": 34
+  },
+  "distinct_companies": 605,
+  "conglomerates_identified": {
+    "MCLEOD_RUSSEL": 19,
+    "AMALGAMATED_PLANTATIONS": 15,
+    "GOODRICKE_GROUP": 4,
+    "ANDREW_YULE": 7,
+    "APEEJAY_TEA": 6,
+    "WARREN_TEA": 6,
+    "ROSSELL_INDIA": 3,
+    "DHUNSERI_TEA": 4,
+    "ASSAM_COMPANY": 11
+  }
+}

@@ -1,0 +1,706 @@
+garden_id,alias_name,source
+gs-as-bak-001,FATEMABAD TEA ESTATE,tea_board_registered_planters_2019
+gs-as-bak-002,MENOKA TEA ESTATE,tea_board_registered_planters_2019
+gs-as-bis-001,BEHALI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-bis-002,BORGAON T.E,tea_board_registered_planters_2019
+gs-as-bis-003,DHULLIE TEA ESTATE,tea_board_registered_planters_2019
+gs-as-bis-004,KETTELA TEA ESTATE,tea_board_registered_planters_2019
+gs-as-bis-005,MAJULIGHUR,tea_board_registered_planters_2019
+gs-as-bis-006,MAHALUXMI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-bis-007,GINGIA,tea_board_registered_planters_2019
+gs-as-bis-008,HALEM,tea_board_registered_planters_2019
+gs-as-bis-009,MONABARIE,tea_board_registered_planters_2019
+gs-as-bis-010,MIJICAJAN,tea_board_registered_planters_2019
+gs-as-bis-011,NEWPURUPBARI,tea_board_registered_planters_2019
+gs-as-bis-012,NIRMALA T.E,tea_board_registered_planters_2019
+gs-as-bis-013,NYA GOGRA T.E,tea_board_registered_planters_2019
+gs-as-bis-014,PERTABGHUR TEA ESTATE,tea_board_registered_planters_2019
+gs-as-bis-015,TEZALPATTY TEA ESTATE,tea_board_registered_planters_2019
+gs-as-cac-001,SRILA TE,tea_board_registered_planters_2019
+gs-as-cac-002,SUBONG TEA(PRITHVI TEA CO PVT LTD),tea_board_registered_planters_2019
+gs-as-cac-003,PATHECHERRA TEA ESTATE,tea_board_registered_planters_2019
+gs-as-cac-004,PALLORBUND,tea_board_registered_planters_2019
+gs-as-cac-005,RUKNI TE,tea_board_registered_planters_2019
+gs-as-cac-006,ROSEKANDY TE,tea_board_registered_planters_2019
+gs-as-cac-007,RUTTONPORE TE,tea_board_registered_planters_2019
+gs-as-cac-008,RAHMAN NAGAR,tea_board_registered_planters_2019
+gs-as-cac-009,RAMPORE TE,tea_board_registered_planters_2019
+gs-as-cac-010,POLOI TE,tea_board_registered_planters_2019
+gs-as-cac-011,URRUNABUND TE,tea_board_registered_planters_2019
+gs-as-cac-012,WEST JALINGA TE,tea_board_registered_planters_2019
+gs-as-cac-013,SILCURI,tea_board_registered_planters_2019
+gs-as-cac-014,HILARA TE,tea_board_registered_planters_2019
+gs-as-cac-015,IRINGMARA TEA ESTATE,tea_board_registered_planters_2019
+gs-as-cac-016,INDRAGARH TE,tea_board_registered_planters_2019
+gs-as-cac-017,JATINGA VALLEY TE,tea_board_registered_planters_2019
+gs-as-cac-018,JELLALPORE TEA ESTATE,tea_board_registered_planters_2019
+gs-as-cac-019,JHIRIGHAT TE,tea_board_registered_planters_2019
+gs-as-cac-020,MONIIERKHAL TE,tea_board_registered_planters_2019
+gs-as-cac-021,HATTICHERRA TE,tea_board_registered_planters_2019
+gs-as-cac-022,DWARBUND TE,tea_board_registered_planters_2019
+gs-as-cac-023,DILKHOOSH TE,tea_board_registered_planters_2019
+gs-as-cac-024,DOOLOOGRAM TE,tea_board_registered_planters_2019
+gs-as-cac-025,DOLOO TE,tea_board_registered_planters_2019
+gs-as-cac-026,MADOORA TE,tea_board_registered_planters_2019
+gs-as-cac-027,MARTYCHERRA TE,tea_board_registered_planters_2019
+gs-as-cac-028,LARSINGAH TE,tea_board_registered_planters_2019
+gs-as-cac-029,LABAC,tea_board_registered_planters_2019
+gs-as-cac-030,LAKHIPORE,tea_board_registered_planters_2019
+gs-as-cac-031,KOOMBER TEA ESTATE,tea_board_registered_planters_2019
+gs-as-cac-032,KAILASHPUR TE,tea_board_registered_planters_2019
+gs-as-cac-033,KALLINECHERRA,tea_board_registered_planters_2019
+gs-as-cac-034,KALLINE TE,tea_board_registered_planters_2019
+gs-as-cac-035,KHOREEL TEA ESTATE,tea_board_registered_planters_2019
+gs-as-cac-036,BICRAMPORE T.E.,tea_board_registered_planters_2019
+gs-as-cac-037,BINNAKANDY T.E,tea_board_registered_planters_2019
+gs-as-cac-038,BOROKAI T.E,tea_board_registered_planters_2019
+gs-as-cac-039,BOROJALINGAH T.E.,tea_board_registered_planters_2019
+gs-as-cac-040,BURTOLL T.E,tea_board_registered_planters_2019
+gs-as-cac-041,CHANDIGHAT T.E.,tea_board_registered_planters_2019
+gs-as-cac-042,COOMBERGRAM,tea_board_registered_planters_2019
+gs-as-cac-043,CRAIGPARK T.E.,tea_board_registered_planters_2019
+gs-as-cac-044,DEGUBBER T.E,tea_board_registered_planters_2019
+gs-as-cac-045,DERBY T.E,tea_board_registered_planters_2019
+gs-as-cac-046,DEWAN TE,tea_board_registered_planters_2019
+gs-as-cac-047,BENODNAGAR T.E,tea_board_registered_planters_2019
+gs-as-cac-048,BHUBANDHAR TEA ESTATE,tea_board_registered_planters_2019
+gs-as-cac-049,BHUVANVALLEY,tea_board_registered_planters_2019
+gs-as-cac-050,BAJRANGPUR,tea_board_registered_planters_2019
+gs-as-cac-051,BALACHERRA TE,tea_board_registered_planters_2019
+gs-as-cac-052,ALYNEE & NARAINDHAR,tea_board_registered_planters_2019
+gs-as-cac-053,AMRANAGAR TEA ESTATE,tea_board_registered_planters_2019
+gs-as-cac-054,ARCUTTIPORE TE,tea_board_registered_planters_2019
+gs-as-cha-001,AIDEOBARI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-cha-002,AIDEOPUKHURI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-cha-003,BEHUBOR TE,tea_board_registered_planters_2019
+gs-as-cha-004,BEZBARUAH TEA ESTATE,tea_board_registered_planters_2019
+gs-as-cha-005,BHUYANKHAT,tea_board_registered_planters_2019
+gs-as-cha-006,BARASALI TE,tea_board_registered_planters_2019
+gs-as-cha-007,BARUAKHAT,tea_board_registered_planters_2019
+gs-as-cha-008,DEEPLING TEA ESTATE,tea_board_registered_planters_2019
+gs-as-cha-009,BORPATRA TEA GARDEN,tea_board_registered_planters_2019
+gs-as-cha-010,BORTIMON TE,tea_board_registered_planters_2019
+gs-as-cha-011,BORHAT TEA ESTATE,tea_board_registered_planters_2019
+gs-as-cha-012,CHERIDEO PURBUT T.E,tea_board_registered_planters_2019
+gs-as-cha-013,BEMOLAPUR,tea_board_registered_planters_2019
+gs-as-cha-014,NAHORHABI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-cha-015,KHAGORIJAN TE,tea_board_registered_planters_2019
+gs-as-cha-016,KHONA TE,tea_board_registered_planters_2019
+gs-as-cha-017,MAJIDPUR TEA GARDEN,tea_board_registered_planters_2019
+gs-as-cha-018,KOLAKATA TEA GARDEN,tea_board_registered_planters_2019
+gs-as-cha-019,LAKILY TEA ESTATE,tea_board_registered_planters_2019
+gs-as-cha-020,LAKSHMIJAN,tea_board_registered_planters_2019
+gs-as-cha-021,LUKWAH TE,tea_board_registered_planters_2019
+gs-as-cha-022,MAJIDPUR B TEA GARDEN,tea_board_registered_planters_2019
+gs-as-cha-023,DUBBA,tea_board_registered_planters_2019
+gs-as-cha-024,GHORAJAN,tea_board_registered_planters_2019
+gs-as-cha-024,Ghograjan Tea Estate,pilot_research_202609
+gs-as-cha-025,GUWATING,tea_board_registered_planters_2019
+gs-as-cha-026,"HAJUA-KHOOMTAIE G54, G52 (RC-631)",tea_board_registered_planters_2019
+gs-as-cha-027,HINGRIJAN TEA ESTATE,tea_board_registered_planters_2019
+gs-as-cha-028,HINGRAJAN,tea_board_registered_planters_2019
+gs-as-cha-029,JABOKA TE Q10,tea_board_registered_planters_2019
+gs-as-cha-030,MAJIDPUR (A) PART II TEA ESTATE,tea_board_registered_planters_2019
+gs-as-cha-031,MUTTRAPORE TE Q,tea_board_registered_planters_2019
+gs-as-cha-032,MUKTABARI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-cha-033,NAGAHAT TE,tea_board_registered_planters_2019
+gs-as-cha-034,NAMDANG,tea_board_registered_planters_2019
+gs-as-cha-035,NAPUK TE,tea_board_registered_planters_2019
+gs-as-cha-036,SHREELUXMI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-cha-037,SHANTIPUR,tea_board_registered_planters_2019
+gs-as-cha-038,SARUMATHURA TE,tea_board_registered_planters_2019
+gs-as-cha-039,SALKATHONI,tea_board_registered_planters_2019
+gs-as-cha-040,RATANPUR TE,tea_board_registered_planters_2019
+gs-as-cha-041,RANGCHALLI,tea_board_registered_planters_2019
+gs-as-cha-042,RAIDANG,tea_board_registered_planters_2019
+gs-as-cha-043,RONGBARI,tea_board_registered_planters_2019
+gs-as-cha-044,OUGURIJAN,tea_board_registered_planters_2019
+gs-as-cha-045,SUFFRY TEA ESTATE Q,tea_board_registered_planters_2019
+gs-as-cha-046,SUNDARPUR TEA ESTATE,tea_board_registered_planters_2019
+gs-as-cha-047,SUNTOK TEA ESTATE,tea_board_registered_planters_2019
+gs-as-cha-048,TAIRAI,tea_board_registered_planters_2019
+gs-as-cha-049,SOONITPUR TEA ESTATE,tea_board_registered_planters_2019
+gs-as-cha-050,SONARIE,tea_board_registered_planters_2019
+gs-as-cha-051,TINGALIBAM T.E,tea_board_registered_planters_2019
+gs-as-cha-052,TIMON TE,tea_board_registered_planters_2019
+gs-as-dar-001,TONGANI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dar-002,CHIKONMATI,tea_board_registered_planters_2019
+gs-as-dar-003,BARGARA,tea_board_registered_planters_2019
+gs-as-dhu-001,CHOIBARI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dhu-002,CHAPAR,tea_board_registered_planters_2019
+gs-as-dhu-003,KRISHNAKALI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-001,"MOHMORA UNIT-II, DEKHARI TEA ESTATE, C/O MAYUR PLANTATION",tea_board_registered_planters_2019
+gs-as-dib-002,KORANGANI,tea_board_registered_planters_2019
+gs-as-dib-003,LAHOALBARI,tea_board_registered_planters_2019
+gs-as-dib-004,LENGRAI,tea_board_registered_planters_2019
+gs-as-dib-005,LEPETKATTA,tea_board_registered_planters_2019
+gs-as-dib-006,MAHABIR,tea_board_registered_planters_2019
+gs-as-dib-007,MAIJAN T E,tea_board_registered_planters_2019
+gs-as-dib-008,MANABARI,tea_board_registered_planters_2019
+gs-as-dib-009,MAUD TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-010,MADHUTING TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-011,MADHUBAN,tea_board_registered_planters_2019
+gs-as-dib-012,MAHABIRBARI,tea_board_registered_planters_2019
+gs-as-dib-013,MANCOTTA,tea_board_registered_planters_2019
+gs-as-dib-014,MADARKHAT,tea_board_registered_planters_2019
+gs-as-dib-015,KHOWANG,tea_board_registered_planters_2019
+gs-as-dib-016,KHARJAN TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-017,KHANIKAR,tea_board_registered_planters_2019
+gs-as-dib-018,KAMAKHYA CHA BAGICHA,tea_board_registered_planters_2019
+gs-as-dib-019,KENDUGURI,tea_board_registered_planters_2019
+gs-as-dib-020,TRIVENI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-021,KAILASHPUR TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-022,KALIAPANI,tea_board_registered_planters_2019
+gs-as-dib-022,Kaliapani Tea Estate,pilot_research_202609
+gs-as-dib-023,PRAKASH PRATISTHAN TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-024,HELENBARI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-025,KATHALGURI,tea_board_registered_planters_2019
+gs-as-dib-026,KANJIBARI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-027,CHOWDUNG TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-028,CHUBWA TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-029,DESAM TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-030,ESSEL BIO RESEARCH PLANTATION (DEKHARI),tea_board_registered_planters_2019
+gs-as-dib-031,BIJLI BARI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-032,BORBOROOAH TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-033,BIPINBAG TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-034,BHAGATRAM TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-035,BALIMARA TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-036,BAUGHPARA,tea_board_registered_planters_2019
+gs-as-dib-037,BALIJAN(H) TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-038,BASMATIA TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-039,BARBARI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-040,BASANTIBARI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-041,BALIJAN NORTH TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-042,MAYAJAN TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-043,BHAJONI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-044,BHAMUN TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-045,BHARTIA TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-046,AGARWAL,tea_board_registered_planters_2019
+gs-as-dib-047,AHMEDY TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-048,ALIMUR PLANT PVT LTD,tea_board_registered_planters_2019
+gs-as-dib-049,ACHABAM A,tea_board_registered_planters_2019
+gs-as-dib-050,MEGHA,tea_board_registered_planters_2019
+gs-as-dib-051,ARUNSHREE TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-052,ASITPUR TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-053,APARNA TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-054,AMULYABARI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-054,Amulyabari Tea Estate,pilot_research_202609
+gs-as-dib-055,AMULGURI,tea_board_registered_planters_2019
+gs-as-dib-055,Amulguri Tea Estate,pilot_research_202609
+gs-as-dib-056,SHALMARI,tea_board_registered_planters_2019
+gs-as-dib-056,Shalmari Tea Estate,pilot_research_202609
+gs-as-dib-057,SHYAMMURTI,tea_board_registered_planters_2019
+gs-as-dib-058,TODI,tea_board_registered_planters_2019
+gs-as-dib-059,SEALKOTEE TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-060,SESSA K,tea_board_registered_planters_2019
+gs-as-dib-061,SEPON TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-062,SATKARTAR,tea_board_registered_planters_2019
+gs-as-dib-063,SAINAGAR,tea_board_registered_planters_2019
+gs-as-dib-064,SATYANARAYAN TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-064,Satyanarayan Tea Estate,pilot_research_202609
+gs-as-dib-065,SATISPUR,tea_board_registered_planters_2019
+gs-as-dib-065,Satispur Tea Estate,pilot_research_202609
+gs-as-dib-066,SAROJINI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-066,Sarojini Tea Estate,pilot_research_202609
+gs-as-dib-067,SINGLIJAN K,tea_board_registered_planters_2019
+gs-as-dib-068,ZALONI,tea_board_registered_planters_2019
+gs-as-dib-069,HATIGARH TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-070,UMATARA,tea_board_registered_planters_2019
+gs-as-dib-071,SHREE GANGA TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-072,UDALGURI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-072,Udalguri Tea Estate,pilot_research_202609
+gs-as-dib-073,PARBATIPUR,tea_board_registered_planters_2019
+gs-as-dib-074,PARBATIPUR,tea_board_registered_planters_2019
+gs-as-dib-075,PHUKENBARI,tea_board_registered_planters_2019
+gs-as-dib-075,Phukanbari Tea Estate,pilot_research_202609
+gs-as-dib-076,PIPRATOLY TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-076,Pipratoli Tea Estate,pilot_research_202609
+gs-as-dib-077,RUNGLITING,tea_board_registered_planters_2019
+gs-as-dib-078,PURSOTTAM,tea_board_registered_planters_2019
+gs-as-dib-079,RADHESHYAM TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-080,RAJAH ALLI,tea_board_registered_planters_2019
+gs-as-dib-081,RAMJI MOHAN,tea_board_registered_planters_2019
+gs-as-dib-082,RAJGARH,tea_board_registered_planters_2019
+gs-as-dib-083,NAHORKUTIA A,tea_board_registered_planters_2019
+gs-as-dib-084,NAMROOP,tea_board_registered_planters_2019
+gs-as-dib-085,NANDANBAN TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-086,NAHORTOLI T.E,tea_board_registered_planters_2019
+gs-as-dib-087,MUKUL,tea_board_registered_planters_2019
+gs-as-dib-088,MULCHANDBAG,tea_board_registered_planters_2019
+gs-as-dib-089,NILMONI,tea_board_registered_planters_2019
+gs-as-dib-090,MANOJKUNJ TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-091,NUDWA T.E,tea_board_registered_planters_2019
+gs-as-dib-092,NEW PARBOTIPUR,tea_board_registered_planters_2019
+gs-as-dib-093,NEW SADASIVA,tea_board_registered_planters_2019
+gs-as-dib-094,HIMALAYA TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-095,HUKANPUKRI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-096,IDA TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-097,MORAN,tea_board_registered_planters_2019
+gs-as-dib-098,MOTHOLA,tea_board_registered_planters_2019
+gs-as-dib-098,Mothola Tea Estate,pilot_research_202609
+gs-as-dib-099,MOHUNBAREE,tea_board_registered_planters_2019
+gs-as-dib-100,JOONKTOLLEE TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-101,JALANNAGAR,tea_board_registered_planters_2019
+gs-as-dib-102,JALANNAGAR SOUTH,tea_board_registered_planters_2019
+gs-as-dib-103,HATIJAN TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-104,HATKHOLA TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-105,HALMARI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-105,Shalmari Tea Estate,pilot_research_202609
+gs-as-dib-106,HAZELBANK TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-107,HARISHPUR TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-108,GONESHBARI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-108,Goneshbari Tea Estate,pilot_research_202609
+gs-as-dib-109,GREENWOOD TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-110,GITANAGAR TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-111,GHOORONIA TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-111,Ghooronia Tea Estate,pilot_research_202609
+gs-as-dib-112,GHOGRAJAN TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-112,Ghograjan Tea Estate,pilot_research_202609
+gs-as-dib-113,ETHELWOLD TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-114,DOOLIA TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-115,OUPHULIA,tea_board_registered_planters_2019
+gs-as-dib-116,DULIABAM TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-117,DURGAPUR TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-117,Durgapur Tea Estate,pilot_research_202609
+gs-as-dib-118,DILLI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-119,DIROIBAM TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-120,DIRAI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-121,DINJOYE AND MAHABIRBARI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-122,DIRIAL TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-123,TINKHONG TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-124,TELOIJAN,tea_board_registered_planters_2019
+gs-as-dib-125,THANAI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-126,LONGBOI,tea_board_registered_planters_2019
+gs-as-dib-126,Longboi Tea Estate,pilot_research_202609
+gs-as-dib-127,SOURABH A/F,tea_board_registered_planters_2019
+gs-as-dib-128,TAMULBARI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-129,TARINIPUR TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-130,SURAJ TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dib-131,SURABHI PLANTATIONS,tea_board_registered_planters_2019
+gs-as-dib-132,SURESHNAGAR TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dim-001,GUNJUNG TEA ESTATE,tea_board_registered_planters_2019
+gs-as-dim-002,KOPILI TE,tea_board_registered_planters_2019
+gs-as-goa-001,MAIJONGA TEA ESTATE,tea_board_registered_planters_2019
+gs-as-goa-002,SIMLITOLA,tea_board_registered_planters_2019
+gs-as-gol-001,SHYAMRAIPORE,tea_board_registered_planters_2019
+gs-as-gol-002,WOKA T.E,tea_board_registered_planters_2019
+gs-as-gol-003,UDAYAN TE,tea_board_registered_planters_2019
+gs-as-gol-004,RUNGAJAUN TE,tea_board_registered_planters_2019
+gs-as-gol-005,SENGAJAN,tea_board_registered_planters_2019
+gs-as-gol-006,RENGMA,tea_board_registered_planters_2019
+gs-as-gol-007,RADHABARI,tea_board_registered_planters_2019
+gs-as-gol-008,PROBHAKAR T.E. NEG-546,tea_board_registered_planters_2019
+gs-as-gol-009,RUNGAMATTY,tea_board_registered_planters_2019
+gs-as-gol-010,PABHOJAN TE,tea_board_registered_planters_2019
+gs-as-gol-011,OATING TEA ESTATE,tea_board_registered_planters_2019
+gs-as-gol-012,GOVINDAPUR TEA ESTATE,tea_board_registered_planters_2019
+gs-as-gol-013,GOLAGHAT TE,tea_board_registered_planters_2019
+gs-as-gol-014,HATHIKULI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-gol-015,HALMIRA ESTATE TEA PVT. LTD,tea_board_registered_planters_2019
+gs-as-gol-016,HALMIRAMOOK TE,tea_board_registered_planters_2019
+gs-as-gol-017,DIFFLOO TEA ESTATE,tea_board_registered_planters_2019
+gs-as-gol-018,DIGHLIHULA TE,tea_board_registered_planters_2019
+gs-as-gol-019,DUKENHENGRA TEA ESATAE,tea_board_registered_planters_2019
+gs-as-gol-020,DOLAGURI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-gol-021,FURKATING TEA ESTATE,tea_board_registered_planters_2019
+gs-as-gol-022,JAMGURI TEA ESTATEI,tea_board_registered_planters_2019
+gs-as-gol-023,MOHEEMA,tea_board_registered_planters_2019
+gs-as-gol-024,NEETINNAGAR T.E,tea_board_registered_planters_2019
+gs-as-gol-025,NEGHERITING,tea_board_registered_planters_2019
+gs-as-gol-026,NILGIRI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-gol-027,MURPHULANI TE,tea_board_registered_planters_2019
+gs-as-gol-028,NANDAPUR,tea_board_registered_planters_2019
+gs-as-gol-029,NAHORBARI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-gol-030,NAHORJAN TE,tea_board_registered_planters_2019
+gs-as-gol-031,MANI,tea_board_registered_planters_2019
+gs-as-gol-032,MARANGI,tea_board_registered_planters_2019
+gs-as-gol-033,MAHALAXMI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-gol-034,KRISHNA TE,tea_board_registered_planters_2019
+gs-as-gol-035,LATTAKOOJAN TE,tea_board_registered_planters_2019
+gs-as-gol-036,KATHONI,tea_board_registered_planters_2019
+gs-as-gol-037,KOOPAHUATING TEA ESTATE,tea_board_registered_planters_2019
+gs-as-gol-038,ANANDAPUR,tea_board_registered_planters_2019
+gs-as-gol-039,ATHABARI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-gol-040,MESSAMARA,tea_board_registered_planters_2019
+gs-as-gol-041,METHONI TE,tea_board_registered_planters_2019
+gs-as-gol-042,ABHOYJAN TEA ESTATE,tea_board_registered_planters_2019
+gs-as-gol-043,BEHORA TEA ESTATE,tea_board_registered_planters_2019
+gs-as-gol-044,BALIJAN TEA ESTATE,tea_board_registered_planters_2019
+gs-as-gol-045,BANWARIPUR T.E,tea_board_registered_planters_2019
+gs-as-gol-046,BHAGWAN T.E.,tea_board_registered_planters_2019
+gs-as-gol-047,BHOGADABARI TE,tea_board_registered_planters_2019
+gs-as-gol-048,BORTING TE,tea_board_registered_planters_2019
+gs-as-gol-049,BOGIDHOLA TEA ESTATE (LOCKOUT SINCE,tea_board_registered_planters_2019
+gs-as-gol-050,BORJAN TEA ESTATE,tea_board_registered_planters_2019
+gs-as-gol-051,BOGIJAN TEA ESTATE,tea_board_registered_planters_2019
+gs-as-gol-052,BUKHIAL TEA ESTATE,tea_board_registered_planters_2019
+gs-as-gol-053,DALOWJAN TE,tea_board_registered_planters_2019
+gs-as-gol-054,SOCKIETING TE,tea_board_registered_planters_2019
+gs-as-gol-055,BIJULEE TEA ESTATE NEG-699,tea_board_registered_planters_2019
+gs-as-gol-056,TILOTTAMA,tea_board_registered_planters_2019
+gs-as-gol-057,RAJABARI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-hai-001,SOUTH CACHAR TE,tea_board_registered_planters_2019
+gs-as-hai-002,SULTANICHERA,tea_board_registered_planters_2019
+gs-as-hai-003,CHANDYPORE T.E,tea_board_registered_planters_2019
+gs-as-hai-004,DEVENDRA TE,tea_board_registered_planters_2019
+gs-as-hai-004,Devendra Tea Estate,pilot_research_202609
+gs-as-hai-005,CUTLACHERRA T.E.,tea_board_registered_planters_2019
+gs-as-hai-006,BURNIE BRAES T.E,tea_board_registered_planters_2019
+gs-as-hai-007,BUNDOOKMARA T.E,tea_board_registered_planters_2019
+gs-as-hai-008,AENAKHALL T.E.,tea_board_registered_planters_2019
+gs-as-hai-009,LALLAMOOKH TEA ESTATE,tea_board_registered_planters_2019
+gs-as-hai-010,LALLACHERRA,tea_board_registered_planters_2019
+gs-as-hai-011,KUNCHUNPORE TE,tea_board_registered_planters_2019
+gs-as-hai-012,KOYAH TEA ESTATE,tea_board_registered_planters_2019
+gs-as-hai-013,MANIPUR TE,tea_board_registered_planters_2019
+gs-as-hai-014,NARSINGPORE TE,tea_board_registered_planters_2019
+gs-as-hai-015,DHOLAI TEA GARDEN,tea_board_registered_planters_2019
+gs-as-hai-016,ROOPACHERA TE,tea_board_registered_planters_2019
+gs-as-hai-017,UMESH TE,tea_board_registered_planters_2019
+gs-as-hai-018,VERNERPUR TE,tea_board_registered_planters_2019
+gs-as-jor-001,UMABARI T.E,tea_board_registered_planters_2019
+gs-as-jor-002,TYROON T.E,tea_board_registered_planters_2019
+gs-as-jor-003,UDAYJYOTI(RANGDOI T.P),tea_board_registered_planters_2019
+gs-as-jor-004,SINGORIJAN TE,tea_board_registered_planters_2019
+gs-as-jor-005,SAMAGURI TE,tea_board_registered_planters_2019
+gs-as-jor-006,SANGSUA,tea_board_registered_planters_2019
+gs-as-jor-007,SELENG,tea_board_registered_planters_2019
+gs-as-jor-008,TOCKLAI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-jor-009,NORTH BORSAIKOTA TEA ESTATE NO.,tea_board_registered_planters_2019
+gs-as-jor-010,PADAM,tea_board_registered_planters_2019
+gs-as-jor-011,SOUTH BORSAIKOTA TEA ESTATE,tea_board_registered_planters_2019
+gs-as-jor-012,RAJABARI TE,tea_board_registered_planters_2019
+gs-as-jor-013,RANGAJAN,tea_board_registered_planters_2019
+gs-as-jor-014,RAMKONG,tea_board_registered_planters_2019
+gs-as-jor-015,DURGABARI,tea_board_registered_planters_2019
+gs-as-jor-016,DUFLATING TE,tea_board_registered_planters_2019
+gs-as-jor-017,GHORAJAN,tea_board_registered_planters_2019
+gs-as-jor-017,Ghograjan Tea Estate,pilot_research_202609
+gs-as-jor-018,GABROOPURBAT TE,tea_board_registered_planters_2019
+gs-as-jor-019,GATOONGA T E,tea_board_registered_planters_2019
+gs-as-jor-020,HAROCHARAI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-jor-021,HEELEAKAH TE,tea_board_registered_planters_2019
+gs-as-jor-022,HATIGARH TEA ESTATE,tea_board_registered_planters_2019
+gs-as-jor-023,GOHAINBAREE TE,tea_board_registered_planters_2019
+gs-as-jor-024,GOBINDAPORE & BIJLEEJAN,tea_board_registered_planters_2019
+gs-as-jor-025,GREEN VIEW,tea_board_registered_planters_2019
+gs-as-jor-026,NAGANIJAN,tea_board_registered_planters_2019
+gs-as-jor-027,NARAYANPUR & BHOWANIPUR,tea_board_registered_planters_2019
+gs-as-jor-028,NEW SONWAL TEA ESTATE,tea_board_registered_planters_2019
+gs-as-jor-029,NEW SAMAGURI,tea_board_registered_planters_2019
+gs-as-jor-030,MONOMOY TEA ESTATE,tea_board_registered_planters_2019
+gs-as-jor-031,MOABUND DIVISION (BEHORA TEA ESTATE),tea_board_registered_planters_2019
+gs-as-jor-032,JAGDUAR T.E.,tea_board_registered_planters_2019
+gs-as-jor-033,JADAVPUR,tea_board_registered_planters_2019
+gs-as-jor-034,JOGIBHETA TEA ESTATE,tea_board_registered_planters_2019
+gs-as-jor-035,HUNWAL TEA ESTATE N,tea_board_registered_planters_2019
+gs-as-jor-036,HOLONGAJAN TEA ESTATE,tea_board_registered_planters_2019
+gs-as-jor-037,HOOLUNGOOREE TEA ESTATE,tea_board_registered_planters_2019
+gs-as-jor-038,MADHOOPUR,tea_board_registered_planters_2019
+gs-as-jor-039,PURANIMATI TEA PLANTATIONS PVT.LTD.,tea_board_registered_planters_2019
+gs-as-jor-040,KONIKOR-DALLIM TEA ESTATE,tea_board_registered_planters_2019
+gs-as-jor-041,KUHUM,tea_board_registered_planters_2019
+gs-as-jor-042,KOTALGOORIE TE T3,tea_board_registered_planters_2019
+gs-as-jor-043,LAKHIBARI TE,tea_board_registered_planters_2019
+gs-as-jor-044,LETEKOOJAN,tea_board_registered_planters_2019
+gs-as-jor-045,LOHPOHIA TEA ESTATE,tea_board_registered_planters_2019
+gs-as-jor-046,KAKADONGA TEA STATE,tea_board_registered_planters_2019
+gs-as-jor-047,KAMALPUR,tea_board_registered_planters_2019
+gs-as-jor-048,KAMARBAND TEA ESTATE,tea_board_registered_planters_2019
+gs-as-jor-049,KAKAJAN,tea_board_registered_planters_2019
+gs-as-jor-050,KASOJAN,tea_board_registered_planters_2019
+gs-as-jor-051,MELENG TEA ESTATE,tea_board_registered_planters_2019
+gs-as-jor-052,MEZENGAH,tea_board_registered_planters_2019
+gs-as-jor-053,AKHOIDESSA TEA ESTATE,tea_board_registered_planters_2019
+gs-as-jor-054,BAGHSONG TEA ESTATE,tea_board_registered_planters_2019
+gs-as-jor-055,BAHANI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-jor-056,BARUAHJAN TE,tea_board_registered_planters_2019
+gs-as-jor-057,BAMUNIBARI,tea_board_registered_planters_2019
+gs-as-jor-058,BORBHETA TEA ESTATE,tea_board_registered_planters_2019
+gs-as-jor-059,BORHOLLA TEA ESTATE,tea_board_registered_planters_2019
+gs-as-jor-060,BOISAHABI TE,tea_board_registered_planters_2019
+gs-as-jor-061,BOSABARI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-jor-062,BOIDEHA TE,tea_board_registered_planters_2019
+gs-as-jor-063,BOKAHOLA,tea_board_registered_planters_2019
+gs-as-jor-064,BOLOMA TEA ESTATE,tea_board_registered_planters_2019
+gs-as-jor-065,DHULLIE,tea_board_registered_planters_2019
+gs-as-jor-066,CHENIJAN,tea_board_registered_planters_2019
+gs-as-jor-067,CHAPAJAN,tea_board_registered_planters_2019
+gs-as-jor-068,CHETIABARI,tea_board_registered_planters_2019
+gs-as-jor-069,DAHINGEAPAR,tea_board_registered_planters_2019
+gs-as-jor-070,DAMAYANTI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-jor-071,CINNAMARA TEA ESTATE,tea_board_registered_planters_2019
+gs-as-jor-072,SWARNAPUR,tea_board_registered_planters_2019
+gs-as-jor-073,SYEDBARI,tea_board_registered_planters_2019
+gs-as-jor-074,SYCOTTA TEA ESTATE,tea_board_registered_planters_2019
+gs-as-jor-075,SOLALBARI,tea_board_registered_planters_2019
+gs-as-jor-076,SOCKLATINGA,tea_board_registered_planters_2019
+gs-as-jor-077,SORAIPANI,tea_board_registered_planters_2019
+gs-as-jor-078,SOTAI,tea_board_registered_planters_2019
+gs-as-jor-079,TIRUAL T.E,tea_board_registered_planters_2019
+gs-as-jor-080,TIPOMIA,tea_board_registered_planters_2019
+gs-as-jor-081,TENGALBARIE,tea_board_registered_planters_2019
+gs-as-jor-082,TEOK TEA ESTATE,tea_board_registered_planters_2019
+gs-as-kam-001,SONAPUR TEA ESTATE,tea_board_registered_planters_2019
+gs-as-kam-002,BARDUAR TEA ESTATE,tea_board_registered_planters_2019
+gs-as-kam-003,RANI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-kar-001,BHAGAWATI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-kar-002,LAHORIJAN & NIRMAL KUMAR,tea_board_registered_planters_2019
+gs-as-kar-003,MAA SURJEE NEG-1117,tea_board_registered_planters_2019
+gs-as-kar-004,DEOPANI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-kar-005,BHAWANI TEA ESTATE NEG-492,tea_board_registered_planters_2019
+gs-as-kar-006,BOKAJAN TEA ESTATE,tea_board_registered_planters_2019
+gs-as-kar-007,BANASPATY TEA ESTATE,tea_board_registered_planters_2019
+gs-as-kar-008,BARPATHAR TEA ESTATE,tea_board_registered_planters_2019
+gs-as-kar-009,AMBA TEA ESTATE NEG-398,tea_board_registered_planters_2019
+gs-as-kar-010,NIRJA TEA ESTATE NEG-1118,tea_board_registered_planters_2019
+gs-as-kar-011,DHANSERI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-kar-012,RAMANUGGER,tea_board_registered_planters_2019
+gs-as-kar-013,RANGSALI,tea_board_registered_planters_2019
+gs-as-kar-014,SAKAMBARI NEG-,tea_board_registered_planters_2019
+gs-as-kar-015,SOBHANESWARI,tea_board_registered_planters_2019
+gs-as-krg-001,SREE BEHULLA TE,tea_board_registered_planters_2019
+gs-as-krg-002,SEPHANJURI BHEEL TE,tea_board_registered_planters_2019
+gs-as-krg-003,SINGLACHERRA,tea_board_registered_planters_2019
+gs-as-krg-004,SHONAICHERRA TE,tea_board_registered_planters_2019
+gs-as-krg-005,RABBANIA TE,tea_board_registered_planters_2019
+gs-as-krg-006,RAJARAMPORE,tea_board_registered_planters_2019
+gs-as-krg-007,PROMODENAGAR TE,tea_board_registered_planters_2019
+gs-as-krg-008,PATHINI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-krg-009,DURGANAGAR TE,tea_board_registered_planters_2019
+gs-as-krg-010,DULLABCHERRA TE,tea_board_registered_planters_2019
+gs-as-krg-011,GOOMBIRA,tea_board_registered_planters_2019
+gs-as-krg-012,HATTIKHIRA TE,tea_board_registered_planters_2019
+gs-as-krg-013,ISABHEEL TEA ESTATE,tea_board_registered_planters_2019
+gs-as-krg-014,JALALNAGAR,tea_board_registered_planters_2019
+gs-as-krg-015,AYLABARI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-krg-016,BAITAKHAL TE,tea_board_registered_planters_2019
+gs-as-krg-017,BHUBRIGHAT,tea_board_registered_planters_2019
+gs-as-krg-018,BIDYANAGAR T.E.,tea_board_registered_planters_2019
+gs-as-krg-019,CHARGOLA VELLY T.E.,tea_board_registered_planters_2019
+gs-as-krg-020,CHARGOLA T.E.,tea_board_registered_planters_2019
+gs-as-krg-021,MADANPUR TE,tea_board_registered_planters_2019
+gs-as-krg-022,MANIKNAGAR TE,tea_board_registered_planters_2019
+gs-as-krg-023,LONGAI TE,tea_board_registered_planters_2019
+gs-as-krg-024,KALINAGAR T.E.,tea_board_registered_planters_2019
+gs-as-kok-001,KOKRAJHAR TE,tea_board_registered_planters_2019
+gs-as-kok-002,DALOABARI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-kok-003,BANGLABARI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-kok-004,MORNAI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-lak-001,HARMUTTY TEA ESTATE,tea_board_registered_planters_2019
+gs-as-lak-002,DOOLAHAT TEA ESTATE,tea_board_registered_planters_2019
+gs-as-lak-003,SILONIBARI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-lak-004,SEAJULI,tea_board_registered_planters_2019
+gs-as-lak-005,ANANDA TEA ESTATE,tea_board_registered_planters_2019
+gs-as-lak-006,CINNATOLLIAH TEA GARDEN,tea_board_registered_planters_2019
+gs-as-lak-007,DEJOO TEA ESTATE,tea_board_registered_planters_2019
+gs-as-lak-008,BORDEOBAM TEA ESTATE,tea_board_registered_planters_2019
+gs-as-lak-009,KOILAMARI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-lak-010,MADHUPUR,tea_board_registered_planters_2019
+gs-as-mor-001,GOPAL KRISHNA TEA ESTATE,tea_board_registered_planters_2019
+gs-as-nag-001,DHONTOLA,tea_board_registered_planters_2019
+gs-as-nag-002,JIAJURI,tea_board_registered_planters_2019
+gs-as-nag-003,SECONEE,tea_board_registered_planters_2019
+gs-as-nag-004,SAGMOOTEA TEA ESTATE,tea_board_registered_planters_2019
+gs-as-nag-005,NONOI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-nag-006,RANGOLOO TE,tea_board_registered_planters_2019
+gs-as-nag-007,MATIAPAHAR,tea_board_registered_planters_2019
+gs-as-nag-008,KONDOLI,tea_board_registered_planters_2019
+gs-as-nag-009,KOLIABUR TEA ESTATE,tea_board_registered_planters_2019
+gs-as-nag-010,LOONGSOONG TE,tea_board_registered_planters_2019
+gs-as-nag-011,KELLYDEN TEA ESTATE,tea_board_registered_planters_2019
+gs-as-nag-012,KHANAJAN TEA ESTATE,tea_board_registered_planters_2019
+gs-as-nag-013,KHATOON TE,tea_board_registered_planters_2019
+gs-as-nag-014,BORPANI,tea_board_registered_planters_2019
+gs-as-nag-015,BURRAPAHAR,tea_board_registered_planters_2019
+gs-as-nag-016,DEJOO VALLEY T.E,tea_board_registered_planters_2019
+gs-as-nag-017,CHAPANALA TEA ESTATE,tea_board_registered_planters_2019
+gs-as-nag-018,AMSOI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-nag-019,AMLUCKIE TEA ESTATE,tea_board_registered_planters_2019
+gs-as-nag-020,SUKANJURI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-lak-011,PATHALIPAM TEA ESTATE,tea_board_registered_planters_2019
+gs-as-siv-001,NYEIJONG TE,tea_board_registered_planters_2019
+gs-as-siv-002,RAJA BARRIE TEA ESTATE,tea_board_registered_planters_2019
+gs-as-siv-003,MOHOKUTIE TEA ESTATE,tea_board_registered_planters_2019
+gs-as-siv-004,MODINAGAR TE,tea_board_registered_planters_2019
+gs-as-siv-005,MORE TEA ESTATE,tea_board_registered_planters_2019
+gs-as-siv-006,DOOMURDULLUNG,tea_board_registered_planters_2019
+gs-as-siv-007,GELAKEY,tea_board_registered_planters_2019
+gs-as-siv-008,GOSSAINBARI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-siv-009,AMGOORIE F,tea_board_registered_planters_2019
+gs-as-siv-010,ATTABARRIE TEA ESTATE,tea_board_registered_planters_2019
+gs-as-siv-011,BEHUBOR TEA ESTATE,tea_board_registered_planters_2019
+gs-as-siv-012,DEOPANI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-siv-013,BORBAM TEA GARDEN F,tea_board_registered_planters_2019
+gs-as-siv-014,SHREE JOYA CHA BAGAN PVT LTD.,tea_board_registered_planters_2019
+gs-as-siv-015,BIHUBARI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-siv-016,MADOORIE,tea_board_registered_planters_2019
+gs-as-siv-017,SREE SIBBARI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-siv-018,THOWRA,tea_board_registered_planters_2019
+gs-as-siv-019,TIOK TEA ESTATE,tea_board_registered_planters_2019
+gs-as-siv-020,MASKARA TEA ESTATE,tea_board_registered_planters_2019
+gs-as-siv-021,MACKEYPORE TEA ESTATE,tea_board_registered_planters_2019
+gs-as-siv-022,KRISHNABEHARI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-siv-023,BORAHI TE,tea_board_registered_planters_2019
+gs-as-siv-024,BANAMALIE,tea_board_registered_planters_2019
+gs-as-siv-025,ATALPUKHRI,tea_board_registered_planters_2019
+gs-as-siv-026,HANUMANBAG TE,tea_board_registered_planters_2019
+gs-as-siv-027,RAJMAI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-son-001,RUPAJULI T.E.,tea_board_registered_planters_2019
+gs-as-son-002,NOORBARI T.E,tea_board_registered_planters_2019
+gs-as-son-003,PANBARI,tea_board_registered_planters_2019
+gs-as-son-004,PABHOI,tea_board_registered_planters_2019
+gs-as-son-005,PHULBARI D,tea_board_registered_planters_2019
+gs-as-son-006,SAPOI,tea_board_registered_planters_2019
+gs-as-son-007,SESSA,tea_board_registered_planters_2019
+gs-as-son-008,TOPIA,tea_board_registered_planters_2019
+gs-as-son-009,SINGRI,tea_board_registered_planters_2019
+gs-as-son-010,SHYAMGURI,tea_board_registered_planters_2019
+gs-as-son-011,TULIP T.E,tea_board_registered_planters_2019
+gs-as-son-012,HARCHURAH,tea_board_registered_planters_2019
+gs-as-son-013,HIRAJULI,tea_board_registered_planters_2019
+gs-as-son-014,GHOIRALLIE T.E.,tea_board_registered_planters_2019
+gs-as-son-015,DUFFLAGHUR T.E.,tea_board_registered_planters_2019
+gs-as-son-016,DURRUNG,tea_board_registered_planters_2019
+gs-as-son-017,DHENDAI T.E,tea_board_registered_planters_2019
+gs-as-son-018,DHULAPADUNG T.E,tea_board_registered_planters_2019
+gs-as-son-019,HOOGRAJULI,tea_board_registered_planters_2019
+gs-as-son-020,NILPUR,tea_board_registered_planters_2019
+gs-as-son-021,NAHORANI,tea_board_registered_planters_2019
+gs-as-son-022,NARAYANPUR,tea_board_registered_planters_2019
+gs-as-son-023,MONMOHINIPUR,tea_board_registered_planters_2019
+gs-as-son-024,ADDABARIE N,tea_board_registered_planters_2019
+gs-as-son-025,BARGANG T.E,tea_board_registered_planters_2019
+gs-as-son-026,BAGHMARI TEA GARDEN,tea_board_registered_planters_2019
+gs-as-son-026,Baghbari Tea Estate,pilot_research_202609
+gs-as-son-027,BAMGAON,tea_board_registered_planters_2019
+gs-as-son-028,BELSERI T.E,tea_board_registered_planters_2019
+gs-as-son-029,BHOLAGURI T.E,tea_board_registered_planters_2019
+gs-as-son-030,BORJULI T.E,tea_board_registered_planters_2019
+gs-as-son-031,BORCHOLA T.E,tea_board_registered_planters_2019
+gs-as-son-032,BOROI T.E.,tea_board_registered_planters_2019
+gs-as-son-033,BORMAH JAN,tea_board_registered_planters_2019
+gs-as-son-034,CHARDWAR,tea_board_registered_planters_2019
+gs-as-son-035,DEKORAI T.E,tea_board_registered_planters_2019
+gs-as-son-036,KOLONY T.E,tea_board_registered_planters_2019
+gs-as-son-037,MANOBAG,tea_board_registered_planters_2019
+gs-as-son-038,TINKHARIA T.E,tea_board_registered_planters_2019
+gs-as-son-039,TEZPORE AND GOGRA T.E,tea_board_registered_planters_2019
+gs-as-son-040,SOGRA,tea_board_registered_planters_2019
+gs-as-son-041,SONABHEEL,tea_board_registered_planters_2019
+gs-as-son-042,SONAJULI,tea_board_registered_planters_2019
+gs-as-son-043,TARAJULIE T.E. N,tea_board_registered_planters_2019
+gs-as-tin-001,TARA TEA ESTATE,tea_board_registered_planters_2019
+gs-as-tin-002,TALUP TEA ESTATE J,tea_board_registered_planters_2019
+gs-as-tin-003,SOOKERATING,tea_board_registered_planters_2019
+gs-as-tin-003,Sookerating Tea Estate,pilot_research_202609
+gs-as-tin-004,SREE KRISHNA ESTATE,tea_board_registered_planters_2019
+gs-as-tin-005,TIPAM,tea_board_registered_planters_2019
+gs-as-tin-006,TINGAMIRA,tea_board_registered_planters_2019
+gs-as-tin-007,MARGHERITA T.E.,tea_board_registered_planters_2019
+gs-as-tin-008,MANOHARPUR TEA ESTATE,tea_board_registered_planters_2019
+gs-as-tin-009,MAHAKALI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-tin-010,MALIRAMPUR,tea_board_registered_planters_2019
+gs-as-tin-011,MANGALAM,tea_board_registered_planters_2019
+gs-as-tin-012,KOOMSONG,tea_board_registered_planters_2019
+gs-as-tin-013,KONAPATHAR,tea_board_registered_planters_2019
+gs-as-tin-014,LANKASHI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-tin-014,Lankashi Tea Estate,pilot_research_202609
+gs-as-tin-015,LIMBUGURI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-tin-016,LEDO T.E,tea_board_registered_planters_2019
+gs-as-tin-017,KEYHUNG TEA ESTATE,tea_board_registered_planters_2019
+gs-as-tin-018,KESAGURI,tea_board_registered_planters_2019
+gs-as-tin-018,Kesaguri Tea Estate,pilot_research_202609
+gs-as-tin-019,KHETOJAN,tea_board_registered_planters_2019
+gs-as-tin-020,KHOBONG TEA ESTATE,tea_board_registered_planters_2019
+gs-as-tin-021,KHATANGPANI,tea_board_registered_planters_2019
+gs-as-tin-021,Khatangpani Tea Estate,pilot_research_202609
+gs-as-tin-022,KISSNESS,tea_board_registered_planters_2019
+gs-as-tin-023,DEOHALL TEA ESTATE,tea_board_registered_planters_2019
+gs-as-tin-024,DEHING TEA ESTATE,tea_board_registered_planters_2019
+gs-as-tin-025,DEAMOOLIE TEA ESTATE,tea_board_registered_planters_2019
+gs-as-tin-026,DHANUKA TEA ESTATE,tea_board_registered_planters_2019
+gs-as-tin-027,DHONJAN TEA ESTATE,tea_board_registered_planters_2019
+gs-as-tin-028,DHELAKHAT TEA ESTATE,tea_board_registered_planters_2019
+gs-as-tin-029,DHOEDAAM TEA ESTATE,tea_board_registered_planters_2019
+gs-as-tin-030,DHOLLA TEA ESTATE,tea_board_registered_planters_2019
+gs-as-tin-031,CATO TEA & SEED,tea_board_registered_planters_2019
+gs-as-tin-032,DAIMUKHIA TEA ESTATE,tea_board_registered_planters_2019
+gs-as-tin-033,CHOTA TINGRAI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-tin-034,CHARALI TEA & TEA SEED ESTATE,tea_board_registered_planters_2019
+gs-as-tin-035,CHANDMARI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-tin-035,Chandmari Tea Estate,pilot_research_202609
+gs-as-tin-036,CHOKHANI TEA & TEA SEED,tea_board_registered_planters_2019
+gs-as-tin-037,BRAHMAJAN TEA ESTATE,tea_board_registered_planters_2019
+gs-as-tin-038,BUDLABETA TEA ESTATE J,tea_board_registered_planters_2019
+gs-as-tin-039,BORBHETA TEA ESTATE,tea_board_registered_planters_2019
+gs-as-tin-040,BORDUBI TEA ESTATE D,tea_board_registered_planters_2019
+gs-as-tin-041,BOGAPANI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-tin-042,BHERJAN TEA ESTATE,tea_board_registered_planters_2019
+gs-as-tin-043,BEESAKOPIE TEA ESTATE,tea_board_registered_planters_2019
+gs-as-tin-044,BAZALONI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-tin-045,BAHADUR TEA ESTATE,tea_board_registered_planters_2019
+gs-as-tin-046,BAGHBARI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-tin-046,Baghbari Tea Estate,pilot_research_202609
+gs-as-tin-047,BAGHJAN TEA ESTATE G,tea_board_registered_planters_2019
+gs-as-tin-048,BAJRANGPUR,tea_board_registered_planters_2019
+gs-as-tin-049,ALAKANANDA TEA ESTATE,tea_board_registered_planters_2019
+gs-as-tin-050,AMBIKA TEA ESTATE,tea_board_registered_planters_2019
+gs-as-tin-051,ANANDABAG TEA ESTATE,tea_board_registered_planters_2019
+gs-as-tin-051,Ananda Bag Tea Estate,pilot_research_202609
+gs-as-tin-052,ANANDAPOOR TEA ESTATE,tea_board_registered_planters_2019
+gs-as-tin-053,NAMDANG,tea_board_registered_planters_2019
+gs-as-tin-054,NILIMA,tea_board_registered_planters_2019
+gs-as-tin-055,HOLLONGHABI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-tin-056,HOKONGURI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-tin-057,HILIKA TEA ESTATE J,tea_board_registered_planters_2019
+gs-as-tin-058,ITAKHOOLI TEA ESTATE D,tea_board_registered_planters_2019
+gs-as-tin-059,PADUMANI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-tin-059,Padumani Tea Estate,pilot_research_202609
+gs-as-tin-060,JALPUNIA TEA ESTATE,tea_board_registered_planters_2019
+gs-as-tin-061,DIROK TEA ESTATE,tea_board_registered_planters_2019
+gs-as-tin-062,DIGULTURRUNG TEA ESTATE,tea_board_registered_planters_2019
+gs-as-tin-063,DINJAN TEA ESTATE,tea_board_registered_planters_2019
+gs-as-tin-064,DUAMARA TEA ESTATE,tea_board_registered_planters_2019
+gs-as-tin-065,GANGABARI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-tin-065,Gangabari Tea Estate,pilot_research_202609
+gs-as-tin-066,HATIMARA TEA ESTATE,tea_board_registered_planters_2019
+gs-as-tin-067,HAPJAN TEA ESTATE J,tea_board_registered_planters_2019
+gs-as-tin-068,HANUMAN TEA ESTATE,tea_board_registered_planters_2019
+gs-as-tin-069,GOHAIN TEA ESTATE,tea_board_registered_planters_2019
+gs-as-tin-070,GILLAPUKRI,tea_board_registered_planters_2019
+gs-as-tin-070,Gillapukhri Tea Estate,pilot_research_202609
+gs-as-tin-071,VISHNU TEA ESTATE,tea_board_registered_planters_2019
+gs-as-tin-072,TONGANAGAON T.E,tea_board_registered_planters_2019
+gs-as-tin-073,TIPPUK,tea_board_registered_planters_2019
+gs-as-tin-074,SEWPUR TEA ESTATE,tea_board_registered_planters_2019
+gs-as-tin-075,SEWALI,tea_board_registered_planters_2019
+gs-as-tin-076,SEGUNBARI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-tin-076,Segunbari Tea Estate,pilot_research_202609
+gs-as-tin-077,SAVITRI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-tin-078,SANKAR TEA ESTATE,tea_board_registered_planters_2019
+gs-as-tin-078,Sankar Tea Estate,pilot_research_202609
+gs-as-tin-079,SAMDANG TEA ESTATE,tea_board_registered_planters_2019
+gs-as-tin-080,SAPORTOLI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-tin-081,SADASIVA TEA ESTATE,tea_board_registered_planters_2019
+gs-as-tin-081,Sadasiva Tea Estate,pilot_research_202609
+gs-as-tin-082,FATHEPUR TEA COMPANY,tea_board_registered_planters_2019
+gs-as-tin-083,PHILLOBARI D,tea_board_registered_planters_2019
+gs-as-tin-084,PENGAREE J,tea_board_registered_planters_2019
+gs-as-tin-085,PATKAI,tea_board_registered_planters_2019
+gs-as-tin-086,RAIDANG TEA ESTATE,tea_board_registered_planters_2019
+gs-as-tin-087,PARSURAM (SOUTH) TEA ESTATE,tea_board_registered_planters_2019
+gs-as-tin-088,PARSURAM (NORTH) TEA ESTATE,tea_board_registered_planters_2019
+gs-as-tin-089,PADUMANI,tea_board_registered_planters_2019
+gs-as-tin-089,Padumani Tea Estate,pilot_research_202609
+gs-as-tin-090,RUPAI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-tin-091,RUNGAGORA,tea_board_registered_planters_2019
+gs-as-tin-092,PRABHAT TEA ESTATE,tea_board_registered_planters_2019
+gs-as-tin-092,Prabhat Tea Estate,pilot_research_202609
+gs-as-tin-093,POWAI A,tea_board_registered_planters_2019
+gs-as-uda-001,PANEERY T.E.,tea_board_registered_planters_2019
+gs-as-uda-002,ORANGAJULI,tea_board_registered_planters_2019
+gs-as-uda-003,ORANG,tea_board_registered_planters_2019
+gs-as-uda-004,SINGRIMARI TEA ESTATE,tea_board_registered_planters_2019
+gs-as-uda-005,HATTIGOR,tea_board_registered_planters_2019
+gs-as-uda-006,DIMAKUSI,tea_board_registered_planters_2019

@@ -1,0 +1,670 @@
+garden_id,canonical_name,normalized_name,current_status,status_confidence,district,region,tea_board_registration,company_id,company_name,scale,marks,prospect_eligibility,exclusion_reason,source
+gs-as-bak-001,FATEMABAD TEA ESTATE,famabad,likely_active,medium,Baksa,Lower Assam,36,gs-as-co-001,FATEMABAD TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-bak-002,MENOKA TEA ESTATE,menoka,likely_active,medium,Baksa,Lower Assam,1764 (RC-530),gs-as-co-002,MENOKA TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-bis-001,BEHALI TEA ESTATE,behali,active_confirmed,high,Biswanath,Central Assam,D-27,gs-as-co-003,McLeod Russel India Limited,Organized Plantation,,excluded_large_group,Conglomerate / Multi-estate group,tea_board_registered_planters_2019
+gs-as-bis-002,BORGAON T.E,borgaon,likely_active,medium,Biswanath,Central Assam,3046,gs-as-co-004,BORGAON T.E,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-bis-003,DHULLIE TEA ESTATE,dhullie,active_confirmed,high,Biswanath,Central Assam,V-4,gs-as-co-003,McLeod Russel India Limited,Organized Plantation,,excluded_large_group,Conglomerate / Multi-estate group,tea_board_registered_planters_2019
+gs-as-bis-004,KETTELA TEA ESTATE,ketla,likely_active,medium,Biswanath,Central Assam,2536,gs-as-co-005,KETTELA TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-bis-005,MAJULIGHUR,majulighur,active_confirmed,high,Biswanath,Central Assam,D-29,gs-as-co-006,Amalgamated Plantations Private Limited (Tata),Organized Plantation,MAJULIGHUR,excluded_large_group,Conglomerate / Multi-estate group,tea_board_registered_planters_2019
+gs-as-bis-006,MAHALUXMI TEA ESTATE,mahaluxmi,likely_active,medium,Biswanath,Central Assam,70,gs-as-co-007,MAHALUXMI TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-bis-007,GINGIA,gingia,likely_active,medium,Biswanath,Central Assam,N/26,gs-as-co-008,GINGIA,Organized Plantation,GINGIA TEA ESTATE,target_candidate,,tea_board_registered_planters_2019
+gs-as-bis-008,HALEM,halem,active_confirmed,high,Biswanath,Central Assam,N-27,gs-as-co-003,McLeod Russel India Limited,Organized Plantation,,excluded_large_group,Conglomerate / Multi-estate group,tea_board_registered_planters_2019
+gs-as-bis-009,MONABARIE,monabarie,active_confirmed,high,Biswanath,Central Assam,N-22,gs-as-co-003,McLeod Russel India Limited,Organized Plantation,,excluded_large_group,Conglomerate / Multi-estate group,tea_board_registered_planters_2019
+gs-as-bis-010,MIJICAJAN,mijicajan,active_confirmed,high,Biswanath,Central Assam,D-28,gs-as-co-003,McLeod Russel India Limited,Organized Plantation,,excluded_large_group,Conglomerate / Multi-estate group,tea_board_registered_planters_2019
+gs-as-bis-011,NEWPURUPBARI,newpurupbari,likely_active,medium,Biswanath,Central Assam,2464,gs-as-co-009,NEWPURUPBARI,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-bis-012,NIRMALA T.E,nirmala,likely_active,medium,Biswanath,Central Assam,105,gs-as-co-010,NIRMALA T.E,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-bis-013,NYA GOGRA T.E,nyagogra,active_confirmed,high,Biswanath,Central Assam,N-28,gs-as-co-003,McLeod Russel India Limited,Organized Plantation,,excluded_large_group,Conglomerate / Multi-estate group,tea_board_registered_planters_2019
+gs-as-bis-014,PERTABGHUR TEA ESTATE,pertabghur,active_confirmed,high,Biswanath,Central Assam,D/6,gs-as-co-003,McLeod Russel India Limited,Organized Plantation,,excluded_large_group,Conglomerate / Multi-estate group,tea_board_registered_planters_2019
+gs-as-bis-015,TEZALPATTY TEA ESTATE,zalpatty,likely_active,medium,Biswanath,Central Assam,2874,gs-as-co-011,TEZALPATTY TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cac-001,SRILA TE,srila,likely_active,medium,Cachar,Barak Valley,3028,gs-as-co-012,SRILA TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cac-002,SUBONG TEA(PRITHVI TEA CO PVT LTD),subongaprithviaco,likely_active,medium,Cachar,Barak Valley,2513,gs-as-co-013,SUBONG TEA(PRITHVI TEA CO PVT LTD),Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cac-003,PATHECHERRA TEA ESTATE,pathecherra,likely_active,medium,Cachar,Barak Valley,1880,gs-as-co-014,PATHECHERRA TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cac-004,PALLORBUND,pallorbund,likely_active,medium,Cachar,Barak Valley,2424,gs-as-co-015,PALLORBUND,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cac-005,RUKNI TE,rukni,likely_active,medium,Cachar,Barak Valley,2429,gs-as-co-016,RUKNI TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cac-006,ROSEKANDY TE,rosekandy,likely_active,medium,Cachar,Barak Valley,2217,gs-as-co-017,ROSEKANDY TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cac-007,RUTTONPORE TE,ruttonpore,likely_active,medium,Cachar,Barak Valley,2289,gs-as-co-018,RUTTONPORE TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cac-008,RAHMAN NAGAR,rahmannagar,likely_active,medium,Cachar,Barak Valley,76,gs-as-co-019,RAHMAN NAGAR,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cac-009,RAMPORE TE,rampore,likely_active,medium,Cachar,Barak Valley,2402,gs-as-co-020,RAMPORE TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cac-010,POLOI TE,poloi,likely_active,medium,Cachar,Barak Valley,2239,gs-as-co-021,POLOI TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cac-011,URRUNABUND TE,urrunabund,likely_active,medium,Cachar,Barak Valley,2029,gs-as-co-022,URRUNABUND TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cac-012,WEST JALINGA TE,westjalinga,likely_active,medium,Cachar,Barak Valley,2451,gs-as-co-023,WEST JALINGA TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cac-013,SILCURI,silcuri,likely_active,medium,Cachar,Barak Valley,2403,gs-as-co-024,SILCURI,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cac-014,HILARA TE,hilara,likely_active,medium,Cachar,Barak Valley,2380,gs-as-co-025,HILARA TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cac-015,IRINGMARA TEA ESTATE,iringmara,likely_active,medium,Cachar,Barak Valley,2007,gs-as-co-026,IRINGMARA TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cac-016,INDRAGARH TE,indragarh,likely_active,medium,Cachar,Barak Valley,2964,gs-as-co-027,INDRAGARH TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cac-017,JATINGA VALLEY TE,jatingavalley,likely_active,medium,Cachar,Barak Valley,2055,gs-as-co-028,JATINGA VALLEY TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cac-018,JELLALPORE TEA ESTATE,jellalpore,likely_active,medium,Cachar,Barak Valley,2568,gs-as-co-029,JELLALPORE TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cac-019,JHIRIGHAT TE,jhirighat,likely_active,medium,Cachar,Barak Valley,H-9,gs-as-co-030,JHIRIGHAT TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cac-020,MONIIERKHAL TE,moniierkhal,likely_active,medium,Cachar,Barak Valley,2337,gs-as-co-031,MONIIERKHAL TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cac-021,HATTICHERRA TE,hatticherra,likely_active,medium,Cachar,Barak Valley,2512,gs-as-co-032,HATTICHERRA TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cac-022,DWARBUND TE,dwarbund,likely_active,medium,Cachar,Barak Valley,2451,gs-as-co-033,DWARBUND TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cac-023,DILKHOOSH TE,dilkhoosh,likely_active,medium,Cachar,Barak Valley,2432,gs-as-co-034,DILKHOOSH TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cac-024,DOOLOOGRAM TE,dooloogram,likely_active,medium,Cachar,Barak Valley,2166,gs-as-co-035,DOOLOOGRAM TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cac-025,DOLOO TE,doloo,likely_active,medium,Cachar,Barak Valley,2474,gs-as-co-036,DOLOO TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cac-026,MADOORA TE,madoora,likely_active,medium,Cachar,Barak Valley,288,gs-as-co-037,MADOORA TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cac-027,MARTYCHERRA TE,martycherra,likely_active,medium,Cachar,Barak Valley,2098,gs-as-co-038,MARTYCHERRA TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cac-028,LARSINGAH TE,larsingah,likely_active,medium,Cachar,Barak Valley,2391,gs-as-co-039,LARSINGAH TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cac-029,LABAC,labac,likely_active,medium,Cachar,Barak Valley,2470,gs-as-co-040,LABAC,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cac-030,LAKHIPORE,lakhipore,likely_active,medium,Cachar,Barak Valley,2177,gs-as-co-041,LAKHIPORE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cac-031,KOOMBER TEA ESTATE,koomber,likely_active,medium,Cachar,Barak Valley,2653,gs-as-co-042,KOOMBER TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cac-032,KAILASHPUR TE,kailashpur,likely_active,medium,Cachar,Barak Valley,2679,gs-as-co-043,KAILASHPUR TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cac-033,KALLINECHERRA,kallinecherra,likely_active,medium,Cachar,Barak Valley,C-10,gs-as-co-044,KALLINECHERRA,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cac-034,KALLINE TE,kalline,likely_active,medium,Cachar,Barak Valley,2569,gs-as-co-045,KALLINE TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cac-035,KHOREEL TEA ESTATE,khoreel,likely_active,medium,Cachar,Barak Valley,2060,gs-as-co-046,KHOREEL TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cac-036,BICRAMPORE T.E.,bicrampore,likely_active,medium,Cachar,Barak Valley,2309,gs-as-co-047,BICRAMPORE T.E.,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cac-037,BINNAKANDY T.E,binnakandy,likely_active,medium,Cachar,Barak Valley,2437,gs-as-co-048,BINNAKANDY T.E,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cac-038,BOROKAI T.E,borokai,likely_active,medium,Cachar,Barak Valley,2384,gs-as-co-049,BOROKAI T.E,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cac-039,BOROJALINGAH T.E.,borojalingah,likely_active,medium,Cachar,Barak Valley,2340,gs-as-co-050,BOROJALINGAH T.E.,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cac-040,BURTOLL T.E,burtoll,likely_active,medium,Cachar,Barak Valley,2469,gs-as-co-051,BURTOLL T.E,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cac-041,CHANDIGHAT T.E.,chandighat,likely_active,medium,Cachar,Barak Valley,2540,gs-as-co-052,CHANDIGHAT T.E.,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cac-042,COOMBERGRAM,coombergram,likely_active,medium,Cachar,Barak Valley,C-2,gs-as-co-053,COOMBERGRAM,Organized Plantation,COOMBERGRAM,target_candidate,,tea_board_registered_planters_2019
+gs-as-cac-043,CRAIGPARK T.E.,craigpark,likely_active,medium,Cachar,Barak Valley,2369(2368),gs-as-co-054,CRAIGPARK T.E.,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cac-044,DEGUBBER T.E,degubber,likely_active,medium,Cachar,Barak Valley,2163,gs-as-co-055,DEGUBBER T.E,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cac-045,DERBY T.E,derby,likely_active,medium,Cachar,Barak Valley,2350,gs-as-co-056,DERBY T.E,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cac-046,DEWAN TE,dewan,likely_active,medium,Cachar,Barak Valley,2468,gs-as-co-057,DEWAN TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cac-047,BENODNAGAR T.E,benodnagar,likely_active,medium,Cachar,Barak Valley,110,gs-as-co-058,BENODNAGAR T.E,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cac-048,BHUBANDHAR TEA ESTATE,bhubandhar,likely_active,medium,Cachar,Barak Valley,2460,gs-as-co-059,BHUBANDHAR TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cac-049,BHUVANVALLEY,bhuvanvalley,likely_active,medium,Cachar,Barak Valley,2035,gs-as-co-060,BHUVANVALLEY,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cac-050,BAJRANGPUR,bajrangpur,likely_active,medium,Cachar,Barak Valley,2165,gs-as-co-061,BAJRANGPUR,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cac-051,BALACHERRA TE,balacherra,likely_active,medium,Cachar,Barak Valley,1304,gs-as-co-062,BALACHERRA TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cac-052,ALYNEE & NARAINDHAR,alyneenaraindhar,likely_active,medium,Cachar,Barak Valley,2509,gs-as-co-063,ALYNEE & NARAINDHAR,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cac-053,AMRANAGAR TEA ESTATE,amranagar,likely_active,medium,Cachar,Barak Valley,1613,gs-as-co-064,AMRANAGAR TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cac-054,ARCUTTIPORE TE,arcuttipore,likely_active,medium,Cachar,Barak Valley,2332,gs-as-co-065,ARCUTTIPORE TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cha-001,AIDEOBARI TEA ESTATE,aideobari,likely_active,medium,Charaideo,Upper Assam,2124,gs-as-co-066,AIDEOBARI TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cha-002,AIDEOPUKHURI TEA ESTATE,aideopukhuri,likely_active,medium,Charaideo,Upper Assam,1065,gs-as-co-067,AIDEOPUKHURI TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cha-003,BEHUBOR TE,behubor,likely_active,medium,Charaideo,Upper Assam,391,gs-as-co-068,BEHUBOR TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cha-004,BEZBARUAH TEA ESTATE,bezbaruah,likely_active,medium,Charaideo,Upper Assam,1675,gs-as-co-069,BEZBARUAH TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cha-005,BHUYANKHAT,bhuyankhat,likely_active,medium,Charaideo,Upper Assam,1718,gs-as-co-070,BHUYANKHAT,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cha-006,BARASALI TE,barasali,likely_active,medium,Charaideo,Upper Assam,2279,gs-as-co-071,BARASALI TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cha-007,BARUAKHAT,baruakhat,likely_active,medium,Charaideo,Upper Assam,393,gs-as-co-072,BARUAKHAT,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cha-008,DEEPLING TEA ESTATE,deepling,likely_active,medium,Charaideo,Upper Assam,2583,gs-as-co-073,DEEPLING TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cha-009,BORPATRA TEA GARDEN,borpatra,likely_active,medium,Charaideo,Upper Assam,K-22,gs-as-co-074,BORPATRA TEA GARDEN,Organized Plantation,BORPATRA,target_candidate,,tea_board_registered_planters_2019
+gs-as-cha-010,BORTIMON TE,bortimon,likely_active,medium,Charaideo,Upper Assam,2274,gs-as-co-075,BORTIMON TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cha-011,BORHAT TEA ESTATE,borhat,likely_active,medium,Charaideo,Upper Assam,A-49,gs-as-co-076,BORHAT TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cha-012,CHERIDEO PURBUT T.E,cherideopurbut,likely_active,medium,Charaideo,Upper Assam,RC-2571,gs-as-co-077,CHERIDEO PURBUT T.E,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cha-013,BEMOLAPUR,bemolapur,likely_active,medium,Charaideo,Upper Assam,2641,gs-as-co-078,BEMOLAPUR,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cha-014,NAHORHABI TEA ESTATE,nahorhabi,likely_active,medium,Charaideo,Upper Assam,2203,gs-as-co-079,NAHORHABI TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cha-015,KHAGORIJAN TE,khagorijan,likely_active,medium,Charaideo,Upper Assam,304 (RC-829),gs-as-co-080,KHAGORIJAN TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cha-016,KHONA TE,khona,likely_active,medium,Charaideo,Upper Assam,2159,gs-as-co-081,KHONA TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cha-017,MAJIDPUR TEA GARDEN,majidpur,likely_active,medium,Charaideo,Upper Assam,466,gs-as-co-082,MAJIDPUR TEA GARDEN,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cha-018,KOLAKATA TEA GARDEN,kolakata,likely_active,medium,Charaideo,Upper Assam,882,gs-as-co-083,KOLAKATA TEA GARDEN,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cha-019,LAKILY TEA ESTATE,lakily,likely_active,medium,Charaideo,Upper Assam,2891,gs-as-co-084,LAKILY TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cha-020,LAKSHMIJAN,lakshmijan,likely_active,medium,Charaideo,Upper Assam,337,gs-as-co-085,LAKSHMIJAN,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cha-021,LUKWAH TE,lukwah,likely_active,medium,Charaideo,Upper Assam,2159,gs-as-co-086,LUKWAH TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cha-022,MAJIDPUR B TEA GARDEN,majidpurb,likely_active,medium,Charaideo,Upper Assam,466,gs-as-co-087,MAJIDPUR B TEA GARDEN,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cha-023,DUBBA,dubba,likely_active,medium,Charaideo,Upper Assam,3443,gs-as-co-088,DUBBA,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cha-024,GHORAJAN,ghorajan,active_confirmed,high,Charaideo,Upper Assam,282,gs-as-co-089,Sitaram Budhkaran Choukhany & Co.,148.87 Ha,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cha-025,GUWATING,guwating,likely_active,medium,Charaideo,Upper Assam,2680,gs-as-co-090,GUWATING,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cha-026,"HAJUA-KHOOMTAIE G54, G52 (RC-631)",hajuakhoomtaieg54g52rc631,likely_active,medium,Charaideo,Upper Assam,Not Available,gs-as-co-091,"HAJUA-KHOOMTAIE G54, G52 (RC-631)",Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cha-027,HINGRIJAN TEA ESTATE,hingrijan,likely_active,medium,Charaideo,Upper Assam,2671,gs-as-co-092,HINGRIJAN TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cha-028,HINGRAJAN,hingrajan,likely_active,medium,Charaideo,Upper Assam,291,gs-as-co-093,HINGRAJAN,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cha-029,JABOKA TE Q10,jabokaq10,likely_active,medium,Charaideo,Upper Assam,Not Available,gs-as-co-094,JABOKA TE Q10,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cha-030,MAJIDPUR (A) PART II TEA ESTATE,majidpurapartii,likely_active,medium,Charaideo,Upper Assam,2499,gs-as-co-095,MAJIDPUR (A) PART II TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cha-031,MUTTRAPORE TE Q,muttraporeq,likely_active,medium,Charaideo,Upper Assam,9,gs-as-co-096,MUTTRAPORE TE Q,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cha-032,MUKTABARI TEA ESTATE,muktabari,likely_active,medium,Charaideo,Upper Assam,1900,gs-as-co-097,MUKTABARI TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cha-033,NAGAHAT TE,nagahat,likely_active,medium,Charaideo,Upper Assam,3881,gs-as-co-098,NAGAHAT TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cha-034,NAMDANG,namdang,likely_active,medium,Charaideo,Upper Assam,2490,gs-as-co-099,NAMDANG,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cha-035,NAPUK TE,napuk,likely_active,medium,Charaideo,Upper Assam,Q-8,gs-as-co-100,NAPUK TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cha-036,SHREELUXMI TEA ESTATE,shreeluxmi,likely_active,medium,Charaideo,Upper Assam,305,gs-as-co-101,SHREELUXMI TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cha-037,SHANTIPUR,shantipur,likely_active,medium,Charaideo,Upper Assam,2687/RC-1239,gs-as-co-102,SHANTIPUR,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cha-038,SARUMATHURA TE,sarumathura,likely_active,medium,Charaideo,Upper Assam,386,gs-as-co-103,SARUMATHURA TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cha-039,SALKATHONI,salkathoni,likely_active,medium,Charaideo,Upper Assam,2224,gs-as-co-104,SALKATHONI,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cha-040,RATANPUR TE,ratanpur,likely_active,medium,Charaideo,Upper Assam,394,gs-as-co-105,RATANPUR TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cha-041,RANGCHALLI,rangchalli,likely_active,medium,Charaideo,Upper Assam,319,gs-as-co-106,RANGCHALLI,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cha-042,RAIDANG,raidang,likely_active,medium,Charaideo,Upper Assam,319,gs-as-co-107,RAIDANG,Organized Plantation,RAIDANG T.E.,target_candidate,,tea_board_registered_planters_2019
+gs-as-cha-043,RONGBARI,rongbari,likely_active,medium,Charaideo,Upper Assam,2447,gs-as-co-108,RONGBARI,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cha-044,OUGURIJAN,ougurijan,likely_active,medium,Charaideo,Upper Assam,275,gs-as-co-109,OUGURIJAN,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cha-045,SUFFRY TEA ESTATE Q,suffryq,likely_active,medium,Charaideo,Upper Assam,7,gs-as-co-110,SUFFRY TEA ESTATE Q,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cha-046,SUNDARPUR TEA ESTATE,sundarpur,likely_active,medium,Charaideo,Upper Assam,351/544/2110,gs-as-co-111,SUNDARPUR TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cha-047,SUNTOK TEA ESTATE,suntok,likely_active,medium,Charaideo,Upper Assam,2570,gs-as-co-112,SUNTOK TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cha-048,TAIRAI,tairai,likely_active,medium,Charaideo,Upper Assam,2652,gs-as-co-113,TAIRAI,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cha-049,SOONITPUR TEA ESTATE,soonitpur,likely_active,medium,Charaideo,Upper Assam,2737,gs-as-co-114,SOONITPUR TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cha-050,SONARIE,sonarie,likely_active,medium,Charaideo,Upper Assam,2082,gs-as-co-115,SONARIE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cha-051,TINGALIBAM T.E,tingalibam,likely_active,medium,Charaideo,Upper Assam,881,gs-as-co-116,TINGALIBAM T.E,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-cha-052,TIMON TE,timon,likely_active,medium,Charaideo,Upper Assam,2197,gs-as-co-117,TIMON TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dar-001,TONGANI TEA ESTATE,tongani,likely_active,medium,Darrang,Lower Assam,2081,gs-as-co-118,TONGANI TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dar-002,CHIKONMATI,chikonmati,likely_active,medium,Darrang,Lower Assam,244,gs-as-co-119,CHIKONMATI,Organized Plantation,CHIKONMATI SUNBRAND,target_candidate,,tea_board_registered_planters_2019
+gs-as-dar-003,BARGARA,bargara,likely_active,medium,Darrang,Lower Assam,178,gs-as-co-120,BARGARA,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dhu-001,CHOIBARI TEA ESTATE,choibari,likely_active,medium,Dhubri,Lower Assam,2562,gs-as-co-121,CHOIBARI TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dhu-002,CHAPAR,chapar,likely_active,medium,Dhubri,Lower Assam,164,gs-as-co-122,CHAPAR,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dhu-003,KRISHNAKALI TEA ESTATE,krishnakali,likely_active,medium,Dhubri,Lower Assam,387,gs-as-co-123,KRISHNAKALI TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-001,"MOHMORA UNIT-II, DEKHARI TEA ESTATE, C/O MAYUR PLANTATION",mohmoraunitiidekharicomayurplantation,likely_active,medium,Dibrugarh,Upper Assam,Not Available,gs-as-co-124,"MOHMORA UNIT-II, DEKHARI TEA ESTATE, C/O MAYUR PLANTATION",Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-002,KORANGANI,korangani,likely_active,medium,Dibrugarh,Upper Assam,355,gs-as-co-125,KORANGANI,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-003,LAHOALBARI,lahoalbari,likely_active,medium,Dibrugarh,Upper Assam,331,gs-as-co-126,LAHOALBARI,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-004,LENGRAI,lengrai,likely_active,medium,Dibrugarh,Upper Assam,"2565, RC -732",gs-as-co-127,LENGRAI,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-005,LEPETKATTA,lepetkatta,active_confirmed,high,Dibrugarh,Upper Assam,D-26,gs-as-co-003,McLeod Russel India Limited,Organized Plantation,,excluded_large_group,Conglomerate / Multi-estate group,tea_board_registered_planters_2019
+gs-as-dib-006,MAHABIR,mahabir,likely_active,medium,Dibrugarh,Upper Assam,77,gs-as-co-128,MAHABIR,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-007,MAIJAN T E,maijan,active_confirmed,high,Dibrugarh,Upper Assam,G-15,gs-as-co-129,Assam Company India Limited (BRS Group),Organized Plantation,,excluded_large_group,Conglomerate / Multi-estate group,tea_board_registered_planters_2019
+gs-as-dib-008,MANABARI,manabari,likely_active,medium,Dibrugarh,Upper Assam,2504,gs-as-co-130,MANABARI,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-009,MAUD TEA ESTATE,maud,likely_active,medium,Dibrugarh,Upper Assam,1852,gs-as-co-131,MAUD TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-010,MADHUTING TEA ESTATE,madhuting,likely_active,medium,Dibrugarh,Upper Assam,234,gs-as-co-132,MADHUTING TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-011,MADHUBAN,madhuban,likely_active,medium,Dibrugarh,Upper Assam,2433,gs-as-co-133,MADHUBAN,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-012,MAHABIRBARI,mahabirbari,likely_active,medium,Dibrugarh,Upper Assam,3143,gs-as-co-134,MAHABIRBARI,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-013,MANCOTTA,mancotta,likely_active,medium,Dibrugarh,Upper Assam,2538,gs-as-co-135,MANCOTTA,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-014,MADARKHAT,madarkhat,likely_active,medium,Dibrugarh,Upper Assam,1815,gs-as-co-136,MADARKHAT,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-015,KHOWANG,khowang,active_confirmed,high,Dibrugarh,Upper Assam,2619,gs-as-co-137,Andrew Yule & Company Limited (Govt of India),Organized Plantation,"KHOWANG, HINGRIJAN",excluded_large_group,Conglomerate / Multi-estate group,tea_board_registered_planters_2019
+gs-as-dib-016,KHARJAN TEA ESTATE,kharjan,active_confirmed,high,Dibrugarh,Upper Assam,J-15,gs-as-co-138,Apeejay Tea Limited (Assam Frontier),Organized Plantation,,excluded_large_group,Conglomerate / Multi-estate group,tea_board_registered_planters_2019
+gs-as-dib-017,KHANIKAR,khanikar,likely_active,medium,Dibrugarh,Upper Assam,2103,gs-as-co-139,KHANIKAR,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-018,KAMAKHYA CHA BAGICHA,kamakhyachabagicha,likely_active,medium,Dibrugarh,Upper Assam,Not Available,gs-as-co-140,KAMAKHYA CHA BAGICHA,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-019,KENDUGURI,kenduguri,likely_active,medium,Dibrugarh,Upper Assam,69,gs-as-co-141,KENDUGURI,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-020,TRIVENI TEA ESTATE,triveni,likely_active,medium,Dibrugarh,Upper Assam,2739,gs-as-co-142,TRIVENI TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-021,KAILASHPUR TEA ESTATE,kailashpur,likely_active,medium,Dibrugarh,Upper Assam,194,gs-as-co-143,KAILASHPUR TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-022,KALIAPANI,kaliapani,active_confirmed,high,Dibrugarh,Upper Assam,1699,gs-as-co-144,Jainex Tea Company Private Limited,76.65 Ha,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-023,PRAKASH PRATISTHAN TEA ESTATE,prakashpratisthan,likely_active,medium,Dibrugarh,Upper Assam,2637,gs-as-co-145,PRAKASH PRATISTHAN TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-024,HELENBARI TEA ESTATE,helenbari,likely_active,medium,Dibrugarh,Upper Assam,379,gs-as-co-146,HELENBARI TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-025,KATHALGURI,kathalguri,likely_active,medium,Dibrugarh,Upper Assam,233,gs-as-co-147,KATHALGURI,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-026,KANJIBARI TEA ESTATE,kanjibari,likely_active,medium,Dibrugarh,Upper Assam,2105,gs-as-co-148,KANJIBARI TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-027,CHOWDUNG TEA ESTATE,chowdung,likely_active,medium,Dibrugarh,Upper Assam,2780,gs-as-co-149,CHOWDUNG TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-028,CHUBWA TEA ESTATE,chubwa,active_confirmed,high,Dibrugarh,Upper Assam,A-64,gs-as-co-006,Amalgamated Plantations Private Limited (Tata),Organized Plantation,,excluded_large_group,Conglomerate / Multi-estate group,tea_board_registered_planters_2019
+gs-as-dib-029,DESAM TEA ESTATE,desam,likely_active,medium,Dibrugarh,Upper Assam,2618,gs-as-co-150,DESAM TEA ESTATE,Organized Plantation,"DESAM, BHAMUN",target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-030,ESSEL BIO RESEARCH PLANTATION (DEKHARI),esselbioresearchplantationdekhari,likely_active,medium,Dibrugarh,Upper Assam,2554,gs-as-co-151,ESSEL BIO RESEARCH PLANTATION (DEKHARI),Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-031,BIJLI BARI TEA ESTATE,bijlibari,likely_active,medium,Dibrugarh,Upper Assam,1983,gs-as-co-152,BIJLI BARI TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-032,BORBOROOAH TEA ESTATE,borborooah,active_confirmed,high,Dibrugarh,Upper Assam,G-17,gs-as-co-129,Assam Company India Limited (BRS Group),Organized Plantation,,excluded_large_group,Conglomerate / Multi-estate group,tea_board_registered_planters_2019
+gs-as-dib-033,BIPINBAG TEA ESTATE,bipinbag,likely_active,medium,Dibrugarh,Upper Assam,2902,gs-as-co-153,BIPINBAG TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-034,BHAGATRAM TEA ESTATE,bhagatram,likely_active,medium,Dibrugarh,Upper Assam,Not Available,gs-as-co-154,BHAGATRAM TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-035,BALIMARA TEA ESTATE,balimara,likely_active,medium,Dibrugarh,Upper Assam,2092,gs-as-co-155,BALIMARA TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-036,BAUGHPARA,baughpara,likely_active,medium,Dibrugarh,Upper Assam,2284,gs-as-co-156,BAUGHPARA,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-037,BALIJAN(H) TEA ESTATE,balijanh,likely_active,medium,Dibrugarh,Upper Assam,H-1,gs-as-co-157,BALIJAN(H) TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-038,BASMATIA TEA ESTATE,basmatia,active_confirmed,high,Dibrugarh,Upper Assam,2775,gs-as-co-137,Andrew Yule & Company Limited (Govt of India),Organized Plantation,,excluded_large_group,Conglomerate / Multi-estate group,tea_board_registered_planters_2019
+gs-as-dib-039,BARBARI TEA ESTATE,barbari,likely_active,medium,Dibrugarh,Upper Assam,2527,gs-as-co-158,BARBARI TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-040,BASANTIBARI TEA ESTATE,basantibari,likely_active,medium,Dibrugarh,Upper Assam,5475,gs-as-co-159,BASANTIBARI TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-041,BALIJAN NORTH TEA ESTATE,balijannorth,likely_active,medium,Dibrugarh,Upper Assam,H-16,gs-as-co-160,BALIJAN NORTH TEA ESTATE,Organized Plantation,BALIJAN NORTH TEA ESTATE,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-042,MAYAJAN TEA ESTATE,mayajan,likely_active,medium,Dibrugarh,Upper Assam,338,gs-as-co-161,MAYAJAN TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-043,BHAJONI TEA ESTATE,bhajoni,likely_active,medium,Dibrugarh,Upper Assam,3877,gs-as-co-162,BHAJONI TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-044,BHAMUN TEA ESTATE,bhamun,active_confirmed,high,Dibrugarh,Upper Assam,2619,gs-as-co-137,Andrew Yule & Company Limited (Govt of India),Organized Plantation,,excluded_large_group,Conglomerate / Multi-estate group,tea_board_registered_planters_2019
+gs-as-dib-045,BHARTIA TEA ESTATE,bhartia,likely_active,medium,Dibrugarh,Upper Assam,2196,gs-as-co-163,BHARTIA TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-046,AGARWAL,agarwal,likely_active,medium,Dibrugarh,Upper Assam,2715,gs-as-co-164,AGARWAL,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-047,AHMEDY TEA ESTATE,ahmedy,likely_active,medium,Dibrugarh,Upper Assam,336,gs-as-co-165,AHMEDY TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-048,ALIMUR PLANT PVT LTD,alimurplant,likely_active,medium,Dibrugarh,Upper Assam,2779,gs-as-co-166,ALIMUR PLANT PVT LTD,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-049,ACHABAM A,achabama,active_confirmed,high,Dibrugarh,Upper Assam,58,gs-as-co-006,Amalgamated Plantations Private Limited (Tata),Organized Plantation,,excluded_large_group,Conglomerate / Multi-estate group,tea_board_registered_planters_2019
+gs-as-dib-050,MEGHA,megha,likely_active,medium,Dibrugarh,Upper Assam,4116,gs-as-co-167,MEGHA,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-051,ARUNSHREE TEA ESTATE,arunshree,likely_active,medium,Dibrugarh,Upper Assam,2692,gs-as-co-168,ARUNSHREE TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-052,ASITPUR TEA ESTATE,asitpur,likely_active,medium,Dibrugarh,Upper Assam,283,gs-as-co-169,ASITPUR TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-053,APARNA TEA ESTATE,aparna,likely_active,medium,Dibrugarh,Upper Assam,Not Available,gs-as-co-170,APARNA TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-054,AMULYABARI TEA ESTATE,amulyabari,active_confirmed,high,Dibrugarh,Upper Assam,1690,gs-as-co-171,Pratul Kumar Phukan proprietorship,63.00 Ha,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-055,AMULGURI,amulguri,active_confirmed,high,Dibrugarh,Upper Assam,396,gs-as-co-172,Current ownership unverified,Organized Plantation,,excluded_large_group,Public company or multi-estate group,tea_board_registered_planters_2019
+gs-as-dib-056,SHALMARI,shalmari,active_confirmed,high,Dibrugarh,Upper Assam,965,gs-as-co-144,Jainex Tea Company Private Limited,111.34 Ha,,excluded_large_group,Public company or multi-estate group,tea_board_registered_planters_2019
+gs-as-dib-057,SHYAMMURTI,shyammurti,likely_active,medium,Dibrugarh,Upper Assam,2683,gs-as-co-173,SHYAMMURTI,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-058,TODI,todi,likely_active,medium,Dibrugarh,Upper Assam,2678,gs-as-co-174,TODI,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-059,SEALKOTEE TEA ESTATE,sealkoe,likely_active,medium,Dibrugarh,Upper Assam,H-19,gs-as-co-175,SEALKOTEE TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-060,SESSA K,sessak,likely_active,medium,Dibrugarh,Upper Assam,25,gs-as-co-176,SESSA K,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-061,SEPON TEA ESTATE,sepon,likely_active,medium,Dibrugarh,Upper Assam,D-33,gs-as-co-177,SEPON TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-062,SATKARTAR,satkartar,likely_active,medium,Dibrugarh,Upper Assam,2575,gs-as-co-178,SATKARTAR,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-063,SAINAGAR,sainagar,likely_active,medium,Dibrugarh,Upper Assam,2725,gs-as-co-179,SAINAGAR,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-064,SATYANARAYAN TEA ESTATE,satyanarayan,active_confirmed,high,Dibrugarh,Upper Assam,2093,gs-as-co-180,Satyanarayan Tea Company Private Limited,225.13 Ha,,excluded_large_group,Public company or multi-estate group,tea_board_registered_planters_2019
+gs-as-dib-065,SATISPUR,satispur,active_confirmed,high,Dibrugarh,Upper Assam,2693,gs-as-co-181,Sudip Chandra Bagchi proprietorship,93.18 Ha,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-066,SAROJINI TEA ESTATE,sarojini,active_confirmed,high,Dibrugarh,Upper Assam,2057,gs-as-co-182,Sarojini Tea Co Pvt Ltd,133.87 Ha,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-067,SINGLIJAN K,singlijank,likely_active,medium,Dibrugarh,Upper Assam,3,gs-as-co-183,SINGLIJAN K,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-068,ZALONI,zaloni,likely_active,medium,Dibrugarh,Upper Assam,H-30,gs-as-co-184,ZALONI,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-069,HATIGARH TEA ESTATE,hatigarh,likely_active,medium,Dibrugarh,Upper Assam,2802,gs-as-co-185,HATIGARH TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-070,UMATARA,umatara,likely_active,medium,Dibrugarh,Upper Assam,2483,gs-as-co-186,UMATARA,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-071,SHREE GANGA TEA ESTATE,shreeganga,likely_active,medium,Dibrugarh,Upper Assam,Z-3,gs-as-co-187,SHREE GANGA TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-072,UDALGURI TEA ESTATE,udalguri,active_confirmed,high,Dibrugarh,Upper Assam,2048,gs-as-co-188,Udalguri Tea Company Private Limited,213.50 Ha,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-073,PARBATIPUR,parbatipur,likely_active,medium,Dibrugarh,Upper Assam,1469,gs-as-co-189,PARBATIPUR,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-074,PARBATIPUR,parbatipur,likely_active,medium,Dibrugarh,Upper Assam,2560,gs-as-co-189,PARBATIPUR,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-075,PHUKENBARI,phukenbari,active_confirmed,high,Dibrugarh,Upper Assam,400,gs-as-co-190,Phukenbari Tea Co. Pvt. Ltd.,154.23 Ha,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-076,PIPRATOLY TEA ESTATE,pipratoly,active_confirmed,high,Dibrugarh,Upper Assam,352,gs-as-co-191,Bishmile Industry partnership,149.64 Ha,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-077,RUNGLITING,rungliting,likely_active,medium,Dibrugarh,Upper Assam,2245,gs-as-co-192,RUNGLITING,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-078,PURSOTTAM,pursottam,likely_active,medium,Dibrugarh,Upper Assam,Not Available,gs-as-co-193,PURSOTTAM,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-079,RADHESHYAM TEA ESTATE,radheshyam,likely_active,medium,Dibrugarh,Upper Assam,2476,gs-as-co-194,RADHESHYAM TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-080,RAJAH ALLI,rajahalli,likely_active,medium,Dibrugarh,Upper Assam,H-25,gs-as-co-195,RAJAH ALLI,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-081,RAMJI MOHAN,ramjimohan,likely_active,medium,Dibrugarh,Upper Assam,2760,gs-as-co-196,RAMJI MOHAN,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-082,RAJGARH,rajgarh,active_confirmed,high,Dibrugarh,Upper Assam,2772/RC 1227,gs-as-co-137,Andrew Yule & Company Limited (Govt of India),Organized Plantation,"RAJGARH, YULE ORANGE",excluded_large_group,Conglomerate / Multi-estate group,tea_board_registered_planters_2019
+gs-as-dib-083,NAHORKUTIA A,nahorkutiaa,likely_active,medium,Dibrugarh,Upper Assam,34 (RC-148)(,gs-as-co-197,NAHORKUTIA A,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-084,NAMROOP,namroop,active_confirmed,high,Dibrugarh,Upper Assam,A-35,gs-as-co-006,Amalgamated Plantations Private Limited (Tata),Organized Plantation,,excluded_large_group,Conglomerate / Multi-estate group,tea_board_registered_planters_2019
+gs-as-dib-085,NANDANBAN TEA ESTATE,nandanban,likely_active,medium,Dibrugarh,Upper Assam,339,gs-as-co-198,NANDANBAN TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-086,NAHORTOLI T.E,nahortoli,active_confirmed,high,Dibrugarh,Upper Assam,A-43,gs-as-co-006,Amalgamated Plantations Private Limited (Tata),Organized Plantation,"NAHORTOLI, RANIKHOLA",excluded_large_group,Conglomerate / Multi-estate group,tea_board_registered_planters_2019
+gs-as-dib-087,MUKUL,mukul,likely_active,medium,Dibrugarh,Upper Assam,2458,gs-as-co-199,MUKUL,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-088,MULCHANDBAG,mulchandbag,likely_active,medium,Dibrugarh,Upper Assam,2620,gs-as-co-200,MULCHANDBAG,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-089,NILMONI,nilmoni,likely_active,medium,Dibrugarh,Upper Assam,683,gs-as-co-201,NILMONI,Organized Plantation,RANGABAM,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-090,MANOJKUNJ TEA ESTATE,manojkunj,likely_active,medium,Dibrugarh,Upper Assam,940,gs-as-co-202,MANOJKUNJ TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-091,NUDWA T.E,nudwa,active_confirmed,high,Dibrugarh,Upper Assam,G-18/RC-636,gs-as-co-129,Assam Company India Limited (BRS Group),Organized Plantation,,excluded_large_group,Conglomerate / Multi-estate group,tea_board_registered_planters_2019
+gs-as-dib-092,NEW PARBOTIPUR,newparbotipur,likely_active,medium,Dibrugarh,Upper Assam,2880,gs-as-co-203,NEW PARBOTIPUR,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-093,NEW SADASIVA,newsadasiva,likely_active,medium,Dibrugarh,Upper Assam,2813,gs-as-co-204,NEW SADASIVA,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-094,HIMALAYA TEA ESTATE,himalaya,likely_active,medium,Dibrugarh,Upper Assam,2753,gs-as-co-205,HIMALAYA TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-095,HUKANPUKRI TEA ESTATE,hukanpukri,likely_active,medium,Dibrugarh,Upper Assam,2612,gs-as-co-206,HUKANPUKRI TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-096,IDA TEA ESTATE,ida,likely_active,medium,Dibrugarh,Upper Assam,NOT REGISTERED,gs-as-co-207,IDA TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-097,MORAN,moran,active_confirmed,high,Dibrugarh,Upper Assam,D-32,gs-as-co-003,McLeod Russel India Limited,Organized Plantation,,excluded_large_group,Conglomerate / Multi-estate group,tea_board_registered_planters_2019
+gs-as-dib-098,MOTHOLA,mothola,active_confirmed,high,Dibrugarh,Upper Assam,2410,gs-as-co-172,Current ownership unverified,196.96 Ha,,excluded_large_group,Public company or multi-estate group,tea_board_registered_planters_2019
+gs-as-dib-099,MOHUNBAREE,mohunbaree,likely_active,medium,Dibrugarh,Upper Assam,H-18,gs-as-co-208,MOHUNBAREE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-100,JOONKTOLLEE TEA ESTATE,joonktollee,likely_active,medium,Dibrugarh,Upper Assam,Z-2,gs-as-co-209,JOONKTOLLEE TEA ESTATE,Organized Plantation,JOONKTOLLEE,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-101,JALANNAGAR,jalannagar,likely_active,medium,Dibrugarh,Upper Assam,1974,gs-as-co-210,JALANNAGAR,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-102,JALANNAGAR SOUTH,jalannagarsouth,likely_active,medium,Dibrugarh,Upper Assam,2284,gs-as-co-211,JALANNAGAR SOUTH,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-103,HATIJAN TEA ESTATE,hatijan,likely_active,medium,Dibrugarh,Upper Assam,237,gs-as-co-212,HATIJAN TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-104,HATKHOLA TEA ESTATE,hatkhola,likely_active,medium,Dibrugarh,Upper Assam,356,gs-as-co-213,HATKHOLA TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-105,HALMARI TEA ESTATE,halmari,active_confirmed,high,Dibrugarh,Upper Assam,154,gs-as-co-144,Jainex Tea Company Private Limited,111.34 Ha,,excluded_large_group,Public company or multi-estate group,tea_board_registered_planters_2019
+gs-as-dib-106,HAZELBANK TEA ESTATE,hazelbank,active_confirmed,high,Dibrugarh,Upper Assam,G-22,gs-as-co-129,Assam Company India Limited (BRS Group),Organized Plantation,,excluded_large_group,Conglomerate / Multi-estate group,tea_board_registered_planters_2019
+gs-as-dib-107,HARISHPUR TEA ESTATE,harishpur,likely_active,medium,Dibrugarh,Upper Assam,353,gs-as-co-214,HARISHPUR TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-108,GONESHBARI TEA ESTATE,goneshbari,active_confirmed,high,Dibrugarh,Upper Assam,131,gs-as-co-215,Goneshbari Tea Company Private Limited,239.32 Ha,,excluded_large_group,Public company or multi-estate group,tea_board_registered_planters_2019
+gs-as-dib-109,GREENWOOD TEA ESTATE,greenwood,active_confirmed,high,Dibrugarh,Upper Assam,G-26,gs-as-co-129,Assam Company India Limited (BRS Group),Organized Plantation,,excluded_large_group,Conglomerate / Multi-estate group,tea_board_registered_planters_2019
+gs-as-dib-110,GITANAGAR TEA ESTATE,gitanagar,likely_active,medium,Dibrugarh,Upper Assam,1617,gs-as-co-216,GITANAGAR TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-111,GHOORONIA TEA ESTATE,ghooronia,active_confirmed,high,Dibrugarh,Upper Assam,2108,gs-as-co-217,Ghooronia Tea Company Private Limited,139.00 Ha,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-112,GHOGRAJAN TEA ESTATE,ghograjan,active_confirmed,high,Dibrugarh,Upper Assam,182,gs-as-co-089,Sitaram Budhkaran Choukhany & Co.,148.87 Ha,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-113,ETHELWOLD TEA ESTATE,ethelwold,likely_active,medium,Dibrugarh,Upper Assam,2095,gs-as-co-218,ETHELWOLD TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-114,DOOLIA TEA ESTATE,doolia,likely_active,medium,Dibrugarh,Upper Assam,2519,gs-as-co-219,DOOLIA TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-115,OUPHULIA,ouphulia,likely_active,medium,Dibrugarh,Upper Assam,E-30,gs-as-co-220,OUPHULIA,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-116,DULIABAM TEA ESTATE,duliabam,likely_active,medium,Dibrugarh,Upper Assam,247,gs-as-co-221,DULIABAM TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-117,DURGAPUR TEA ESTATE,durgapur,active_confirmed,high,Dibrugarh,Upper Assam,172,gs-as-co-222,Durgapur Tea Company partnership,80.91 Ha,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-118,DILLI TEA ESTATE,dilli,likely_active,medium,Dibrugarh,Upper Assam,194,gs-as-co-223,DILLI TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-119,DIROIBAM TEA ESTATE,diroibam,likely_active,medium,Dibrugarh,Upper Assam,77,gs-as-co-224,DIROIBAM TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-120,DIRAI TEA ESTATE,dirai,likely_active,medium,Dibrugarh,Upper Assam,G-31,gs-as-co-225,DIRAI TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-121,DINJOYE AND MAHABIRBARI TEA ESTATE,dinjoyeandmahabirbari,likely_active,medium,Dibrugarh,Upper Assam,111 & 2004,gs-as-co-226,DINJOYE AND MAHABIRBARI TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-122,DIRIAL TEA ESTATE,dirial,likely_active,medium,Dibrugarh,Upper Assam,D-62,gs-as-co-227,DIRIAL TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-123,TINKHONG TEA ESTATE,tinkhong,active_confirmed,high,Dibrugarh,Upper Assam,2597,gs-as-co-137,Andrew Yule & Company Limited (Govt of India),Organized Plantation,,excluded_large_group,Conglomerate / Multi-estate group,tea_board_registered_planters_2019
+gs-as-dib-124,TELOIJAN,loijan,likely_active,medium,Dibrugarh,Upper Assam,E-1238,gs-as-co-228,TELOIJAN,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-125,THANAI TEA ESTATE,thanai,active_confirmed,high,Dibrugarh,Upper Assam,G- 23,gs-as-co-129,Assam Company India Limited (BRS Group),Organized Plantation,,excluded_large_group,Conglomerate / Multi-estate group,tea_board_registered_planters_2019
+gs-as-dib-126,LONGBOI,longboi,active_confirmed,high,Dibrugarh,Upper Assam,2248,gs-as-co-229,Longboi Tea Company Private Limited,172.81 Ha,,excluded_large_group,Public company or multi-estate group,tea_board_registered_planters_2019
+gs-as-dib-127,SOURABH A/F,sourabhaf,likely_active,medium,Dibrugarh,Upper Assam,Not Available,gs-as-co-230,SOURABH A/F,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-128,TAMULBARI TEA ESTATE,tamulbari,likely_active,medium,Dibrugarh,Upper Assam,401,gs-as-co-231,TAMULBARI TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-129,TARINIPUR TEA ESTATE,tarinipur,likely_active,medium,Dibrugarh,Upper Assam,2514,gs-as-co-232,TARINIPUR TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-130,SURAJ TEA ESTATE,suraj,likely_active,medium,Dibrugarh,Upper Assam,172,gs-as-co-233,SURAJ TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-131,SURABHI PLANTATIONS,surabhiplantations,likely_active,medium,Dibrugarh,Upper Assam,NOT REGISTERED,gs-as-co-234,SURABHI PLANTATIONS,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dib-132,SURESHNAGAR TEA ESTATE,sureshnagar,likely_active,medium,Dibrugarh,Upper Assam,2594,gs-as-co-235,SURESHNAGAR TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dim-001,GUNJUNG TEA ESTATE,gunjung,likely_active,medium,Dima Hasao,Central Assam,2862,gs-as-co-236,GUNJUNG TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-dim-002,KOPILI TE,kopili,likely_active,medium,Dima Hasao,Central Assam,2821,gs-as-co-237,KOPILI TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-goa-001,MAIJONGA TEA ESTATE,maijonga,likely_active,medium,Goalpara,Lower Assam,1955,gs-as-co-238,MAIJONGA TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-goa-002,SIMLITOLA,simlitola,likely_active,medium,Goalpara,Lower Assam,979,gs-as-co-239,SIMLITOLA,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-gol-001,SHYAMRAIPORE,shyamraipore,likely_active,medium,Golaghat,Upper Assam,1583,gs-as-co-240,SHYAMRAIPORE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-gol-002,WOKA T.E,woka,likely_active,medium,Golaghat,Upper Assam,2643,gs-as-co-241,WOKA T.E,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-gol-003,UDAYAN TE,udayan,likely_active,medium,Golaghat,Upper Assam,2487,gs-as-co-242,UDAYAN TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-gol-004,RUNGAJAUN TE,rungajaun,likely_active,medium,Golaghat,Upper Assam,C-47,gs-as-co-243,RUNGAJAUN TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-gol-005,SENGAJAN,sengajan,likely_active,medium,Golaghat,Upper Assam,2353,gs-as-co-244,SENGAJAN,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-gol-006,RENGMA,rengma,likely_active,medium,Golaghat,Upper Assam,1857,gs-as-co-245,RENGMA,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-gol-007,RADHABARI,radhabari,likely_active,medium,Golaghat,Upper Assam,2252,gs-as-co-246,RADHABARI,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-gol-008,PROBHAKAR T.E. NEG-546,probhakarneg546,likely_active,medium,Golaghat,Upper Assam,Not Available,gs-as-co-247,PROBHAKAR T.E. NEG-546,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-gol-009,RUNGAMATTY,rungamatty,likely_active,medium,Golaghat,Upper Assam,2213,gs-as-co-248,RUNGAMATTY,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-gol-010,PABHOJAN TE,pabhojan,likely_active,medium,Golaghat,Upper Assam,757,gs-as-co-249,PABHOJAN TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-gol-011,OATING TEA ESTATE,oating,likely_active,medium,Golaghat,Upper Assam,2191,gs-as-co-250,OATING TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-gol-012,GOVINDAPUR TEA ESTATE,govindapur,likely_active,medium,Golaghat,Upper Assam,90,gs-as-co-251,GOVINDAPUR TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-gol-013,GOLAGHAT TE,golaghat,likely_active,medium,Golaghat,Upper Assam,2030,gs-as-co-252,GOLAGHAT TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-gol-014,HATHIKULI TEA ESTATE,hathikuli,likely_active,medium,Golaghat,Upper Assam,A-33,gs-as-co-253,HATHIKULI TEA ESTATE,Organized Plantation,HATHIKULI,target_candidate,,tea_board_registered_planters_2019
+gs-as-gol-015,HALMIRA ESTATE TEA PVT. LTD,halmiraa,likely_active,medium,Golaghat,Upper Assam,2244,gs-as-co-254,HALMIRA ESTATE TEA PVT. LTD,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-gol-016,HALMIRAMOOK TE,halmiramook,likely_active,medium,Golaghat,Upper Assam,2479,gs-as-co-255,HALMIRAMOOK TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-gol-017,DIFFLOO TEA ESTATE,diffloo,active_confirmed,high,Golaghat,Upper Assam,A-32,gs-as-co-006,Amalgamated Plantations Private Limited (Tata),Organized Plantation,,excluded_large_group,Conglomerate / Multi-estate group,tea_board_registered_planters_2019
+gs-as-gol-018,DIGHLIHULA TE,dighlihula,likely_active,medium,Golaghat,Upper Assam,219,gs-as-co-256,DIGHLIHULA TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-gol-019,DUKENHENGRA TEA ESATAE,dukenhengraaesatae,likely_active,medium,Golaghat,Upper Assam,2345,gs-as-co-257,DUKENHENGRA TEA ESATAE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-gol-020,DOLAGURI TEA ESTATE,dolaguri,likely_active,medium,Golaghat,Upper Assam,2009,gs-as-co-258,DOLAGURI TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-gol-021,FURKATING TEA ESTATE,furkating,likely_active,medium,Golaghat,Upper Assam,773,gs-as-co-259,FURKATING TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-gol-022,JAMGURI TEA ESTATEI,jamgurii,likely_active,medium,Golaghat,Upper Assam,2477,gs-as-co-260,JAMGURI TEA ESTATEI,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-gol-023,MOHEEMA,moheema,likely_active,medium,Golaghat,Upper Assam,2355,gs-as-co-261,MOHEEMA,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-gol-024,NEETINNAGAR T.E,neetinnagar,likely_active,medium,Golaghat,Upper Assam,2798,gs-as-co-262,NEETINNAGAR T.E,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-gol-025,NEGHERITING,negheriting,likely_active,medium,Golaghat,Upper Assam,2210,gs-as-co-263,NEGHERITING,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-gol-026,NILGIRI TEA ESTATE,nilgiri,likely_active,medium,Golaghat,Upper Assam,Not Available,gs-as-co-264,NILGIRI TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-gol-027,MURPHULANI TE,murphulani,active_confirmed,high,Golaghat,Upper Assam,M-25,gs-as-co-137,Andrew Yule & Company Limited (Govt of India),Organized Plantation,"MURPHULANI, BOGIJAN",excluded_large_group,Conglomerate / Multi-estate group,tea_board_registered_planters_2019
+gs-as-gol-028,NANDAPUR,nandapur,likely_active,medium,Golaghat,Upper Assam,2883,gs-as-co-265,NANDAPUR,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-gol-029,NAHORBARI TEA ESTATE,nahorbari,likely_active,medium,Golaghat,Upper Assam,D-75,gs-as-co-266,NAHORBARI TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-gol-030,NAHORJAN TE,nahorjan,likely_active,medium,Golaghat,Upper Assam,RC-817,gs-as-co-267,NAHORJAN TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-gol-031,MANI,mani,likely_active,medium,Golaghat,Upper Assam,2841,gs-as-co-268,MANI,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-gol-032,MARANGI,marangi,likely_active,medium,Golaghat,Upper Assam,C-44,gs-as-co-269,MARANGI,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-gol-033,MAHALAXMI TEA ESTATE,mahalaxmi,likely_active,medium,Golaghat,Upper Assam,3564,gs-as-co-270,MAHALAXMI TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-gol-034,KRISHNA TE,krishna,likely_active,medium,Golaghat,Upper Assam,2796,gs-as-co-271,KRISHNA TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-gol-035,LATTAKOOJAN TE,lattakoojan,likely_active,medium,Golaghat,Upper Assam,A-31,gs-as-co-272,LATTAKOOJAN TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-gol-036,KATHONI,kathoni,likely_active,medium,Golaghat,Upper Assam,2010,gs-as-co-273,KATHONI,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-gol-037,KOOPAHUATING TEA ESTATE,koopahuating,likely_active,medium,Golaghat,Upper Assam,2342,gs-as-co-274,KOOPAHUATING TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-gol-038,ANANDAPUR,anandapur,likely_active,medium,Golaghat,Upper Assam,563,gs-as-co-275,ANANDAPUR,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-gol-039,ATHABARI TEA ESTATE,athabari,likely_active,medium,Golaghat,Upper Assam,2816,gs-as-co-276,ATHABARI TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-gol-040,MESSAMARA,messamara,likely_active,medium,Golaghat,Upper Assam,2212,gs-as-co-277,MESSAMARA,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-gol-041,METHONI TE,methoni,likely_active,medium,Golaghat,Upper Assam,C-36,gs-as-co-278,METHONI TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-gol-042,ABHOYJAN TEA ESTATE,abhoyjan,likely_active,medium,Golaghat,Upper Assam,82,gs-as-co-279,ABHOYJAN TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-gol-043,BEHORA TEA ESTATE,behora,likely_active,medium,Golaghat,Upper Assam,D-35,gs-as-co-280,BEHORA TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-gol-044,BALIJAN TEA ESTATE,balijan,likely_active,medium,Golaghat,Upper Assam,293,gs-as-co-281,BALIJAN TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-gol-045,BANWARIPUR T.E,banwaripur,likely_active,medium,Golaghat,Upper Assam,181,gs-as-co-282,BANWARIPUR T.E,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-gol-046,BHAGWAN T.E.,bhagwan,likely_active,medium,Golaghat,Upper Assam,191,gs-as-co-283,BHAGWAN T.E.,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-gol-047,BHOGADABARI TE,bhogadabari,likely_active,medium,Golaghat,Upper Assam,303,gs-as-co-284,BHOGADABARI TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-gol-048,BORTING TE,borting,likely_active,medium,Golaghat,Upper Assam,716,gs-as-co-285,BORTING TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-gol-049,BOGIDHOLA TEA ESTATE (LOCKOUT SINCE,bogidholalockoutsince,likely_active,medium,Golaghat,Upper Assam,2017) 2494,gs-as-co-286,BOGIDHOLA TEA ESTATE (LOCKOUT SINCE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-gol-050,BORJAN TEA ESTATE,borjan,active_confirmed,high,Golaghat,Upper Assam,2453,gs-as-co-006,Amalgamated Plantations Private Limited (Tata),Organized Plantation,,excluded_large_group,Conglomerate / Multi-estate group,tea_board_registered_planters_2019
+gs-as-gol-051,BOGIJAN TEA ESTATE,bogijan,likely_active,medium,Golaghat,Upper Assam,M-89,gs-as-co-287,BOGIJAN TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-gol-052,BUKHIAL TEA ESTATE,bukhial,likely_active,medium,Golaghat,Upper Assam,G-23(RC-1405),gs-as-co-288,BUKHIAL TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-gol-053,DALOWJAN TE,dalowjan,likely_active,medium,Golaghat,Upper Assam,1856,gs-as-co-289,DALOWJAN TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-gol-054,SOCKIETING TE,sockieting,likely_active,medium,Golaghat,Upper Assam,2346,gs-as-co-290,SOCKIETING TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-gol-055,BIJULEE TEA ESTATE NEG-699,bijuleeneg699,likely_active,medium,Golaghat,Upper Assam,Not Available,gs-as-co-291,BIJULEE TEA ESTATE NEG-699,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-gol-056,TILOTTAMA,tilottama,likely_active,medium,Golaghat,Upper Assam,2315,gs-as-co-292,TILOTTAMA,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-gol-057,RAJABARI TEA ESTATE,rajabari,likely_active,medium,Golaghat,Upper Assam,902,gs-as-co-293,RAJABARI TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-hai-001,SOUTH CACHAR TE,southcachar,likely_active,medium,Hailakandi,Barak Valley,222,gs-as-co-294,SOUTH CACHAR TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-hai-002,SULTANICHERA,sultanichera,likely_active,medium,Hailakandi,Barak Valley,914,gs-as-co-295,SULTANICHERA,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-hai-003,CHANDYPORE T.E,chandypore,likely_active,medium,Hailakandi,Barak Valley,2310,gs-as-co-296,CHANDYPORE T.E,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-hai-004,DEVENDRA TE,devendra,active_confirmed,high,Hailakandi,Barak Valley,2703,gs-as-co-297,Debendra Tea and Company Private Limited,60 Ha,,target_candidate,,tea_board_registered_planters_2019
+gs-as-hai-005,CUTLACHERRA T.E.,cutlacherra,likely_active,medium,Hailakandi,Barak Valley,125,gs-as-co-298,CUTLACHERRA T.E.,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-hai-006,BURNIE BRAES T.E,burniebraes,likely_active,medium,Hailakandi,Barak Valley,2465,gs-as-co-299,BURNIE BRAES T.E,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-hai-007,BUNDOOKMARA T.E,bundookmara,likely_active,medium,Hailakandi,Barak Valley,279,gs-as-co-300,BUNDOOKMARA T.E,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-hai-008,AENAKHALL T.E.,aenakhall,likely_active,medium,Hailakandi,Barak Valley,2471,gs-as-co-301,AENAKHALL T.E.,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-hai-009,LALLAMOOKH TEA ESTATE,lallamookh,likely_active,medium,Hailakandi,Barak Valley,2406,gs-as-co-302,LALLAMOOKH TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-hai-010,LALLACHERRA,lallacherra,likely_active,medium,Hailakandi,Barak Valley,2343,gs-as-co-303,LALLACHERRA,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-hai-011,KUNCHUNPORE TE,kunchunpore,likely_active,medium,Hailakandi,Barak Valley,2407,gs-as-co-304,KUNCHUNPORE TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-hai-012,KOYAH TEA ESTATE,koyah,likely_active,medium,Hailakandi,Barak Valley,2422,gs-as-co-305,KOYAH TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-hai-013,MANIPUR TE,manipur,likely_active,medium,Hailakandi,Barak Valley,2295,gs-as-co-306,MANIPUR TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-hai-014,NARSINGPORE TE,narsingpore,likely_active,medium,Hailakandi,Barak Valley,1893,gs-as-co-307,NARSINGPORE TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-hai-015,DHOLAI TEA GARDEN,dholai,likely_active,medium,Hailakandi,Barak Valley,2572,gs-as-co-308,DHOLAI TEA GARDEN,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-hai-016,ROOPACHERA TE,roopachera,likely_active,medium,Hailakandi,Barak Valley,E-49,gs-as-co-309,ROOPACHERA TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-hai-017,UMESH TE,umesh,likely_active,medium,Hailakandi,Barak Valley,2706,gs-as-co-310,UMESH TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-hai-018,VERNERPUR TE,vernerpur,likely_active,medium,Hailakandi,Barak Valley,256,gs-as-co-311,VERNERPUR TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-001,UMABARI T.E,umabari,likely_active,medium,Jorhat,Upper Assam,778(RC-1712),gs-as-co-312,UMABARI T.E,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-002,TYROON T.E,tyroon,likely_active,medium,Jorhat,Upper Assam,E-53,gs-as-co-313,TYROON T.E,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-003,UDAYJYOTI(RANGDOI T.P),udayjyotirangdoitp,likely_active,medium,Jorhat,Upper Assam,590,gs-as-co-314,UDAYJYOTI(RANGDOI T.P),Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-004,SINGORIJAN TE,singorijan,likely_active,medium,Jorhat,Upper Assam,1981,gs-as-co-315,SINGORIJAN TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-005,SAMAGURI TE,samaguri,likely_active,medium,Jorhat,Upper Assam,2455,gs-as-co-316,SAMAGURI TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-006,SANGSUA,sangsua,likely_active,medium,Jorhat,Upper Assam,2645,gs-as-co-317,SANGSUA,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-007,SELENG,seleng,likely_active,medium,Jorhat,Upper Assam,2543,gs-as-co-318,SELENG,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-008,TOCKLAI TEA ESTATE,tocklai,likely_active,medium,Jorhat,Upper Assam,43,gs-as-co-319,TOCKLAI TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-009,NORTH BORSAIKOTA TEA ESTATE NO.,northborsaikotano,likely_active,medium,Jorhat,Upper Assam,2 2387,gs-as-co-320,NORTH BORSAIKOTA TEA ESTATE NO.,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-010,PADAM,padam,likely_active,medium,Jorhat,Upper Assam,2817,gs-as-co-321,PADAM,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-011,SOUTH BORSAIKOTA TEA ESTATE,southborsaikota,likely_active,medium,Jorhat,Upper Assam,431,gs-as-co-322,SOUTH BORSAIKOTA TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-012,RAJABARI TE,rajabari,likely_active,medium,Jorhat,Upper Assam,1465(2104),gs-as-co-323,RAJABARI TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-013,RANGAJAN,rangajan,likely_active,medium,Jorhat,Upper Assam,2958,gs-as-co-324,RANGAJAN,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-014,RAMKONG,ramkong,likely_active,medium,Jorhat,Upper Assam,2578,gs-as-co-325,RAMKONG,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-015,DURGABARI,durgabari,likely_active,medium,Jorhat,Upper Assam,342,gs-as-co-326,DURGABARI,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-016,DUFLATING TE,duflating,likely_active,medium,Jorhat,Upper Assam,2516,gs-as-co-327,DUFLATING TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-017,GHORAJAN,ghorajan,active_confirmed,high,Jorhat,Upper Assam,377,gs-as-co-089,Sitaram Budhkaran Choukhany & Co.,148.87 Ha,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-018,GABROOPURBAT TE,gabroopurbat,likely_active,medium,Jorhat,Upper Assam,2240 (1004),gs-as-co-328,GABROOPURBAT TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-019,GATOONGA T E,gatoonga,likely_active,medium,Jorhat,Upper Assam,2454 & 1464,gs-as-co-329,GATOONGA T E,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-020,HAROCHARAI TEA ESTATE,harocharai,likely_active,medium,Jorhat,Upper Assam,RC-2225,gs-as-co-330,HAROCHARAI TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-021,HEELEAKAH TE,heeleakah,likely_active,medium,Jorhat,Upper Assam,G-42,gs-as-co-331,HEELEAKAH TE,Organized Plantation,HEELEAKAH,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-022,HATIGARH TEA ESTATE,hatigarh,likely_active,medium,Jorhat,Upper Assam,230,gs-as-co-185,HATIGARH TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-023,GOHAINBAREE TE,gohainbaree,likely_active,medium,Jorhat,Upper Assam,345,gs-as-co-332,GOHAINBAREE TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-024,GOBINDAPORE & BIJLEEJAN,gobindaporebijleejan,likely_active,medium,Jorhat,Upper Assam,294/BJ-1898,gs-as-co-333,GOBINDAPORE & BIJLEEJAN,Organized Plantation,BIJLEEJAN TEA,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-025,GREEN VIEW,greenview,likely_active,medium,Jorhat,Upper Assam,2388,gs-as-co-334,GREEN VIEW,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-026,NAGANIJAN,naganijan,likely_active,medium,Jorhat,Upper Assam,2600,gs-as-co-335,NAGANIJAN,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-027,NARAYANPUR & BHOWANIPUR,narayanpurbhowanipur,likely_active,medium,Jorhat,Upper Assam,2252255,gs-as-co-336,NARAYANPUR & BHOWANIPUR,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-028,NEW SONWAL TEA ESTATE,newsonwal,likely_active,medium,Jorhat,Upper Assam,2206,gs-as-co-337,NEW SONWAL TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-029,NEW SAMAGURI,newsamaguri,likely_active,medium,Jorhat,Upper Assam,2595,gs-as-co-338,NEW SAMAGURI,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-030,MONOMOY TEA ESTATE,monomoy,likely_active,medium,Jorhat,Upper Assam,955,gs-as-co-339,MONOMOY TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-031,MOABUND DIVISION (BEHORA TEA ESTATE),moabunddivisionbehora,likely_active,medium,Jorhat,Upper Assam,D-78,gs-as-co-340,MOABUND DIVISION (BEHORA TEA ESTATE),Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-032,JAGDUAR T.E.,jagduar,likely_active,medium,Jorhat,Upper Assam,"1301, 1434 &446",gs-as-co-341,JAGDUAR T.E.,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-033,JADAVPUR,jadavpur,likely_active,medium,Jorhat,Upper Assam,2418,gs-as-co-342,JADAVPUR,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-034,JOGIBHETA TEA ESTATE,jogibheta,likely_active,medium,Jorhat,Upper Assam,2511,gs-as-co-343,JOGIBHETA TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-035,HUNWAL TEA ESTATE N,hunwaln,active_confirmed,high,Jorhat,Upper Assam,4,gs-as-co-003,McLeod Russel India Limited,Organized Plantation,,excluded_large_group,Conglomerate / Multi-estate group,tea_board_registered_planters_2019
+gs-as-jor-036,HOLONGAJAN TEA ESTATE,holongajan,likely_active,medium,Jorhat,Upper Assam,286,gs-as-co-344,HOLONGAJAN TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-037,HOOLUNGOOREE TEA ESTATE,hoolungooree,active_confirmed,high,Jorhat,Upper Assam,RC-1229,gs-as-co-137,Andrew Yule & Company Limited (Govt of India),Organized Plantation,"HOOLUNGOOREE, KHATISONA",excluded_large_group,Conglomerate / Multi-estate group,tea_board_registered_planters_2019
+gs-as-jor-038,MADHOOPUR,madhoopur,likely_active,medium,Jorhat,Upper Assam,2126,gs-as-co-345,MADHOOPUR,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-039,PURANIMATI TEA PLANTATIONS PVT.LTD.,puranimatiaplantations,likely_active,medium,Jorhat,Upper Assam,3570,gs-as-co-346,PURANIMATI TEA PLANTATIONS PVT.LTD.,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-040,KONIKOR-DALLIM TEA ESTATE,konikordallim,likely_active,medium,Jorhat,Upper Assam,A-40,gs-as-co-347,KONIKOR-DALLIM TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-041,KUHUM,kuhum,likely_active,medium,Jorhat,Upper Assam,2777,gs-as-co-348,KUHUM,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-042,KOTALGOORIE TE T3,kotalgooriet3,likely_active,medium,Jorhat,Upper Assam,Not Available,gs-as-co-349,KOTALGOORIE TE T3,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-043,LAKHIBARI TE,lakhibari,likely_active,medium,Jorhat,Upper Assam,2311,gs-as-co-350,LAKHIBARI TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-044,LETEKOOJAN,lekoojan,likely_active,medium,Jorhat,Upper Assam,1979,gs-as-co-351,LETEKOOJAN,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-045,LOHPOHIA TEA ESTATE,lohpohia,likely_active,medium,Jorhat,Upper Assam,2502,gs-as-co-352,LOHPOHIA TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-046,KAKADONGA TEA STATE,kakadongaasta,likely_active,medium,Jorhat,Upper Assam,D-51,gs-as-co-353,KAKADONGA TEA STATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-047,KAMALPUR,kamalpur,likely_active,medium,Jorhat,Upper Assam,324,gs-as-co-354,KAMALPUR,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-048,KAMARBAND TEA ESTATE,kamarband,likely_active,medium,Jorhat,Upper Assam,2456,gs-as-co-355,KAMARBAND TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-049,KAKAJAN,kakajan,active_confirmed,high,Jorhat,Upper Assam,A-38,gs-as-co-006,Amalgamated Plantations Private Limited (Tata),Organized Plantation,,excluded_large_group,Conglomerate / Multi-estate group,tea_board_registered_planters_2019
+gs-as-jor-050,KASOJAN,kasojan,likely_active,medium,Jorhat,Upper Assam,3035,gs-as-co-356,KASOJAN,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-051,MELENG TEA ESTATE,meleng,likely_active,medium,Jorhat,Upper Assam,2521,gs-as-co-357,MELENG TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-052,MEZENGAH,mezengah,likely_active,medium,Jorhat,Upper Assam,2127,gs-as-co-358,MEZENGAH,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-053,AKHOIDESSA TEA ESTATE,akhoidessa,likely_active,medium,Jorhat,Upper Assam,375,gs-as-co-359,AKHOIDESSA TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-054,BAGHSONG TEA ESTATE,baghsong,likely_active,medium,Jorhat,Upper Assam,1765,gs-as-co-360,BAGHSONG TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-055,BAHANI TEA ESTATE,bahani,likely_active,medium,Jorhat,Upper Assam,11,gs-as-co-361,BAHANI TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-056,BARUAHJAN TE,baruahjan,likely_active,medium,Jorhat,Upper Assam,376,gs-as-co-362,BARUAHJAN TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-057,BAMUNIBARI,bamunibari,likely_active,medium,Jorhat,Upper Assam,2275,gs-as-co-363,BAMUNIBARI,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-058,BORBHETA TEA ESTATE,borbheta,likely_active,medium,Jorhat,Upper Assam,43,gs-as-co-364,BORBHETA TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-059,BORHOLLA TEA ESTATE,borholla,likely_active,medium,Jorhat,Upper Assam,2393,gs-as-co-365,BORHOLLA TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-060,BOISAHABI TE,boisahabi,likely_active,medium,Jorhat,Upper Assam,2557(RC-12123),gs-as-co-366,BOISAHABI TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-061,BOSABARI TEA ESTATE,bosabari,likely_active,medium,Jorhat,Upper Assam,1899,gs-as-co-367,BOSABARI TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-062,BOIDEHA TE,boideha,likely_active,medium,Jorhat,Upper Assam,187,gs-as-co-368,BOIDEHA TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-063,BOKAHOLA,bokahola,likely_active,medium,Jorhat,Upper Assam,2673,gs-as-co-369,BOKAHOLA,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-064,BOLOMA TEA ESTATE,boloma,likely_active,medium,Jorhat,Upper Assam,186,gs-as-co-370,BOLOMA TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-065,DHULLIE,dhullie,active_confirmed,high,Jorhat,Upper Assam,2601JOR,gs-as-co-003,McLeod Russel India Limited,Organized Plantation,,excluded_large_group,Conglomerate / Multi-estate group,tea_board_registered_planters_2019
+gs-as-jor-066,CHENIJAN,chenijan,likely_active,medium,Jorhat,Upper Assam,79,gs-as-co-371,CHENIJAN,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-067,CHAPAJAN,chapajan,likely_active,medium,Jorhat,Upper Assam,402,gs-as-co-372,CHAPAJAN,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-068,CHETIABARI,chetiabari,likely_active,medium,Jorhat,Upper Assam,349,gs-as-co-373,CHETIABARI,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-069,DAHINGEAPAR,dahingeapar,likely_active,medium,Jorhat,Upper Assam,2285,gs-as-co-374,DAHINGEAPAR,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-070,DAMAYANTI TEA ESTATE,damayanti,likely_active,medium,Jorhat,Upper Assam,2101,gs-as-co-375,DAMAYANTI TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-071,CINNAMARA TEA ESTATE,cinnamara,likely_active,medium,Jorhat,Upper Assam,2582,gs-as-co-376,CINNAMARA TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-072,SWARNAPUR,swarnapur,likely_active,medium,Jorhat,Upper Assam,1982,gs-as-co-377,SWARNAPUR,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-073,SYEDBARI,syedbari,likely_active,medium,Jorhat,Upper Assam,1091,gs-as-co-378,SYEDBARI,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-074,SYCOTTA TEA ESTATE,sycotta,likely_active,medium,Jorhat,Upper Assam,2587,gs-as-co-379,SYCOTTA TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-075,SOLALBARI,solalbari,likely_active,medium,Jorhat,Upper Assam,2412,gs-as-co-380,SOLALBARI,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-076,SOCKLATINGA,socklatinga,likely_active,medium,Jorhat,Upper Assam,1649,gs-as-co-381,SOCKLATINGA,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-077,SORAIPANI,soraipani,likely_active,medium,Jorhat,Upper Assam,2755,gs-as-co-382,SORAIPANI,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-078,SOTAI,sotai,likely_active,medium,Jorhat,Upper Assam,RC-6,gs-as-co-383,SOTAI,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-079,TIRUAL T.E,tirual,likely_active,medium,Jorhat,Upper Assam,2773,gs-as-co-384,TIRUAL T.E,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-080,TIPOMIA,tipomia,likely_active,medium,Jorhat,Upper Assam,1980,gs-as-co-385,TIPOMIA,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-081,TENGALBARIE,ngalbarie,likely_active,medium,Jorhat,Upper Assam,2125,gs-as-co-386,TENGALBARIE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-jor-082,TEOK TEA ESTATE,ok,likely_active,medium,Jorhat,Upper Assam,A-40,gs-as-co-387,TEOK TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-kam-001,SONAPUR TEA ESTATE,sonapur,likely_active,medium,Kamrup,Lower Assam,2071,gs-as-co-388,SONAPUR TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-kam-002,BARDUAR TEA ESTATE,barduar,likely_active,medium,Kamrup,Lower Assam,2193,gs-as-co-389,BARDUAR TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-kam-003,RANI TEA ESTATE,rani,likely_active,medium,Kamrup,Lower Assam,137,gs-as-co-390,RANI TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-kar-001,BHAGAWATI TEA ESTATE,bhagawati,likely_active,medium,Karbi Anglong,Central Assam,2786,gs-as-co-391,BHAGAWATI TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-kar-002,LAHORIJAN & NIRMAL KUMAR,lahorijannirmalkumar,likely_active,medium,Karbi Anglong,Central Assam,223,gs-as-co-392,LAHORIJAN & NIRMAL KUMAR,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-kar-003,MAA SURJEE NEG-1117,maasurjeeneg1117,likely_active,medium,Karbi Anglong,Central Assam,Not Available,gs-as-co-393,MAA SURJEE NEG-1117,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-kar-004,DEOPANI TEA ESTATE,deopani,likely_active,medium,Karbi Anglong,Central Assam,C-74,gs-as-co-394,DEOPANI TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-kar-005,BHAWANI TEA ESTATE NEG-492,bhawanineg492,likely_active,medium,Karbi Anglong,Central Assam,Not Available,gs-as-co-395,BHAWANI TEA ESTATE NEG-492,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-kar-006,BOKAJAN TEA ESTATE,bokajan,likely_active,medium,Karbi Anglong,Central Assam,RC-1167,gs-as-co-396,BOKAJAN TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-kar-007,BANASPATY TEA ESTATE,banaspaty,likely_active,medium,Karbi Anglong,Central Assam,2828,gs-as-co-397,BANASPATY TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-kar-008,BARPATHAR TEA ESTATE,barpathar,likely_active,medium,Karbi Anglong,Central Assam,160,gs-as-co-398,BARPATHAR TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-kar-009,AMBA TEA ESTATE NEG-398,ambaneg398,likely_active,medium,Karbi Anglong,Central Assam,Not Available,gs-as-co-399,AMBA TEA ESTATE NEG-398,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-kar-010,NIRJA TEA ESTATE NEG-1118,nirjaneg1118,likely_active,medium,Karbi Anglong,Central Assam,Not Available,gs-as-co-400,NIRJA TEA ESTATE NEG-1118,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-kar-011,DHANSERI TEA ESTATE,dhanseri,likely_active,medium,Karbi Anglong,Central Assam,83,gs-as-co-401,DHANSERI TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-kar-012,RAMANUGGER,ramanugger,likely_active,medium,Karbi Anglong,Central Assam,255,gs-as-co-402,RAMANUGGER,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-kar-013,RANGSALI,rangsali,likely_active,medium,Karbi Anglong,Central Assam,2861,gs-as-co-403,RANGSALI,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-kar-014,SAKAMBARI NEG-,sakambarineg,likely_active,medium,Karbi Anglong,Central Assam,646,gs-as-co-404,SAKAMBARI NEG-,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-kar-015,SOBHANESWARI,sobhaneswari,likely_active,medium,Karbi Anglong,Central Assam,1308,gs-as-co-405,SOBHANESWARI,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-krg-001,SREE BEHULLA TE,sreebehulla,likely_active,medium,Karimganj,Barak Valley,542,gs-as-co-406,SREE BEHULLA TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-krg-002,SEPHANJURI BHEEL TE,sephanjuribheel,likely_active,medium,Karimganj,Barak Valley,2482,gs-as-co-407,SEPHANJURI BHEEL TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-krg-003,SINGLACHERRA,singlacherra,likely_active,medium,Karimganj,Barak Valley,2322,gs-as-co-408,SINGLACHERRA,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-krg-004,SHONAICHERRA TE,shonaicherra,likely_active,medium,Karimganj,Barak Valley,1589,gs-as-co-409,SHONAICHERRA TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-krg-005,RABBANIA TE,rabbania,likely_active,medium,Karimganj,Barak Valley,238,gs-as-co-410,RABBANIA TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-krg-006,RAJARAMPORE,rajarampore,likely_active,medium,Karimganj,Barak Valley,289,gs-as-co-411,RAJARAMPORE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-krg-007,PROMODENAGAR TE,promodenagar,likely_active,medium,Karimganj,Barak Valley,24,gs-as-co-412,PROMODENAGAR TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-krg-008,PATHINI TEA ESTATE,pathini,likely_active,medium,Karimganj,Barak Valley,2629,gs-as-co-413,PATHINI TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-krg-009,DURGANAGAR TE,durganagar,likely_active,medium,Karimganj,Barak Valley,389,gs-as-co-414,DURGANAGAR TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-krg-010,DULLABCHERRA TE,dullabcherra,likely_active,medium,Karimganj,Barak Valley,2241,gs-as-co-415,DULLABCHERRA TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-krg-011,GOOMBIRA,goombira,likely_active,medium,Karimganj,Barak Valley,2316,gs-as-co-416,GOOMBIRA,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-krg-012,HATTIKHIRA TE,hattikhira,likely_active,medium,Karimganj,Barak Valley,C-19,gs-as-co-417,HATTIKHIRA TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-krg-013,ISABHEEL TEA ESTATE,isabheel,likely_active,medium,Karimganj,Barak Valley,C-21,gs-as-co-418,ISABHEEL TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-krg-014,JALALNAGAR,jalalnagar,likely_active,medium,Karimganj,Barak Valley,94,gs-as-co-419,JALALNAGAR,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-krg-015,AYLABARI TEA ESTATE,aylabari,likely_active,medium,Karimganj,Barak Valley,208,gs-as-co-420,AYLABARI TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-krg-016,BAITAKHAL TE,baitakhal,likely_active,medium,Karimganj,Barak Valley,1978,gs-as-co-421,BAITAKHAL TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-krg-017,BHUBRIGHAT,bhubrighat,likely_active,medium,Karimganj,Barak Valley,53,gs-as-co-422,BHUBRIGHAT,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-krg-018,BIDYANAGAR T.E.,bidyanagar,likely_active,medium,Karimganj,Barak Valley,2122,gs-as-co-423,BIDYANAGAR T.E.,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-krg-019,CHARGOLA VELLY T.E.,chargolavelly,likely_active,medium,Karimganj,Barak Valley,270,gs-as-co-424,CHARGOLA VELLY T.E.,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-krg-020,CHARGOLA T.E.,chargola,likely_active,medium,Karimganj,Barak Valley,2321,gs-as-co-425,CHARGOLA T.E.,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-krg-021,MADANPUR TE,madanpur,likely_active,medium,Karimganj,Barak Valley,93,gs-as-co-426,MADANPUR TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-krg-022,MANIKNAGAR TE,maniknagar,likely_active,medium,Karimganj,Barak Valley,101,gs-as-co-427,MANIKNAGAR TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-krg-023,LONGAI TE,longai,likely_active,medium,Karimganj,Barak Valley,C-15,gs-as-co-428,LONGAI TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-krg-024,KALINAGAR T.E.,kalinagar,likely_active,medium,Karimganj,Barak Valley,88,gs-as-co-429,KALINAGAR T.E.,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-kok-001,KOKRAJHAR TE,kokrajhar,likely_active,medium,Kokrajhar,Lower Assam,241,gs-as-co-430,KOKRAJHAR TE,Organized Plantation,KOKRAJHAR,target_candidate,,tea_board_registered_planters_2019
+gs-as-kok-002,DALOABARI TEA ESTATE,daloabari,likely_active,medium,Kokrajhar,Lower Assam,242,gs-as-co-431,DALOABARI TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-kok-003,BANGLABARI TEA ESTATE,banglabari,likely_active,medium,Kokrajhar,Lower Assam,243,gs-as-co-432,BANGLABARI TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-kok-004,MORNAI TEA ESTATE,mornai,likely_active,medium,Kokrajhar,Lower Assam,134,gs-as-co-433,MORNAI TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-lak-001,HARMUTTY TEA ESTATE,harmutty,likely_active,medium,Lakhimpur,Lower Assam,K-55,gs-as-co-434,HARMUTTY TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-lak-002,DOOLAHAT TEA ESTATE,doolahat,likely_active,medium,Lakhimpur,Lower Assam,2591,gs-as-co-435,DOOLAHAT TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-lak-003,SILONIBARI TEA ESTATE,silonibari,likely_active,medium,Lakhimpur,Lower Assam,R-6,gs-as-co-436,SILONIBARI TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-lak-004,SEAJULI,seajuli,likely_active,medium,Lakhimpur,Lower Assam,D/40,gs-as-co-437,SEAJULI,Organized Plantation,SEAJULI TEA ESTATE,target_candidate,,tea_board_registered_planters_2019
+gs-as-lak-005,ANANDA TEA ESTATE,ananda,likely_active,medium,Lakhimpur,Lower Assam,2326,gs-as-co-438,ANANDA TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-lak-006,CINNATOLLIAH TEA GARDEN,cinnatolliah,likely_active,medium,Lakhimpur,Lower Assam,B-80,gs-as-co-439,CINNATOLLIAH TEA GARDEN,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-lak-007,DEJOO TEA ESTATE,dejoo,likely_active,medium,Lakhimpur,Lower Assam,K-33,gs-as-co-440,DEJOO TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-lak-008,BORDEOBAM TEA ESTATE,bordeobam,likely_active,medium,Lakhimpur,Lower Assam,2446,gs-as-co-441,BORDEOBAM TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-lak-009,KOILAMARI TEA ESTATE,koilamari,likely_active,medium,Lakhimpur,Lower Assam,K-15,gs-as-co-442,KOILAMARI TEA ESTATE,Organized Plantation,KOILAMARI,target_candidate,,tea_board_registered_planters_2019
+gs-as-lak-010,MADHUPUR,madhupur,likely_active,medium,Lakhimpur,Lower Assam,320,gs-as-co-443,MADHUPUR,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-mor-001,GOPAL KRISHNA TEA ESTATE,gopalkrishna,likely_active,medium,Morigaon,Central Assam,1994,gs-as-co-444,GOPAL KRISHNA TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-nag-001,DHONTOLA,dhontola,likely_active,medium,Nagaon,Central Assam,2450,gs-as-co-445,DHONTOLA,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-nag-002,JIAJURI,jiajuri,likely_active,medium,Nagaon,Central Assam,B-77,gs-as-co-446,JIAJURI,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-nag-003,SECONEE,seconee,likely_active,medium,Nagaon,Central Assam,2459,gs-as-co-447,SECONEE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-nag-004,SAGMOOTEA TEA ESTATE,sagmooa,likely_active,medium,Nagaon,Central Assam,A/8,gs-as-co-448,SAGMOOTEA TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-nag-005,NONOI TEA ESTATE,nonoi,active_confirmed,high,Nagaon,Central Assam,A-65,gs-as-co-006,Amalgamated Plantations Private Limited (Tata),Organized Plantation,,excluded_large_group,Conglomerate / Multi-estate group,tea_board_registered_planters_2019
+gs-as-nag-006,RANGOLOO TE,rangoloo,likely_active,medium,Nagaon,Central Assam,2443,gs-as-co-449,RANGOLOO TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-nag-007,MATIAPAHAR,matiapahar,likely_active,medium,Nagaon,Central Assam,318,gs-as-co-450,MATIAPAHAR,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-nag-008,KONDOLI,kondoli,active_confirmed,high,Nagaon,Central Assam,T/2,gs-as-co-129,Assam Company India Limited (BRS Group),Organized Plantation,,excluded_large_group,Conglomerate / Multi-estate group,tea_board_registered_planters_2019
+gs-as-nag-009,KOLIABUR TEA ESTATE,koliabur,likely_active,medium,Nagaon,Central Assam,2473,gs-as-co-451,KOLIABUR TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-nag-010,LOONGSOONG TE,loongsoong,likely_active,medium,Nagaon,Central Assam,G-38,gs-as-co-452,LOONGSOONG TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-nag-011,KELLYDEN TEA ESTATE,kellyden,active_confirmed,high,Nagaon,Central Assam,A-66,gs-as-co-006,Amalgamated Plantations Private Limited (Tata),Organized Plantation,,excluded_large_group,Conglomerate / Multi-estate group,tea_board_registered_planters_2019
+gs-as-nag-012,KHANAJAN TEA ESTATE,khanajan,likely_active,medium,Nagaon,Central Assam,2339,gs-as-co-453,KHANAJAN TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-nag-013,KHATOON TE,khatoon,likely_active,medium,Nagaon,Central Assam,421,gs-as-co-454,KHATOON TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-nag-014,BORPANI,borpani,likely_active,medium,Nagaon,Central Assam,66(RC-548),gs-as-co-455,BORPANI,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-nag-015,BURRAPAHAR,burrapahar,likely_active,medium,Nagaon,Central Assam,2320,gs-as-co-456,BURRAPAHAR,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-nag-016,DEJOO VALLEY T.E,dejoovalley,likely_active,medium,Nagaon,Central Assam,2648,gs-as-co-457,DEJOO VALLEY T.E,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-nag-017,CHAPANALA TEA ESTATE,chapanala,likely_active,medium,Nagaon,Central Assam,H-56,gs-as-co-458,CHAPANALA TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-nag-018,AMSOI TEA ESTATE,amsoi,likely_active,medium,Nagaon,Central Assam,2062,gs-as-co-459,AMSOI TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-nag-019,AMLUCKIE TEA ESTATE,amluckie,likely_active,medium,Nagaon,Central Assam,2647,gs-as-co-460,AMLUCKIE TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-nag-020,SUKANJURI TEA ESTATE,sukanjuri,likely_active,medium,Nagaon,Central Assam,2325,gs-as-co-461,SUKANJURI TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-lak-011,PATHALIPAM TEA ESTATE,pathalipam,likely_active,medium,Lakhimpur,Lower Assam,2462,gs-as-co-462,PATHALIPAM TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-siv-001,NYEIJONG TE,nyeijong,likely_active,medium,Sivasagar,Upper Assam,2783,gs-as-co-463,NYEIJONG TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-siv-002,RAJA BARRIE TEA ESTATE,rajabarrie,likely_active,medium,Sivasagar,Upper Assam,2104,gs-as-co-464,RAJA BARRIE TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-siv-003,MOHOKUTIE TEA ESTATE,mohokutie,likely_active,medium,Sivasagar,Upper Assam,G-50,gs-as-co-465,MOHOKUTIE TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-siv-004,MODINAGAR TE,modinagar,likely_active,medium,Sivasagar,Upper Assam,2669,gs-as-co-466,MODINAGAR TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-siv-005,MORE TEA ESTATE,more,likely_active,medium,Sivasagar,Upper Assam,2744,gs-as-co-467,MORE TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-siv-006,DOOMURDULLUNG,doomurdullung,likely_active,medium,Sivasagar,Upper Assam,G-51,gs-as-co-468,DOOMURDULLUNG,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-siv-007,GELAKEY,gelakey,likely_active,medium,Sivasagar,Upper Assam,2887,gs-as-co-469,GELAKEY,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-siv-008,GOSSAINBARI TEA ESTATE,gossainbari,likely_active,medium,Sivasagar,Upper Assam,2160 (1058),gs-as-co-470,GOSSAINBARI TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-siv-009,AMGOORIE F,amgoorief,likely_active,medium,Sivasagar,Upper Assam,1/1(RC-103),gs-as-co-471,AMGOORIE F,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-siv-010,ATTABARRIE TEA ESTATE,attabarrie,likely_active,medium,Sivasagar,Upper Assam,D-49,gs-as-co-472,ATTABARRIE TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-siv-011,BEHUBOR TEA ESTATE,behubor,likely_active,medium,Sivasagar,Upper Assam,2495,gs-as-co-473,BEHUBOR TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-siv-012,DEOPANI TEA ESTATE,deopani,likely_active,medium,Sivasagar,Upper Assam,C-74,gs-as-co-394,DEOPANI TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-siv-013,BORBAM TEA GARDEN F,borbamf,likely_active,medium,Sivasagar,Upper Assam,1/2 (RC-1040,gs-as-co-474,BORBAM TEA GARDEN F,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-siv-014,SHREE JOYA CHA BAGAN PVT LTD.,shreejoyachabagan,likely_active,medium,Sivasagar,Upper Assam,2794,gs-as-co-475,SHREE JOYA CHA BAGAN PVT LTD.,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-siv-015,BIHUBARI TEA ESTATE,bihubari,likely_active,medium,Sivasagar,Upper Assam,4367,gs-as-co-476,BIHUBARI TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-siv-016,MADOORIE,madoorie,likely_active,medium,Sivasagar,Upper Assam,1053,gs-as-co-477,MADOORIE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-siv-017,SREE SIBBARI TEA ESTATE,sreesibbari,likely_active,medium,Sivasagar,Upper Assam,330,gs-as-co-478,SREE SIBBARI TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-siv-018,THOWRA,thowra,likely_active,medium,Sivasagar,Upper Assam,H-6,gs-as-co-479,THOWRA,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-siv-019,TIOK TEA ESTATE,tiok,likely_active,medium,Sivasagar,Upper Assam,2386,gs-as-co-480,TIOK TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-siv-020,MASKARA TEA ESTATE,maskara,likely_active,medium,Sivasagar,Upper Assam,239,gs-as-co-481,MASKARA TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-siv-021,MACKEYPORE TEA ESTATE,mackeypore,likely_active,medium,Sivasagar,Upper Assam,2541,gs-as-co-482,MACKEYPORE TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-siv-022,KRISHNABEHARI TEA ESTATE,krishnabehari,likely_active,medium,Sivasagar,Upper Assam,130 (RC-213),gs-as-co-483,KRISHNABEHARI TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-siv-023,BORAHI TE,borahi,likely_active,medium,Sivasagar,Upper Assam,2161,gs-as-co-484,BORAHI TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-siv-024,BANAMALIE,banamalie,likely_active,medium,Sivasagar,Upper Assam,1299,gs-as-co-485,BANAMALIE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-siv-025,ATALPUKHRI,atalpukhri,likely_active,medium,Sivasagar,Upper Assam,344,gs-as-co-486,ATALPUKHRI,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-siv-026,HANUMANBAG TE,hanumanbag,likely_active,medium,Sivasagar,Upper Assam,2466,gs-as-co-487,HANUMANBAG TE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-siv-027,RAJMAI TEA ESTATE,rajmai,likely_active,medium,Sivasagar,Upper Assam,D-34,gs-as-co-488,RAJMAI TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-son-001,RUPAJULI T.E.,rupajuli,likely_active,medium,Sonitpur,Central Assam,D-38,gs-as-co-489,RUPAJULI T.E.,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-son-002,NOORBARI T.E,noorbari,likely_active,medium,Sonitpur,Central Assam,1904,gs-as-co-490,NOORBARI T.E,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-son-003,PANBARI,panbari,likely_active,medium,Sonitpur,Central Assam,138,gs-as-co-491,PANBARI,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-son-004,PABHOI,pabhoi,likely_active,medium,Sonitpur,Central Assam,D-7,gs-as-co-492,PABHOI,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-son-005,PHULBARI D,phulbarid,likely_active,medium,Sonitpur,Central Assam,11,gs-as-co-493,PHULBARI D,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-son-006,SAPOI,sapoi,likely_active,medium,Sonitpur,Central Assam,2324,gs-as-co-494,SAPOI,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-son-007,SESSA,sessa,likely_active,medium,Sonitpur,Central Assam,Q-27,gs-as-co-495,SESSA,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-son-008,TOPIA,topia,likely_active,medium,Sonitpur,Central Assam,84,gs-as-co-496,TOPIA,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-son-009,SINGRI,singri,likely_active,medium,Sonitpur,Central Assam,2530,gs-as-co-497,SINGRI,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-son-010,SHYAMGURI,shyamguri,likely_active,medium,Sonitpur,Central Assam,2016,gs-as-co-498,SHYAMGURI,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-son-011,TULIP T.E,tulip,likely_active,medium,Sonitpur,Central Assam,141,gs-as-co-499,TULIP T.E,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-son-012,HARCHURAH,harchurah,likely_active,medium,Sonitpur,Central Assam,D-12,gs-as-co-500,HARCHURAH,Organized Plantation,HARCHURAH,target_candidate,,tea_board_registered_planters_2019
+gs-as-son-013,HIRAJULI,hirajuli,likely_active,medium,Sonitpur,Central Assam,452,gs-as-co-501,HIRAJULI,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-son-014,GHOIRALLIE T.E.,ghoirallie,likely_active,medium,Sonitpur,Central Assam,Q-34,gs-as-co-502,GHOIRALLIE T.E.,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-son-015,DUFFLAGHUR T.E.,dufflaghur,active_confirmed,high,Sonitpur,Central Assam,D-20,gs-as-co-003,McLeod Russel India Limited,Organized Plantation,,excluded_large_group,Conglomerate / Multi-estate group,tea_board_registered_planters_2019
+gs-as-son-016,DURRUNG,durrung,likely_active,medium,Sonitpur,Central Assam,1664,gs-as-co-503,DURRUNG,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-son-017,DHENDAI T.E,dhendai,likely_active,medium,Sonitpur,Central Assam,2414(RC-232),gs-as-co-504,DHENDAI T.E,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-son-018,DHULAPADUNG T.E,dhulapadung,likely_active,medium,Sonitpur,Central Assam,Q-28,gs-as-co-505,DHULAPADUNG T.E,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-son-019,HOOGRAJULI,hoograjuli,likely_active,medium,Sonitpur,Central Assam,2392,gs-as-co-506,HOOGRAJULI,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-son-020,NILPUR,nilpur,likely_active,medium,Sonitpur,Central Assam,2389,gs-as-co-507,NILPUR,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-son-021,NAHORANI,nahorani,active_confirmed,high,Sonitpur,Central Assam,A-41,gs-as-co-006,Amalgamated Plantations Private Limited (Tata),Organized Plantation,,excluded_large_group,Conglomerate / Multi-estate group,tea_board_registered_planters_2019
+gs-as-son-022,NARAYANPUR,narayanpur,likely_active,medium,Sonitpur,Central Assam,2522,gs-as-co-508,NARAYANPUR,Organized Plantation,NARAYANPUR,target_candidate,,tea_board_registered_planters_2019
+gs-as-son-023,MONMOHINIPUR,monmohinipur,likely_active,medium,Sonitpur,Central Assam,329,gs-as-co-509,MONMOHINIPUR,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-son-024,ADDABARIE N,addabarien,active_confirmed,high,Sonitpur,Central Assam,24,gs-as-co-003,McLeod Russel India Limited,Organized Plantation,,excluded_large_group,Conglomerate / Multi-estate group,tea_board_registered_planters_2019
+gs-as-son-025,BARGANG T.E,bargang,likely_active,medium,Sonitpur,Central Assam,D-4,gs-as-co-510,BARGANG T.E,Organized Plantation,BARGANG T.G.,target_candidate,,tea_board_registered_planters_2019
+gs-as-son-026,BAGHMARI TEA GARDEN,baghmari,active_confirmed,high,Sonitpur,Central Assam,266(E-45),gs-as-co-511,Baghbari Tea Company Private Limited,50.66 Ha,,target_candidate,,tea_board_registered_planters_2019
+gs-as-son-027,BAMGAON,bamgaon,likely_active,medium,Sonitpur,Central Assam,C/52,gs-as-co-512,BAMGAON,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-son-028,BELSERI T.E,belseri,likely_active,medium,Sonitpur,Central Assam,2481,gs-as-co-513,BELSERI T.E,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-son-029,BHOLAGURI T.E,bholaguri,likely_active,medium,Sonitpur,Central Assam,114,gs-as-co-514,BHOLAGURI T.E,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-son-030,BORJULI T.E,borjuli,likely_active,medium,Sonitpur,Central Assam,Q-5,gs-as-co-515,BORJULI T.E,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-son-031,BORCHOLA T.E,borchola,likely_active,medium,Sonitpur,Central Assam,273,gs-as-co-516,BORCHOLA T.E,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-son-032,BOROI T.E.,boroi,active_confirmed,high,Sonitpur,Central Assam,D-15,gs-as-co-517,Goodricke Group Limited,Organized Plantation,,excluded_large_group,Conglomerate / Multi-estate group,tea_board_registered_planters_2019
+gs-as-son-033,BORMAH JAN,bormahjan,likely_active,medium,Sonitpur,Central Assam,E-28 (D-28),gs-as-co-518,BORMAH JAN,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-son-034,CHARDWAR,chardwar,likely_active,medium,Sonitpur,Central Assam,2439,gs-as-co-519,CHARDWAR,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-son-035,DEKORAI T.E,dekorai,likely_active,medium,Sonitpur,Central Assam,D-8,gs-as-co-520,DEKORAI T.E,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-son-036,KOLONY T.E,kolony,likely_active,medium,Sonitpur,Central Assam,2425,gs-as-co-521,KOLONY T.E,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-son-037,MANOBAG,manobag,likely_active,medium,Sonitpur,Central Assam,37,gs-as-co-522,MANOBAG,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-son-038,TINKHARIA T.E,tinkharia,likely_active,medium,Sonitpur,Central Assam,V-2,gs-as-co-523,TINKHARIA T.E,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-son-039,TEZPORE AND GOGRA T.E,zporeandgogra,likely_active,medium,Sonitpur,Central Assam,N-6,gs-as-co-524,TEZPORE AND GOGRA T.E,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-son-040,SOGRA,sogra,likely_active,medium,Sonitpur,Central Assam,358,gs-as-co-525,SOGRA,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-son-041,SONABHEEL,sonabheel,likely_active,medium,Sonitpur,Central Assam,C/40,gs-as-co-526,SONABHEEL,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-son-042,SONAJULI,sonajuli,likely_active,medium,Sonitpur,Central Assam,2449,gs-as-co-527,SONAJULI,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-son-043,TARAJULIE T.E. N,tarajulien,active_confirmed,high,Sonitpur,Central Assam,23,gs-as-co-003,McLeod Russel India Limited,Organized Plantation,,excluded_large_group,Conglomerate / Multi-estate group,tea_board_registered_planters_2019
+gs-as-tin-001,TARA TEA ESTATE,tara,likely_active,medium,Tinsukia,Upper Assam,H-29,gs-as-co-528,TARA TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-002,TALUP TEA ESTATE J,talupj,likely_active,medium,Tinsukia,Upper Assam,3,gs-as-co-529,TALUP TEA ESTATE J,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-003,SOOKERATING,sookerating,active_confirmed,high,Tinsukia,Upper Assam,2102,gs-as-co-530,Sookerating Tea Estate Private Limited,189.28 Ha,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-004,SREE KRISHNA ESTATE,sreekrishna,likely_active,medium,Tinsukia,Upper Assam,284,gs-as-co-531,SREE KRISHNA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-005,TIPAM,tipam,likely_active,medium,Tinsukia,Upper Assam,RC-730,gs-as-co-532,TIPAM,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-006,TINGAMIRA,tingamira,likely_active,medium,Tinsukia,Upper Assam,2776,gs-as-co-533,TINGAMIRA,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-007,MARGHERITA T.E.,margherita,likely_active,medium,Tinsukia,Upper Assam,2603,gs-as-co-534,MARGHERITA T.E.,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-008,MANOHARPUR TEA ESTATE,manoharpur,likely_active,medium,Tinsukia,Upper Assam,1385,gs-as-co-535,MANOHARPUR TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-009,MAHAKALI TEA ESTATE,mahakali,active_confirmed,high,Tinsukia,Upper Assam,C-28,gs-as-co-003,McLeod Russel India Limited,Organized Plantation,,excluded_large_group,Conglomerate / Multi-estate group,tea_board_registered_planters_2019
+gs-as-tin-010,MALIRAMPUR,malirampur,likely_active,medium,Tinsukia,Upper Assam,NA,gs-as-co-536,MALIRAMPUR,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-011,MANGALAM,mangalam,likely_active,medium,Tinsukia,Upper Assam,2599,gs-as-co-537,MANGALAM,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-012,KOOMSONG,koomsong,likely_active,medium,Tinsukia,Upper Assam,D-25,gs-as-co-538,KOOMSONG,Organized Plantation,KOOMSONG T.E,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-013,KONAPATHAR,konapathar,likely_active,medium,Tinsukia,Upper Assam,587,gs-as-co-539,KONAPATHAR,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-014,LANKASHI TEA ESTATE,lankashi,active_confirmed,high,Tinsukia,Upper Assam,2553,gs-as-co-540,Lankashi Tea and Seed Estates Private Limited,182.64 Ha,,excluded_large_group,Public company or multi-estate group,tea_board_registered_planters_2019
+gs-as-tin-015,LIMBUGURI TEA ESTATE,limbuguri,likely_active,medium,Tinsukia,Upper Assam,2535,gs-as-co-541,LIMBUGURI TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-016,LEDO T.E,ledo,likely_active,medium,Tinsukia,Upper Assam,B-79,gs-as-co-542,LEDO T.E,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-017,KEYHUNG TEA ESTATE,keyhung,likely_active,medium,Tinsukia,Upper Assam,D-61,gs-as-co-543,KEYHUNG TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-018,KESAGURI,kesaguri,active_confirmed,high,Tinsukia,Upper Assam,2691,gs-as-co-544,Ghanashyam Lahoti proprietorship,59.48 Ha,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-019,KHETOJAN,khetojan,likely_active,medium,Tinsukia,Upper Assam,RC-267,gs-as-co-545,KHETOJAN,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-020,KHOBONG TEA ESTATE,khobong,likely_active,medium,Tinsukia,Upper Assam,J-7,gs-as-co-546,KHOBONG TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-021,KHATANGPANI,khatangpani,active_confirmed,high,Tinsukia,Upper Assam,283,gs-as-co-547,J.N. Sarma and other HUF legal heirs,195.65 Ha,,excluded_large_group,Public company or multi-estate group,tea_board_registered_planters_2019
+gs-as-tin-022,KISSNESS,kissness,likely_active,medium,Tinsukia,Upper Assam,2636,gs-as-co-548,KISSNESS,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-023,DEOHALL TEA ESTATE,deohall,active_confirmed,high,Tinsukia,Upper Assam,H-5,gs-as-co-549,Warren Tea Limited,Organized Plantation,,excluded_large_group,Conglomerate / Multi-estate group,tea_board_registered_planters_2019
+gs-as-tin-024,DEHING TEA ESTATE,dehing,active_confirmed,high,Tinsukia,Upper Assam,2604,gs-as-co-517,Goodricke Group Limited,Organized Plantation,,excluded_large_group,Conglomerate / Multi-estate group,tea_board_registered_planters_2019
+gs-as-tin-025,DEAMOOLIE TEA ESTATE,deamoolie,likely_active,medium,Tinsukia,Upper Assam,H-3,gs-as-co-550,DEAMOOLIE TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-026,DHANUKA TEA ESTATE,dhanuka,likely_active,medium,Tinsukia,Upper Assam,Not Available,gs-as-co-551,DHANUKA TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-027,DHONJAN TEA ESTATE,dhonjan,likely_active,medium,Tinsukia,Upper Assam,2761,gs-as-co-552,DHONJAN TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-028,DHELAKHAT TEA ESTATE,dhelakhat,likely_active,medium,Tinsukia,Upper Assam,H-33,gs-as-co-553,DHELAKHAT TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-029,DHOEDAAM TEA ESTATE,dhoedaam,active_confirmed,high,Tinsukia,Upper Assam,H-24,gs-as-co-549,Warren Tea Limited,Organized Plantation,,excluded_large_group,Conglomerate / Multi-estate group,tea_board_registered_planters_2019
+gs-as-tin-030,DHOLLA TEA ESTATE,dholla,likely_active,medium,Tinsukia,Upper Assam,2246,gs-as-co-554,DHOLLA TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-031,CATO TEA & SEED,catoaseed,likely_active,medium,Tinsukia,Upper Assam,2566,gs-as-co-555,CATO TEA & SEED,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-032,DAIMUKHIA TEA ESTATE,daimukhia,likely_active,medium,Tinsukia,Upper Assam,2488,gs-as-co-556,DAIMUKHIA TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-033,CHOTA TINGRAI TEA ESTATE,chotatingrai,likely_active,medium,Tinsukia,Upper Assam,936,gs-as-co-557,CHOTA TINGRAI TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-034,CHARALI TEA & TEA SEED ESTATE,charaliaaseed,likely_active,medium,Tinsukia,Upper Assam,415,gs-as-co-558,CHARALI TEA & TEA SEED ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-035,CHANDMARI TEA ESTATE,chandmari,active_confirmed,high,Tinsukia,Upper Assam,2319,gs-as-co-559,Chandmari Tea Co Pvt Ltd,184.62 Ha,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-036,CHOKHANI TEA & TEA SEED,chokhaniaaseed,likely_active,medium,Tinsukia,Upper Assam,2537,gs-as-co-560,CHOKHANI TEA & TEA SEED,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-037,BRAHMAJAN TEA ESTATE,brahmajan,likely_active,medium,Tinsukia,Upper Assam,2878,gs-as-co-561,BRAHMAJAN TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-038,BUDLABETA TEA ESTATE J,budlabetaj,likely_active,medium,Tinsukia,Upper Assam,12,gs-as-co-562,BUDLABETA TEA ESTATE J,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-039,BORBHETA TEA ESTATE,borbheta,likely_active,medium,Tinsukia,Upper Assam,2435,gs-as-co-364,BORBHETA TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-040,BORDUBI TEA ESTATE D,bordubid,likely_active,medium,Tinsukia,Upper Assam,10,gs-as-co-563,BORDUBI TEA ESTATE D,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-041,BOGAPANI TEA ESTATE,bogapani,likely_active,medium,Tinsukia,Upper Assam,2607,gs-as-co-564,BOGAPANI TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-042,BHERJAN TEA ESTATE,bherjan,likely_active,medium,Tinsukia,Upper Assam,269,gs-as-co-565,BHERJAN TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-043,BEESAKOPIE TEA ESTATE,beesakopie,likely_active,medium,Tinsukia,Upper Assam,2485,gs-as-co-566,BEESAKOPIE TEA ESTATE,Organized Plantation,BEESAKOPIE,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-044,BAZALONI TEA ESTATE,bazaloni,likely_active,medium,Tinsukia,Upper Assam,C-45,gs-as-co-567,BAZALONI TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-045,BAHADUR TEA ESTATE,bahadur,active_confirmed,high,Tinsukia,Upper Assam,272,gs-as-co-568,Dhunseri Tea & Industries Limited,Organized Plantation,,excluded_large_group,Conglomerate / Multi-estate group,tea_board_registered_planters_2019
+gs-as-tin-046,BAGHBARI TEA ESTATE,baghbari,active_confirmed,high,Tinsukia,Upper Assam,Not Available,gs-as-co-511,Baghbari Tea Company Private Limited,50.66 Ha,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-047,BAGHJAN TEA ESTATE G,baghjang,likely_active,medium,Tinsukia,Upper Assam,30,gs-as-co-569,BAGHJAN TEA ESTATE G,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-048,BAJRANGPUR,bajrangpur,likely_active,medium,Tinsukia,Upper Assam,2749,gs-as-co-061,BAJRANGPUR,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-049,ALAKANANDA TEA ESTATE,alakananda,likely_active,medium,Tinsukia,Upper Assam,2696-2697,gs-as-co-570,ALAKANANDA TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-050,AMBIKA TEA ESTATE,ambika,likely_active,medium,Tinsukia,Upper Assam,2563,gs-as-co-571,AMBIKA TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-051,ANANDABAG TEA ESTATE,anandabag,active_confirmed,high,Tinsukia,Upper Assam,211,gs-as-co-572,The Ananda Bag Tea Company Limited,Official 2024 pollution-consent results support current tea processing; CRISIL reports a four-estate group covering about 281 ha; individual estate area and workforce unknown,,excluded_large_group,Public company or multi-estate group,tea_board_registered_planters_2019
+gs-as-tin-052,ANANDAPOOR TEA ESTATE,anandapoor,likely_active,medium,Tinsukia,Upper Assam,2731,gs-as-co-573,ANANDAPOOR TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-053,NAMDANG,namdang,likely_active,medium,Tinsukia,Upper Assam,2606,gs-as-co-099,NAMDANG,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-054,NILIMA,nilima,likely_active,medium,Tinsukia,Upper Assam,960,gs-as-co-574,NILIMA,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-055,HOLLONGHABI TEA ESTATE,hollonghabi,likely_active,medium,Tinsukia,Upper Assam,315,gs-as-co-575,HOLLONGHABI TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-056,HOKONGURI TEA ESTATE,hokonguri,likely_active,medium,Tinsukia,Upper Assam,J-5,gs-as-co-576,HOKONGURI TEA ESTATE,Organized Plantation,HOKONGURI,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-057,HILIKA TEA ESTATE J,hilikaj,active_confirmed,high,Tinsukia,Upper Assam,4,gs-as-co-138,Apeejay Tea Limited (Assam Frontier),Organized Plantation,,excluded_large_group,Conglomerate / Multi-estate group,tea_board_registered_planters_2019
+gs-as-tin-058,ITAKHOOLI TEA ESTATE D,itakhoolid,likely_active,medium,Tinsukia,Upper Assam,23,gs-as-co-577,ITAKHOOLI TEA ESTATE D,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-059,PADUMANI TEA ESTATE,padumani,active_confirmed,high,Tinsukia,Upper Assam,1437,gs-as-co-578,Balabux Laxmi Narayan partnership - current group fit unresolved,51.70 Ha,,excluded_large_group,Public company or multi-estate group,tea_board_registered_planters_2019
+gs-as-tin-060,JALPUNIA TEA ESTATE,jalpunia,likely_active,medium,Tinsukia,Upper Assam,392,gs-as-co-579,JALPUNIA TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-061,DIROK TEA ESTATE,dirok,likely_active,medium,Tinsukia,Upper Assam,2605,gs-as-co-580,DIROK TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-062,DIGULTURRUNG TEA ESTATE,digulturrung,active_confirmed,high,Tinsukia,Upper Assam,G-25,gs-as-co-129,Assam Company India Limited (BRS Group),Organized Plantation,,excluded_large_group,Conglomerate / Multi-estate group,tea_board_registered_planters_2019
+gs-as-tin-063,DINJAN TEA ESTATE,dinjan,active_confirmed,high,Tinsukia,Upper Assam,G-27,gs-as-co-129,Assam Company India Limited (BRS Group),Organized Plantation,,excluded_large_group,Conglomerate / Multi-estate group,tea_board_registered_planters_2019
+gs-as-tin-064,DUAMARA TEA ESTATE,duamara,active_confirmed,high,Tinsukia,Upper Assam,H-77,gs-as-co-549,Warren Tea Limited,Organized Plantation,DUAMARA,excluded_large_group,Conglomerate / Multi-estate group,tea_board_registered_planters_2019
+gs-as-tin-065,GANGABARI TEA ESTATE,gangabari,active_confirmed,high,Tinsukia,Upper Assam,418,gs-as-co-581,Gangabari Tea Company Private Limited,124.94 Ha,,excluded_large_group,Public company or multi-estate group,tea_board_registered_planters_2019
+gs-as-tin-066,HATIMARA TEA ESTATE,hatimara,active_confirmed,high,Tinsukia,Upper Assam,H-78,gs-as-co-549,Warren Tea Limited,Organized Plantation,,excluded_large_group,Conglomerate / Multi-estate group,tea_board_registered_planters_2019
+gs-as-tin-067,HAPJAN TEA ESTATE J,hapjanj,active_confirmed,high,Tinsukia,Upper Assam,9,gs-as-co-568,Dhunseri Tea & Industries Limited,Organized Plantation,,excluded_large_group,Conglomerate / Multi-estate group,tea_board_registered_planters_2019
+gs-as-tin-068,HANUMAN TEA ESTATE,hanuman,likely_active,medium,Tinsukia,Upper Assam,2745,gs-as-co-582,HANUMAN TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-069,GOHAIN TEA ESTATE,gohain,likely_active,medium,Tinsukia,Upper Assam,535,gs-as-co-583,GOHAIN TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-070,GILLAPUKRI,gillapukri,active_confirmed,high,Tinsukia,Upper Assam,622,gs-as-co-584,Gillapukri Tea Company Limited,258.25 Ha,,excluded_large_group,Public company or multi-estate group,tea_board_registered_planters_2019
+gs-as-tin-071,VISHNU TEA ESTATE,vishnu,likely_active,medium,Tinsukia,Upper Assam,2869,gs-as-co-585,VISHNU TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-072,TONGANAGAON T.E,tonganagaon,likely_active,medium,Tinsukia,Upper Assam,1932,gs-as-co-586,TONGANAGAON T.E,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-073,TIPPUK,tippuk,likely_active,medium,Tinsukia,Upper Assam,2602,gs-as-co-587,TIPPUK,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-074,SEWPUR TEA ESTATE,sewpur,likely_active,medium,Tinsukia,Upper Assam,109,gs-as-co-588,SEWPUR TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-075,SEWALI,sewali,likely_active,medium,Tinsukia,Upper Assam,2724,gs-as-co-589,SEWALI,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-076,SEGUNBARI TEA ESTATE,segunbari,active_confirmed,high,Tinsukia,Upper Assam,113,gs-as-co-590,Segunbari Tea Company Limited,Organized Plantation,,excluded_large_group,Public company or multi-estate group,tea_board_registered_planters_2019
+gs-as-tin-077,SAVITRI TEA ESTATE,savitri,likely_active,medium,Tinsukia,Upper Assam,2506,gs-as-co-591,SAVITRI TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-078,SANKAR TEA ESTATE,sankar,active_confirmed,high,Tinsukia,Upper Assam,133,gs-as-co-592,Sankar Tea Company Private Limited,141.71 Ha,,excluded_large_group,Public company or multi-estate group,tea_board_registered_planters_2019
+gs-as-tin-079,SAMDANG TEA ESTATE,samdang,likely_active,medium,Tinsukia,Upper Assam,2486,gs-as-co-593,SAMDANG TEA ESTATE,Organized Plantation,SAMDANG(orthodox),target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-080,SAPORTOLI TEA ESTATE,saportoli,likely_active,medium,Tinsukia,Upper Assam,2708(NC),gs-as-co-594,SAPORTOLI TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-081,SADASIVA TEA ESTATE,sadasiva,active_confirmed,high,Tinsukia,Upper Assam,1816,gs-as-co-595,Sadasiva Tea Company Private Limited,120.88 Ha,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-082,FATHEPUR TEA COMPANY,fathepura,likely_active,medium,Tinsukia,Upper Assam,3897,gs-as-co-596,FATHEPUR TEA COMPANY,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-083,PHILLOBARI D,phillobarid,likely_active,medium,Tinsukia,Upper Assam,74,gs-as-co-597,PHILLOBARI D,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-084,PENGAREE J,pengareej,active_confirmed,high,Tinsukia,Upper Assam,16,gs-as-co-138,Apeejay Tea Limited (Assam Frontier),Organized Plantation,,excluded_large_group,Conglomerate / Multi-estate group,tea_board_registered_planters_2019
+gs-as-tin-085,PATKAI,patkai,likely_active,medium,Tinsukia,Upper Assam,2890/ASTIMAP 881,gs-as-co-598,PATKAI,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-086,RAIDANG TEA ESTATE,raidang,likely_active,medium,Tinsukia,Upper Assam,2487,gs-as-co-599,RAIDANG TEA ESTATE,Organized Plantation,RAIDANG T.E.,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-087,PARSURAM (SOUTH) TEA ESTATE,parsuramsouth,likely_active,medium,Tinsukia,Upper Assam,Not Available,gs-as-co-600,PARSURAM (SOUTH) TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-088,PARSURAM (NORTH) TEA ESTATE,parsuramnorth,likely_active,medium,Tinsukia,Upper Assam,2247,gs-as-co-601,PARSURAM (NORTH) TEA ESTATE,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-tin-089,PADUMANI,padumani,active_confirmed,high,Tinsukia,Upper Assam,380,gs-as-co-578,Balabux Laxmi Narayan partnership - current group fit unresolved,51.70 Ha,,excluded_large_group,Public company or multi-estate group,tea_board_registered_planters_2019
+gs-as-tin-090,RUPAI TEA ESTATE,rupai,active_confirmed,high,Tinsukia,Upper Assam,H-27,gs-as-co-549,Warren Tea Limited,Organized Plantation,,excluded_large_group,Conglomerate / Multi-estate group,tea_board_registered_planters_2019
+gs-as-tin-091,RUNGAGORA,rungagora,active_confirmed,high,Tinsukia,Upper Assam,G- 29,gs-as-co-129,Assam Company India Limited (BRS Group),Organized Plantation,,excluded_large_group,Conglomerate / Multi-estate group,tea_board_registered_planters_2019
+gs-as-tin-092,PRABHAT TEA ESTATE,prabhat,active_confirmed,high,Tinsukia,Upper Assam,553,gs-as-co-602,Prabhat Tea Estate Assam Private Limited,115.85 Ha,,excluded_large_group,Public company or multi-estate group,tea_board_registered_planters_2019
+gs-as-tin-093,POWAI A,powaia,likely_active,medium,Tinsukia,Upper Assam,11,gs-as-co-603,POWAI A,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019
+gs-as-uda-001,PANEERY T.E.,paneery,active_confirmed,high,Udalguri,Lower Assam,D/3,gs-as-co-003,McLeod Russel India Limited,Organized Plantation,,excluded_large_group,Conglomerate / Multi-estate group,tea_board_registered_planters_2019
+gs-as-uda-002,ORANGAJULI,orangajuli,active_confirmed,high,Udalguri,Lower Assam,B/74,gs-as-co-517,Goodricke Group Limited,Organized Plantation,ORANGAJULI,excluded_large_group,Conglomerate / Multi-estate group,tea_board_registered_planters_2019
+gs-as-uda-003,ORANG,orang,likely_active,medium,Udalguri,Lower Assam,J-23,gs-as-co-604,ORANG,Organized Plantation,"ORANG CLONAL, ORANGBARI",target_candidate,,tea_board_registered_planters_2019
+gs-as-uda-004,SINGRIMARI TEA ESTATE,singrimari,active_confirmed,high,Udalguri,Lower Assam,196,gs-as-co-517,Goodricke Group Limited,Organized Plantation,,excluded_large_group,Conglomerate / Multi-estate group,tea_board_registered_planters_2019
+gs-as-uda-005,HATTIGOR,hattigor,active_confirmed,high,Udalguri,Lower Assam,A-9,gs-as-co-006,Amalgamated Plantations Private Limited (Tata),Organized Plantation,"HATTIGOR, KALSI, HARISINGHA",excluded_large_group,Conglomerate / Multi-estate group,tea_board_registered_planters_2019
+gs-as-uda-006,DIMAKUSI,dimakusi,likely_active,medium,Udalguri,Lower Assam,D-18,gs-as-co-605,DIMAKUSI,Organized Plantation,,target_candidate,,tea_board_registered_planters_2019

@@ -1,0 +1,575 @@
+garden_id,garden_name,district,action_needed,details
+gs-as-bak-001,FATEMABAD TEA ESTATE,Baksa,mca_company_lookup,Find owning entity and directors for Reg #36
+gs-as-bak-002,MENOKA TEA ESTATE,Baksa,mca_company_lookup,Find owning entity and directors for Reg #1764 (RC-530)
+gs-as-bis-002,BORGAON T.E,Biswanath,mca_company_lookup,Find owning entity and directors for Reg #3046
+gs-as-bis-004,KETTELA TEA ESTATE,Biswanath,mca_company_lookup,Find owning entity and directors for Reg #2536
+gs-as-bis-006,MAHALUXMI TEA ESTATE,Biswanath,mca_company_lookup,Find owning entity and directors for Reg #70
+gs-as-bis-007,GINGIA,Biswanath,mca_company_lookup,Find owning entity and directors for Reg #N/26
+gs-as-bis-011,NEWPURUPBARI,Biswanath,mca_company_lookup,Find owning entity and directors for Reg #2464
+gs-as-bis-012,NIRMALA T.E,Biswanath,mca_company_lookup,Find owning entity and directors for Reg #105
+gs-as-bis-015,TEZALPATTY TEA ESTATE,Biswanath,mca_company_lookup,Find owning entity and directors for Reg #2874
+gs-as-cac-001,SRILA TE,Cachar,mca_company_lookup,Find owning entity and directors for Reg #3028
+gs-as-cac-002,SUBONG TEA(PRITHVI TEA CO PVT LTD),Cachar,mca_company_lookup,Find owning entity and directors for Reg #2513
+gs-as-cac-003,PATHECHERRA TEA ESTATE,Cachar,mca_company_lookup,Find owning entity and directors for Reg #1880
+gs-as-cac-004,PALLORBUND,Cachar,mca_company_lookup,Find owning entity and directors for Reg #2424
+gs-as-cac-005,RUKNI TE,Cachar,mca_company_lookup,Find owning entity and directors for Reg #2429
+gs-as-cac-006,ROSEKANDY TE,Cachar,mca_company_lookup,Find owning entity and directors for Reg #2217
+gs-as-cac-007,RUTTONPORE TE,Cachar,mca_company_lookup,Find owning entity and directors for Reg #2289
+gs-as-cac-008,RAHMAN NAGAR,Cachar,mca_company_lookup,Find owning entity and directors for Reg #76
+gs-as-cac-009,RAMPORE TE,Cachar,mca_company_lookup,Find owning entity and directors for Reg #2402
+gs-as-cac-010,POLOI TE,Cachar,mca_company_lookup,Find owning entity and directors for Reg #2239
+gs-as-cac-011,URRUNABUND TE,Cachar,mca_company_lookup,Find owning entity and directors for Reg #2029
+gs-as-cac-012,WEST JALINGA TE,Cachar,mca_company_lookup,Find owning entity and directors for Reg #2451
+gs-as-cac-013,SILCURI,Cachar,mca_company_lookup,Find owning entity and directors for Reg #2403
+gs-as-cac-014,HILARA TE,Cachar,mca_company_lookup,Find owning entity and directors for Reg #2380
+gs-as-cac-015,IRINGMARA TEA ESTATE,Cachar,mca_company_lookup,Find owning entity and directors for Reg #2007
+gs-as-cac-016,INDRAGARH TE,Cachar,mca_company_lookup,Find owning entity and directors for Reg #2964
+gs-as-cac-017,JATINGA VALLEY TE,Cachar,mca_company_lookup,Find owning entity and directors for Reg #2055
+gs-as-cac-018,JELLALPORE TEA ESTATE,Cachar,mca_company_lookup,Find owning entity and directors for Reg #2568
+gs-as-cac-019,JHIRIGHAT TE,Cachar,mca_company_lookup,Find owning entity and directors for Reg #H-9
+gs-as-cac-020,MONIIERKHAL TE,Cachar,mca_company_lookup,Find owning entity and directors for Reg #2337
+gs-as-cac-021,HATTICHERRA TE,Cachar,mca_company_lookup,Find owning entity and directors for Reg #2512
+gs-as-cac-022,DWARBUND TE,Cachar,mca_company_lookup,Find owning entity and directors for Reg #2451
+gs-as-cac-023,DILKHOOSH TE,Cachar,mca_company_lookup,Find owning entity and directors for Reg #2432
+gs-as-cac-024,DOOLOOGRAM TE,Cachar,mca_company_lookup,Find owning entity and directors for Reg #2166
+gs-as-cac-025,DOLOO TE,Cachar,mca_company_lookup,Find owning entity and directors for Reg #2474
+gs-as-cac-026,MADOORA TE,Cachar,mca_company_lookup,Find owning entity and directors for Reg #288
+gs-as-cac-027,MARTYCHERRA TE,Cachar,mca_company_lookup,Find owning entity and directors for Reg #2098
+gs-as-cac-028,LARSINGAH TE,Cachar,mca_company_lookup,Find owning entity and directors for Reg #2391
+gs-as-cac-029,LABAC,Cachar,mca_company_lookup,Find owning entity and directors for Reg #2470
+gs-as-cac-030,LAKHIPORE,Cachar,mca_company_lookup,Find owning entity and directors for Reg #2177
+gs-as-cac-031,KOOMBER TEA ESTATE,Cachar,mca_company_lookup,Find owning entity and directors for Reg #2653
+gs-as-cac-032,KAILASHPUR TE,Cachar,mca_company_lookup,Find owning entity and directors for Reg #2679
+gs-as-cac-033,KALLINECHERRA,Cachar,mca_company_lookup,Find owning entity and directors for Reg #C-10
+gs-as-cac-034,KALLINE TE,Cachar,mca_company_lookup,Find owning entity and directors for Reg #2569
+gs-as-cac-035,KHOREEL TEA ESTATE,Cachar,mca_company_lookup,Find owning entity and directors for Reg #2060
+gs-as-cac-036,BICRAMPORE T.E.,Cachar,mca_company_lookup,Find owning entity and directors for Reg #2309
+gs-as-cac-037,BINNAKANDY T.E,Cachar,mca_company_lookup,Find owning entity and directors for Reg #2437
+gs-as-cac-038,BOROKAI T.E,Cachar,mca_company_lookup,Find owning entity and directors for Reg #2384
+gs-as-cac-039,BOROJALINGAH T.E.,Cachar,mca_company_lookup,Find owning entity and directors for Reg #2340
+gs-as-cac-040,BURTOLL T.E,Cachar,mca_company_lookup,Find owning entity and directors for Reg #2469
+gs-as-cac-041,CHANDIGHAT T.E.,Cachar,mca_company_lookup,Find owning entity and directors for Reg #2540
+gs-as-cac-042,COOMBERGRAM,Cachar,mca_company_lookup,Find owning entity and directors for Reg #C-2
+gs-as-cac-043,CRAIGPARK T.E.,Cachar,mca_company_lookup,Find owning entity and directors for Reg #2369(2368)
+gs-as-cac-044,DEGUBBER T.E,Cachar,mca_company_lookup,Find owning entity and directors for Reg #2163
+gs-as-cac-045,DERBY T.E,Cachar,mca_company_lookup,Find owning entity and directors for Reg #2350
+gs-as-cac-046,DEWAN TE,Cachar,mca_company_lookup,Find owning entity and directors for Reg #2468
+gs-as-cac-047,BENODNAGAR T.E,Cachar,mca_company_lookup,Find owning entity and directors for Reg #110
+gs-as-cac-048,BHUBANDHAR TEA ESTATE,Cachar,mca_company_lookup,Find owning entity and directors for Reg #2460
+gs-as-cac-049,BHUVANVALLEY,Cachar,mca_company_lookup,Find owning entity and directors for Reg #2035
+gs-as-cac-050,BAJRANGPUR,Cachar,mca_company_lookup,Find owning entity and directors for Reg #2165
+gs-as-cac-051,BALACHERRA TE,Cachar,mca_company_lookup,Find owning entity and directors for Reg #1304
+gs-as-cac-052,ALYNEE & NARAINDHAR,Cachar,mca_company_lookup,Find owning entity and directors for Reg #2509
+gs-as-cac-053,AMRANAGAR TEA ESTATE,Cachar,mca_company_lookup,Find owning entity and directors for Reg #1613
+gs-as-cac-054,ARCUTTIPORE TE,Cachar,mca_company_lookup,Find owning entity and directors for Reg #2332
+gs-as-cha-001,AIDEOBARI TEA ESTATE,Charaideo,mca_company_lookup,Find owning entity and directors for Reg #2124
+gs-as-cha-002,AIDEOPUKHURI TEA ESTATE,Charaideo,mca_company_lookup,Find owning entity and directors for Reg #1065
+gs-as-cha-003,BEHUBOR TE,Charaideo,mca_company_lookup,Find owning entity and directors for Reg #391
+gs-as-cha-004,BEZBARUAH TEA ESTATE,Charaideo,mca_company_lookup,Find owning entity and directors for Reg #1675
+gs-as-cha-005,BHUYANKHAT,Charaideo,mca_company_lookup,Find owning entity and directors for Reg #1718
+gs-as-cha-006,BARASALI TE,Charaideo,mca_company_lookup,Find owning entity and directors for Reg #2279
+gs-as-cha-007,BARUAKHAT,Charaideo,mca_company_lookup,Find owning entity and directors for Reg #393
+gs-as-cha-008,DEEPLING TEA ESTATE,Charaideo,mca_company_lookup,Find owning entity and directors for Reg #2583
+gs-as-cha-009,BORPATRA TEA GARDEN,Charaideo,mca_company_lookup,Find owning entity and directors for Reg #K-22
+gs-as-cha-010,BORTIMON TE,Charaideo,mca_company_lookup,Find owning entity and directors for Reg #2274
+gs-as-cha-011,BORHAT TEA ESTATE,Charaideo,mca_company_lookup,Find owning entity and directors for Reg #A-49
+gs-as-cha-012,CHERIDEO PURBUT T.E,Charaideo,mca_company_lookup,Find owning entity and directors for Reg #RC-2571
+gs-as-cha-013,BEMOLAPUR,Charaideo,mca_company_lookup,Find owning entity and directors for Reg #2641
+gs-as-cha-014,NAHORHABI TEA ESTATE,Charaideo,mca_company_lookup,Find owning entity and directors for Reg #2203
+gs-as-cha-015,KHAGORIJAN TE,Charaideo,mca_company_lookup,Find owning entity and directors for Reg #304 (RC-829)
+gs-as-cha-016,KHONA TE,Charaideo,mca_company_lookup,Find owning entity and directors for Reg #2159
+gs-as-cha-017,MAJIDPUR TEA GARDEN,Charaideo,mca_company_lookup,Find owning entity and directors for Reg #466
+gs-as-cha-018,KOLAKATA TEA GARDEN,Charaideo,mca_company_lookup,Find owning entity and directors for Reg #882
+gs-as-cha-019,LAKILY TEA ESTATE,Charaideo,mca_company_lookup,Find owning entity and directors for Reg #2891
+gs-as-cha-020,LAKSHMIJAN,Charaideo,mca_company_lookup,Find owning entity and directors for Reg #337
+gs-as-cha-021,LUKWAH TE,Charaideo,mca_company_lookup,Find owning entity and directors for Reg #2159
+gs-as-cha-022,MAJIDPUR B TEA GARDEN,Charaideo,mca_company_lookup,Find owning entity and directors for Reg #466
+gs-as-cha-023,DUBBA,Charaideo,mca_company_lookup,Find owning entity and directors for Reg #3443
+gs-as-cha-025,GUWATING,Charaideo,mca_company_lookup,Find owning entity and directors for Reg #2680
+gs-as-cha-026,"HAJUA-KHOOMTAIE G54, G52 (RC-631)",Charaideo,mca_company_lookup,Find owning entity and directors for Reg #Not Available
+gs-as-cha-027,HINGRIJAN TEA ESTATE,Charaideo,mca_company_lookup,Find owning entity and directors for Reg #2671
+gs-as-cha-028,HINGRAJAN,Charaideo,mca_company_lookup,Find owning entity and directors for Reg #291
+gs-as-cha-029,JABOKA TE Q10,Charaideo,mca_company_lookup,Find owning entity and directors for Reg #Not Available
+gs-as-cha-030,MAJIDPUR (A) PART II TEA ESTATE,Charaideo,mca_company_lookup,Find owning entity and directors for Reg #2499
+gs-as-cha-031,MUTTRAPORE TE Q,Charaideo,mca_company_lookup,Find owning entity and directors for Reg #9
+gs-as-cha-032,MUKTABARI TEA ESTATE,Charaideo,mca_company_lookup,Find owning entity and directors for Reg #1900
+gs-as-cha-033,NAGAHAT TE,Charaideo,mca_company_lookup,Find owning entity and directors for Reg #3881
+gs-as-cha-034,NAMDANG,Charaideo,mca_company_lookup,Find owning entity and directors for Reg #2490
+gs-as-cha-035,NAPUK TE,Charaideo,mca_company_lookup,Find owning entity and directors for Reg #Q-8
+gs-as-cha-036,SHREELUXMI TEA ESTATE,Charaideo,mca_company_lookup,Find owning entity and directors for Reg #305
+gs-as-cha-037,SHANTIPUR,Charaideo,mca_company_lookup,Find owning entity and directors for Reg #2687/RC-1239
+gs-as-cha-038,SARUMATHURA TE,Charaideo,mca_company_lookup,Find owning entity and directors for Reg #386
+gs-as-cha-039,SALKATHONI,Charaideo,mca_company_lookup,Find owning entity and directors for Reg #2224
+gs-as-cha-040,RATANPUR TE,Charaideo,mca_company_lookup,Find owning entity and directors for Reg #394
+gs-as-cha-041,RANGCHALLI,Charaideo,mca_company_lookup,Find owning entity and directors for Reg #319
+gs-as-cha-042,RAIDANG,Charaideo,mca_company_lookup,Find owning entity and directors for Reg #319
+gs-as-cha-043,RONGBARI,Charaideo,mca_company_lookup,Find owning entity and directors for Reg #2447
+gs-as-cha-044,OUGURIJAN,Charaideo,mca_company_lookup,Find owning entity and directors for Reg #275
+gs-as-cha-045,SUFFRY TEA ESTATE Q,Charaideo,mca_company_lookup,Find owning entity and directors for Reg #7
+gs-as-cha-046,SUNDARPUR TEA ESTATE,Charaideo,mca_company_lookup,Find owning entity and directors for Reg #351/544/2110
+gs-as-cha-047,SUNTOK TEA ESTATE,Charaideo,mca_company_lookup,Find owning entity and directors for Reg #2570
+gs-as-cha-048,TAIRAI,Charaideo,mca_company_lookup,Find owning entity and directors for Reg #2652
+gs-as-cha-049,SOONITPUR TEA ESTATE,Charaideo,mca_company_lookup,Find owning entity and directors for Reg #2737
+gs-as-cha-050,SONARIE,Charaideo,mca_company_lookup,Find owning entity and directors for Reg #2082
+gs-as-cha-051,TINGALIBAM T.E,Charaideo,mca_company_lookup,Find owning entity and directors for Reg #881
+gs-as-cha-052,TIMON TE,Charaideo,mca_company_lookup,Find owning entity and directors for Reg #2197
+gs-as-dar-001,TONGANI TEA ESTATE,Darrang,mca_company_lookup,Find owning entity and directors for Reg #2081
+gs-as-dar-002,CHIKONMATI,Darrang,mca_company_lookup,Find owning entity and directors for Reg #244
+gs-as-dar-003,BARGARA,Darrang,mca_company_lookup,Find owning entity and directors for Reg #178
+gs-as-dhu-001,CHOIBARI TEA ESTATE,Dhubri,mca_company_lookup,Find owning entity and directors for Reg #2562
+gs-as-dhu-002,CHAPAR,Dhubri,mca_company_lookup,Find owning entity and directors for Reg #164
+gs-as-dhu-003,KRISHNAKALI TEA ESTATE,Dhubri,mca_company_lookup,Find owning entity and directors for Reg #387
+gs-as-dib-001,"MOHMORA UNIT-II, DEKHARI TEA ESTATE, C/O MAYUR PLANTATION",Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #Not Available
+gs-as-dib-002,KORANGANI,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #355
+gs-as-dib-003,LAHOALBARI,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #331
+gs-as-dib-004,LENGRAI,Dibrugarh,mca_company_lookup,"Find owning entity and directors for Reg #2565, RC -732"
+gs-as-dib-006,MAHABIR,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #77
+gs-as-dib-008,MANABARI,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #2504
+gs-as-dib-009,MAUD TEA ESTATE,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #1852
+gs-as-dib-010,MADHUTING TEA ESTATE,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #234
+gs-as-dib-011,MADHUBAN,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #2433
+gs-as-dib-012,MAHABIRBARI,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #3143
+gs-as-dib-013,MANCOTTA,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #2538
+gs-as-dib-014,MADARKHAT,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #1815
+gs-as-dib-017,KHANIKAR,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #2103
+gs-as-dib-018,KAMAKHYA CHA BAGICHA,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #Not Available
+gs-as-dib-019,KENDUGURI,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #69
+gs-as-dib-020,TRIVENI TEA ESTATE,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #2739
+gs-as-dib-021,KAILASHPUR TEA ESTATE,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #194
+gs-as-dib-023,PRAKASH PRATISTHAN TEA ESTATE,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #2637
+gs-as-dib-024,HELENBARI TEA ESTATE,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #379
+gs-as-dib-025,KATHALGURI,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #233
+gs-as-dib-026,KANJIBARI TEA ESTATE,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #2105
+gs-as-dib-027,CHOWDUNG TEA ESTATE,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #2780
+gs-as-dib-029,DESAM TEA ESTATE,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #2618
+gs-as-dib-030,ESSEL BIO RESEARCH PLANTATION (DEKHARI),Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #2554
+gs-as-dib-031,BIJLI BARI TEA ESTATE,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #1983
+gs-as-dib-033,BIPINBAG TEA ESTATE,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #2902
+gs-as-dib-034,BHAGATRAM TEA ESTATE,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #Not Available
+gs-as-dib-035,BALIMARA TEA ESTATE,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #2092
+gs-as-dib-036,BAUGHPARA,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #2284
+gs-as-dib-037,BALIJAN(H) TEA ESTATE,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #H-1
+gs-as-dib-039,BARBARI TEA ESTATE,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #2527
+gs-as-dib-040,BASANTIBARI TEA ESTATE,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #5475
+gs-as-dib-041,BALIJAN NORTH TEA ESTATE,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #H-16
+gs-as-dib-042,MAYAJAN TEA ESTATE,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #338
+gs-as-dib-043,BHAJONI TEA ESTATE,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #3877
+gs-as-dib-045,BHARTIA TEA ESTATE,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #2196
+gs-as-dib-046,AGARWAL,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #2715
+gs-as-dib-047,AHMEDY TEA ESTATE,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #336
+gs-as-dib-048,ALIMUR PLANT PVT LTD,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #2779
+gs-as-dib-050,MEGHA,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #4116
+gs-as-dib-051,ARUNSHREE TEA ESTATE,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #2692
+gs-as-dib-052,ASITPUR TEA ESTATE,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #283
+gs-as-dib-053,APARNA TEA ESTATE,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #Not Available
+gs-as-dib-057,SHYAMMURTI,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #2683
+gs-as-dib-058,TODI,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #2678
+gs-as-dib-059,SEALKOTEE TEA ESTATE,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #H-19
+gs-as-dib-060,SESSA K,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #25
+gs-as-dib-061,SEPON TEA ESTATE,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #D-33
+gs-as-dib-062,SATKARTAR,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #2575
+gs-as-dib-063,SAINAGAR,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #2725
+gs-as-dib-067,SINGLIJAN K,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #3
+gs-as-dib-068,ZALONI,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #H-30
+gs-as-dib-069,HATIGARH TEA ESTATE,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #2802
+gs-as-dib-070,UMATARA,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #2483
+gs-as-dib-071,SHREE GANGA TEA ESTATE,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #Z-3
+gs-as-dib-073,PARBATIPUR,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #1469
+gs-as-dib-074,PARBATIPUR,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #2560
+gs-as-dib-077,RUNGLITING,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #2245
+gs-as-dib-078,PURSOTTAM,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #Not Available
+gs-as-dib-079,RADHESHYAM TEA ESTATE,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #2476
+gs-as-dib-080,RAJAH ALLI,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #H-25
+gs-as-dib-081,RAMJI MOHAN,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #2760
+gs-as-dib-083,NAHORKUTIA A,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #34 (RC-148)(
+gs-as-dib-085,NANDANBAN TEA ESTATE,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #339
+gs-as-dib-087,MUKUL,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #2458
+gs-as-dib-088,MULCHANDBAG,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #2620
+gs-as-dib-089,NILMONI,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #683
+gs-as-dib-090,MANOJKUNJ TEA ESTATE,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #940
+gs-as-dib-092,NEW PARBOTIPUR,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #2880
+gs-as-dib-093,NEW SADASIVA,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #2813
+gs-as-dib-094,HIMALAYA TEA ESTATE,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #2753
+gs-as-dib-095,HUKANPUKRI TEA ESTATE,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #2612
+gs-as-dib-096,IDA TEA ESTATE,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #NOT REGISTERED
+gs-as-dib-099,MOHUNBAREE,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #H-18
+gs-as-dib-100,JOONKTOLLEE TEA ESTATE,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #Z-2
+gs-as-dib-101,JALANNAGAR,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #1974
+gs-as-dib-102,JALANNAGAR SOUTH,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #2284
+gs-as-dib-103,HATIJAN TEA ESTATE,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #237
+gs-as-dib-104,HATKHOLA TEA ESTATE,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #356
+gs-as-dib-107,HARISHPUR TEA ESTATE,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #353
+gs-as-dib-110,GITANAGAR TEA ESTATE,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #1617
+gs-as-dib-113,ETHELWOLD TEA ESTATE,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #2095
+gs-as-dib-114,DOOLIA TEA ESTATE,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #2519
+gs-as-dib-115,OUPHULIA,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #E-30
+gs-as-dib-116,DULIABAM TEA ESTATE,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #247
+gs-as-dib-118,DILLI TEA ESTATE,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #194
+gs-as-dib-119,DIROIBAM TEA ESTATE,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #77
+gs-as-dib-120,DIRAI TEA ESTATE,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #G-31
+gs-as-dib-121,DINJOYE AND MAHABIRBARI TEA ESTATE,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #111 & 2004
+gs-as-dib-122,DIRIAL TEA ESTATE,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #D-62
+gs-as-dib-124,TELOIJAN,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #E-1238
+gs-as-dib-127,SOURABH A/F,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #Not Available
+gs-as-dib-128,TAMULBARI TEA ESTATE,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #401
+gs-as-dib-129,TARINIPUR TEA ESTATE,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #2514
+gs-as-dib-130,SURAJ TEA ESTATE,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #172
+gs-as-dib-131,SURABHI PLANTATIONS,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #NOT REGISTERED
+gs-as-dib-132,SURESHNAGAR TEA ESTATE,Dibrugarh,mca_company_lookup,Find owning entity and directors for Reg #2594
+gs-as-dim-001,GUNJUNG TEA ESTATE,Dima Hasao,mca_company_lookup,Find owning entity and directors for Reg #2862
+gs-as-dim-002,KOPILI TE,Dima Hasao,mca_company_lookup,Find owning entity and directors for Reg #2821
+gs-as-goa-001,MAIJONGA TEA ESTATE,Goalpara,mca_company_lookup,Find owning entity and directors for Reg #1955
+gs-as-goa-002,SIMLITOLA,Goalpara,mca_company_lookup,Find owning entity and directors for Reg #979
+gs-as-gol-001,SHYAMRAIPORE,Golaghat,mca_company_lookup,Find owning entity and directors for Reg #1583
+gs-as-gol-002,WOKA T.E,Golaghat,mca_company_lookup,Find owning entity and directors for Reg #2643
+gs-as-gol-003,UDAYAN TE,Golaghat,mca_company_lookup,Find owning entity and directors for Reg #2487
+gs-as-gol-004,RUNGAJAUN TE,Golaghat,mca_company_lookup,Find owning entity and directors for Reg #C-47
+gs-as-gol-005,SENGAJAN,Golaghat,mca_company_lookup,Find owning entity and directors for Reg #2353
+gs-as-gol-006,RENGMA,Golaghat,mca_company_lookup,Find owning entity and directors for Reg #1857
+gs-as-gol-007,RADHABARI,Golaghat,mca_company_lookup,Find owning entity and directors for Reg #2252
+gs-as-gol-008,PROBHAKAR T.E. NEG-546,Golaghat,mca_company_lookup,Find owning entity and directors for Reg #Not Available
+gs-as-gol-009,RUNGAMATTY,Golaghat,mca_company_lookup,Find owning entity and directors for Reg #2213
+gs-as-gol-010,PABHOJAN TE,Golaghat,mca_company_lookup,Find owning entity and directors for Reg #757
+gs-as-gol-011,OATING TEA ESTATE,Golaghat,mca_company_lookup,Find owning entity and directors for Reg #2191
+gs-as-gol-012,GOVINDAPUR TEA ESTATE,Golaghat,mca_company_lookup,Find owning entity and directors for Reg #90
+gs-as-gol-013,GOLAGHAT TE,Golaghat,mca_company_lookup,Find owning entity and directors for Reg #2030
+gs-as-gol-014,HATHIKULI TEA ESTATE,Golaghat,mca_company_lookup,Find owning entity and directors for Reg #A-33
+gs-as-gol-015,HALMIRA ESTATE TEA PVT. LTD,Golaghat,mca_company_lookup,Find owning entity and directors for Reg #2244
+gs-as-gol-016,HALMIRAMOOK TE,Golaghat,mca_company_lookup,Find owning entity and directors for Reg #2479
+gs-as-gol-018,DIGHLIHULA TE,Golaghat,mca_company_lookup,Find owning entity and directors for Reg #219
+gs-as-gol-019,DUKENHENGRA TEA ESATAE,Golaghat,mca_company_lookup,Find owning entity and directors for Reg #2345
+gs-as-gol-020,DOLAGURI TEA ESTATE,Golaghat,mca_company_lookup,Find owning entity and directors for Reg #2009
+gs-as-gol-021,FURKATING TEA ESTATE,Golaghat,mca_company_lookup,Find owning entity and directors for Reg #773
+gs-as-gol-022,JAMGURI TEA ESTATEI,Golaghat,mca_company_lookup,Find owning entity and directors for Reg #2477
+gs-as-gol-023,MOHEEMA,Golaghat,mca_company_lookup,Find owning entity and directors for Reg #2355
+gs-as-gol-024,NEETINNAGAR T.E,Golaghat,mca_company_lookup,Find owning entity and directors for Reg #2798
+gs-as-gol-025,NEGHERITING,Golaghat,mca_company_lookup,Find owning entity and directors for Reg #2210
+gs-as-gol-026,NILGIRI TEA ESTATE,Golaghat,mca_company_lookup,Find owning entity and directors for Reg #Not Available
+gs-as-gol-028,NANDAPUR,Golaghat,mca_company_lookup,Find owning entity and directors for Reg #2883
+gs-as-gol-029,NAHORBARI TEA ESTATE,Golaghat,mca_company_lookup,Find owning entity and directors for Reg #D-75
+gs-as-gol-030,NAHORJAN TE,Golaghat,mca_company_lookup,Find owning entity and directors for Reg #RC-817
+gs-as-gol-031,MANI,Golaghat,mca_company_lookup,Find owning entity and directors for Reg #2841
+gs-as-gol-032,MARANGI,Golaghat,mca_company_lookup,Find owning entity and directors for Reg #C-44
+gs-as-gol-033,MAHALAXMI TEA ESTATE,Golaghat,mca_company_lookup,Find owning entity and directors for Reg #3564
+gs-as-gol-034,KRISHNA TE,Golaghat,mca_company_lookup,Find owning entity and directors for Reg #2796
+gs-as-gol-035,LATTAKOOJAN TE,Golaghat,mca_company_lookup,Find owning entity and directors for Reg #A-31
+gs-as-gol-036,KATHONI,Golaghat,mca_company_lookup,Find owning entity and directors for Reg #2010
+gs-as-gol-037,KOOPAHUATING TEA ESTATE,Golaghat,mca_company_lookup,Find owning entity and directors for Reg #2342
+gs-as-gol-038,ANANDAPUR,Golaghat,mca_company_lookup,Find owning entity and directors for Reg #563
+gs-as-gol-039,ATHABARI TEA ESTATE,Golaghat,mca_company_lookup,Find owning entity and directors for Reg #2816
+gs-as-gol-040,MESSAMARA,Golaghat,mca_company_lookup,Find owning entity and directors for Reg #2212
+gs-as-gol-041,METHONI TE,Golaghat,mca_company_lookup,Find owning entity and directors for Reg #C-36
+gs-as-gol-042,ABHOYJAN TEA ESTATE,Golaghat,mca_company_lookup,Find owning entity and directors for Reg #82
+gs-as-gol-043,BEHORA TEA ESTATE,Golaghat,mca_company_lookup,Find owning entity and directors for Reg #D-35
+gs-as-gol-044,BALIJAN TEA ESTATE,Golaghat,mca_company_lookup,Find owning entity and directors for Reg #293
+gs-as-gol-045,BANWARIPUR T.E,Golaghat,mca_company_lookup,Find owning entity and directors for Reg #181
+gs-as-gol-046,BHAGWAN T.E.,Golaghat,mca_company_lookup,Find owning entity and directors for Reg #191
+gs-as-gol-047,BHOGADABARI TE,Golaghat,mca_company_lookup,Find owning entity and directors for Reg #303
+gs-as-gol-048,BORTING TE,Golaghat,mca_company_lookup,Find owning entity and directors for Reg #716
+gs-as-gol-049,BOGIDHOLA TEA ESTATE (LOCKOUT SINCE,Golaghat,mca_company_lookup,Find owning entity and directors for Reg #2017) 2494
+gs-as-gol-051,BOGIJAN TEA ESTATE,Golaghat,mca_company_lookup,Find owning entity and directors for Reg #M-89
+gs-as-gol-052,BUKHIAL TEA ESTATE,Golaghat,mca_company_lookup,Find owning entity and directors for Reg #G-23(RC-1405)
+gs-as-gol-053,DALOWJAN TE,Golaghat,mca_company_lookup,Find owning entity and directors for Reg #1856
+gs-as-gol-054,SOCKIETING TE,Golaghat,mca_company_lookup,Find owning entity and directors for Reg #2346
+gs-as-gol-055,BIJULEE TEA ESTATE NEG-699,Golaghat,mca_company_lookup,Find owning entity and directors for Reg #Not Available
+gs-as-gol-056,TILOTTAMA,Golaghat,mca_company_lookup,Find owning entity and directors for Reg #2315
+gs-as-gol-057,RAJABARI TEA ESTATE,Golaghat,mca_company_lookup,Find owning entity and directors for Reg #902
+gs-as-hai-001,SOUTH CACHAR TE,Hailakandi,mca_company_lookup,Find owning entity and directors for Reg #222
+gs-as-hai-002,SULTANICHERA,Hailakandi,mca_company_lookup,Find owning entity and directors for Reg #914
+gs-as-hai-003,CHANDYPORE T.E,Hailakandi,mca_company_lookup,Find owning entity and directors for Reg #2310
+gs-as-hai-005,CUTLACHERRA T.E.,Hailakandi,mca_company_lookup,Find owning entity and directors for Reg #125
+gs-as-hai-006,BURNIE BRAES T.E,Hailakandi,mca_company_lookup,Find owning entity and directors for Reg #2465
+gs-as-hai-007,BUNDOOKMARA T.E,Hailakandi,mca_company_lookup,Find owning entity and directors for Reg #279
+gs-as-hai-008,AENAKHALL T.E.,Hailakandi,mca_company_lookup,Find owning entity and directors for Reg #2471
+gs-as-hai-009,LALLAMOOKH TEA ESTATE,Hailakandi,mca_company_lookup,Find owning entity and directors for Reg #2406
+gs-as-hai-010,LALLACHERRA,Hailakandi,mca_company_lookup,Find owning entity and directors for Reg #2343
+gs-as-hai-011,KUNCHUNPORE TE,Hailakandi,mca_company_lookup,Find owning entity and directors for Reg #2407
+gs-as-hai-012,KOYAH TEA ESTATE,Hailakandi,mca_company_lookup,Find owning entity and directors for Reg #2422
+gs-as-hai-013,MANIPUR TE,Hailakandi,mca_company_lookup,Find owning entity and directors for Reg #2295
+gs-as-hai-014,NARSINGPORE TE,Hailakandi,mca_company_lookup,Find owning entity and directors for Reg #1893
+gs-as-hai-015,DHOLAI TEA GARDEN,Hailakandi,mca_company_lookup,Find owning entity and directors for Reg #2572
+gs-as-hai-016,ROOPACHERA TE,Hailakandi,mca_company_lookup,Find owning entity and directors for Reg #E-49
+gs-as-hai-017,UMESH TE,Hailakandi,mca_company_lookup,Find owning entity and directors for Reg #2706
+gs-as-hai-018,VERNERPUR TE,Hailakandi,mca_company_lookup,Find owning entity and directors for Reg #256
+gs-as-jor-001,UMABARI T.E,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #778(RC-1712)
+gs-as-jor-002,TYROON T.E,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #E-53
+gs-as-jor-003,UDAYJYOTI(RANGDOI T.P),Jorhat,mca_company_lookup,Find owning entity and directors for Reg #590
+gs-as-jor-004,SINGORIJAN TE,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #1981
+gs-as-jor-005,SAMAGURI TE,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #2455
+gs-as-jor-006,SANGSUA,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #2645
+gs-as-jor-007,SELENG,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #2543
+gs-as-jor-008,TOCKLAI TEA ESTATE,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #43
+gs-as-jor-009,NORTH BORSAIKOTA TEA ESTATE NO.,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #2 2387
+gs-as-jor-010,PADAM,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #2817
+gs-as-jor-011,SOUTH BORSAIKOTA TEA ESTATE,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #431
+gs-as-jor-012,RAJABARI TE,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #1465(2104)
+gs-as-jor-013,RANGAJAN,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #2958
+gs-as-jor-014,RAMKONG,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #2578
+gs-as-jor-015,DURGABARI,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #342
+gs-as-jor-016,DUFLATING TE,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #2516
+gs-as-jor-018,GABROOPURBAT TE,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #2240 (1004)
+gs-as-jor-019,GATOONGA T E,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #2454 & 1464
+gs-as-jor-020,HAROCHARAI TEA ESTATE,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #RC-2225
+gs-as-jor-021,HEELEAKAH TE,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #G-42
+gs-as-jor-022,HATIGARH TEA ESTATE,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #230
+gs-as-jor-023,GOHAINBAREE TE,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #345
+gs-as-jor-024,GOBINDAPORE & BIJLEEJAN,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #294/BJ-1898
+gs-as-jor-025,GREEN VIEW,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #2388
+gs-as-jor-026,NAGANIJAN,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #2600
+gs-as-jor-027,NARAYANPUR & BHOWANIPUR,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #2252255
+gs-as-jor-028,NEW SONWAL TEA ESTATE,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #2206
+gs-as-jor-029,NEW SAMAGURI,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #2595
+gs-as-jor-030,MONOMOY TEA ESTATE,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #955
+gs-as-jor-031,MOABUND DIVISION (BEHORA TEA ESTATE),Jorhat,mca_company_lookup,Find owning entity and directors for Reg #D-78
+gs-as-jor-032,JAGDUAR T.E.,Jorhat,mca_company_lookup,"Find owning entity and directors for Reg #1301, 1434 &446"
+gs-as-jor-033,JADAVPUR,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #2418
+gs-as-jor-034,JOGIBHETA TEA ESTATE,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #2511
+gs-as-jor-036,HOLONGAJAN TEA ESTATE,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #286
+gs-as-jor-038,MADHOOPUR,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #2126
+gs-as-jor-039,PURANIMATI TEA PLANTATIONS PVT.LTD.,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #3570
+gs-as-jor-040,KONIKOR-DALLIM TEA ESTATE,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #A-40
+gs-as-jor-041,KUHUM,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #2777
+gs-as-jor-042,KOTALGOORIE TE T3,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #Not Available
+gs-as-jor-043,LAKHIBARI TE,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #2311
+gs-as-jor-044,LETEKOOJAN,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #1979
+gs-as-jor-045,LOHPOHIA TEA ESTATE,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #2502
+gs-as-jor-046,KAKADONGA TEA STATE,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #D-51
+gs-as-jor-047,KAMALPUR,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #324
+gs-as-jor-048,KAMARBAND TEA ESTATE,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #2456
+gs-as-jor-050,KASOJAN,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #3035
+gs-as-jor-051,MELENG TEA ESTATE,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #2521
+gs-as-jor-052,MEZENGAH,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #2127
+gs-as-jor-053,AKHOIDESSA TEA ESTATE,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #375
+gs-as-jor-054,BAGHSONG TEA ESTATE,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #1765
+gs-as-jor-055,BAHANI TEA ESTATE,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #11
+gs-as-jor-056,BARUAHJAN TE,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #376
+gs-as-jor-057,BAMUNIBARI,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #2275
+gs-as-jor-058,BORBHETA TEA ESTATE,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #43
+gs-as-jor-059,BORHOLLA TEA ESTATE,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #2393
+gs-as-jor-060,BOISAHABI TE,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #2557(RC-12123)
+gs-as-jor-061,BOSABARI TEA ESTATE,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #1899
+gs-as-jor-062,BOIDEHA TE,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #187
+gs-as-jor-063,BOKAHOLA,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #2673
+gs-as-jor-064,BOLOMA TEA ESTATE,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #186
+gs-as-jor-066,CHENIJAN,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #79
+gs-as-jor-067,CHAPAJAN,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #402
+gs-as-jor-068,CHETIABARI,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #349
+gs-as-jor-069,DAHINGEAPAR,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #2285
+gs-as-jor-070,DAMAYANTI TEA ESTATE,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #2101
+gs-as-jor-071,CINNAMARA TEA ESTATE,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #2582
+gs-as-jor-072,SWARNAPUR,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #1982
+gs-as-jor-073,SYEDBARI,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #1091
+gs-as-jor-074,SYCOTTA TEA ESTATE,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #2587
+gs-as-jor-075,SOLALBARI,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #2412
+gs-as-jor-076,SOCKLATINGA,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #1649
+gs-as-jor-077,SORAIPANI,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #2755
+gs-as-jor-078,SOTAI,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #RC-6
+gs-as-jor-079,TIRUAL T.E,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #2773
+gs-as-jor-080,TIPOMIA,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #1980
+gs-as-jor-081,TENGALBARIE,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #2125
+gs-as-jor-082,TEOK TEA ESTATE,Jorhat,mca_company_lookup,Find owning entity and directors for Reg #A-40
+gs-as-kam-001,SONAPUR TEA ESTATE,Kamrup,mca_company_lookup,Find owning entity and directors for Reg #2071
+gs-as-kam-002,BARDUAR TEA ESTATE,Kamrup,mca_company_lookup,Find owning entity and directors for Reg #2193
+gs-as-kam-003,RANI TEA ESTATE,Kamrup,mca_company_lookup,Find owning entity and directors for Reg #137
+gs-as-kar-001,BHAGAWATI TEA ESTATE,Karbi Anglong,mca_company_lookup,Find owning entity and directors for Reg #2786
+gs-as-kar-002,LAHORIJAN & NIRMAL KUMAR,Karbi Anglong,mca_company_lookup,Find owning entity and directors for Reg #223
+gs-as-kar-003,MAA SURJEE NEG-1117,Karbi Anglong,mca_company_lookup,Find owning entity and directors for Reg #Not Available
+gs-as-kar-004,DEOPANI TEA ESTATE,Karbi Anglong,mca_company_lookup,Find owning entity and directors for Reg #C-74
+gs-as-kar-005,BHAWANI TEA ESTATE NEG-492,Karbi Anglong,mca_company_lookup,Find owning entity and directors for Reg #Not Available
+gs-as-kar-006,BOKAJAN TEA ESTATE,Karbi Anglong,mca_company_lookup,Find owning entity and directors for Reg #RC-1167
+gs-as-kar-007,BANASPATY TEA ESTATE,Karbi Anglong,mca_company_lookup,Find owning entity and directors for Reg #2828
+gs-as-kar-008,BARPATHAR TEA ESTATE,Karbi Anglong,mca_company_lookup,Find owning entity and directors for Reg #160
+gs-as-kar-009,AMBA TEA ESTATE NEG-398,Karbi Anglong,mca_company_lookup,Find owning entity and directors for Reg #Not Available
+gs-as-kar-010,NIRJA TEA ESTATE NEG-1118,Karbi Anglong,mca_company_lookup,Find owning entity and directors for Reg #Not Available
+gs-as-kar-011,DHANSERI TEA ESTATE,Karbi Anglong,mca_company_lookup,Find owning entity and directors for Reg #83
+gs-as-kar-012,RAMANUGGER,Karbi Anglong,mca_company_lookup,Find owning entity and directors for Reg #255
+gs-as-kar-013,RANGSALI,Karbi Anglong,mca_company_lookup,Find owning entity and directors for Reg #2861
+gs-as-kar-014,SAKAMBARI NEG-,Karbi Anglong,mca_company_lookup,Find owning entity and directors for Reg #646
+gs-as-kar-015,SOBHANESWARI,Karbi Anglong,mca_company_lookup,Find owning entity and directors for Reg #1308
+gs-as-krg-001,SREE BEHULLA TE,Karimganj,mca_company_lookup,Find owning entity and directors for Reg #542
+gs-as-krg-002,SEPHANJURI BHEEL TE,Karimganj,mca_company_lookup,Find owning entity and directors for Reg #2482
+gs-as-krg-003,SINGLACHERRA,Karimganj,mca_company_lookup,Find owning entity and directors for Reg #2322
+gs-as-krg-004,SHONAICHERRA TE,Karimganj,mca_company_lookup,Find owning entity and directors for Reg #1589
+gs-as-krg-005,RABBANIA TE,Karimganj,mca_company_lookup,Find owning entity and directors for Reg #238
+gs-as-krg-006,RAJARAMPORE,Karimganj,mca_company_lookup,Find owning entity and directors for Reg #289
+gs-as-krg-007,PROMODENAGAR TE,Karimganj,mca_company_lookup,Find owning entity and directors for Reg #24
+gs-as-krg-008,PATHINI TEA ESTATE,Karimganj,mca_company_lookup,Find owning entity and directors for Reg #2629
+gs-as-krg-009,DURGANAGAR TE,Karimganj,mca_company_lookup,Find owning entity and directors for Reg #389
+gs-as-krg-010,DULLABCHERRA TE,Karimganj,mca_company_lookup,Find owning entity and directors for Reg #2241
+gs-as-krg-011,GOOMBIRA,Karimganj,mca_company_lookup,Find owning entity and directors for Reg #2316
+gs-as-krg-012,HATTIKHIRA TE,Karimganj,mca_company_lookup,Find owning entity and directors for Reg #C-19
+gs-as-krg-013,ISABHEEL TEA ESTATE,Karimganj,mca_company_lookup,Find owning entity and directors for Reg #C-21
+gs-as-krg-014,JALALNAGAR,Karimganj,mca_company_lookup,Find owning entity and directors for Reg #94
+gs-as-krg-015,AYLABARI TEA ESTATE,Karimganj,mca_company_lookup,Find owning entity and directors for Reg #208
+gs-as-krg-016,BAITAKHAL TE,Karimganj,mca_company_lookup,Find owning entity and directors for Reg #1978
+gs-as-krg-017,BHUBRIGHAT,Karimganj,mca_company_lookup,Find owning entity and directors for Reg #53
+gs-as-krg-018,BIDYANAGAR T.E.,Karimganj,mca_company_lookup,Find owning entity and directors for Reg #2122
+gs-as-krg-019,CHARGOLA VELLY T.E.,Karimganj,mca_company_lookup,Find owning entity and directors for Reg #270
+gs-as-krg-020,CHARGOLA T.E.,Karimganj,mca_company_lookup,Find owning entity and directors for Reg #2321
+gs-as-krg-021,MADANPUR TE,Karimganj,mca_company_lookup,Find owning entity and directors for Reg #93
+gs-as-krg-022,MANIKNAGAR TE,Karimganj,mca_company_lookup,Find owning entity and directors for Reg #101
+gs-as-krg-023,LONGAI TE,Karimganj,mca_company_lookup,Find owning entity and directors for Reg #C-15
+gs-as-krg-024,KALINAGAR T.E.,Karimganj,mca_company_lookup,Find owning entity and directors for Reg #88
+gs-as-kok-001,KOKRAJHAR TE,Kokrajhar,mca_company_lookup,Find owning entity and directors for Reg #241
+gs-as-kok-002,DALOABARI TEA ESTATE,Kokrajhar,mca_company_lookup,Find owning entity and directors for Reg #242
+gs-as-kok-003,BANGLABARI TEA ESTATE,Kokrajhar,mca_company_lookup,Find owning entity and directors for Reg #243
+gs-as-kok-004,MORNAI TEA ESTATE,Kokrajhar,mca_company_lookup,Find owning entity and directors for Reg #134
+gs-as-lak-001,HARMUTTY TEA ESTATE,Lakhimpur,mca_company_lookup,Find owning entity and directors for Reg #K-55
+gs-as-lak-002,DOOLAHAT TEA ESTATE,Lakhimpur,mca_company_lookup,Find owning entity and directors for Reg #2591
+gs-as-lak-003,SILONIBARI TEA ESTATE,Lakhimpur,mca_company_lookup,Find owning entity and directors for Reg #R-6
+gs-as-lak-004,SEAJULI,Lakhimpur,mca_company_lookup,Find owning entity and directors for Reg #D/40
+gs-as-lak-005,ANANDA TEA ESTATE,Lakhimpur,mca_company_lookup,Find owning entity and directors for Reg #2326
+gs-as-lak-006,CINNATOLLIAH TEA GARDEN,Lakhimpur,mca_company_lookup,Find owning entity and directors for Reg #B-80
+gs-as-lak-007,DEJOO TEA ESTATE,Lakhimpur,mca_company_lookup,Find owning entity and directors for Reg #K-33
+gs-as-lak-008,BORDEOBAM TEA ESTATE,Lakhimpur,mca_company_lookup,Find owning entity and directors for Reg #2446
+gs-as-lak-009,KOILAMARI TEA ESTATE,Lakhimpur,mca_company_lookup,Find owning entity and directors for Reg #K-15
+gs-as-lak-010,MADHUPUR,Lakhimpur,mca_company_lookup,Find owning entity and directors for Reg #320
+gs-as-mor-001,GOPAL KRISHNA TEA ESTATE,Morigaon,mca_company_lookup,Find owning entity and directors for Reg #1994
+gs-as-nag-001,DHONTOLA,Nagaon,mca_company_lookup,Find owning entity and directors for Reg #2450
+gs-as-nag-002,JIAJURI,Nagaon,mca_company_lookup,Find owning entity and directors for Reg #B-77
+gs-as-nag-003,SECONEE,Nagaon,mca_company_lookup,Find owning entity and directors for Reg #2459
+gs-as-nag-004,SAGMOOTEA TEA ESTATE,Nagaon,mca_company_lookup,Find owning entity and directors for Reg #A/8
+gs-as-nag-006,RANGOLOO TE,Nagaon,mca_company_lookup,Find owning entity and directors for Reg #2443
+gs-as-nag-007,MATIAPAHAR,Nagaon,mca_company_lookup,Find owning entity and directors for Reg #318
+gs-as-nag-009,KOLIABUR TEA ESTATE,Nagaon,mca_company_lookup,Find owning entity and directors for Reg #2473
+gs-as-nag-010,LOONGSOONG TE,Nagaon,mca_company_lookup,Find owning entity and directors for Reg #G-38
+gs-as-nag-012,KHANAJAN TEA ESTATE,Nagaon,mca_company_lookup,Find owning entity and directors for Reg #2339
+gs-as-nag-013,KHATOON TE,Nagaon,mca_company_lookup,Find owning entity and directors for Reg #421
+gs-as-nag-014,BORPANI,Nagaon,mca_company_lookup,Find owning entity and directors for Reg #66(RC-548)
+gs-as-nag-015,BURRAPAHAR,Nagaon,mca_company_lookup,Find owning entity and directors for Reg #2320
+gs-as-nag-016,DEJOO VALLEY T.E,Nagaon,mca_company_lookup,Find owning entity and directors for Reg #2648
+gs-as-nag-017,CHAPANALA TEA ESTATE,Nagaon,mca_company_lookup,Find owning entity and directors for Reg #H-56
+gs-as-nag-018,AMSOI TEA ESTATE,Nagaon,mca_company_lookup,Find owning entity and directors for Reg #2062
+gs-as-nag-019,AMLUCKIE TEA ESTATE,Nagaon,mca_company_lookup,Find owning entity and directors for Reg #2647
+gs-as-nag-020,SUKANJURI TEA ESTATE,Nagaon,mca_company_lookup,Find owning entity and directors for Reg #2325
+gs-as-lak-011,PATHALIPAM TEA ESTATE,Lakhimpur,mca_company_lookup,Find owning entity and directors for Reg #2462
+gs-as-siv-001,NYEIJONG TE,Sivasagar,mca_company_lookup,Find owning entity and directors for Reg #2783
+gs-as-siv-002,RAJA BARRIE TEA ESTATE,Sivasagar,mca_company_lookup,Find owning entity and directors for Reg #2104
+gs-as-siv-003,MOHOKUTIE TEA ESTATE,Sivasagar,mca_company_lookup,Find owning entity and directors for Reg #G-50
+gs-as-siv-004,MODINAGAR TE,Sivasagar,mca_company_lookup,Find owning entity and directors for Reg #2669
+gs-as-siv-005,MORE TEA ESTATE,Sivasagar,mca_company_lookup,Find owning entity and directors for Reg #2744
+gs-as-siv-006,DOOMURDULLUNG,Sivasagar,mca_company_lookup,Find owning entity and directors for Reg #G-51
+gs-as-siv-007,GELAKEY,Sivasagar,mca_company_lookup,Find owning entity and directors for Reg #2887
+gs-as-siv-008,GOSSAINBARI TEA ESTATE,Sivasagar,mca_company_lookup,Find owning entity and directors for Reg #2160 (1058)
+gs-as-siv-009,AMGOORIE F,Sivasagar,mca_company_lookup,Find owning entity and directors for Reg #1/1(RC-103)
+gs-as-siv-010,ATTABARRIE TEA ESTATE,Sivasagar,mca_company_lookup,Find owning entity and directors for Reg #D-49
+gs-as-siv-011,BEHUBOR TEA ESTATE,Sivasagar,mca_company_lookup,Find owning entity and directors for Reg #2495
+gs-as-siv-012,DEOPANI TEA ESTATE,Sivasagar,mca_company_lookup,Find owning entity and directors for Reg #C-74
+gs-as-siv-013,BORBAM TEA GARDEN F,Sivasagar,mca_company_lookup,Find owning entity and directors for Reg #1/2 (RC-1040
+gs-as-siv-014,SHREE JOYA CHA BAGAN PVT LTD.,Sivasagar,mca_company_lookup,Find owning entity and directors for Reg #2794
+gs-as-siv-015,BIHUBARI TEA ESTATE,Sivasagar,mca_company_lookup,Find owning entity and directors for Reg #4367
+gs-as-siv-016,MADOORIE,Sivasagar,mca_company_lookup,Find owning entity and directors for Reg #1053
+gs-as-siv-017,SREE SIBBARI TEA ESTATE,Sivasagar,mca_company_lookup,Find owning entity and directors for Reg #330
+gs-as-siv-018,THOWRA,Sivasagar,mca_company_lookup,Find owning entity and directors for Reg #H-6
+gs-as-siv-019,TIOK TEA ESTATE,Sivasagar,mca_company_lookup,Find owning entity and directors for Reg #2386
+gs-as-siv-020,MASKARA TEA ESTATE,Sivasagar,mca_company_lookup,Find owning entity and directors for Reg #239
+gs-as-siv-021,MACKEYPORE TEA ESTATE,Sivasagar,mca_company_lookup,Find owning entity and directors for Reg #2541
+gs-as-siv-022,KRISHNABEHARI TEA ESTATE,Sivasagar,mca_company_lookup,Find owning entity and directors for Reg #130 (RC-213)
+gs-as-siv-023,BORAHI TE,Sivasagar,mca_company_lookup,Find owning entity and directors for Reg #2161
+gs-as-siv-024,BANAMALIE,Sivasagar,mca_company_lookup,Find owning entity and directors for Reg #1299
+gs-as-siv-025,ATALPUKHRI,Sivasagar,mca_company_lookup,Find owning entity and directors for Reg #344
+gs-as-siv-026,HANUMANBAG TE,Sivasagar,mca_company_lookup,Find owning entity and directors for Reg #2466
+gs-as-siv-027,RAJMAI TEA ESTATE,Sivasagar,mca_company_lookup,Find owning entity and directors for Reg #D-34
+gs-as-son-001,RUPAJULI T.E.,Sonitpur,mca_company_lookup,Find owning entity and directors for Reg #D-38
+gs-as-son-002,NOORBARI T.E,Sonitpur,mca_company_lookup,Find owning entity and directors for Reg #1904
+gs-as-son-003,PANBARI,Sonitpur,mca_company_lookup,Find owning entity and directors for Reg #138
+gs-as-son-004,PABHOI,Sonitpur,mca_company_lookup,Find owning entity and directors for Reg #D-7
+gs-as-son-005,PHULBARI D,Sonitpur,mca_company_lookup,Find owning entity and directors for Reg #11
+gs-as-son-006,SAPOI,Sonitpur,mca_company_lookup,Find owning entity and directors for Reg #2324
+gs-as-son-007,SESSA,Sonitpur,mca_company_lookup,Find owning entity and directors for Reg #Q-27
+gs-as-son-008,TOPIA,Sonitpur,mca_company_lookup,Find owning entity and directors for Reg #84
+gs-as-son-009,SINGRI,Sonitpur,mca_company_lookup,Find owning entity and directors for Reg #2530
+gs-as-son-010,SHYAMGURI,Sonitpur,mca_company_lookup,Find owning entity and directors for Reg #2016
+gs-as-son-011,TULIP T.E,Sonitpur,mca_company_lookup,Find owning entity and directors for Reg #141
+gs-as-son-012,HARCHURAH,Sonitpur,mca_company_lookup,Find owning entity and directors for Reg #D-12
+gs-as-son-013,HIRAJULI,Sonitpur,mca_company_lookup,Find owning entity and directors for Reg #452
+gs-as-son-014,GHOIRALLIE T.E.,Sonitpur,mca_company_lookup,Find owning entity and directors for Reg #Q-34
+gs-as-son-016,DURRUNG,Sonitpur,mca_company_lookup,Find owning entity and directors for Reg #1664
+gs-as-son-017,DHENDAI T.E,Sonitpur,mca_company_lookup,Find owning entity and directors for Reg #2414(RC-232)
+gs-as-son-018,DHULAPADUNG T.E,Sonitpur,mca_company_lookup,Find owning entity and directors for Reg #Q-28
+gs-as-son-019,HOOGRAJULI,Sonitpur,mca_company_lookup,Find owning entity and directors for Reg #2392
+gs-as-son-020,NILPUR,Sonitpur,mca_company_lookup,Find owning entity and directors for Reg #2389
+gs-as-son-022,NARAYANPUR,Sonitpur,mca_company_lookup,Find owning entity and directors for Reg #2522
+gs-as-son-023,MONMOHINIPUR,Sonitpur,mca_company_lookup,Find owning entity and directors for Reg #329
+gs-as-son-025,BARGANG T.E,Sonitpur,mca_company_lookup,Find owning entity and directors for Reg #D-4
+gs-as-son-027,BAMGAON,Sonitpur,mca_company_lookup,Find owning entity and directors for Reg #C/52
+gs-as-son-028,BELSERI T.E,Sonitpur,mca_company_lookup,Find owning entity and directors for Reg #2481
+gs-as-son-029,BHOLAGURI T.E,Sonitpur,mca_company_lookup,Find owning entity and directors for Reg #114
+gs-as-son-030,BORJULI T.E,Sonitpur,mca_company_lookup,Find owning entity and directors for Reg #Q-5
+gs-as-son-031,BORCHOLA T.E,Sonitpur,mca_company_lookup,Find owning entity and directors for Reg #273
+gs-as-son-033,BORMAH JAN,Sonitpur,mca_company_lookup,Find owning entity and directors for Reg #E-28 (D-28)
+gs-as-son-034,CHARDWAR,Sonitpur,mca_company_lookup,Find owning entity and directors for Reg #2439
+gs-as-son-035,DEKORAI T.E,Sonitpur,mca_company_lookup,Find owning entity and directors for Reg #D-8
+gs-as-son-036,KOLONY T.E,Sonitpur,mca_company_lookup,Find owning entity and directors for Reg #2425
+gs-as-son-037,MANOBAG,Sonitpur,mca_company_lookup,Find owning entity and directors for Reg #37
+gs-as-son-038,TINKHARIA T.E,Sonitpur,mca_company_lookup,Find owning entity and directors for Reg #V-2
+gs-as-son-039,TEZPORE AND GOGRA T.E,Sonitpur,mca_company_lookup,Find owning entity and directors for Reg #N-6
+gs-as-son-040,SOGRA,Sonitpur,mca_company_lookup,Find owning entity and directors for Reg #358
+gs-as-son-041,SONABHEEL,Sonitpur,mca_company_lookup,Find owning entity and directors for Reg #C/40
+gs-as-son-042,SONAJULI,Sonitpur,mca_company_lookup,Find owning entity and directors for Reg #2449
+gs-as-tin-001,TARA TEA ESTATE,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #H-29
+gs-as-tin-002,TALUP TEA ESTATE J,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #3
+gs-as-tin-004,SREE KRISHNA ESTATE,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #284
+gs-as-tin-005,TIPAM,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #RC-730
+gs-as-tin-006,TINGAMIRA,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #2776
+gs-as-tin-007,MARGHERITA T.E.,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #2603
+gs-as-tin-008,MANOHARPUR TEA ESTATE,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #1385
+gs-as-tin-010,MALIRAMPUR,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #NA
+gs-as-tin-011,MANGALAM,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #2599
+gs-as-tin-012,KOOMSONG,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #D-25
+gs-as-tin-013,KONAPATHAR,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #587
+gs-as-tin-015,LIMBUGURI TEA ESTATE,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #2535
+gs-as-tin-016,LEDO T.E,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #B-79
+gs-as-tin-017,KEYHUNG TEA ESTATE,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #D-61
+gs-as-tin-019,KHETOJAN,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #RC-267
+gs-as-tin-020,KHOBONG TEA ESTATE,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #J-7
+gs-as-tin-022,KISSNESS,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #2636
+gs-as-tin-025,DEAMOOLIE TEA ESTATE,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #H-3
+gs-as-tin-026,DHANUKA TEA ESTATE,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #Not Available
+gs-as-tin-027,DHONJAN TEA ESTATE,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #2761
+gs-as-tin-028,DHELAKHAT TEA ESTATE,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #H-33
+gs-as-tin-030,DHOLLA TEA ESTATE,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #2246
+gs-as-tin-031,CATO TEA & SEED,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #2566
+gs-as-tin-032,DAIMUKHIA TEA ESTATE,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #2488
+gs-as-tin-033,CHOTA TINGRAI TEA ESTATE,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #936
+gs-as-tin-034,CHARALI TEA & TEA SEED ESTATE,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #415
+gs-as-tin-036,CHOKHANI TEA & TEA SEED,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #2537
+gs-as-tin-037,BRAHMAJAN TEA ESTATE,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #2878
+gs-as-tin-038,BUDLABETA TEA ESTATE J,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #12
+gs-as-tin-039,BORBHETA TEA ESTATE,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #2435
+gs-as-tin-040,BORDUBI TEA ESTATE D,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #10
+gs-as-tin-041,BOGAPANI TEA ESTATE,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #2607
+gs-as-tin-042,BHERJAN TEA ESTATE,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #269
+gs-as-tin-043,BEESAKOPIE TEA ESTATE,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #2485
+gs-as-tin-044,BAZALONI TEA ESTATE,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #C-45
+gs-as-tin-047,BAGHJAN TEA ESTATE G,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #30
+gs-as-tin-048,BAJRANGPUR,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #2749
+gs-as-tin-049,ALAKANANDA TEA ESTATE,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #2696-2697
+gs-as-tin-050,AMBIKA TEA ESTATE,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #2563
+gs-as-tin-052,ANANDAPOOR TEA ESTATE,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #2731
+gs-as-tin-053,NAMDANG,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #2606
+gs-as-tin-054,NILIMA,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #960
+gs-as-tin-055,HOLLONGHABI TEA ESTATE,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #315
+gs-as-tin-056,HOKONGURI TEA ESTATE,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #J-5
+gs-as-tin-058,ITAKHOOLI TEA ESTATE D,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #23
+gs-as-tin-060,JALPUNIA TEA ESTATE,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #392
+gs-as-tin-061,DIROK TEA ESTATE,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #2605
+gs-as-tin-068,HANUMAN TEA ESTATE,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #2745
+gs-as-tin-069,GOHAIN TEA ESTATE,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #535
+gs-as-tin-071,VISHNU TEA ESTATE,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #2869
+gs-as-tin-072,TONGANAGAON T.E,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #1932
+gs-as-tin-073,TIPPUK,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #2602
+gs-as-tin-074,SEWPUR TEA ESTATE,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #109
+gs-as-tin-075,SEWALI,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #2724
+gs-as-tin-077,SAVITRI TEA ESTATE,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #2506
+gs-as-tin-079,SAMDANG TEA ESTATE,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #2486
+gs-as-tin-080,SAPORTOLI TEA ESTATE,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #2708(NC)
+gs-as-tin-082,FATHEPUR TEA COMPANY,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #3897
+gs-as-tin-083,PHILLOBARI D,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #74
+gs-as-tin-085,PATKAI,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #2890/ASTIMAP 881
+gs-as-tin-086,RAIDANG TEA ESTATE,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #2487
+gs-as-tin-087,PARSURAM (SOUTH) TEA ESTATE,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #Not Available
+gs-as-tin-088,PARSURAM (NORTH) TEA ESTATE,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #2247
+gs-as-tin-093,POWAI A,Tinsukia,mca_company_lookup,Find owning entity and directors for Reg #11
+gs-as-uda-003,ORANG,Udalguri,mca_company_lookup,Find owning entity and directors for Reg #J-23
+gs-as-uda-006,DIMAKUSI,Udalguri,mca_company_lookup,Find owning entity and directors for Reg #D-18

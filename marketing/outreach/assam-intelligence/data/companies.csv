@@ -1,0 +1,606 @@
+company_id,company_name,type,hq_city,hq_address,exclusion_flag,gardens_count
+gs-as-co-001,FATEMABAD TEA ESTATE,Private Limited Company,Baksa,"Baksa, Assam",no,1
+gs-as-co-002,MENOKA TEA ESTATE,Private Limited Company,Baksa,"Baksa, Assam",no,1
+gs-as-co-003,McLeod Russel India Limited,Corporate Conglomerate,Kolkata,"Four Mangoe Lane, Surendra Mohan Ghosh Sarani, Kolkata 700001",yes,16
+gs-as-co-004,BORGAON T.E,Private Limited Company,Biswanath,"Biswanath, Assam",no,1
+gs-as-co-005,KETTELA TEA ESTATE,Private Limited Company,Biswanath,"Biswanath, Assam",no,1
+gs-as-co-006,Amalgamated Plantations Private Limited (Tata),Corporate Conglomerate,Guwahati,"1st Floor, GS Road, Christian Basti, Guwahati, Assam 781005",yes,12
+gs-as-co-007,MAHALUXMI TEA ESTATE,Private Limited Company,Biswanath,"Biswanath, Assam",no,1
+gs-as-co-008,GINGIA,Private Limited Company,Biswanath,"Biswanath, Assam",no,1
+gs-as-co-009,NEWPURUPBARI,Private Limited Company,Biswanath,"Biswanath, Assam",no,1
+gs-as-co-010,NIRMALA T.E,Private Limited Company,Biswanath,"Biswanath, Assam",no,1
+gs-as-co-011,TEZALPATTY TEA ESTATE,Private Limited Company,Biswanath,"Biswanath, Assam",no,1
+gs-as-co-012,SRILA TE,Private Limited Company,Cachar,"Cachar, Assam",no,1
+gs-as-co-013,SUBONG TEA(PRITHVI TEA CO PVT LTD),Private Limited Company,Cachar,"Cachar, Assam",no,1
+gs-as-co-014,PATHECHERRA TEA ESTATE,Private Limited Company,Cachar,"Cachar, Assam",no,1
+gs-as-co-015,PALLORBUND,Private Limited Company,Cachar,"Cachar, Assam",no,1
+gs-as-co-016,RUKNI TE,Private Limited Company,Cachar,"Cachar, Assam",no,1
+gs-as-co-017,ROSEKANDY TE,Private Limited Company,Cachar,"Cachar, Assam",no,1
+gs-as-co-018,RUTTONPORE TE,Private Limited Company,Cachar,"Cachar, Assam",no,1
+gs-as-co-019,RAHMAN NAGAR,Private Limited Company,Cachar,"Cachar, Assam",no,1
+gs-as-co-020,RAMPORE TE,Private Limited Company,Cachar,"Cachar, Assam",no,1
+gs-as-co-021,POLOI TE,Private Limited Company,Cachar,"Cachar, Assam",no,1
+gs-as-co-022,URRUNABUND TE,Private Limited Company,Cachar,"Cachar, Assam",no,1
+gs-as-co-023,WEST JALINGA TE,Private Limited Company,Cachar,"Cachar, Assam",no,1
+gs-as-co-024,SILCURI,Private Limited Company,Cachar,"Cachar, Assam",no,1
+gs-as-co-025,HILARA TE,Private Limited Company,Cachar,"Cachar, Assam",no,1
+gs-as-co-026,IRINGMARA TEA ESTATE,Private Limited Company,Cachar,"Cachar, Assam",no,1
+gs-as-co-027,INDRAGARH TE,Private Limited Company,Cachar,"Cachar, Assam",no,1
+gs-as-co-028,JATINGA VALLEY TE,Private Limited Company,Cachar,"Cachar, Assam",no,1
+gs-as-co-029,JELLALPORE TEA ESTATE,Private Limited Company,Cachar,"Cachar, Assam",no,1
+gs-as-co-030,JHIRIGHAT TE,Private Limited Company,Cachar,"Cachar, Assam",no,1
+gs-as-co-031,MONIIERKHAL TE,Private Limited Company,Cachar,"Cachar, Assam",no,1
+gs-as-co-032,HATTICHERRA TE,Private Limited Company,Cachar,"Cachar, Assam",no,1
+gs-as-co-033,DWARBUND TE,Private Limited Company,Cachar,"Cachar, Assam",no,1
+gs-as-co-034,DILKHOOSH TE,Private Limited Company,Cachar,"Cachar, Assam",no,1
+gs-as-co-035,DOOLOOGRAM TE,Private Limited Company,Cachar,"Cachar, Assam",no,1
+gs-as-co-036,DOLOO TE,Private Limited Company,Cachar,"Cachar, Assam",no,1
+gs-as-co-037,MADOORA TE,Private Limited Company,Cachar,"Cachar, Assam",no,1
+gs-as-co-038,MARTYCHERRA TE,Private Limited Company,Cachar,"Cachar, Assam",no,1
+gs-as-co-039,LARSINGAH TE,Private Limited Company,Cachar,"Cachar, Assam",no,1
+gs-as-co-040,LABAC,Private Limited Company,Cachar,"Cachar, Assam",no,1
+gs-as-co-041,LAKHIPORE,Private Limited Company,Cachar,"Cachar, Assam",no,1
+gs-as-co-042,KOOMBER TEA ESTATE,Private Limited Company,Cachar,"Cachar, Assam",no,1
+gs-as-co-043,KAILASHPUR TE,Private Limited Company,Cachar,"Cachar, Assam",no,1
+gs-as-co-044,KALLINECHERRA,Private Limited Company,Cachar,"Cachar, Assam",no,1
+gs-as-co-045,KALLINE TE,Private Limited Company,Cachar,"Cachar, Assam",no,1
+gs-as-co-046,KHOREEL TEA ESTATE,Private Limited Company,Cachar,"Cachar, Assam",no,1
+gs-as-co-047,BICRAMPORE T.E.,Private Limited Company,Cachar,"Cachar, Assam",no,1
+gs-as-co-048,BINNAKANDY T.E,Private Limited Company,Cachar,"Cachar, Assam",no,1
+gs-as-co-049,BOROKAI T.E,Private Limited Company,Cachar,"Cachar, Assam",no,1
+gs-as-co-050,BOROJALINGAH T.E.,Private Limited Company,Cachar,"Cachar, Assam",no,1
+gs-as-co-051,BURTOLL T.E,Private Limited Company,Cachar,"Cachar, Assam",no,1
+gs-as-co-052,CHANDIGHAT T.E.,Private Limited Company,Cachar,"Cachar, Assam",no,1
+gs-as-co-053,COOMBERGRAM,Private Limited Company,Cachar,"Cachar, Assam",no,1
+gs-as-co-054,CRAIGPARK T.E.,Private Limited Company,Cachar,"Cachar, Assam",no,1
+gs-as-co-055,DEGUBBER T.E,Private Limited Company,Cachar,"Cachar, Assam",no,1
+gs-as-co-056,DERBY T.E,Private Limited Company,Cachar,"Cachar, Assam",no,1
+gs-as-co-057,DEWAN TE,Private Limited Company,Cachar,"Cachar, Assam",no,1
+gs-as-co-058,BENODNAGAR T.E,Private Limited Company,Cachar,"Cachar, Assam",no,1
+gs-as-co-059,BHUBANDHAR TEA ESTATE,Private Limited Company,Cachar,"Cachar, Assam",no,1
+gs-as-co-060,BHUVANVALLEY,Private Limited Company,Cachar,"Cachar, Assam",no,1
+gs-as-co-061,BAJRANGPUR,Private Limited Company,Cachar,"Cachar, Assam",no,2
+gs-as-co-062,BALACHERRA TE,Private Limited Company,Cachar,"Cachar, Assam",no,1
+gs-as-co-063,ALYNEE & NARAINDHAR,Private Limited Company,Cachar,"Cachar, Assam",no,1
+gs-as-co-064,AMRANAGAR TEA ESTATE,Private Limited Company,Cachar,"Cachar, Assam",no,1
+gs-as-co-065,ARCUTTIPORE TE,Private Limited Company,Cachar,"Cachar, Assam",no,1
+gs-as-co-066,AIDEOBARI TEA ESTATE,Private Limited Company,Charaideo,"Charaideo, Assam",no,1
+gs-as-co-067,AIDEOPUKHURI TEA ESTATE,Private Limited Company,Charaideo,"Charaideo, Assam",no,1
+gs-as-co-068,BEHUBOR TE,Private Limited Company,Charaideo,"Charaideo, Assam",no,1
+gs-as-co-069,BEZBARUAH TEA ESTATE,Private Limited Company,Charaideo,"Charaideo, Assam",no,1
+gs-as-co-070,BHUYANKHAT,Private Limited Company,Charaideo,"Charaideo, Assam",no,1
+gs-as-co-071,BARASALI TE,Private Limited Company,Charaideo,"Charaideo, Assam",no,1
+gs-as-co-072,BARUAKHAT,Private Limited Company,Charaideo,"Charaideo, Assam",no,1
+gs-as-co-073,DEEPLING TEA ESTATE,Private Limited Company,Charaideo,"Charaideo, Assam",no,1
+gs-as-co-074,BORPATRA TEA GARDEN,Private Limited Company,Charaideo,"Charaideo, Assam",no,1
+gs-as-co-075,BORTIMON TE,Private Limited Company,Charaideo,"Charaideo, Assam",no,1
+gs-as-co-076,BORHAT TEA ESTATE,Private Limited Company,Charaideo,"Charaideo, Assam",no,1
+gs-as-co-077,CHERIDEO PURBUT T.E,Private Limited Company,Charaideo,"Charaideo, Assam",no,1
+gs-as-co-078,BEMOLAPUR,Private Limited Company,Charaideo,"Charaideo, Assam",no,1
+gs-as-co-079,NAHORHABI TEA ESTATE,Private Limited Company,Charaideo,"Charaideo, Assam",no,1
+gs-as-co-080,KHAGORIJAN TE,Private Limited Company,Charaideo,"Charaideo, Assam",no,1
+gs-as-co-081,KHONA TE,Private Limited Company,Charaideo,"Charaideo, Assam",no,1
+gs-as-co-082,MAJIDPUR TEA GARDEN,Private Limited Company,Charaideo,"Charaideo, Assam",no,1
+gs-as-co-083,KOLAKATA TEA GARDEN,Private Limited Company,Charaideo,"Charaideo, Assam",no,1
+gs-as-co-084,LAKILY TEA ESTATE,Private Limited Company,Charaideo,"Charaideo, Assam",no,1
+gs-as-co-085,LAKSHMIJAN,Private Limited Company,Charaideo,"Charaideo, Assam",no,1
+gs-as-co-086,LUKWAH TE,Private Limited Company,Charaideo,"Charaideo, Assam",no,1
+gs-as-co-087,MAJIDPUR B TEA GARDEN,Private Limited Company,Charaideo,"Charaideo, Assam",no,1
+gs-as-co-088,DUBBA,Private Limited Company,Charaideo,"Charaideo, Assam",no,1
+gs-as-co-089,Sitaram Budhkaran Choukhany & Co.,Private Limited Company,Charaideo,Lahoal Dibrugarh Assam 786010,no,3
+gs-as-co-090,GUWATING,Private Limited Company,Charaideo,"Charaideo, Assam",no,1
+gs-as-co-091,"HAJUA-KHOOMTAIE G54, G52 (RC-631)",Private Limited Company,Charaideo,"Charaideo, Assam",no,1
+gs-as-co-092,HINGRIJAN TEA ESTATE,Private Limited Company,Charaideo,"Charaideo, Assam",no,1
+gs-as-co-093,HINGRAJAN,Private Limited Company,Charaideo,"Charaideo, Assam",no,1
+gs-as-co-094,JABOKA TE Q10,Private Limited Company,Charaideo,"Charaideo, Assam",no,1
+gs-as-co-095,MAJIDPUR (A) PART II TEA ESTATE,Private Limited Company,Charaideo,"Charaideo, Assam",no,1
+gs-as-co-096,MUTTRAPORE TE Q,Private Limited Company,Charaideo,"Charaideo, Assam",no,1
+gs-as-co-097,MUKTABARI TEA ESTATE,Private Limited Company,Charaideo,"Charaideo, Assam",no,1
+gs-as-co-098,NAGAHAT TE,Private Limited Company,Charaideo,"Charaideo, Assam",no,1
+gs-as-co-099,NAMDANG,Private Limited Company,Charaideo,"Charaideo, Assam",no,2
+gs-as-co-100,NAPUK TE,Private Limited Company,Charaideo,"Charaideo, Assam",no,1
+gs-as-co-101,SHREELUXMI TEA ESTATE,Private Limited Company,Charaideo,"Charaideo, Assam",no,1
+gs-as-co-102,SHANTIPUR,Private Limited Company,Charaideo,"Charaideo, Assam",no,1
+gs-as-co-103,SARUMATHURA TE,Private Limited Company,Charaideo,"Charaideo, Assam",no,1
+gs-as-co-104,SALKATHONI,Private Limited Company,Charaideo,"Charaideo, Assam",no,1
+gs-as-co-105,RATANPUR TE,Private Limited Company,Charaideo,"Charaideo, Assam",no,1
+gs-as-co-106,RANGCHALLI,Private Limited Company,Charaideo,"Charaideo, Assam",no,1
+gs-as-co-107,RAIDANG,Private Limited Company,Charaideo,"Charaideo, Assam",no,1
+gs-as-co-108,RONGBARI,Private Limited Company,Charaideo,"Charaideo, Assam",no,1
+gs-as-co-109,OUGURIJAN,Private Limited Company,Charaideo,"Charaideo, Assam",no,1
+gs-as-co-110,SUFFRY TEA ESTATE Q,Private Limited Company,Charaideo,"Charaideo, Assam",no,1
+gs-as-co-111,SUNDARPUR TEA ESTATE,Private Limited Company,Charaideo,"Charaideo, Assam",no,1
+gs-as-co-112,SUNTOK TEA ESTATE,Private Limited Company,Charaideo,"Charaideo, Assam",no,1
+gs-as-co-113,TAIRAI,Private Limited Company,Charaideo,"Charaideo, Assam",no,1
+gs-as-co-114,SOONITPUR TEA ESTATE,Private Limited Company,Charaideo,"Charaideo, Assam",no,1
+gs-as-co-115,SONARIE,Private Limited Company,Charaideo,"Charaideo, Assam",no,1
+gs-as-co-116,TINGALIBAM T.E,Private Limited Company,Charaideo,"Charaideo, Assam",no,1
+gs-as-co-117,TIMON TE,Private Limited Company,Charaideo,"Charaideo, Assam",no,1
+gs-as-co-118,TONGANI TEA ESTATE,Private Limited Company,Darrang,"Darrang, Assam",no,1
+gs-as-co-119,CHIKONMATI,Private Limited Company,Darrang,"Darrang, Assam",no,1
+gs-as-co-120,BARGARA,Private Limited Company,Darrang,"Darrang, Assam",no,1
+gs-as-co-121,CHOIBARI TEA ESTATE,Private Limited Company,Dhubri,"Dhubri, Assam",no,1
+gs-as-co-122,CHAPAR,Private Limited Company,Dhubri,"Dhubri, Assam",no,1
+gs-as-co-123,KRISHNAKALI TEA ESTATE,Private Limited Company,Dhubri,"Dhubri, Assam",no,1
+gs-as-co-124,"MOHMORA UNIT-II, DEKHARI TEA ESTATE, C/O MAYUR PLANTATION",Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-125,KORANGANI,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-126,LAHOALBARI,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-127,LENGRAI,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-128,MAHABIR,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-129,Assam Company India Limited (BRS Group),Corporate Conglomerate,Guwahati,"Greenwood Tea Estate, Dibrugarh / GS Road Guwahati",yes,10
+gs-as-co-130,MANABARI,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-131,MAUD TEA ESTATE,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-132,MADHUTING TEA ESTATE,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-133,MADHUBAN,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-134,MAHABIRBARI,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-135,MANCOTTA,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-136,MADARKHAT,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-137,Andrew Yule & Company Limited (Govt of India),Corporate Conglomerate,Kolkata,"Yule House, 8 Dr. Rajendra Prasad Sarani, Kolkata 700001",yes,7
+gs-as-co-138,Apeejay Tea Limited (Assam Frontier),Corporate Conglomerate,Kolkata,"Apeejay House, 15 Park Street, Kolkata 700016",yes,3
+gs-as-co-139,KHANIKAR,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-140,KAMAKHYA CHA BAGICHA,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-141,KENDUGURI,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-142,TRIVENI TEA ESTATE,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-143,KAILASHPUR TEA ESTATE,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-144,Jainex Tea Company Private Limited,Private Limited Company,Dibrugarh,Naharkatia Assam 786610,no,3
+gs-as-co-145,PRAKASH PRATISTHAN TEA ESTATE,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-146,HELENBARI TEA ESTATE,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-147,KATHALGURI,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-148,KANJIBARI TEA ESTATE,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-149,CHOWDUNG TEA ESTATE,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-150,DESAM TEA ESTATE,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-151,ESSEL BIO RESEARCH PLANTATION (DEKHARI),Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-152,BIJLI BARI TEA ESTATE,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-153,BIPINBAG TEA ESTATE,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-154,BHAGATRAM TEA ESTATE,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-155,BALIMARA TEA ESTATE,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-156,BAUGHPARA,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-157,BALIJAN(H) TEA ESTATE,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-158,BARBARI TEA ESTATE,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-159,BASANTIBARI TEA ESTATE,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-160,BALIJAN NORTH TEA ESTATE,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-161,MAYAJAN TEA ESTATE,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-162,BHAJONI TEA ESTATE,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-163,BHARTIA TEA ESTATE,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-164,AGARWAL,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-165,AHMEDY TEA ESTATE,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-166,ALIMUR PLANT PVT LTD,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-167,MEGHA,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-168,ARUNSHREE TEA ESTATE,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-169,ASITPUR TEA ESTATE,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-170,APARNA TEA ESTATE,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-171,Pratul Kumar Phukan proprietorship,Proprietorship / Family Estate,Dibrugarh,Rajgarh Assam,no,1
+gs-as-co-172,Current ownership unverified,Private Limited Company,Dibrugarh,Hoogrijan Assam - PIN pending,yes,2
+gs-as-co-173,SHYAMMURTI,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-174,TODI,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-175,SEALKOTEE TEA ESTATE,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-176,SESSA K,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-177,SEPON TEA ESTATE,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-178,SATKARTAR,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-179,SAINAGAR,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-180,Satyanarayan Tea Company Private Limited,Private Limited Company,Dibrugarh,Naharkatia Assam 786610,yes,1
+gs-as-co-181,Sudip Chandra Bagchi proprietorship,Proprietorship / Family Estate,Dibrugarh,Namrup / Mancotta Road Assam 786001,no,1
+gs-as-co-182,Sarojini Tea Co Pvt Ltd,Private Limited Company,Dibrugarh,Kartik Para RKB Path Dibrugarh Assam 786001,no,1
+gs-as-co-183,SINGLIJAN K,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-184,ZALONI,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-185,HATIGARH TEA ESTATE,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,2
+gs-as-co-186,UMATARA,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-187,SHREE GANGA TEA ESTATE,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-188,Udalguri Tea Company Private Limited,Private Limited Company,Dibrugarh,Panitola Dibrugarh Assam 786183,no,1
+gs-as-co-189,PARBATIPUR,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,2
+gs-as-co-190,Phukenbari Tea Co. Pvt. Ltd.,Private Limited Company,Dibrugarh,Bagchipara Mancotta Road Dibrugarh Assam 786001,no,1
+gs-as-co-191,Bishmile Industry partnership,Private Limited Company,Dibrugarh,Chabua Assam 786184,no,1
+gs-as-co-192,RUNGLITING,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-193,PURSOTTAM,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-194,RADHESHYAM TEA ESTATE,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-195,RAJAH ALLI,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-196,RAMJI MOHAN,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-197,NAHORKUTIA A,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-198,NANDANBAN TEA ESTATE,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-199,MUKUL,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-200,MULCHANDBAG,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-201,NILMONI,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-202,MANOJKUNJ TEA ESTATE,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-203,NEW PARBOTIPUR,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-204,NEW SADASIVA,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-205,HIMALAYA TEA ESTATE,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-206,HUKANPUKRI TEA ESTATE,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-207,IDA TEA ESTATE,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-208,MOHUNBAREE,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-209,JOONKTOLLEE TEA ESTATE,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-210,JALANNAGAR,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-211,JALANNAGAR SOUTH,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-212,HATIJAN TEA ESTATE,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-213,HATKHOLA TEA ESTATE,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-214,HARISHPUR TEA ESTATE,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-215,Goneshbari Tea Company Private Limited,Private Limited Company,Dibrugarh,Goneshbari Tea Factory area,yes,1
+gs-as-co-216,GITANAGAR TEA ESTATE,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-217,Ghooronia Tea Company Private Limited,Private Limited Company,Dibrugarh,Dibrugarh Assam,no,1
+gs-as-co-218,ETHELWOLD TEA ESTATE,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-219,DOOLIA TEA ESTATE,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-220,OUPHULIA,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-221,DULIABAM TEA ESTATE,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-222,Durgapur Tea Company partnership,Private Limited Company,Dibrugarh,H.S. Road Dibrugarh Assam 786001,no,1
+gs-as-co-223,DILLI TEA ESTATE,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-224,DIROIBAM TEA ESTATE,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-225,DIRAI TEA ESTATE,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-226,DINJOYE AND MAHABIRBARI TEA ESTATE,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-227,DIRIAL TEA ESTATE,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-228,TELOIJAN,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-229,Longboi Tea Company Private Limited,Private Limited Company,Dibrugarh,Rajgarh Assam,yes,1
+gs-as-co-230,SOURABH A/F,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-231,TAMULBARI TEA ESTATE,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-232,TARINIPUR TEA ESTATE,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-233,SURAJ TEA ESTATE,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-234,SURABHI PLANTATIONS,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-235,SURESHNAGAR TEA ESTATE,Private Limited Company,Dibrugarh,"Dibrugarh, Assam",no,1
+gs-as-co-236,GUNJUNG TEA ESTATE,Private Limited Company,Dima Hasao,"Dima Hasao, Assam",no,1
+gs-as-co-237,KOPILI TE,Private Limited Company,Dima Hasao,"Dima Hasao, Assam",no,1
+gs-as-co-238,MAIJONGA TEA ESTATE,Private Limited Company,Goalpara,"Goalpara, Assam",no,1
+gs-as-co-239,SIMLITOLA,Private Limited Company,Goalpara,"Goalpara, Assam",no,1
+gs-as-co-240,SHYAMRAIPORE,Private Limited Company,Golaghat,"Golaghat, Assam",no,1
+gs-as-co-241,WOKA T.E,Private Limited Company,Golaghat,"Golaghat, Assam",no,1
+gs-as-co-242,UDAYAN TE,Private Limited Company,Golaghat,"Golaghat, Assam",no,1
+gs-as-co-243,RUNGAJAUN TE,Private Limited Company,Golaghat,"Golaghat, Assam",no,1
+gs-as-co-244,SENGAJAN,Private Limited Company,Golaghat,"Golaghat, Assam",no,1
+gs-as-co-245,RENGMA,Private Limited Company,Golaghat,"Golaghat, Assam",no,1
+gs-as-co-246,RADHABARI,Private Limited Company,Golaghat,"Golaghat, Assam",no,1
+gs-as-co-247,PROBHAKAR T.E. NEG-546,Private Limited Company,Golaghat,"Golaghat, Assam",no,1
+gs-as-co-248,RUNGAMATTY,Private Limited Company,Golaghat,"Golaghat, Assam",no,1
+gs-as-co-249,PABHOJAN TE,Private Limited Company,Golaghat,"Golaghat, Assam",no,1
+gs-as-co-250,OATING TEA ESTATE,Private Limited Company,Golaghat,"Golaghat, Assam",no,1
+gs-as-co-251,GOVINDAPUR TEA ESTATE,Private Limited Company,Golaghat,"Golaghat, Assam",no,1
+gs-as-co-252,GOLAGHAT TE,Private Limited Company,Golaghat,"Golaghat, Assam",no,1
+gs-as-co-253,HATHIKULI TEA ESTATE,Private Limited Company,Golaghat,"Golaghat, Assam",no,1
+gs-as-co-254,HALMIRA ESTATE TEA PVT. LTD,Private Limited Company,Golaghat,"Golaghat, Assam",no,1
+gs-as-co-255,HALMIRAMOOK TE,Private Limited Company,Golaghat,"Golaghat, Assam",no,1
+gs-as-co-256,DIGHLIHULA TE,Private Limited Company,Golaghat,"Golaghat, Assam",no,1
+gs-as-co-257,DUKENHENGRA TEA ESATAE,Private Limited Company,Golaghat,"Golaghat, Assam",no,1
+gs-as-co-258,DOLAGURI TEA ESTATE,Private Limited Company,Golaghat,"Golaghat, Assam",no,1
+gs-as-co-259,FURKATING TEA ESTATE,Private Limited Company,Golaghat,"Golaghat, Assam",no,1
+gs-as-co-260,JAMGURI TEA ESTATEI,Private Limited Company,Golaghat,"Golaghat, Assam",no,1
+gs-as-co-261,MOHEEMA,Private Limited Company,Golaghat,"Golaghat, Assam",no,1
+gs-as-co-262,NEETINNAGAR T.E,Private Limited Company,Golaghat,"Golaghat, Assam",no,1
+gs-as-co-263,NEGHERITING,Private Limited Company,Golaghat,"Golaghat, Assam",no,1
+gs-as-co-264,NILGIRI TEA ESTATE,Private Limited Company,Golaghat,"Golaghat, Assam",no,1
+gs-as-co-265,NANDAPUR,Private Limited Company,Golaghat,"Golaghat, Assam",no,1
+gs-as-co-266,NAHORBARI TEA ESTATE,Private Limited Company,Golaghat,"Golaghat, Assam",no,1
+gs-as-co-267,NAHORJAN TE,Private Limited Company,Golaghat,"Golaghat, Assam",no,1
+gs-as-co-268,MANI,Private Limited Company,Golaghat,"Golaghat, Assam",no,1
+gs-as-co-269,MARANGI,Private Limited Company,Golaghat,"Golaghat, Assam",no,1
+gs-as-co-270,MAHALAXMI TEA ESTATE,Private Limited Company,Golaghat,"Golaghat, Assam",no,1
+gs-as-co-271,KRISHNA TE,Private Limited Company,Golaghat,"Golaghat, Assam",no,1
+gs-as-co-272,LATTAKOOJAN TE,Private Limited Company,Golaghat,"Golaghat, Assam",no,1
+gs-as-co-273,KATHONI,Private Limited Company,Golaghat,"Golaghat, Assam",no,1
+gs-as-co-274,KOOPAHUATING TEA ESTATE,Private Limited Company,Golaghat,"Golaghat, Assam",no,1
+gs-as-co-275,ANANDAPUR,Private Limited Company,Golaghat,"Golaghat, Assam",no,1
+gs-as-co-276,ATHABARI TEA ESTATE,Private Limited Company,Golaghat,"Golaghat, Assam",no,1
+gs-as-co-277,MESSAMARA,Private Limited Company,Golaghat,"Golaghat, Assam",no,1
+gs-as-co-278,METHONI TE,Private Limited Company,Golaghat,"Golaghat, Assam",no,1
+gs-as-co-279,ABHOYJAN TEA ESTATE,Private Limited Company,Golaghat,"Golaghat, Assam",no,1
+gs-as-co-280,BEHORA TEA ESTATE,Private Limited Company,Golaghat,"Golaghat, Assam",no,1
+gs-as-co-281,BALIJAN TEA ESTATE,Private Limited Company,Golaghat,"Golaghat, Assam",no,1
+gs-as-co-282,BANWARIPUR T.E,Private Limited Company,Golaghat,"Golaghat, Assam",no,1
+gs-as-co-283,BHAGWAN T.E.,Private Limited Company,Golaghat,"Golaghat, Assam",no,1
+gs-as-co-284,BHOGADABARI TE,Private Limited Company,Golaghat,"Golaghat, Assam",no,1
+gs-as-co-285,BORTING TE,Private Limited Company,Golaghat,"Golaghat, Assam",no,1
+gs-as-co-286,BOGIDHOLA TEA ESTATE (LOCKOUT SINCE,Private Limited Company,Golaghat,"Golaghat, Assam",no,1
+gs-as-co-287,BOGIJAN TEA ESTATE,Private Limited Company,Golaghat,"Golaghat, Assam",no,1
+gs-as-co-288,BUKHIAL TEA ESTATE,Private Limited Company,Golaghat,"Golaghat, Assam",no,1
+gs-as-co-289,DALOWJAN TE,Private Limited Company,Golaghat,"Golaghat, Assam",no,1
+gs-as-co-290,SOCKIETING TE,Private Limited Company,Golaghat,"Golaghat, Assam",no,1
+gs-as-co-291,BIJULEE TEA ESTATE NEG-699,Private Limited Company,Golaghat,"Golaghat, Assam",no,1
+gs-as-co-292,TILOTTAMA,Private Limited Company,Golaghat,"Golaghat, Assam",no,1
+gs-as-co-293,RAJABARI TEA ESTATE,Private Limited Company,Golaghat,"Golaghat, Assam",no,1
+gs-as-co-294,SOUTH CACHAR TE,Private Limited Company,Hailakandi,"Hailakandi, Assam",no,1
+gs-as-co-295,SULTANICHERA,Private Limited Company,Hailakandi,"Hailakandi, Assam",no,1
+gs-as-co-296,CHANDYPORE T.E,Private Limited Company,Hailakandi,"Hailakandi, Assam",no,1
+gs-as-co-297,Debendra Tea and Company Private Limited,Private Limited Company,Hailakandi,No 1 Chotahapjan Assam,no,1
+gs-as-co-298,CUTLACHERRA T.E.,Private Limited Company,Hailakandi,"Hailakandi, Assam",no,1
+gs-as-co-299,BURNIE BRAES T.E,Private Limited Company,Hailakandi,"Hailakandi, Assam",no,1
+gs-as-co-300,BUNDOOKMARA T.E,Private Limited Company,Hailakandi,"Hailakandi, Assam",no,1
+gs-as-co-301,AENAKHALL T.E.,Private Limited Company,Hailakandi,"Hailakandi, Assam",no,1
+gs-as-co-302,LALLAMOOKH TEA ESTATE,Private Limited Company,Hailakandi,"Hailakandi, Assam",no,1
+gs-as-co-303,LALLACHERRA,Private Limited Company,Hailakandi,"Hailakandi, Assam",no,1
+gs-as-co-304,KUNCHUNPORE TE,Private Limited Company,Hailakandi,"Hailakandi, Assam",no,1
+gs-as-co-305,KOYAH TEA ESTATE,Private Limited Company,Hailakandi,"Hailakandi, Assam",no,1
+gs-as-co-306,MANIPUR TE,Private Limited Company,Hailakandi,"Hailakandi, Assam",no,1
+gs-as-co-307,NARSINGPORE TE,Private Limited Company,Hailakandi,"Hailakandi, Assam",no,1
+gs-as-co-308,DHOLAI TEA GARDEN,Private Limited Company,Hailakandi,"Hailakandi, Assam",no,1
+gs-as-co-309,ROOPACHERA TE,Private Limited Company,Hailakandi,"Hailakandi, Assam",no,1
+gs-as-co-310,UMESH TE,Private Limited Company,Hailakandi,"Hailakandi, Assam",no,1
+gs-as-co-311,VERNERPUR TE,Private Limited Company,Hailakandi,"Hailakandi, Assam",no,1
+gs-as-co-312,UMABARI T.E,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-313,TYROON T.E,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-314,UDAYJYOTI(RANGDOI T.P),Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-315,SINGORIJAN TE,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-316,SAMAGURI TE,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-317,SANGSUA,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-318,SELENG,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-319,TOCKLAI TEA ESTATE,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-320,NORTH BORSAIKOTA TEA ESTATE NO.,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-321,PADAM,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-322,SOUTH BORSAIKOTA TEA ESTATE,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-323,RAJABARI TE,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-324,RANGAJAN,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-325,RAMKONG,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-326,DURGABARI,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-327,DUFLATING TE,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-328,GABROOPURBAT TE,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-329,GATOONGA T E,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-330,HAROCHARAI TEA ESTATE,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-331,HEELEAKAH TE,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-332,GOHAINBAREE TE,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-333,GOBINDAPORE & BIJLEEJAN,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-334,GREEN VIEW,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-335,NAGANIJAN,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-336,NARAYANPUR & BHOWANIPUR,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-337,NEW SONWAL TEA ESTATE,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-338,NEW SAMAGURI,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-339,MONOMOY TEA ESTATE,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-340,MOABUND DIVISION (BEHORA TEA ESTATE),Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-341,JAGDUAR T.E.,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-342,JADAVPUR,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-343,JOGIBHETA TEA ESTATE,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-344,HOLONGAJAN TEA ESTATE,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-345,MADHOOPUR,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-346,PURANIMATI TEA PLANTATIONS PVT.LTD.,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-347,KONIKOR-DALLIM TEA ESTATE,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-348,KUHUM,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-349,KOTALGOORIE TE T3,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-350,LAKHIBARI TE,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-351,LETEKOOJAN,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-352,LOHPOHIA TEA ESTATE,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-353,KAKADONGA TEA STATE,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-354,KAMALPUR,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-355,KAMARBAND TEA ESTATE,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-356,KASOJAN,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-357,MELENG TEA ESTATE,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-358,MEZENGAH,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-359,AKHOIDESSA TEA ESTATE,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-360,BAGHSONG TEA ESTATE,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-361,BAHANI TEA ESTATE,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-362,BARUAHJAN TE,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-363,BAMUNIBARI,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-364,BORBHETA TEA ESTATE,Private Limited Company,Jorhat,"Jorhat, Assam",no,2
+gs-as-co-365,BORHOLLA TEA ESTATE,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-366,BOISAHABI TE,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-367,BOSABARI TEA ESTATE,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-368,BOIDEHA TE,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-369,BOKAHOLA,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-370,BOLOMA TEA ESTATE,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-371,CHENIJAN,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-372,CHAPAJAN,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-373,CHETIABARI,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-374,DAHINGEAPAR,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-375,DAMAYANTI TEA ESTATE,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-376,CINNAMARA TEA ESTATE,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-377,SWARNAPUR,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-378,SYEDBARI,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-379,SYCOTTA TEA ESTATE,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-380,SOLALBARI,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-381,SOCKLATINGA,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-382,SORAIPANI,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-383,SOTAI,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-384,TIRUAL T.E,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-385,TIPOMIA,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-386,TENGALBARIE,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-387,TEOK TEA ESTATE,Private Limited Company,Jorhat,"Jorhat, Assam",no,1
+gs-as-co-388,SONAPUR TEA ESTATE,Private Limited Company,Kamrup,"Kamrup, Assam",no,1
+gs-as-co-389,BARDUAR TEA ESTATE,Private Limited Company,Kamrup,"Kamrup, Assam",no,1
+gs-as-co-390,RANI TEA ESTATE,Private Limited Company,Kamrup,"Kamrup, Assam",no,1
+gs-as-co-391,BHAGAWATI TEA ESTATE,Private Limited Company,Karbi Anglong,"Karbi Anglong, Assam",no,1
+gs-as-co-392,LAHORIJAN & NIRMAL KUMAR,Private Limited Company,Karbi Anglong,"Karbi Anglong, Assam",no,1
+gs-as-co-393,MAA SURJEE NEG-1117,Private Limited Company,Karbi Anglong,"Karbi Anglong, Assam",no,1
+gs-as-co-394,DEOPANI TEA ESTATE,Private Limited Company,Karbi Anglong,"Karbi Anglong, Assam",no,2
+gs-as-co-395,BHAWANI TEA ESTATE NEG-492,Private Limited Company,Karbi Anglong,"Karbi Anglong, Assam",no,1
+gs-as-co-396,BOKAJAN TEA ESTATE,Private Limited Company,Karbi Anglong,"Karbi Anglong, Assam",no,1
+gs-as-co-397,BANASPATY TEA ESTATE,Private Limited Company,Karbi Anglong,"Karbi Anglong, Assam",no,1
+gs-as-co-398,BARPATHAR TEA ESTATE,Private Limited Company,Karbi Anglong,"Karbi Anglong, Assam",no,1
+gs-as-co-399,AMBA TEA ESTATE NEG-398,Private Limited Company,Karbi Anglong,"Karbi Anglong, Assam",no,1
+gs-as-co-400,NIRJA TEA ESTATE NEG-1118,Private Limited Company,Karbi Anglong,"Karbi Anglong, Assam",no,1
+gs-as-co-401,DHANSERI TEA ESTATE,Private Limited Company,Karbi Anglong,"Karbi Anglong, Assam",no,1
+gs-as-co-402,RAMANUGGER,Private Limited Company,Karbi Anglong,"Karbi Anglong, Assam",no,1
+gs-as-co-403,RANGSALI,Private Limited Company,Karbi Anglong,"Karbi Anglong, Assam",no,1
+gs-as-co-404,SAKAMBARI NEG-,Private Limited Company,Karbi Anglong,"Karbi Anglong, Assam",no,1
+gs-as-co-405,SOBHANESWARI,Private Limited Company,Karbi Anglong,"Karbi Anglong, Assam",no,1
+gs-as-co-406,SREE BEHULLA TE,Private Limited Company,Karimganj,"Karimganj, Assam",no,1
+gs-as-co-407,SEPHANJURI BHEEL TE,Private Limited Company,Karimganj,"Karimganj, Assam",no,1
+gs-as-co-408,SINGLACHERRA,Private Limited Company,Karimganj,"Karimganj, Assam",no,1
+gs-as-co-409,SHONAICHERRA TE,Private Limited Company,Karimganj,"Karimganj, Assam",no,1
+gs-as-co-410,RABBANIA TE,Private Limited Company,Karimganj,"Karimganj, Assam",no,1
+gs-as-co-411,RAJARAMPORE,Private Limited Company,Karimganj,"Karimganj, Assam",no,1
+gs-as-co-412,PROMODENAGAR TE,Private Limited Company,Karimganj,"Karimganj, Assam",no,1
+gs-as-co-413,PATHINI TEA ESTATE,Private Limited Company,Karimganj,"Karimganj, Assam",no,1
+gs-as-co-414,DURGANAGAR TE,Private Limited Company,Karimganj,"Karimganj, Assam",no,1
+gs-as-co-415,DULLABCHERRA TE,Private Limited Company,Karimganj,"Karimganj, Assam",no,1
+gs-as-co-416,GOOMBIRA,Private Limited Company,Karimganj,"Karimganj, Assam",no,1
+gs-as-co-417,HATTIKHIRA TE,Private Limited Company,Karimganj,"Karimganj, Assam",no,1
+gs-as-co-418,ISABHEEL TEA ESTATE,Private Limited Company,Karimganj,"Karimganj, Assam",no,1
+gs-as-co-419,JALALNAGAR,Private Limited Company,Karimganj,"Karimganj, Assam",no,1
+gs-as-co-420,AYLABARI TEA ESTATE,Private Limited Company,Karimganj,"Karimganj, Assam",no,1
+gs-as-co-421,BAITAKHAL TE,Private Limited Company,Karimganj,"Karimganj, Assam",no,1
+gs-as-co-422,BHUBRIGHAT,Private Limited Company,Karimganj,"Karimganj, Assam",no,1
+gs-as-co-423,BIDYANAGAR T.E.,Private Limited Company,Karimganj,"Karimganj, Assam",no,1
+gs-as-co-424,CHARGOLA VELLY T.E.,Private Limited Company,Karimganj,"Karimganj, Assam",no,1
+gs-as-co-425,CHARGOLA T.E.,Private Limited Company,Karimganj,"Karimganj, Assam",no,1
+gs-as-co-426,MADANPUR TE,Private Limited Company,Karimganj,"Karimganj, Assam",no,1
+gs-as-co-427,MANIKNAGAR TE,Private Limited Company,Karimganj,"Karimganj, Assam",no,1
+gs-as-co-428,LONGAI TE,Private Limited Company,Karimganj,"Karimganj, Assam",no,1
+gs-as-co-429,KALINAGAR T.E.,Private Limited Company,Karimganj,"Karimganj, Assam",no,1
+gs-as-co-430,KOKRAJHAR TE,Private Limited Company,Kokrajhar,"Kokrajhar, Assam",no,1
+gs-as-co-431,DALOABARI TEA ESTATE,Private Limited Company,Kokrajhar,"Kokrajhar, Assam",no,1
+gs-as-co-432,BANGLABARI TEA ESTATE,Private Limited Company,Kokrajhar,"Kokrajhar, Assam",no,1
+gs-as-co-433,MORNAI TEA ESTATE,Private Limited Company,Kokrajhar,"Kokrajhar, Assam",no,1
+gs-as-co-434,HARMUTTY TEA ESTATE,Private Limited Company,Lakhimpur,"Lakhimpur, Assam",no,1
+gs-as-co-435,DOOLAHAT TEA ESTATE,Private Limited Company,Lakhimpur,"Lakhimpur, Assam",no,1
+gs-as-co-436,SILONIBARI TEA ESTATE,Private Limited Company,Lakhimpur,"Lakhimpur, Assam",no,1
+gs-as-co-437,SEAJULI,Private Limited Company,Lakhimpur,"Lakhimpur, Assam",no,1
+gs-as-co-438,ANANDA TEA ESTATE,Private Limited Company,Lakhimpur,"Lakhimpur, Assam",no,1
+gs-as-co-439,CINNATOLLIAH TEA GARDEN,Private Limited Company,Lakhimpur,"Lakhimpur, Assam",no,1
+gs-as-co-440,DEJOO TEA ESTATE,Private Limited Company,Lakhimpur,"Lakhimpur, Assam",no,1
+gs-as-co-441,BORDEOBAM TEA ESTATE,Private Limited Company,Lakhimpur,"Lakhimpur, Assam",no,1
+gs-as-co-442,KOILAMARI TEA ESTATE,Private Limited Company,Lakhimpur,"Lakhimpur, Assam",no,1
+gs-as-co-443,MADHUPUR,Private Limited Company,Lakhimpur,"Lakhimpur, Assam",no,1
+gs-as-co-444,GOPAL KRISHNA TEA ESTATE,Private Limited Company,Morigaon,"Morigaon, Assam",no,1
+gs-as-co-445,DHONTOLA,Private Limited Company,Nagaon,"Nagaon, Assam",no,1
+gs-as-co-446,JIAJURI,Private Limited Company,Nagaon,"Nagaon, Assam",no,1
+gs-as-co-447,SECONEE,Private Limited Company,Nagaon,"Nagaon, Assam",no,1
+gs-as-co-448,SAGMOOTEA TEA ESTATE,Private Limited Company,Nagaon,"Nagaon, Assam",no,1
+gs-as-co-449,RANGOLOO TE,Private Limited Company,Nagaon,"Nagaon, Assam",no,1
+gs-as-co-450,MATIAPAHAR,Private Limited Company,Nagaon,"Nagaon, Assam",no,1
+gs-as-co-451,KOLIABUR TEA ESTATE,Private Limited Company,Nagaon,"Nagaon, Assam",no,1
+gs-as-co-452,LOONGSOONG TE,Private Limited Company,Nagaon,"Nagaon, Assam",no,1
+gs-as-co-453,KHANAJAN TEA ESTATE,Private Limited Company,Nagaon,"Nagaon, Assam",no,1
+gs-as-co-454,KHATOON TE,Private Limited Company,Nagaon,"Nagaon, Assam",no,1
+gs-as-co-455,BORPANI,Private Limited Company,Nagaon,"Nagaon, Assam",no,1
+gs-as-co-456,BURRAPAHAR,Private Limited Company,Nagaon,"Nagaon, Assam",no,1
+gs-as-co-457,DEJOO VALLEY T.E,Private Limited Company,Nagaon,"Nagaon, Assam",no,1
+gs-as-co-458,CHAPANALA TEA ESTATE,Private Limited Company,Nagaon,"Nagaon, Assam",no,1
+gs-as-co-459,AMSOI TEA ESTATE,Private Limited Company,Nagaon,"Nagaon, Assam",no,1
+gs-as-co-460,AMLUCKIE TEA ESTATE,Private Limited Company,Nagaon,"Nagaon, Assam",no,1
+gs-as-co-461,SUKANJURI TEA ESTATE,Private Limited Company,Nagaon,"Nagaon, Assam",no,1
+gs-as-co-462,PATHALIPAM TEA ESTATE,Private Limited Company,Lakhimpur,"Lakhimpur, Assam",no,1
+gs-as-co-463,NYEIJONG TE,Private Limited Company,Sivasagar,"Sivasagar, Assam",no,1
+gs-as-co-464,RAJA BARRIE TEA ESTATE,Private Limited Company,Sivasagar,"Sivasagar, Assam",no,1
+gs-as-co-465,MOHOKUTIE TEA ESTATE,Private Limited Company,Sivasagar,"Sivasagar, Assam",no,1
+gs-as-co-466,MODINAGAR TE,Private Limited Company,Sivasagar,"Sivasagar, Assam",no,1
+gs-as-co-467,MORE TEA ESTATE,Private Limited Company,Sivasagar,"Sivasagar, Assam",no,1
+gs-as-co-468,DOOMURDULLUNG,Private Limited Company,Sivasagar,"Sivasagar, Assam",no,1
+gs-as-co-469,GELAKEY,Private Limited Company,Sivasagar,"Sivasagar, Assam",no,1
+gs-as-co-470,GOSSAINBARI TEA ESTATE,Private Limited Company,Sivasagar,"Sivasagar, Assam",no,1
+gs-as-co-471,AMGOORIE F,Private Limited Company,Sivasagar,"Sivasagar, Assam",no,1
+gs-as-co-472,ATTABARRIE TEA ESTATE,Private Limited Company,Sivasagar,"Sivasagar, Assam",no,1
+gs-as-co-473,BEHUBOR TEA ESTATE,Private Limited Company,Sivasagar,"Sivasagar, Assam",no,1
+gs-as-co-474,BORBAM TEA GARDEN F,Private Limited Company,Sivasagar,"Sivasagar, Assam",no,1
+gs-as-co-475,SHREE JOYA CHA BAGAN PVT LTD.,Private Limited Company,Sivasagar,"Sivasagar, Assam",no,1
+gs-as-co-476,BIHUBARI TEA ESTATE,Private Limited Company,Sivasagar,"Sivasagar, Assam",no,1
+gs-as-co-477,MADOORIE,Private Limited Company,Sivasagar,"Sivasagar, Assam",no,1
+gs-as-co-478,SREE SIBBARI TEA ESTATE,Private Limited Company,Sivasagar,"Sivasagar, Assam",no,1
+gs-as-co-479,THOWRA,Private Limited Company,Sivasagar,"Sivasagar, Assam",no,1
+gs-as-co-480,TIOK TEA ESTATE,Private Limited Company,Sivasagar,"Sivasagar, Assam",no,1
+gs-as-co-481,MASKARA TEA ESTATE,Private Limited Company,Sivasagar,"Sivasagar, Assam",no,1
+gs-as-co-482,MACKEYPORE TEA ESTATE,Private Limited Company,Sivasagar,"Sivasagar, Assam",no,1
+gs-as-co-483,KRISHNABEHARI TEA ESTATE,Private Limited Company,Sivasagar,"Sivasagar, Assam",no,1
+gs-as-co-484,BORAHI TE,Private Limited Company,Sivasagar,"Sivasagar, Assam",no,1
+gs-as-co-485,BANAMALIE,Private Limited Company,Sivasagar,"Sivasagar, Assam",no,1
+gs-as-co-486,ATALPUKHRI,Private Limited Company,Sivasagar,"Sivasagar, Assam",no,1
+gs-as-co-487,HANUMANBAG TE,Private Limited Company,Sivasagar,"Sivasagar, Assam",no,1
+gs-as-co-488,RAJMAI TEA ESTATE,Private Limited Company,Sivasagar,"Sivasagar, Assam",no,1
+gs-as-co-489,RUPAJULI T.E.,Private Limited Company,Sonitpur,"Sonitpur, Assam",no,1
+gs-as-co-490,NOORBARI T.E,Private Limited Company,Sonitpur,"Sonitpur, Assam",no,1
+gs-as-co-491,PANBARI,Private Limited Company,Sonitpur,"Sonitpur, Assam",no,1
+gs-as-co-492,PABHOI,Private Limited Company,Sonitpur,"Sonitpur, Assam",no,1
+gs-as-co-493,PHULBARI D,Private Limited Company,Sonitpur,"Sonitpur, Assam",no,1
+gs-as-co-494,SAPOI,Private Limited Company,Sonitpur,"Sonitpur, Assam",no,1
+gs-as-co-495,SESSA,Private Limited Company,Sonitpur,"Sonitpur, Assam",no,1
+gs-as-co-496,TOPIA,Private Limited Company,Sonitpur,"Sonitpur, Assam",no,1
+gs-as-co-497,SINGRI,Private Limited Company,Sonitpur,"Sonitpur, Assam",no,1
+gs-as-co-498,SHYAMGURI,Private Limited Company,Sonitpur,"Sonitpur, Assam",no,1
+gs-as-co-499,TULIP T.E,Private Limited Company,Sonitpur,"Sonitpur, Assam",no,1
+gs-as-co-500,HARCHURAH,Private Limited Company,Sonitpur,"Sonitpur, Assam",no,1
+gs-as-co-501,HIRAJULI,Private Limited Company,Sonitpur,"Sonitpur, Assam",no,1
+gs-as-co-502,GHOIRALLIE T.E.,Private Limited Company,Sonitpur,"Sonitpur, Assam",no,1
+gs-as-co-503,DURRUNG,Private Limited Company,Sonitpur,"Sonitpur, Assam",no,1
+gs-as-co-504,DHENDAI T.E,Private Limited Company,Sonitpur,"Sonitpur, Assam",no,1
+gs-as-co-505,DHULAPADUNG T.E,Private Limited Company,Sonitpur,"Sonitpur, Assam",no,1
+gs-as-co-506,HOOGRAJULI,Private Limited Company,Sonitpur,"Sonitpur, Assam",no,1
+gs-as-co-507,NILPUR,Private Limited Company,Sonitpur,"Sonitpur, Assam",no,1
+gs-as-co-508,NARAYANPUR,Private Limited Company,Sonitpur,"Sonitpur, Assam",no,1
+gs-as-co-509,MONMOHINIPUR,Private Limited Company,Sonitpur,"Sonitpur, Assam",no,1
+gs-as-co-510,BARGANG T.E,Private Limited Company,Sonitpur,"Sonitpur, Assam",no,1
+gs-as-co-511,Baghbari Tea Company Private Limited,Private Limited Company,Sonitpur,Lunpuria Bangali Gaon / Panitola Assam,no,2
+gs-as-co-512,BAMGAON,Private Limited Company,Sonitpur,"Sonitpur, Assam",no,1
+gs-as-co-513,BELSERI T.E,Private Limited Company,Sonitpur,"Sonitpur, Assam",no,1
+gs-as-co-514,BHOLAGURI T.E,Private Limited Company,Sonitpur,"Sonitpur, Assam",no,1
+gs-as-co-515,BORJULI T.E,Private Limited Company,Sonitpur,"Sonitpur, Assam",no,1
+gs-as-co-516,BORCHOLA T.E,Private Limited Company,Sonitpur,"Sonitpur, Assam",no,1
+gs-as-co-517,Goodricke Group Limited,Corporate Conglomerate,Kolkata,"Camellia House, 14 Gurusaday Road, Kolkata 700019",yes,4
+gs-as-co-518,BORMAH JAN,Private Limited Company,Sonitpur,"Sonitpur, Assam",no,1
+gs-as-co-519,CHARDWAR,Private Limited Company,Sonitpur,"Sonitpur, Assam",no,1
+gs-as-co-520,DEKORAI T.E,Private Limited Company,Sonitpur,"Sonitpur, Assam",no,1
+gs-as-co-521,KOLONY T.E,Private Limited Company,Sonitpur,"Sonitpur, Assam",no,1
+gs-as-co-522,MANOBAG,Private Limited Company,Sonitpur,"Sonitpur, Assam",no,1
+gs-as-co-523,TINKHARIA T.E,Private Limited Company,Sonitpur,"Sonitpur, Assam",no,1
+gs-as-co-524,TEZPORE AND GOGRA T.E,Private Limited Company,Sonitpur,"Sonitpur, Assam",no,1
+gs-as-co-525,SOGRA,Private Limited Company,Sonitpur,"Sonitpur, Assam",no,1
+gs-as-co-526,SONABHEEL,Private Limited Company,Sonitpur,"Sonitpur, Assam",no,1
+gs-as-co-527,SONAJULI,Private Limited Company,Sonitpur,"Sonitpur, Assam",no,1
+gs-as-co-528,TARA TEA ESTATE,Private Limited Company,Tinsukia,"Tinsukia, Assam",no,1
+gs-as-co-529,TALUP TEA ESTATE J,Private Limited Company,Tinsukia,"Tinsukia, Assam",no,1
+gs-as-co-530,Sookerating Tea Estate Private Limited,Private Limited Company,Tinsukia,Doomdooma Assam 786151,no,1
+gs-as-co-531,SREE KRISHNA ESTATE,Private Limited Company,Tinsukia,"Tinsukia, Assam",no,1
+gs-as-co-532,TIPAM,Private Limited Company,Tinsukia,"Tinsukia, Assam",no,1
+gs-as-co-533,TINGAMIRA,Private Limited Company,Tinsukia,"Tinsukia, Assam",no,1
+gs-as-co-534,MARGHERITA T.E.,Private Limited Company,Tinsukia,"Tinsukia, Assam",no,1
+gs-as-co-535,MANOHARPUR TEA ESTATE,Private Limited Company,Tinsukia,"Tinsukia, Assam",no,1
+gs-as-co-536,MALIRAMPUR,Private Limited Company,Tinsukia,"Tinsukia, Assam",no,1
+gs-as-co-537,MANGALAM,Private Limited Company,Tinsukia,"Tinsukia, Assam",no,1
+gs-as-co-538,KOOMSONG,Private Limited Company,Tinsukia,"Tinsukia, Assam",no,1
+gs-as-co-539,KONAPATHAR,Private Limited Company,Tinsukia,"Tinsukia, Assam",no,1
+gs-as-co-540,Lankashi Tea and Seed Estates Private Limited,Private Limited Company,Tinsukia,Makum Junction Tinsukia Assam 786170,yes,1
+gs-as-co-541,LIMBUGURI TEA ESTATE,Private Limited Company,Tinsukia,"Tinsukia, Assam",no,1
+gs-as-co-542,LEDO T.E,Private Limited Company,Tinsukia,"Tinsukia, Assam",no,1
+gs-as-co-543,KEYHUNG TEA ESTATE,Private Limited Company,Tinsukia,"Tinsukia, Assam",no,1
+gs-as-co-544,Ghanashyam Lahoti proprietorship,Proprietorship / Family Estate,Tinsukia,Doomdooma / Tinsukia Assam,no,1
+gs-as-co-545,KHETOJAN,Private Limited Company,Tinsukia,"Tinsukia, Assam",no,1
+gs-as-co-546,KHOBONG TEA ESTATE,Private Limited Company,Tinsukia,"Tinsukia, Assam",no,1
+gs-as-co-547,J.N. Sarma and other HUF legal heirs,Private Limited Company,Tinsukia,Buridihing Khatangpani P.O. Pengaree Tinsukia Assam 786176,yes,1
+gs-as-co-548,KISSNESS,Private Limited Company,Tinsukia,"Tinsukia, Assam",no,1
+gs-as-co-549,Warren Tea Limited,Corporate Conglomerate,Kolkata,"Suvira House, 4B Hungerford Street, Kolkata 700017",yes,5
+gs-as-co-550,DEAMOOLIE TEA ESTATE,Private Limited Company,Tinsukia,"Tinsukia, Assam",no,1
+gs-as-co-551,DHANUKA TEA ESTATE,Private Limited Company,Tinsukia,"Tinsukia, Assam",no,1
+gs-as-co-552,DHONJAN TEA ESTATE,Private Limited Company,Tinsukia,"Tinsukia, Assam",no,1
+gs-as-co-553,DHELAKHAT TEA ESTATE,Private Limited Company,Tinsukia,"Tinsukia, Assam",no,1
+gs-as-co-554,DHOLLA TEA ESTATE,Private Limited Company,Tinsukia,"Tinsukia, Assam",no,1
+gs-as-co-555,CATO TEA & SEED,Private Limited Company,Tinsukia,"Tinsukia, Assam",no,1
+gs-as-co-556,DAIMUKHIA TEA ESTATE,Private Limited Company,Tinsukia,"Tinsukia, Assam",no,1
+gs-as-co-557,CHOTA TINGRAI TEA ESTATE,Private Limited Company,Tinsukia,"Tinsukia, Assam",no,1
+gs-as-co-558,CHARALI TEA & TEA SEED ESTATE,Private Limited Company,Tinsukia,"Tinsukia, Assam",no,1
+gs-as-co-559,Chandmari Tea Co Pvt Ltd,Private Limited Company,Tinsukia,Borguri Assam 786126,no,1
+gs-as-co-560,CHOKHANI TEA & TEA SEED,Private Limited Company,Tinsukia,"Tinsukia, Assam",no,1
+gs-as-co-561,BRAHMAJAN TEA ESTATE,Private Limited Company,Tinsukia,"Tinsukia, Assam",no,1
+gs-as-co-562,BUDLABETA TEA ESTATE J,Private Limited Company,Tinsukia,"Tinsukia, Assam",no,1
+gs-as-co-563,BORDUBI TEA ESTATE D,Private Limited Company,Tinsukia,"Tinsukia, Assam",no,1
+gs-as-co-564,BOGAPANI TEA ESTATE,Private Limited Company,Tinsukia,"Tinsukia, Assam",no,1
+gs-as-co-565,BHERJAN TEA ESTATE,Private Limited Company,Tinsukia,"Tinsukia, Assam",no,1
+gs-as-co-566,BEESAKOPIE TEA ESTATE,Private Limited Company,Tinsukia,"Tinsukia, Assam",no,1
+gs-as-co-567,BAZALONI TEA ESTATE,Private Limited Company,Tinsukia,"Tinsukia, Assam",no,1
+gs-as-co-568,Dhunseri Tea & Industries Limited,Corporate Conglomerate,Kolkata,"Dhunseri House, 4A Woodburn Park, Kolkata 700020",yes,2
+gs-as-co-569,BAGHJAN TEA ESTATE G,Private Limited Company,Tinsukia,"Tinsukia, Assam",no,1
+gs-as-co-570,ALAKANANDA TEA ESTATE,Private Limited Company,Tinsukia,"Tinsukia, Assam",no,1
+gs-as-co-571,AMBIKA TEA ESTATE,Private Limited Company,Tinsukia,"Tinsukia, Assam",no,1
+gs-as-co-572,The Ananda Bag Tea Company Limited,Private Limited Company,Tinsukia,Makum Junction Assam 786170,yes,1
+gs-as-co-573,ANANDAPOOR TEA ESTATE,Private Limited Company,Tinsukia,"Tinsukia, Assam",no,1
+gs-as-co-574,NILIMA,Private Limited Company,Tinsukia,"Tinsukia, Assam",no,1
+gs-as-co-575,HOLLONGHABI TEA ESTATE,Private Limited Company,Tinsukia,"Tinsukia, Assam",no,1
+gs-as-co-576,HOKONGURI TEA ESTATE,Private Limited Company,Tinsukia,"Tinsukia, Assam",no,1
+gs-as-co-577,ITAKHOOLI TEA ESTATE D,Private Limited Company,Tinsukia,"Tinsukia, Assam",no,1
+gs-as-co-578,Balabux Laxmi Narayan partnership - current group fit unresolved,Private Limited Company,Tinsukia,Rungagora Road Tinsukia Assam 786125,yes,2
+gs-as-co-579,JALPUNIA TEA ESTATE,Private Limited Company,Tinsukia,"Tinsukia, Assam",no,1
+gs-as-co-580,DIROK TEA ESTATE,Private Limited Company,Tinsukia,"Tinsukia, Assam",no,1
+gs-as-co-581,Gangabari Tea Company Private Limited,Private Limited Company,Tinsukia,Chotahapjan Assam,yes,1
+gs-as-co-582,HANUMAN TEA ESTATE,Private Limited Company,Tinsukia,"Tinsukia, Assam",no,1
+gs-as-co-583,GOHAIN TEA ESTATE,Private Limited Company,Tinsukia,"Tinsukia, Assam",no,1
+gs-as-co-584,Gillapukri Tea Company Limited,Private Limited Company,Tinsukia,Borguri Assam 786126,yes,1
+gs-as-co-585,VISHNU TEA ESTATE,Private Limited Company,Tinsukia,"Tinsukia, Assam",no,1
+gs-as-co-586,TONGANAGAON T.E,Private Limited Company,Tinsukia,"Tinsukia, Assam",no,1
+gs-as-co-587,TIPPUK,Private Limited Company,Tinsukia,"Tinsukia, Assam",no,1
+gs-as-co-588,SEWPUR TEA ESTATE,Private Limited Company,Tinsukia,"Tinsukia, Assam",no,1
+gs-as-co-589,SEWALI,Private Limited Company,Tinsukia,"Tinsukia, Assam",no,1
+gs-as-co-590,Segunbari Tea Company Limited,Private Limited Company,Tinsukia,Margherita Assam,yes,1
+gs-as-co-591,SAVITRI TEA ESTATE,Private Limited Company,Tinsukia,"Tinsukia, Assam",no,1
+gs-as-co-592,Sankar Tea Company Private Limited,Private Limited Company,Tinsukia,Saikhowaghat / Dholla Assam 786154,yes,1
+gs-as-co-593,SAMDANG TEA ESTATE,Private Limited Company,Tinsukia,"Tinsukia, Assam",no,1
+gs-as-co-594,SAPORTOLI TEA ESTATE,Private Limited Company,Tinsukia,"Tinsukia, Assam",no,1
+gs-as-co-595,Sadasiva Tea Company Private Limited,Private Limited Company,Tinsukia,Tinsukia Assam,no,1
+gs-as-co-596,FATHEPUR TEA COMPANY,Private Limited Company,Tinsukia,"Tinsukia, Assam",no,1
+gs-as-co-597,PHILLOBARI D,Private Limited Company,Tinsukia,"Tinsukia, Assam",no,1
+gs-as-co-598,PATKAI,Private Limited Company,Tinsukia,"Tinsukia, Assam",no,1
+gs-as-co-599,RAIDANG TEA ESTATE,Private Limited Company,Tinsukia,"Tinsukia, Assam",no,1
+gs-as-co-600,PARSURAM (SOUTH) TEA ESTATE,Private Limited Company,Tinsukia,"Tinsukia, Assam",no,1
+gs-as-co-601,PARSURAM (NORTH) TEA ESTATE,Private Limited Company,Tinsukia,"Tinsukia, Assam",no,1
+gs-as-co-602,Prabhat Tea Estate Assam Private Limited,Private Limited Company,Tinsukia,Rupai Siding Doomdooma Assam 786153,yes,1
+gs-as-co-603,POWAI A,Private Limited Company,Tinsukia,"Tinsukia, Assam",no,1
+gs-as-co-604,ORANG,Private Limited Company,Udalguri,"Udalguri, Assam",no,1
+gs-as-co-605,DIMAKUSI,Private Limited Company,Udalguri,"Udalguri, Assam",no,1
