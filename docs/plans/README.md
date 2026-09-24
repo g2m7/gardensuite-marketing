@@ -1,5 +1,13 @@
 # GardenSuite plans
 
+## Current dated execution overlay: Puja 2026
+
+The current campaign package is [GardenSuite Puja 2026](puja-2026/README.md), dated 2026-09-24. It plans parallel preparation for an October-November offer led by GS Face, with a proposed 30-day assisted free trial. The proposed core is GS Face plus office review. Daily MIS is conditional on exact report and input verification, smart weighing is optional, and full ERP is later expansion. It includes the [decision log](puja-2026/DECISIONS.md), [execution board](puja-2026/EXECUTION_BOARD.md), workstream plans and header-only tracking templates.
+
+The Puja package is a planning overlay. It does not authorize a new send, public publication, paid spend, broad cold outreach, live CRM write or production biometric collection. The 2026-10-01 direct target and 2026-10-05 paid earliest date are proposed checkpoints, not current launch authority. Any external launch needs the relevant owner approvals and end-to-end QA.
+
+Owner acquisition remains the supporting operating plan, and the [SEO and PR domination plan](seo-pr-domination/README.md) remains the broader SEO authority. The current outreach authority remains [CURRENT_STRATEGY.md](../../marketing/outreach/CURRENT_STRATEGY.md).
+
 ## Active plans
 
 - [SEO and PR domination](seo-pr-domination/README.md) - reach #1 and occupy multiple slots on six target SERPs for the attendance-led offering. Includes goal table, market and competitor state, our baseline, on-site and off-site workstreams, PR calendar, and a four-week order of attack.

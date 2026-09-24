@@ -1,9 +1,19 @@
 # GardenSuite Current Outreach Authority
 
 Status: CURRENT
-Strategy version: 2026-09-08-external-validation
+Strategy version: 2026-09-24-puja-planning
 Owner: Sarbani Associates
-Last updated: 2026-09-08
+Last updated: 2026-09-24
+
+## 2026-09-24 Puja campaign planning direction
+
+The owner directed four campaign points: prepare the workstreams in parallel, plan an October-November 2026 Puja offer, include a free trial, and lodge an actionable execution plan. The exact offer dates, trial duration and scope, CTA, launch dates, inbound handling, paid earliest date and biometric handling are campaign proposals in the package, not newly adopted owner decisions.
+
+GS Face remains the lead campaign focus under prior explicit product direction. The proposed core package is GS Face plus office review. Daily MIS is included only after its exact reports and inputs are technically confirmed. Smart weighing is optional. Full ERP remains later expansion. The current main action remains `Book Free Demo`, with `Email Us` preserved where required. `Request Puja Trial` is a proposed campaign CTA pending approval.
+
+The planning package does not authorize new spend, broad cold email, cold WhatsApp, publication, live CRM changes, prospect contact or collection of production biometric data. Existing September cold outreach remains subject to all current pilot rules. The proposed 2026-10-01 direct target and 2026-10-05 paid earliest date are planning checkpoints only. Any external launch needs the relevant offer, privacy, tracker, form, sales, implementation, account and owner approvals recorded in the package.
+
+The full package is [GardenSuite Puja 2026](../../docs/plans/puja-2026/README.md). Its [decisions](../../docs/plans/puja-2026/DECISIONS.md) distinguish the four adopted campaign points, prior product direction, current authorities, provisional campaign proposals and unresolved launch blockers. Sarbani Associates remains the product, sales and delivery owner.
 
 ## 2026-09-08 external validation decision
 
