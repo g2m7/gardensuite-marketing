@@ -10,6 +10,8 @@ Owner acquisition remains the supporting operating plan, and the [SEO and PR dom
 
 ## Active plans
 
+- [ComfyUI promotional video production](comfyui-promo-video/README.md) - evergreen technical plan for producing GardenSuite promo video on the Windows LAN PC (RTX 3060 12GB, 16GB RAM). Covers machine setup, a 16GB RAM test gate, ComfyUI security on port 8188, Wan2.2 TI2V-5B 480p B-roll, real product recordings for every UI frame, benchmark capture fields, phases, gates, tests, risks, stop rules and an open decision checklist. Authorizes preparation and local testing only, not publication. Campaign-bound asset IDs, captions and permissions stay in the [Puja video plan](puja-2026/03-video-and-creative.md).
+
 - [SEO and PR domination](seo-pr-domination/README.md) - reach #1 and occupy multiple slots on six target SERPs for the attendance-led offering. Includes goal table, market and competitor state, our baseline, on-site and off-site workstreams, PR calendar, and a four-week order of attack.
 
 ## Current plan
