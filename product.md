@@ -96,16 +96,16 @@ Primary decision-makers and users include:
 - factory and store staff
 - administrators and implementation staff
 
-## Current acquisition pilot
+## Current acquisition motion
 
-The September 2026 outbound pilot is narrower than the complete target market:
+The September 2026 Assam-only pilot is closed. The current motion (from 2026-09-27, authority: `marketing/outreach/CURRENT_STRATEGY.md`):
 
-- 20 estates from Dibrugarh and Tinsukia districts only
-- at least 50 hectares
-- preference for mid-tier estates with roughly 250 workers
-- preference for independently managed estates, one-estate companies, and small family groups
-- focus on owners, directors, general managers, estate managers, and garden managers
-- exclude current clients, suppressed accounts, active sales discussions, large corporate groups, and estates already rejected for the pilot
+- North Bengal and Assam in parallel, with equal effort
+- Segments: reopening and revived gardens, independent estates, bought-leaf factories, and estates on older software
+- Channels in priority order: paid referrals, host-garden visits, field sales visits and phone calls, cold email at volume (100+ estates), and visibility work toward top-3 awareness
+- Prefer independently managed mid-tier estates with roughly 250 workers and at least 50 hectares
+- Focus on owners, directors, general managers, estate managers, and garden managers
+- Exclude current clients, suppressed accounts, active sales discussions, large corporate groups, and estates already rejected
 
 Existing software does not automatically make an estate a poor fit. Old, incomplete, poorly connected, or weakly supported systems may create a replacement opportunity. Claims about the existing system must be verified before they are used.
 

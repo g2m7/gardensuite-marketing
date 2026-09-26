@@ -1,0 +1,43 @@
+garden_name,status,matched_registry_file,matched_registry_name,company_in_registry,hq_city_in_registry,match_confidence
+Kalchini,reopened_then_closed_again,marketing/outreach/dooars-intelligence/data/gardens.csv | marketing/outreach/north-bengal-intelligence/data/North_Bengal_Tea_Master_Registry.csv,Kalchini | KALCHINI T E,Buxa Dooars Tea Company (India) Limited | BUXA DOOARS TEA CO (I) LTD,Siliguri,exact
+Raimatang,reopened_then_closed_again,marketing/outreach/dooars-intelligence/data/gardens.csv | marketing/outreach/north-bengal-intelligence/data/North_Bengal_Tea_Master_Registry.csv,Raimatang | RAIMATANG TEA ESTATE,Buxa Dooars Tea Company (India) Limited | ROSHANLAL AGARWAL,Siliguri,exact
+Bandapani (Bundapani),reopened_then_closed_again,marketing/outreach/dooars-intelligence/data/gardens.csv | marketing/outreach/north-bengal-intelligence/data/North_Bengal_Tea_Master_Registry.csv,Bundapani | BUNDAPANI TEA GARDEN,ALIPURDUAR ENTERPRISES LTD,Siliguri,exact
+Madhu,closed,marketing/outreach/dooars-intelligence/data/gardens.csv | marketing/outreach/north-bengal-intelligence/data/North_Bengal_Tea_Master_Registry.csv,Madhu | MADHU TEA ESTATE,DIABARI TEA CO LTD,Kolkata,exact
+Lankapara,closed,marketing/outreach/dooars-intelligence/data/gardens.csv | marketing/outreach/north-bengal-intelligence/data/North_Bengal_Tea_Master_Registry.csv,Lankapara | LANKAPARA TEA GARDEN,DUNCANS INDUSTRIES LIMITED,Kolkata,exact
+Ramjhora,closed,marketing/outreach/dooars-intelligence/data/gardens.csv | marketing/outreach/north-bengal-intelligence/data/North_Bengal_Tea_Master_Registry.csv,Ramjhora | RAMJHORA TEA ESTATE,HIND TEA COMPANY LIMITED,Siliguri,exact
+Raipur,reopening_announced,marketing/outreach/dooars-intelligence/data/gardens.csv | marketing/outreach/north-bengal-intelligence/data/North_Bengal_Tea_Master_Registry.csv,Raipur | RAIPUR TEA ESTATE,SUBRATA SAHA,Jalpaiguri,exact
+Sonali,closed,marketing/outreach/dooars-intelligence/data/gardens.csv | marketing/outreach/north-bengal-intelligence/data/North_Bengal_Tea_Master_Registry.csv,Sonali | SONALI TEA ESTATE,SHRI RAJHESH JHUNJHUNWALA,Other / Unspecified,exact
+Ambari,reopened_then_closed_again,marketing/outreach/dooars-intelligence/data/gardens.csv | marketing/outreach/north-bengal-intelligence/data/North_Bengal_Tea_Master_Registry.csv,Ambari | AMBARI TEA ESTATE,DIANA TEA CO. LTD.,Kolkata,exact
+Panighatta,reopened,marketing/outreach/north-bengal-intelligence/data/North_Bengal_Tea_Master_Registry.csv,PANIGHATA,THE NEW TRAI ASSOCIATION LTD DEEPAK BERLIA,Kolkata,fuzzy
+Pandam,reopened,marketing/outreach/north-bengal-intelligence/data/North_Bengal_Tea_Master_Registry.csv,PANDAM,WEST BENGAL TEA,Kolkata,exact
+Kalej Valley,reopened,marketing/outreach/north-bengal-intelligence/data/North_Bengal_Tea_Master_Registry.csv,KALEJ VALLEY TEA ESTATE,K.D. SINGH,Kolkata,exact
+Dheklapara,reopened,marketing/outreach/dooars-intelligence/data/gardens.csv,Dheklapara,,,exact
+Toorsa (Torsa),reopened,marketing/outreach/dooars-intelligence/data/gardens.csv | marketing/outreach/north-bengal-intelligence/data/North_Bengal_Tea_Master_Registry.csv,Torsa | TOORSA,Majherdabri Tea Company Limited | SS GUPTA,Kolkata,exact
+Dalmore,reopened,marketing/outreach/dooars-intelligence/data/gardens.csv | marketing/outreach/north-bengal-intelligence/data/North_Bengal_Tea_Master_Registry.csv,Dalmore | DALMORE TEA ESTATE,H.C. JAIN,Kolkata,exact
+Mechpara,reopened,marketing/outreach/dooars-intelligence/data/gardens.csv | marketing/outreach/north-bengal-intelligence/data/North_Bengal_Tea_Master_Registry.csv,Mechapara | MECHPARA TEA ESTATE,DARJEELING DOOARS,Kolkata,exact
+Dalsingpara (Dalshingpara),reopening_announced,marketing/outreach/dooars-intelligence/data/gardens.csv | marketing/outreach/north-bengal-intelligence/data/North_Bengal_Tea_Master_Registry.csv,Dalsingpara | DALSINGPARA,LAXMIKANT GAUR,Siliguri,exact
+Mohua (Mahua),reopened,marketing/outreach/dooars-intelligence/data/gardens.csv | marketing/outreach/north-bengal-intelligence/data/North_Bengal_Tea_Master_Registry.csv,Mohua | MOHUA,WEST BENGAL TEA,Kolkata,exact
+Singtom,reopened,marketing/outreach/north-bengal-intelligence/data/North_Bengal_Tea_Master_Registry.csv,SINGTOM TEA ESTATE,MOHAN KUMAR CHIRIMAR,Kolkata,exact
+Nagri Farm,reopened,marketing/outreach/north-bengal-intelligence/data/North_Bengal_Tea_Master_Registry.csv,NAGRIFARM TEA ESTATE,SRI ASHOK KUMAR LOHIA & SRI,Kolkata,exact
+Singbulli,reopened,marketing/outreach/north-bengal-intelligence/data/North_Bengal_Tea_Master_Registry.csv,SINGBULLI TEA ESTATE,JAYSHREE TEA & INDUSTRIES,Kolkata,exact
+Sungma and Turzom,reopened,marketing/outreach/north-bengal-intelligence/data/North_Bengal_Tea_Master_Registry.csv,TURZUM TEA ESTATE | SUNGMA TEA ESTATE,JAYSHREE TEA & INDUSTRIES,Kolkata,fuzzy
+Turturi,reopened,marketing/outreach/dooars-intelligence/data/gardens.csv | marketing/outreach/north-bengal-intelligence/data/North_Bengal_Tea_Master_Registry.csv,Turturi | TURTURI TEA ESTATE,ALIPURDUAR TEA COMPANY LTD,Kolkata,exact
+Redbank,reopened,marketing/outreach/dooars-intelligence/data/gardens.csv | marketing/outreach/north-bengal-intelligence/data/North_Bengal_Tea_Master_Registry.csv,Red Bank | RED BANK,ROSHANLAL AGARWAL,Siliguri,exact
+Surendranagar,reopened,marketing/outreach/dooars-intelligence/data/gardens.csv | marketing/outreach/north-bengal-intelligence/data/North_Bengal_Tea_Master_Registry.csv,Surendra Nagar | SURENDRA NAGAR,ROSHANLAL AGARWAL,Siliguri,exact
+Dharanipur,reopened,marketing/outreach/dooars-intelligence/data/gardens.csv | marketing/outreach/north-bengal-intelligence/data/North_Bengal_Tea_Master_Registry.csv,Dharanipur | DHARANIPUR,ROSHANLAL AGARWAL,Siliguri,exact
+Bamandanga-Tondu,reopened,marketing/outreach/dooars-intelligence/data/gardens.csv,Bamandanga Tondoo,,,fuzzy
+Samsing,reopened,marketing/outreach/dooars-intelligence/data/gardens.csv,Samsing,,,exact
+Bharnobari,reopened,marketing/outreach/dooars-intelligence/data/gardens.csv | marketing/outreach/north-bengal-intelligence/data/North_Bengal_Tea_Master_Registry.csv,Bharnobari | BHARNOBARI TEA ESTATE,BARNOBARI TEA & INDUSTRIES PVT. LTD.,Kolkata,exact
+Subarnapur,reopened,,,,,none
+Debpara,unclear,marketing/outreach/dooars-intelligence/data/gardens.csv | marketing/outreach/north-bengal-intelligence/data/North_Bengal_Tea_Master_Registry.csv,Debpara | DEBPARA TEA ESTATE,DEBPARA TEA CO. LTD.,Jalpaiguri,exact
+Longview,reopened,marketing/outreach/north-bengal-intelligence/data/North_Bengal_Tea_Master_Registry.csv,LONGVIEW TE,LONGVIEW TEA & AGRO LIMITED,Kolkata,exact
+Tirrihannah,reopened,marketing/outreach/north-bengal-intelligence/data/North_Bengal_Tea_Master_Registry.csv,TIRRIHANNAH CO LTD,TIRRIHANNAH CO LTD,Other / Unspecified,fuzzy
+Peshok,reopened,marketing/outreach/north-bengal-intelligence/data/North_Bengal_Tea_Master_Registry.csv,PESHOK TEA ESTATE,SHRI DEBABRATA MITRA,Kolkata,exact
+Kohinoor,unclear,marketing/outreach/dooars-intelligence/data/gardens.csv | marketing/outreach/north-bengal-intelligence/data/North_Bengal_Tea_Master_Registry.csv,Kohinoor | KOHINOOR TEA ESTATE,KOHINOOR TEA CO. PVT. LTD.,Siliguri,exact
+Totapara,unclear,marketing/outreach/dooars-intelligence/data/gardens.csv | marketing/outreach/north-bengal-intelligence/data/North_Bengal_Tea_Master_Registry.csv,Totapara | TOTAPARA TEA ESTATE,NUDDEA PLANTATIONS LTD.,Kolkata,exact
+Bagrakote,unclear,marketing/outreach/dooars-intelligence/data/gardens.csv,Bagrakote,,,exact
+Kilkot,unclear,,,,,none
+Nageswari,unclear,,,,,none
+Kumlai,unclear,marketing/outreach/dooars-intelligence/data/gardens.csv | marketing/outreach/north-bengal-intelligence/data/North_Bengal_Tea_Master_Registry.csv,Kumlai | KUMLAI,THE KUMLAI TEA & IND. LTD.,Kolkata,exact
+Chandan,unclear,marketing/outreach/north-bengal-intelligence/data/North_Bengal_Tea_Master_Registry.csv,CHANDAN TEA ESTATE,CHANDAN TEA INDUSTRIES PVT.,Kolkata,exact
+Saili,unclear,,,,,none

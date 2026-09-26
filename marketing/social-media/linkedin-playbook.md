@@ -16,7 +16,7 @@ This playbook defines the organic LinkedIn outreach strategy for identifying, co
 ## Step 1: Pre-Contact Exclusion Check
 
 Before sending any LinkedIn connection request, verify that the person's estate is NOT:
-1. An existing GardenSuite client (e.g., Harishpur, Bagrodia, Simulbarie, Rheabari, Longview, etc.).
+1. An existing GardenSuite client. GardenSuite serves 20+ tea estates across Dooars, Terai, Darjeeling and Assam. Check the internal client and suppression records, not this playbook, for estate names. Do not name clients in posts, comments or messages. Many estates keep software details private.
 2. An active recipient in the live cold email campaign (e.g., Baghbari, Sadasiva, Satispur).
 3. A large corporate conglomerate (e.g., Goodricke, McLeod Russel, Amalgamated Plantations).
 4. An estate marked `Do Not Contact` in `marketing/outreach/` records.

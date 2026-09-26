@@ -30,7 +30,7 @@ The scope, free items and maximum of five concurrent trials remain provisional u
 
 Primary readers are estate owners, directors, general managers, estate managers and garden managers. Field supervisors and office users matter for rollout.
 
-Proposed inbound handling allows enquiries from currently supported tea regions, subject to service-fit review. The existing September cold outreach remains limited to its approved Dibrugarh and Tinsukia accounts and rules. This plan does not add cold-email or cold-WhatsApp recipients. Paid-media cells for North Bengal and Dibrugarh/Tinsukia are candidates only. Paid geography needs an explicit launch decision.
+Proposed inbound handling allows enquiries from currently supported tea regions, subject to service-fit review. The September cold outreach limits were replaced on 2026-09-27: [CURRENT_STRATEGY.md](../../../marketing/outreach/CURRENT_STRATEGY.md) now governs cold outreach (100+ estates across North Bengal and Assam). Paid-media cells for North Bengal and Dibrugarh/Tinsukia are candidates only. Paid geography needs an explicit launch decision.
 
 ## Campaign message
 

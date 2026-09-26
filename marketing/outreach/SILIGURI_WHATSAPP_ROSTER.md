@@ -1,10 +1,12 @@
 # Siliguri WhatsApp Outreach Roster & In-Person Meeting Playbook
 
+Price check: confirm the Rs 499 offer against the current package before use.
+
 ## Overview
 This playbook is engineered specifically for traditional tea estate owners, proprietors, next-generation family operators, and senior garden staff in the Siliguri operating cluster.
 
 ### Strategy Rules & Psychology
-1. **The Price Anchor (Shatter the "Expensive IT" Objection):** Most older planters assume biometric attendance requires ₹25,000 to ₹40,000 hardware that breaks in garden rain. Anchoring with **"No expensive machines — runs on any normal Android phone at just ₹499/month"** removes all financial hesitation immediately. ₹499/month is less than two days of a single worker's wage.
+1. **The Price Anchor (Shatter the "Expensive IT" Objection):** Most older planters assume biometric attendance requires ₹25,000 to ₹40,000 hardware that breaks in garden rain. Anchoring with **"No expensive machines - runs on any normal Android phone at just ₹499/month"** removes all financial hesitation immediately. ₹499/month is less than two days of a single worker's wage.
 2. **Dual-Anchor Touch 1 (`Name + Management / Team`):** Protects against wrong numbers, family handoffs, and gatekeepers without awkwardness.
 3. **Respectful & Flexible Meeting Offer:** Offer to come directly to their preferred location or office for a quick 5-10 minute live phone demo. Never quote specific street addresses unprompted.
 
@@ -34,7 +36,7 @@ This playbook is engineered specifically for traditional tea estate owners, prop
 > **Touch 2 Reply:**  
 > "Pranam Sir. Hum Sarbani Associates (Bagdogra) se hain. Humne tea gardens ke liye mobile face attendance app banaya hai.
 > 
-> Isme koi 25-30 hazar ki machine nahi lagani padti — supervisor ke normal Android phone par hi **bas ₹499/month** me sirdar ki chor-hazira aur proxy muster roll band ho jata hai.
+> Isme koi 25-30 hazar ki machine nahi lagani padti - supervisor ke normal Android phone par hi **bas ₹499/month** me sirdar ki chor-hazira aur proxy muster roll band ho jata hai.
 > 
 > Kya is hafte aapke paas 5-10 minute ka time hoga? Hum aapke preferred location ya office me aakar live demo dikha denge, pasand aaye tabhi aage sochna."
 
@@ -42,7 +44,7 @@ This playbook is engineered specifically for traditional tea estate owners, prop
 > **Touch 2 Reply:**  
 > "Pranam. Achha hua aapse connect hua. Hum Sarbani Associates (Bagdogra) se hain. Hum local tea estates me digital face attendance setup karte hain.
 > 
-> Kisi mehengi biometric machine ki zaroorat nahi hai — normal phone par **bas ₹499/month** me sirdar ki proxy hazira field me hi ruk jati hai.
+> Kisi mehengi biometric machine ki zaroorat nahi hai - normal phone par **bas ₹499/month** me sirdar ki proxy hazira field me hi ruk jati hai.
 > 
 > Kya is hafte aapke paas 5-10 minute ka time hoga? Hum aapke preferred office ya location par aakar live demo dikha denge."
 
@@ -70,7 +72,7 @@ This playbook is engineered specifically for traditional tea estate owners, prop
 > **Touch 2 Reply:**  
 > "Nomoshkar Sir. Amra Sarbani Associates (Bagdogra) theke bolchi. Bagan er jonno mobile face attendance app toiri korechi.
 > 
-> Kono 25-30 hazar takar biometric machine lagbe na — supervisor er normal phone ei **matro ₹499/month** e sirdar der proxy hazira r chor-hazira bondho hoye jaay.
+> Kono 25-30 hazar takar biometric machine lagbe na - supervisor er normal phone ei **matro ₹499/month** e sirdar der proxy hazira r chor-hazira bondho hoye jaay.
 > 
 > E shoptaye ki apnar 5-10 minute shomoy hobe? Apnar preferred location ba office e ese ekbar live demo dekhiye debo, pochhondo hole tobei bhabben."
 
@@ -78,7 +80,7 @@ This playbook is engineered specifically for traditional tea estate owners, prop
 > **Touch 2 Reply:**  
 > "Nomoshkar. Khub bhalo holo apnar sathe jogajog holo. Amra Sarbani Associates (Bagdogra) theke bolchi. Local bagan gulor jonno mobile face attendance setup kori.
 > 
-> Dami kono machine lagbe na — shadharon Android phone e **matro ₹499/month** e kacha muster roll er proxy hazira section ei bondho kora jaay.
+> Dami kono machine lagbe na - shadharon Android phone e **matro ₹499/month** e kacha muster roll er proxy hazira section ei bondho kora jaay.
 > 
 > E shoptaye ki apnar 5-10 minute shomoy hobe? Apnar preferred location ba office e ese ekbar demo dekhiye debo."
 
@@ -116,7 +118,7 @@ This playbook is engineered specifically for traditional tea estate owners, prop
   ```text
   Pranam Sir. Hum Sarbani Associates (Bagdogra) se hain. Humne tea gardens ke liye mobile face attendance app banaya hai.
 
-  Isme koi 25-30 hazar ki machine nahi lagani padti — supervisor ke normal Android phone par hi bas ₹499/month me sirdar ki chor-hazira aur proxy muster roll band ho jata hai.
+  Isme koi 25-30 hazar ki machine nahi lagani padti - supervisor ke normal Android phone par hi bas ₹499/month me sirdar ki chor-hazira aur proxy muster roll band ho jata hai.
 
   Kya is hafte aapke paas 5-10 minute ka time hoga? Hum aapke preferred location ya office me aakar live demo dikha denge.
   ```
@@ -133,7 +135,7 @@ This playbook is engineered specifically for traditional tea estate owners, prop
   ```text
   Pranam Sir. Hum Sarbani Associates (Bagdogra) se hain. Humne tea gardens ke liye mobile face attendance app banaya hai.
 
-  Isme koi 25-30 hazar ki machine nahi lagani padti — supervisor ke normal Android phone par hi bas ₹499/month me sirdar ki chor-hazira aur proxy muster roll band ho jata hai.
+  Isme koi 25-30 hazar ki machine nahi lagani padti - supervisor ke normal Android phone par hi bas ₹499/month me sirdar ki chor-hazira aur proxy muster roll band ho jata hai.
 
   Kya is hafte aapke paas 5-10 minute ka time hoga? Hum aapke preferred location ya office me aakar live demo dikha denge.
   ```
@@ -150,7 +152,7 @@ This playbook is engineered specifically for traditional tea estate owners, prop
   ```text
   Pranam Sir. Hum Sarbani Associates (Bagdogra) se hain. Humne tea gardens ke liye mobile face attendance app banaya hai.
 
-  Isme koi 25-30 hazar ki machine nahi lagani padti — supervisor ke normal Android phone par hi bas ₹499/month me sirdar ki chor-hazira aur proxy muster roll band ho jata hai.
+  Isme koi 25-30 hazar ki machine nahi lagani padti - supervisor ke normal Android phone par hi bas ₹499/month me sirdar ki chor-hazira aur proxy muster roll band ho jata hai.
 
   Kya is hafte aapke paas 5-10 minute ka time hoga? Hum aapke preferred location ya office me aakar live demo dikha denge.
   ```
@@ -167,7 +169,7 @@ This playbook is engineered specifically for traditional tea estate owners, prop
   ```text
   Pranam Sir. Hum Sarbani Associates (Bagdogra) se hain. Humne tea gardens ke liye mobile face attendance app banaya hai.
 
-  Isme koi 25-30 hazar ki machine nahi lagani padti — supervisor ke normal Android phone par hi bas ₹499/month me sirdar ki chor-hazira aur proxy muster roll band ho jata hai.
+  Isme koi 25-30 hazar ki machine nahi lagani padti - supervisor ke normal Android phone par hi bas ₹499/month me sirdar ki chor-hazira aur proxy muster roll band ho jata hai.
 
   Kya is hafte aapke paas 5-10 minute ka time hoga? Hum aapke preferred location ya office me aakar live demo dikha denge.
   ```
@@ -184,7 +186,7 @@ This playbook is engineered specifically for traditional tea estate owners, prop
   ```text
   Pranam Sir. Hum Sarbani Associates (Bagdogra) se hain. Humne tea gardens ke liye mobile face attendance app banaya hai.
 
-  Isme koi 25-30 hazar ki machine nahi lagani padti — supervisor ke normal Android phone par hi bas ₹499/month me sirdar ki chor-hazira aur proxy muster roll band ho jata hai.
+  Isme koi 25-30 hazar ki machine nahi lagani padti - supervisor ke normal Android phone par hi bas ₹499/month me sirdar ki chor-hazira aur proxy muster roll band ho jata hai.
 
   Kya is hafte aapke paas 5-10 minute ka time hoga? Hum aapke preferred location ya office me aakar live demo dikha denge.
   ```
@@ -201,7 +203,7 @@ This playbook is engineered specifically for traditional tea estate owners, prop
   ```text
   Pranam Sir. Hum Sarbani Associates (Bagdogra) se hain. Humne tea gardens ke liye mobile face attendance app banaya hai.
 
-  Isme koi 25-30 hazar ki machine nahi lagani padti — supervisor ke normal Android phone par hi bas ₹499/month me sirdar ki chor-hazira aur proxy muster roll band ho jata hai.
+  Isme koi 25-30 hazar ki machine nahi lagani padti - supervisor ke normal Android phone par hi bas ₹499/month me sirdar ki chor-hazira aur proxy muster roll band ho jata hai.
 
   Kya is hafte aapke paas 5-10 minute ka time hoga? Hum aapke preferred location ya office me aakar live demo dikha denge.
   ```
@@ -218,7 +220,7 @@ This playbook is engineered specifically for traditional tea estate owners, prop
   ```text
   Pranam Sir. Hum Sarbani Associates (Bagdogra) se hain. Humne tea gardens ke liye mobile face attendance app banaya hai.
 
-  Isme koi 25-30 hazar ki machine nahi lagani padti — supervisor ke normal Android phone par hi bas ₹499/month me sirdar ki chor-hazira aur proxy muster roll band ho jata hai.
+  Isme koi 25-30 hazar ki machine nahi lagani padti - supervisor ke normal Android phone par hi bas ₹499/month me sirdar ki chor-hazira aur proxy muster roll band ho jata hai.
 
   Kya is hafte aapke paas 5-10 minute ka time hoga? Hum aapke preferred location ya office me aakar live demo dikha denge.
   ```
@@ -235,7 +237,7 @@ This playbook is engineered specifically for traditional tea estate owners, prop
   ```text
   Pranam Sir. Hum Sarbani Associates (Bagdogra) se hain. Humne tea gardens ke liye mobile face attendance app banaya hai.
 
-  Isme koi 25-30 hazar ki machine nahi lagani padti — supervisor ke normal Android phone par hi bas ₹499/month me sirdar ki chor-hazira aur proxy muster roll band ho jata hai.
+  Isme koi 25-30 hazar ki machine nahi lagani padti - supervisor ke normal Android phone par hi bas ₹499/month me sirdar ki chor-hazira aur proxy muster roll band ho jata hai.
 
   Kya is hafte aapke paas 5-10 minute ka time hoga? Hum aapke preferred location ya office me aakar live demo dikha denge.
   ```
@@ -252,7 +254,7 @@ This playbook is engineered specifically for traditional tea estate owners, prop
   ```text
   Pranam Sir. Hum Sarbani Associates (Bagdogra) se hain. Humne tea gardens ke liye mobile face attendance app banaya hai.
 
-  Isme koi 25-30 hazar ki machine nahi lagani padti — supervisor ke normal Android phone par hi bas ₹499/month me sirdar ki chor-hazira aur proxy muster roll band ho jata hai.
+  Isme koi 25-30 hazar ki machine nahi lagani padti - supervisor ke normal Android phone par hi bas ₹499/month me sirdar ki chor-hazira aur proxy muster roll band ho jata hai.
 
   Kya is hafte aapke paas 5-10 minute ka time hoga? Hum aapke preferred location ya office me aakar live demo dikha denge.
   ```
@@ -269,7 +271,7 @@ This playbook is engineered specifically for traditional tea estate owners, prop
   ```text
   Pranam Sir. Hum Sarbani Associates (Bagdogra) se hain. Humne tea gardens ke liye mobile face attendance app banaya hai.
 
-  Isme koi 25-30 hazar ki machine nahi lagani padti — supervisor ke normal Android phone par hi bas ₹499/month me sirdar ki chor-hazira aur proxy muster roll band ho jata hai.
+  Isme koi 25-30 hazar ki machine nahi lagani padti - supervisor ke normal Android phone par hi bas ₹499/month me sirdar ki chor-hazira aur proxy muster roll band ho jata hai.
 
   Kya is hafte aapke paas 5-10 minute ka time hoga? Hum aapke preferred location ya office me aakar live demo dikha denge.
   ```
@@ -290,7 +292,7 @@ This playbook is engineered specifically for traditional tea estate owners, prop
   ```text
   Nomoshkar Sir. Amra Sarbani Associates (Bagdogra) theke bolchi. Bagan er jonno mobile face attendance app toiri korechi.
 
-  Kono 25-30 hazar takar biometric machine lagbe na — supervisor er normal phone ei matro ₹499/month e sirdar der proxy hazira r chor-hazira bondho hoye jaay.
+  Kono 25-30 hazar takar biometric machine lagbe na - supervisor er normal phone ei matro ₹499/month e sirdar der proxy hazira r chor-hazira bondho hoye jaay.
 
   E shoptaye ki apnar 5-10 minute shomoy hobe? Apnar preferred location ba office e ese ekbar live demo dekhiye debo.
   ```
@@ -307,7 +309,7 @@ This playbook is engineered specifically for traditional tea estate owners, prop
   ```text
   Nomoshkar Sir. Amra Sarbani Associates (Bagdogra) theke bolchi. Bagan er jonno mobile face attendance app toiri korechi.
 
-  Kono 25-30 hazar takar biometric machine lagbe na — supervisor er normal phone ei matro ₹499/month e sirdar der proxy hazira r chor-hazira bondho hoye jaay.
+  Kono 25-30 hazar takar biometric machine lagbe na - supervisor er normal phone ei matro ₹499/month e sirdar der proxy hazira r chor-hazira bondho hoye jaay.
 
   E shoptaye ki apnar 5-10 minute shomoy hobe? Apnar preferred location ba office e ese ekbar live demo dekhiye debo.
   ```
@@ -324,7 +326,7 @@ This playbook is engineered specifically for traditional tea estate owners, prop
   ```text
   Nomoshkar Madam. Amra Sarbani Associates (Bagdogra) theke bolchi. Bagan er jonno mobile face attendance app toiri korechi.
 
-  Kono 25-30 hazar takar biometric machine lagbe na — supervisor er normal phone ei matro ₹499/month e sirdar der proxy hazira r chor-hazira bondho hoye jaay.
+  Kono 25-30 hazar takar biometric machine lagbe na - supervisor er normal phone ei matro ₹499/month e sirdar der proxy hazira r chor-hazira bondho hoye jaay.
 
   E shoptaye ki apnar 5-10 minute shomoy hobe? Apnar preferred location ba office e ese ekbar live demo dekhiye debo.
   ```
@@ -341,7 +343,7 @@ This playbook is engineered specifically for traditional tea estate owners, prop
   ```text
   Nomoshkar Sir. Amra Sarbani Associates (Bagdogra) theke bolchi. Bagan er jonno mobile face attendance app toiri korechi.
 
-  Kono 25-30 hazar takar biometric machine lagbe na — supervisor er normal phone ei matro ₹499/month e sirdar der proxy hazira r chor-hazira bondho hoye jaay.
+  Kono 25-30 hazar takar biometric machine lagbe na - supervisor er normal phone ei matro ₹499/month e sirdar der proxy hazira r chor-hazira bondho hoye jaay.
 
   E shoptaye ki apnar 5-10 minute shomoy hobe? Apnar preferred location ba office e ese ekbar live demo dekhiye debo.
   ```
@@ -358,7 +360,7 @@ This playbook is engineered specifically for traditional tea estate owners, prop
   ```text
   Nomoshkar Sir. Amra Sarbani Associates (Bagdogra) theke bolchi. Bagan er jonno mobile face attendance app toiri korechi.
 
-  Kono 25-30 hazar takar biometric machine lagbe na — supervisor er normal phone ei matro ₹499/month e sirdar der proxy hazira r chor-hazira bondho hoye jaay.
+  Kono 25-30 hazar takar biometric machine lagbe na - supervisor er normal phone ei matro ₹499/month e sirdar der proxy hazira r chor-hazira bondho hoye jaay.
 
   E shoptaye ki apnar 5-10 minute shomoy hobe? Apnar preferred location ba office e ese ekbar live demo dekhiye debo.
   ```
@@ -375,7 +377,7 @@ This playbook is engineered specifically for traditional tea estate owners, prop
   ```text
   Nomoshkar Sir. Amra Sarbani Associates (Bagdogra) theke bolchi. Bagan er jonno mobile face attendance app toiri korechi.
 
-  Kono 25-30 hazar takar biometric machine lagbe na — supervisor er normal phone ei matro ₹499/month e sirdar der proxy hazira r chor-hazira bondho hoye jaay.
+  Kono 25-30 hazar takar biometric machine lagbe na - supervisor er normal phone ei matro ₹499/month e sirdar der proxy hazira r chor-hazira bondho hoye jaay.
 
   E shoptaye ki apnar 5-10 minute shomoy hobe? Apnar preferred location ba office e ese ekbar live demo dekhiye debo.
   ```
@@ -392,7 +394,7 @@ This playbook is engineered specifically for traditional tea estate owners, prop
   ```text
   Nomoshkar Sir. Amra Sarbani Associates (Bagdogra) theke bolchi. Bagan er jonno mobile face attendance app toiri korechi.
 
-  Kono 25-30 hazar takar biometric machine lagbe na — supervisor er normal phone ei matro ₹499/month e sirdar der proxy hazira r chor-hazira bondho hoye jaay.
+  Kono 25-30 hazar takar biometric machine lagbe na - supervisor er normal phone ei matro ₹499/month e sirdar der proxy hazira r chor-hazira bondho hoye jaay.
 
   E shoptaye ki apnar 5-10 minute shomoy hobe? Apnar preferred location ba office e ese ekbar live demo dekhiye debo.
   ```
@@ -409,7 +411,7 @@ This playbook is engineered specifically for traditional tea estate owners, prop
   ```text
   Nomoshkar Sir. Amra Sarbani Associates (Bagdogra) theke bolchi. Bagan er jonno mobile face attendance app toiri korechi.
 
-  Kono 25-30 hazar takar biometric machine lagbe na — supervisor er normal phone ei matro ₹499/month e sirdar der proxy hazira r chor-hazira bondho hoye jaay.
+  Kono 25-30 hazar takar biometric machine lagbe na - supervisor er normal phone ei matro ₹499/month e sirdar der proxy hazira r chor-hazira bondho hoye jaay.
 
   E shoptaye ki apnar 5-10 minute shomoy hobe? Apnar preferred location ba office e ese ekbar live demo dekhiye debo.
   ```
@@ -426,7 +428,7 @@ This playbook is engineered specifically for traditional tea estate owners, prop
   ```text
   Nomoshkar Sir. Amra Sarbani Associates (Bagdogra) theke bolchi. Bagan er jonno mobile face attendance app toiri korechi.
 
-  Kono 25-30 hazar takar biometric machine lagbe na — supervisor er normal phone ei matro ₹499/month e sirdar der proxy hazira r chor-hazira bondho hoye jaay.
+  Kono 25-30 hazar takar biometric machine lagbe na - supervisor er normal phone ei matro ₹499/month e sirdar der proxy hazira r chor-hazira bondho hoye jaay.
 
   E shoptaye ki apnar 5-10 minute shomoy hobe? Apnar preferred location ba office e ese ekbar live demo dekhiye debo.
   ```
@@ -443,7 +445,7 @@ This playbook is engineered specifically for traditional tea estate owners, prop
   ```text
   Adaab Sir. Hum Sarbani Associates (Bagdogra) se hain. Humne tea gardens ke liye mobile face attendance app banaya hai.
 
-  Isme koi 25-30 hazar ki machine nahi lagani padti — supervisor ke normal Android phone par hi bas ₹499/month me sirdar ki chor-hazira aur proxy muster roll band ho jata hai.
+  Isme koi 25-30 hazar ki machine nahi lagani padti - supervisor ke normal Android phone par hi bas ₹499/month me sirdar ki chor-hazira aur proxy muster roll band ho jata hai.
 
   Kya is hafte aapke paas 5-10 minute ka time hoga? Hum aapke preferred location ya office me aakar live demo dikha denge.
   ```
@@ -463,7 +465,7 @@ This playbook is engineered specifically for traditional tea estate owners, prop
   ```text
   Pranam Sir. Hum Sarbani Associates (Bagdogra) se hain. Humne tea gardens ke liye mobile face attendance app banaya hai.
 
-  Isme koi 25-30 hazar ki machine nahi lagani padti — supervisor ke normal Android phone par hi bas ₹499/month me sirdar ki chor-hazira aur proxy muster roll band ho jata hai.
+  Isme koi 25-30 hazar ki machine nahi lagani padti - supervisor ke normal Android phone par hi bas ₹499/month me sirdar ki chor-hazira aur proxy muster roll band ho jata hai.
 
   Kya is hafte aapke paas 5-10 minute ka time hoga? Hum aapke preferred location ya office me aakar live demo dikha denge.
   ```
@@ -479,7 +481,7 @@ This playbook is engineered specifically for traditional tea estate owners, prop
   ```text
   Nomoshkar Sir. Amra Sarbani Associates (Bagdogra) theke bolchi. Bagan er jonno mobile face attendance app toiri korechi.
 
-  Kono 25-30 hazar takar biometric machine lagbe na — supervisor er normal phone ei matro ₹499/month e sirdar der proxy hazira r chor-hazira bondho hoye jaay.
+  Kono 25-30 hazar takar biometric machine lagbe na - supervisor er normal phone ei matro ₹499/month e sirdar der proxy hazira r chor-hazira bondho hoye jaay.
 
   E shoptaye ki apnar 5-10 minute shomoy hobe? Apnar preferred location ba office e ese ekbar live demo dekhiye debo.
   ```
@@ -495,7 +497,7 @@ This playbook is engineered specifically for traditional tea estate owners, prop
   ```text
   Nomoshkar Sir. Amra Sarbani Associates (Bagdogra) theke bolchi. Bagan er jonno mobile face attendance app toiri korechi.
 
-  Kono 25-30 hazar takar biometric machine lagbe na — supervisor er normal phone ei matro ₹499/month e sirdar der proxy hazira r chor-hazira bondho hoye jaay.
+  Kono 25-30 hazar takar biometric machine lagbe na - supervisor er normal phone ei matro ₹499/month e sirdar der proxy hazira r chor-hazira bondho hoye jaay.
 
   E shoptaye ki apnar 5-10 minute shomoy hobe? Apnar preferred location ba office e ese ekbar live demo dekhiye debo.
   ```

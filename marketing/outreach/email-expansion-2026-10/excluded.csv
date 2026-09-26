@@ -1,0 +1,198 @@
+estate_name,email_present,reason,detail,source_file
+AIBHEEL TEA GARDEN,yes,corporate,goodricke,filtered/wb_filtered_candidates.csv
+ANANDAPUR TEA ESTATE,yes,corporate,Public limited company,filtered/wb_filtered_candidates.csv
+BAGRACOTE TEA GARDEN,yes,corporate,Conglomerate keyword match (DUNCANS),filtered/wb_filtered_candidates.csv
+BAINTGOORIE TEA ESTATE,yes,corporate,diana tea,filtered/wb_filtered_candidates.csv
+BATABARI,yes,corporate,amalgamated,filtered/wb_filtered_candidates.csv
+CHALOUNI,yes,corporate,goodricke,filtered/wb_filtered_candidates.csv
+CHULSA TEA ESTATE,yes,corporate,goodricke,filtered/wb_filtered_candidates.csv
+DAGAPUR,yes,corporate,Public limited company,filtered/wb_filtered_candidates.csv
+ELLENBARRIE TEA ESTATE,yes,corporate,Public limited company,filtered/wb_filtered_candidates.csv
+GOPALPUR TEA ESTATE,yes,corporate,Public limited company,filtered/wb_filtered_candidates.csv
+KAILASHPUR TEA ESTATE,yes,corporate,Public limited company,filtered/wb_filtered_candidates.csv
+KILLCOTT,yes,corporate,Conglomerate keyword match (DUNCANS),filtered/wb_filtered_candidates.csv
+LEESH RIVER TEAGARDEN,yes,corporate,goodricke,filtered/wb_filtered_candidates.csv
+MANABARRIE,yes,corporate,Public limited company,filtered/wb_filtered_candidates.csv
+MATELLI TEA ESTATE,yes,corporate,luxmi,filtered/wb_filtered_candidates.csv
+MEENGLAS TEA GARDEN,yes,corporate,goodricke,filtered/wb_filtered_candidates.csv
+NAGAISUREE,yes,corporate,Conglomerate keyword match (DUNCANS),filtered/wb_filtered_candidates.csv
+OODLABARI TEA ESTATE,yes,not_qualified,Uncertain / Backlog: Low signal density,filtered/wb_filtered_candidates.csv
+RANICHERRA TEA ESTATE,yes,corporate,Public limited company,filtered/wb_filtered_candidates.csv
+SOONGACHI,yes,corporate,Acreage too large for independent owner tier (639.4 Ha),filtered/wb_filtered_candidates.csv
+ZURRANTEE TEA,yes,not_qualified,Uncertain / Backlog: Low signal density,filtered/wb_filtered_candidates.csv
+AMARPUR TEA ESTATE,yes,corporate,Public limited company,filtered/wb_filtered_candidates.csv
+DANGUAJHAR TEA GARDEN,yes,corporate,goodricke,filtered/wb_filtered_candidates.csv
+BANARHAT,yes,corporate,andrew yule,filtered/wb_filtered_candidates.csv
+BHOGATPORE TEA ESTATE,yes,corporate,Public limited company,filtered/wb_filtered_candidates.csv
+BINAGURI TEA ESTATE,yes,corporate,Acreage too large for independent owner tier (602.6 Ha),filtered/wb_filtered_candidates.csv
+CHENGMARI,yes,corporate,Public limited company,filtered/wb_filtered_candidates.csv
+CHOONABHUTTI TEA ESTATE,yes,corporate,andrew yule,filtered/wb_filtered_candidates.csv
+DEBPARA TEA ESTATE,yes,client,matches current client list,filtered/wb_filtered_candidates.csv
+DHARANIPUR,yes,corporate,Multi-garden group (4 gardens),filtered/wb_filtered_candidates.csv
+DIANA TEA ESTATE,yes,corporate,diana tea,filtered/wb_filtered_candidates.csv
+GHATIA TEA ESTATE,yes,not_qualified,Uncertain / Backlog: Low signal density,filtered/wb_filtered_candidates.csv
+HILLA,yes,corporate,Multi-garden group (4 gardens),filtered/wb_filtered_candidates.csv
+HOPE TEA GARDEN,yes,not_qualified,Uncertain / Backlog: Low signal density,filtered/wb_filtered_candidates.csv
+JITI,yes,corporate,goodricke,filtered/wb_filtered_candidates.csv
+KARBALA TEA ESTATE,yes,corporate,andrew yule,filtered/wb_filtered_candidates.csv
+KATALGURI TEA ESTATE,yes,not_qualified,Disqualified: Current GardenSuite client (ATAL),filtered/wb_filtered_candidates.csv
+KURTI TEA ESTATE,yes,client,matches current client list,filtered/wb_filtered_candidates.csv
+LAKHIPARA TEA GARDEN,yes,corporate,goodricke,filtered/wb_filtered_candidates.csv
+LANKAPARA TEA GARDEN,yes,corporate,Conglomerate keyword match (DUNCANS),filtered/wb_filtered_candidates.csv
+MOGULKATA TEA ESTATE,yes,client,matches current client list,filtered/wb_filtered_candidates.csv
+NAGRAKATA TEA ESTATE,yes,not_qualified,Uncertain / Backlog: Low signal density,filtered/wb_filtered_candidates.csv
+NEW DOOARS,yes,corporate,andrew yule,filtered/wb_filtered_candidates.csv
+NYA SYLEE,yes,corporate,Public limited company,filtered/wb_filtered_candidates.csv
+RED BANK,yes,corporate,Multi-garden group (4 gardens),filtered/wb_filtered_candidates.csv
+RHEABARI TEA ESTATE,yes,client,matches current client list,filtered/wb_filtered_candidates.csv
+SURENDRA NAGAR,yes,corporate,Multi-garden group (4 gardens),filtered/wb_filtered_candidates.csv
+FAGU,yes,corporate,Public limited company,filtered/wb_filtered_candidates.csv
+MOHAN MAJHUA TEA ESTATE,yes,negotiation,"negotiation (legacy CRM: Negotiation / ) [first-word match, check]",filtered/wb_filtered_candidates.csv
+SYLEE,yes,corporate,Public limited company,filtered/wb_filtered_candidates.csv
+UPPER FAGU,yes,corporate,Public limited company,filtered/wb_filtered_candidates.csv
+AMBOOTIA TEA ESTATE,yes,corporate,Multi-garden group (3 gardens),filtered/wb_filtered_candidates.csv
+CASTLETON TEA GARDEN,yes,corporate,Public limited company,filtered/wb_filtered_candidates.csv
+JUNGPANA,yes,corporate,Public limited company,filtered/wb_filtered_candidates.csv
+LONGVIEW TE,yes,client,matches current client list,filtered/wb_filtered_candidates.csv
+MONTEVIOT TEA ESTATE,yes,corporate,Multi-garden group (6 gardens),filtered/wb_filtered_candidates.csv
+MOONDAKOTEE TEA ESTATE,yes,corporate,Multi-garden group (6 gardens),filtered/wb_filtered_candidates.csv
+MULLOTAR TEA ESTATE,yes,corporate,Multi-garden group (6 gardens),filtered/wb_filtered_candidates.csv
+ROHINI TEA ESTATE,yes,corporate,Public limited company,filtered/wb_filtered_candidates.csv
+SEPOYDHOORAH TEA ESTATE,yes,corporate,Multi-garden group (6 gardens),filtered/wb_filtered_candidates.csv
+SIVITAR TEA ESTATE,yes,corporate,Multi-garden group (6 gardens),filtered/wb_filtered_candidates.csv
+SPRINGSIDE,yes,corporate,Public limited company,filtered/wb_filtered_candidates.csv
+BADAMTAM TEA ESTATE,yes,corporate,goodricke,filtered/wb_filtered_candidates.csv
+BANNOCKBURN TEA ESTATE,yes,corporate,Multi-garden group (3 gardens),filtered/wb_filtered_candidates.csv
+DILARAM,yes,corporate,Public limited company,filtered/wb_filtered_candidates.csv
+EDENVALE,yes,corporate,Public limited company,filtered/wb_filtered_candidates.csv
+GLENBURN TEA ESTATE,yes,corporate,Public limited company,filtered/wb_filtered_candidates.csv
+HAPPY VALLEY TEA ESTATE,yes,corporate,Multi-garden group (6 gardens),filtered/wb_filtered_candidates.csv
+LIZAHILL TEA ESTATE,yes,corporate,jayshree,filtered/wb_filtered_candidates.csv
+MARGARET'S HOPE,yes,corporate,Public limited company,filtered/wb_filtered_candidates.csv
+NORTH TUKVAR,yes,corporate,Public limited company,filtered/wb_filtered_candidates.csv
+NURBONG TEA ESTATE,yes,corporate,Multi-garden group (3 gardens),filtered/wb_filtered_candidates.csv
+PANDAM,yes,corporate,Multi-garden group (4 gardens),filtered/wb_filtered_candidates.csv
+PHOOBSERING TEA ESTATE,yes,corporate,Multi-garden group (3 gardens),filtered/wb_filtered_candidates.csv
+RISHEEHAT TEA ESTATE,yes,corporate,jayshree,filtered/wb_filtered_candidates.csv
+RUNGLEE RUNGLIOT,yes,corporate,Conglomerate keyword match (DUNCANS),filtered/wb_filtered_candidates.csv
+RUNGMOOK/CEDARS TEA ESTATE,yes,corporate,Multi-garden group (4 gardens),filtered/wb_filtered_candidates.csv
+TEESTA VALLEY TEA ESTATE,yes,corporate,Public limited company,filtered/wb_filtered_candidates.csv
+TUKVAR,yes,corporate,jayshree,filtered/wb_filtered_candidates.csv
+TUMSONG TEA ESTATE,yes,corporate,Multi-garden group (3 gardens),filtered/wb_filtered_candidates.csv
+TURZUM TEA ESTATE,yes,corporate,jayshree,filtered/wb_filtered_candidates.csv
+ASHAPUR TEA ESTATE,yes,corporate,Public limited company,filtered/wb_filtered_candidates.csv
+ATAL,yes,client,matches current client list,filtered/wb_filtered_candidates.csv
+BIJOYNAGAR T.E.,yes,corporate,Public limited company,filtered/wb_filtered_candidates.csv
+GUNGARAM TEA ESTATE,yes,corporate,Acreage too large for independent owner tier (642.3 Ha),filtered/wb_filtered_candidates.csv
+HANSQUA TEA ESTATE,yes,corporate,Public limited company,filtered/wb_filtered_candidates.csv
+JAYANTIKA,yes,corporate,jayshree,filtered/wb_filtered_candidates.csv
+MERRYVIEW TEA ESTATE,yes,not_qualified,Uncertain / Backlog: Low signal density,filtered/wb_filtered_candidates.csv
+NUXALBARI,yes,corporate,Public limited company,filtered/wb_filtered_candidates.csv
+ORD TERAI TEA GARDEN,yes,corporate,Public limited company,filtered/wb_filtered_candidates.csv
+PAHARGOOMIAH TEA ESTATE,yes,client,matches current client list,filtered/wb_filtered_candidates.csv
+PANIGHATA,yes,corporate,Public limited company,filtered/wb_filtered_candidates.csv
+TAIPOO,yes,corporate,gillanders,filtered/wb_filtered_candidates.csv
+THANJHORA TEA ESTATE,yes,client,matches current client list,filtered/wb_filtered_candidates.csv
+TIRRIHANNAH CO LTD,yes,corporate,Public limited company,filtered/wb_filtered_candidates.csv
+ATIABARI TEA ESTATE,yes,corporate,Public limited company,filtered/wb_filtered_candidates.csv
+BEECH TEA ESTATE,yes,corporate,Acreage too large for independent owner tier (785.1 Ha),filtered/wb_filtered_candidates.csv
+BHATKAWA TEA ESTATE,yes,corporate,Public limited company,filtered/wb_filtered_candidates.csv
+BHATPARA TEA ESTATE,yes,corporate,mcleod,filtered/wb_filtered_candidates.csv
+CENTRAL DOOARS TEA ESTATE,yes,corporate,mcleod,filtered/wb_filtered_candidates.csv
+CHUAPARA TEA ESTATE,yes,corporate,mcleod,filtered/wb_filtered_candidates.csv
+DIMA TEA ESTATE,yes,corporate,Acreage too large for independent owner tier (742.8 Ha),filtered/wb_filtered_candidates.csv
+JAINTI TEA ESTATE,yes,corporate,mcleod,filtered/wb_filtered_candidates.csv
+KALCHINI T E,yes,corporate,Conglomerate keyword match (BUXA DOOARS),filtered/wb_filtered_candidates.csv
+MECHPARA TEA ESTATE,yes,not_qualified,Uncertain / Backlog: Low signal density,filtered/wb_filtered_candidates.csv
+MERICO TEA ESTATE,yes,corporate,Acreage too large for independent owner tier (602.1 Ha),filtered/wb_filtered_candidates.csv
+RAJAHBHAT TEA ESTATE,yes,not_qualified,Uncertain / Backlog: Low signal density,filtered/wb_filtered_candidates.csv
+MATIDHAR TEA ESTATE,yes,corporate,Public limited company,filtered/wb_filtered_candidates.csv
+AVONGROVE TEA ESTATE,yes,corporate,Public limited company,filtered/wb_filtered_candidates.csv
+BALASON & MURMAH,yes,corporate,jayshree,filtered/wb_filtered_candidates.csv
+CHAMONG TEA ESTATE,yes,corporate,chamong,filtered/wb_filtered_candidates.csv
+GYABAREE & MIIIKTHONG TEA,yes,corporate,Public limited company,filtered/wb_filtered_candidates.csv
+LINGIA TEA ESTATE,yes,corporate,Multi-garden group (3 gardens),filtered/wb_filtered_candidates.csv
+MARYBONG TEA GARDEN,yes,corporate,Conglomerate keyword match (DUNCANS),filtered/wb_filtered_candidates.csv
+MIM,yes,corporate,andrew yule,filtered/wb_filtered_candidates.csv
+NAGRI,yes,corporate,Multi-garden group (3 gardens),filtered/wb_filtered_candidates.csv
+OKAYTI,yes,corporate,Public limited company,filtered/wb_filtered_candidates.csv
+SEEYOK,yes,corporate,Public limited company,filtered/wb_filtered_candidates.csv
+SINGBULLI TEA ESTATE,yes,corporate,jayshree,filtered/wb_filtered_candidates.csv
+SUNGMA TEA ESTATE,yes,corporate,jayshree,filtered/wb_filtered_candidates.csv
+THURBO TEA GARDEN,yes,corporate,goodricke,filtered/wb_filtered_candidates.csv
+COOCH BEHAR T.E,yes,corporate,Public limited company,filtered/wb_filtered_candidates.csv
+MARIONBARIE,yes,corporate,jayshree,filtered/wb_filtered_candidates.csv
+MOHURGONG & GULMA TEA ESTATE 126/1712,yes,corporate,Acreage too large for independent owner tier (694.1 Ha),filtered/wb_filtered_candidates.csv
+PUTINBARI TEA ESTATE,yes,corporate,Public limited company,filtered/wb_filtered_candidates.csv
+SIMULBARIE,yes,client,matches current client list,filtered/wb_filtered_candidates.csv
+SUKNA,yes,corporate,Public limited company,filtered/wb_filtered_candidates.csv
+BARADIGHI T.E,yes,corporate,rydak,filtered/wb_filtered_candidates.csv
+JADABPUR TEA GARDEN,yes,corporate,Public limited company,filtered/wb_filtered_candidates.csv
+DEBIJHORA,yes,corporate,Public limited company,filtered/wb_filtered_candidates.csv
+BIRPARA TE,yes,corporate,Conglomerate keyword match (DUNCANS),filtered/wb_filtered_candidates.csv
+BUNDAPANI TEA GARDEN,yes,corporate,Public limited company,filtered/wb_filtered_candidates.csv
+DALGAON TEA ESTATE,yes,corporate,Public limited company,filtered/wb_filtered_candidates.csv
+DEMDIMA,yes,corporate,Public limited company,filtered/wb_filtered_candidates.csv
+DUMCHIPARA TEA ESTATE,yes,corporate,Conglomerate keyword match (DUNCANS),filtered/wb_filtered_candidates.csv
+HANTAPARA TEA ESTATE,yes,corporate,Conglomerate keyword match (DUNCANS),filtered/wb_filtered_candidates.csv
+MUJNAI TEA ESTATE,yes,corporate,Public limited company,filtered/wb_filtered_candidates.csv
+RAMJHORA TEA ESTATE,yes,corporate,Public limited company,filtered/wb_filtered_candidates.csv
+SATALI TEA ESTATE,yes,not_qualified,Disqualified: Current GardenSuite client (ATAL),filtered/wb_filtered_candidates.csv
+SUBHASINI TEA ESTATE,yes,client,matches current client list,filtered/wb_filtered_candidates.csv
+TULSIPARA TEA ESTATE,yes,corporate,Conglomerate keyword match (DUNCANS),filtered/wb_filtered_candidates.csv
+DALMORE TEA ESTATE,yes,not_qualified,Uncertain / Backlog: Low signal density,filtered/wb_filtered_candidates.csv
+KARTICK,yes,corporate,rydak,filtered/wb_filtered_candidates.csv
+KUMARGRAM TEA GARDEN,yes,corporate,goodricke,filtered/wb_filtered_candidates.csv
+NEWLANDS TEA ESTATE,yes,corporate,Acreage too large for independent owner tier (605.2 Ha),filtered/wb_filtered_candidates.csv
+RYDAK TEA ESTATE,yes,corporate,rydak,filtered/wb_filtered_candidates.csv
+SANKOS,yes,corporate,goodricke,filtered/wb_filtered_candidates.csv
+TURTURI TEA ESTATE,yes,corporate,Public limited company,filtered/wb_filtered_candidates.csv
+GAIRKHATA TEA ESTATE,yes,corporate,gillanders,filtered/wb_filtered_candidates.csv
+GANDRAPARA TEA GARDEN,yes,corporate,goodricke,filtered/wb_filtered_candidates.csv
+HULDIBARI TEA GARDEN,yes,corporate,Acreage too large for independent owner tier (851.2 Ha),filtered/wb_filtered_candidates.csv
+JAYBIRPARA TEA ESTATE,yes,corporate,mcleod,filtered/wb_filtered_candidates.csv
+PALASHBARI,yes,corporate,Public limited company,filtered/wb_filtered_candidates.csv
+RAHIMPUR TEA ESTATE,yes,client,matches current client list,filtered/wb_filtered_candidates.csv
+TELEPARA TEA ESTATE,yes,corporate,Public limited company,filtered/wb_filtered_candidates.csv
+GIELLE TEA ESTATE,yes,corporate,Public limited company,filtered/wb_filtered_candidates.csv
+KUMLAI,yes,corporate,Public limited company,filtered/wb_filtered_candidates.csv
+SAMABEONG TEA ESTATE,yes,corporate,Public limited company,filtered/wb_filtered_candidates.csv
+TUKDAH TEA ESTATE,yes,corporate,Multi-garden group (3 gardens),filtered/wb_filtered_candidates.csv
+MAINAK HILLS TEA ESTATE,yes,corporate,Public limited company,filtered/wb_filtered_candidates.csv
+TINBIGHA TEA ESTATE,yes,client,matches current client list,filtered/wb_filtered_candidates.csv
+MAHALDERAM,yes,corporate,Public limited company,filtered/wb_filtered_candidates.csv
+MATHURA TEA ESTATE,yes,corporate,mcleod,filtered/wb_filtered_candidates.csv
+NIMTIJHORA TEA ESTATE,yes,corporate,Public limited company,filtered/wb_filtered_candidates.csv
+GHORAJAN,yes,already_contacted,in Sept Snov import or campaign batch,filtered/assam_filtered_candidates.csv
+KALIAPANI,yes,already_contacted,in Sept Snov import or campaign batch,filtered/assam_filtered_candidates.csv
+SATYANARAYAN TEA ESTATE,yes,already_contacted,in Sept Snov import or campaign batch,filtered/assam_filtered_candidates.csv
+SATISPUR,yes,already_contacted,in Sept Snov import or campaign batch,filtered/assam_filtered_candidates.csv
+SAROJINI TEA ESTATE,yes,already_contacted,in Sept Snov import or campaign batch,filtered/assam_filtered_candidates.csv
+UDALGURI TEA ESTATE,yes,already_contacted,in Sept Snov import or campaign batch,filtered/assam_filtered_candidates.csv
+PHUKENBARI,yes,already_contacted,in Sept Snov import or campaign batch,filtered/assam_filtered_candidates.csv
+GHOORONIA TEA ESTATE,yes,already_contacted,in Sept Snov import or campaign batch,filtered/assam_filtered_candidates.csv
+GHOGRAJAN TEA ESTATE,yes,already_contacted,in Sept Snov import or campaign batch,filtered/assam_filtered_candidates.csv
+DURGAPUR TEA ESTATE,yes,negotiation,pilot daily-status block (durgapur),filtered/assam_filtered_candidates.csv
+DEVENDRA TE,yes,already_contacted,in Sept Snov import or campaign batch,filtered/assam_filtered_candidates.csv
+BAGHMARI TEA GARDEN,yes,already_contacted,in Sept Snov import or campaign batch,filtered/assam_filtered_candidates.csv
+SOOKERATING,yes,already_contacted,in Sept Snov import or campaign batch,filtered/assam_filtered_candidates.csv
+LANKASHI TEA ESTATE,yes,negotiation,pilot daily-status block (lankashi),filtered/assam_filtered_candidates.csv
+CHANDMARI TEA ESTATE,yes,already_contacted,in Sept Snov import or campaign batch,filtered/assam_filtered_candidates.csv
+BAGHBARI TEA ESTATE,yes,already_contacted,in Sept Snov import or campaign batch,filtered/assam_filtered_candidates.csv
+PADUMANI TEA ESTATE,yes,invalid_email,registry email_status no_mx_records,filtered/assam_filtered_candidates.csv
+GANGABARI TEA ESTATE,yes,already_contacted,in Sept Snov import or campaign batch,filtered/assam_filtered_candidates.csv
+SANKAR TEA ESTATE,yes,invalid_email,registry email_status mailbox_not_found,filtered/assam_filtered_candidates.csv
+SADASIVA TEA ESTATE,yes,already_contacted,in Sept Snov import or campaign batch,filtered/assam_filtered_candidates.csv
+PRABHAT TEA ESTATE,yes,already_contacted,in Sept Snov import or campaign batch,filtered/assam_filtered_candidates.csv
+Rumaigabhoru Tea Estate,yes,already_contacted,in Sept Snov import or campaign batch,sep-2026-pilot/prospects.csv
+Phukanbari Tea Estate,yes,already_contacted,in Sept Snov import or campaign batch,sep-2026-pilot/prospects.csv
+L. K. Tea Estate,yes,already_contacted,in Sept Snov import or campaign batch,sep-2026-pilot/prospects.csv
+Goodricke head office,yes,corporate,goodricke,dooars-intelligence/manual/contacts.csv
+Indong,yes,corporate,Public company or large multi-estate group yes Named current managing director on the company investor page. Email still needs Snov.io validation.,dooars-intelligence/manual/contacts.csv
+Saneer Gurung,yes,corporate,mcleod,dooars-intelligence/manual/contacts.csv
+Diana Tea head office,yes,corporate,diana tea,dooars-intelligence/manual/contacts.csv
+Vijay Kumar,yes,corporate,gillanders,dooars-intelligence/manual/contacts.csv
+Rydak head office,yes,corporate,rydak,dooars-intelligence/manual/contacts.csv
+Octavius head office,yes,corporate,octavius,dooars-intelligence/manual/contacts.csv
+APPL corporate office,yes,corporate,amalgamated,dooars-intelligence/manual/contacts.csv
+Looksan,yes,client,matches current client list,dooars-intelligence/data/siliguri_dooars_estates.csv

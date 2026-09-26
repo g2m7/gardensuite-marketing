@@ -1,5 +1,13 @@
 # GardenSuite September launch summary
 
+Status: SUPERSEDED on 2026-09-27. Kept for history only.
+
+The current execution plan is [ACTION_PLAN_2026-10.md](ACTION_PLAN_2026-10.md), under [CURRENT_STRATEGY.md](CURRENT_STRATEGY.md). The September pilot, its dates, gates and channel limits below are history. Do not use them to decide current targets, channels or campaign state.
+
+Original record follows unchanged.
+
+---
+
 Updated: 2026-09-05 | Accountable owner: Kaushik Majumder, Sarbani Associates
 
 The current complete execution specification is [Owner acquisition](../../docs/plans/owner-acquisition/README.md), under [CURRENT_STRATEGY.md](CURRENT_STRATEGY.md). The old filename is retained for existing links.

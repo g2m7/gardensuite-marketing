@@ -1,5 +1,7 @@
 # WhatsApp Outreach Golden List: 46 Eligible Independent Estates (Golden List Truth)
 
+> **Status note:** Draft only. Repo records show these messages were never sent. Do not send from this file. 18 estates here are under the 50 ha pilot minimum (area from the Bigha figures below): Alimur (~43.5 ha), Bharatia (~27.7), Chowdang (~44.2), Dhelia (~27.9), Duliabari (~46), Enver Plantation (~21), Hatigarh (~27.6), Jutiabam (~24), Kheremia (~47.7), Manoj Kunja (~49.7), Mukul (~25.6), Ramji Mohan (~23.6), Ranu (~44.5), Sainagar (~35.6), Saurabha (~25.7), Suraj (~45), Tarinipur (~30.7) and Triveni (~36.9). Any use must follow `marketing/outreach/CURRENT_STRATEGY.md`.
+
 This file contains first-touch WhatsApp outreach messages tailored for the **46 independent tea estates** in .
 
 All messages rely **strictly on verified Golden List facts** (Estate Name, Bigha area, factory presence, Dibrugarh district) without external name enrichment assumptions. Every message addresses the operational phone holder respectfully as "Namaskar Sir".
