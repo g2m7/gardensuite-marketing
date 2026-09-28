@@ -1,0 +1,498 @@
+{
+  "slides": [
+    {
+      "id": "s01",
+      "type": "title",
+      "kicker": "GARDENSUITE DEMO",
+      "title": "See how GardenSuite records a garden day",
+      "sub": "Tea garden software by Sarbani Associates, Bagdogra, since 2000.",
+      "notes": "Introduce yourself and Sarbani Associates. Tea garden software work began in 2000. This deck walks the real app screens, so the garden sees exactly what supervisors and staff would use."
+    },
+    {
+      "id": "s02",
+      "type": "agenda",
+      "kicker": "AGENDA",
+      "title": "What we will show",
+      "sub": "A short walk through one day of records, about 20 minutes.",
+      "items": [
+        {
+          "title": "In the field",
+          "text": "Face check at the weighing point and plucking weight."
+        },
+        {
+          "title": "At the office",
+          "text": "Office staff review the records and run payroll."
+        },
+        {
+          "title": "For the owner",
+          "text": "Daily dashboard with green leaf, mandays and wages."
+        },
+        {
+          "title": "Getting started",
+          "text": "A small first step on one division."
+        }
+      ],
+      "notes": "Set expectations. About twenty minutes, then questions. If the audience is mostly owners, promise that the office and dashboard slides come later in the deck."
+    },
+    {
+      "id": "s03",
+      "type": "problem",
+      "kicker": "THE PROBLEM",
+      "title": "Daily records you cannot fully trust",
+      "sub": "These problems start in the field and show up at payroll.",
+      "items": [
+        {
+          "title": "Proxy attendance",
+          "text": "Hazira is marked for a worker who did not come."
+        },
+        {
+          "title": "Loose weight chits",
+          "text": "Weight slips travel with the leaf and reach the office late."
+        },
+        {
+          "title": "Payroll doubts",
+          "text": "Disputes follow when attendance and weight do not match."
+        }
+      ],
+      "notes": "Ask which of these three they see on their garden. Do not argue numbers. The point is that the records reach the office late and without checks."
+    },
+    {
+      "id": "s04",
+      "type": "chain",
+      "kicker": "THE CHAIN",
+      "title": "From garden to dashboard in seven steps",
+      "sub": "Each step is one record, checked at the source.",
+      "items": [
+        {
+          "title": "Face check",
+          "text": "The app confirms which worker reported."
+        },
+        {
+          "title": "Scale weight",
+          "text": "The Bluetooth scale sends the weight."
+        },
+        {
+          "title": "Saved on phone",
+          "text": "The record links face, section and net weight."
+        },
+        {
+          "title": "Sync",
+          "text": "Records move to the office when internet returns."
+        },
+        {
+          "title": "Office review",
+          "text": "Staff check records and correct mistakes before payroll."
+        },
+        {
+          "title": "Payroll",
+          "text": "Wages register, kamjari, PF statement and payslips."
+        },
+        {
+          "title": "Owner dashboard",
+          "text": "Daily numbers on phone, tablet or laptop."
+        }
+      ],
+      "notes": "This chain is the whole story of the demo. Each later slide shows one link. If someone leaves early, they should remember this picture."
+    },
+    {
+      "id": "s05",
+      "type": "kit",
+      "kicker": "THE KIT",
+      "title": "What sits at the weighing point",
+      "sub": "Four things at the weighing point. The phone app ties them together.",
+      "items": [
+        {
+          "title": "Android phone",
+          "text": "Runs the GS Face app and stores every record."
+        },
+        {
+          "title": "Bluetooth hanging scale",
+          "text": "Sends the leaf weight to the phone without writing."
+        },
+        {
+          "title": "The supervisor",
+          "text": "Starts the session, checks the match and confirms the save."
+        },
+        {
+          "title": "The worker",
+          "text": "Looks at the camera once and hangs the bag."
+        }
+      ],
+      "notes": "Keep this slide simple. The supervisor, the weighing point and the worker are already there. The new parts are the Bluetooth scale and the phone app that ties the records together."
+    },
+    {
+      "id": "s06",
+      "type": "flow",
+      "kicker": "FIELD DEMO",
+      "title": "Start the day's session",
+      "sub": "The supervisor picks the section and task, then starts a session.",
+      "steps": [
+        {
+          "screen": "00_home_entry_points.png",
+          "title": "Open the field app",
+          "text": "The home screen shows Harvest, Punch, workers, sync and scale.",
+          "say": "This is the supervisor's phone. Every field record starts from this home screen."
+        },
+        {
+          "screen": "01_harvest_start_session_ready.png",
+          "title": "Ready to start",
+          "text": "Session shows section, task and activity before any record.",
+          "say": "Before the first worker, the app already shows the section, the task in kg and the activity."
+        },
+        {
+          "screen": "02_harvest_section_picker.png",
+          "title": "Choose the section",
+          "text": "The supervisor picks the section where the work happens.",
+          "say": "Each session belongs to one section, so the office knows where the leaf came from."
+        },
+        {
+          "screen": "03_harvest_activity_picker.png",
+          "title": "Choose the activity",
+          "text": "Leaf plucking, pruning, spraying or other garden work.",
+          "say": "The activity decides what is recorded. Leaf plucking records weight with the hazira. Other work records hazira only."
+        }
+      ],
+      "notes": "Point out that the supervisor sets up the session on the phone. Nothing is written on paper."
+    },
+    {
+      "id": "s07",
+      "type": "flow",
+      "kicker": "FIELD DEMO",
+      "title": "Connect the scale",
+      "sub": "The hanging scale links to the phone over Bluetooth.",
+      "steps": [
+        {
+          "screen": "08_scale_connection_from_harvest.png",
+          "title": "Pair the scale",
+          "text": "The app searches and connects to the hanging scale.",
+          "say": "The scale was paired once at setup, so it shows in this list. The supervisor taps it to connect."
+        },
+        {
+          "screen": "04_harvest_active_empty.png",
+          "title": "Session ready to weigh",
+          "text": "The session is running. The Scale connected sign shows at the top.",
+          "say": "The session screen shows the task, section and record count. Now the first worker can come."
+        }
+      ],
+      "notes": "The hanging scale connects to the phone over Bluetooth. If it loses connection, the next step is covered on the problems slide."
+    },
+    {
+      "id": "s08",
+      "type": "flow",
+      "kicker": "THE KEY STEP",
+      "title": "Weigh and check the face in one step",
+      "sub": "Gross weight, bag deduction and net weight land on the matched worker in one step.",
+      "steps": [
+        {
+          "screen": "07_harvest_capture_ready.png",
+          "title": "Worker looks at the camera",
+          "text": "The scale reading shows at the top while the app checks the face.",
+          "say": "The worker looks at the camera once. The app confirms identity with liveness and quality checks before anything is recorded."
+        },
+        {
+          "screen": "09_harvest_result_matched_weight.png",
+          "title": "Weight lands on the worker",
+          "text": "Gross weight, bag deduction and net weight appear against the matched worker.",
+          "say": "The scale sends the gross weight. The app takes off the bag deduction and shows the net weight against the matched worker."
+        },
+        {
+          "screen": "10_harvest_result_scale_connected_save.png",
+          "title": "Confirm and save",
+          "text": "The supervisor checks the screen and taps Confirm and Save.",
+          "say": "The supervisor sees the day total building and taps Confirm and Save. One step, no chit, no register entry."
+        }
+      ],
+      "notes": "Slow down here. This one step replaces the chit and the register entry. Gross weight comes from the scale, bag deduction is taken off, and the net weight sits against the matched worker."
+    },
+    {
+      "id": "s09",
+      "type": "flow",
+      "kicker": "FIELD DEMO",
+      "title": "Records build up through the day",
+      "sub": "The same session keeps counting as workers come to the point.",
+      "steps": [
+        {
+          "screen": "05_harvest_active_records.png",
+          "title": "The list keeps growing",
+          "text": "Session time, task and record count update with every save.",
+          "say": "Workers keep coming. Every save adds a record with the worker, weight and time."
+        },
+        {
+          "screen": "06_harvest_switch_activity_sheet.png",
+          "title": "Switch activity or section",
+          "text": "The supervisor can change activity or section mid-session and log weather.",
+          "say": "If the work changes after lunch, the supervisor switches activity without closing the session."
+        }
+      ],
+      "notes": "The supervisor can also log weather during the session. Everything the office needs about the day is captured at the weighing point."
+    },
+    {
+      "id": "s10",
+      "type": "flow",
+      "kicker": "FIELD DEMO",
+      "title": "Hazira for other work",
+      "sub": "For pruning and other non-weighing work, the face check itself marks attendance.",
+      "steps": [
+        {
+          "screen": "11_attendance_active_session.png",
+          "title": "Attendance session for other work",
+          "text": "Same flow as weighing, without the scale.",
+          "say": "Pruning, spraying and other work use the same session screen, with no scale connected."
+        },
+        {
+          "screen": "12_attendance_capture_capturing.png",
+          "title": "Face check marks the hazira",
+          "text": "The worker looks at the camera to confirm identity.",
+          "say": "The same liveness and quality checks apply here."
+        },
+        {
+          "screen": "13_attendance_result_matched.png",
+          "title": "Hazira saved against the worker",
+          "text": "The matched worker gets attendance for that activity.",
+          "say": "The hazira is saved against the verified worker, in the right section and activity."
+        }
+      ],
+      "notes": "Use the garden's own word for this work. Face attendance works for every kind of hazira work."
+    },
+    {
+      "id": "s11",
+      "type": "flow",
+      "kicker": "FIELD DEMO",
+      "title": "Clock in and clock out",
+      "sub": "Punch attendance records clock in and clock out with section and work code.",
+      "steps": [
+        {
+          "screen": "14_punch_select_context.png",
+          "title": "Choose section and punch code",
+          "text": "The right work code is set before the punch.",
+          "say": "Punch code here means the work code for the day. It is chosen before the face check."
+        },
+        {
+          "screen": "15_punch_capture_ready.png",
+          "title": "Face check at the punch",
+          "text": "The same identity check as the field session.",
+          "say": "Punch uses the same face check as the field session."
+        },
+        {
+          "screen": "16_punch_result_clock_in.png",
+          "title": "Clock in recorded",
+          "text": "The app shows the matched worker and the time.",
+          "say": "The clock in is saved against the verified worker with the time on screen."
+        },
+        {
+          "screen": "17_punch_result_clock_out.png",
+          "title": "Clock out recorded",
+          "text": "The day closes with the same face check.",
+          "say": "Clock out works the same way, so the attendance record covers the full day."
+        }
+      ],
+      "notes": "Use punch for work where clock in and clock out times matter. Same face check, same record."
+    },
+    {
+      "id": "s12",
+      "type": "flow",
+      "kicker": "ONE-TIME SETUP",
+      "title": "Enrol each worker once",
+      "sub": "One short enrolment per worker, then the face app works every day.",
+      "steps": [
+        {
+          "screen": "23_register_select_worker.png",
+          "title": "Choose the worker",
+          "text": "Pick the unit, then the worker from the list.",
+          "say": "Enrolment happens at setup, from the same worker lists the office already keeps."
+        },
+        {
+          "screen": "24_register_worker_ready.png",
+          "title": "Worker ready for capture",
+          "text": "The app opens the worker's record for face capture.",
+          "say": "The worker's name and details are already loaded, so nobody types anything here."
+        },
+        {
+          "screen": "25_register_capture_ready.png",
+          "title": "Capture three photos",
+          "text": "Front, left and right face photos, guided on screen.",
+          "say": "The app guides the three photos: front, left and right. The supervisor checks each one."
+        },
+        {
+          "screen": "26_register_review.png",
+          "title": "Review and confirm",
+          "text": "The supervisor checks the photos and confirms enrolment.",
+          "say": "After review, the worker is ready for face attendance every day after."
+        }
+      ],
+      "notes": "Reassure them this is once per worker. On a normal day nobody touches the registration screen."
+    },
+    {
+      "id": "s13",
+      "type": "offline",
+      "kicker": "OFFLINE",
+      "title": "Works without internet",
+      "sub": "Weak signal in the field is normal, so the app keeps working.",
+      "items": [
+        {
+          "title": "Saved on the phone",
+          "text": "Every record stays on the supervisor's phone until it can sync."
+        },
+        {
+          "title": "Syncs when signal returns",
+          "text": "Records move to the office when internet comes back."
+        },
+        {
+          "title": "See what is pending",
+          "text": "The sync screen shows pending records, synced and rejected counts."
+        }
+      ],
+      "notes": "The screen shown here is the Sync status screen, with last sync, synced and rejected counts and pending records. Offline is normal in the field. The supervisor never has to remember what is pending."
+    },
+    {
+      "id": "s14",
+      "type": "flow",
+      "kicker": "FIELD DEMO",
+      "title": "Supervisor checks totals on the phone",
+      "sub": "The supervisor can check the day's totals before the records reach the office.",
+      "steps": [
+        {
+          "screen": "18_reports_harvest_list.png",
+          "title": "List of sessions",
+          "text": "Harvest sessions with counts and day totals.",
+          "say": "The reports area on the phone shows every session of the day with its totals."
+        },
+        {
+          "screen": "19_reports_worker_search.png",
+          "title": "Search one worker",
+          "text": "Find a worker and see totals per session and day.",
+          "say": "If a worker questions their weight or hazira, the supervisor finds the answer on the spot."
+        },
+        {
+          "screen": "20_reports_session_detail.png",
+          "title": "Session detail",
+          "text": "Full record list for one session, ready to export.",
+          "say": "A session can be opened in detail and exported for the office."
+        }
+      ],
+      "notes": "Supervisors can settle a question on the spot, before the records reach the office."
+    },
+    {
+      "id": "s15",
+      "type": "gallery",
+      "kicker": "AT THE OFFICE",
+      "title": "Office review and payroll",
+      "sub": "Desktop ERP where office staff review field records and run payroll.",
+      "items": [
+        {
+          "title": "Daily entry and review",
+          "text": "Office staff check the field records and correct mistakes before payroll."
+        },
+        {
+          "title": "Wages register",
+          "text": "Attendance, leaf weight, rates and deductions become one wage register."
+        },
+        {
+          "title": "Daily labour deployment",
+          "text": "Mandays and wages by division, from the same records as payroll."
+        },
+        {
+          "title": "Payslips",
+          "text": "Each worker gets a payslip built from reviewed records."
+        }
+      ],
+      "notes": "Move quickly. The message is that office staff review and correct, then the wage register, deployment report and payslips come from the same records. No second register. Bank and PF details are blurred on purpose."
+    },
+    {
+      "id": "s16",
+      "type": "gallery",
+      "kicker": "FOR THE OWNER",
+      "title": "Owner dashboard",
+      "sub": "Daily garden numbers on a phone, tablet or laptop, away from the garden.",
+      "items": [
+        {
+          "title": "Main dashboard",
+          "text": "Green leaf, mandays and kg per plucker, updated after sync."
+        },
+        {
+          "title": "Kamjari view",
+          "text": "Labour deployment across sections, without waiting for a phone call."
+        },
+        {
+          "title": "Wages summary",
+          "text": "Wages and salary payment from the same records."
+        }
+      ],
+      "notes": "Data reaches the dashboard after sync from the garden systems. Say daily updates, not real-time. Owners and managers check from phone, tablet or laptop."
+    },
+    {
+      "id": "s17",
+      "type": "issues",
+      "kicker": "PROBLEMS IN THE FIELD",
+      "title": "When something goes wrong",
+      "sub": "Each problem has a clear next step. The fallback is agreed during setup.",
+      "items": [
+        {
+          "title": "Face not matched",
+          "text": "Tap Retry. If it still fails, use the fallback agreed at setup."
+        },
+        {
+          "title": "Scale not connected",
+          "text": "Reconnect the scale. If it still fails, use the fallback agreed at setup."
+        },
+        {
+          "title": "No internet",
+          "text": "Records stay on the phone and sync when the signal returns."
+        },
+        {
+          "title": "New or returning worker",
+          "text": "Enrol a new worker, or re-enrol a worker whose face check keeps failing."
+        }
+      ],
+      "notes": "This is usually the biggest worry, so pause here for questions. Do not promise a fallback that is not agreed for this garden."
+    },
+    {
+      "id": "s18",
+      "type": "start",
+      "kicker": "GETTING STARTED",
+      "title": "How we start",
+      "sub": "Sarbani Associates handles setup, training and support at every step.",
+      "items": [
+        {
+          "title": "Visit and review",
+          "text": "We visit and look at your current records together."
+        },
+        {
+          "title": "Start on one division",
+          "text": "Face attendance and office review on one division first."
+        },
+        {
+          "title": "Train your staff",
+          "text": "Supervisors and office staff learn on their own records."
+        },
+        {
+          "title": "Expand when ready",
+          "text": "Weighing, payroll and the dashboard can come later."
+        }
+      ],
+      "notes": "Emphasise the small first step. One division, current records, local team. Nothing about replacing everything on day one."
+    },
+    {
+      "id": "s19",
+      "type": "close",
+      "kicker": "NEXT STEP",
+      "title": "Next step",
+      "sub": "Pick whichever step is easiest for you this week.",
+      "items": [
+        {
+          "title": "Book a field visit",
+          "text": "We come to your garden. Email sarbaniassociates@gmail.com."
+        },
+        {
+          "title": "Share your recent records",
+          "text": "We run a Tea Loss Audit on your own muster rolls and weight records."
+        },
+        {
+          "title": "Call or WhatsApp",
+          "text": "Call or WhatsApp +91 97341 01330 or visit gardensuite.in."
+        }
+      ],
+      "notes": "Close with one question: which step is easiest this week? Give the email, phone and website, and thank them."
+    }
+  ]
+}

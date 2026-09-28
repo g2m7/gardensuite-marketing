@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GardenSuite - Live Demo</title>
+<link rel="icon" href="../assets/img/app-icon-512.png">
+<link href="fonts/fonts.css" rel="stylesheet">
+<style>
+:root {
+  --green: #1B5E3B;
+  --green-dark: #144723;
+  --green-light: #DDEFE4;
+  --green-subtle: #F8FAF8;
+  --brand-50: #F1F6EB;
+  --brand-100: #E1EED6;
+  --brand-400: #7BA86A;
+  --ink: #111111;
+  --body: #3F3F46;
+  --muted: #6B7280;
+  --surface: #FAFAF7;
+  --cream: #F8F7F3;
+  --border: #E4E4E7;
+  --red: #B91C1C;
+  --r-sm: 8px; --r-md: 12px; --r-lg: 16px; --r-xl: 24px;
+  --shadow-card: 0 1px 3px rgba(0,0,0,0.04);
+  --shadow-soft: 0 6px 18px rgba(0,0,0,0.06);
+  --shadow-hover: 0 8px 24px rgba(0,0,0,0.08);
+  --shadow-elev: 0 10px 28px rgba(0,0,0,0.10);
+  --font: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --display: "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+body {
+  font-family: var(--font); color: var(--ink); background: #E9E9E4;
+  -webkit-font-smoothing: antialiased; overflow: hidden;
+}
+#viewport { position: fixed; inset: 0; overflow: hidden; }
+#stage { width: 1920px; height: 1080px; position: absolute; left: 0; top: 0; transform-origin: 0 0; }
+
+.slide {
+  position: absolute; inset: 0; background: #fff; display: none;
+  overflow: hidden;
+}
+.slide.active { display: block; }
+.inner { position: absolute; inset: 96px 128px 120px; }
+
+/* Header block */
+.kicker { font-size: 22px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--green); margin-bottom: 20px; }
+.title { font-family: var(--display); font-weight: 600; font-size: 66px; line-height: 1.08; letter-spacing: -0.02em; color: var(--ink); max-width: 1320px; }
+.sub { font-size: 28px; line-height: 1.45; color: var(--body); margin-top: 22px; max-width: 1180px; }
+.sub.big { font-size: 32px; }
+.head { margin-bottom: 64px; }
+.head.compact { margin-bottom: 36px; }
+.head.compact .title { font-size: 54px; }
+.head.compact .sub { font-size: 24px; margin-top: 14px; }
+
+h3 { font-family: var(--display); font-weight: 600; font-size: 30px; line-height: 1.2; color: var(--ink); letter-spacing: -0.01em; }
+p { font-size: 22px; line-height: 1.5; color: var(--body); }
+
+.ic { width: 40px; height: 40px; color: var(--green); flex: none; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.08)); }
+.ic.big { width: 56px; height: 56px; }
+
+/* Footer */
+.foot { position: absolute; left: 128px; right: 128px; bottom: 44px; display: flex; justify-content: space-between; align-items: center; font-size: 18px; color: var(--muted); }
+.foot .brand { display: flex; align-items: center; gap: 12px; font-weight: 600; color: var(--ink); }
+.foot .brand img { width: 32px; height: 32px; border-radius: var(--r-sm); }
+.foot em { font-style: normal; font-weight: 500; color: var(--muted); }
+
+/* Title slide */
+.t-title { background: var(--surface); }
+.t-title .inner { display: grid; grid-template-columns: 1fr 640px; align-items: center; gap: 80px; }
+.app-icon { width: 104px; height: 104px; border-radius: var(--r-xl); margin-bottom: 48px; box-shadow: var(--shadow-soft); }
+.hero { font-family: var(--display); font-weight: 600; font-size: 92px; line-height: 1.04; letter-spacing: -0.025em; }
+.estate { margin-top: 40px; font-size: 26px; font-weight: 600; color: var(--green); min-height: 1em; }
+.title-phones { display: flex; gap: 36px; justify-content: center; align-items: flex-end; }
+.mini { width: 290px; border: 10px solid #1d1d1f; border-radius: var(--r-xl); overflow: hidden; background: #000; box-shadow: var(--shadow-elev); }
+.mini:first-child { transform: translateY(-48px); }
+.mini img { display: block; width: 100%; height: auto; }
+
+/* Cards */
+.cards { display: grid; gap: 28px; }
+.cols-2 { grid-template-columns: repeat(2, 1fr); }
+.cols-3 { grid-template-columns: repeat(3, 1fr); }
+.cols-4 { grid-template-columns: repeat(4, 1fr); }
+.card { background: #fff; border: 1px solid var(--border); border-radius: var(--r-lg); padding: 40px; box-shadow: var(--shadow-card); }
+.card h3 { margin: 24px 0 14px; }
+.card-top { display: flex; justify-content: space-between; align-items: center; }
+.cnum { font-family: var(--display); font-size: 22px; font-weight: 600; color: var(--muted); }
+.agenda .card { background: var(--green-subtle); min-height: 420px; }
+.issues .card { padding: 36px 40px; }
+.issues .card h3 { margin-top: 18px; }
+.problem .pcard { padding: 0; overflow: hidden; }
+.pcard img { display: block; width: 100%; height: 330px; object-fit: cover; }
+.pbody { padding: 32px 36px 36px; }
+.pbody h3 { margin: 0 0 12px; }
+
+/* Chain */
+.chain { display: grid; grid-template-columns: repeat(6, 1fr 44px) 1fr; align-items: stretch; margin-top: 20px; }
+.link { background: var(--green-subtle); border: 1px solid var(--border); border-radius: var(--r-lg); padding: 32px 22px; text-align: center; display: flex; flex-direction: column; align-items: center; }
+.link h3 { font-size: 25px; margin: 20px 0 10px; }
+.link p { font-size: 19px; line-height: 1.4; }
+.link:nth-child(1), .link:nth-child(3), .link:nth-child(5) { background: #fff; }
+.arrow { display: grid; place-items: center; color: var(--brand-400); }
+.arrow .ic { width: 30px; height: 30px; color: var(--brand-400); filter: none; }
+.chain-groups { display: grid; grid-template-columns: repeat(6, 1fr 44px) 1fr; margin-top: 22px; }
+.chain-groups span { border-top: 2px solid var(--green); padding-top: 14px; font-size: 20px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--green); text-align: center; }
+.chain-groups span:empty { border-color: transparent; }
+
+/* Split kit */
+.split { display: grid; grid-template-columns: 760px 1fr; gap: 88px; height: 100%; align-items: center; }
+.kit-img { border-radius: var(--r-xl); overflow: hidden; border: 1px solid var(--border); background: var(--cream); }
+.kit-img img { display: block; width: 100%; height: auto; }
+.kit-body .head { margin-bottom: 40px; }
+.kit-body .title { font-size: 58px; }
+.kit-list { list-style: none; display: grid; gap: 30px; }
+.kit-list li { display: flex; gap: 24px; align-items: flex-start; }
+.kit-list h3 { font-size: 28px; margin-bottom: 6px; }
+
+/* Flow (step-through) */
+.flow { display: grid; grid-template-columns: 1fr 520px; gap: 96px; height: 100%; }
+.flow-left .head { margin-bottom: 44px; }
+.flow-left .title { font-size: 60px; }
+.flow-left .sub { font-size: 26px; }
+.flow-right { display: flex; flex-direction: column; align-items: center; justify-content: center; margin-top: -40px; }
+.steps { list-style: none; display: grid; gap: 14px; counter-reset: s; }
+.step { display: flex; gap: 24px; align-items: flex-start; padding: 22px 28px; border-radius: var(--r-lg); border: 1px solid transparent; opacity: 0.42; transition: opacity .3s, background .3s, border-color .3s; cursor: pointer; }
+.step.done { opacity: 0.62; }
+.step.on { opacity: 1; background: var(--green-subtle); border-color: var(--border); box-shadow: var(--shadow-card); }
+.step .num { flex: none; width: 48px; height: 48px; border-radius: var(--r-md); border: 2px solid var(--green); color: var(--green); font-family: var(--display); font-weight: 600; font-size: 24px; display: grid; place-items: center; }
+.step.on .num { background: var(--green); color: #fff; }
+.step h3 { font-size: 28px; margin-bottom: 4px; }
+.step p { font-size: 22px; }
+.device { position: relative; width: 380px; aspect-ratio: 412 / 915; border: 12px solid #1d1d1f; border-radius: var(--r-xl); background: #000; box-shadow: var(--shadow-elev); box-sizing: content-box; overflow: hidden; }
+.screen { position: absolute; inset: 0; opacity: 0; transition: opacity .35s ease; }
+.screen.on { opacity: 1; }
+.screen img { display: block; width: 100%; height: 100%; }
+.focus { position: absolute; border: 3px solid var(--green); border-radius: var(--r-md); pointer-events: none; opacity: 0; transition: opacity .3s .25s; }
+.screen.on .focus { opacity: 1; }
+.dots { display: flex; gap: 10px; margin-top: 28px; }
+.dots i { width: 10px; height: 10px; border-radius: 50%; background: var(--border); }
+.dots i.on { background: var(--green); }
+
+/* Gallery (office and owner screens) */
+.gallery { grid-template-columns: 540px 1fr; gap: 56px; }
+.gallery .flow-left .head { margin-bottom: 28px; }
+.gallery .flow-left .title { font-size: 50px; }
+.gallery .flow-left .sub { font-size: 22px; }
+.gallery .steps { gap: 8px; }
+.gallery .step { padding: 14px 22px; gap: 20px; }
+.gallery .step .num { width: 40px; height: 40px; font-size: 20px; }
+.gallery .step h3 { font-size: 24px; }
+.gallery .step p { font-size: 19px; line-height: 1.4; }
+.gallery .flow-right { margin-top: 0; }
+.device, .monitor { cursor: zoom-in; }
+
+/* Zoom view: one screenshot fills the screen for live calls */
+#zoom { position: fixed; inset: 0; display: none; place-items: center; background: #FAFAF7; z-index: 10; cursor: zoom-out; padding: 2vh 2vw; box-sizing: border-box; }
+#zoom.on { display: grid; }
+#zoom.phone { background: #111; }
+#zoom img { max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 12px; box-shadow: 0 10px 28px rgba(0,0,0,0.10); background: #fff; }
+#zoom .zhint { position: fixed; bottom: 14px; left: 50%; transform: translateX(-50%); font: 500 13px var(--font); color: var(--muted); }
+.monitor { position: relative; width: 100%; aspect-ratio: 16 / 10; border: 1px solid var(--border); border-radius: var(--r-lg); overflow: hidden; background: var(--cream); box-shadow: var(--shadow-soft); }
+.shot { position: absolute; inset: 0; opacity: 0; transition: opacity .35s ease; display: grid; place-items: center; }
+.shot.on { opacity: 1; }
+.shot img { display: block; width: 100%; height: 100%; object-fit: contain; background: #fff; }
+
+/* Start timeline */
+.timeline { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; position: relative; }
+.tl { position: relative; padding: 40px 36px; border: 1px solid var(--border); border-radius: var(--r-lg); background: #fff; box-shadow: var(--shadow-card); min-height: 400px; }
+.tl .num { position: absolute; top: 32px; right: 36px; font-family: var(--display); font-weight: 600; font-size: 22px; color: var(--muted); }
+.tl h3 { margin: 26px 0 12px; }
+.tl:first-child { background: var(--green-subtle); }
+
+/* Close slide */
+.t-close { background: var(--green); }
+.t-close .kicker { color: var(--brand-100); }
+.t-close .title, .t-close h3 { color: #fff; }
+.t-close .sub { color: var(--green-light); }
+.t-close .card { background: #fff; border-color: transparent; }
+.t-close .card h3 { color: var(--ink); }
+.close-foot { display: flex; gap: 56px; margin-top: 56px; font-size: 26px; font-weight: 500; color: #fff; }
+.t-close .foot, .t-close .foot .brand, .t-close .foot em { color: var(--green-light); }
+
+/* Controls */
+#hud { position: fixed; bottom: 14px; right: 18px; font: 500 13px var(--font); color: var(--muted); display: flex; gap: 12px; align-items: center; opacity: 0; transition: opacity .3s; }
+body:hover #hud { opacity: 1; }
+#hud button { font: inherit; border: 1px solid var(--border); background: #fff; color: var(--ink); border-radius: var(--r-sm); padding: 6px 10px; cursor: pointer; }
+#playflag { position: fixed; top: 14px; right: 18px; font: 600 13px var(--font); color: var(--green); letter-spacing: .08em; text-transform: uppercase; display: none; }
+body.playing #playflag { display: block; }
+#progress { position: fixed; left: 0; top: 0; height: 3px; background: var(--green); transition: width .3s; }
+
+.print-only { display: none; }
+
+@media (prefers-reduced-motion: reduce) { .screen, .shot, .step, .focus { transition: none; } }
+
+@page { size: 1920px 1280px; margin: 0; }
+@media print {
+  html, body { overflow: visible; height: auto; background: #fff; }
+  #viewport { position: static; display: block; }
+  #stage { transform: none !important; width: 1920px; height: auto; }
+  .slide { display: block !important; position: relative; width: 1920px; height: 1280px; page-break-after: always; break-after: page; }
+  .slide .inner { inset: 120px 144px; }
+  .screen-only, #hud, #playflag, #progress, #zoom { display: none !important; }
+  .print-only { display: block; }
+  .print-only .head.compact { margin-bottom: 48px; }
+  .print-row { display: flex; gap: 64px; justify-content: flex-start; align-items: flex-start; }
+  .print-row figure { flex: 1; max-width: 350px; }
+  .print-row .pframe { position: relative; border: 10px solid #1d1d1f; border-radius: var(--r-xl); overflow: hidden; background: #000; aspect-ratio: 412 / 915; }
+  .print-row .screen, .print-row .shot { opacity: 1; position: absolute; }
+  .print-row .focus { opacity: 1; }
+  .print-row figcaption { margin-top: 20px; font-size: 21px; line-height: 1.45; color: var(--body); }
+  .print-row figcaption b { display: block; font-family: var(--display); font-weight: 600; font-size: 24px; color: var(--ink); margin-bottom: 6px; }
+  .print-row.n2 figure { max-width: 330px; }
+  .print-row.n3 figure { max-width: 300px; }
+  .print-row.n4 { gap: 48px; }
+  .print-row.n4 figure { max-width: 310px; }
+  .print-row[class*=" g"] { gap: 56px; }
+  .print-row[class*=" g"] figure { max-width: none; }
+  .print-row[class*=" g"] .pframe { aspect-ratio: 16 / 10; border: 1px solid var(--border); border-radius: var(--r-lg); background: #fff; }
+  .print-row.g3 { flex-wrap: wrap; }
+  .print-row.g4 { display: grid; grid-template-columns: repeat(4, 1fr); }
+}
+</style>
+</head>
+<body>
+<div id="progress"></div>
+<div id="playflag">Auto play</div>
+<div id="viewport"><div id="stage">
+<section class="slide t-title" id="s01" data-steps="0" data-notes='{&quot;notes&quot;: &quot;Introduce yourself and Sarbani Associates. Tea garden software work began in 2000. This deck walks the real app screens, so the garden sees exactly what supervisors and staff would use.&quot;, &quot;say&quot;: [], &quot;title&quot;: &quot;See how GardenSuite records a garden day&quot;}'><div class="inner"><div class="title-wrap"><img class="app-icon" src="../assets/img/app-icon-512.png" width="512" height="512" alt="GardenSuite app icon"><p class="kicker">GARDENSUITE DEMO</p><h1 class="hero">See how GardenSuite records a garden day</h1><p class="sub big">Tea garden software by Sarbani Associates, Bagdogra, since 2000.</p><p class="estate" id="estate"></p></div><div class="title-phones"><div class="mini"><img src="../assets/phone/13_attendance_result_matched.png" width="412" height="915" alt="" loading="eager"></div><div class="mini"><img src="../assets/phone/10_harvest_result_scale_connected_save.png" width="412" height="915" alt="" loading="eager"></div></div></div><footer class="foot"><span class="brand"><img src="../assets/img/app-icon-512.png" width="512" height="512" alt="">GardenSuite <em>by Sarbani Associates</em></span><span class="pg">1 / 19</span></footer></section>
+<section class="slide t-agenda" id="s02" data-steps="0" data-notes='{&quot;notes&quot;: &quot;Set expectations. About twenty minutes, then questions. If the audience is mostly owners, promise that the office and dashboard slides come later in the deck.&quot;, &quot;say&quot;: [], &quot;title&quot;: &quot;What we will show&quot;}'><div class="inner"><div class="head "><p class="kicker">AGENDA</p><h2 class="title">What we will show</h2><p class="sub">A short walk through one day of records, about 20 minutes.</p></div><div class="cards cols-4 agenda"><div class="card"><div class="card-top"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v3M8 6h8l1 3H7l1-3Z"/><rect x="6" y="9" width="12" height="7" rx="1.5"/><path d="M10 12.5h4M12 16v2M9.5 21h5a2.5 2.5 0 0 0-5 0Z"/></svg><span class="cnum">01</span></div><h3>In the field</h3><p>Face check at the weighing point and plucking weight.</p></div><div class="card"><div class="card-top"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3.5" width="14" height="17" rx="1.5"/><path d="M9 3.5h6v2.5H9zM8.5 11l2 2 4-4M8.5 16.5h7"/></svg><span class="cnum">02</span></div><h3>At the office</h3><p>Office staff review the records and run payroll.</p></div><div class="card"><div class="card-top"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h16M6 16v-4M10 16V8M14 16v-6M18 16V5"/></svg><span class="cnum">03</span></div><h3>For the owner</h3><p>Daily dashboard with green leaf, mandays and wages.</p></div><div class="card"><div class="card-top"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19c0-8 5-13 14-14 0 9-5 14-13 14"/><path d="M5 19 13 11"/></svg><span class="cnum">04</span></div><h3>Getting started</h3><p>A small first step on one division.</p></div></div></div><footer class="foot"><span class="brand"><img src="../assets/img/app-icon-512.png" width="512" height="512" alt="">GardenSuite <em>by Sarbani Associates</em></span><span class="pg">2 / 19</span></footer></section>
+<section class="slide t-problem" id="s03" data-steps="0" data-notes='{&quot;notes&quot;: &quot;Ask which of these three they see on their garden. Do not argue numbers. The point is that the records reach the office late and without checks.&quot;, &quot;say&quot;: [], &quot;title&quot;: &quot;Daily records you cannot fully trust&quot;}'><div class="inner"><div class="head "><p class="kicker">THE PROBLEM</p><h2 class="title">Daily records you cannot fully trust</h2><p class="sub">These problems start in the field and show up at payroll.</p></div><div class="cards cols-3 problem"><div class="card pcard"><img src="../assets/img/problem-proxy-attendance.jpg" width="800" height="800" alt="Proxy attendance" loading="lazy"><div class="pbody"><h3>Proxy attendance</h3><p>Hazira is marked for a worker who did not come.</p></div></div><div class="card pcard"><img src="../assets/img/problem-loose-chits.jpg" width="800" height="800" alt="Loose weight chits" loading="lazy"><div class="pbody"><h3>Loose weight chits</h3><p>Weight slips travel with the leaf and reach the office late.</p></div></div><div class="card pcard"><img src="../assets/img/problem-payroll-doubts.jpg" width="800" height="800" alt="Payroll doubts" loading="lazy"><div class="pbody"><h3>Payroll doubts</h3><p>Disputes follow when attendance and weight do not match.</p></div></div></div></div><footer class="foot"><span class="brand"><img src="../assets/img/app-icon-512.png" width="512" height="512" alt="">GardenSuite <em>by Sarbani Associates</em></span><span class="pg">3 / 19</span></footer></section>
+<section class="slide t-chain" id="s04" data-steps="0" data-notes='{&quot;notes&quot;: &quot;This chain is the whole story of the demo. Each later slide shows one link. If someone leaves early, they should remember this picture.&quot;, &quot;say&quot;: [], &quot;title&quot;: &quot;From garden to dashboard in seven steps&quot;}'><div class="inner"><div class="head "><p class="kicker">THE CHAIN</p><h2 class="title">From garden to dashboard in seven steps</h2><p class="sub">Each step is one record, checked at the source.</p></div><div class="chain"><div class="link" data-i="0"><svg class="ic big" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8V5a1 1 0 0 1 1-1h3M16 4h3a1 1 0 0 1 1 1v3M20 16v3a1 1 0 0 1-1 1h-3M8 20H5a1 1 0 0 1-1-1v-3"/><circle cx="9.5" cy="10" r=".6" fill="currentColor"/><circle cx="14.5" cy="10" r=".6" fill="currentColor"/><path d="M9 14.5a4 4 0 0 0 6 0"/></svg><h3>Face check</h3><p>The app confirms which worker reported.</p></div><div class="arrow"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15M14 7l5 5-5 5"/></svg></div><div class="link" data-i="1"><svg class="ic big" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v3M8 6h8l1 3H7l1-3Z"/><rect x="6" y="9" width="12" height="7" rx="1.5"/><path d="M10 12.5h4M12 16v2M9.5 21h5a2.5 2.5 0 0 0-5 0Z"/></svg><h3>Scale weight</h3><p>The Bluetooth scale sends the weight.</p></div><div class="arrow"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15M14 7l5 5-5 5"/></svg></div><div class="link" data-i="2"><svg class="ic big" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2"/><path d="M11 18.5h2"/></svg><h3>Saved on phone</h3><p>The record links face, section and net weight.</p></div><div class="arrow"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15M14 7l5 5-5 5"/></svg></div><div class="link" data-i="3"><svg class="ic big" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12a8 8 0 0 1-14 5.3M4 12a8 8 0 0 1 14-5.3"/><path d="M18 3v4h-4M6 21v-4h4"/></svg><h3>Sync</h3><p>Records move to the office when internet returns.</p></div><div class="arrow"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15M14 7l5 5-5 5"/></svg></div><div class="link" data-i="4"><svg class="ic big" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3.5" width="14" height="17" rx="1.5"/><path d="M9 3.5h6v2.5H9zM8.5 11l2 2 4-4M8.5 16.5h7"/></svg><h3>Office review</h3><p>Staff check records and correct mistakes before payroll.</p></div><div class="arrow"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15M14 7l5 5-5 5"/></svg></div><div class="link" data-i="5"><svg class="ic big" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="1.5"/><circle cx="12" cy="12" r="2.5"/><path d="M6 9v.01M18 15v.01"/></svg><h3>Payroll</h3><p>Wages register, kamjari, PF statement and payslips.</p></div><div class="arrow"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15M14 7l5 5-5 5"/></svg></div><div class="link" data-i="6"><svg class="ic big" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h16M6 16v-4M10 16V8M14 16v-6M18 16V5"/></svg><h3>Owner dashboard</h3><p>Daily numbers on phone, tablet or laptop.</p></div></div><div class="chain-groups"><span style="grid-column:1 / 6">In the field</span><span style="grid-column:7 / 8"></span><span style="grid-column:9 / 12">At the office</span><span style="grid-column:13 / 14">Owner</span></div></div><footer class="foot"><span class="brand"><img src="../assets/img/app-icon-512.png" width="512" height="512" alt="">GardenSuite <em>by Sarbani Associates</em></span><span class="pg">4 / 19</span></footer></section>
+<section class="slide t-kit" id="s05" data-steps="0" data-notes='{&quot;notes&quot;: &quot;Keep this slide simple. The supervisor, the weighing point and the worker are already there. The new parts are the Bluetooth scale and the phone app that ties the records together.&quot;, &quot;say&quot;: [], &quot;title&quot;: &quot;What sits at the weighing point&quot;}'><div class="inner"><div class="split"><div class="kit-img"><img src="../assets/img/scale_hardware.jpg" width="1024" height="1024" alt="Bluetooth hanging scale sending leaf weight to the GS Face app on an Android phone" loading="lazy"></div><div class="kit-body"><div class="head "><p class="kicker">THE KIT</p><h2 class="title">What sits at the weighing point</h2><p class="sub">Four things at the weighing point. The phone app ties them together.</p></div><ul class="kit-list"><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2"/><path d="M11 18.5h2"/></svg><div><h3>Android phone</h3><p>Runs the GS Face app and stores every record.</p></div></li><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v3M8 6h8l1 3H7l1-3Z"/><rect x="6" y="9" width="12" height="7" rx="1.5"/><path d="M10 12.5h4M12 16v2M9.5 21h5a2.5 2.5 0 0 0-5 0Z"/></svg><div><h3>Bluetooth hanging scale</h3><p>Sends the leaf weight to the phone without writing.</p></div></li><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 20a7 7 0 0 1 14 0"/></svg><div><h3>The supervisor</h3><p>Starts the session, checks the match and confirms the save.</p></div></li><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19c0-8 5-13 14-14 0 9-5 14-13 14"/><path d="M5 19 13 11"/></svg><div><h3>The worker</h3><p>Looks at the camera once and hangs the bag.</p></div></li></ul></div></div></div><footer class="foot"><span class="brand"><img src="../assets/img/app-icon-512.png" width="512" height="512" alt="">GardenSuite <em>by Sarbani Associates</em></span><span class="pg">5 / 19</span></footer></section>
+<section class="slide t-flow" id="s06" data-steps="4" data-notes='{&quot;notes&quot;: &quot;Point out that the supervisor sets up the session on the phone. Nothing is written on paper.&quot;, &quot;say&quot;: [&quot;This is the supervisor&#x27;s phone. Every field record starts from this home screen.&quot;, &quot;Before the first worker, the app already shows the section, the task in kg and the activity.&quot;, &quot;Each session belongs to one section, so the office knows where the leaf came from.&quot;, &quot;The activity decides what is recorded. Leaf plucking records weight with the hazira. Other work records hazira only.&quot;], &quot;title&quot;: &quot;Start the day&#x27;s session&quot;}'><div class="inner"><div class="flow screen-only"><div class="flow-left"><div class="head "><p class="kicker">FIELD DEMO</p><h2 class="title">Start the day&#x27;s session</h2><p class="sub">The supervisor picks the section and task, then starts a session.</p></div><ol class="steps"><li class="step on" data-i="0"><span class="num">1</span><div><h3>Open the field app</h3><p>The home screen shows Harvest, Punch, workers, sync and scale.</p></div></li><li class="step" data-i="1"><span class="num">2</span><div><h3>Ready to start</h3><p>Session shows section, task and activity before any record.</p></div></li><li class="step" data-i="2"><span class="num">3</span><div><h3>Choose the section</h3><p>The supervisor picks the section where the work happens.</p></div></li><li class="step" data-i="3"><span class="num">4</span><div><h3>Choose the activity</h3><p>Leaf plucking, pruning, spraying or other garden work.</p></div></li></ol></div><div class="flow-right"><div class="device"><div class="screen on" data-i="0"><img src="../assets/phone/00_home_entry_points.png" width="412" height="915" alt="GardenSuite field app screen: home entry points" loading="eager"></div><div class="screen" data-i="1"><img src="../assets/phone/01_harvest_start_session_ready.png" width="412" height="915" alt="GardenSuite field app screen: harvest start session ready" loading="lazy"><span class="focus" style="left:3.88%;top:24.04%;width:92.23%;height:45.90%"></span></div><div class="screen" data-i="2"><img src="../assets/phone/02_harvest_section_picker.png" width="412" height="915" alt="GardenSuite field app screen: harvest section picker" loading="lazy"></div><div class="screen" data-i="3"><img src="../assets/phone/03_harvest_activity_picker.png" width="412" height="915" alt="GardenSuite field app screen: harvest activity picker" loading="lazy"></div></div><div class="dots"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></div></div></div><div class="print-only"><div class="head compact"><p class="kicker">FIELD DEMO</p><h2 class="title">Start the day&#x27;s session</h2><p class="sub">The supervisor picks the section and task, then starts a session.</p></div><div class="print-row n4"><figure><div class="pframe"><div class="screen on" data-i="0"><img src="../assets/phone/00_home_entry_points.png" width="412" height="915" alt="GardenSuite field app screen: home entry points" loading="eager"></div></div><figcaption><b>1. Open the field app</b> The home screen shows Harvest, Punch, workers, sync and scale.</figcaption></figure><figure><div class="pframe"><div class="screen on" data-i="1"><img src="../assets/phone/01_harvest_start_session_ready.png" width="412" height="915" alt="GardenSuite field app screen: harvest start session ready" loading="eager"><span class="focus" style="left:3.88%;top:24.04%;width:92.23%;height:45.90%"></span></div></div><figcaption><b>2. Ready to start</b> Session shows section, task and activity before any record.</figcaption></figure><figure><div class="pframe"><div class="screen on" data-i="2"><img src="../assets/phone/02_harvest_section_picker.png" width="412" height="915" alt="GardenSuite field app screen: harvest section picker" loading="eager"></div></div><figcaption><b>3. Choose the section</b> The supervisor picks the section where the work happens.</figcaption></figure><figure><div class="pframe"><div class="screen on" data-i="3"><img src="../assets/phone/03_harvest_activity_picker.png" width="412" height="915" alt="GardenSuite field app screen: harvest activity picker" loading="eager"></div></div><figcaption><b>4. Choose the activity</b> Leaf plucking, pruning, spraying or other garden work.</figcaption></figure></div></div></div><footer class="foot"><span class="brand"><img src="../assets/img/app-icon-512.png" width="512" height="512" alt="">GardenSuite <em>by Sarbani Associates</em></span><span class="pg">6 / 19</span></footer></section>
+<section class="slide t-flow" id="s07" data-steps="2" data-notes='{&quot;notes&quot;: &quot;The hanging scale connects to the phone over Bluetooth. If it loses connection, the next step is covered on the problems slide.&quot;, &quot;say&quot;: [&quot;The scale was paired once at setup, so it shows in this list. The supervisor taps it to connect.&quot;, &quot;The session screen shows the task, section and record count. Now the first worker can come.&quot;], &quot;title&quot;: &quot;Connect the scale&quot;}'><div class="inner"><div class="flow screen-only"><div class="flow-left"><div class="head "><p class="kicker">FIELD DEMO</p><h2 class="title">Connect the scale</h2><p class="sub">The hanging scale links to the phone over Bluetooth.</p></div><ol class="steps"><li class="step on" data-i="0"><span class="num">1</span><div><h3>Pair the scale</h3><p>The app searches and connects to the hanging scale.</p></div></li><li class="step" data-i="1"><span class="num">2</span><div><h3>Session ready to weigh</h3><p>The session is running. The Scale connected sign shows at the top.</p></div></li></ol></div><div class="flow-right"><div class="device"><div class="screen on" data-i="0"><img src="../assets/phone/08_scale_connection_from_harvest.png" width="412" height="915" alt="GardenSuite field app screen: scale connection from harvest" loading="eager"><span class="focus" style="left:3.40%;top:30.60%;width:93.20%;height:8.74%"></span></div><div class="screen" data-i="1"><img src="../assets/phone/04_harvest_active_empty.png" width="412" height="915" alt="GardenSuite field app screen: harvest active empty" loading="lazy"><span class="focus" style="left:29.13%;top:10.27%;width:41.75%;height:5.03%"></span></div></div><div class="dots"><i class="on"></i><i class=""></i></div></div></div><div class="print-only"><div class="head compact"><p class="kicker">FIELD DEMO</p><h2 class="title">Connect the scale</h2><p class="sub">The hanging scale links to the phone over Bluetooth.</p></div><div class="print-row n2"><figure><div class="pframe"><div class="screen on" data-i="0"><img src="../assets/phone/08_scale_connection_from_harvest.png" width="412" height="915" alt="GardenSuite field app screen: scale connection from harvest" loading="eager"><span class="focus" style="left:3.40%;top:30.60%;width:93.20%;height:8.74%"></span></div></div><figcaption><b>1. Pair the scale</b> The app searches and connects to the hanging scale.</figcaption></figure><figure><div class="pframe"><div class="screen on" data-i="1"><img src="../assets/phone/04_harvest_active_empty.png" width="412" height="915" alt="GardenSuite field app screen: harvest active empty" loading="eager"><span class="focus" style="left:29.13%;top:10.27%;width:41.75%;height:5.03%"></span></div></div><figcaption><b>2. Session ready to weigh</b> The session is running. The Scale connected sign shows at the top.</figcaption></figure></div></div></div><footer class="foot"><span class="brand"><img src="../assets/img/app-icon-512.png" width="512" height="512" alt="">GardenSuite <em>by Sarbani Associates</em></span><span class="pg">7 / 19</span></footer></section>
+<section class="slide t-flow" id="s08" data-steps="3" data-notes='{&quot;notes&quot;: &quot;Slow down here. This one step replaces the chit and the register entry. Gross weight comes from the scale, bag deduction is taken off, and the net weight sits against the matched worker.&quot;, &quot;say&quot;: [&quot;The worker looks at the camera once. The app confirms identity with liveness and quality checks before anything is recorded.&quot;, &quot;The scale sends the gross weight. The app takes off the bag deduction and shows the net weight against the matched worker.&quot;, &quot;The supervisor sees the day total building and taps Confirm and Save. One step, no chit, no register entry.&quot;], &quot;title&quot;: &quot;Weigh and check the face in one step&quot;}'><div class="inner"><div class="flow screen-only"><div class="flow-left"><div class="head "><p class="kicker">THE KEY STEP</p><h2 class="title">Weigh and check the face in one step</h2><p class="sub">Gross weight, bag deduction and net weight land on the matched worker in one step.</p></div><ol class="steps"><li class="step on" data-i="0"><span class="num">1</span><div><h3>Worker looks at the camera</h3><p>The scale reading shows at the top while the app checks the face.</p></div></li><li class="step" data-i="1"><span class="num">2</span><div><h3>Weight lands on the worker</h3><p>Gross weight, bag deduction and net weight appear against the matched worker.</p></div></li><li class="step" data-i="2"><span class="num">3</span><div><h3>Confirm and save</h3><p>The supervisor checks the screen and taps Confirm and Save.</p></div></li></ol></div><div class="flow-right"><div class="device"><div class="screen on" data-i="0"><img src="../assets/phone/07_harvest_capture_ready.png" width="412" height="915" alt="GardenSuite field app screen: harvest capture ready" loading="eager"><span class="focus" style="left:3.40%;top:18.36%;width:93.20%;height:6.34%"></span></div><div class="screen" data-i="1"><img src="../assets/phone/09_harvest_result_matched_weight.png" width="412" height="915" alt="GardenSuite field app screen: harvest result matched weight" loading="lazy"><span class="focus" style="left:4.85%;top:38.25%;width:90.29%;height:21.86%"></span></div><div class="screen" data-i="2"><img src="../assets/phone/10_harvest_result_scale_connected_save.png" width="412" height="915" alt="GardenSuite field app screen: harvest result scale connected save" loading="lazy"><span class="focus" style="left:3.88%;top:89.40%;width:92.23%;height:6.56%"></span></div></div><div class="dots"><i class="on"></i><i class=""></i><i class=""></i></div></div></div><div class="print-only"><div class="head compact"><p class="kicker">THE KEY STEP</p><h2 class="title">Weigh and check the face in one step</h2><p class="sub">Gross weight, bag deduction and net weight land on the matched worker in one step.</p></div><div class="print-row n3"><figure><div class="pframe"><div class="screen on" data-i="0"><img src="../assets/phone/07_harvest_capture_ready.png" width="412" height="915" alt="GardenSuite field app screen: harvest capture ready" loading="eager"><span class="focus" style="left:3.40%;top:18.36%;width:93.20%;height:6.34%"></span></div></div><figcaption><b>1. Worker looks at the camera</b> The scale reading shows at the top while the app checks the face.</figcaption></figure><figure><div class="pframe"><div class="screen on" data-i="1"><img src="../assets/phone/09_harvest_result_matched_weight.png" width="412" height="915" alt="GardenSuite field app screen: harvest result matched weight" loading="eager"><span class="focus" style="left:4.85%;top:38.25%;width:90.29%;height:21.86%"></span></div></div><figcaption><b>2. Weight lands on the worker</b> Gross weight, bag deduction and net weight appear against the matched worker.</figcaption></figure><figure><div class="pframe"><div class="screen on" data-i="2"><img src="../assets/phone/10_harvest_result_scale_connected_save.png" width="412" height="915" alt="GardenSuite field app screen: harvest result scale connected save" loading="eager"><span class="focus" style="left:3.88%;top:89.40%;width:92.23%;height:6.56%"></span></div></div><figcaption><b>3. Confirm and save</b> The supervisor checks the screen and taps Confirm and Save.</figcaption></figure></div></div></div><footer class="foot"><span class="brand"><img src="../assets/img/app-icon-512.png" width="512" height="512" alt="">GardenSuite <em>by Sarbani Associates</em></span><span class="pg">8 / 19</span></footer></section>
+<section class="slide t-flow" id="s09" data-steps="2" data-notes='{&quot;notes&quot;: &quot;The supervisor can also log weather during the session. Everything the office needs about the day is captured at the weighing point.&quot;, &quot;say&quot;: [&quot;Workers keep coming. Every save adds a record with the worker, weight and time.&quot;, &quot;If the work changes after lunch, the supervisor switches activity without closing the session.&quot;], &quot;title&quot;: &quot;Records build up through the day&quot;}'><div class="inner"><div class="flow screen-only"><div class="flow-left"><div class="head "><p class="kicker">FIELD DEMO</p><h2 class="title">Records build up through the day</h2><p class="sub">The same session keeps counting as workers come to the point.</p></div><ol class="steps"><li class="step on" data-i="0"><span class="num">1</span><div><h3>The list keeps growing</h3><p>Session time, task and record count update with every save.</p></div></li><li class="step" data-i="1"><span class="num">2</span><div><h3>Switch activity or section</h3><p>The supervisor can change activity or section mid-session and log weather.</p></div></li></ol></div><div class="flow-right"><div class="device"><div class="screen on" data-i="0"><img src="../assets/phone/05_harvest_active_records.png" width="412" height="915" alt="GardenSuite field app screen: harvest active records" loading="eager"><span class="focus" style="left:4.37%;top:80.87%;width:91.26%;height:17.49%"></span></div><div class="screen" data-i="1"><img src="../assets/phone/06_harvest_switch_activity_sheet.png" width="412" height="915" alt="GardenSuite field app screen: harvest switch activity sheet" loading="lazy"></div></div><div class="dots"><i class="on"></i><i class=""></i></div></div></div><div class="print-only"><div class="head compact"><p class="kicker">FIELD DEMO</p><h2 class="title">Records build up through the day</h2><p class="sub">The same session keeps counting as workers come to the point.</p></div><div class="print-row n2"><figure><div class="pframe"><div class="screen on" data-i="0"><img src="../assets/phone/05_harvest_active_records.png" width="412" height="915" alt="GardenSuite field app screen: harvest active records" loading="eager"><span class="focus" style="left:4.37%;top:80.87%;width:91.26%;height:17.49%"></span></div></div><figcaption><b>1. The list keeps growing</b> Session time, task and record count update with every save.</figcaption></figure><figure><div class="pframe"><div class="screen on" data-i="1"><img src="../assets/phone/06_harvest_switch_activity_sheet.png" width="412" height="915" alt="GardenSuite field app screen: harvest switch activity sheet" loading="eager"></div></div><figcaption><b>2. Switch activity or section</b> The supervisor can change activity or section mid-session and log weather.</figcaption></figure></div></div></div><footer class="foot"><span class="brand"><img src="../assets/img/app-icon-512.png" width="512" height="512" alt="">GardenSuite <em>by Sarbani Associates</em></span><span class="pg">9 / 19</span></footer></section>
+<section class="slide t-flow" id="s10" data-steps="3" data-notes='{&quot;notes&quot;: &quot;Use the garden&#x27;s own word for this work. Face attendance works for every kind of hazira work.&quot;, &quot;say&quot;: [&quot;Pruning, spraying and other work use the same session screen, with no scale connected.&quot;, &quot;The same liveness and quality checks apply here.&quot;, &quot;The hazira is saved against the verified worker, in the right section and activity.&quot;], &quot;title&quot;: &quot;Hazira for other work&quot;}'><div class="inner"><div class="flow screen-only"><div class="flow-left"><div class="head "><p class="kicker">FIELD DEMO</p><h2 class="title">Hazira for other work</h2><p class="sub">For pruning and other non-weighing work, the face check itself marks attendance.</p></div><ol class="steps"><li class="step on" data-i="0"><span class="num">1</span><div><h3>Attendance session for other work</h3><p>Same flow as weighing, without the scale.</p></div></li><li class="step" data-i="1"><span class="num">2</span><div><h3>Face check marks the hazira</h3><p>The worker looks at the camera to confirm identity.</p></div></li><li class="step" data-i="2"><span class="num">3</span><div><h3>Hazira saved against the worker</h3><p>The matched worker gets attendance for that activity.</p></div></li></ol></div><div class="flow-right"><div class="device"><div class="screen on" data-i="0"><img src="../assets/phone/11_attendance_active_session.png" width="412" height="915" alt="GardenSuite field app screen: attendance active session" loading="eager"></div><div class="screen" data-i="1"><img src="../assets/phone/12_attendance_capture_capturing.png" width="412" height="915" alt="GardenSuite field app screen: attendance capture capturing" loading="lazy"></div><div class="screen" data-i="2"><img src="../assets/phone/13_attendance_result_matched.png" width="412" height="915" alt="GardenSuite field app screen: attendance result matched" loading="lazy"><span class="focus" style="left:4.85%;top:27.32%;width:90.29%;height:30.60%"></span></div></div><div class="dots"><i class="on"></i><i class=""></i><i class=""></i></div></div></div><div class="print-only"><div class="head compact"><p class="kicker">FIELD DEMO</p><h2 class="title">Hazira for other work</h2><p class="sub">For pruning and other non-weighing work, the face check itself marks attendance.</p></div><div class="print-row n3"><figure><div class="pframe"><div class="screen on" data-i="0"><img src="../assets/phone/11_attendance_active_session.png" width="412" height="915" alt="GardenSuite field app screen: attendance active session" loading="eager"></div></div><figcaption><b>1. Attendance session for other work</b> Same flow as weighing, without the scale.</figcaption></figure><figure><div class="pframe"><div class="screen on" data-i="1"><img src="../assets/phone/12_attendance_capture_capturing.png" width="412" height="915" alt="GardenSuite field app screen: attendance capture capturing" loading="eager"></div></div><figcaption><b>2. Face check marks the hazira</b> The worker looks at the camera to confirm identity.</figcaption></figure><figure><div class="pframe"><div class="screen on" data-i="2"><img src="../assets/phone/13_attendance_result_matched.png" width="412" height="915" alt="GardenSuite field app screen: attendance result matched" loading="eager"><span class="focus" style="left:4.85%;top:27.32%;width:90.29%;height:30.60%"></span></div></div><figcaption><b>3. Hazira saved against the worker</b> The matched worker gets attendance for that activity.</figcaption></figure></div></div></div><footer class="foot"><span class="brand"><img src="../assets/img/app-icon-512.png" width="512" height="512" alt="">GardenSuite <em>by Sarbani Associates</em></span><span class="pg">10 / 19</span></footer></section>
+<section class="slide t-flow" id="s11" data-steps="4" data-notes='{&quot;notes&quot;: &quot;Use punch for work where clock in and clock out times matter. Same face check, same record.&quot;, &quot;say&quot;: [&quot;Punch code here means the work code for the day. It is chosen before the face check.&quot;, &quot;Punch uses the same face check as the field session.&quot;, &quot;The clock in is saved against the verified worker with the time on screen.&quot;, &quot;Clock out works the same way, so the attendance record covers the full day.&quot;], &quot;title&quot;: &quot;Clock in and clock out&quot;}'><div class="inner"><div class="flow screen-only"><div class="flow-left"><div class="head "><p class="kicker">FIELD DEMO</p><h2 class="title">Clock in and clock out</h2><p class="sub">Punch attendance records clock in and clock out with section and work code.</p></div><ol class="steps"><li class="step on" data-i="0"><span class="num">1</span><div><h3>Choose section and punch code</h3><p>The right work code is set before the punch.</p></div></li><li class="step" data-i="1"><span class="num">2</span><div><h3>Face check at the punch</h3><p>The same identity check as the field session.</p></div></li><li class="step" data-i="2"><span class="num">3</span><div><h3>Clock in recorded</h3><p>The app shows the matched worker and the time.</p></div></li><li class="step" data-i="3"><span class="num">4</span><div><h3>Clock out recorded</h3><p>The day closes with the same face check.</p></div></li></ol></div><div class="flow-right"><div class="device"><div class="screen on" data-i="0"><img src="../assets/phone/14_punch_select_context.png" width="412" height="915" alt="GardenSuite field app screen: punch select context" loading="eager"></div><div class="screen" data-i="1"><img src="../assets/phone/15_punch_capture_ready.png" width="412" height="915" alt="GardenSuite field app screen: punch capture ready" loading="lazy"></div><div class="screen" data-i="2"><img src="../assets/phone/16_punch_result_clock_in.png" width="412" height="915" alt="GardenSuite field app screen: punch result clock in" loading="lazy"><span class="focus" style="left:4.85%;top:32.35%;width:90.29%;height:7.87%"></span></div><div class="screen" data-i="3"><img src="../assets/phone/17_punch_result_clock_out.png" width="412" height="915" alt="GardenSuite field app screen: punch result clock out" loading="lazy"><span class="focus" style="left:4.85%;top:32.35%;width:90.29%;height:7.87%"></span></div></div><div class="dots"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></div></div></div><div class="print-only"><div class="head compact"><p class="kicker">FIELD DEMO</p><h2 class="title">Clock in and clock out</h2><p class="sub">Punch attendance records clock in and clock out with section and work code.</p></div><div class="print-row n4"><figure><div class="pframe"><div class="screen on" data-i="0"><img src="../assets/phone/14_punch_select_context.png" width="412" height="915" alt="GardenSuite field app screen: punch select context" loading="eager"></div></div><figcaption><b>1. Choose section and punch code</b> The right work code is set before the punch.</figcaption></figure><figure><div class="pframe"><div class="screen on" data-i="1"><img src="../assets/phone/15_punch_capture_ready.png" width="412" height="915" alt="GardenSuite field app screen: punch capture ready" loading="eager"></div></div><figcaption><b>2. Face check at the punch</b> The same identity check as the field session.</figcaption></figure><figure><div class="pframe"><div class="screen on" data-i="2"><img src="../assets/phone/16_punch_result_clock_in.png" width="412" height="915" alt="GardenSuite field app screen: punch result clock in" loading="eager"><span class="focus" style="left:4.85%;top:32.35%;width:90.29%;height:7.87%"></span></div></div><figcaption><b>3. Clock in recorded</b> The app shows the matched worker and the time.</figcaption></figure><figure><div class="pframe"><div class="screen on" data-i="3"><img src="../assets/phone/17_punch_result_clock_out.png" width="412" height="915" alt="GardenSuite field app screen: punch result clock out" loading="eager"><span class="focus" style="left:4.85%;top:32.35%;width:90.29%;height:7.87%"></span></div></div><figcaption><b>4. Clock out recorded</b> The day closes with the same face check.</figcaption></figure></div></div></div><footer class="foot"><span class="brand"><img src="../assets/img/app-icon-512.png" width="512" height="512" alt="">GardenSuite <em>by Sarbani Associates</em></span><span class="pg">11 / 19</span></footer></section>
+<section class="slide t-flow" id="s12" data-steps="4" data-notes='{&quot;notes&quot;: &quot;Reassure them this is once per worker. On a normal day nobody touches the registration screen.&quot;, &quot;say&quot;: [&quot;Enrolment happens at setup, from the same worker lists the office already keeps.&quot;, &quot;The worker&#x27;s name and details are already loaded, so nobody types anything here.&quot;, &quot;The app guides the three photos: front, left and right. The supervisor checks each one.&quot;, &quot;After review, the worker is ready for face attendance every day after.&quot;], &quot;title&quot;: &quot;Enrol each worker once&quot;}'><div class="inner"><div class="flow screen-only"><div class="flow-left"><div class="head "><p class="kicker">ONE-TIME SETUP</p><h2 class="title">Enrol each worker once</h2><p class="sub">One short enrolment per worker, then the face app works every day.</p></div><ol class="steps"><li class="step on" data-i="0"><span class="num">1</span><div><h3>Choose the worker</h3><p>Pick the unit, then the worker from the list.</p></div></li><li class="step" data-i="1"><span class="num">2</span><div><h3>Worker ready for capture</h3><p>The app opens the worker&#x27;s record for face capture.</p></div></li><li class="step" data-i="2"><span class="num">3</span><div><h3>Capture three photos</h3><p>Front, left and right face photos, guided on screen.</p></div></li><li class="step" data-i="3"><span class="num">4</span><div><h3>Review and confirm</h3><p>The supervisor checks the photos and confirms enrolment.</p></div></li></ol></div><div class="flow-right"><div class="device"><div class="screen on" data-i="0"><img src="../assets/phone/23_register_select_worker.png" width="412" height="915" alt="GardenSuite field app screen: register select worker" loading="eager"></div><div class="screen" data-i="1"><img src="../assets/phone/24_register_worker_ready.png" width="412" height="915" alt="GardenSuite field app screen: register worker ready" loading="lazy"></div><div class="screen" data-i="2"><img src="../assets/phone/25_register_capture_ready.png" width="412" height="915" alt="GardenSuite field app screen: register capture ready" loading="lazy"></div><div class="screen" data-i="3"><img src="../assets/phone/26_register_review.png" width="412" height="915" alt="GardenSuite field app screen: register review" loading="lazy"><span class="focus" style="left:3.40%;top:12.02%;width:93.20%;height:52.46%"></span></div></div><div class="dots"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></div></div></div><div class="print-only"><div class="head compact"><p class="kicker">ONE-TIME SETUP</p><h2 class="title">Enrol each worker once</h2><p class="sub">One short enrolment per worker, then the face app works every day.</p></div><div class="print-row n4"><figure><div class="pframe"><div class="screen on" data-i="0"><img src="../assets/phone/23_register_select_worker.png" width="412" height="915" alt="GardenSuite field app screen: register select worker" loading="eager"></div></div><figcaption><b>1. Choose the worker</b> Pick the unit, then the worker from the list.</figcaption></figure><figure><div class="pframe"><div class="screen on" data-i="1"><img src="../assets/phone/24_register_worker_ready.png" width="412" height="915" alt="GardenSuite field app screen: register worker ready" loading="eager"></div></div><figcaption><b>2. Worker ready for capture</b> The app opens the worker&#x27;s record for face capture.</figcaption></figure><figure><div class="pframe"><div class="screen on" data-i="2"><img src="../assets/phone/25_register_capture_ready.png" width="412" height="915" alt="GardenSuite field app screen: register capture ready" loading="eager"></div></div><figcaption><b>3. Capture three photos</b> Front, left and right face photos, guided on screen.</figcaption></figure><figure><div class="pframe"><div class="screen on" data-i="3"><img src="../assets/phone/26_register_review.png" width="412" height="915" alt="GardenSuite field app screen: register review" loading="eager"><span class="focus" style="left:3.40%;top:12.02%;width:93.20%;height:52.46%"></span></div></div><figcaption><b>4. Review and confirm</b> The supervisor checks the photos and confirms enrolment.</figcaption></figure></div></div></div><footer class="foot"><span class="brand"><img src="../assets/img/app-icon-512.png" width="512" height="512" alt="">GardenSuite <em>by Sarbani Associates</em></span><span class="pg">12 / 19</span></footer></section>
+<section class="slide t-offline" id="s13" data-steps="0" data-notes='{&quot;notes&quot;: &quot;The screen shown here is the Sync status screen, with last sync, synced and rejected counts and pending records. Offline is normal in the field. The supervisor never has to remember what is pending.&quot;, &quot;say&quot;: [], &quot;title&quot;: &quot;Works without internet&quot;}'><div class="inner"><div class="flow"><div class="flow-left"><div class="head "><p class="kicker">OFFLINE</p><h2 class="title">Works without internet</h2><p class="sub">Weak signal in the field is normal, so the app keeps working.</p></div><ul class="kit-list"><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2"/><path d="M11 18.5h2"/></svg><div><h3>Saved on the phone</h3><p>Every record stays on the supervisor&#x27;s phone until it can sync.</p></div></li><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12a8 8 0 0 1-14 5.3M4 12a8 8 0 0 1 14-5.3"/><path d="M18 3v4h-4M6 21v-4h4"/></svg><div><h3>Syncs when signal returns</h3><p>Records move to the office when internet comes back.</p></div></li><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3.5" width="14" height="17" rx="1.5"/><path d="M9 3.5h6v2.5H9zM8.5 11l2 2 4-4M8.5 16.5h7"/></svg><div><h3>See what is pending</h3><p>The sync screen shows pending records, synced and rejected counts.</p></div></li></ul></div><div class="flow-right"><div class="device"><div class="screen on" data-i="0"><img src="../assets/phone/27_sync_status.png" width="412" height="915" alt="GardenSuite field app screen: sync status" loading="eager"><span class="focus" style="left:3.40%;top:6.56%;width:93.20%;height:32.79%"></span></div></div></div></div></div><footer class="foot"><span class="brand"><img src="../assets/img/app-icon-512.png" width="512" height="512" alt="">GardenSuite <em>by Sarbani Associates</em></span><span class="pg">13 / 19</span></footer></section>
+<section class="slide t-flow" id="s14" data-steps="3" data-notes='{&quot;notes&quot;: &quot;Supervisors can settle a question on the spot, before the records reach the office.&quot;, &quot;say&quot;: [&quot;The reports area on the phone shows every session of the day with its totals.&quot;, &quot;If a worker questions their weight or hazira, the supervisor finds the answer on the spot.&quot;, &quot;A session can be opened in detail and exported for the office.&quot;], &quot;title&quot;: &quot;Supervisor checks totals on the phone&quot;}'><div class="inner"><div class="flow screen-only"><div class="flow-left"><div class="head "><p class="kicker">FIELD DEMO</p><h2 class="title">Supervisor checks totals on the phone</h2><p class="sub">The supervisor can check the day&#x27;s totals before the records reach the office.</p></div><ol class="steps"><li class="step on" data-i="0"><span class="num">1</span><div><h3>List of sessions</h3><p>Harvest sessions with counts and day totals.</p></div></li><li class="step" data-i="1"><span class="num">2</span><div><h3>Search one worker</h3><p>Find a worker and see totals per session and day.</p></div></li><li class="step" data-i="2"><span class="num">3</span><div><h3>Session detail</h3><p>Full record list for one session, ready to export.</p></div></li></ol></div><div class="flow-right"><div class="device"><div class="screen on" data-i="0"><img src="../assets/phone/18_reports_harvest_list.png" width="412" height="915" alt="GardenSuite field app screen: reports harvest list" loading="eager"></div><div class="screen" data-i="1"><img src="../assets/phone/19_reports_worker_search.png" width="412" height="915" alt="GardenSuite field app screen: reports worker search" loading="lazy"><span class="focus" style="left:3.88%;top:31.69%;width:92.23%;height:20.77%"></span></div><div class="screen" data-i="2"><img src="../assets/phone/20_reports_session_detail.png" width="412" height="915" alt="GardenSuite field app screen: reports session detail" loading="lazy"></div></div><div class="dots"><i class="on"></i><i class=""></i><i class=""></i></div></div></div><div class="print-only"><div class="head compact"><p class="kicker">FIELD DEMO</p><h2 class="title">Supervisor checks totals on the phone</h2><p class="sub">The supervisor can check the day&#x27;s totals before the records reach the office.</p></div><div class="print-row n3"><figure><div class="pframe"><div class="screen on" data-i="0"><img src="../assets/phone/18_reports_harvest_list.png" width="412" height="915" alt="GardenSuite field app screen: reports harvest list" loading="eager"></div></div><figcaption><b>1. List of sessions</b> Harvest sessions with counts and day totals.</figcaption></figure><figure><div class="pframe"><div class="screen on" data-i="1"><img src="../assets/phone/19_reports_worker_search.png" width="412" height="915" alt="GardenSuite field app screen: reports worker search" loading="eager"><span class="focus" style="left:3.88%;top:31.69%;width:92.23%;height:20.77%"></span></div></div><figcaption><b>2. Search one worker</b> Find a worker and see totals per session and day.</figcaption></figure><figure><div class="pframe"><div class="screen on" data-i="2"><img src="../assets/phone/20_reports_session_detail.png" width="412" height="915" alt="GardenSuite field app screen: reports session detail" loading="eager"></div></div><figcaption><b>3. Session detail</b> Full record list for one session, ready to export.</figcaption></figure></div></div></div><footer class="foot"><span class="brand"><img src="../assets/img/app-icon-512.png" width="512" height="512" alt="">GardenSuite <em>by Sarbani Associates</em></span><span class="pg">14 / 19</span></footer></section>
+<section class="slide t-gallery" id="s15" data-steps="4" data-notes='{&quot;notes&quot;: &quot;Move quickly. The message is that office staff review and correct, then the wage register, deployment report and payslips come from the same records. No second register. Bank and PF details are blurred on purpose.&quot;, &quot;say&quot;: [], &quot;title&quot;: &quot;Office review and payroll&quot;}'><div class="inner"><div class="flow gallery screen-only"><div class="flow-left"><div class="head "><p class="kicker">AT THE OFFICE</p><h2 class="title">Office review and payroll</h2><p class="sub">Desktop ERP where office staff review field records and run payroll.</p></div><ol class="steps"><li class="step on" data-i="0"><span class="num">1</span><div><h3>Daily entry and review</h3><p>Office staff check the field records and correct mistakes before payroll.</p></div></li><li class="step" data-i="1"><span class="num">2</span><div><h3>Wages register</h3><p>Attendance, leaf weight, rates and deductions become one wage register.</p></div></li><li class="step" data-i="2"><span class="num">3</span><div><h3>Daily labour deployment</h3><p>Mandays and wages by division, from the same records as payroll.</p></div></li><li class="step" data-i="3"><span class="num">4</span><div><h3>Payslips</h3><p>Each worker gets a payslip built from reviewed records.</p></div></li></ol></div><div class="flow-right"><div class="monitor"><div class="shot on" data-i="0"><img src="../assets/office/entry-screen.jpg" alt="Daily entry and review" loading="eager"></div><div class="shot" data-i="1"><img src="../assets/office/wages-register-redacted.jpg" alt="Wages register" loading="lazy"></div><div class="shot" data-i="2"><img src="../assets/office/labour-deployment-redacted.jpg" alt="Daily labour deployment" loading="lazy"></div><div class="shot" data-i="3"><img src="../assets/office/payslips-redacted.jpg" alt="Payslips" loading="lazy"></div></div></div></div><div class="print-only"><div class="head compact"><p class="kicker">AT THE OFFICE</p><h2 class="title">Office review and payroll</h2><p class="sub">Desktop ERP where office staff review field records and run payroll.</p></div><div class="print-row g4"><figure><div class="pframe"><div class="shot on" data-i="0"><img src="../assets/office/entry-screen.jpg" alt="Daily entry and review" loading="eager"></div></div><figcaption><b>1. Daily entry and review</b> Office staff check the field records and correct mistakes before payroll.</figcaption></figure><figure><div class="pframe"><div class="shot on" data-i="1"><img src="../assets/office/wages-register-redacted.jpg" alt="Wages register" loading="eager"></div></div><figcaption><b>2. Wages register</b> Attendance, leaf weight, rates and deductions become one wage register.</figcaption></figure><figure><div class="pframe"><div class="shot on" data-i="2"><img src="../assets/office/labour-deployment-redacted.jpg" alt="Daily labour deployment" loading="eager"></div></div><figcaption><b>3. Daily labour deployment</b> Mandays and wages by division, from the same records as payroll.</figcaption></figure><figure><div class="pframe"><div class="shot on" data-i="3"><img src="../assets/office/payslips-redacted.jpg" alt="Payslips" loading="eager"></div></div><figcaption><b>4. Payslips</b> Each worker gets a payslip built from reviewed records.</figcaption></figure></div></div></div><footer class="foot"><span class="brand"><img src="../assets/img/app-icon-512.png" width="512" height="512" alt="">GardenSuite <em>by Sarbani Associates</em></span><span class="pg">15 / 19</span></footer></section>
+<section class="slide t-gallery" id="s16" data-steps="3" data-notes='{&quot;notes&quot;: &quot;Data reaches the dashboard after sync from the garden systems. Say daily updates, not real-time. Owners and managers check from phone, tablet or laptop.&quot;, &quot;say&quot;: [], &quot;title&quot;: &quot;Owner dashboard&quot;}'><div class="inner"><div class="flow gallery screen-only"><div class="flow-left"><div class="head "><p class="kicker">FOR THE OWNER</p><h2 class="title">Owner dashboard</h2><p class="sub">Daily garden numbers on a phone, tablet or laptop, away from the garden.</p></div><ol class="steps"><li class="step on" data-i="0"><span class="num">1</span><div><h3>Main dashboard</h3><p>Green leaf, mandays and kg per plucker, updated after sync.</p></div></li><li class="step" data-i="1"><span class="num">2</span><div><h3>Kamjari view</h3><p>Labour deployment across sections, without waiting for a phone call.</p></div></li><li class="step" data-i="2"><span class="num">3</span><div><h3>Wages summary</h3><p>Wages and salary payment from the same records.</p></div></li></ol></div><div class="flow-right"><div class="monitor"><div class="shot on" data-i="0"><img src="../assets/office/owner-dashboard.jpg" alt="Main dashboard" loading="eager"></div><div class="shot" data-i="1"><img src="../assets/office/owner-kamjari.jpg" alt="Kamjari view" loading="lazy"></div><div class="shot" data-i="2"><img src="../assets/office/owner-wages-summary.jpg" alt="Wages summary" loading="lazy"></div></div></div></div><div class="print-only"><div class="head compact"><p class="kicker">FOR THE OWNER</p><h2 class="title">Owner dashboard</h2><p class="sub">Daily garden numbers on a phone, tablet or laptop, away from the garden.</p></div><div class="print-row g3"><figure><div class="pframe"><div class="shot on" data-i="0"><img src="../assets/office/owner-dashboard.jpg" alt="Main dashboard" loading="eager"></div></div><figcaption><b>1. Main dashboard</b> Green leaf, mandays and kg per plucker, updated after sync.</figcaption></figure><figure><div class="pframe"><div class="shot on" data-i="1"><img src="../assets/office/owner-kamjari.jpg" alt="Kamjari view" loading="eager"></div></div><figcaption><b>2. Kamjari view</b> Labour deployment across sections, without waiting for a phone call.</figcaption></figure><figure><div class="pframe"><div class="shot on" data-i="2"><img src="../assets/office/owner-wages-summary.jpg" alt="Wages summary" loading="eager"></div></div><figcaption><b>3. Wages summary</b> Wages and salary payment from the same records.</figcaption></figure></div></div></div><footer class="foot"><span class="brand"><img src="../assets/img/app-icon-512.png" width="512" height="512" alt="">GardenSuite <em>by Sarbani Associates</em></span><span class="pg">16 / 19</span></footer></section>
+<section class="slide t-issues" id="s17" data-steps="0" data-notes='{&quot;notes&quot;: &quot;This is usually the biggest worry, so pause here for questions. Do not promise a fallback that is not agreed for this garden.&quot;, &quot;say&quot;: [], &quot;title&quot;: &quot;When something goes wrong&quot;}'><div class="inner"><div class="head "><p class="kicker">PROBLEMS IN THE FIELD</p><h2 class="title">When something goes wrong</h2><p class="sub">Each problem has a clear next step. The fallback is agreed during setup.</p></div><div class="cards cols-2 issues"><div class="card"><div class="card-top"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8V5a1 1 0 0 1 1-1h3M16 4h3a1 1 0 0 1 1 1v3M20 16v3a1 1 0 0 1-1 1h-3M8 20H5a1 1 0 0 1-1-1v-3"/><circle cx="9.5" cy="10" r=".6" fill="currentColor"/><circle cx="14.5" cy="10" r=".6" fill="currentColor"/><path d="M9 14.5a4 4 0 0 0 6 0"/></svg><span class="cnum">01</span></div><h3>Face not matched</h3><p>Tap Retry. If it still fails, use the fallback agreed at setup.</p></div><div class="card"><div class="card-top"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v3M8 6h8l1 3H7l1-3Z"/><rect x="6" y="9" width="12" height="7" rx="1.5"/><path d="M10 12.5h4M12 16v2M9.5 21h5a2.5 2.5 0 0 0-5 0Z"/></svg><span class="cnum">02</span></div><h3>Scale not connected</h3><p>Reconnect the scale. If it still fails, use the fallback agreed at setup.</p></div><div class="card"><div class="card-top"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3l18 18M8.5 12.5a5 5 0 0 1 3.5-1.5M5 9a10 10 0 0 1 4-2.3M19 9a10 10 0 0 0-5.6-2.9M12 18.5v.01"/></svg><span class="cnum">03</span></div><h3>No internet</h3><p>Records stay on the phone and sync when the signal returns.</p></div><div class="card"><div class="card-top"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 20a7 7 0 0 1 14 0"/></svg><span class="cnum">04</span></div><h3>New or returning worker</h3><p>Enrol a new worker, or re-enrol a worker whose face check keeps failing.</p></div></div></div><footer class="foot"><span class="brand"><img src="../assets/img/app-icon-512.png" width="512" height="512" alt="">GardenSuite <em>by Sarbani Associates</em></span><span class="pg">17 / 19</span></footer></section>
+<section class="slide t-start" id="s18" data-steps="0" data-notes='{&quot;notes&quot;: &quot;Emphasise the small first step. One division, current records, local team. Nothing about replacing everything on day one.&quot;, &quot;say&quot;: [], &quot;title&quot;: &quot;How we start&quot;}'><div class="inner"><div class="head "><p class="kicker">GETTING STARTED</p><h2 class="title">How we start</h2><p class="sub">Sarbani Associates handles setup, training and support at every step.</p></div><div class="timeline"><div class="tl"><span class="num">1</span><svg class="ic big" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11Z"/><circle cx="12" cy="10" r="2.3"/></svg><h3>Visit and review</h3><p>We visit and look at your current records together.</p></div><div class="tl"><span class="num">2</span><svg class="ic big" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19c0-8 5-13 14-14 0 9-5 14-13 14"/><path d="M5 19 13 11"/></svg><h3>Start on one division</h3><p>Face attendance and office review on one division first.</p></div><div class="tl"><span class="num">3</span><svg class="ic big" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 20a7 7 0 0 1 14 0"/></svg><h3>Train your staff</h3><p>Supervisors and office staff learn on their own records.</p></div><div class="tl"><span class="num">4</span><svg class="ic big" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h16M6 16v-4M10 16V8M14 16v-6M18 16V5"/></svg><h3>Expand when ready</h3><p>Weighing, payroll and the dashboard can come later.</p></div></div></div><footer class="foot"><span class="brand"><img src="../assets/img/app-icon-512.png" width="512" height="512" alt="">GardenSuite <em>by Sarbani Associates</em></span><span class="pg">18 / 19</span></footer></section>
+<section class="slide t-close" id="s19" data-steps="0" data-notes='{&quot;notes&quot;: &quot;Close with one question: which step is easiest this week? Give the email, phone and website, and thank them.&quot;, &quot;say&quot;: [], &quot;title&quot;: &quot;Next step&quot;}'><div class="inner"><div class="head "><p class="kicker">NEXT STEP</p><h2 class="title">Next step</h2><p class="sub">Pick whichever step is easiest for you this week.</p></div><div class="cards cols-3 close-cards"><div class="card"><svg class="ic big" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="1.5"/><path d="M3.5 9.5h17M8 3v4M16 3v4M9 14.5l2 2 4-4"/></svg><h3>Book a field visit</h3><p>We come to your garden. Email sarbaniassociates@gmail.com.</p></div><div class="card"><svg class="ic big" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3.5h7l4 4V17a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1V4.5a1 1 0 0 1 1-1Z"/><path d="M15 3.5v4h4M4 7.5V20a1 1 0 0 0 1 1h9"/></svg><h3>Share your recent records</h3><p>We run a Tea Loss Audit on your own muster rolls and weight records.</p></div><div class="card"><svg class="ic big" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h3.5l1.5 4-2 1.5a10 10 0 0 0 6.5 6.5l1.5-2 4 1.5V19a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1Z"/></svg><h3>Call or WhatsApp</h3><p>Call or WhatsApp +91 97341 01330 or visit gardensuite.in.</p></div></div><div class="close-foot"><span>sarbaniassociates@gmail.com</span><span>+91 97341 01330 (phone and WhatsApp)</span><span>gardensuite.in</span></div></div><footer class="foot"><span class="brand"><img src="../assets/img/app-icon-512.png" width="512" height="512" alt="">GardenSuite <em>by Sarbani Associates</em></span><span class="pg">19 / 19</span></footer></section>
+</div></div>
+<div id="zoom" aria-hidden="true"><img alt=""><span class="zhint">Z or Esc to close. Arrow keys still move steps.</span></div>
+<div id="hud">
+  <span id="hudpos"></span>
+  <button type="button" data-act="prev" aria-label="Previous step">Back</button>
+  <button type="button" data-act="next" aria-label="Next step">Next</button>
+  <button type="button" data-act="play">Play (P)</button>
+  <button type="button" data-act="zoom">Zoom (Z)</button>
+  <button type="button" data-act="notes">Notes window (S)</button>
+  <button type="button" data-act="full">Full screen (F)</button>
+</div>
+<script>
+(() => {
+  const stage = document.getElementById('stage');
+  const slides = [...document.querySelectorAll('.slide')];
+  let cur = 0, step = 0, timer = null, notesWin = null, startedAt = null;
+
+  const params = new URLSearchParams(location.search);
+  const estate = params.get('estate');
+  if (estate) document.getElementById('estate').textContent = 'Prepared for ' + estate;
+
+  function fit() {
+    const s = Math.min(innerWidth / 1920, innerHeight / 1080);
+    stage.style.transform = `translate(${(innerWidth - 1920 * s) / 2}px, ${(innerHeight - 1080 * s) / 2}px) scale(${s})`;
+  }
+  addEventListener('resize', fit); fit();
+
+  const steps = (i) => parseInt(slides[i].dataset.steps || '0', 10);
+
+  function render() {
+    slides.forEach((s, i) => s.classList.toggle('active', i === cur));
+    const sl = slides[cur];
+    sl.querySelectorAll('.step').forEach(el => {
+      const i = +el.dataset.i;
+      el.classList.toggle('on', i === step);
+      el.classList.toggle('done', i < step);
+    });
+    sl.querySelectorAll('.screen-only .screen, .screen-only .shot').forEach(el => el.classList.toggle('on', +el.dataset.i === step));
+    sl.querySelectorAll('.dots i').forEach((el, i) => el.classList.toggle('on', i === step));
+    const n = steps(cur);
+    document.getElementById('hudpos').textContent = `Slide ${cur + 1}/${slides.length}` + (n ? ` - step ${step + 1}/${n}` : '');
+    document.getElementById('progress').style.width = ((cur + 1) / slides.length * 100) + '%';
+    history.replaceState(null, '', location.pathname + location.search + '#' + sl.id + (step ? '.' + (step + 1) : ''));
+    if (zoomed) showZoom();
+    updateNotes();
+  }
+
+  const zoom = document.getElementById('zoom');
+  let zoomed = false;
+  function zoomTarget() {
+    const img = slides[cur].querySelector('.screen-only .screen.on img, .screen-only .shot.on img');
+    if (!img) return null;
+    return { src: img.getAttribute('src'), phone: !!img.closest('.device') };
+  }
+  function showZoom() {
+    const t = zoomTarget();
+    if (!t) { hideZoom(); return; }
+    zoom.querySelector('img').src = t.src;
+    zoom.classList.toggle('phone', t.phone);
+    zoom.classList.add('on');
+  }
+  function hideZoom() { zoomed = false; zoom.classList.remove('on'); }
+  function toggleZoom() {
+    if (zoomed) { hideZoom(); return; }
+    if (!zoomTarget()) return;
+    zoomed = true; showZoom();
+  }
+  zoom.addEventListener('click', hideZoom);
+
+  function next() {
+    if (step < steps(cur) - 1) step++;
+    else if (cur < slides.length - 1) { cur++; step = 0; }
+    else return false;
+    render(); return true;
+  }
+  function prev() {
+    if (step > 0) step--;
+    else if (cur > 0) { cur--; step = Math.max(0, steps(cur) - 1); }
+    render();
+  }
+  function go(i, st = 0) { cur = Math.max(0, Math.min(slides.length - 1, i)); step = Math.max(0, Math.min(st, Math.max(0, steps(cur) - 1))); render(); }
+
+  function togglePlay() {
+    if (timer) { clearInterval(timer); timer = null; document.body.classList.remove('playing'); return; }
+    document.body.classList.add('playing');
+    const startSlide = cur;
+    timer = setInterval(() => {
+      if (step < steps(cur) - 1) { step++; render(); }
+      else { clearInterval(timer); timer = null; document.body.classList.remove('playing'); }
+    }, 4000);
+    if (steps(startSlide) === 0) togglePlay();
+  }
+
+  function full() {
+    if (document.fullscreenElement) document.exitFullscreen();
+    else document.documentElement.requestFullscreen();
+  }
+
+  function info(i) {
+    try { return JSON.parse(slides[i].dataset.notes || '{}'); } catch { return {}; }
+  }
+
+  function openNotes() {
+    if (!startedAt) startedAt = Date.now();
+    notesWin = window.open('', 'gs-notes', 'width=720,height=640');
+    if (!notesWin) return;
+    const d = notesWin.document;
+    d.open();
+    d.write(`<!DOCTYPE html><title>Presenter notes</title><style>
+      body{font:18px/1.5 Inter,system-ui,sans-serif;margin:24px;color:#111;background:#FAFAF7}
+      .k{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#1B5E3B;margin:18px 0 6px}
+      h1{font-size:26px;font-weight:600;margin:0}
+      .say{font-size:22px;background:#fff;border:1px solid #E4E4E7;border-radius:12px;padding:16px 18px}
+      .row{display:flex;justify-content:space-between;color:#6B7280;font-size:14px}
+      button{font:inherit;font-size:15px;border:1px solid #E4E4E7;background:#fff;border-radius:8px;padding:8px 14px;margin-right:8px;cursor:pointer}
+    </style><div class="row"><span id="pos"></span><span id="clock"></span></div>
+    <div class="k">Now</div><h1 id="t"></h1>
+    <div class="k">Say</div><div class="say" id="say"></div>
+    <div class="k">Note</div><div id="n"></div>
+    <div class="k">Next</div><div id="nx"></div>
+    <p><button id="b">Back</button><button id="f">Next</button><button id="p">Play</button></p>`);
+    d.close();
+    d.getElementById('b').onclick = prev;
+    d.getElementById('f').onclick = next;
+    d.getElementById('p').onclick = togglePlay;
+    d.addEventListener('keydown', onKey);
+    updateNotes();
+  }
+
+  function updateNotes() {
+    if (!notesWin || notesWin.closed) return;
+    const d = notesWin.document, it = info(cur);
+    const el = (id) => d.getElementById(id);
+    if (!el('t')) return;
+    const n = steps(cur);
+    el('pos').textContent = `Slide ${cur + 1} of ${slides.length}` + (n ? `, step ${step + 1} of ${n}` : '');
+    el('t').textContent = it.title || '';
+    el('say').textContent = (it.say && it.say[step]) || it.notes || '';
+    el('n').textContent = (it.say && it.say[step]) ? (it.notes || '') : '';
+    let nx;
+    if (step < n - 1) nx = 'Next step on this slide';
+    else nx = cur < slides.length - 1 ? info(cur + 1).title : 'End of deck';
+    el('nx').textContent = nx;
+  }
+  setInterval(() => {
+    if (!notesWin || notesWin.closed || !startedAt) return;
+    const s = Math.floor((Date.now() - startedAt) / 1000);
+    const c = notesWin.document.getElementById('clock');
+    if (c) c.textContent = `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')} elapsed`;
+  }, 1000);
+
+  let typed = '';
+  function onKey(e) {
+    const k = e.key;
+    if (['ArrowRight', 'PageDown', ' ', 'Enter'].includes(k) && !(k === 'Enter' && typed)) { e.preventDefault(); next(); }
+    else if (['ArrowLeft', 'PageUp', 'Backspace'].includes(k)) { e.preventDefault(); prev(); }
+    else if (k === 'Home') go(0);
+    else if (k === 'End') go(slides.length - 1);
+    else if (k === 'f' || k === 'F') full();
+    else if (k === 'p' || k === 'P') togglePlay();
+    else if (k === 'z' || k === 'Z') toggleZoom();
+    else if (k === 'Escape' && zoomed) hideZoom();
+    else if (k === 's' || k === 'S' || k === 'n' || k === 'N') openNotes();
+    else if (/^[0-9]$/.test(k)) { typed += k; return; }
+    else if (k === 'Enter' && typed) { go(parseInt(typed, 10) - 1); }
+    typed = '';
+  }
+  document.addEventListener('keydown', onKey);
+
+  document.getElementById('hud').addEventListener('click', (e) => {
+    const a = e.target.closest('button')?.dataset.act;
+    if (a === 'prev') prev(); else if (a === 'next') next();
+    else if (a === 'play') togglePlay(); else if (a === 'notes') openNotes(); else if (a === 'full') full();
+    else if (a === 'zoom') toggleZoom();
+  });
+  stage.addEventListener('click', (e) => {
+    const li = e.target.closest('.step');
+    if (li) { step = +li.dataset.i; render(); return; }
+    if (e.target.closest('.device, .monitor')) toggleZoom();
+  });
+
+  function fromHash() {
+    const m = location.hash.match(/^#(s\d+)(?:\.(\d+))?$/);
+    if (!m) return false;
+    const i = slides.findIndex(s => s.id === m[1]);
+    if (i < 0) return false;
+    cur = i; step = Math.max(0, Math.min((+m[2] || 1) - 1, Math.max(0, steps(i) - 1)));
+    return true;
+  }
+  addEventListener('hashchange', () => { if (fromHash()) render(); });
+  fromHash();
+  render();
+})();
+</script>
+</body>
+</html>

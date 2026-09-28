@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GardenSuite - Live Demo</title>
+<link rel="icon" href="../assets/img/app-icon-512.png">
+<link href="fonts/fonts.css" rel="stylesheet">
+<style>
+:root {
+  --green: #1B5E3B;
+  --green-dark: #144723;
+  --green-light: #DDEFE4;
+  --green-subtle: #F8FAF8;
+  --brand-50: #F1F6EB;
+  --brand-100: #E1EED6;
+  --brand-400: #7BA86A;
+  --ink: #111111;
+  --body: #3F3F46;
+  --muted: #6B7280;
+  --surface: #FAFAF7;
+  --cream: #F8F7F3;
+  --border: #E4E4E7;
+  --red: #B91C1C;
+  --r-sm: 8px; --r-md: 12px; --r-lg: 16px; --r-xl: 24px;
+  --shadow-card: 0 1px 3px rgba(0,0,0,0.04);
+  --shadow-soft: 0 6px 18px rgba(0,0,0,0.06);
+  --shadow-hover: 0 8px 24px rgba(0,0,0,0.08);
+  --shadow-elev: 0 10px 28px rgba(0,0,0,0.10);
+  --font: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --display: "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+body {
+  font-family: var(--font); color: var(--ink); background: #E9E9E4;
+  -webkit-font-smoothing: antialiased; overflow: hidden;
+}
+#viewport { position: fixed; inset: 0; overflow: hidden; }
+#stage { width: 1920px; height: 1080px; position: absolute; left: 0; top: 0; transform-origin: 0 0; }
+
+.slide {
+  position: absolute; inset: 0; background: #fff; display: none;
+  overflow: hidden;
+}
+.slide.active { display: block; }
+.inner { position: absolute; inset: 96px 128px 120px; }
+
+/* Header block */
+.kicker { font-size: 22px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--green); margin-bottom: 20px; }
+.title { font-family: var(--display); font-weight: 600; font-size: 66px; line-height: 1.08; letter-spacing: -0.02em; color: var(--ink); max-width: 1320px; }
+.sub { font-size: 28px; line-height: 1.45; color: var(--body); margin-top: 22px; max-width: 1180px; }
+.sub.big { font-size: 32px; }
+.head { margin-bottom: 64px; }
+.head.compact { margin-bottom: 36px; }
+.head.compact .title { font-size: 54px; }
+.head.compact .sub { font-size: 24px; margin-top: 14px; }
+
+h3 { font-family: var(--display); font-weight: 600; font-size: 30px; line-height: 1.2; color: var(--ink); letter-spacing: -0.01em; }
+p { font-size: 22px; line-height: 1.5; color: var(--body); }
+
+.ic { width: 40px; height: 40px; color: var(--green); flex: none; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.08)); }
+.ic.big { width: 56px; height: 56px; }
+
+/* Footer */
+.foot { position: absolute; left: 128px; right: 128px; bottom: 44px; display: flex; justify-content: space-between; align-items: center; font-size: 18px; color: var(--muted); }
+.foot .brand { display: flex; align-items: center; gap: 12px; font-weight: 600; color: var(--ink); }
+.foot .brand img { width: 32px; height: 32px; border-radius: var(--r-sm); }
+.foot em { font-style: normal; font-weight: 500; color: var(--muted); }
+
+/* Title slide */
+.t-title { background: var(--surface); }
+.t-title .inner { display: grid; grid-template-columns: 1fr 640px; align-items: center; gap: 80px; }
+.app-icon { width: 104px; height: 104px; border-radius: var(--r-xl); margin-bottom: 48px; box-shadow: var(--shadow-soft); }
+.hero { font-family: var(--display); font-weight: 600; font-size: 92px; line-height: 1.04; letter-spacing: -0.025em; }
+.estate { margin-top: 40px; font-size: 26px; font-weight: 600; color: var(--green); min-height: 1em; }
+.title-phones { display: flex; gap: 36px; justify-content: center; align-items: flex-end; }
+.mini { width: 290px; border: 10px solid #1d1d1f; border-radius: var(--r-xl); overflow: hidden; background: #000; box-shadow: var(--shadow-elev); }
+.mini:first-child { transform: translateY(-48px); }
+.mini img { display: block; width: 100%; height: auto; }
+
+/* Cards */
+.cards { display: grid; gap: 28px; }
+.cols-2 { grid-template-columns: repeat(2, 1fr); }
+.cols-3 { grid-template-columns: repeat(3, 1fr); }
+.cols-4 { grid-template-columns: repeat(4, 1fr); }
+.card { background: #fff; border: 1px solid var(--border); border-radius: var(--r-lg); padding: 40px; box-shadow: var(--shadow-card); }
+.card h3 { margin: 24px 0 14px; }
+.card-top { display: flex; justify-content: space-between; align-items: center; }
+.cnum { font-family: var(--display); font-size: 22px; font-weight: 600; color: var(--muted); }
+.agenda .card { background: var(--green-subtle); min-height: 420px; }
+.issues .card { padding: 36px 40px; }
+.issues .card h3 { margin-top: 18px; }
+.problem .pcard { padding: 0; overflow: hidden; }
+.pcard img { display: block; width: 100%; height: 330px; object-fit: cover; }
+.pbody { padding: 32px 36px 36px; }
+.pbody h3 { margin: 0 0 12px; }
+
+/* Chain */
+.chain { display: grid; grid-template-columns: repeat(6, 1fr 44px) 1fr; align-items: stretch; margin-top: 20px; }
+.link { background: var(--green-subtle); border: 1px solid var(--border); border-radius: var(--r-lg); padding: 32px 22px; text-align: center; display: flex; flex-direction: column; align-items: center; }
+.link h3 { font-size: 25px; margin: 20px 0 10px; }
+.link p { font-size: 19px; line-height: 1.4; }
+.link:nth-child(1), .link:nth-child(3), .link:nth-child(5) { background: #fff; }
+.arrow { display: grid; place-items: center; color: var(--brand-400); }
+.arrow .ic { width: 30px; height: 30px; color: var(--brand-400); filter: none; }
+.chain-groups { display: grid; grid-template-columns: repeat(6, 1fr 44px) 1fr; margin-top: 22px; }
+.chain-groups span { border-top: 2px solid var(--green); padding-top: 14px; font-size: 20px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--green); text-align: center; }
+.chain-groups span:empty { border-color: transparent; }
+
+/* Split kit */
+.split { display: grid; grid-template-columns: 760px 1fr; gap: 88px; height: 100%; align-items: center; }
+.kit-img { border-radius: var(--r-xl); overflow: hidden; border: 1px solid var(--border); background: var(--cream); }
+.kit-img img { display: block; width: 100%; height: auto; }
+.kit-body .head { margin-bottom: 40px; }
+.kit-body .title { font-size: 58px; }
+.kit-list { list-style: none; display: grid; gap: 30px; }
+.kit-list li { display: flex; gap: 24px; align-items: flex-start; }
+.kit-list h3 { font-size: 28px; margin-bottom: 6px; }
+
+/* Flow (step-through) */
+.flow { display: grid; grid-template-columns: 1fr 520px; gap: 96px; height: 100%; }
+.flow-left .head { margin-bottom: 44px; }
+.flow-left .title { font-size: 60px; }
+.flow-left .sub { font-size: 26px; }
+.flow-right { display: flex; flex-direction: column; align-items: center; justify-content: center; margin-top: -40px; }
+.steps { list-style: none; display: grid; gap: 14px; counter-reset: s; }
+.step { display: flex; gap: 24px; align-items: flex-start; padding: 22px 28px; border-radius: var(--r-lg); border: 1px solid transparent; opacity: 0.42; transition: opacity .3s, background .3s, border-color .3s; cursor: pointer; }
+.step.done { opacity: 0.62; }
+.step.on { opacity: 1; background: var(--green-subtle); border-color: var(--border); box-shadow: var(--shadow-card); }
+.step .num { flex: none; width: 48px; height: 48px; border-radius: var(--r-md); border: 2px solid var(--green); color: var(--green); font-family: var(--display); font-weight: 600; font-size: 24px; display: grid; place-items: center; }
+.step.on .num { background: var(--green); color: #fff; }
+.step h3 { font-size: 28px; margin-bottom: 4px; }
+.step p { font-size: 22px; }
+.device { position: relative; width: 380px; aspect-ratio: 412 / 915; border: 12px solid #1d1d1f; border-radius: var(--r-xl); background: #000; box-shadow: var(--shadow-elev); box-sizing: content-box; overflow: hidden; }
+.screen { position: absolute; inset: 0; opacity: 0; transition: opacity .35s ease; }
+.screen.on { opacity: 1; }
+.screen img { display: block; width: 100%; height: 100%; }
+.focus { position: absolute; border: 3px solid var(--green); border-radius: var(--r-md); pointer-events: none; opacity: 0; transition: opacity .3s .25s; }
+.screen.on .focus { opacity: 1; }
+.dots { display: flex; gap: 10px; margin-top: 28px; }
+.dots i { width: 10px; height: 10px; border-radius: 50%; background: var(--border); }
+.dots i.on { background: var(--green); }
+
+/* Gallery (office and owner screens) */
+.gallery { grid-template-columns: 540px 1fr; gap: 56px; }
+.gallery .flow-left .head { margin-bottom: 28px; }
+.gallery .flow-left .title { font-size: 50px; }
+.gallery .flow-left .sub { font-size: 22px; }
+.gallery .steps { gap: 8px; }
+.gallery .step { padding: 14px 22px; gap: 20px; }
+.gallery .step .num { width: 40px; height: 40px; font-size: 20px; }
+.gallery .step h3 { font-size: 24px; }
+.gallery .step p { font-size: 19px; line-height: 1.4; }
+.gallery .flow-right { margin-top: 0; }
+.device, .monitor { cursor: zoom-in; }
+
+/* Zoom view: one screenshot fills the screen for live calls */
+#zoom { position: fixed; inset: 0; display: none; place-items: center; background: #FAFAF7; z-index: 10; cursor: zoom-out; padding: 2vh 2vw; box-sizing: border-box; }
+#zoom.on { display: grid; }
+#zoom.phone { background: #111; }
+#zoom img { max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 12px; box-shadow: 0 10px 28px rgba(0,0,0,0.10); background: #fff; }
+#zoom .zhint { position: fixed; bottom: 14px; left: 50%; transform: translateX(-50%); font: 500 13px var(--font); color: var(--muted); }
+.monitor { position: relative; width: 100%; aspect-ratio: 16 / 10; border: 1px solid var(--border); border-radius: var(--r-lg); overflow: hidden; background: var(--cream); box-shadow: var(--shadow-soft); }
+.shot { position: absolute; inset: 0; opacity: 0; transition: opacity .35s ease; display: grid; place-items: center; }
+.shot.on { opacity: 1; }
+.shot img { display: block; width: 100%; height: 100%; object-fit: contain; background: #fff; }
+
+/* Start timeline */
+.timeline { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; position: relative; }
+.tl { position: relative; padding: 40px 36px; border: 1px solid var(--border); border-radius: var(--r-lg); background: #fff; box-shadow: var(--shadow-card); min-height: 400px; }
+.tl .num { position: absolute; top: 32px; right: 36px; font-family: var(--display); font-weight: 600; font-size: 22px; color: var(--muted); }
+.tl h3 { margin: 26px 0 12px; }
+.tl:first-child { background: var(--green-subtle); }
+
+/* Close slide */
+.t-close { background: var(--green); }
+.t-close .kicker { color: var(--brand-100); }
+.t-close .title, .t-close h3 { color: #fff; }
+.t-close .sub { color: var(--green-light); }
+.t-close .card { background: #fff; border-color: transparent; }
+.t-close .card h3 { color: var(--ink); }
+.close-foot { display: flex; gap: 56px; margin-top: 56px; font-size: 26px; font-weight: 500; color: #fff; }
+.t-close .foot, .t-close .foot .brand, .t-close .foot em { color: var(--green-light); }
+
+/* Controls */
+#hud { position: fixed; bottom: 14px; right: 18px; font: 500 13px var(--font); color: var(--muted); display: flex; gap: 12px; align-items: center; opacity: 0; transition: opacity .3s; }
+body:hover #hud { opacity: 1; }
+#hud button { font: inherit; border: 1px solid var(--border); background: #fff; color: var(--ink); border-radius: var(--r-sm); padding: 6px 10px; cursor: pointer; }
+#playflag { position: fixed; top: 14px; right: 18px; font: 600 13px var(--font); color: var(--green); letter-spacing: .08em; text-transform: uppercase; display: none; }
+body.playing #playflag { display: block; }
+#progress { position: fixed; left: 0; top: 0; height: 3px; background: var(--green); transition: width .3s; }
+
+.print-only { display: none; }
+
+@media (prefers-reduced-motion: reduce) { .screen, .shot, .step, .focus { transition: none; } }
+
+@page { size: 1920px 1280px; margin: 0; }
+@media print {
+  html, body { overflow: visible; height: auto; background: #fff; }
+  #viewport { position: static; display: block; }
+  #stage { transform: none !important; width: 1920px; height: auto; }
+  .slide { display: block !important; position: relative; width: 1920px; height: 1280px; page-break-after: always; break-after: page; }
+  .slide .inner { inset: 120px 144px; }
+  .screen-only, #hud, #playflag, #progress, #zoom { display: none !important; }
+  .print-only { display: block; }
+  .print-only .head.compact { margin-bottom: 48px; }
+  .print-row { display: flex; gap: 64px; justify-content: flex-start; align-items: flex-start; }
+  .print-row figure { flex: 1; max-width: 350px; }
+  .print-row .pframe { position: relative; border: 10px solid #1d1d1f; border-radius: var(--r-xl); overflow: hidden; background: #000; aspect-ratio: 412 / 915; }
+  .print-row .screen, .print-row .shot { opacity: 1; position: absolute; }
+  .print-row .focus { opacity: 1; }
+  .print-row figcaption { margin-top: 20px; font-size: 21px; line-height: 1.45; color: var(--body); }
+  .print-row figcaption b { display: block; font-family: var(--display); font-weight: 600; font-size: 24px; color: var(--ink); margin-bottom: 6px; }
+  .print-row.n2 figure { max-width: 330px; }
+  .print-row.n3 figure { max-width: 300px; }
+  .print-row.n4 { gap: 48px; }
+  .print-row.n4 figure { max-width: 310px; }
+  .print-row[class*=" g"] { gap: 56px; }
+  .print-row[class*=" g"] figure { max-width: none; }
+  .print-row[class*=" g"] .pframe { aspect-ratio: 16 / 10; border: 1px solid var(--border); border-radius: var(--r-lg); background: #fff; }
+  .print-row.g3 { flex-wrap: wrap; }
+  .print-row.g4 { display: grid; grid-template-columns: repeat(4, 1fr); }
+}
+</style>
+</head>
+<body>
+<div id="progress"></div>
+<div id="playflag">Auto play</div>
+<div id="viewport"><div id="stage">
+<!--SLIDES-->
+</div></div>
+<div id="zoom" aria-hidden="true"><img alt=""><span class="zhint">Z or Esc to close. Arrow keys still move steps.</span></div>
+<div id="hud">
+  <span id="hudpos"></span>
+  <button type="button" data-act="prev" aria-label="Previous step">Back</button>
+  <button type="button" data-act="next" aria-label="Next step">Next</button>
+  <button type="button" data-act="play">Play (P)</button>
+  <button type="button" data-act="zoom">Zoom (Z)</button>
+  <button type="button" data-act="notes">Notes window (S)</button>
+  <button type="button" data-act="full">Full screen (F)</button>
+</div>
+<script>
+(() => {
+  const stage = document.getElementById('stage');
+  const slides = [...document.querySelectorAll('.slide')];
+  let cur = 0, step = 0, timer = null, notesWin = null, startedAt = null;
+
+  const params = new URLSearchParams(location.search);
+  const estate = params.get('estate');
+  if (estate) document.getElementById('estate').textContent = 'Prepared for ' + estate;
+
+  function fit() {
+    const s = Math.min(innerWidth / 1920, innerHeight / 1080);
+    stage.style.transform = `translate(${(innerWidth - 1920 * s) / 2}px, ${(innerHeight - 1080 * s) / 2}px) scale(${s})`;
+  }
+  addEventListener('resize', fit); fit();
+
+  const steps = (i) => parseInt(slides[i].dataset.steps || '0', 10);
+
+  function render() {
+    slides.forEach((s, i) => s.classList.toggle('active', i === cur));
+    const sl = slides[cur];
+    sl.querySelectorAll('.step').forEach(el => {
+      const i = +el.dataset.i;
+      el.classList.toggle('on', i === step);
+      el.classList.toggle('done', i < step);
+    });
+    sl.querySelectorAll('.screen-only .screen, .screen-only .shot').forEach(el => el.classList.toggle('on', +el.dataset.i === step));
+    sl.querySelectorAll('.dots i').forEach((el, i) => el.classList.toggle('on', i === step));
+    const n = steps(cur);
+    document.getElementById('hudpos').textContent = `Slide ${cur + 1}/${slides.length}` + (n ? ` - step ${step + 1}/${n}` : '');
+    document.getElementById('progress').style.width = ((cur + 1) / slides.length * 100) + '%';
+    history.replaceState(null, '', location.pathname + location.search + '#' + sl.id + (step ? '.' + (step + 1) : ''));
+    if (zoomed) showZoom();
+    updateNotes();
+  }
+
+  const zoom = document.getElementById('zoom');
+  let zoomed = false;
+  function zoomTarget() {
+    const img = slides[cur].querySelector('.screen-only .screen.on img, .screen-only .shot.on img');
+    if (!img) return null;
+    return { src: img.getAttribute('src'), phone: !!img.closest('.device') };
+  }
+  function showZoom() {
+    const t = zoomTarget();
+    if (!t) { hideZoom(); return; }
+    zoom.querySelector('img').src = t.src;
+    zoom.classList.toggle('phone', t.phone);
+    zoom.classList.add('on');
+  }
+  function hideZoom() { zoomed = false; zoom.classList.remove('on'); }
+  function toggleZoom() {
+    if (zoomed) { hideZoom(); return; }
+    if (!zoomTarget()) return;
+    zoomed = true; showZoom();
+  }
+  zoom.addEventListener('click', hideZoom);
+
+  function next() {
+    if (step < steps(cur) - 1) step++;
+    else if (cur < slides.length - 1) { cur++; step = 0; }
+    else return false;
+    render(); return true;
+  }
+  function prev() {
+    if (step > 0) step--;
+    else if (cur > 0) { cur--; step = Math.max(0, steps(cur) - 1); }
+    render();
+  }
+  function go(i, st = 0) { cur = Math.max(0, Math.min(slides.length - 1, i)); step = Math.max(0, Math.min(st, Math.max(0, steps(cur) - 1))); render(); }
+
+  function togglePlay() {
+    if (timer) { clearInterval(timer); timer = null; document.body.classList.remove('playing'); return; }
+    document.body.classList.add('playing');
+    const startSlide = cur;
+    timer = setInterval(() => {
+      if (step < steps(cur) - 1) { step++; render(); }
+      else { clearInterval(timer); timer = null; document.body.classList.remove('playing'); }
+    }, 4000);
+    if (steps(startSlide) === 0) togglePlay();
+  }
+
+  function full() {
+    if (document.fullscreenElement) document.exitFullscreen();
+    else document.documentElement.requestFullscreen();
+  }
+
+  function info(i) {
+    try { return JSON.parse(slides[i].dataset.notes || '{}'); } catch { return {}; }
+  }
+
+  function openNotes() {
+    if (!startedAt) startedAt = Date.now();
+    notesWin = window.open('', 'gs-notes', 'width=720,height=640');
+    if (!notesWin) return;
+    const d = notesWin.document;
+    d.open();
+    d.write(`<!DOCTYPE html><title>Presenter notes</title><style>
+      body{font:18px/1.5 Inter,system-ui,sans-serif;margin:24px;color:#111;background:#FAFAF7}
+      .k{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#1B5E3B;margin:18px 0 6px}
+      h1{font-size:26px;font-weight:600;margin:0}
+      .say{font-size:22px;background:#fff;border:1px solid #E4E4E7;border-radius:12px;padding:16px 18px}
+      .row{display:flex;justify-content:space-between;color:#6B7280;font-size:14px}
+      button{font:inherit;font-size:15px;border:1px solid #E4E4E7;background:#fff;border-radius:8px;padding:8px 14px;margin-right:8px;cursor:pointer}
+    </style><div class="row"><span id="pos"></span><span id="clock"></span></div>
+    <div class="k">Now</div><h1 id="t"></h1>
+    <div class="k">Say</div><div class="say" id="say"></div>
+    <div class="k">Note</div><div id="n"></div>
+    <div class="k">Next</div><div id="nx"></div>
+    <p><button id="b">Back</button><button id="f">Next</button><button id="p">Play</button></p>`);
+    d.close();
+    d.getElementById('b').onclick = prev;
+    d.getElementById('f').onclick = next;
+    d.getElementById('p').onclick = togglePlay;
+    d.addEventListener('keydown', onKey);
+    updateNotes();
+  }
+
+  function updateNotes() {
+    if (!notesWin || notesWin.closed) return;
+    const d = notesWin.document, it = info(cur);
+    const el = (id) => d.getElementById(id);
+    if (!el('t')) return;
+    const n = steps(cur);
+    el('pos').textContent = `Slide ${cur + 1} of ${slides.length}` + (n ? `, step ${step + 1} of ${n}` : '');
+    el('t').textContent = it.title || '';
+    el('say').textContent = (it.say && it.say[step]) || it.notes || '';
+    el('n').textContent = (it.say && it.say[step]) ? (it.notes || '') : '';
+    let nx;
+    if (step < n - 1) nx = 'Next step on this slide';
+    else nx = cur < slides.length - 1 ? info(cur + 1).title : 'End of deck';
+    el('nx').textContent = nx;
+  }
+  setInterval(() => {
+    if (!notesWin || notesWin.closed || !startedAt) return;
+    const s = Math.floor((Date.now() - startedAt) / 1000);
+    const c = notesWin.document.getElementById('clock');
+    if (c) c.textContent = `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')} elapsed`;
+  }, 1000);
+
+  let typed = '';
+  function onKey(e) {
+    const k = e.key;
+    if (['ArrowRight', 'PageDown', ' ', 'Enter'].includes(k) && !(k === 'Enter' && typed)) { e.preventDefault(); next(); }
+    else if (['ArrowLeft', 'PageUp', 'Backspace'].includes(k)) { e.preventDefault(); prev(); }
+    else if (k === 'Home') go(0);
+    else if (k === 'End') go(slides.length - 1);
+    else if (k === 'f' || k === 'F') full();
+    else if (k === 'p' || k === 'P') togglePlay();
+    else if (k === 'z' || k === 'Z') toggleZoom();
+    else if (k === 'Escape' && zoomed) hideZoom();
+    else if (k === 's' || k === 'S' || k === 'n' || k === 'N') openNotes();
+    else if (/^[0-9]$/.test(k)) { typed += k; return; }
+    else if (k === 'Enter' && typed) { go(parseInt(typed, 10) - 1); }
+    typed = '';
+  }
+  document.addEventListener('keydown', onKey);
+
+  document.getElementById('hud').addEventListener('click', (e) => {
+    const a = e.target.closest('button')?.dataset.act;
+    if (a === 'prev') prev(); else if (a === 'next') next();
+    else if (a === 'play') togglePlay(); else if (a === 'notes') openNotes(); else if (a === 'full') full();
+    else if (a === 'zoom') toggleZoom();
+  });
+  stage.addEventListener('click', (e) => {
+    const li = e.target.closest('.step');
+    if (li) { step = +li.dataset.i; render(); return; }
+    if (e.target.closest('.device, .monitor')) toggleZoom();
+  });
+
+  function fromHash() {
+    const m = location.hash.match(/^#(s\d+)(?:\.(\d+))?$/);
+    if (!m) return false;
+    const i = slides.findIndex(s => s.id === m[1]);
+    if (i < 0) return false;
+    cur = i; step = Math.max(0, Math.min((+m[2] || 1) - 1, Math.max(0, steps(i) - 1)));
+    return true;
+  }
+  addEventListener('hashchange', () => { if (fromHash()) render(); });
+  fromHash();
+  render();
+})();
+</script>
+</body>
+</html>
