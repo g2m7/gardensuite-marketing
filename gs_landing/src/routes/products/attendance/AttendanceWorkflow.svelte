@@ -1,5 +1,6 @@
 <script lang="ts">
 	import PhoneScreenshot from './PhoneScreenshot.svelte';
+	import InteractiveScaleDemo from '$lib/components/product/InteractiveScaleDemo.svelte';
 
 	const steps = [
 		{
@@ -43,6 +44,13 @@
 			>
 				One worker. One linked record.
 			</h2>
+			<p class="mt-4 text-[17px] leading-[1.6] text-text-secondary sm:text-[18px]">
+				Face verification and Bluetooth smart weighing working together in the field.
+			</p>
+		</div>
+
+		<div class="mb-14 flex justify-center md:mb-20">
+			<InteractiveScaleDemo />
 		</div>
 
 		<div class="grid gap-5 md:grid-cols-3">

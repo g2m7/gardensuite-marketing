@@ -55,41 +55,49 @@ test.describe('GardenSuite Acceptance Criteria', () => {
 		expect(content).toContain('"eagerness": "moderate"');
 	});
 
-	test('5. Interactive Scale Demo works correctly', async ({ page }) => {
-		await page.goto('/');
+	test('5. Scale & Phone Process Demo works correctly on attendance page', async ({ page }) => {
+		await page.goto('/products/attendance');
 
 		// Render verification
-		const demoSection = page
-			.locator('text=InteractiveScaleDemo')
-			.first()
-			.or(page.locator('.interactive-scale-demo').first())
-			.or(page.locator('button:has-text("Tare Scale")').first().locator('..').locator('..'));
-		// Actually let's just find the buttons
-		const tareButton = page.locator('button', { hasText: 'Tare Scale' });
-		const weighButton = page.locator('button', { hasText: 'Weigh Next Bag' });
+		const demoContainer = page.locator('[aria-label="Face verification and smart weighing live demonstration"]');
+		await expect(demoContainer).toBeVisible();
 
-		await expect(tareButton).toBeVisible();
-		await expect(weighButton).toBeVisible();
+		// Steps are visible
+		await expect(page.locator('text=Face verified').first()).toBeVisible();
+		await expect(page.locator('text=Weight locked').first()).toBeVisible();
+		await expect(page.locator('text=Record saved').first()).toBeVisible();
 
-		// State transition
-		await weighButton.click();
+		// Scale SVG is visible
+		const scaleSvg = demoContainer.locator('svg[aria-label="Bluetooth Hanging Scale weighing tea leaf"]');
+		await expect(scaleSvg).toBeVisible();
 
-		// displays stabilized weight 18.40 kg [LOCKED] and linked worker Kamala Devi
-		await expect(page.locator('text=18.40').first()).toBeVisible();
-		await expect(page.locator('text=Locked').first()).toBeVisible();
-		await expect(page.locator('text=Kamala Devi').first()).toBeVisible();
+		// Scroll into view so scroll-reveal triggers is-visible and opacity transitions to 1
+		await demoContainer.scrollIntoViewIfNeeded();
 
-		// Offline toggle
-		const offlineToggle = page
-			.locator('button', { hasText: 'Offline' })
-			.or(page.locator('input[type="checkbox"]'))
-			.or(page.locator('button', { hasText: 'Online' }));
-		if ((await offlineToggle.count()) > 0) {
-			// Try to toggle if it exists specifically
-			await offlineToggle.first().click();
-			// Just checking it works smoothly (no crash)
-			await page.waitForTimeout(500);
-		}
+		// Wait for Phase 1/2 to advance automatically and scroll-reveal opacity to reach 1
+		await page.waitForTimeout(3000);
+
+		// Verified that weight advances to 18.40 kg
+		await expect(demoContainer.getByText('18.40 kg', { exact: true })).toBeVisible();
+		await expect(demoContainer.locator('text=STABLE')).toBeVisible();
+
+		// Temporarily hide fixed navigation so it doesn't overlay top border of locator screenshot
+		await page.evaluate(() => {
+			const nav = document.querySelector('nav[aria-label="Main navigation"]');
+			if (nav) (nav as HTMLElement).style.visibility = 'hidden';
+		});
+
+		// Wait for animation to settle and take screenshot
+		await page.waitForTimeout(500);
+		await demoContainer.screenshot({
+			path: '/Users/g2m7/.gemini/antigravity/brain/2efd13ca-4627-4937-a6c7-a93aec9a71fa/attendance-dual-frame-demo.png'
+		});
+
+		// Restore navigation
+		await page.evaluate(() => {
+			const nav = document.querySelector('nav[aria-label="Main navigation"]');
+			if (nav) (nav as HTMLElement).style.visibility = 'visible';
+		});
 	});
 
 	test('6. Buttons have touch-action: manipulation and press feedback', async ({ page }) => {
