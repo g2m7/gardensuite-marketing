@@ -17,6 +17,8 @@
 </script>
 
 <!-- Exact wrapper classes from the homepage hero. -->
-<div class="flex w-full flex-col items-center justify-center gap-3 sm:w-auto sm:flex-row {className}">
+<div
+	class="flex w-full flex-col items-center justify-center gap-3 sm:w-auto sm:flex-row {className}"
+>
 	{@render children?.()}
 </div>

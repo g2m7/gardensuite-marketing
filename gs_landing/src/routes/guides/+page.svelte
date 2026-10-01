@@ -138,7 +138,9 @@
 				{ name: 'Guides', path: '/guides' }
 			]}
 		/>
-		<span class="mb-5 inline-block text-[13px] font-semibold tracking-[0.08em] text-green-deep uppercase">
+		<span
+			class="mb-5 inline-block text-[13px] font-semibold tracking-[0.08em] text-green-deep uppercase"
+		>
 			Guides
 		</span>
 		<h1
@@ -147,7 +149,9 @@
 		>
 			Tea Garden Operations Guides
 		</h1>
-		<p class="mt-6 max-w-2xl text-[18px] leading-[1.55] font-normal tracking-[-0.01em] text-text-secondary sm:text-[20px]">
+		<p
+			class="mt-6 max-w-2xl text-[18px] leading-[1.55] font-normal tracking-[-0.01em] text-text-secondary sm:text-[20px]"
+		>
 			Plain-language guides for estate owners, managers, and office staff. Written from tea garden
 			work, not software jargon. Built and supported by Sarbani Associates, Bagdogra, Siliguri.
 		</p>
@@ -179,19 +183,27 @@
 					</div>
 					<div class="mt-6 flex items-center gap-1 text-[13px] font-semibold text-green-deep">
 						<span>Read guide</span>
-						<span aria-hidden="true" class="transition-transform group-hover:translate-x-0.5">→</span>
+						<span aria-hidden="true" class="transition-transform group-hover:translate-x-0.5"
+							>→</span
+						>
 					</div>
 				</a>
 			{/each}
 		</div>
 
 		<!-- Glossary link -->
-		<div class="mt-16 mx-auto max-w-3xl rounded-md border border-border bg-surface p-8 text-center shadow-card">
-			<h2 class="font-display text-[22px] font-semibold tracking-[-0.02em] text-heading md:text-[26px]">
+		<div
+			class="mx-auto mt-16 max-w-3xl rounded-md border border-border bg-surface p-8 text-center shadow-card"
+		>
+			<h2
+				class="font-display text-[22px] font-semibold tracking-[-0.02em] text-heading md:text-[26px]"
+			>
 				Looking for a term instead?
 			</h2>
 			<p class="mx-auto mt-3 max-w-xl text-[16px] leading-[1.6] text-text-secondary">
-				The <a href="/tea-estate-glossary" class="font-semibold text-green-deep hover:underline focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-green-deep rounded-sm"
+				The <a
+					href="/tea-estate-glossary"
+					class="rounded-sm font-semibold text-green-deep hover:underline focus-visible:ring-1 focus-visible:ring-green-deep focus-visible:outline-none"
 					>tea estate glossary</a
 				> explains hazira, tikka, fine leaf, outturn, and other estate terms in one place.
 			</p>

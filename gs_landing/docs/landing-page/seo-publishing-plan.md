@@ -27,18 +27,18 @@ Rule: new articles never copy-paste page shells. Create the page, fill the props
 
 ### Pages shipped on 2026-09-17
 
-| # | URL                                    | Article                                          | Primary keyword                          |
-|---|----------------------------------------|--------------------------------------------------|------------------------------------------|
-| 1 | `/guides`                              | Guides hub (all articles)                        | tea garden guides                        |
-| 2 | `/guides/how-face-attendance-works-tea-garden` | How Face Attendance Works in a Tea Garden | face attendance tea garden               |
-| 3 | `/guides/tea-garden-attendance-without-internet` | Tea Garden Attendance Without Internet   | offline tea garden attendance            |
-| 4 | `/guides/mobile-attendance-to-estate-office` | How Mobile Attendance Reaches the Estate Office | attendance sync tea garden       |
-| 5 | `/guides/worker-face-enrollment-tea-garden` | Worker Face Enrollment Guide for Tea Gardens | face enrollment tea garden       |
-| 6 | `/guides/attendance-rollout-checklist-tea-garden` | Attendance and Weighing Rollout Checklist | tea garden attendance rollout    |
-| 7 | `/guides/paper-register-to-face-attendance` | Paper Register to Face Attendance            | paper muster roll to biometric           |
-| 8 | `/guides/punch-attendance-split-shifts-overtime` | Punch Attendance, Split Shifts and Overtime | punch attendance tea garden      |
-| 9 | `/guides/rainfall-deduction-fine-leaf-plucking` | Rainfall Deductions and Fine Leaf Checks   | wet leaf deduction tea garden    |
-| 10| `/guides/daily-plucking-task-assignment` | Daily Plucking Task Assignment                   | plucking task tea garden                 |
+| #   | URL                                               | Article                                         | Primary keyword                |
+| --- | ------------------------------------------------- | ----------------------------------------------- | ------------------------------ |
+| 1   | `/guides`                                         | Guides hub (all articles)                       | tea garden guides              |
+| 2   | `/guides/how-face-attendance-works-tea-garden`    | How Face Attendance Works in a Tea Garden       | face attendance tea garden     |
+| 3   | `/guides/tea-garden-attendance-without-internet`  | Tea Garden Attendance Without Internet          | offline tea garden attendance  |
+| 4   | `/guides/mobile-attendance-to-estate-office`      | How Mobile Attendance Reaches the Estate Office | attendance sync tea garden     |
+| 5   | `/guides/worker-face-enrollment-tea-garden`       | Worker Face Enrollment Guide for Tea Gardens    | face enrollment tea garden     |
+| 6   | `/guides/attendance-rollout-checklist-tea-garden` | Attendance and Weighing Rollout Checklist       | tea garden attendance rollout  |
+| 7   | `/guides/paper-register-to-face-attendance`       | Paper Register to Face Attendance               | paper muster roll to biometric |
+| 8   | `/guides/punch-attendance-split-shifts-overtime`  | Punch Attendance, Split Shifts and Overtime     | punch attendance tea garden    |
+| 9   | `/guides/rainfall-deduction-fine-leaf-plucking`   | Rainfall Deductions and Fine Leaf Checks        | wet leaf deduction tea garden  |
+| 10  | `/guides/daily-plucking-task-assignment`          | Daily Plucking Task Assignment                  | plucking task tea garden       |
 
 Migrated onto the template the same day (content kept, shells replaced):
 
@@ -82,12 +82,12 @@ Verification same day:
 
 One article promoted per day, in this order (highest buyer intent first):
 
-| Day       | Article                                      | Channel                                                       |
-|-----------|----------------------------------------------|---------------------------------------------------------------|
-| Tue 09-22 | How Face Attendance Works in a Tea Garden     | WhatsApp status, Sarbani LinkedIn page, client WhatsApp lists |
-| Wed 09-23 | Tea Garden Attendance Without Internet        | LinkedIn page post                                            |
-| Thu 09-24 | Paper Register to Face Attendance             | LinkedIn page post + owner WhatsApp lists                     |
-| Fri 09-25 | Attendance and Weighing Rollout Checklist     | LinkedIn page post                                            |
+| Day       | Article                                   | Channel                                                       |
+| --------- | ----------------------------------------- | ------------------------------------------------------------- |
+| Tue 09-22 | How Face Attendance Works in a Tea Garden | WhatsApp status, Sarbani LinkedIn page, client WhatsApp lists |
+| Wed 09-23 | Tea Garden Attendance Without Internet    | LinkedIn page post                                            |
+| Thu 09-24 | Paper Register to Face Attendance         | LinkedIn page post + owner WhatsApp lists                     |
+| Fri 09-25 | Attendance and Weighing Rollout Checklist | LinkedIn page post                                            |
 
 Distribution rules (from AGENTS.md outreach rules):
 
@@ -97,13 +97,13 @@ Distribution rules (from AGENTS.md outreach rules):
 
 ### Batch 3 - distribution 2026-09-28 to 2026-10-02
 
-| Day       | Article                                        | Channel                    |
-|-----------|------------------------------------------------|----------------------------|
-| Mon 09-28 | Worker Face Enrollment Guide                    | LinkedIn page post         |
-| Tue 09-29 | Daily Plucking Task Assignment                  | LinkedIn page post         |
-| Wed 09-30 | Rainfall Deductions and Fine Leaf Checks        | LinkedIn page post         |
-| Thu 10-01 | Punch Attendance, Split Shifts and Overtime     | LinkedIn page post         |
-| Fri 10-02 | How Tea Garden Hazira is Calculated (refresh)   | Reshare updated article    |
+| Day       | Article                                       | Channel                 |
+| --------- | --------------------------------------------- | ----------------------- |
+| Mon 09-28 | Worker Face Enrollment Guide                  | LinkedIn page post      |
+| Tue 09-29 | Daily Plucking Task Assignment                | LinkedIn page post      |
+| Wed 09-30 | Rainfall Deductions and Fine Leaf Checks      | LinkedIn page post      |
+| Thu 10-01 | Punch Attendance, Split Shifts and Overtime   | LinkedIn page post      |
+| Fri 10-02 | How Tea Garden Hazira is Calculated (refresh) | Reshare updated article |
 
 ### Batch 4 - 2026-10-05 to 2026-10-09
 

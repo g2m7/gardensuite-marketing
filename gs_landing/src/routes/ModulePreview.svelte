@@ -25,6 +25,8 @@
 		</div>
 		<div class="relative aspect-[16/9] overflow-hidden bg-white">
 			<img
+				width="800"
+				height="600"
 				{src}
 				{alt}
 				class="absolute inset-0 h-full w-full object-cover"
@@ -44,6 +46,8 @@
 		></div>
 		<div class="relative aspect-[9/19] overflow-hidden rounded-[1.2rem] bg-white">
 			<img
+				width="800"
+				height="600"
 				{src}
 				{alt}
 				class="absolute inset-0 h-full w-full object-cover"
@@ -58,6 +62,8 @@
 	<div class="overflow-hidden rounded-2xl border border-[#D4D4D8] bg-white shadow-sm">
 		<div class="relative aspect-[9/14] overflow-hidden bg-white">
 			<img
+				width="800"
+				height="600"
 				{src}
 				{alt}
 				class="absolute inset-0 h-full w-full object-cover"
@@ -97,7 +103,9 @@
 							<div class="text-[8px] font-semibold tracking-[0.04em] text-[#71717A] uppercase">
 								{label}
 							</div>
-							<div class="mt-1 text-[15px] font-bold text-[#111111]">{['284', '76', '208'][i]}</div>
+							<div class="mt-1 text-[15px] font-semibold text-[#111111]">
+								{['284', '76', '208'][i]}
+							</div>
 						</div>
 					{/each}
 				</div>
@@ -127,7 +135,7 @@
 							<div class="text-[8px] font-semibold tracking-[0.04em] text-[#71717A] uppercase">
 								{label}
 							</div>
-							<div class="mt-1 text-[14px] font-bold text-[#111111]">
+							<div class="mt-1 text-[14px] font-semibold text-[#111111]">
 								{['9,140 kg', '2,120 kg', 'Rs. 50.70'][i]}
 							</div>
 						</div>
@@ -188,7 +196,7 @@
 					<div class="text-[9px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase">
 						Linked record
 					</div>
-					<div class="mt-1 text-[12px] font-bold text-[#111111] sm:text-[13px]">
+					<div class="mt-1 text-[12px] font-semibold text-[#111111] sm:text-[13px]">
 						Verified + 35 kg
 					</div>
 				</div>

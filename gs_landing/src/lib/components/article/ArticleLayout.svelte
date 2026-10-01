@@ -123,7 +123,9 @@
 
 		<div class="grid items-start gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
 			<div class="max-w-[660px]">
-				<span class="mb-5 inline-block text-[13px] font-semibold tracking-[0.08em] text-green-deep uppercase">
+				<span
+					class="mb-5 inline-block text-[13px] font-semibold tracking-[0.08em] text-green-deep uppercase"
+				>
 					{kicker}
 				</span>
 				<h1
@@ -132,7 +134,9 @@
 				>
 					{headline}
 				</h1>
-				<p class="mt-6 text-[18px] leading-[1.55] font-normal tracking-[-0.01em] text-text-secondary sm:text-[20px]">
+				<p
+					class="mt-6 text-[18px] leading-[1.55] font-normal tracking-[-0.01em] text-text-secondary sm:text-[20px]"
+				>
 					{lede}
 				</p>
 				<div class="mt-6 flex flex-wrap items-center gap-x-2.5 gap-y-1 text-[13px] text-muted">
@@ -179,9 +183,11 @@
 <!-- Article body & Sidebar (full site container width 1344px) -->
 <div class="border-b border-border bg-white py-16 md:py-24">
 	<div class="mx-auto max-w-[1344px] px-6 md:px-12">
-		<div class="grid items-start gap-12 lg:grid-cols-[1fr_360px] xl:grid-cols-[1fr_380px] lg:gap-16">
+		<div
+			class="grid items-start gap-12 lg:grid-cols-[1fr_360px] lg:gap-16 xl:grid-cols-[1fr_380px]"
+		>
 			<!-- Main reading column -->
-			<main class="min-w-0 max-w-[800px]">
+			<main class="max-w-[800px] min-w-0">
 				{#if media && answer}
 					<div class="mb-12">
 						{@render media()}
@@ -197,7 +203,9 @@
 						aria-label="Schedule a demonstration"
 						class="mt-14 rounded-md border border-border bg-surface p-6 shadow-card md:p-8"
 					>
-						<p class="font-display text-[22px] font-semibold leading-[1.2] tracking-[-0.02em] text-heading">
+						<p
+							class="font-display text-[22px] leading-[1.2] font-semibold tracking-[-0.02em] text-heading"
+						>
 							{ctaHeadline}
 						</p>
 						<p class="mt-2 text-[16px] leading-[1.6] text-text-secondary">{ctaParagraph}</p>
@@ -243,22 +251,39 @@
 					<!-- On-site Demo CTA Card -->
 					<div class="rounded-md border border-border bg-white p-6 shadow-card">
 						<div class="flex items-center gap-2">
-							<span class="inline-block h-2 w-2 rounded-full bg-green-deep" aria-hidden="true"></span>
+							<span class="inline-block h-2 w-2 rounded-full bg-green-deep" aria-hidden="true"
+							></span>
 							<p class="text-[13px] font-semibold tracking-[0.08em] text-green-deep uppercase">
 								Free On-Site Demo
 							</p>
 						</div>
-						<p class="mt-2.5 font-display text-[17px] font-semibold tracking-[-0.01em] text-heading">
+						<p
+							class="mt-2.5 font-display text-[17px] font-semibold tracking-[-0.01em] text-heading"
+						>
 							Test this in your garden
 						</p>
 						<p class="mt-2 text-[14px] leading-[1.6] text-text-secondary">
-							Sarbani Associates configures field tablets with your sections and work codes, then trains your supervisors on site.
+							Sarbani Associates configures field tablets with your sections and work codes, then
+							trains your supervisors on site.
 						</p>
 						<div class="mt-5 space-y-2.5">
-							<Button href="/#contact" label="Book Free Demo" variant="primary" showIcon class="w-full justify-center" />
-							<Button href="mailto:sarbaniassociates@gmail.com" label="Email Us" variant="secondary" class="w-full justify-center" />
+							<Button
+								href="/#contact"
+								label="Book Free Demo"
+								variant="primary"
+								showIcon
+								class="w-full justify-center"
+							/>
+							<Button
+								href="mailto:sarbaniassociates@gmail.com"
+								label="Email Us"
+								variant="secondary"
+								class="w-full justify-center"
+							/>
 						</div>
-						<p class="mt-4 text-center text-[11px] font-semibold tracking-[0.04em] text-muted uppercase">
+						<p
+							class="mt-4 text-center text-[11px] font-semibold tracking-[0.04em] text-muted uppercase"
+						>
 							Bagdogra, Siliguri · 20+ Tea Estates
 						</p>
 					</div>
@@ -276,11 +301,13 @@
 											href={link.href}
 											class="group block rounded-sm transition-colors focus-visible:ring-1 focus-visible:ring-green-deep focus-visible:outline-none"
 										>
-											<p class="text-[15px] font-semibold tracking-[-0.01em] text-heading group-hover:text-green-deep">
+											<p
+												class="text-[15px] font-semibold tracking-[-0.01em] text-heading group-hover:text-green-deep"
+											>
 												{link.label}
 											</p>
 											{#if link.note}
-												<p class="mt-1 text-[13px] leading-[1.6] text-text-secondary line-clamp-2">
+												<p class="mt-1 line-clamp-2 text-[13px] leading-[1.6] text-text-secondary">
 													{link.note}
 												</p>
 											{/if}
@@ -307,7 +334,8 @@
 								href={link.href}
 								class="group block rounded-md border border-border bg-white p-5 shadow-card transition-colors hover:border-border-strong focus-visible:ring-2 focus-visible:ring-green-deep focus-visible:outline-none"
 							>
-								<span class="text-[15px] font-semibold tracking-[-0.01em] text-heading group-hover:text-green-deep"
+								<span
+									class="text-[15px] font-semibold tracking-[-0.01em] text-heading group-hover:text-green-deep"
 									>{link.label}</span
 								>
 								{#if link.note}
@@ -337,7 +365,11 @@
 <!-- Bottom CTA -->
 <section class="border-t border-border bg-white py-20 text-center">
 	<div class="mx-auto max-w-2xl px-6">
-		<h2 class="font-display text-3xl font-semibold leading-[1.1] tracking-[-0.04em] text-heading sm:text-4xl">{bottomCtaHeadline}</h2>
+		<h2
+			class="font-display text-3xl leading-[1.1] font-semibold tracking-[-0.04em] text-heading sm:text-4xl"
+		>
+			{bottomCtaHeadline}
+		</h2>
 		<p class="mt-4 text-[16px] leading-[1.6] text-text-secondary">{bottomCtaParagraph}</p>
 		<ButtonGroup class="mt-8 justify-center">
 			<Button href="/#contact" label="Book Free Demo" variant="primary" showIcon />

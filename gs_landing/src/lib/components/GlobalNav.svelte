@@ -85,11 +85,18 @@
 	}
 
 	$effect(() => {
+		let ticking = false;
 		const handler = () => {
-			let p = window.scrollY / 100;
-			if (p < 0) p = 0;
-			if (p > 1) p = 1;
-			navProgress = p;
+			if (!ticking) {
+				window.requestAnimationFrame(() => {
+					let p = window.scrollY / 100;
+					if (p < 0) p = 0;
+					if (p > 1) p = 1;
+					navProgress = p;
+					ticking = false;
+				});
+				ticking = true;
+			}
 		};
 
 		window.addEventListener('scroll', handler, { passive: true });
@@ -110,14 +117,6 @@
 			coveredSurfaces.forEach((element) => (element.inert = false));
 		};
 	});
-
-	let navStyles = $derived(`
-		background-color: rgba(255, 255, 255, ${scrollAnimated ? navProgress : 0.8});
-		backdrop-filter: blur(${scrollAnimated ? navProgress * 24 : 12}px);
-		-webkit-backdrop-filter: blur(${scrollAnimated ? navProgress * 24 : 12}px);
-		border-bottom: 1px solid rgba(0, 0, 0, ${scrollAnimated ? navProgress * 0.05 : 0.05});
-		transition: color 0.3s ease;
-	`);
 </script>
 
 <div role="presentation" onclick={handleClickOutside} onkeydown={handleProductsKeydown}>
@@ -131,10 +130,14 @@
 
 	<!-- Desktop Nav -->
 	<nav
-		class="fixed top-0 z-[60] flex w-full items-center justify-between px-6 py-4 transition-colors md:px-14"
-		style={navStyles}
+		class="fixed top-0 z-[60] flex w-full items-center justify-between px-6 py-4 md:px-14"
 		aria-label="Main navigation"
 	>
+		<div
+			class="absolute inset-0 z-[-1] border-b border-black/5 bg-white"
+			style="opacity: {scrollAnimated ? navProgress : 1}; will-change: opacity;"
+			aria-hidden="true"
+		></div>
 		<a href="/" class="flex items-center gap-2" aria-label="GardenSuite Home">
 			<GsLogoAnimation class="h-7 w-auto shrink-0" />
 			<span
@@ -154,14 +157,11 @@
 	{#if mobileNavOpen}
 		<!-- svelte-ignore a11y_click_events_have_key_events -->
 		<!-- svelte-ignore a11y_no_static_element_interactions -->
-		<div
-			class="fixed inset-0 z-[55] bg-black/20 backdrop-blur-sm md:hidden"
-			onclick={() => closeMobileNav()}
-		></div>
+		<div class="fixed inset-0 z-[55] bg-black/40 md:hidden" onclick={() => closeMobileNav()}></div>
 		<div
 			id="mobile-navigation-panel"
 			bind:this={mobileMenuPanel}
-			class="fixed inset-x-0 top-0 z-[58] flex flex-col bg-white/95 px-6 pt-20 pb-8 shadow-[0_10px_28px_rgba(0,0,0,0.10)] backdrop-blur-xl md:hidden"
+			class="fixed inset-x-0 top-0 z-[58] flex flex-col bg-white px-6 pt-20 pb-8 shadow-[0_10px_28px_rgba(0,0,0,0.10)] md:hidden"
 			style="overscroll-behavior: contain;"
 			role="dialog"
 			tabindex="-1"

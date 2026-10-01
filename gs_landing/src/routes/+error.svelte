@@ -22,14 +22,14 @@
 
 	let description = $derived(
 		status === 404
-			? "The page you are looking for does not exist or has been moved. Let us help you find your way back."
+			? 'The page you are looking for does not exist or has been moved. Let us help you find your way back.'
 			: status === 500
-				? "Our server ran into a problem. Please try again in a few moments."
+				? 'Our server ran into a problem. Please try again in a few moments.'
 				: status === 503
-					? "We are performing maintenance. Please check back shortly."
+					? 'We are performing maintenance. Please check back shortly.'
 					: status === 403
-						? "You do not have permission to view this page."
-						: "An unexpected error occurred. Please try again."
+						? 'You do not have permission to view this page.'
+						: 'An unexpected error occurred. Please try again.'
 	);
 
 	// Floating leaf animation state
@@ -124,7 +124,7 @@
 				: 'translate-y-6 opacity-0'}"
 		>
 			<span
-				class="inline-flex items-center rounded-full border border-[#E4E4E7] bg-[#F8FAF8] px-4 py-1.5 text-[13px] font-semibold tracking-[0.08em] uppercase text-[#1B5E3B]"
+				class="inline-flex items-center rounded-full border border-[#E4E4E7] bg-[#F8FAF8] px-4 py-1.5 text-[13px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase"
 			>
 				Error {status}
 			</span>
@@ -132,7 +132,7 @@
 
 		<!-- Heading -->
 		<h1
-			class="mb-5 font-display text-[28px] leading-[1.08] font-semibold tracking-[-0.04em] text-[#111111] md:text-[36px] transition-all delay-150 duration-700 ease-out {mounted
+			class="mb-5 font-display text-[28px] leading-[1.08] font-semibold tracking-[-0.04em] text-[#111111] transition-all delay-150 duration-700 ease-out md:text-[36px] {mounted
 				? 'translate-y-0 opacity-100'
 				: 'translate-y-6 opacity-0'}"
 		>
@@ -148,15 +148,15 @@
 			{description}
 		</p>
 
-			<!-- CTAs -->
-			<ButtonGroup
-				class="transition-all delay-[250ms] duration-700 ease-out {mounted
-					? 'translate-y-0 opacity-100'
-					: 'translate-y-6 opacity-0'}"
-			>
-				<Button href="/" label="Go to Homepage" variant="primary" showIcon size="lg" />
-				<Button href="/#contact" label="Contact Support" variant="secondary" size="lg" />
-			</ButtonGroup>
+		<!-- CTAs -->
+		<ButtonGroup
+			class="transition-all delay-[250ms] duration-700 ease-out {mounted
+				? 'translate-y-0 opacity-100'
+				: 'translate-y-6 opacity-0'}"
+		>
+			<Button href="/" label="Go to Homepage" variant="primary" showIcon size="lg" />
+			<Button href="/#contact" label="Contact Support" variant="secondary" size="lg" />
+		</ButtonGroup>
 
 		<!-- Server message (dev detail, subtle) -->
 		{#if message && message !== heading}

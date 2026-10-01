@@ -36,7 +36,7 @@
 	// Base classes copied exactly from the homepage hero anchor tags.
 	// Do not change without verifying visual parity against the homepage.
 	const base =
-		'flex w-full items-center justify-center rounded-full transition duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 active:scale-[0.97] sm:w-auto';
+		'group flex w-full items-center justify-center rounded-full transition-[transform,background-color,border-color,color] duration-150 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B5E3B]/30 active:scale-[0.97] touch-manipulation sm:w-auto';
 
 	const variants = {
 		primary: 'bg-[#1B5E3B] text-white shadow-[0_4px_12px_rgba(0,0,0,0.10)] hover:bg-[#144723]',
@@ -57,7 +57,14 @@
 <a {href} class={classes} {target} {onclick}>
 	<span>{label}</span>
 	{#if showIcon && variant === 'primary'}
-		<svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="shrink-0" aria-hidden="true">
+		<svg
+			width="14"
+			height="14"
+			viewBox="0 0 14 14"
+			fill="none"
+			class="shrink-0 transition-transform duration-150 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:translate-x-0.5"
+			aria-hidden="true"
+		>
 			<path
 				d="M5 2.5l4.5 4.5L5 11.5"
 				stroke="currentColor"

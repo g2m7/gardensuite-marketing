@@ -51,17 +51,17 @@ Still to verify before launch:
 
 Use keywords naturally. Clarity is more important than stuffing.
 
-| Page                                   | Primary Keyword                      | Support Keywords                                                                       |
-| -------------------------------------- | ------------------------------------ | -------------------------------------------------------------------------------------- |
-| `/`                                    | tea garden ERP software              | tea garden software, tea estate management system, tea garden management software      |
-| `/products/attendance`                 | tea garden attendance system         | face attendance tea garden, smart weighing tea garden, biometric attendance tea estate |
-| `/products/attendance/face-attendance` | face attendance for tea gardens      | tea garden biometric attendance, hazira face attendance, punch attendance tea garden   |
-| `/products/attendance/smart-weighing`  | smart weighing for tea gardens       | Bluetooth leaf weighing, tea garden wireless scale, linked plucking weight             |
-| `/products/attendance/offline-sync`    | offline tea garden attendance        | attendance sync tea garden, office attendance review, offline field attendance         |
-| `/products/payroll`                    | tea garden payroll software          | tea estate wage calculation, hazira calculation software, PF ESI payroll tea garden    |
-| `/products/factory`                    | tea factory production software      | made tea production tracking, manufacturing cost per kg tea                            |
-| `/products/stores`                     | tea garden store management software | tea estate inventory software, fertilizer stock tracking                               |
-| `/products/mis`                        | tea garden MIS dashboard             | tea estate daily report, tea garden online dashboard                                   |
+| Page                                   | Primary Keyword                      | Support Keywords                                                                          |
+| -------------------------------------- | ------------------------------------ | ----------------------------------------------------------------------------------------- |
+| `/`                                    | tea garden ERP software              | tea garden software, tea estate management system, tea garden management software         |
+| `/products/attendance`                 | tea garden attendance system         | face attendance tea garden, smart weighing tea garden, biometric attendance tea estate    |
+| `/products/attendance/face-attendance` | face attendance for tea gardens      | tea garden biometric attendance, hazira face attendance, punch attendance tea garden      |
+| `/products/attendance/smart-weighing`  | smart weighing for tea gardens       | Bluetooth leaf weighing, tea garden wireless scale, linked plucking weight                |
+| `/products/attendance/offline-sync`    | offline tea garden attendance        | attendance sync tea garden, office attendance review, offline field attendance            |
+| `/products/payroll`                    | tea garden payroll software          | tea estate wage calculation, hazira calculation software, PF ESI payroll tea garden       |
+| `/products/factory`                    | tea factory production software      | made tea production tracking, manufacturing cost per kg tea                               |
+| `/products/stores`                     | tea garden store management software | tea estate inventory software, fertilizer stock tracking                                  |
+| `/products/mis`                        | tea garden MIS dashboard             | tea estate daily report, tea garden online dashboard                                      |
 | `/erp-for-tea-industry`                | erp for tea industry                 | tea erp software, tea garden management system, accounting software for tea manufacturing |
 
 ## Title Rules

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount, onDestroy } from 'svelte';
 	import { fly } from 'svelte/transition';
+	import InteractiveScaleDemo from '$lib/components/product/InteractiveScaleDemo.svelte';
 	import ModulePreview from './ModulePreview.svelte';
 	import SeoHead from '$lib/seo/SeoHead.svelte';
 	import ComparisonTable from '$lib/components/product/ComparisonTable.svelte';
@@ -355,7 +356,9 @@
 		<!-- HERO (unchanged)                                           -->
 		<!-- ═══════════════════════════════════════════════════════════ -->
 		<section class="hero-parallax relative w-full" aria-label="Hero">
-			<picture class="hero-sky-wrapper pointer-events-none absolute inset-0 z-0 h-full w-full overflow-hidden">
+			<picture
+				class="hero-sky-wrapper pointer-events-none absolute inset-0 z-0 h-full w-full overflow-hidden"
+			>
 				<source srcset="/hero-sky.webp" type="image/webp" />
 				<img
 					src="/hero-sky.png"
@@ -364,7 +367,6 @@
 					width="1024"
 					height="1024"
 					loading="eager"
-					fetchpriority="high"
 				/>
 			</picture>
 
@@ -394,7 +396,9 @@
 			<div
 				class="hero-visuals relative -mt-6 h-[540px] w-full overflow-visible md:-mt-4 md:h-[720px] lg:h-[840px]"
 			>
-				<picture class="hero-bg-wrapper pointer-events-none absolute inset-0 z-[1] h-full w-full overflow-hidden">
+				<picture
+					class="hero-bg-wrapper pointer-events-none absolute inset-0 z-[1] h-full w-full overflow-hidden"
+				>
 					<source srcset="/bg-960.webp 960w, /bg-1920.webp 1920w" sizes="100vw" type="image/webp" />
 					<img
 						src="/bg.png"
@@ -404,7 +408,6 @@
 						width="1920"
 						height="1075"
 						loading="eager"
-						fetchpriority="high"
 					/>
 				</picture>
 
@@ -485,7 +488,6 @@
 							width="1920"
 							height="1075"
 							loading="eager"
-							fetchpriority="high"
 						/>
 					</picture>
 					<picture>
@@ -689,6 +691,27 @@
 		<!-- ═══════════════════════════════════════════════════════════ -->
 		<!-- PRODUCT GRID                                               -->
 		<!-- ═══════════════════════════════════════════════════════════ -->
+		<section
+			class="reveal-on-scroll relative w-full border-b border-[#E4E4E7] bg-white py-20 md:py-28"
+			aria-label="Interactive Scale Demonstration"
+		>
+			<div class="mx-auto flex max-w-[1344px] flex-col items-center px-6 md:px-12">
+				<div class="mb-10 max-w-2xl text-center">
+					<span
+						class="mb-3 inline-block text-[13px] font-semibold tracking-[0.08em] text-[#1B5E3B] uppercase"
+					>
+						Hardware In Action
+					</span>
+					<h2
+						class="text-[28px] leading-[1.08] font-semibold tracking-[-0.04em] text-[#111111] md:text-[36px]"
+						style="text-wrap: balance"
+					>
+						Verified scale weight linked directly to worker identity
+					</h2>
+				</div>
+				<InteractiveScaleDemo />
+			</div>
+		</section>
 		<section
 			id="products"
 			class="reveal-on-scroll relative w-full scroll-mt-20 overflow-hidden bg-gradient-to-b from-[#F8FAF8] to-white py-24 md:py-32"
@@ -987,8 +1010,10 @@
 
 					<div class="border-b border-[#E4E4E7] p-7 md:border-b">
 						<div class="mb-6 flex items-end justify-between">
-							<div class="text-[34px] font-semibold tracking-[-0.02em] text-[#111111]">20+</div>
-							<div class="text-[26px] font-semibold text-[#A1A1AA]">7</div>
+							<div class="text-[34px] font-semibold tracking-[-0.02em] text-[#111111] tabular-nums">
+								20+
+							</div>
+							<div class="text-[26px] font-semibold text-[#A1A1AA] tabular-nums">7</div>
 						</div>
 						<div class="mb-4 h-2 rounded-full bg-[#F4F4F5]">
 							<div
@@ -1006,7 +1031,7 @@
 						<div class="rounded-2xl border border-[#E4E4E7] bg-[#FAFAF7] p-5">
 							<div class="mb-2 flex items-center justify-between text-[16px]">
 								<span class="text-[#52525B]">Offline runtime</span>
-								<span class="font-semibold text-[#111111]">99.9%</span>
+								<span class="font-semibold text-[#111111] tabular-nums">99.9%</span>
 							</div>
 							<div class="grid grid-cols-8 gap-1.5">
 								{#each Array(32) as _, i}
@@ -1697,5 +1722,11 @@
 			transform: none;
 			transition: none;
 		}
+	}
+
+	:global(.split-word-mask) {
+		display: inline-block;
+		overflow: hidden;
+		vertical-align: top;
 	}
 </style>

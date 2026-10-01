@@ -92,7 +92,7 @@
 {#if visible}
 	<div
 		bind:this={preloaderEl}
-		class="cinematic-preloader fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#0d1410] text-white select-none pointer-events-auto"
+		class="cinematic-preloader pointer-events-auto fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#0d1410] text-white select-none"
 		aria-hidden="true"
 	>
 		<div bind:this={brandEl} class="flex flex-col items-center gap-3.5">

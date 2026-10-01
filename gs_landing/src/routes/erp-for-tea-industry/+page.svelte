@@ -148,86 +148,135 @@
 				The Complete Operating System for Tea Estates
 			</h2>
 			<p class="mt-4 text-base text-[#52525B] md:text-lg">
-				GardenSuite connects every stage of tea production, eliminating disjointed spreadsheets, paper muster rolls, and manual calculation delays.
+				GardenSuite connects every stage of tea production, eliminating disjointed spreadsheets,
+				paper muster rolls, and manual calculation delays.
 			</p>
 		</div>
 
 		<div class="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
 			<!-- Module 1: Attendance & Smart Scale -->
-			<div class="flex flex-col justify-between rounded-2xl border border-[#E4E4E7] bg-[#FAFAFA] p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
+			<div
+				class="flex flex-col justify-between rounded-2xl border border-[#E4E4E7] bg-[#FAFAFA] p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04)]"
+			>
 				<div>
-					<div class="text-xs font-semibold tracking-wider text-[#1B5E3B] uppercase">Module 01 / Field Operations</div>
+					<div class="text-xs font-semibold tracking-wider text-[#1B5E3B] uppercase">
+						Module 01 / Field Operations
+					</div>
 					<h3 class="mt-3 text-xl font-semibold text-[#111111]">Face Attendance & Smart Scale</h3>
 					<p class="mt-3 text-sm leading-relaxed text-[#52525B]">
-						Munshis scan pluckers via offline mobile tablets in under 1 second. Digital Bluetooth hanging scales capture net leaf weight directly to the verified worker record with automatic tare deduction.
+						Munshis scan pluckers via offline mobile tablets in under 1 second. Digital Bluetooth
+						hanging scales capture net leaf weight directly to the verified worker record with
+						automatic tare deduction.
 					</p>
 				</div>
-				<div class="mt-6 pt-4 border-t border-[#E4E4E7]">
-					<a href="/products/attendance" class="inline-flex items-center text-sm font-medium text-[#1B5E3B] hover:underline">
+				<div class="mt-6 border-t border-[#E4E4E7] pt-4">
+					<a
+						href="/products/attendance"
+						class="inline-flex items-center text-sm font-medium text-[#1B5E3B] hover:underline"
+					>
 						Explore attendance & scales →
 					</a>
 				</div>
 			</div>
 
 			<!-- Module 2: Worker Payroll & Statutory Wages -->
-			<div class="flex flex-col justify-between rounded-2xl border border-[#E4E4E7] bg-[#FAFAFA] p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
+			<div
+				class="flex flex-col justify-between rounded-2xl border border-[#E4E4E7] bg-[#FAFAFA] p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04)]"
+			>
 				<div>
-					<div class="text-xs font-semibold tracking-wider text-[#1B5E3B] uppercase">Module 02 / Office & Payroll</div>
+					<div class="text-xs font-semibold tracking-wider text-[#1B5E3B] uppercase">
+						Module 02 / Office & Payroll
+					</div>
 					<h3 class="mt-3 text-xl font-semibold text-[#111111]">Labor Payroll & Compliance</h3>
 					<p class="mt-3 text-sm leading-relaxed text-[#52525B]">
-						Directly converts verified attendance and plucking kilograms into comprehensive wage sheets. Automatically calculates task hazira, double hazira, tikka, plucking incentives, PF, and ESI deductions.
+						Directly converts verified attendance and plucking kilograms into comprehensive wage
+						sheets. Automatically calculates task hazira, double hazira, tikka, plucking incentives,
+						PF, and ESI deductions.
 					</p>
 				</div>
-				<div class="mt-6 pt-4 border-t border-[#E4E4E7]">
-					<a href="/products/payroll" class="inline-flex items-center text-sm font-medium text-[#1B5E3B] hover:underline">
+				<div class="mt-6 border-t border-[#E4E4E7] pt-4">
+					<a
+						href="/products/payroll"
+						class="inline-flex items-center text-sm font-medium text-[#1B5E3B] hover:underline"
+					>
 						Explore payroll automation →
 					</a>
 				</div>
 			</div>
 
 			<!-- Module 3: Factory Production & Made Tea -->
-			<div class="flex flex-col justify-between rounded-2xl border border-[#E4E4E7] bg-[#FAFAFA] p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
+			<div
+				class="flex flex-col justify-between rounded-2xl border border-[#E4E4E7] bg-[#FAFAFA] p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04)]"
+			>
 				<div>
-					<div class="text-xs font-semibold tracking-wider text-[#1B5E3B] uppercase">Module 03 / Tea Manufacturing</div>
+					<div class="text-xs font-semibold tracking-wider text-[#1B5E3B] uppercase">
+						Module 03 / Tea Manufacturing
+					</div>
 					<h3 class="mt-3 text-xl font-semibold text-[#111111]">Factory Production & Outturn</h3>
 					<p class="mt-3 text-sm leading-relaxed text-[#52525B]">
-						Tracks green leaf intake from estate divisions and bought leaf suppliers. Monitors withering, rolling, fermentation, drying, grading, packing, and dispatch challans with exact outturn percentages.
+						Tracks green leaf intake from estate divisions and bought leaf suppliers. Monitors
+						withering, rolling, fermentation, drying, grading, packing, and dispatch challans with
+						exact outturn percentages.
 					</p>
 				</div>
-				<div class="mt-6 pt-4 border-t border-[#E4E4E7]">
-					<a href="/products/factory" class="inline-flex items-center text-sm font-medium text-[#1B5E3B] hover:underline">
+				<div class="mt-6 border-t border-[#E4E4E7] pt-4">
+					<a
+						href="/products/factory"
+						class="inline-flex items-center text-sm font-medium text-[#1B5E3B] hover:underline"
+					>
 						Explore factory production →
 					</a>
 				</div>
 			</div>
 
 			<!-- Module 4: Stores & Chemical Inventory -->
-			<div class="flex flex-col justify-between rounded-2xl border border-[#E4E4E7] bg-[#FAFAFA] p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
+			<div
+				class="flex flex-col justify-between rounded-2xl border border-[#E4E4E7] bg-[#FAFAFA] p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04)]"
+			>
 				<div>
-					<div class="text-xs font-semibold tracking-wider text-[#1B5E3B] uppercase">Module 04 / Materials & Stock</div>
+					<div class="text-xs font-semibold tracking-wider text-[#1B5E3B] uppercase">
+						Module 04 / Materials & Stock
+					</div>
 					<h3 class="mt-3 text-xl font-semibold text-[#111111]">Store & Inventory Management</h3>
 					<p class="mt-3 text-sm leading-relaxed text-[#52525B]">
-						Controls stock intake, division issue, and reorder levels for agricultural inputs: fertilizers, pesticides, diesel for generators and tractors, spare parts, and plucking baskets.
+						Controls stock intake, division issue, and reorder levels for agricultural inputs:
+						fertilizers, pesticides, diesel for generators and tractors, spare parts, and plucking
+						baskets.
 					</p>
 				</div>
-				<div class="mt-6 pt-4 border-t border-[#E4E4E7]">
-					<a href="/products/stores" class="inline-flex items-center text-sm font-medium text-[#1B5E3B] hover:underline">
+				<div class="mt-6 border-t border-[#E4E4E7] pt-4">
+					<a
+						href="/products/stores"
+						class="inline-flex items-center text-sm font-medium text-[#1B5E3B] hover:underline"
+					>
 						Explore store inventory →
 					</a>
 				</div>
 			</div>
 
 			<!-- Module 5: Executive Cloud MIS Dashboard -->
-			<div class="flex flex-col justify-between rounded-2xl border border-[#E4E4E7] bg-[#FAFAFA] p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04)] lg:col-span-2">
+			<div
+				class="flex flex-col justify-between rounded-2xl border border-[#E4E4E7] bg-[#FAFAFA] p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04)] lg:col-span-2"
+			>
 				<div>
-					<div class="text-xs font-semibold tracking-wider text-[#1B5E3B] uppercase">Module 05 / Executive Oversight</div>
+					<div class="text-xs font-semibold tracking-wider text-[#1B5E3B] uppercase">
+						Module 05 / Executive Oversight
+					</div>
 					<h3 class="mt-3 text-xl font-semibold text-[#111111]">Daily Executive MIS Dashboard</h3>
 					<p class="mt-3 text-sm leading-relaxed text-[#52525B]">
-						Estate owners, directors, and visiting agents do not need to wait for weekly physical dispatches or telephone briefings. Access daily plucking totals, cost per kg, factory made tea outturn, and labor turnout percentages on your phone, tablet, or laptop every evening.
+						Estate owners, directors, and visiting agents do not need to wait for weekly physical
+						dispatches or telephone briefings. Access daily plucking totals, cost per kg, factory
+						made tea outturn, and labor turnout percentages on your phone, tablet, or laptop every
+						evening.
 					</p>
 				</div>
-				<div class="mt-6 pt-4 border-t border-[#E4E4E7] flex flex-wrap items-center justify-between gap-4">
-					<a href="/products/mis" class="inline-flex items-center text-sm font-medium text-[#1B5E3B] hover:underline">
+				<div
+					class="mt-6 flex flex-wrap items-center justify-between gap-4 border-t border-[#E4E4E7] pt-4"
+				>
+					<a
+						href="/products/mis"
+						class="inline-flex items-center text-sm font-medium text-[#1B5E3B] hover:underline"
+					>
 						Preview executive dashboard →
 					</a>
 					<span class="text-xs text-[#71717A]">Accessible on iOS, Android, macOS & Windows</span>
@@ -241,7 +290,16 @@
 				<div>
 					<h4 class="text-lg font-semibold text-[#111111]">Regional Tea Garden Operations</h4>
 					<p class="mt-1 text-sm text-[#52525B]">
-						Read about our tailored deployments in <a href="/tea-garden-software-assam" class="text-[#1B5E3B] underline font-medium">Assam</a>, <a href="/tea-garden-software-dooars-terai" class="text-[#1B5E3B] underline font-medium">Dooars & Terai</a>, and <a href="/tea-garden-software-darjeeling" class="text-[#1B5E3B] underline font-medium">Darjeeling</a>.
+						Read about our tailored deployments in <a
+							href="/tea-garden-software-assam"
+							class="font-medium text-[#1B5E3B] underline">Assam</a
+						>,
+						<a href="/tea-garden-software-dooars-terai" class="font-medium text-[#1B5E3B] underline"
+							>Dooars & Terai</a
+						>, and
+						<a href="/tea-garden-software-darjeeling" class="font-medium text-[#1B5E3B] underline"
+							>Darjeeling</a
+						>.
 					</p>
 				</div>
 				<Button href={demoHref} label="Book Regional Demo" variant="primary" showIcon />
@@ -270,11 +328,16 @@
 			Request an On-Site ERP Demonstration
 		</h2>
 		<p class="mt-4 text-base text-[#52525B]">
-			See how GardenSuite streamlines field attendance, plucking weighment, factory tracking, and owner reports for your tea estate.
+			See how GardenSuite streamlines field attendance, plucking weighment, factory tracking, and
+			owner reports for your tea estate.
 		</p>
 		<ButtonGroup class="mt-8 justify-center">
 			<Button href={demoHref} label="Schedule Free On-Site Demo" variant="primary" showIcon />
-			<Button href="mailto:sarbaniassociates@gmail.com?subject=GardenSuite%20Tea%20ERP%20Inquiry" label="Email Sarbani Associates" variant="secondary" />
+			<Button
+				href="mailto:sarbaniassociates@gmail.com?subject=GardenSuite%20Tea%20ERP%20Inquiry"
+				label="Email Sarbani Associates"
+				variant="secondary"
+			/>
 		</ButtonGroup>
 	</div>
 </section>

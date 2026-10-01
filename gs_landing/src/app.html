@@ -12,16 +12,19 @@
 			media="(prefers-color-scheme: dark)"
 		/>
 		<link rel="apple-touch-icon" href="%sveltekit.assets%/app-icon-512.png" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
 			rel="preload"
-			as="style"
-			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+			as="font"
+			type="font/woff2"
+			href="%sveltekit.assets%/fonts/inter-latin-var.woff2"
+			crossorigin
 		/>
 		<link
-			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-			rel="stylesheet"
+			rel="preload"
+			as="font"
+			type="font/woff2"
+			href="%sveltekit.assets%/fonts/plus-jakarta-sans-latin-var.woff2"
+			crossorigin
 		/>
 		<script>
 			try {
@@ -29,6 +32,18 @@
 					document.documentElement.classList.add('skip-preloader');
 				}
 			} catch (e) {}
+		</script>
+		<script type="speculationrules">
+			{
+				"prerender": [
+					{
+						"where": {
+							"and": [{ "href_matches": "/products/*" }, { "not": { "href_matches": "/*#*" } }]
+						},
+						"eagerness": "moderate"
+					}
+				]
+			}
 		</script>
 		%sveltekit.head%
 	</head>

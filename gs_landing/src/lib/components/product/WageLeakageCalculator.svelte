@@ -13,9 +13,7 @@
 	const seasonMonths = 9;
 
 	// Calculations
-	let monthlyGhostHaziras = $derived(
-		Math.round(workerCount * (proxyPercent / 100) * workingDays)
-	);
+	let monthlyGhostHaziras = $derived(Math.round(workerCount * (proxyPercent / 100) * workingDays));
 
 	let monthlyWageLeakage = $derived(monthlyGhostHaziras * dailyWage);
 	let monthlyPfEsiLeakage = $derived(Math.round(monthlyWageLeakage * 0.15));
@@ -55,14 +53,14 @@
 				Calculate Unearned Wage & Leaf Weight Leakage
 			</h2>
 			<p class="mt-4 text-base text-[#52525B] md:text-lg">
-				In tea estates, even a 2% to 4% proxy attendance rate or 1 kg leaf tare discrepancy adds up to
-				lakhs in unearned hazira payments and statutory PF before season close.
+				In tea estates, even a 2% to 4% proxy attendance rate or 1 kg leaf tare discrepancy adds up
+				to lakhs in unearned hazira payments and statutory PF before season close.
 			</p>
 		</div>
 
 		<div class="mt-14 grid grid-cols-1 gap-8 lg:grid-cols-12">
 			<!-- Inputs Column -->
-			<div class="rounded-2xl border border-[#E4E4E7] bg-white p-6 shadow-sm lg:col-span-7 md:p-8">
+			<div class="rounded-2xl border border-[#E4E4E7] bg-white p-6 shadow-sm md:p-8 lg:col-span-7">
 				<h3 class="text-lg font-semibold text-[#111111]">Estate Workforce & Wage Parameters</h3>
 				<p class="mt-1 text-sm text-[#71717A]">
 					Adjust the sliders to reflect your garden workforce and local wage rates.
@@ -72,7 +70,9 @@
 					<!-- Worker Count -->
 					<div>
 						<div class="flex items-center justify-between text-sm">
-							<label for="worker-count" class="font-medium text-[#18181B]">Total Plucking & Field Laborers</label>
+							<label for="worker-count" class="font-medium text-[#18181B]"
+								>Total Plucking & Field Laborers</label
+							>
 							<span class="font-semibold text-[#1B5E3B] tabular-nums">{workerCount} workers</span>
 						</div>
 						<input
@@ -95,7 +95,9 @@
 					<!-- Daily Wage Rate -->
 					<div>
 						<div class="flex items-center justify-between text-sm">
-							<label for="daily-wage" class="font-medium text-[#18181B]">Daily Hazira Rate (Base Wage)</label>
+							<label for="daily-wage" class="font-medium text-[#18181B]"
+								>Daily Hazira Rate (Base Wage)</label
+							>
 							<span class="font-semibold text-[#1B5E3B] tabular-nums">₹{dailyWage} / day</span>
 						</div>
 						<input
@@ -117,7 +119,9 @@
 					<!-- Proxy Attendance Rate -->
 					<div>
 						<div class="flex items-center justify-between text-sm">
-							<label for="proxy-rate" class="font-medium text-[#18181B]">Estimated Proxy / Ghost Hazira Rate</label>
+							<label for="proxy-rate" class="font-medium text-[#18181B]"
+								>Estimated Proxy / Ghost Hazira Rate</label
+							>
 							<span class="font-semibold text-[#B91C1C] tabular-nums">{proxyPercent}%</span>
 						</div>
 						<input
@@ -139,7 +143,9 @@
 					<!-- Tare & Weighment Dispute Allowance -->
 					<div>
 						<div class="flex items-center justify-between text-sm">
-							<label for="leaf-error" class="font-medium text-[#18181B]">Average Daily Leaf Weight Discrepancy per Plucker</label>
+							<label for="leaf-error" class="font-medium text-[#18181B]"
+								>Average Daily Leaf Weight Discrepancy per Plucker</label
+							>
 							<span class="font-semibold text-[#1B5E3B] tabular-nums">{leafErrorKg} kg / day</span>
 						</div>
 						<input
@@ -161,10 +167,14 @@
 			</div>
 
 			<!-- Results Summary Column -->
-			<div class="flex flex-col justify-between rounded-2xl border border-[#1B5E3B]/30 bg-white p-6 shadow-md lg:col-span-5 md:p-8">
+			<div
+				class="flex flex-col justify-between rounded-2xl border border-[#1B5E3B]/30 bg-white p-6 shadow-md md:p-8 lg:col-span-5"
+			>
 				<div>
 					<div class="flex items-center justify-between border-b border-[#E4E4E7] pb-4">
-						<span class="text-xs font-semibold tracking-wider text-[#71717A] uppercase">Estimated Leakage</span>
+						<span class="text-xs font-semibold tracking-wider text-[#71717A] uppercase"
+							>Estimated Leakage</span
+						>
 						<span class="rounded bg-[#1B5E3B]/10 px-2 py-0.5 text-xs font-medium text-[#1B5E3B]">
 							{seasonMonths}-Month Season
 						</span>
@@ -173,7 +183,9 @@
 					<!-- Big Number: Season Total -->
 					<div class="mt-6">
 						<div class="text-xs font-medium text-[#52525B]">Total Recoverable Cost per Season:</div>
-						<div class="mt-2 text-3xl font-bold tracking-tight text-[#111111] tabular-nums md:text-4xl">
+						<div
+							class="mt-2 text-3xl font-bold tracking-tight text-[#111111] tabular-nums md:text-4xl"
+						>
 							{inrFormatter.format(totalSeasonLeakage)}
 						</div>
 						<div class="mt-1 text-xs text-[#71717A]">
@@ -185,19 +197,29 @@
 					<div class="mt-6 space-y-3 rounded-xl bg-[#FAFAFA] p-4 text-xs text-[#52525B]">
 						<div class="flex justify-between">
 							<span>Unearned Hazira Wages:</span>
-							<span class="font-semibold text-[#111111] tabular-nums">{inrFormatter.format(monthlyWageLeakage)}/mo</span>
+							<span class="font-semibold text-[#111111] tabular-nums"
+								>{inrFormatter.format(monthlyWageLeakage)}/mo</span
+							>
 						</div>
 						<div class="flex justify-between">
 							<span>Statutory PF & ESI on Proxy:</span>
-							<span class="font-semibold text-[#111111] tabular-nums">{inrFormatter.format(monthlyPfEsiLeakage)}/mo</span>
+							<span class="font-semibold text-[#111111] tabular-nums"
+								>{inrFormatter.format(monthlyPfEsiLeakage)}/mo</span
+							>
 						</div>
 						<div class="flex justify-between">
 							<span>Leaf Tare & Weight Discrepancies:</span>
-							<span class="font-semibold text-[#111111] tabular-nums">{inrFormatter.format(monthlyLeafDiscrepancy)}/mo</span>
+							<span class="font-semibold text-[#111111] tabular-nums"
+								>{inrFormatter.format(monthlyLeafDiscrepancy)}/mo</span
+							>
 						</div>
-						<div class="flex justify-between border-t border-[#E4E4E7] pt-2 font-medium text-[#111111]">
+						<div
+							class="flex justify-between border-t border-[#E4E4E7] pt-2 font-medium text-[#111111]"
+						>
 							<span>Unverified Haziras Eliminated:</span>
-							<span class="tabular-nums font-bold text-[#B91C1C]">{monthlyGhostHaziras} haziras/mo</span>
+							<span class="font-bold text-[#B91C1C] tabular-nums"
+								>{monthlyGhostHaziras} haziras/mo</span
+							>
 						</div>
 					</div>
 				</div>

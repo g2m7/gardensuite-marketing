@@ -17,7 +17,10 @@
 			category: 'Attendance & Payroll',
 			definition:
 				'The standard daily attendance unit in tea plantations representing a completed daily work task. A worker who marks full hazira is entitled to the agreed base daily wage under regional industry settlements.',
-			relatedModule: { name: 'Face Attendance System', href: '/products/attendance/face-attendance' }
+			relatedModule: {
+				name: 'Face Attendance System',
+				href: '/products/attendance/face-attendance'
+			}
 		},
 		{
 			term: 'Tikka / Thika',
@@ -107,7 +110,10 @@
 			category: 'Attendance & Compliance',
 			definition:
 				'The statutory record of daily worker attendance, task completion, and wage entitlement required under the Plantations Labour Act and state rules.',
-			relatedModule: { name: 'Face Attendance System', href: '/products/attendance/face-attendance' }
+			relatedModule: {
+				name: 'Face Attendance System',
+				href: '/products/attendance/face-attendance'
+			}
 		},
 		{
 			term: 'Daily MIS Report',
@@ -165,15 +171,17 @@
 <!-- Header -->
 <header class="border-b border-[#E4E4E7] bg-white pt-28 pb-16 md:pt-36 md:pb-20">
 	<div class="mx-auto max-w-4xl px-6 md:px-8">
-		<div class="inline-block rounded-full bg-[#1B5E3B]/10 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-[#1B5E3B]">
+		<div
+			class="inline-block rounded-full bg-[#1B5E3B]/10 px-3.5 py-1 text-xs font-semibold tracking-wider text-[#1B5E3B] uppercase"
+		>
 			Knowledge Engine
 		</div>
 		<h1 class="mt-6 text-3xl font-bold tracking-tight text-[#111111] sm:text-4xl md:text-5xl">
 			Tea Garden & Plantation Operations Glossary
 		</h1>
 		<p class="mt-4 text-base leading-relaxed text-[#52525B] sm:text-lg">
-			A complete reference guide to tea estate terminology, field management concepts, plucking rules,
-			and factory manufacturing metrics across Assam, Dooars, Terai, and Darjeeling.
+			A complete reference guide to tea estate terminology, field management concepts, plucking
+			rules, and factory manufacturing metrics across Assam, Dooars, Terai, and Darjeeling.
 		</p>
 	</div>
 </header>
@@ -183,7 +191,9 @@
 	<div class="mx-auto max-w-4xl px-6 md:px-8">
 		<div class="grid grid-cols-1 gap-8">
 			{#each terms as item}
-				<div class="rounded-2xl border border-[#E4E4E7] bg-[#FAFAFA] p-6 transition-all hover:border-[#1B5E3B]/30 hover:bg-white">
+				<div
+					class="rounded-2xl border border-[#E4E4E7] bg-[#FAFAFA] p-6 transition-all hover:border-[#1B5E3B]/30 hover:bg-white"
+				>
 					<div class="flex flex-wrap items-center justify-between gap-2">
 						<h2 class="text-xl font-bold text-[#111111]">{item.term}</h2>
 						<span class="rounded-md bg-[#E4E4E7] px-2.5 py-0.5 text-xs font-medium text-[#52525B]">
@@ -194,7 +204,7 @@
 						{item.definition}
 					</p>
 					{#if item.relatedModule}
-						<div class="mt-4 pt-3 border-t border-[#E4E4E7]/60">
+						<div class="mt-4 border-t border-[#E4E4E7]/60 pt-3">
 							<span class="text-xs text-[#71717A]">GardenSuite Module:</span>
 							<a
 								href={item.relatedModule.href}
@@ -214,12 +224,16 @@
 				Manage Every Aspect of Your Estate with GardenSuite
 			</h3>
 			<p class="mx-auto mt-2 max-w-xl text-base text-[#52525B]">
-				From biometric face attendance to automated leaf weighing, statutory payroll, and mobile daily
-				MIS reports, GardenSuite is the complete operating system for tea gardens.
+				From biometric face attendance to automated leaf weighing, statutory payroll, and mobile
+				daily MIS reports, GardenSuite is the complete operating system for tea gardens.
 			</p>
 			<ButtonGroup class="mt-6 justify-center">
 				<Button href="/#contact" label="Book Free On-Site Demo" variant="primary" showIcon />
-				<Button href="mailto:sarbaniassociates@gmail.com" label="Contact Sarbani Associates" variant="secondary" />
+				<Button
+					href="mailto:sarbaniassociates@gmail.com"
+					label="Contact Sarbani Associates"
+					variant="secondary"
+				/>
 			</ButtonGroup>
 		</div>
 	</div>

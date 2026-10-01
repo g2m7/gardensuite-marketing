@@ -26,7 +26,10 @@ export const POST: RequestHandler = async ({ request }) => {
 		return json({ message: 'Please enter a valid email address.' }, { status: 400 });
 	}
 	if (!emailConsent) {
-		return json({ message: 'Please confirm that we may email the guide and product updates.' }, { status: 400 });
+		return json(
+			{ message: 'Please confirm that we may email the guide and product updates.' },
+			{ status: 400 }
+		);
 	}
 
 	try {

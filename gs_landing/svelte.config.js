@@ -8,6 +8,7 @@ const config = {
 	},
 	kit: {
 		adapter: adapter(),
+		inlineStyleThreshold: 50000,
 		typescript: {
 			config: (config) => ({
 				...config,
