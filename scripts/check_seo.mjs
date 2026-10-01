@@ -181,6 +181,28 @@ for (const file of svelteFiles) {
   }
 }
 
+// 7. Check image file sizes (mandatory performance rule: <= 200KB for served formats)
+function findWebpFiles(dir, files = []) {
+  for (const item of readdirSync(dir)) {
+    const full = join(dir, item);
+    if (statSync(full).isDirectory()) {
+      findWebpFiles(full, files);
+    } else if (item.endsWith('.webp')) {
+      files.push(full);
+    }
+  }
+  return files;
+}
+
+const staticWebpFiles = findWebpFiles(join(landingDir, 'static'));
+const MAX_IMAGE_BYTES = 200 * 1024;
+for (const file of staticWebpFiles) {
+  const size = statSync(file).size;
+  if (size > MAX_IMAGE_BYTES) {
+    failures.push(`Image exceeds 200KB limit: ${file.replace(landingDir, '')} (${(size / 1024).toFixed(1)} KB)`);
+  }
+}
+
 // Summary output
 console.log('=============================================');
 console.log(`GardenSuite SEO Audit: ${allPages.length} pages checked`);
