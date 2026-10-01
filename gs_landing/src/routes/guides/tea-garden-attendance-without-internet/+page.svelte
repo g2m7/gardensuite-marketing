@@ -26,8 +26,8 @@
 </script>
 
 <ArticleLayout
-	title="Tea Garden Attendance Without Internet - Offline Guide | GardenSuite"
-	metaDescription="How tea garden attendance and weighing keep working with no internet: local saving, record states, retries, and sync. Built for estates by Sarbani Associates."
+	title="Tea Garden Attendance Without Internet | GardenSuite"
+	metaDescription="How tea garden attendance and weighing work with no internet: local saving, offline states, and office sync. Built for estates by Sarbani Associates."
 	kicker="Reliability Guide"
 	headline="Tea Garden Attendance Without Internet"
 	lede="What the field app does in dead zones, how pending and failed records are handled, and what happens when connectivity returns."

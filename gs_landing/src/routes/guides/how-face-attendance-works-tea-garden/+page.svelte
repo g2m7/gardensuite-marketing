@@ -28,7 +28,7 @@
 
 <ArticleLayout
 	title="How Face Attendance Works in a Tea Garden - Guide | GardenSuite"
-	metaDescription="How face attendance works at a tea garden: muster verification, liveness checks, manual fallback, and office review. Built for estates by Sarbani Associates."
+	metaDescription="How face attendance works at a tea garden: muster verification, liveness checks, manual fallback, and office review. By Sarbani Associates."
 	kicker="Field Operations Guide"
 	headline="How Face Attendance Works in a Tea Garden"
 	lede="The full flow from morning muster to a verified record: what the worker sees, what the supervisor sees, and what the office checks."

@@ -27,7 +27,7 @@
 </script>
 
 <ArticleLayout
-	title="Smart Leaf Weighing and Bluetooth Scales for Tea Gardens | GardenSuite"
+	title="Smart Leaf Weighing with Bluetooth Scales | GardenSuite"
 	metaDescription="Guide to tea leaf weighing with Bluetooth scales linked to worker face attendance. Stop tare disputes and plucking weight errors. By Sarbani Associates."
 	kicker="Plucking Operations Guide"
 	headline="Digital Leaf Weighing: Linking the Scale to the Worker"

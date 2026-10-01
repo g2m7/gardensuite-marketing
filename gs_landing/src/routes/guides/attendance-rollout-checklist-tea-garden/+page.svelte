@@ -27,7 +27,7 @@
 
 <ArticleLayout
 	title="Tea Garden Attendance Rollout Checklist - Estates | GardenSuite"
-	metaDescription="Rollout checklist for face attendance and smart weighing at tea gardens: site visit, device setup, enrollment, parallel run, and go-live. By Sarbani Associates."
+	metaDescription="Rollout checklist for face attendance and smart weighing at tea gardens: site setup, enrollment, parallel run, and go-live. By Sarbani Associates."
 	kicker="Implementation Guide"
 	headline="Attendance and Weighing Rollout Checklist for Tea Gardens"
 	lede="A section-by-section sequence for bringing face attendance and smart weighing live without stopping garden work."

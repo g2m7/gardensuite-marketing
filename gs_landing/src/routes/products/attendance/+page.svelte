@@ -76,7 +76,7 @@
 	title="Tea Garden Attendance System - Face & Weighing | GardenSuite"
 	description="Face attendance and Bluetooth smart weighing for tea gardens. Verify workers, record leaf weight, work offline, and sync data for payroll."
 	canonical="https://gardensuite.in/products/attendance"
-	ogImage="https://gardensuite.in/og/attendance-media-placeholder.webp"
+	ogImage="https://gardensuite.in/og/attendance-og-1200x630.webp"
 	schema={[
 		softwareSchema({
 			name: 'GardenSuite Face Attendance & Smart Weighing',

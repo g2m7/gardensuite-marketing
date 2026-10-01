@@ -26,7 +26,7 @@
 </script>
 
 <ArticleLayout
-	title="Rainfall Deductions and Fine Leaf Checks - Tea Guide | GardenSuite"
+	title="Rainfall Deductions & Fine Leaf Checks - Guide | GardenSuite"
 	metaDescription="How rainfall and wet leaf deduction slabs plus fine leaf checks are applied to plucking records at tea gardens. Built for estates by Sarbani Associates."
 	kicker="Plucking Operations Guide"
 	headline="Rainfall Deductions and Fine Leaf Checks in Plucking Records"

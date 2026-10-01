@@ -26,8 +26,8 @@
 </script>
 
 <ArticleLayout
-	title="How to Stop Proxy Attendance in Tea Gardens - Estate Guide | GardenSuite"
-	metaDescription="Practical guide for tea garden managers on stopping proxy hazira and muster roll errors using offline face attendance. Built and supported by Sarbani Associates."
+	title="How to Stop Proxy Attendance in Tea Gardens | GardenSuite"
+	metaDescription="Guide for tea garden managers on stopping proxy hazira and muster errors using offline face attendance. Built and supported by Sarbani Associates."
 	kicker="Field Operations Guide"
 	headline="How to Stop Proxy Attendance in Tea Gardens"
 	lede="A practical guide for estate managers, directors, and head clerks on moving from manual muster rolls to verified offline face attendance."

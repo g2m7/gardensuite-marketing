@@ -81,7 +81,7 @@
 	title={config.title}
 	description={config.description}
 	canonical={config.canonical}
-	ogImage="https://gardensuite.in/og/attendance-media-placeholder.webp"
+	ogImage="https://gardensuite.in/og/attendance-og-1200x630.webp"
 	schema={[
 		softwareSchema({
 			name: `GardenSuite ${config.pageName}`,

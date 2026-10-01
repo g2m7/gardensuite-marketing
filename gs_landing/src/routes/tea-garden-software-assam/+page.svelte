@@ -61,7 +61,7 @@
 
 <LocationPage
 	seo={{
-		title: 'Tea Garden Software Assam - Attendance, Payroll & Scale | GardenSuite',
+		title: 'Tea Garden Software Assam - Attendance & Payroll | GardenSuite',
 		description:
 			'Tea garden software for Assam tea estates in Dibrugarh, Tinsukia, Jorhat and Golaghat. Face attendance, wireless leaf weighing, and daily reports.',
 		canonical: 'https://gardensuite.in/tea-garden-software-assam',
