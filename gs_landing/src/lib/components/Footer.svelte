@@ -131,6 +131,19 @@
 				<a href="/privacy" class="underline hover:text-[#1B5E3B]">Privacy</a>
 				<a href="/terms" class="underline hover:text-[#1B5E3B]">Terms</a>
 			</div>
+			<a
+				href="https://www.google.com/preferences/source?q=gardensuite.in"
+				class="block max-w-full rounded-lg focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-green-deep"
+			>
+				<img
+					src="/google-preferred-source.png"
+					alt="Add GardenSuite as a preferred source on Google"
+					width="676"
+					height="213"
+					loading="lazy"
+					class="h-auto w-64 max-w-full"
+				/>
+			</a>
 		</div>
 	</div>
 
