@@ -5,8 +5,10 @@ You are working in the SvelteKit app. This file is the entry point for all front
 ## Read Before Writing Any Code
 
 1. `../docs/website/DESIGN.md` - the design system. Tokens, type scale, spacing, shadows, component patterns. Extracted from the live homepage, matches `src/routes/layout.css`.
-2. `../AGENTS.md` - SEO rules, performance rules, copy safety rules, new page checklist.
+2. `../AGENTS.md` - SEO rules, performance rules, copy safety rules, skill execution policy, new page checklist.
 3. `docs/landing-page/styling.md` and `docs/landing-page/typography.md` - homepage visual direction and locked type system.
+
+**Strict Skill Policy:** Never execute or invoke any skill without explicit user permission or unless specified in an approved plan.
 
 If a generic design skill (for example `frontend-design-ultimate`, `ui-ux-pro-max`, `landing-page`) conflicts with these docs, these docs win. This project bans: `font-bold`, `backdrop-blur`, colored shadows, `shadow-lg`/`shadow-xl`/`shadow-2xl`, pill-shaped kickers, background boxes behind icons, em dashes, and any color not in the token list.
 

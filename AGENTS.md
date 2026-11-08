@@ -59,6 +59,18 @@ Coochbehar: Tinbigha T.E.
 Uttar Dinajpur: Chandan T.E.
 Jalpaiguri: Himalayan Agro Plantation
 
+## Strict Skill Execution Policy (Mandatory Hard Rule)
+
+**Zero Autonomous Skill Execution:**
+AI agents working in this repository must **NEVER** execute, invoke, or trigger any skill (whether located in `.agents/skills/`, built-in, or global skills) unless at least one of the following conditions is met:
+1. **Explicit User Permission:** The user explicitly instructs or approves the invocation of that specific skill in their prompt.
+2. **Specified in an Approved Plan:** The skill is explicitly listed as a planned action step in a formal plan that has been reviewed and approved by the user.
+
+**Operating Rules:**
+- If an agent believes a skill would be beneficial for a task, it must propose the skill by name in its response or plan and ask for explicit user consent before invoking it.
+- Silent, speculative, or background execution of any skill is strictly prohibited.
+- This rule overrides any automatic skill triggers or subagent prompts.
+
 ## Writing & Style Rules
 
 - **Mandatory skill: `no-ai-slop`** - Always use the `no-ai-slop` skill (`.agents/skills/no-ai-slop/SKILL.md`) whenever creating or modifying any text content across this project (website copy, marketing material, cold emails, social posts, docs). Strip throat-clearing openers, binary contrasts, faux insights, colon reveals, and corporate buzzwords. Keep writing human, direct, and concrete.
